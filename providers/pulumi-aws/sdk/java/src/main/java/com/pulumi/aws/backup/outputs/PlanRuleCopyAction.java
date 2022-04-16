@@ -35,14 +35,14 @@ public final class PlanRuleCopyAction {
      * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
      * 
     */
-    public String getDestinationVaultArn() {
+    public String destinationVaultArn() {
         return this.destinationVaultArn;
     }
     /**
      * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
     */
-    public Optional<PlanRuleCopyActionLifecycle> getLifecycle() {
+    public Optional<PlanRuleCopyActionLifecycle> lifecycle() {
         return Optional.ofNullable(this.lifecycle);
     }
 

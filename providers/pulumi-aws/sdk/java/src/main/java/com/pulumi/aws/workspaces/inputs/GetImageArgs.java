@@ -19,7 +19,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="imageId", required=true)
       private final String imageId;
 
-    public String getImageId() {
+    public String imageId() {
         return this.imageId;
     }
 

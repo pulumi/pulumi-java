@@ -21,7 +21,7 @@ public final class FleetStackAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="fleetName", required=true)
       private final Output<String> fleetName;
 
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
 
@@ -32,7 +32,7 @@ public final class FleetStackAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 

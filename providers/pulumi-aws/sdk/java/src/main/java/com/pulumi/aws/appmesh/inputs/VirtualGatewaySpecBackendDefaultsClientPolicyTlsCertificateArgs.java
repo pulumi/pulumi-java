@@ -23,7 +23,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateAr
     @Import(name="file")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> getFile() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateAr
     @Import(name="sds")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> getSds() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

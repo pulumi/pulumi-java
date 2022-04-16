@@ -47,7 +47,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return A list of cache key parameters for the integration.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCacheKeyParameters() {
+    public Output</* @Nullable */ List<String>> cacheKeyParameters() {
         return this.cacheKeyParameters;
     }
     /**
@@ -61,7 +61,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The integration's cache namespace.
      * 
      */
-    public Output<String> getCacheNamespace() {
+    public Output<String> cacheNamespace() {
         return this.cacheNamespace;
     }
     /**
@@ -75,7 +75,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
      * 
      */
-    public Output</* @Nullable */ String> getConnectionId() {
+    public Output</* @Nullable */ String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -89,7 +89,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
      * 
      */
-    public Output</* @Nullable */ String> getConnectionType() {
+    public Output</* @Nullable */ String> connectionType() {
         return this.connectionType;
     }
     /**
@@ -103,7 +103,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
      * 
      */
-    public Output</* @Nullable */ String> getContentHandling() {
+    public Output</* @Nullable */ String> contentHandling() {
         return this.contentHandling;
     }
     /**
@@ -117,7 +117,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
      * 
      */
-    public Output</* @Nullable */ String> getCredentials() {
+    public Output</* @Nullable */ String> credentials() {
         return this.credentials;
     }
     /**
@@ -133,7 +133,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * when calling the associated resource.
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -155,7 +155,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * e.g., Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
      * 
      */
-    public Output</* @Nullable */ String> getIntegrationHttpMethod() {
+    public Output</* @Nullable */ String> integrationHttpMethod() {
         return this.integrationHttpMethod;
     }
     /**
@@ -169,7 +169,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
      * 
      */
-    public Output<String> getPassthroughBehavior() {
+    public Output<String> passthroughBehavior() {
         return this.passthroughBehavior;
     }
     /**
@@ -185,7 +185,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getRequestParameters() {
+    public Output</* @Nullable */ Map<String,String>> requestParameters() {
         return this.requestParameters;
     }
     /**
@@ -199,7 +199,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return A map of the integration's request templates.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getRequestTemplates() {
+    public Output</* @Nullable */ Map<String,String>> requestTemplates() {
         return this.requestTemplates;
     }
     /**
@@ -213,7 +213,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The API resource ID.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -227,7 +227,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API.
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -241,7 +241,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeoutMilliseconds() {
+    public Output</* @Nullable */ Integer> timeoutMilliseconds() {
         return this.timeoutMilliseconds;
     }
     /**
@@ -255,7 +255,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return Configuration block specifying the TLS configuration for an integration. Defined below.
      * 
      */
-    public Output</* @Nullable */ IntegrationTlsConfig> getTlsConfig() {
+    public Output</* @Nullable */ IntegrationTlsConfig> tlsConfig() {
         return this.tlsConfig;
     }
     /**
@@ -269,7 +269,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * @return The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -287,7 +287,7 @@ public class Integration extends com.pulumi.resources.CustomResource {
      * e.g., `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
 

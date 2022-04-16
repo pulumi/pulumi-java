@@ -42,7 +42,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
      * 
      */
-    public Output<Map<String,String>> getAttributeMapping() {
+    public Output<Map<String,String>> attributeMapping() {
         return this.attributeMapping;
     }
     /**
@@ -56,7 +56,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The list of identity providers.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIdpIdentifiers() {
+    public Output</* @Nullable */ List<String>> idpIdentifiers() {
         return this.idpIdentifiers;
     }
     /**
@@ -70,7 +70,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The map of identity details, such as access token
      * 
      */
-    public Output<Map<String,String>> getProviderDetails() {
+    public Output<Map<String,String>> providerDetails() {
         return this.providerDetails;
     }
     /**
@@ -84,7 +84,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The provider name
      * 
      */
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
     /**
@@ -98,7 +98,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
      * 
      */
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
     /**
@@ -112,7 +112,7 @@ public class IdentityProvider extends com.pulumi.resources.CustomResource {
      * @return The user pool id
      * 
      */
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

@@ -45,7 +45,7 @@ public class WebAclAssociation extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -59,7 +59,7 @@ public class WebAclAssociation extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
      * 
      */
-    public Output<String> getWebAclArn() {
+    public Output<String> webAclArn() {
         return this.webAclArn;
     }
 

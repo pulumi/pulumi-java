@@ -24,7 +24,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     @Import(name="clientIdLists")
       private final @Nullable Output<List<String>> clientIdLists;
 
-    public Output<List<String>> getClientIdLists() {
+    public Output<List<String>> clientIdLists() {
         return this.clientIdLists == null ? Codegen.empty() : this.clientIdLists;
     }
 
@@ -46,7 +46,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -68,7 +68,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     @Import(name="thumbprintLists")
       private final @Nullable Output<List<String>> thumbprintLists;
 
-    public Output<List<String>> getThumbprintLists() {
+    public Output<List<String>> thumbprintLists() {
         return this.thumbprintLists == null ? Codegen.empty() : this.thumbprintLists;
     }
 
@@ -79,7 +79,7 @@ public final class OpenIdConnectProviderState extends com.pulumi.resources.Resou
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

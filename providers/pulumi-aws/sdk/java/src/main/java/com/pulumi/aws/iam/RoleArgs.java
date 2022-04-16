@@ -27,7 +27,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assumeRolePolicy", required=true)
       private final Output<String> assumeRolePolicy;
 
-    public Output<String> getAssumeRolePolicy() {
+    public Output<String> assumeRolePolicy() {
         return this.assumeRolePolicy;
     }
 
@@ -38,7 +38,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDetachPolicies")
       private final @Nullable Output<Boolean> forceDetachPolicies;
 
-    public Output<Boolean> getForceDetachPolicies() {
+    public Output<Boolean> forceDetachPolicies() {
         return this.forceDetachPolicies == null ? Codegen.empty() : this.forceDetachPolicies;
     }
 
@@ -60,7 +60,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inlinePolicies")
       private final @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
 
-    public Output<List<RoleInlinePolicyArgs>> getInlinePolicies() {
+    public Output<List<RoleInlinePolicyArgs>> inlinePolicies() {
         return this.inlinePolicies == null ? Codegen.empty() : this.inlinePolicies;
     }
 
@@ -71,7 +71,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedPolicyArns")
       private final @Nullable Output<List<String>> managedPolicyArns;
 
-    public Output<List<String>> getManagedPolicyArns() {
+    public Output<List<String>> managedPolicyArns() {
         return this.managedPolicyArns == null ? Codegen.empty() : this.managedPolicyArns;
     }
 
@@ -82,7 +82,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxSessionDuration")
       private final @Nullable Output<Integer> maxSessionDuration;
 
-    public Output<Integer> getMaxSessionDuration() {
+    public Output<Integer> maxSessionDuration() {
         return this.maxSessionDuration == null ? Codegen.empty() : this.maxSessionDuration;
     }
 
@@ -93,7 +93,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -115,7 +115,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -126,7 +126,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsBoundary")
       private final @Nullable Output<String> permissionsBoundary;
 
-    public Output<String> getPermissionsBoundary() {
+    public Output<String> permissionsBoundary() {
         return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
     }
 
@@ -137,7 +137,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

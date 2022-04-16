@@ -44,7 +44,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Flow Log.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Describes the destination options for a flow log. More details below.
      * 
      */
-    public Output</* @Nullable */ FlowLogDestinationOptions> getDestinationOptions() {
+    public Output</* @Nullable */ FlowLogDestinationOptions> destinationOptions() {
         return this.destinationOptions;
     }
     /**
@@ -72,7 +72,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Elastic Network Interface ID to attach to
      * 
      */
-    public Output</* @Nullable */ String> getEniId() {
+    public Output</* @Nullable */ String> eniId() {
         return this.eniId;
     }
     /**
@@ -86,7 +86,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
      * 
      */
-    public Output</* @Nullable */ String> getIamRoleArn() {
+    public Output</* @Nullable */ String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -100,7 +100,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The ARN of the logging destination.
      * 
      */
-    public Output<String> getLogDestination() {
+    public Output<String> logDestination() {
         return this.logDestination;
     }
     /**
@@ -114,7 +114,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
      * 
      */
-    public Output</* @Nullable */ String> getLogDestinationType() {
+    public Output</* @Nullable */ String> logDestinationType() {
         return this.logDestinationType;
     }
     /**
@@ -128,7 +128,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The fields to include in the flow log record, in the order in which they should appear.
      * 
      */
-    public Output<String> getLogFormat() {
+    public Output<String> logFormat() {
         return this.logFormat;
     }
     /**
@@ -146,7 +146,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return *Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
      * 
      */
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
     /**
@@ -166,7 +166,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * minutes). Default: `600`.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxAggregationInterval() {
+    public Output</* @Nullable */ Integer> maxAggregationInterval() {
         return this.maxAggregationInterval;
     }
     /**
@@ -180,7 +180,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Subnet ID to attach to
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -194,7 +194,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -208,7 +208,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -222,7 +222,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
      * 
      */
-    public Output<String> getTrafficType() {
+    public Output<String> trafficType() {
         return this.trafficType;
     }
     /**
@@ -236,7 +236,7 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return VPC ID to attach to
      * 
      */
-    public Output</* @Nullable */ String> getVpcId() {
+    public Output</* @Nullable */ String> vpcId() {
         return this.vpcId;
     }
 

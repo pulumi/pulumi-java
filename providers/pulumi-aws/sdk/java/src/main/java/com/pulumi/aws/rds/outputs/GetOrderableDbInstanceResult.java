@@ -154,139 +154,139 @@ public final class GetOrderableDbInstanceResult {
         this.vpc = vpc;
     }
 
-    public String getAvailabilityZoneGroup() {
+    public String availabilityZoneGroup() {
         return this.availabilityZoneGroup;
     }
     /**
      * Availability zones where the instance is available.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceClass() {
+    public String instanceClass() {
         return this.instanceClass;
     }
-    public String getLicenseModel() {
+    public String licenseModel() {
         return this.licenseModel;
     }
     /**
      * Maximum total provisioned IOPS for a DB instance.
      * 
     */
-    public Integer getMaxIopsPerDbInstance() {
+    public Integer maxIopsPerDbInstance() {
         return this.maxIopsPerDbInstance;
     }
     /**
      * Maximum provisioned IOPS per GiB for a DB instance.
      * 
     */
-    public Double getMaxIopsPerGib() {
+    public Double maxIopsPerGib() {
         return this.maxIopsPerGib;
     }
     /**
      * Maximum storage size for a DB instance.
      * 
     */
-    public Integer getMaxStorageSize() {
+    public Integer maxStorageSize() {
         return this.maxStorageSize;
     }
     /**
      * Minimum total provisioned IOPS for a DB instance.
      * 
     */
-    public Integer getMinIopsPerDbInstance() {
+    public Integer minIopsPerDbInstance() {
         return this.minIopsPerDbInstance;
     }
     /**
      * Minimum provisioned IOPS per GiB for a DB instance.
      * 
     */
-    public Double getMinIopsPerGib() {
+    public Double minIopsPerGib() {
         return this.minIopsPerGib;
     }
     /**
      * Minimum storage size for a DB instance.
      * 
     */
-    public Integer getMinStorageSize() {
+    public Integer minStorageSize() {
         return this.minStorageSize;
     }
     /**
      * Whether a DB instance is Multi-AZ capable.
      * 
     */
-    public Boolean getMultiAzCapable() {
+    public Boolean multiAzCapable() {
         return this.multiAzCapable;
     }
     /**
      * Whether a DB instance supports RDS on Outposts.
      * 
     */
-    public Boolean getOutpostCapable() {
+    public Boolean outpostCapable() {
         return this.outpostCapable;
     }
-    public List<String> getPreferredEngineVersions() {
+    public List<String> preferredEngineVersions() {
         return this.preferredEngineVersions == null ? List.of() : this.preferredEngineVersions;
     }
-    public List<String> getPreferredInstanceClasses() {
+    public List<String> preferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
     }
     /**
      * Whether a DB instance can have a read replica.
      * 
     */
-    public Boolean getReadReplicaCapable() {
+    public Boolean readReplicaCapable() {
         return this.readReplicaCapable;
     }
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
     /**
      * A list of the supported DB engine modes.
      * 
     */
-    public List<String> getSupportedEngineModes() {
+    public List<String> supportedEngineModes() {
         return this.supportedEngineModes;
     }
-    public Boolean getSupportsEnhancedMonitoring() {
+    public Boolean supportsEnhancedMonitoring() {
         return this.supportsEnhancedMonitoring;
     }
-    public Boolean getSupportsGlobalDatabases() {
+    public Boolean supportsGlobalDatabases() {
         return this.supportsGlobalDatabases;
     }
-    public Boolean getSupportsIamDatabaseAuthentication() {
+    public Boolean supportsIamDatabaseAuthentication() {
         return this.supportsIamDatabaseAuthentication;
     }
-    public Boolean getSupportsIops() {
+    public Boolean supportsIops() {
         return this.supportsIops;
     }
-    public Boolean getSupportsKerberosAuthentication() {
+    public Boolean supportsKerberosAuthentication() {
         return this.supportsKerberosAuthentication;
     }
-    public Boolean getSupportsPerformanceInsights() {
+    public Boolean supportsPerformanceInsights() {
         return this.supportsPerformanceInsights;
     }
-    public Boolean getSupportsStorageAutoscaling() {
+    public Boolean supportsStorageAutoscaling() {
         return this.supportsStorageAutoscaling;
     }
-    public Boolean getSupportsStorageEncryption() {
+    public Boolean supportsStorageEncryption() {
         return this.supportsStorageEncryption;
     }
-    public Boolean getVpc() {
+    public Boolean vpc() {
         return this.vpc;
     }
 

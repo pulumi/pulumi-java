@@ -42,7 +42,7 @@ public class IdentityProviderConfig extends com.pulumi.resources.CustomResource 
      * @return Amazon Resource Name (ARN) of the EKS Identity Provider Configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class IdentityProviderConfig extends com.pulumi.resources.CustomResource 
      * @return Name of the EKS Cluster.
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -70,7 +70,7 @@ public class IdentityProviderConfig extends com.pulumi.resources.CustomResource 
      * @return Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
      */
-    public Output<IdentityProviderConfigOidc> getOidc() {
+    public Output<IdentityProviderConfigOidc> oidc() {
         return this.oidc;
     }
     /**
@@ -84,7 +84,7 @@ public class IdentityProviderConfig extends com.pulumi.resources.CustomResource 
      * @return Status of the EKS Identity Provider Configuration.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -98,7 +98,7 @@ public class IdentityProviderConfig extends com.pulumi.resources.CustomResource 
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class IdentityProviderConfig extends com.pulumi.resources.CustomResource 
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

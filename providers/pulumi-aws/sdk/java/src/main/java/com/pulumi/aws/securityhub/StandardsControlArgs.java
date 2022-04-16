@@ -22,7 +22,7 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="controlStatus", required=true)
       private final Output<String> controlStatus;
 
-    public Output<String> getControlStatus() {
+    public Output<String> controlStatus() {
         return this.controlStatus;
     }
 
@@ -33,7 +33,7 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
-    public Output<String> getDisabledReason() {
+    public Output<String> disabledReason() {
         return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
     }
 
@@ -44,7 +44,7 @@ public final class StandardsControlArgs extends com.pulumi.resources.ResourceArg
     @Import(name="standardsControlArn", required=true)
       private final Output<String> standardsControlArn;
 
-    public Output<String> getStandardsControlArn() {
+    public Output<String> standardsControlArn() {
         return this.standardsControlArn;
     }
 

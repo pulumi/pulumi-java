@@ -43,7 +43,7 @@ public class MethodSettings extends com.pulumi.resources.CustomResource {
      * @return Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, "/")`).
      * 
      */
-    public Output<String> getMethodPath() {
+    public Output<String> methodPath() {
         return this.methodPath;
     }
     /**
@@ -57,7 +57,7 @@ public class MethodSettings extends com.pulumi.resources.CustomResource {
      * @return The ID of the REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -71,7 +71,7 @@ public class MethodSettings extends com.pulumi.resources.CustomResource {
      * @return The settings block, see below.
      * 
      */
-    public Output<MethodSettingsSettings> getSettings() {
+    public Output<MethodSettingsSettings> settings() {
         return this.settings;
     }
     /**
@@ -85,7 +85,7 @@ public class MethodSettings extends com.pulumi.resources.CustomResource {
      * @return The name of the stage
      * 
      */
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 

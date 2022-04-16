@@ -22,7 +22,7 @@ public final class BucketOwnershipControlsArgs extends com.pulumi.resources.Reso
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class BucketOwnershipControlsArgs extends com.pulumi.resources.Reso
     @Import(name="rule", required=true)
       private final Output<BucketOwnershipControlsRuleArgs> rule;
 
-    public Output<BucketOwnershipControlsRuleArgs> getRule() {
+    public Output<BucketOwnershipControlsRuleArgs> rule() {
         return this.rule;
     }
 

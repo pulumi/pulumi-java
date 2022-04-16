@@ -48,7 +48,7 @@ public final class PeeringConnectionOptionsRequester {
      * to the remote VPC. This option is not supported for inter-region VPC peering.
      * 
     */
-    public Optional<Boolean> getAllowClassicLinkToRemoteVpc() {
+    public Optional<Boolean> allowClassicLinkToRemoteVpc() {
         return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
     /**
@@ -56,7 +56,7 @@ public final class PeeringConnectionOptionsRequester {
      * private IP addresses when queried from instances in the peer VPC.
      * 
     */
-    public Optional<Boolean> getAllowRemoteVpcDnsResolution() {
+    public Optional<Boolean> allowRemoteVpcDnsResolution() {
         return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
     /**
@@ -65,7 +65,7 @@ public final class PeeringConnectionOptionsRequester {
      * connection. This option is not supported for inter-region VPC peering.
      * 
     */
-    public Optional<Boolean> getAllowVpcToRemoteClassicLink() {
+    public Optional<Boolean> allowVpcToRemoteClassicLink() {
         return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }
 

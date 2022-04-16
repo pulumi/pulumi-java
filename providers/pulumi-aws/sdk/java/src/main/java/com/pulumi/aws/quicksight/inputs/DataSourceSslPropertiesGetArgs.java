@@ -21,7 +21,7 @@ public final class DataSourceSslPropertiesGetArgs extends com.pulumi.resources.R
     @Import(name="disableSsl", required=true)
       private final Output<Boolean> disableSsl;
 
-    public Output<Boolean> getDisableSsl() {
+    public Output<Boolean> disableSsl() {
         return this.disableSsl;
     }
 

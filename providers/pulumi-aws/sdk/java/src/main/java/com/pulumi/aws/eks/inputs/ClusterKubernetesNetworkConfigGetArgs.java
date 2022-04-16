@@ -22,7 +22,7 @@ public final class ClusterKubernetesNetworkConfigGetArgs extends com.pulumi.reso
     @Import(name="ipFamily")
       private final @Nullable Output<String> ipFamily;
 
-    public Output<String> getIpFamily() {
+    public Output<String> ipFamily() {
         return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterKubernetesNetworkConfigGetArgs extends com.pulumi.reso
     @Import(name="serviceIpv4Cidr")
       private final @Nullable Output<String> serviceIpv4Cidr;
 
-    public Output<String> getServiceIpv4Cidr() {
+    public Output<String> serviceIpv4Cidr() {
         return this.serviceIpv4Cidr == null ? Codegen.empty() : this.serviceIpv4Cidr;
     }
 

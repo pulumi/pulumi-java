@@ -21,7 +21,7 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namePrefix")
       private final @Nullable String namePrefix;
 
-    public Optional<String> getNamePrefix() {
+    public Optional<String> namePrefix() {
         return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
     }
 

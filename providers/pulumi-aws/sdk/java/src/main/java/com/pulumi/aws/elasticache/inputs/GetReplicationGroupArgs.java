@@ -19,7 +19,7 @@ public final class GetReplicationGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="replicationGroupId", required=true)
       private final String replicationGroupId;
 
-    public String getReplicationGroupId() {
+    public String replicationGroupId() {
         return this.replicationGroupId;
     }
 

@@ -43,14 +43,14 @@ public final class RegexMatchSetRegexMatchTuple {
      * The part of a web request that you want to search, such as a specified header or a query string.
      * 
     */
-    public RegexMatchSetRegexMatchTupleFieldToMatch getFieldToMatch() {
+    public RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
      * The ID of a `WAF Regex Pattern Set`.
      * 
     */
-    public String getRegexPatternSetId() {
+    public String regexPatternSetId() {
         return this.regexPatternSetId;
     }
     /**
@@ -60,7 +60,7 @@ public final class RegexMatchSetRegexMatchTuple {
      * for all supported values.
      * 
     */
-    public String getTextTransformation() {
+    public String textTransformation() {
         return this.textTransformation;
     }
 

@@ -25,7 +25,7 @@ public final class ThingTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deprecated")
       private final @Nullable Output<Boolean> deprecated;
 
-    public Output<Boolean> getDeprecated() {
+    public Output<Boolean> deprecated() {
         return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
@@ -36,7 +36,7 @@ public final class ThingTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ThingTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ThingTypePropertiesArgs> properties;
 
-    public Output<ThingTypePropertiesArgs> getProperties() {
+    public Output<ThingTypePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -58,7 +58,7 @@ public final class ThingTypeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

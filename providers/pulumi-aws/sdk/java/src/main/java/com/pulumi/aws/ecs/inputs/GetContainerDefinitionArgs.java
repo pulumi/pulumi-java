@@ -19,7 +19,7 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetContainerDefinitionArgs extends com.pulumi.resources.Invok
     @Import(name="taskDefinition", required=true)
       private final String taskDefinition;
 
-    public String getTaskDefinition() {
+    public String taskDefinition() {
         return this.taskDefinition;
     }
 

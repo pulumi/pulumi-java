@@ -22,7 +22,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
     @Import(name="authorizationConfig", required=true)
       private final Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig;
 
-    public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> getAuthorizationConfig() {
+    public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig() {
         return this.authorizationConfig;
     }
 
@@ -33,7 +33,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -44,7 +44,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
     @Import(name="rootDirectory", required=true)
       private final Output<String> rootDirectory;
 
-    public Output<String> getRootDirectory() {
+    public Output<String> rootDirectory() {
         return this.rootDirectory;
     }
 

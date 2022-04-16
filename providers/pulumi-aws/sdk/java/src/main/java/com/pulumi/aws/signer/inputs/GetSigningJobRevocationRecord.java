@@ -15,21 +15,21 @@ public final class GetSigningJobRevocationRecord extends com.pulumi.resources.In
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 
     @Import(name="revokedAt", required=true)
       private final String revokedAt;
 
-    public String getRevokedAt() {
+    public String revokedAt() {
         return this.revokedAt;
     }
 
     @Import(name="revokedBy", required=true)
       private final String revokedBy;
 
-    public String getRevokedBy() {
+    public String revokedBy() {
         return this.revokedBy;
     }
 

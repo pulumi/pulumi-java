@@ -22,7 +22,7 @@ public final class ListenerRuleConditionSourceIpGetArgs extends com.pulumi.resou
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

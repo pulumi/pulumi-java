@@ -24,7 +24,7 @@ public final class TrailAdvancedEventSelectorArgs extends com.pulumi.resources.R
     @Import(name="fieldSelectors", required=true)
       private final Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors;
 
-    public Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> getFieldSelectors() {
+    public Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors() {
         return this.fieldSelectors;
     }
 
@@ -35,7 +35,7 @@ public final class TrailAdvancedEventSelectorArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

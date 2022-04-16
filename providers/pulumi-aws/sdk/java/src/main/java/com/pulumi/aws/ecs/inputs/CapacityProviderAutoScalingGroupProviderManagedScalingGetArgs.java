@@ -23,7 +23,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
     @Import(name="instanceWarmupPeriod")
       private final @Nullable Output<Integer> instanceWarmupPeriod;
 
-    public Output<Integer> getInstanceWarmupPeriod() {
+    public Output<Integer> instanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Codegen.empty() : this.instanceWarmupPeriod;
     }
 
@@ -34,7 +34,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
     @Import(name="maximumScalingStepSize")
       private final @Nullable Output<Integer> maximumScalingStepSize;
 
-    public Output<Integer> getMaximumScalingStepSize() {
+    public Output<Integer> maximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Codegen.empty() : this.maximumScalingStepSize;
     }
 
@@ -45,7 +45,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
     @Import(name="minimumScalingStepSize")
       private final @Nullable Output<Integer> minimumScalingStepSize;
 
-    public Output<Integer> getMinimumScalingStepSize() {
+    public Output<Integer> minimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Codegen.empty() : this.minimumScalingStepSize;
     }
 
@@ -56,7 +56,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -67,7 +67,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
     @Import(name="targetCapacity")
       private final @Nullable Output<Integer> targetCapacity;
 
-    public Output<Integer> getTargetCapacity() {
+    public Output<Integer> targetCapacity() {
         return this.targetCapacity == null ? Codegen.empty() : this.targetCapacity;
     }
 

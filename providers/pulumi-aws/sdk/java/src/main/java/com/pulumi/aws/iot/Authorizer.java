@@ -42,7 +42,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The ARN of the authorizer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The ARN of the authorizer's Lambda function.
      * 
      */
-    public Output<String> getAuthorizerFunctionArn() {
+    public Output<String> authorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
     /**
@@ -70,7 +70,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The name of the authorizer.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return Specifies whether AWS IoT validates the token signature in an authorization request. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSigningDisabled() {
+    public Output</* @Nullable */ Boolean> signingDisabled() {
         return this.signingDisabled;
     }
     /**
@@ -98,7 +98,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The status of Authorizer request at creation. Valid values: `ACTIVE`, `INACTIVE`. Default: `ACTIVE`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -112,7 +112,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The name of the token key used to extract the token from the HTTP headers. This value is required if signing is enabled in your authorizer.
      * 
      */
-    public Output</* @Nullable */ String> getTokenKeyName() {
+    public Output</* @Nullable */ String> tokenKeyName() {
         return this.tokenKeyName;
     }
     /**
@@ -126,7 +126,7 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
      * @return The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTokenSigningPublicKeys() {
+    public Output</* @Nullable */ Map<String,String>> tokenSigningPublicKeys() {
         return this.tokenSigningPublicKeys;
     }
 

@@ -23,7 +23,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
-    public Output<String> getCertificateBody() {
+    public Output<String> certificateBody() {
         return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
     }
 
@@ -48,7 +48,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
@@ -59,7 +59,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -71,7 +71,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -97,7 +97,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -108,7 +108,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -119,7 +119,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -130,7 +130,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -141,7 +141,7 @@ public final class ServerCertificateState extends com.pulumi.resources.ResourceA
     @Import(name="uploadDate")
       private final @Nullable Output<String> uploadDate;
 
-    public Output<String> getUploadDate() {
+    public Output<String> uploadDate() {
         return this.uploadDate == null ? Codegen.empty() : this.uploadDate;
     }
 

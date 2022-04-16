@@ -23,7 +23,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends com.pulumi
     @Import(name="base")
       private final @Nullable Output<Integer> base;
 
-    public Output<Integer> getBase() {
+    public Output<Integer> base() {
         return this.base == null ? Codegen.empty() : this.base;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends com.pulumi
     @Import(name="capacityProvider", required=true)
       private final Output<String> capacityProvider;
 
-    public Output<String> getCapacityProvider() {
+    public Output<String> capacityProvider() {
         return this.capacityProvider;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends com.pulumi
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

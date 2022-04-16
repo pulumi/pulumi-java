@@ -24,7 +24,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="amazonSideAsn")
       private final @Nullable String amazonSideAsn;
 
-    public Optional<String> getAmazonSideAsn() {
+    public Optional<String> amazonSideAsn() {
         return this.amazonSideAsn == null ? Optional.empty() : Optional.ofNullable(this.amazonSideAsn);
     }
 
@@ -35,7 +35,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="attachedVpcId")
       private final @Nullable String attachedVpcId;
 
-    public Optional<String> getAttachedVpcId() {
+    public Optional<String> attachedVpcId() {
         return this.attachedVpcId == null ? Optional.empty() : Optional.ofNullable(this.attachedVpcId);
     }
 
@@ -46,7 +46,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
@@ -57,7 +57,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetVpnGatewayFilter> filters;
 
-    public List<GetVpnGatewayFilter> getFilters() {
+    public List<GetVpnGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -68,7 +68,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -79,7 +79,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -91,7 +91,7 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

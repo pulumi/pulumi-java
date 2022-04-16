@@ -46,26 +46,26 @@ public final class GetResourceResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIdentifier() {
+    public String identifier() {
         return this.identifier;
     }
     /**
      * JSON string matching the CloudFormation resource type schema with current configuration.
      * 
     */
-    public String getProperties() {
+    public String properties() {
         return this.properties;
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public String getTypeName() {
+    public String typeName() {
         return this.typeName;
     }
-    public Optional<String> getTypeVersionId() {
+    public Optional<String> typeVersionId() {
         return Optional.ofNullable(this.typeVersionId);
     }
 

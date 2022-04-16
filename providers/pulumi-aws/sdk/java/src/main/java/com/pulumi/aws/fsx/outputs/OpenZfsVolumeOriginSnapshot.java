@@ -20,10 +20,10 @@ public final class OpenZfsVolumeOriginSnapshot {
         this.snapshotArn = snapshotArn;
     }
 
-    public String getCopyStrategy() {
+    public String copyStrategy() {
         return this.copyStrategy;
     }
-    public String getSnapshotArn() {
+    public String snapshotArn() {
         return this.snapshotArn;
     }
 

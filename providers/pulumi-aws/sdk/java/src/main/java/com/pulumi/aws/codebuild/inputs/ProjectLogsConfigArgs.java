@@ -23,7 +23,7 @@ public final class ProjectLogsConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cloudwatchLogs")
       private final @Nullable Output<ProjectLogsConfigCloudwatchLogsArgs> cloudwatchLogs;
 
-    public Output<ProjectLogsConfigCloudwatchLogsArgs> getCloudwatchLogs() {
+    public Output<ProjectLogsConfigCloudwatchLogsArgs> cloudwatchLogs() {
         return this.cloudwatchLogs == null ? Codegen.empty() : this.cloudwatchLogs;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectLogsConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="s3Logs")
       private final @Nullable Output<ProjectLogsConfigS3LogsArgs> s3Logs;
 
-    public Output<ProjectLogsConfigS3LogsArgs> getS3Logs() {
+    public Output<ProjectLogsConfigS3LogsArgs> s3Logs() {
         return this.s3Logs == null ? Codegen.empty() : this.s3Logs;
     }
 

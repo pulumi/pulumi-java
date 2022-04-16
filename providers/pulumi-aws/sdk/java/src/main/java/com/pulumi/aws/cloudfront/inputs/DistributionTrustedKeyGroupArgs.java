@@ -24,7 +24,7 @@ public final class DistributionTrustedKeyGroupArgs extends com.pulumi.resources.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionTrustedKeyGroupArgs extends com.pulumi.resources.
     @Import(name="items")
       private final @Nullable Output<List<DistributionTrustedKeyGroupItemArgs>> items;
 
-    public Output<List<DistributionTrustedKeyGroupItemArgs>> getItems() {
+    public Output<List<DistributionTrustedKeyGroupItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

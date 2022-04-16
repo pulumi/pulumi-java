@@ -23,7 +23,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
     @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 
@@ -45,7 +45,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
     @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
-    public Output<String> getKeyType() {
+    public Output<String> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 

@@ -25,7 +25,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentBasedDeduplication")
       private final @Nullable Output<Boolean> contentBasedDeduplication;
 
-    public Output<Boolean> getContentBasedDeduplication() {
+    public Output<Boolean> contentBasedDeduplication() {
         return this.contentBasedDeduplication == null ? Codegen.empty() : this.contentBasedDeduplication;
     }
 
@@ -47,7 +47,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deduplicationScope")
       private final @Nullable Output<String> deduplicationScope;
 
-    public Output<String> getDeduplicationScope() {
+    public Output<String> deduplicationScope() {
         return this.deduplicationScope == null ? Codegen.empty() : this.deduplicationScope;
     }
 
@@ -58,7 +58,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="delaySeconds")
       private final @Nullable Output<Integer> delaySeconds;
 
-    public Output<Integer> getDelaySeconds() {
+    public Output<Integer> delaySeconds() {
         return this.delaySeconds == null ? Codegen.empty() : this.delaySeconds;
     }
 
@@ -69,7 +69,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fifoQueue")
       private final @Nullable Output<Boolean> fifoQueue;
 
-    public Output<Boolean> getFifoQueue() {
+    public Output<Boolean> fifoQueue() {
         return this.fifoQueue == null ? Codegen.empty() : this.fifoQueue;
     }
 
@@ -80,7 +80,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fifoThroughputLimit")
       private final @Nullable Output<String> fifoThroughputLimit;
 
-    public Output<String> getFifoThroughputLimit() {
+    public Output<String> fifoThroughputLimit() {
         return this.fifoThroughputLimit == null ? Codegen.empty() : this.fifoThroughputLimit;
     }
 
@@ -91,7 +91,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsDataKeyReusePeriodSeconds")
       private final @Nullable Output<Integer> kmsDataKeyReusePeriodSeconds;
 
-    public Output<Integer> getKmsDataKeyReusePeriodSeconds() {
+    public Output<Integer> kmsDataKeyReusePeriodSeconds() {
         return this.kmsDataKeyReusePeriodSeconds == null ? Codegen.empty() : this.kmsDataKeyReusePeriodSeconds;
     }
 
@@ -102,7 +102,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsMasterKeyId")
       private final @Nullable Output<String> kmsMasterKeyId;
 
-    public Output<String> getKmsMasterKeyId() {
+    public Output<String> kmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
@@ -113,7 +113,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxMessageSize")
       private final @Nullable Output<Integer> maxMessageSize;
 
-    public Output<Integer> getMaxMessageSize() {
+    public Output<Integer> maxMessageSize() {
         return this.maxMessageSize == null ? Codegen.empty() : this.maxMessageSize;
     }
 
@@ -124,7 +124,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionSeconds")
       private final @Nullable Output<Integer> messageRetentionSeconds;
 
-    public Output<Integer> getMessageRetentionSeconds() {
+    public Output<Integer> messageRetentionSeconds() {
         return this.messageRetentionSeconds == null ? Codegen.empty() : this.messageRetentionSeconds;
     }
 
@@ -135,7 +135,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -146,7 +146,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -157,7 +157,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -168,7 +168,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="receiveWaitTimeSeconds")
       private final @Nullable Output<Integer> receiveWaitTimeSeconds;
 
-    public Output<Integer> getReceiveWaitTimeSeconds() {
+    public Output<Integer> receiveWaitTimeSeconds() {
         return this.receiveWaitTimeSeconds == null ? Codegen.empty() : this.receiveWaitTimeSeconds;
     }
 
@@ -179,7 +179,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="redriveAllowPolicy")
       private final @Nullable Output<String> redriveAllowPolicy;
 
-    public Output<String> getRedriveAllowPolicy() {
+    public Output<String> redriveAllowPolicy() {
         return this.redriveAllowPolicy == null ? Codegen.empty() : this.redriveAllowPolicy;
     }
 
@@ -190,7 +190,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="redrivePolicy")
       private final @Nullable Output<String> redrivePolicy;
 
-    public Output<String> getRedrivePolicy() {
+    public Output<String> redrivePolicy() {
         return this.redrivePolicy == null ? Codegen.empty() : this.redrivePolicy;
     }
 
@@ -201,7 +201,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqsManagedSseEnabled")
       private final @Nullable Output<Boolean> sqsManagedSseEnabled;
 
-    public Output<Boolean> getSqsManagedSseEnabled() {
+    public Output<Boolean> sqsManagedSseEnabled() {
         return this.sqsManagedSseEnabled == null ? Codegen.empty() : this.sqsManagedSseEnabled;
     }
 
@@ -212,7 +212,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -223,7 +223,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -234,7 +234,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 
@@ -245,7 +245,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
     @Import(name="visibilityTimeoutSeconds")
       private final @Nullable Output<Integer> visibilityTimeoutSeconds;
 
-    public Output<Integer> getVisibilityTimeoutSeconds() {
+    public Output<Integer> visibilityTimeoutSeconds() {
         return this.visibilityTimeoutSeconds == null ? Codegen.empty() : this.visibilityTimeoutSeconds;
     }
 

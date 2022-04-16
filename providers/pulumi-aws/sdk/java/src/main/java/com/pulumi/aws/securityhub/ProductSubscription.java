@@ -40,7 +40,7 @@ public class ProductSubscription extends com.pulumi.resources.CustomResource {
      * @return The ARN of a resource that represents your subscription to the product that generates the findings that you want to import into Security Hub.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class ProductSubscription extends com.pulumi.resources.CustomResource {
      * @return The ARN of the product that generates findings that you want to import into Security Hub - see below.
      * 
      */
-    public Output<String> getProductArn() {
+    public Output<String> productArn() {
         return this.productArn;
     }
 

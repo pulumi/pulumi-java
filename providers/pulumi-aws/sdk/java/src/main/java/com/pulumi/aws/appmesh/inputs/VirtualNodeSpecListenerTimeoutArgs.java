@@ -25,7 +25,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends com.pulumi.resourc
     @Import(name="grpc")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
 
-    public Output<VirtualNodeSpecListenerTimeoutGrpcArgs> getGrpc() {
+    public Output<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc() {
         return this.grpc == null ? Codegen.empty() : this.grpc;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends com.pulumi.resourc
     @Import(name="http")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpArgs> http;
 
-    public Output<VirtualNodeSpecListenerTimeoutHttpArgs> getHttp() {
+    public Output<VirtualNodeSpecListenerTimeoutHttpArgs> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends com.pulumi.resourc
     @Import(name="http2")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
 
-    public Output<VirtualNodeSpecListenerTimeoutHttp2Args> getHttp2() {
+    public Output<VirtualNodeSpecListenerTimeoutHttp2Args> http2() {
         return this.http2 == null ? Codegen.empty() : this.http2;
     }
 
@@ -58,7 +58,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends com.pulumi.resourc
     @Import(name="tcp")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
 
-    public Output<VirtualNodeSpecListenerTimeoutTcpArgs> getTcp() {
+    public Output<VirtualNodeSpecListenerTimeoutTcpArgs> tcp() {
         return this.tcp == null ? Codegen.empty() : this.tcp;
     }
 

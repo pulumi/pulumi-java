@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
     @Import(name="parameters")
       private final @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
-    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
+    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

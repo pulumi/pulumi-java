@@ -68,55 +68,55 @@ public final class GetPolicyResult {
         this.tags = tags;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The description of the policy.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The path to the policy.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
-    public Optional<String> getPathPrefix() {
+    public Optional<String> pathPrefix() {
         return Optional.ofNullable(this.pathPrefix);
     }
     /**
      * The policy document of the policy.
      * 
     */
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
     /**
      * The policy's ID.
      * 
     */
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * Key-value mapping of tags for the IAM Policy.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

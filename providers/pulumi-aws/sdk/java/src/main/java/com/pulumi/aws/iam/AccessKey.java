@@ -42,19 +42,19 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
      * 
      */
-    public Output<String> getCreateDate() {
+    public Output<String> createDate() {
         return this.createDate;
     }
     @Export(name="encryptedSecret", type=String.class, parameters={})
     private Output<String> encryptedSecret;
 
-    public Output<String> getEncryptedSecret() {
+    public Output<String> encryptedSecret() {
         return this.encryptedSecret;
     }
     @Export(name="encryptedSesSmtpPasswordV4", type=String.class, parameters={})
     private Output<String> encryptedSesSmtpPasswordV4;
 
-    public Output<String> getEncryptedSesSmtpPasswordV4() {
+    public Output<String> encryptedSesSmtpPasswordV4() {
         return this.encryptedSesSmtpPasswordV4;
     }
     /**
@@ -68,7 +68,7 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
      * 
      */
-    public Output<String> getKeyFingerprint() {
+    public Output<String> keyFingerprint() {
         return this.keyFingerprint;
     }
     /**
@@ -82,7 +82,7 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
      * 
      */
-    public Output</* @Nullable */ String> getPgpKey() {
+    public Output</* @Nullable */ String> pgpKey() {
         return this.pgpKey;
     }
     /**
@@ -96,7 +96,7 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
      * 
      */
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
     /**
@@ -110,7 +110,7 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
      * 
      */
-    public Output<String> getSesSmtpPasswordV4() {
+    public Output<String> sesSmtpPasswordV4() {
         return this.sesSmtpPasswordV4;
     }
     /**
@@ -124,7 +124,7 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -138,7 +138,7 @@ public class AccessKey extends com.pulumi.resources.CustomResource {
      * @return IAM user to associate with this access key.
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

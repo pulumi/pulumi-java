@@ -57,35 +57,35 @@ public final class DomainNameDomainNameConfiguration {
      * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
      * 
     */
-    public String getCertificateArn() {
+    public String certificateArn() {
         return this.certificateArn;
     }
     /**
      * The endpoint type. Valid values: `REGIONAL`.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
     */
-    public Optional<String> getHostedZoneId() {
+    public Optional<String> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
     /**
      * The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
     */
-    public String getSecurityPolicy() {
+    public String securityPolicy() {
         return this.securityPolicy;
     }
     /**
      * The target domain name.
      * 
     */
-    public Optional<String> getTargetDomainName() {
+    public Optional<String> targetDomainName() {
         return Optional.ofNullable(this.targetDomainName);
     }
 

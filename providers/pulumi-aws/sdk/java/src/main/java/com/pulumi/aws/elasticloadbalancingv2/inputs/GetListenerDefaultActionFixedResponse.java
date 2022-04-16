@@ -15,21 +15,21 @@ public final class GetListenerDefaultActionFixedResponse extends com.pulumi.reso
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
     @Import(name="messageBody", required=true)
       private final String messageBody;
 
-    public String getMessageBody() {
+    public String messageBody() {
         return this.messageBody;
     }
 
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

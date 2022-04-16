@@ -26,7 +26,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowClassicFlow")
       private final @Nullable Output<Boolean> allowClassicFlow;
 
-    public Output<Boolean> getAllowClassicFlow() {
+    public Output<Boolean> allowClassicFlow() {
         return this.allowClassicFlow == null ? Codegen.empty() : this.allowClassicFlow;
     }
 
@@ -37,7 +37,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowUnauthenticatedIdentities")
       private final @Nullable Output<Boolean> allowUnauthenticatedIdentities;
 
-    public Output<Boolean> getAllowUnauthenticatedIdentities() {
+    public Output<Boolean> allowUnauthenticatedIdentities() {
         return this.allowUnauthenticatedIdentities == null ? Codegen.empty() : this.allowUnauthenticatedIdentities;
     }
 
@@ -48,7 +48,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -59,7 +59,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cognitoIdentityProviders")
       private final @Nullable Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders;
 
-    public Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> getCognitoIdentityProviders() {
+    public Output<List<IdentityPoolCognitoIdentityProviderGetArgs>> cognitoIdentityProviders() {
         return this.cognitoIdentityProviders == null ? Codegen.empty() : this.cognitoIdentityProviders;
     }
 
@@ -71,7 +71,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerProviderName")
       private final @Nullable Output<String> developerProviderName;
 
-    public Output<String> getDeveloperProviderName() {
+    public Output<String> developerProviderName() {
         return this.developerProviderName == null ? Codegen.empty() : this.developerProviderName;
     }
 
@@ -82,7 +82,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityPoolName")
       private final @Nullable Output<String> identityPoolName;
 
-    public Output<String> getIdentityPoolName() {
+    public Output<String> identityPoolName() {
         return this.identityPoolName == null ? Codegen.empty() : this.identityPoolName;
     }
 
@@ -93,7 +93,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="openidConnectProviderArns")
       private final @Nullable Output<List<String>> openidConnectProviderArns;
 
-    public Output<List<String>> getOpenidConnectProviderArns() {
+    public Output<List<String>> openidConnectProviderArns() {
         return this.openidConnectProviderArns == null ? Codegen.empty() : this.openidConnectProviderArns;
     }
 
@@ -104,7 +104,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="samlProviderArns")
       private final @Nullable Output<List<String>> samlProviderArns;
 
-    public Output<List<String>> getSamlProviderArns() {
+    public Output<List<String>> samlProviderArns() {
         return this.samlProviderArns == null ? Codegen.empty() : this.samlProviderArns;
     }
 
@@ -115,7 +115,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportedLoginProviders")
       private final @Nullable Output<Map<String,String>> supportedLoginProviders;
 
-    public Output<Map<String,String>> getSupportedLoginProviders() {
+    public Output<Map<String,String>> supportedLoginProviders() {
         return this.supportedLoginProviders == null ? Codegen.empty() : this.supportedLoginProviders;
     }
 
@@ -126,7 +126,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -137,7 +137,7 @@ public final class IdentityPoolState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

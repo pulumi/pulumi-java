@@ -23,7 +23,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="buildCommand")
       private final @Nullable Output<String> buildCommand;
 
-    public Output<String> getBuildCommand() {
+    public Output<String> buildCommand() {
         return this.buildCommand == null ? Codegen.empty() : this.buildCommand;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="runtimeEnvironmentVariables")
       private final @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
 
-    public Output<Map<String,String>> getRuntimeEnvironmentVariables() {
+    public Output<Map<String,String>> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Codegen.empty() : this.runtimeEnvironmentVariables;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     @Import(name="startCommand")
       private final @Nullable Output<String> startCommand;
 
-    public Output<String> getStartCommand() {
+    public Output<String> startCommand() {
         return this.startCommand == null ? Codegen.empty() : this.startCommand;
     }
 

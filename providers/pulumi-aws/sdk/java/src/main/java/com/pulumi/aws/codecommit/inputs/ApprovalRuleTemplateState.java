@@ -22,7 +22,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="approvalRuleTemplateId")
       private final @Nullable Output<String> approvalRuleTemplateId;
 
-    public Output<String> getApprovalRuleTemplateId() {
+    public Output<String> approvalRuleTemplateId() {
         return this.approvalRuleTemplateId == null ? Codegen.empty() : this.approvalRuleTemplateId;
     }
 
@@ -33,7 +33,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -44,7 +44,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -55,7 +55,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -66,7 +66,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
     }
 
@@ -77,7 +77,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="lastModifiedUser")
       private final @Nullable Output<String> lastModifiedUser;
 
-    public Output<String> getLastModifiedUser() {
+    public Output<String> lastModifiedUser() {
         return this.lastModifiedUser == null ? Codegen.empty() : this.lastModifiedUser;
     }
 
@@ -88,7 +88,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -99,7 +99,7 @@ public final class ApprovalRuleTemplateState extends com.pulumi.resources.Resour
     @Import(name="ruleContentSha256")
       private final @Nullable Output<String> ruleContentSha256;
 
-    public Output<String> getRuleContentSha256() {
+    public Output<String> ruleContentSha256() {
         return this.ruleContentSha256 == null ? Codegen.empty() : this.ruleContentSha256;
     }
 

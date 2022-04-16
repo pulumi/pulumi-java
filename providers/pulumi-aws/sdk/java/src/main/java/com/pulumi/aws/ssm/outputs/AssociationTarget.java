@@ -33,14 +33,14 @@ public final class AssociationTarget {
      * Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * A list of instance IDs or tag values. AWS currently limits this list size to one value.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

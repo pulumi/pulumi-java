@@ -22,7 +22,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientVpnEndpointId", required=true)
       private final Output<String> clientVpnEndpointId;
 
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
 
@@ -33,7 +33,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -55,7 +55,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetVpcSubnetId", required=true)
       private final Output<String> targetVpcSubnetId;
 
-    public Output<String> getTargetVpcSubnetId() {
+    public Output<String> targetVpcSubnetId() {
         return this.targetVpcSubnetId;
     }
 

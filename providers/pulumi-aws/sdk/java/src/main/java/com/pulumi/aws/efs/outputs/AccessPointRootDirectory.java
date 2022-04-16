@@ -35,14 +35,14 @@ public final class AccessPointRootDirectory {
      * POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
      * 
     */
-    public Optional<AccessPointRootDirectoryCreationInfo> getCreationInfo() {
+    public Optional<AccessPointRootDirectoryCreationInfo> creationInfo() {
         return Optional.ofNullable(this.creationInfo);
     }
     /**
      * Path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide `creation_info`.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
 

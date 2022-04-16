@@ -26,7 +26,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
-    public Output<List<ImageRecipeBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
+    public Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings() {
         return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
@@ -48,7 +48,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="components")
       private final @Nullable Output<List<ImageRecipeComponentGetArgs>> components;
 
-    public Output<List<ImageRecipeComponentGetArgs>> getComponents() {
+    public Output<List<ImageRecipeComponentGetArgs>> components() {
         return this.components == null ? Codegen.empty() : this.components;
     }
 
@@ -59,7 +59,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
@@ -70,7 +70,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -81,7 +81,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -92,7 +92,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -103,7 +103,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentImage")
       private final @Nullable Output<String> parentImage;
 
-    public Output<String> getParentImage() {
+    public Output<String> parentImage() {
         return this.parentImage == null ? Codegen.empty() : this.parentImage;
     }
 
@@ -114,7 +114,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -125,7 +125,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -136,7 +136,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -147,7 +147,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userDataBase64")
       private final @Nullable Output<String> userDataBase64;
 
-    public Output<String> getUserDataBase64() {
+    public Output<String> userDataBase64() {
         return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
     }
 
@@ -158,7 +158,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -169,7 +169,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
-    public Output<String> getWorkingDirectory() {
+    public Output<String> workingDirectory() {
         return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 

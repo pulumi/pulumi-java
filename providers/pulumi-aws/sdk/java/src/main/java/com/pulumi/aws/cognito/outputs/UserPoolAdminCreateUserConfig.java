@@ -35,14 +35,14 @@ public final class UserPoolAdminCreateUserConfig {
      * Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
      * 
     */
-    public Optional<Boolean> getAllowAdminCreateUserOnly() {
+    public Optional<Boolean> allowAdminCreateUserOnly() {
         return Optional.ofNullable(this.allowAdminCreateUserOnly);
     }
     /**
      * Invite message template structure. Detailed below.
      * 
     */
-    public Optional<UserPoolAdminCreateUserConfigInviteMessageTemplate> getInviteMessageTemplate() {
+    public Optional<UserPoolAdminCreateUserConfigInviteMessageTemplate> inviteMessageTemplate() {
         return Optional.ofNullable(this.inviteMessageTemplate);
     }
 

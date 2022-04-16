@@ -24,7 +24,7 @@ public final class ClusterScalingConfigurationGetArgs extends com.pulumi.resourc
     @Import(name="autoPause")
       private final @Nullable Output<Boolean> autoPause;
 
-    public Output<Boolean> getAutoPause() {
+    public Output<Boolean> autoPause() {
         return this.autoPause == null ? Codegen.empty() : this.autoPause;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterScalingConfigurationGetArgs extends com.pulumi.resourc
     @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> getMaxCapacity() {
+    public Output<Integer> maxCapacity() {
         return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterScalingConfigurationGetArgs extends com.pulumi.resourc
     @Import(name="minCapacity")
       private final @Nullable Output<Integer> minCapacity;
 
-    public Output<Integer> getMinCapacity() {
+    public Output<Integer> minCapacity() {
         return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterScalingConfigurationGetArgs extends com.pulumi.resourc
     @Import(name="secondsUntilAutoPause")
       private final @Nullable Output<Integer> secondsUntilAutoPause;
 
-    public Output<Integer> getSecondsUntilAutoPause() {
+    public Output<Integer> secondsUntilAutoPause() {
         return this.secondsUntilAutoPause == null ? Codegen.empty() : this.secondsUntilAutoPause;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterScalingConfigurationGetArgs extends com.pulumi.resourc
     @Import(name="timeoutAction")
       private final @Nullable Output<String> timeoutAction;
 
-    public Output<String> getTimeoutAction() {
+    public Output<String> timeoutAction() {
         return this.timeoutAction == null ? Codegen.empty() : this.timeoutAction;
     }
 

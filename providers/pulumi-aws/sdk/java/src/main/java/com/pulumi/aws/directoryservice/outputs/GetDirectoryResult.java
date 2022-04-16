@@ -124,100 +124,100 @@ public final class GetDirectoryResult {
      * The access URL for the directory/connector, such as http://alias.awsapps.com.
      * 
     */
-    public String getAccessUrl() {
+    public String accessUrl() {
         return this.accessUrl;
     }
     /**
      * The alias for the directory/connector, such as `d-991708b282.awsapps.com`.
      * 
     */
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
-    public List<GetDirectoryConnectSetting> getConnectSettings() {
+    public List<GetDirectoryConnectSetting> connectSettings() {
         return this.connectSettings;
     }
     /**
      * A textual description for the directory/connector.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getDirectoryId() {
+    public String directoryId() {
         return this.directoryId;
     }
     /**
      * A list of IP addresses of the DNS servers for the directory/connector.
      * 
     */
-    public List<String> getDnsIpAddresses() {
+    public List<String> dnsIpAddresses() {
         return this.dnsIpAddresses;
     }
     /**
      * (for `MicrosoftAD`) The Microsoft AD edition (`Standard` or `Enterprise`).
      * 
     */
-    public String getEdition() {
+    public String edition() {
         return this.edition;
     }
     /**
      * The directory/connector single-sign on status.
      * 
     */
-    public Boolean getEnableSso() {
+    public Boolean enableSso() {
         return this.enableSso;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The fully qualified name for the directory/connector.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ID of the security group created by the directory/connector.
      * 
     */
-    public String getSecurityGroupId() {
+    public String securityGroupId() {
         return this.securityGroupId;
     }
     /**
      * The short name of the directory/connector, such as `CORP`.
      * 
     */
-    public String getShortName() {
+    public String shortName() {
         return this.shortName;
     }
     /**
      * (for `SimpleAD` and `ADConnector`) The size of the directory/connector (`Small` or `Large`).
      * 
     */
-    public String getSize() {
+    public String size() {
         return this.size;
     }
     /**
      * A map of tags assigned to the directory/connector.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD`).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public List<GetDirectoryVpcSetting> getVpcSettings() {
+    public List<GetDirectoryVpcSetting> vpcSettings() {
         return this.vpcSettings;
     }
 

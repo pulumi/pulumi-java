@@ -35,17 +35,17 @@ public final class GetClusterAuthResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The token to use to authenticate with the cluster.
      * 
     */
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

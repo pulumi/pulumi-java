@@ -26,7 +26,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="autoImportPolicy")
       private final @Nullable Output<String> autoImportPolicy;
 
-    public Output<String> getAutoImportPolicy() {
+    public Output<String> autoImportPolicy() {
         return this.autoImportPolicy == null ? Codegen.empty() : this.autoImportPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="automaticBackupRetentionDays")
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
-    public Output<Integer> getAutomaticBackupRetentionDays() {
+    public Output<Integer> automaticBackupRetentionDays() {
         return this.automaticBackupRetentionDays == null ? Codegen.empty() : this.automaticBackupRetentionDays;
     }
 
@@ -59,7 +59,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
@@ -70,7 +70,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="copyTagsToBackups")
       private final @Nullable Output<Boolean> copyTagsToBackups;
 
-    public Output<Boolean> getCopyTagsToBackups() {
+    public Output<Boolean> copyTagsToBackups() {
         return this.copyTagsToBackups == null ? Codegen.empty() : this.copyTagsToBackups;
     }
 
@@ -81,7 +81,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="dailyAutomaticBackupStartTime")
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
-    public Output<String> getDailyAutomaticBackupStartTime() {
+    public Output<String> dailyAutomaticBackupStartTime() {
         return this.dailyAutomaticBackupStartTime == null ? Codegen.empty() : this.dailyAutomaticBackupStartTime;
     }
 
@@ -92,7 +92,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
-    public Output<String> getDataCompressionType() {
+    public Output<String> dataCompressionType() {
         return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
@@ -103,7 +103,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
-    public Output<String> getDeploymentType() {
+    public Output<String> deploymentType() {
         return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
@@ -114,7 +114,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -125,7 +125,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="driveCacheType")
       private final @Nullable Output<String> driveCacheType;
 
-    public Output<String> getDriveCacheType() {
+    public Output<String> driveCacheType() {
         return this.driveCacheType == null ? Codegen.empty() : this.driveCacheType;
     }
 
@@ -136,7 +136,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="exportPath")
       private final @Nullable Output<String> exportPath;
 
-    public Output<String> getExportPath() {
+    public Output<String> exportPath() {
         return this.exportPath == null ? Codegen.empty() : this.exportPath;
     }
 
@@ -147,7 +147,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="fileSystemTypeVersion")
       private final @Nullable Output<String> fileSystemTypeVersion;
 
-    public Output<String> getFileSystemTypeVersion() {
+    public Output<String> fileSystemTypeVersion() {
         return this.fileSystemTypeVersion == null ? Codegen.empty() : this.fileSystemTypeVersion;
     }
 
@@ -158,7 +158,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="importPath")
       private final @Nullable Output<String> importPath;
 
-    public Output<String> getImportPath() {
+    public Output<String> importPath() {
         return this.importPath == null ? Codegen.empty() : this.importPath;
     }
 
@@ -169,7 +169,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="importedFileChunkSize")
       private final @Nullable Output<Integer> importedFileChunkSize;
 
-    public Output<Integer> getImportedFileChunkSize() {
+    public Output<Integer> importedFileChunkSize() {
         return this.importedFileChunkSize == null ? Codegen.empty() : this.importedFileChunkSize;
     }
 
@@ -180,7 +180,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -191,7 +191,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="mountName")
       private final @Nullable Output<String> mountName;
 
-    public Output<String> getMountName() {
+    public Output<String> mountName() {
         return this.mountName == null ? Codegen.empty() : this.mountName;
     }
 
@@ -202,7 +202,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="networkInterfaceIds")
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
-    public Output<List<String>> getNetworkInterfaceIds() {
+    public Output<List<String>> networkInterfaceIds() {
         return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
     }
 
@@ -213,7 +213,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -224,7 +224,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="perUnitStorageThroughput")
       private final @Nullable Output<Integer> perUnitStorageThroughput;
 
-    public Output<Integer> getPerUnitStorageThroughput() {
+    public Output<Integer> perUnitStorageThroughput() {
         return this.perUnitStorageThroughput == null ? Codegen.empty() : this.perUnitStorageThroughput;
     }
 
@@ -235,7 +235,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -246,7 +246,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="storageCapacity")
       private final @Nullable Output<Integer> storageCapacity;
 
-    public Output<Integer> getStorageCapacity() {
+    public Output<Integer> storageCapacity() {
         return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
     }
 
@@ -257,7 +257,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
@@ -268,7 +268,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="subnetIds")
       private final @Nullable Output<String> subnetIds;
 
-    public Output<String> getSubnetIds() {
+    public Output<String> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -279,7 +279,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -290,7 +290,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -301,7 +301,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
@@ -312,7 +312,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     @Import(name="weeklyMaintenanceStartTime")
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
-    public Output<String> getWeeklyMaintenanceStartTime() {
+    public Output<String> weeklyMaintenanceStartTime() {
         return this.weeklyMaintenanceStartTime == null ? Codegen.empty() : this.weeklyMaintenanceStartTime;
     }
 

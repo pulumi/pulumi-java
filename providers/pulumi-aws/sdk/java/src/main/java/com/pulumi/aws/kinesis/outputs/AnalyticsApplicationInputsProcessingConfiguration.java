@@ -24,7 +24,7 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
      * The Lambda function configuration. See Lambda below for more details.
      * 
     */
-    public AnalyticsApplicationInputsProcessingConfigurationLambda getLambda() {
+    public AnalyticsApplicationInputsProcessingConfigurationLambda lambda() {
         return this.lambda;
     }
 

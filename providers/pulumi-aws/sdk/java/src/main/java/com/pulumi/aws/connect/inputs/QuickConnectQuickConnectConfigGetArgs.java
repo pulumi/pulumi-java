@@ -26,7 +26,7 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="phoneConfigs")
       private final @Nullable Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs;
 
-    public Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> getPhoneConfigs() {
+    public Output<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs() {
         return this.phoneConfigs == null ? Codegen.empty() : this.phoneConfigs;
     }
 
@@ -37,7 +37,7 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="queueConfigs")
       private final @Nullable Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs;
 
-    public Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> getQueueConfigs() {
+    public Output<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs() {
         return this.queueConfigs == null ? Codegen.empty() : this.queueConfigs;
     }
 
@@ -48,7 +48,7 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="quickConnectType", required=true)
       private final Output<String> quickConnectType;
 
-    public Output<String> getQuickConnectType() {
+    public Output<String> quickConnectType() {
         return this.quickConnectType;
     }
 
@@ -59,7 +59,7 @@ public final class QuickConnectQuickConnectConfigGetArgs extends com.pulumi.reso
     @Import(name="userConfigs")
       private final @Nullable Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs;
 
-    public Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> getUserConfigs() {
+    public Output<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs() {
         return this.userConfigs == null ? Codegen.empty() : this.userConfigs;
     }
 

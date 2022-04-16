@@ -26,7 +26,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="junctionPath", required=true)
       private final Output<String> junctionPath;
 
-    public Output<String> getJunctionPath() {
+    public Output<String> junctionPath() {
         return this.junctionPath;
     }
 
@@ -37,7 +37,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityStyle")
       private final @Nullable Output<String> securityStyle;
 
-    public Output<String> getSecurityStyle() {
+    public Output<String> securityStyle() {
         return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
     }
 
@@ -59,7 +59,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeInMegabytes", required=true)
       private final Output<Integer> sizeInMegabytes;
 
-    public Output<Integer> getSizeInMegabytes() {
+    public Output<Integer> sizeInMegabytes() {
         return this.sizeInMegabytes;
     }
 
@@ -70,7 +70,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageEfficiencyEnabled", required=true)
       private final Output<Boolean> storageEfficiencyEnabled;
 
-    public Output<Boolean> getStorageEfficiencyEnabled() {
+    public Output<Boolean> storageEfficiencyEnabled() {
         return this.storageEfficiencyEnabled;
     }
 
@@ -81,7 +81,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageVirtualMachineId", required=true)
       private final Output<String> storageVirtualMachineId;
 
-    public Output<String> getStorageVirtualMachineId() {
+    public Output<String> storageVirtualMachineId() {
         return this.storageVirtualMachineId;
     }
 
@@ -92,14 +92,14 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tieringPolicy")
       private final @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
 
-    public Output<OntapVolumeTieringPolicyArgs> getTieringPolicy() {
+    public Output<OntapVolumeTieringPolicyArgs> tieringPolicy() {
         return this.tieringPolicy == null ? Codegen.empty() : this.tieringPolicy;
     }
 
@@ -110,7 +110,7 @@ public final class OntapVolumeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

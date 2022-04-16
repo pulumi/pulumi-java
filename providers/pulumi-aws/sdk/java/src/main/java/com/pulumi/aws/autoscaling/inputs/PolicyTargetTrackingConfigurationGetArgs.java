@@ -25,7 +25,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
     @Import(name="customizedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
-    public Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
+    public Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification() {
         return this.customizedMetricSpecification == null ? Codegen.empty() : this.customizedMetricSpecification;
     }
 
@@ -36,7 +36,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
     @Import(name="disableScaleIn")
       private final @Nullable Output<Boolean> disableScaleIn;
 
-    public Output<Boolean> getDisableScaleIn() {
+    public Output<Boolean> disableScaleIn() {
         return this.disableScaleIn == null ? Codegen.empty() : this.disableScaleIn;
     }
 
@@ -47,7 +47,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
     @Import(name="predefinedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
-    public Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
+    public Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification() {
         return this.predefinedMetricSpecification == null ? Codegen.empty() : this.predefinedMetricSpecification;
     }
 
@@ -58,7 +58,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends com.pulumi.r
     @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
-    public Output<Double> getTargetValue() {
+    public Output<Double> targetValue() {
         return this.targetValue;
     }
 

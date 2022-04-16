@@ -23,7 +23,7 @@ public final class CrawlerJdbcTargetGetArgs extends com.pulumi.resources.Resourc
     @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -34,7 +34,7 @@ public final class CrawlerJdbcTargetGetArgs extends com.pulumi.resources.Resourc
     @Import(name="exclusions")
       private final @Nullable Output<List<String>> exclusions;
 
-    public Output<List<String>> getExclusions() {
+    public Output<List<String>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -45,7 +45,7 @@ public final class CrawlerJdbcTargetGetArgs extends com.pulumi.resources.Resourc
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

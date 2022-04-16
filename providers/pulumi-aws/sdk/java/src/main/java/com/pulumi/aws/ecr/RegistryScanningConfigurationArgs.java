@@ -24,7 +24,7 @@ public final class RegistryScanningConfigurationArgs extends com.pulumi.resource
     @Import(name="rules")
       private final @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
 
-    public Output<List<RegistryScanningConfigurationRuleArgs>> getRules() {
+    public Output<List<RegistryScanningConfigurationRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -35,7 +35,7 @@ public final class RegistryScanningConfigurationArgs extends com.pulumi.resource
     @Import(name="scanType", required=true)
       private final Output<String> scanType;
 
-    public Output<String> getScanType() {
+    public Output<String> scanType() {
         return this.scanType;
     }
 

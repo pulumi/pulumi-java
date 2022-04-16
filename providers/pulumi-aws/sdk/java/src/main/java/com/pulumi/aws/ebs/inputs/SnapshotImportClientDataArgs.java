@@ -23,7 +23,7 @@ public final class SnapshotImportClientDataArgs extends com.pulumi.resources.Res
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -34,7 +34,7 @@ public final class SnapshotImportClientDataArgs extends com.pulumi.resources.Res
     @Import(name="uploadEnd")
       private final @Nullable Output<String> uploadEnd;
 
-    public Output<String> getUploadEnd() {
+    public Output<String> uploadEnd() {
         return this.uploadEnd == null ? Codegen.empty() : this.uploadEnd;
     }
 
@@ -45,7 +45,7 @@ public final class SnapshotImportClientDataArgs extends com.pulumi.resources.Res
     @Import(name="uploadSize")
       private final @Nullable Output<Double> uploadSize;
 
-    public Output<Double> getUploadSize() {
+    public Output<Double> uploadSize() {
         return this.uploadSize == null ? Codegen.empty() : this.uploadSize;
     }
 
@@ -56,7 +56,7 @@ public final class SnapshotImportClientDataArgs extends com.pulumi.resources.Res
     @Import(name="uploadStart")
       private final @Nullable Output<String> uploadStart;
 
-    public Output<String> getUploadStart() {
+    public Output<String> uploadStart() {
         return this.uploadStart == null ? Codegen.empty() : this.uploadStart;
     }
 

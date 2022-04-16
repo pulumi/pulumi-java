@@ -24,7 +24,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -46,7 +46,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="locationUri")
       private final @Nullable Output<String> locationUri;
 
-    public Output<String> getLocationUri() {
+    public Output<String> locationUri() {
         return this.locationUri == null ? Codegen.empty() : this.locationUri;
     }
 
@@ -68,7 +68,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -90,7 +90,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     @Import(name="targetDatabase")
       private final @Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
 
-    public Output<CatalogDatabaseTargetDatabaseGetArgs> getTargetDatabase() {
+    public Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase() {
         return this.targetDatabase == null ? Codegen.empty() : this.targetDatabase;
     }
 

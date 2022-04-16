@@ -27,7 +27,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egress")
       private final @Nullable Output<List<SecurityGroupEgressArgs>> egress;
 
-    public Output<List<SecurityGroupEgressArgs>> getEgress() {
+    public Output<List<SecurityGroupEgressArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -49,7 +49,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
       private final @Nullable Output<List<SecurityGroupIngressArgs>> ingress;
 
-    public Output<List<SecurityGroupIngressArgs>> getIngress() {
+    public Output<List<SecurityGroupIngressArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -60,7 +60,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -82,7 +82,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revokeRulesOnDelete")
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
-    public Output<Boolean> getRevokeRulesOnDelete() {
+    public Output<Boolean> revokeRulesOnDelete() {
         return this.revokeRulesOnDelete == null ? Codegen.empty() : this.revokeRulesOnDelete;
     }
 
@@ -93,7 +93,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

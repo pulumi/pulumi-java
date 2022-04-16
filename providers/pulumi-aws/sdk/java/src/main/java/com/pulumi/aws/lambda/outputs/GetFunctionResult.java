@@ -226,198 +226,198 @@ public final class GetFunctionResult {
      * The instruction set architecture for the Lambda function.
      * 
     */
-    public List<String> getArchitectures() {
+    public List<String> architectures() {
         return this.architectures;
     }
     /**
      * Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Amazon Resource Name (ARN) for a Code Signing Configuration.
      * 
     */
-    public String getCodeSigningConfigArn() {
+    public String codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
      * Configure the function's *dead letter queue*.
      * 
     */
-    public GetFunctionDeadLetterConfig getDeadLetterConfig() {
+    public GetFunctionDeadLetterConfig deadLetterConfig() {
         return this.deadLetterConfig;
     }
     /**
      * Description of what your Lambda Function does.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The Lambda environment's configuration settings.
      * 
     */
-    public GetFunctionEnvironment getEnvironment() {
+    public GetFunctionEnvironment environment() {
         return this.environment;
     }
     /**
      * The connection settings for an Amazon EFS file system.
      * 
     */
-    public List<GetFunctionFileSystemConfig> getFileSystemConfigs() {
+    public List<GetFunctionFileSystemConfig> fileSystemConfigs() {
         return this.fileSystemConfigs;
     }
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
     /**
      * The function entrypoint in your code.
      * 
     */
-    public String getHandler() {
+    public String handler() {
         return this.handler;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The URI of the container image.
      * 
     */
-    public String getImageUri() {
+    public String imageUri() {
         return this.imageUri;
     }
     /**
      * The ARN to be used for invoking Lambda Function from API Gateway.
      * 
     */
-    public String getInvokeArn() {
+    public String invokeArn() {
         return this.invokeArn;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
     */
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
      * The date this resource was last modified.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * A list of Lambda Layer ARNs attached to your Lambda Function.
      * 
     */
-    public List<String> getLayers() {
+    public List<String> layers() {
         return this.layers;
     }
     /**
      * Amount of memory in MB your Lambda Function can use at runtime.
      * 
     */
-    public Integer getMemorySize() {
+    public Integer memorySize() {
         return this.memorySize;
     }
     /**
      * Qualified (`:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `arn`.
      * 
     */
-    public String getQualifiedArn() {
+    public String qualifiedArn() {
         return this.qualifiedArn;
     }
-    public Optional<String> getQualifier() {
+    public Optional<String> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
     /**
      * The amount of reserved concurrent executions for this lambda function or `-1` if unreserved.
      * 
     */
-    public Integer getReservedConcurrentExecutions() {
+    public Integer reservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions;
     }
     /**
      * IAM role attached to the Lambda Function.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The runtime environment for the Lambda function.
      * 
     */
-    public String getRuntime() {
+    public String runtime() {
         return this.runtime;
     }
     /**
      * The Amazon Resource Name (ARN) of a signing job.
      * 
     */
-    public String getSigningJobArn() {
+    public String signingJobArn() {
         return this.signingJobArn;
     }
     /**
      * The Amazon Resource Name (ARN) for a signing profile version.
      * 
     */
-    public String getSigningProfileVersionArn() {
+    public String signingProfileVersionArn() {
         return this.signingProfileVersionArn;
     }
     /**
      * Base64-encoded representation of raw SHA-256 sum of the zip file.
      * 
     */
-    public String getSourceCodeHash() {
+    public String sourceCodeHash() {
         return this.sourceCodeHash;
     }
     /**
      * The size in bytes of the function .zip file.
      * 
     */
-    public Integer getSourceCodeSize() {
+    public Integer sourceCodeSize() {
         return this.sourceCodeSize;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The function execution time at which Lambda should terminate the function.
      * 
     */
-    public Integer getTimeout() {
+    public Integer timeout() {
         return this.timeout;
     }
     /**
      * Tracing settings of the function.
      * 
     */
-    public GetFunctionTracingConfig getTracingConfig() {
+    public GetFunctionTracingConfig tracingConfig() {
         return this.tracingConfig;
     }
     /**
      * The version of the Lambda function.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * VPC configuration associated with your Lambda function.
      * 
     */
-    public GetFunctionVpcConfig getVpcConfig() {
+    public GetFunctionVpcConfig vpcConfig() {
         return this.vpcConfig;
     }
 

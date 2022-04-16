@@ -24,7 +24,7 @@ public final class GetSecurityGroupsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="filters")
       private final @Nullable List<GetSecurityGroupsFilter> filters;
 
-    public List<GetSecurityGroupsFilter> getFilters() {
+    public List<GetSecurityGroupsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetSecurityGroupsArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

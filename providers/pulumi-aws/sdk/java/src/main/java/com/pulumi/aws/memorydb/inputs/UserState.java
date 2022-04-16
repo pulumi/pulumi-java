@@ -24,7 +24,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessString")
       private final @Nullable Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString == null ? Codegen.empty() : this.accessString;
     }
 
@@ -35,7 +35,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMode")
       private final @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
 
-    public Output<UserAuthenticationModeGetArgs> getAuthenticationMode() {
+    public Output<UserAuthenticationModeGetArgs> authenticationMode() {
         return this.authenticationMode == null ? Codegen.empty() : this.authenticationMode;
     }
 
@@ -58,7 +58,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumEngineVersion")
       private final @Nullable Output<String> minimumEngineVersion;
 
-    public Output<String> getMinimumEngineVersion() {
+    public Output<String> minimumEngineVersion() {
         return this.minimumEngineVersion == null ? Codegen.empty() : this.minimumEngineVersion;
     }
 
@@ -69,7 +69,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -91,7 +91,7 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

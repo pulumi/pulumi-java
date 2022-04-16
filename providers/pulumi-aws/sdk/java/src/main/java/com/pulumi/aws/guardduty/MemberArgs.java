@@ -23,7 +23,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -45,7 +45,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> getDisableEmailNotification() {
+    public Output<Boolean> disableEmailNotification() {
         return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
     }
 
@@ -56,7 +56,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -67,7 +67,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitationMessage")
       private final @Nullable Output<String> invitationMessage;
 
-    public Output<String> getInvitationMessage() {
+    public Output<String> invitationMessage() {
         return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
     }
 
@@ -78,7 +78,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> getInvite() {
+    public Output<Boolean> invite() {
         return this.invite == null ? Codegen.empty() : this.invite;
     }
 

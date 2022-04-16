@@ -25,7 +25,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -36,7 +36,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="magneticStoreWriteProperties")
       private final @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
 
-    public Output<TableMagneticStoreWritePropertiesArgs> getMagneticStoreWriteProperties() {
+    public Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties == null ? Codegen.empty() : this.magneticStoreWriteProperties;
     }
 
@@ -47,7 +47,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionProperties")
       private final @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
 
-    public Output<TableRetentionPropertiesArgs> getRetentionProperties() {
+    public Output<TableRetentionPropertiesArgs> retentionProperties() {
         return this.retentionProperties == null ? Codegen.empty() : this.retentionProperties;
     }
 
@@ -58,7 +58,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -69,7 +69,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

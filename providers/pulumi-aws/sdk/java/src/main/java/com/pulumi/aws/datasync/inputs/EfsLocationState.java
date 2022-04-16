@@ -24,7 +24,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2Config")
       private final @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
 
-    public Output<EfsLocationEc2ConfigGetArgs> getEc2Config() {
+    public Output<EfsLocationEc2ConfigGetArgs> ec2Config() {
         return this.ec2Config == null ? Codegen.empty() : this.ec2Config;
     }
 
@@ -46,7 +46,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="efsFileSystemArn")
       private final @Nullable Output<String> efsFileSystemArn;
 
-    public Output<String> getEfsFileSystemArn() {
+    public Output<String> efsFileSystemArn() {
         return this.efsFileSystemArn == null ? Codegen.empty() : this.efsFileSystemArn;
     }
 
@@ -57,7 +57,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -68,7 +68,7 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,14 +79,14 @@ public final class EfsLocationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

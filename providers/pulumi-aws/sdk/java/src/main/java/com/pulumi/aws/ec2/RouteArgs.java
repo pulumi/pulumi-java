@@ -22,7 +22,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="carrierGatewayId")
       private final @Nullable Output<String> carrierGatewayId;
 
-    public Output<String> getCarrierGatewayId() {
+    public Output<String> carrierGatewayId() {
         return this.carrierGatewayId == null ? Codegen.empty() : this.carrierGatewayId;
     }
 
@@ -33,7 +33,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -44,7 +44,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationIpv6CidrBlock")
       private final @Nullable Output<String> destinationIpv6CidrBlock;
 
-    public Output<String> getDestinationIpv6CidrBlock() {
+    public Output<String> destinationIpv6CidrBlock() {
         return this.destinationIpv6CidrBlock == null ? Codegen.empty() : this.destinationIpv6CidrBlock;
     }
 
@@ -55,7 +55,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationPrefixListId")
       private final @Nullable Output<String> destinationPrefixListId;
 
-    public Output<String> getDestinationPrefixListId() {
+    public Output<String> destinationPrefixListId() {
         return this.destinationPrefixListId == null ? Codegen.empty() : this.destinationPrefixListId;
     }
 
@@ -66,7 +66,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="egressOnlyGatewayId")
       private final @Nullable Output<String> egressOnlyGatewayId;
 
-    public Output<String> getEgressOnlyGatewayId() {
+    public Output<String> egressOnlyGatewayId() {
         return this.egressOnlyGatewayId == null ? Codegen.empty() : this.egressOnlyGatewayId;
     }
 
@@ -77,7 +77,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
@@ -88,7 +88,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -99,7 +99,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="localGatewayId")
       private final @Nullable Output<String> localGatewayId;
 
-    public Output<String> getLocalGatewayId() {
+    public Output<String> localGatewayId() {
         return this.localGatewayId == null ? Codegen.empty() : this.localGatewayId;
     }
 
@@ -110,7 +110,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="natGatewayId")
       private final @Nullable Output<String> natGatewayId;
 
-    public Output<String> getNatGatewayId() {
+    public Output<String> natGatewayId() {
         return this.natGatewayId == null ? Codegen.empty() : this.natGatewayId;
     }
 
@@ -121,7 +121,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -132,7 +132,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -143,7 +143,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
@@ -154,7 +154,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
@@ -165,7 +165,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcPeeringConnectionId")
       private final @Nullable Output<String> vpcPeeringConnectionId;
 
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
     }
 

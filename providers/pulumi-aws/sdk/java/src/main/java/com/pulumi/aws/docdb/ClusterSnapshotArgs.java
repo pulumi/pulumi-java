@@ -21,7 +21,7 @@ public final class ClusterSnapshotArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -32,7 +32,7 @@ public final class ClusterSnapshotArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dbClusterSnapshotIdentifier", required=true)
       private final Output<String> dbClusterSnapshotIdentifier;
 
-    public Output<String> getDbClusterSnapshotIdentifier() {
+    public Output<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
     }
 

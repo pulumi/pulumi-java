@@ -42,7 +42,7 @@ public class ResolverFirewallDomainList extends com.pulumi.resources.CustomResou
      * @return The ARN (Amazon Resource Name) of the domain list.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class ResolverFirewallDomainList extends com.pulumi.resources.CustomResou
      * @return A array of domains for the firewall domain list.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDomains() {
+    public Output</* @Nullable */ List<String>> domains() {
         return this.domains;
     }
     /**
@@ -70,7 +70,7 @@ public class ResolverFirewallDomainList extends com.pulumi.resources.CustomResou
      * @return A name that lets you identify the domain list, to manage and use it.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ResolverFirewallDomainList extends com.pulumi.resources.CustomResou
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +98,7 @@ public class ResolverFirewallDomainList extends com.pulumi.resources.CustomResou
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

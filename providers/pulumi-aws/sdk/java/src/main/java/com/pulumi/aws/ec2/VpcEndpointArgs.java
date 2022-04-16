@@ -25,7 +25,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> getAutoAccept() {
+    public Output<Boolean> autoAccept() {
         return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
     }
 
@@ -36,7 +36,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -48,7 +48,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateDnsEnabled")
       private final @Nullable Output<Boolean> privateDnsEnabled;
 
-    public Output<Boolean> getPrivateDnsEnabled() {
+    public Output<Boolean> privateDnsEnabled() {
         return this.privateDnsEnabled == null ? Codegen.empty() : this.privateDnsEnabled;
     }
 
@@ -59,7 +59,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeTableIds")
       private final @Nullable Output<List<String>> routeTableIds;
 
-    public Output<List<String>> getRouteTableIds() {
+    public Output<List<String>> routeTableIds() {
         return this.routeTableIds == null ? Codegen.empty() : this.routeTableIds;
     }
 
@@ -70,7 +70,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -81,7 +81,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -92,7 +92,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -103,7 +103,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcEndpointType")
       private final @Nullable Output<String> vpcEndpointType;
 
-    public Output<String> getVpcEndpointType() {
+    public Output<String> vpcEndpointType() {
         return this.vpcEndpointType == null ? Codegen.empty() : this.vpcEndpointType;
     }
 
@@ -125,7 +125,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

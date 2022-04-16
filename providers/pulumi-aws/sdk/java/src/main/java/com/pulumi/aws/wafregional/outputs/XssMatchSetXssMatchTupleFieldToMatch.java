@@ -34,14 +34,14 @@ public final class XssMatchSetXssMatchTupleFieldToMatch {
      * When the value of `type` is `HEADER`, enter the name of the header that you want the WAF to search, for example, `User-Agent` or `Referer`. If the value of `type` is any other value, omit `data`.
      * 
     */
-    public Optional<String> getData() {
+    public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
      * The part of the web request that you want AWS WAF to search for a specified stringE.g., `HEADER` or `METHOD`
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

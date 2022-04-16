@@ -46,7 +46,7 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The arn of the DB security group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the DB security group. Defaults to "Managed by Pulumi".
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A list of ingress rules.
      * 
      */
-    public Output<List<SecurityGroupIngress>> getIngress() {
+    public Output<List<SecurityGroupIngress>> ingress() {
         return this.ingress;
     }
     /**
@@ -88,7 +88,7 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the DB security group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -116,7 +116,7 @@ public class SecurityGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -44,29 +44,29 @@ public final class GetAmiIdsResult {
         this.sortAscending = sortAscending;
     }
 
-    public List<String> getExecutableUsers() {
+    public List<String> executableUsers() {
         return this.executableUsers == null ? List.of() : this.executableUsers;
     }
-    public List<GetAmiIdsFilter> getFilters() {
+    public List<GetAmiIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Optional<String> getNameRegex() {
+    public Optional<String> nameRegex() {
         return Optional.ofNullable(this.nameRegex);
     }
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners;
     }
-    public Optional<Boolean> getSortAscending() {
+    public Optional<Boolean> sortAscending() {
         return Optional.ofNullable(this.sortAscending);
     }
 

@@ -23,7 +23,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
     @Import(name="restoreToTime")
       private final @Nullable Output<String> restoreToTime;
 
-    public Output<String> getRestoreToTime() {
+    public Output<String> restoreToTime() {
         return this.restoreToTime == null ? Codegen.empty() : this.restoreToTime;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
     @Import(name="restoreType")
       private final @Nullable Output<String> restoreType;
 
-    public Output<String> getRestoreType() {
+    public Output<String> restoreType() {
         return this.restoreType == null ? Codegen.empty() : this.restoreType;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
     @Import(name="sourceClusterIdentifier", required=true)
       private final Output<String> sourceClusterIdentifier;
 
-    public Output<String> getSourceClusterIdentifier() {
+    public Output<String> sourceClusterIdentifier() {
         return this.sourceClusterIdentifier;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends com.pulumi.resourc
     @Import(name="useLatestRestorableTime")
       private final @Nullable Output<Boolean> useLatestRestorableTime;
 
-    public Output<Boolean> getUseLatestRestorableTime() {
+    public Output<Boolean> useLatestRestorableTime() {
         return this.useLatestRestorableTime == null ? Codegen.empty() : this.useLatestRestorableTime;
     }
 

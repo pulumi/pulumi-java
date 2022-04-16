@@ -22,7 +22,7 @@ public final class OriginAccessIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 

@@ -21,7 +21,7 @@ public final class OrganizationAdminAccountArgs extends com.pulumi.resources.Res
     @Import(name="adminAccountId", required=true)
       private final Output<String> adminAccountId;
 
-    public Output<String> getAdminAccountId() {
+    public Output<String> adminAccountId() {
         return this.adminAccountId;
     }
 

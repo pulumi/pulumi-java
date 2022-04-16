@@ -43,7 +43,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Quick Connect.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return Specifies the description of the Quick Connect.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -85,7 +85,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the Quick Connect.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return A block that defines the configuration information for the Quick Connect: `quick_connect_type` and one of `phone_config`, `queue_config`, `user_config` . The Quick Connect Config block is documented below.
      * 
      */
-    public Output<QuickConnectQuickConnectConfig> getQuickConnectConfig() {
+    public Output<QuickConnectQuickConnectConfig> quickConnectConfig() {
         return this.quickConnectConfig;
     }
     /**
@@ -113,7 +113,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return The identifier for the Quick Connect.
      * 
      */
-    public Output<String> getQuickConnectId() {
+    public Output<String> quickConnectId() {
         return this.quickConnectId;
     }
     /**
@@ -127,7 +127,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the Quick Connect. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class QuickConnect extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

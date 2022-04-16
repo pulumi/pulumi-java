@@ -22,7 +22,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName")
       private final @Nullable String domainName;
 
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
     }
 
@@ -33,7 +33,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -44,7 +44,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolverEndpointId")
       private final @Nullable String resolverEndpointId;
 
-    public Optional<String> getResolverEndpointId() {
+    public Optional<String> resolverEndpointId() {
         return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
     }
 
@@ -55,7 +55,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resolverRuleId")
       private final @Nullable String resolverRuleId;
 
-    public Optional<String> getResolverRuleId() {
+    public Optional<String> resolverRuleId() {
         return this.resolverRuleId == null ? Optional.empty() : Optional.ofNullable(this.resolverRuleId);
     }
 
@@ -66,7 +66,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ruleType")
       private final @Nullable String ruleType;
 
-    public Optional<String> getRuleType() {
+    public Optional<String> ruleType() {
         return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
     }
 
@@ -77,7 +77,7 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

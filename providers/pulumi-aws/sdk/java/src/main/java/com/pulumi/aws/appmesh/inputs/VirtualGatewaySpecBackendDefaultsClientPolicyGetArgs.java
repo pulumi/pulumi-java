@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs extends 
     @Import(name="tls")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsGetArgs> tls;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsGetArgs> getTls() {
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsGetArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

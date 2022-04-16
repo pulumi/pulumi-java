@@ -45,7 +45,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return A free-form description of a Feature Group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the feature that stores the EventTime of a Record in a Feature Group.
      * 
      */
-    public Output<String> getEventTimeFeatureName() {
+    public Output<String> eventTimeFeatureName() {
         return this.eventTimeFeatureName;
     }
     /**
@@ -87,7 +87,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return A list of Feature names and types. See Feature Definition Below.
      * 
      */
-    public Output<List<FeatureGroupFeatureDefinition>> getFeatureDefinitions() {
+    public Output<List<FeatureGroupFeatureDefinition>> featureDefinitions() {
         return this.featureDefinitions;
     }
     /**
@@ -101,7 +101,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
      * 
      */
-    public Output<String> getFeatureGroupName() {
+    public Output<String> featureGroupName() {
         return this.featureGroupName;
     }
     /**
@@ -115,7 +115,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The Offline Feature Store Configuration. See Offline Store Config Below.
      * 
      */
-    public Output</* @Nullable */ FeatureGroupOfflineStoreConfig> getOfflineStoreConfig() {
+    public Output</* @Nullable */ FeatureGroupOfflineStoreConfig> offlineStoreConfig() {
         return this.offlineStoreConfig;
     }
     /**
@@ -129,7 +129,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The Online Feature Store Configuration. See Online Store Config Below.
      * 
      */
-    public Output</* @Nullable */ FeatureGroupOnlineStoreConfig> getOnlineStoreConfig() {
+    public Output</* @Nullable */ FeatureGroupOnlineStoreConfig> onlineStoreConfig() {
         return this.onlineStoreConfig;
     }
     /**
@@ -143,7 +143,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
      * 
      */
-    public Output<String> getRecordIdentifierFeatureName() {
+    public Output<String> recordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
     }
     /**
@@ -157,7 +157,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -171,7 +171,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags for the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

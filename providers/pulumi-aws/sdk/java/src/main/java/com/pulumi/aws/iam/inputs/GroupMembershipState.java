@@ -23,7 +23,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -34,7 +34,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class GroupMembershipState extends com.pulumi.resources.ResourceArg
     @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users == null ? Codegen.empty() : this.users;
     }
 

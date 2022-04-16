@@ -41,7 +41,7 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The description of the user group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -55,7 +55,7 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the user group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +69,7 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The precedence of the user group.
      * 
      */
-    public Output</* @Nullable */ Integer> getPrecedence() {
+    public Output</* @Nullable */ Integer> precedence() {
         return this.precedence;
     }
     /**
@@ -83,7 +83,7 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role to be associated with the user group.
      * 
      */
-    public Output</* @Nullable */ String> getRoleArn() {
+    public Output</* @Nullable */ String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -97,7 +97,7 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The user pool ID.
      * 
      */
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

@@ -21,7 +21,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="dnsSuffix")
       private final @Nullable String dnsSuffix;
 
-    public Optional<String> getDnsSuffix() {
+    public Optional<String> dnsSuffix() {
         return this.dnsSuffix == null ? Optional.empty() : Optional.ofNullable(this.dnsSuffix);
     }
 
@@ -32,7 +32,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="imageTag")
       private final @Nullable String imageTag;
 
-    public Optional<String> getImageTag() {
+    public Optional<String> imageTag() {
         return this.imageTag == null ? Optional.empty() : Optional.ofNullable(this.imageTag);
     }
 
@@ -43,7 +43,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -54,7 +54,7 @@ public final class GetPrebuiltEcrImageArgs extends com.pulumi.resources.InvokeAr
     @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 

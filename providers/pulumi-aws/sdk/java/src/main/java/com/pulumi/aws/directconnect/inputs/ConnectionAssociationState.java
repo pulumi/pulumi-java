@@ -22,7 +22,7 @@ public final class ConnectionAssociationState extends com.pulumi.resources.Resou
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -33,7 +33,7 @@ public final class ConnectionAssociationState extends com.pulumi.resources.Resou
     @Import(name="lagId")
       private final @Nullable Output<String> lagId;
 
-    public Output<String> getLagId() {
+    public Output<String> lagId() {
         return this.lagId == null ? Codegen.empty() : this.lagId;
     }
 

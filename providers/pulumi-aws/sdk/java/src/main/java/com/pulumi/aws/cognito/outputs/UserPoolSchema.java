@@ -72,49 +72,49 @@ public final class UserPoolSchema {
      * Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
      * 
     */
-    public String getAttributeDataType() {
+    public String attributeDataType() {
         return this.attributeDataType;
     }
     /**
      * Whether the attribute type is developer only.
      * 
     */
-    public Optional<Boolean> getDeveloperOnlyAttribute() {
+    public Optional<Boolean> developerOnlyAttribute() {
         return Optional.ofNullable(this.developerOnlyAttribute);
     }
     /**
      * Whether the attribute can be changed once it has been created.
      * 
     */
-    public Optional<Boolean> getMutable() {
+    public Optional<Boolean> mutable() {
         return Optional.ofNullable(this.mutable);
     }
     /**
      * Name of the attribute.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Configuration block for the constraints for an attribute of the number type. Detailed below.
      * 
     */
-    public Optional<UserPoolSchemaNumberAttributeConstraints> getNumberAttributeConstraints() {
+    public Optional<UserPoolSchemaNumberAttributeConstraints> numberAttributeConstraints() {
         return Optional.ofNullable(this.numberAttributeConstraints);
     }
     /**
      * Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
      * 
     */
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
     /**
      * Constraints for an attribute of the string type. Detailed below.
      * 
     */
-    public Optional<UserPoolSchemaStringAttributeConstraints> getStringAttributeConstraints() {
+    public Optional<UserPoolSchemaStringAttributeConstraints> stringAttributeConstraints() {
         return Optional.ofNullable(this.stringAttributeConstraints);
     }
 

@@ -22,7 +22,7 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="configuration", required=true)
       private final Output<String> configuration;
 
-    public Output<String> getConfiguration() {
+    public Output<String> configuration() {
         return this.configuration;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class SecurityConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 

@@ -36,7 +36,7 @@ public class SslNegotiationPolicy extends com.pulumi.resources.CustomResource {
      * @return An SSL Negotiation policy attribute. Each has two properties:
      * 
      */
-    public Output</* @Nullable */ List<SslNegotiationPolicyAttribute>> getAttributes() {
+    public Output</* @Nullable */ List<SslNegotiationPolicyAttribute>> attributes() {
         return this.attributes;
     }
     /**
@@ -54,7 +54,7 @@ public class SslNegotiationPolicy extends com.pulumi.resources.CustomResource {
      * balancer.
      * 
      */
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
     /**
@@ -70,7 +70,7 @@ public class SslNegotiationPolicy extends com.pulumi.resources.CustomResource {
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
     /**
@@ -84,7 +84,7 @@ public class SslNegotiationPolicy extends com.pulumi.resources.CustomResource {
      * @return The name of the attribute
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

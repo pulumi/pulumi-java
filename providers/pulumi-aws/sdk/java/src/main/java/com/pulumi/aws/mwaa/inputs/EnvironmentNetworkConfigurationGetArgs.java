@@ -22,7 +22,7 @@ public final class EnvironmentNetworkConfigurationGetArgs extends com.pulumi.res
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -33,7 +33,7 @@ public final class EnvironmentNetworkConfigurationGetArgs extends com.pulumi.res
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 

@@ -56,34 +56,34 @@ public final class PermissionsTableWithColumns {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Set of column names for the table.
      * 
     */
-    public List<String> getColumnNames() {
+    public List<String> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
     /**
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
-    public List<String> getExcludedColumnNames() {
+    public List<String> excludedColumnNames() {
         return this.excludedColumnNames == null ? List.of() : this.excludedColumnNames;
     }
     /**
      * Name of the table resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<Boolean> getWildcard() {
+    public Optional<Boolean> wildcard() {
         return Optional.ofNullable(this.wildcard);
     }
 

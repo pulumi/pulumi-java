@@ -21,7 +21,7 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
     @Import(name="desiredSize", required=true)
       private final Output<Integer> desiredSize;
 
-    public Output<Integer> getDesiredSize() {
+    public Output<Integer> desiredSize() {
         return this.desiredSize;
     }
 
@@ -32,7 +32,7 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
     @Import(name="maxSize", required=true)
       private final Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize;
     }
 
@@ -43,7 +43,7 @@ public final class NodeGroupScalingConfigArgs extends com.pulumi.resources.Resou
     @Import(name="minSize", required=true)
       private final Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize;
     }
 

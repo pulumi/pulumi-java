@@ -34,14 +34,14 @@ public final class GetResourcesTagFilter {
      * One part of a key-value pair that makes up a tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The optional part of a key-value pair that make up a tag.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

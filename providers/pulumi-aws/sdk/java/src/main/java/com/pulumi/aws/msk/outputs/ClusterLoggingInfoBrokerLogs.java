@@ -27,13 +27,13 @@ public final class ClusterLoggingInfoBrokerLogs {
         this.s3 = s3;
     }
 
-    public Optional<ClusterLoggingInfoBrokerLogsCloudwatchLogs> getCloudwatchLogs() {
+    public Optional<ClusterLoggingInfoBrokerLogsCloudwatchLogs> cloudwatchLogs() {
         return Optional.ofNullable(this.cloudwatchLogs);
     }
-    public Optional<ClusterLoggingInfoBrokerLogsFirehose> getFirehose() {
+    public Optional<ClusterLoggingInfoBrokerLogsFirehose> firehose() {
         return Optional.ofNullable(this.firehose);
     }
-    public Optional<ClusterLoggingInfoBrokerLogsS3> getS3() {
+    public Optional<ClusterLoggingInfoBrokerLogsS3> s3() {
         return Optional.ofNullable(this.s3);
     }
 

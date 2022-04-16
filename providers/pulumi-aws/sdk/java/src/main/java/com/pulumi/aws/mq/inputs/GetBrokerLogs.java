@@ -15,14 +15,14 @@ public final class GetBrokerLogs extends com.pulumi.resources.InvokeArgs {
     @Import(name="audit", required=true)
       private final Boolean audit;
 
-    public Boolean getAudit() {
+    public Boolean audit() {
         return this.audit;
     }
 
     @Import(name="general", required=true)
       private final Boolean general;
 
-    public Boolean getGeneral() {
+    public Boolean general() {
         return this.general;
     }
 

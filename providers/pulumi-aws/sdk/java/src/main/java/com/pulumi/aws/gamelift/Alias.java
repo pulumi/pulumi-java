@@ -42,7 +42,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Alias ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Description of the alias.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Name of the alias.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Specifies the fleet and/or routing type to use for the alias.
      * 
      */
-    public Output<AliasRoutingStrategy> getRoutingStrategy() {
+    public Output<AliasRoutingStrategy> routingStrategy() {
         return this.routingStrategy;
     }
     /**
@@ -98,7 +98,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class Alias extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

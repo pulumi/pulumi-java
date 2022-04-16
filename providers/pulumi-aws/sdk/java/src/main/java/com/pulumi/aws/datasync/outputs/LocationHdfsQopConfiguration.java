@@ -34,14 +34,14 @@ public final class LocationHdfsQopConfiguration {
      * The data transfer protection setting configured on the HDFS cluster. This setting corresponds to your dfs.data.transfer.protection setting in the hdfs-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
      * 
     */
-    public Optional<String> getDataTransferProtection() {
+    public Optional<String> dataTransferProtection() {
         return Optional.ofNullable(this.dataTransferProtection);
     }
     /**
      * The RPC protection setting configured on the HDFS cluster. This setting corresponds to your hadoop.rpc.protection setting in your core-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
      * 
     */
-    public Optional<String> getRpcProtection() {
+    public Optional<String> rpcProtection() {
         return Optional.ofNullable(this.rpcProtection);
     }
 

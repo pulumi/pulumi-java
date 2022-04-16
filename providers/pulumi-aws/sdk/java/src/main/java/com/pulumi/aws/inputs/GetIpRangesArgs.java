@@ -24,7 +24,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="regions")
       private final @Nullable List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
@@ -39,7 +39,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="services", required=true)
       private final List<String> services;
 
-    public List<String> getServices() {
+    public List<String> services() {
         return this.services;
     }
 
@@ -50,7 +50,7 @@ public final class GetIpRangesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

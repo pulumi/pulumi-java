@@ -48,28 +48,28 @@ public final class GetOrganizationRoot {
      * ARN of the root
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Identifier of the root
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the policy type
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of policy types enabled for this root. All elements have these attributes:
      * 
     */
-    public List<GetOrganizationRootPolicyType> getPolicyTypes() {
+    public List<GetOrganizationRootPolicyType> policyTypes() {
         return this.policyTypes;
     }
 

@@ -23,7 +23,7 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
     @Import(name="fields")
       private final @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
 
-    public List<GetPipelineDefinitionPipelineObjectField> getFields() {
+    public List<GetPipelineDefinitionPipelineObjectField> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
 
@@ -34,7 +34,7 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class GetPipelineDefinitionPipelineObject extends com.pulumi.resour
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

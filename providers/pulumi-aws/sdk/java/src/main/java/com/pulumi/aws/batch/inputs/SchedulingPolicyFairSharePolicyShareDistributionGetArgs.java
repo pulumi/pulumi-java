@@ -23,7 +23,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
     @Import(name="shareIdentifier", required=true)
       private final Output<String> shareIdentifier;
 
-    public Output<String> getShareIdentifier() {
+    public Output<String> shareIdentifier() {
         return this.shareIdentifier;
     }
 
@@ -34,7 +34,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionGetArgs exten
     @Import(name="weightFactor")
       private final @Nullable Output<Double> weightFactor;
 
-    public Output<Double> getWeightFactor() {
+    public Output<Double> weightFactor() {
         return this.weightFactor == null ? Codegen.empty() : this.weightFactor;
     }
 

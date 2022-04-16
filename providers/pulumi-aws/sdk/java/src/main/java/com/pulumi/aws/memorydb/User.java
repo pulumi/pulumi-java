@@ -40,7 +40,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The access permissions string used for this user.
      * 
      */
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
     /**
@@ -54,7 +54,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The ARN of the user.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +68,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Denotes the user's authentication properties. Detailed below.
      * 
      */
-    public Output<UserAuthenticationMode> getAuthenticationMode() {
+    public Output<UserAuthenticationMode> authenticationMode() {
         return this.authenticationMode;
     }
     /**
@@ -84,7 +84,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * * `authentication_mode` configuration block
      * 
      */
-    public Output<String> getMinimumEngineVersion() {
+    public Output<String> minimumEngineVersion() {
         return this.minimumEngineVersion;
     }
     /**
@@ -98,7 +98,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -126,7 +126,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Name of the MemoryDB user. Up to 40 characters.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

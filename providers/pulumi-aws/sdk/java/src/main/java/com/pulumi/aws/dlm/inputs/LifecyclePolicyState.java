@@ -24,7 +24,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -57,7 +57,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="policyDetails")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails;
 
-    public Output<LifecyclePolicyPolicyDetailsGetArgs> getPolicyDetails() {
+    public Output<LifecyclePolicyPolicyDetailsGetArgs> policyDetails() {
         return this.policyDetails == null ? Codegen.empty() : this.policyDetails;
     }
 
@@ -68,7 +68,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -79,7 +79,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class LifecyclePolicyState extends com.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

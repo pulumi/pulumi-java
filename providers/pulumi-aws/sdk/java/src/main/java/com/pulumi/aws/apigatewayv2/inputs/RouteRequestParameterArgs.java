@@ -22,7 +22,7 @@ public final class RouteRequestParameterArgs extends com.pulumi.resources.Resour
     @Import(name="requestParameterKey", required=true)
       private final Output<String> requestParameterKey;
 
-    public Output<String> getRequestParameterKey() {
+    public Output<String> requestParameterKey() {
         return this.requestParameterKey;
     }
 
@@ -33,7 +33,7 @@ public final class RouteRequestParameterArgs extends com.pulumi.resources.Resour
     @Import(name="required", required=true)
       private final Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
+    public Output<Boolean> required() {
         return this.required;
     }
 

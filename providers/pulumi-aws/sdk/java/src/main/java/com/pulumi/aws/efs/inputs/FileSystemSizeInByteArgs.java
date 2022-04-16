@@ -22,7 +22,7 @@ public final class FileSystemSizeInByteArgs extends com.pulumi.resources.Resourc
     @Import(name="value")
       private final @Nullable Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -33,7 +33,7 @@ public final class FileSystemSizeInByteArgs extends com.pulumi.resources.Resourc
     @Import(name="valueInIa")
       private final @Nullable Output<Integer> valueInIa;
 
-    public Output<Integer> getValueInIa() {
+    public Output<Integer> valueInIa() {
         return this.valueInIa == null ? Codegen.empty() : this.valueInIa;
     }
 
@@ -44,7 +44,7 @@ public final class FileSystemSizeInByteArgs extends com.pulumi.resources.Resourc
     @Import(name="valueInStandard")
       private final @Nullable Output<Integer> valueInStandard;
 
-    public Output<Integer> getValueInStandard() {
+    public Output<Integer> valueInStandard() {
         return this.valueInStandard == null ? Codegen.empty() : this.valueInStandard;
     }
 

@@ -41,7 +41,7 @@ public class RoleAlias extends com.pulumi.resources.CustomResource {
      * @return The name of the role alias.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -55,7 +55,7 @@ public class RoleAlias extends com.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS to this role alias.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -69,7 +69,7 @@ public class RoleAlias extends com.pulumi.resources.CustomResource {
      * @return The duration of the credential, in seconds. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 900 seconds (15 minutes) to 43200 seconds (12 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> getCredentialDuration() {
+    public Output</* @Nullable */ Integer> credentialDuration() {
         return this.credentialDuration;
     }
     /**
@@ -83,7 +83,7 @@ public class RoleAlias extends com.pulumi.resources.CustomResource {
      * @return The identity of the role to which the alias refers.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

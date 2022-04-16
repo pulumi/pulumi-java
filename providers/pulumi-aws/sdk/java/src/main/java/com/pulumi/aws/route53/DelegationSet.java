@@ -41,7 +41,7 @@ public class DelegationSet extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Delegation Set.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class DelegationSet extends com.pulumi.resources.CustomResource {
      * (effectively a list of NS records).
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -73,7 +73,7 @@ public class DelegationSet extends com.pulumi.resources.CustomResource {
      * (helpful for identifying single delegation set amongst others)
      * 
      */
-    public Output</* @Nullable */ String> getReferenceName() {
+    public Output</* @Nullable */ String> referenceName() {
         return this.referenceName;
     }
 

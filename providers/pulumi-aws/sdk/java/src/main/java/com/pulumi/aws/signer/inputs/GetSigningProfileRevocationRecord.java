@@ -15,21 +15,21 @@ public final class GetSigningProfileRevocationRecord extends com.pulumi.resource
     @Import(name="revocationEffectiveFrom", required=true)
       private final String revocationEffectiveFrom;
 
-    public String getRevocationEffectiveFrom() {
+    public String revocationEffectiveFrom() {
         return this.revocationEffectiveFrom;
     }
 
     @Import(name="revokedAt", required=true)
       private final String revokedAt;
 
-    public String getRevokedAt() {
+    public String revokedAt() {
         return this.revokedAt;
     }
 
     @Import(name="revokedBy", required=true)
       private final String revokedBy;
 
-    public String getRevokedBy() {
+    public String revokedBy() {
         return this.revokedBy;
     }
 

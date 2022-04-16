@@ -24,7 +24,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporter {
      * Indicates whether you want to enable or disable the JMX Exporter.
      * 
     */
-    public Boolean getEnabledInBroker() {
+    public Boolean enabledInBroker() {
         return this.enabledInBroker;
     }
 

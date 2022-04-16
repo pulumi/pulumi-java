@@ -35,17 +35,17 @@ public final class GetUserPoolSigningCertificateResult {
      * The certificate string
      * 
     */
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getUserPoolId() {
+    public String userPoolId() {
         return this.userPoolId;
     }
 

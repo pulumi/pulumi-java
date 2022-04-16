@@ -21,7 +21,7 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends com.pulumi.res
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -32,7 +32,7 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends com.pulumi.res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

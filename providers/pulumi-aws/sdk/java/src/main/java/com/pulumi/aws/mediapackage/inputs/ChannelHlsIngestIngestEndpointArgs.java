@@ -22,7 +22,7 @@ public final class ChannelHlsIngestIngestEndpointArgs extends com.pulumi.resourc
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -33,7 +33,7 @@ public final class ChannelHlsIngestIngestEndpointArgs extends com.pulumi.resourc
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 
@@ -44,7 +44,7 @@ public final class ChannelHlsIngestIngestEndpointArgs extends com.pulumi.resourc
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

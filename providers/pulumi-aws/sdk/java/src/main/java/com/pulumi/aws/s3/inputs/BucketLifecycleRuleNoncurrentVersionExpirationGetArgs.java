@@ -22,7 +22,7 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationGetArgs extends
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 

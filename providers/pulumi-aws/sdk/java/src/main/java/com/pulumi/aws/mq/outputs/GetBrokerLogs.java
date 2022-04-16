@@ -20,10 +20,10 @@ public final class GetBrokerLogs {
         this.general = general;
     }
 
-    public Boolean getAudit() {
+    public Boolean audit() {
         return this.audit;
     }
-    public Boolean getGeneral() {
+    public Boolean general() {
         return this.general;
     }
 

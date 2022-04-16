@@ -21,7 +21,7 @@ public final class InsightFiltersAwsAccountIdGetArgs extends com.pulumi.resource
     @Import(name="comparison", required=true)
       private final Output<String> comparison;
 
-    public Output<String> getComparison() {
+    public Output<String> comparison() {
         return this.comparison;
     }
 
@@ -32,7 +32,7 @@ public final class InsightFiltersAwsAccountIdGetArgs extends com.pulumi.resource
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

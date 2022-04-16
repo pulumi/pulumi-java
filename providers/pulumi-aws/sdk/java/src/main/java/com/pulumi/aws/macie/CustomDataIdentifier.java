@@ -43,7 +43,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the custom data identifier.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return The date and time, in UTC and extended RFC 3339 format, when the Amazon Macie account was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -71,7 +71,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return A custom description of the custom data identifier. The description can contain as many as 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain as many as 10 ignore words. Each ignore word can contain 4 - 90 characters. Ignore words are case sensitive.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIgnoreWords() {
+    public Output</* @Nullable */ List<String>> ignoreWords() {
         return this.ignoreWords;
     }
     /**
@@ -99,7 +99,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren't case sensitive.
      * 
      */
-    public Output</* @Nullable */ List<String>> getKeywords() {
+    public Output</* @Nullable */ List<String>> keywords() {
         return this.keywords;
     }
     /**
@@ -113,13 +113,13 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return The maximum number of characters that can exist between text that matches the regex pattern and the character sequences specified by the keywords array. Macie includes or excludes a result based on the proximity of a keyword to text that matches the regex pattern. The distance can be 1 - 300 characters. The default value is 50.
      * 
      */
-    public Output<Integer> getMaximumMatchDistance() {
+    public Output<Integer> maximumMatchDistance() {
         return this.maximumMatchDistance;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -147,7 +147,7 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return The regular expression (regex) that defines the pattern to match. The expression can contain as many as 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getRegex() {
+    public Output</* @Nullable */ String> regex() {
         return this.regex;
     }
     /**
@@ -161,13 +161,13 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
      * @return A map of key-value pairs that specifies the tags to associate with the custom data identifier.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

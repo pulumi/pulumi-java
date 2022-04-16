@@ -24,7 +24,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="branchFilter")
       private final @Nullable Output<String> branchFilter;
 
-    public Output<String> getBranchFilter() {
+    public Output<String> branchFilter() {
         return this.branchFilter == null ? Codegen.empty() : this.branchFilter;
     }
 
@@ -35,7 +35,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildType")
       private final @Nullable Output<String> buildType;
 
-    public Output<String> getBuildType() {
+    public Output<String> buildType() {
         return this.buildType == null ? Codegen.empty() : this.buildType;
     }
 
@@ -46,7 +46,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="filterGroups")
       private final @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
 
-    public Output<List<WebhookFilterGroupGetArgs>> getFilterGroups() {
+    public Output<List<WebhookFilterGroupGetArgs>> filterGroups() {
         return this.filterGroups == null ? Codegen.empty() : this.filterGroups;
     }
 
@@ -57,7 +57,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="payloadUrl")
       private final @Nullable Output<String> payloadUrl;
 
-    public Output<String> getPayloadUrl() {
+    public Output<String> payloadUrl() {
         return this.payloadUrl == null ? Codegen.empty() : this.payloadUrl;
     }
 
@@ -68,7 +68,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
@@ -79,7 +79,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -90,7 +90,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

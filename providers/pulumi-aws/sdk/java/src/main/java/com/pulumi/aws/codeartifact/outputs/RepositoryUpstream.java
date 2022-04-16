@@ -24,7 +24,7 @@ public final class RepositoryUpstream {
      * The name of an upstream repository.
      * 
     */
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
 

@@ -43,21 +43,21 @@ public final class VirtualNodeSpecListenerTlsCertificate {
      * An AWS Certificate Manager (ACM) certificate.
      * 
     */
-    public Optional<VirtualNodeSpecListenerTlsCertificateAcm> getAcm() {
+    public Optional<VirtualNodeSpecListenerTlsCertificateAcm> acm() {
         return Optional.ofNullable(this.acm);
     }
     /**
      * A local file certificate.
      * 
     */
-    public Optional<VirtualNodeSpecListenerTlsCertificateFile> getFile() {
+    public Optional<VirtualNodeSpecListenerTlsCertificateFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
     */
-    public Optional<VirtualNodeSpecListenerTlsCertificateSds> getSds() {
+    public Optional<VirtualNodeSpecListenerTlsCertificateSds> sds() {
         return Optional.ofNullable(this.sds);
     }
 

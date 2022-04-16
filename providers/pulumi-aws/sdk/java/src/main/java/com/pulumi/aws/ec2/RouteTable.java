@@ -62,7 +62,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The ARN of the route table.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -76,7 +76,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the route table.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -90,7 +90,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return A list of virtual gateways for propagation.
      * 
      */
-    public Output<List<String>> getPropagatingVgws() {
+    public Output<List<String>> propagatingVgws() {
         return this.propagatingVgws;
     }
     /**
@@ -104,7 +104,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return A list of route objects. Their keys are documented below.
      * 
      */
-    public Output<List<RouteTableRoute>> getRoutes() {
+    public Output<List<RouteTableRoute>> routes() {
         return this.routes;
     }
     /**
@@ -118,7 +118,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -132,7 +132,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -146,7 +146,7 @@ public class RouteTable extends com.pulumi.resources.CustomResource {
      * @return The VPC ID.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

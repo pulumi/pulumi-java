@@ -23,7 +23,7 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="actions", required=true)
       private final Output<List<PipelineStageActionGetArgs>> actions;
 
-    public Output<List<PipelineStageActionGetArgs>> getActions() {
+    public Output<List<PipelineStageActionGetArgs>> actions() {
         return this.actions;
     }
 
@@ -34,7 +34,7 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -19,7 +19,7 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
     @Import(name="desiredSize", required=true)
       private final Integer desiredSize;
 
-    public Integer getDesiredSize() {
+    public Integer desiredSize() {
         return this.desiredSize;
     }
 
@@ -30,7 +30,7 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
     @Import(name="maxSize", required=true)
       private final Integer maxSize;
 
-    public Integer getMaxSize() {
+    public Integer maxSize() {
         return this.maxSize;
     }
 
@@ -41,7 +41,7 @@ public final class GetNodeGroupScalingConfig extends com.pulumi.resources.Invoke
     @Import(name="minSize", required=true)
       private final Integer minSize;
 
-    public Integer getMinSize() {
+    public Integer minSize() {
         return this.minSize;
     }
 

@@ -42,7 +42,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
      * 
      */
-    public Output</* @Nullable */ String> getAlias() {
+    public Output</* @Nullable */ String> alias() {
         return this.alias;
     }
     /**
@@ -56,7 +56,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the workspace.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Prometheus endpoint available for this workspace.
      * 
      */
-    public Output<String> getPrometheusEndpoint() {
+    public Output<String> prometheusEndpoint() {
         return this.prometheusEndpoint;
     }
 

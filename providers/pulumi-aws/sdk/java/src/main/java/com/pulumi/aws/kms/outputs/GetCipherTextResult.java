@@ -43,23 +43,23 @@ public final class GetCipherTextResult {
      * Base64 encoded ciphertext
      * 
     */
-    public String getCiphertextBlob() {
+    public String ciphertextBlob() {
         return this.ciphertextBlob;
     }
-    public Map<String,String> getContext() {
+    public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
-    public String getPlaintext() {
+    public String plaintext() {
         return this.plaintext;
     }
 

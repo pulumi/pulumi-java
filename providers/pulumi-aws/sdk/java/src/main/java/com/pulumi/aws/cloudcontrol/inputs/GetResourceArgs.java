@@ -21,7 +21,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="identifier", required=true)
       private final String identifier;
 
-    public String getIdentifier() {
+    public String identifier() {
         return this.identifier;
     }
 
@@ -32,7 +32,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
@@ -43,7 +43,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="typeName", required=true)
       private final String typeName;
 
-    public String getTypeName() {
+    public String typeName() {
         return this.typeName;
     }
 
@@ -54,7 +54,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="typeVersionId")
       private final @Nullable String typeVersionId;
 
-    public Optional<String> getTypeVersionId() {
+    public Optional<String> typeVersionId() {
         return this.typeVersionId == null ? Optional.empty() : Optional.ofNullable(this.typeVersionId);
     }
 

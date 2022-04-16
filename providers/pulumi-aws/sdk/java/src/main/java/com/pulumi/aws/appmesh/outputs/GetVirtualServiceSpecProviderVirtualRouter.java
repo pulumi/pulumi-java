@@ -24,7 +24,7 @@ public final class GetVirtualServiceSpecProviderVirtualRouter {
      * The name of the virtual router that is acting as a service provider.
      * 
     */
-    public String getVirtualRouterName() {
+    public String virtualRouterName() {
         return this.virtualRouterName;
     }
 

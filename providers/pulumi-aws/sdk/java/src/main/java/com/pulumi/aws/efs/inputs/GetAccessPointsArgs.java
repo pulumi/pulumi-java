@@ -19,7 +19,7 @@ public final class GetAccessPointsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileSystemId", required=true)
       private final String fileSystemId;
 
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
 

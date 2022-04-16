@@ -24,7 +24,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends com.pulumi.resour
     @Import(name="attachments")
       private final @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments;
 
-    public Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> getAttachments() {
+    public Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments() {
         return this.attachments == null ? Codegen.empty() : this.attachments;
     }
 
@@ -35,7 +35,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends com.pulumi.resour
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 

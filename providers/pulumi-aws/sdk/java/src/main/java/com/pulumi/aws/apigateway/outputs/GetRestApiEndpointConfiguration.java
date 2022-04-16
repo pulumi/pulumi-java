@@ -21,10 +21,10 @@ public final class GetRestApiEndpointConfiguration {
         this.vpcEndpointIds = vpcEndpointIds;
     }
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types;
     }
-    public List<String> getVpcEndpointIds() {
+    public List<String> vpcEndpointIds() {
         return this.vpcEndpointIds;
     }
 

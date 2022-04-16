@@ -24,10 +24,10 @@ public final class MysqlLayerCloudwatchConfiguration {
         this.logStreams = logStreams;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public List<MysqlLayerCloudwatchConfigurationLogStream> getLogStreams() {
+    public List<MysqlLayerCloudwatchConfigurationLogStream> logStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }
 

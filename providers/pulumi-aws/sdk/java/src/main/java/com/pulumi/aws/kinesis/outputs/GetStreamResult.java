@@ -99,77 +99,77 @@ public final class GetStreamResult {
      * The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The list of shard ids in the CLOSED state. See [Shard State](https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing) for more.
      * 
     */
-    public List<String> getClosedShards() {
+    public List<String> closedShards() {
         return this.closedShards;
     }
     /**
      * The approximate UNIX timestamp that the stream was created.
      * 
     */
-    public Integer getCreationTimestamp() {
+    public Integer creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the Kinesis Stream.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of shard ids in the OPEN state. See [Shard State](https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing) for more.
      * 
     */
-    public List<String> getOpenShards() {
+    public List<String> openShards() {
         return this.openShards;
     }
     /**
      * Length of time (in hours) data records are accessible after they are added to the stream.
      * 
     */
-    public Integer getRetentionPeriod() {
+    public Integer retentionPeriod() {
         return this.retentionPeriod;
     }
     /**
      * A list of shard-level CloudWatch metrics which are enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more.
      * 
     */
-    public List<String> getShardLevelMetrics() {
+    public List<String> shardLevelMetrics() {
         return this.shardLevelMetrics;
     }
     /**
      * The current status of the stream. The stream status is one of CREATING, DELETING, ACTIVE, or UPDATING.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Indicates the [capacity mode](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-size-a-stream.html) of the data stream. Detailed below.
      * 
     */
-    public List<GetStreamStreamModeDetail> getStreamModeDetails() {
+    public List<GetStreamStreamModeDetail> streamModeDetails() {
         return this.streamModeDetails;
     }
     /**
      * A map of tags to assigned to the stream.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

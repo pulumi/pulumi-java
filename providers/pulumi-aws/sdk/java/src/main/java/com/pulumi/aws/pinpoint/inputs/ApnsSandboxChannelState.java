@@ -23,7 +23,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
@@ -45,7 +45,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -59,7 +59,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="defaultAuthenticationMethod")
       private final @Nullable Output<String> defaultAuthenticationMethod;
 
-    public Output<String> getDefaultAuthenticationMethod() {
+    public Output<String> defaultAuthenticationMethod() {
         return this.defaultAuthenticationMethod == null ? Codegen.empty() : this.defaultAuthenticationMethod;
     }
 
@@ -70,7 +70,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -81,7 +81,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -92,7 +92,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="teamId")
       private final @Nullable Output<String> teamId;
 
-    public Output<String> getTeamId() {
+    public Output<String> teamId() {
         return this.teamId == null ? Codegen.empty() : this.teamId;
     }
 
@@ -103,7 +103,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="tokenKey")
       private final @Nullable Output<String> tokenKey;
 
-    public Output<String> getTokenKey() {
+    public Output<String> tokenKey() {
         return this.tokenKey == null ? Codegen.empty() : this.tokenKey;
     }
 
@@ -114,7 +114,7 @@ public final class ApnsSandboxChannelState extends com.pulumi.resources.Resource
     @Import(name="tokenKeyId")
       private final @Nullable Output<String> tokenKeyId;
 
-    public Output<String> getTokenKeyId() {
+    public Output<String> tokenKeyId() {
         return this.tokenKeyId == null ? Codegen.empty() : this.tokenKeyId;
     }
 

@@ -32,13 +32,13 @@ public final class GetBotAssociationResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
-    public GetBotAssociationLexBot getLexBot() {
+    public GetBotAssociationLexBot lexBot() {
         return this.lexBot;
     }
 

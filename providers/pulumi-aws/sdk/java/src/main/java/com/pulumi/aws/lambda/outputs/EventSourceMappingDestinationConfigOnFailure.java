@@ -24,7 +24,7 @@ public final class EventSourceMappingDestinationConfigOnFailure {
      * The Amazon Resource Name (ARN) of the destination resource.
      * 
     */
-    public String getDestinationArn() {
+    public String destinationArn() {
         return this.destinationArn;
     }
 

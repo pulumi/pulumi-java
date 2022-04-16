@@ -16,7 +16,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="availabilityZones", required=true)
       private final List<String> availabilityZones;
 
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
 
@@ -27,7 +27,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="connectIps", required=true)
       private final List<String> connectIps;
 
-    public List<String> getConnectIps() {
+    public List<String> connectIps() {
         return this.connectIps;
     }
 
@@ -38,7 +38,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="customerDnsIps", required=true)
       private final List<String> customerDnsIps;
 
-    public List<String> getCustomerDnsIps() {
+    public List<String> customerDnsIps() {
         return this.customerDnsIps;
     }
 
@@ -49,7 +49,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="customerUsername", required=true)
       private final String customerUsername;
 
-    public String getCustomerUsername() {
+    public String customerUsername() {
         return this.customerUsername;
     }
 
@@ -60,7 +60,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 
@@ -71,7 +71,7 @@ public final class GetDirectoryConnectSetting extends com.pulumi.resources.Invok
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

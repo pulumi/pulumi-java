@@ -22,7 +22,7 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
     @Import(name="activeDirectoryId")
       private final @Nullable Output<String> activeDirectoryId;
 
-    public Output<String> getActiveDirectoryId() {
+    public Output<String> activeDirectoryId() {
         return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
     }
 
@@ -33,7 +33,7 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
     @Import(name="rootCertificateChainArn")
       private final @Nullable Output<String> rootCertificateChainArn;
 
-    public Output<String> getRootCertificateChainArn() {
+    public Output<String> rootCertificateChainArn() {
         return this.rootCertificateChainArn == null ? Codegen.empty() : this.rootCertificateChainArn;
     }
 
@@ -44,7 +44,7 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
     @Import(name="samlProviderArn")
       private final @Nullable Output<String> samlProviderArn;
 
-    public Output<String> getSamlProviderArn() {
+    public Output<String> samlProviderArn() {
         return this.samlProviderArn == null ? Codegen.empty() : this.samlProviderArn;
     }
 
@@ -55,7 +55,7 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
     @Import(name="selfServiceSamlProviderArn")
       private final @Nullable Output<String> selfServiceSamlProviderArn;
 
-    public Output<String> getSelfServiceSamlProviderArn() {
+    public Output<String> selfServiceSamlProviderArn() {
         return this.selfServiceSamlProviderArn == null ? Codegen.empty() : this.selfServiceSamlProviderArn;
     }
 
@@ -66,7 +66,7 @@ public final class EndpointAuthenticationOptionGetArgs extends com.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

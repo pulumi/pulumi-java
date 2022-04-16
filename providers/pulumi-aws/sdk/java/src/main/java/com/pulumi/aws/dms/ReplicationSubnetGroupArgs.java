@@ -24,7 +24,7 @@ public final class ReplicationSubnetGroupArgs extends com.pulumi.resources.Resou
     @Import(name="replicationSubnetGroupDescription", required=true)
       private final Output<String> replicationSubnetGroupDescription;
 
-    public Output<String> getReplicationSubnetGroupDescription() {
+    public Output<String> replicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription;
     }
 
@@ -35,7 +35,7 @@ public final class ReplicationSubnetGroupArgs extends com.pulumi.resources.Resou
     @Import(name="replicationSubnetGroupId", required=true)
       private final Output<String> replicationSubnetGroupId;
 
-    public Output<String> getReplicationSubnetGroupId() {
+    public Output<String> replicationSubnetGroupId() {
         return this.replicationSubnetGroupId;
     }
 
@@ -46,7 +46,7 @@ public final class ReplicationSubnetGroupArgs extends com.pulumi.resources.Resou
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -57,7 +57,7 @@ public final class ReplicationSubnetGroupArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

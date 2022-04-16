@@ -43,7 +43,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Security Profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the description of the Security Profile.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -85,7 +85,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the Security Profile.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return The organization resource identifier for the security profile.
      * 
      */
-    public Output<String> getOrganizationResourceId() {
+    public Output<String> organizationResourceId() {
         return this.organizationResourceId;
     }
     /**
@@ -113,7 +113,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return Specifies a list of permissions assigned to the security profile.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPermissions() {
+    public Output</* @Nullable */ List<String>> permissions() {
         return this.permissions;
     }
     /**
@@ -127,7 +127,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return The identifier for the Security Profile.
      * 
      */
-    public Output<String> getSecurityProfileId() {
+    public Output<String> securityProfileId() {
         return this.securityProfileId;
     }
     /**
@@ -143,7 +143,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class SecurityProfile extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

@@ -19,7 +19,7 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributePath", required=true)
       private final String attributePath;
 
-    public String getAttributePath() {
+    public String attributePath() {
         return this.attributePath;
     }
 
@@ -30,7 +30,7 @@ public final class GetUserFilter extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributeValue", required=true)
       private final String attributeValue;
 
-    public String getAttributeValue() {
+    public String attributeValue() {
         return this.attributeValue;
     }
 

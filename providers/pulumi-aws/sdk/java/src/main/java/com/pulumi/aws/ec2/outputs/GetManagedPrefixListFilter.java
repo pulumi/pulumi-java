@@ -33,14 +33,14 @@ public final class GetManagedPrefixListFilter {
      * The name of the filter field. Valid values can be found in the EC2 [DescribeManagedPrefixLists](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeManagedPrefixLists.html) API Reference.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

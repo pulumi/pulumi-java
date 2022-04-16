@@ -22,7 +22,7 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="configuration", required=true)
       private final Output<String> configuration;
 
-    public Output<String> getConfiguration() {
+    public Output<String> configuration() {
         return this.configuration;
     }
 
@@ -33,7 +33,7 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,7 +44,7 @@ public final class PatchBaselineSourceGetArgs extends com.pulumi.resources.Resou
     @Import(name="products", required=true)
       private final Output<List<String>> products;
 
-    public Output<List<String>> getProducts() {
+    public Output<List<String>> products() {
         return this.products;
     }
 

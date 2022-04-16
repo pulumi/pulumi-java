@@ -35,14 +35,14 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
       private final @Nullable Output<String> accessPolicies;
 
-    public Output<String> getAccessPolicies() {
+    public Output<String> accessPolicies() {
         return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
     @Import(name="advancedOptions")
       private final @Nullable Output<Map<String,String>> advancedOptions;
 
-    public Output<Map<String,String>> getAdvancedOptions() {
+    public Output<Map<String,String>> advancedOptions() {
         return this.advancedOptions == null ? Codegen.empty() : this.advancedOptions;
     }
 
@@ -53,7 +53,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedSecurityOptions")
       private final @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
 
-    public Output<DomainAdvancedSecurityOptionsArgs> getAdvancedSecurityOptions() {
+    public Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions() {
         return this.advancedSecurityOptions == null ? Codegen.empty() : this.advancedSecurityOptions;
     }
 
@@ -64,7 +64,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoTuneOptions")
       private final @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
 
-    public Output<DomainAutoTuneOptionsArgs> getAutoTuneOptions() {
+    public Output<DomainAutoTuneOptionsArgs> autoTuneOptions() {
         return this.autoTuneOptions == null ? Codegen.empty() : this.autoTuneOptions;
     }
 
@@ -75,7 +75,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfig")
       private final @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
-    public Output<DomainClusterConfigArgs> getClusterConfig() {
+    public Output<DomainClusterConfigArgs> clusterConfig() {
         return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
     }
 
@@ -86,7 +86,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cognitoOptions")
       private final @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
-    public Output<DomainCognitoOptionsArgs> getCognitoOptions() {
+    public Output<DomainCognitoOptionsArgs> cognitoOptions() {
         return this.cognitoOptions == null ? Codegen.empty() : this.cognitoOptions;
     }
 
@@ -97,7 +97,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainEndpointOptions")
       private final @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
 
-    public Output<DomainDomainEndpointOptionsArgs> getDomainEndpointOptions() {
+    public Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions() {
         return this.domainEndpointOptions == null ? Codegen.empty() : this.domainEndpointOptions;
     }
 
@@ -108,7 +108,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -119,7 +119,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsOptions")
       private final @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
 
-    public Output<DomainEbsOptionsArgs> getEbsOptions() {
+    public Output<DomainEbsOptionsArgs> ebsOptions() {
         return this.ebsOptions == null ? Codegen.empty() : this.ebsOptions;
     }
 
@@ -130,7 +130,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticsearchVersion")
       private final @Nullable Output<String> elasticsearchVersion;
 
-    public Output<String> getElasticsearchVersion() {
+    public Output<String> elasticsearchVersion() {
         return this.elasticsearchVersion == null ? Codegen.empty() : this.elasticsearchVersion;
     }
 
@@ -141,7 +141,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptAtRest")
       private final @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
 
-    public Output<DomainEncryptAtRestArgs> getEncryptAtRest() {
+    public Output<DomainEncryptAtRestArgs> encryptAtRest() {
         return this.encryptAtRest == null ? Codegen.empty() : this.encryptAtRest;
     }
 
@@ -152,7 +152,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logPublishingOptions")
       private final @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
 
-    public Output<List<DomainLogPublishingOptionArgs>> getLogPublishingOptions() {
+    public Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions() {
         return this.logPublishingOptions == null ? Codegen.empty() : this.logPublishingOptions;
     }
 
@@ -163,7 +163,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeToNodeEncryption")
       private final @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
 
-    public Output<DomainNodeToNodeEncryptionArgs> getNodeToNodeEncryption() {
+    public Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption() {
         return this.nodeToNodeEncryption == null ? Codegen.empty() : this.nodeToNodeEncryption;
     }
 
@@ -174,7 +174,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotOptions")
       private final @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
-    public Output<DomainSnapshotOptionsArgs> getSnapshotOptions() {
+    public Output<DomainSnapshotOptionsArgs> snapshotOptions() {
         return this.snapshotOptions == null ? Codegen.empty() : this.snapshotOptions;
     }
 
@@ -185,7 +185,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -196,7 +196,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcOptions")
       private final @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
 
-    public Output<DomainVpcOptionsArgs> getVpcOptions() {
+    public Output<DomainVpcOptionsArgs> vpcOptions() {
         return this.vpcOptions == null ? Codegen.empty() : this.vpcOptions;
     }
 

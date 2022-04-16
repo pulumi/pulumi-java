@@ -26,7 +26,7 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
     @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
+    public Output<List<String>> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
@@ -37,7 +37,7 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
     @Import(name="playerLatencyPolicies")
       private final @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
 
-    public Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> getPlayerLatencyPolicies() {
+    public Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies() {
         return this.playerLatencyPolicies == null ? Codegen.empty() : this.playerLatencyPolicies;
     }
 
@@ -59,7 +59,7 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -70,7 +70,7 @@ public final class GameSessionQueueArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 

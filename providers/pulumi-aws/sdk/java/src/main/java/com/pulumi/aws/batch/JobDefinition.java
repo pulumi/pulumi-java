@@ -46,7 +46,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of the job definition.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +62,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
      * 
      */
-    public Output</* @Nullable */ String> getContainerProperties() {
+    public Output</* @Nullable */ String> containerProperties() {
         return this.containerProperties;
     }
     /**
@@ -76,7 +76,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the job definition.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies the parameter substitution placeholders to set in the job definition.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -104,7 +104,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return The platform capabilities required by the job definition. If no value is specified, it defaults to `EC2`. To run the job on Fargate resources, specify `FARGATE`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPlatformCapabilities() {
+    public Output</* @Nullable */ List<String>> platformCapabilities() {
         return this.platformCapabilities;
     }
     /**
@@ -118,7 +118,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPropagateTags() {
+    public Output</* @Nullable */ Boolean> propagateTags() {
         return this.propagateTags;
     }
     /**
@@ -134,7 +134,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * Maximum number of `retry_strategy` is `1`.  Defined below.
      * 
      */
-    public Output</* @Nullable */ JobDefinitionRetryStrategy> getRetryStrategy() {
+    public Output</* @Nullable */ JobDefinitionRetryStrategy> retryStrategy() {
         return this.retryStrategy;
     }
     /**
@@ -148,7 +148,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return The revision of the job definition.
      * 
      */
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision;
     }
     /**
@@ -162,7 +162,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -176,7 +176,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -190,7 +190,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
      * 
      */
-    public Output</* @Nullable */ JobDefinitionTimeout> getTimeout() {
+    public Output</* @Nullable */ JobDefinitionTimeout> timeout() {
         return this.timeout;
     }
     /**
@@ -204,7 +204,7 @@ public class JobDefinition extends com.pulumi.resources.CustomResource {
      * @return The type of job definition.  Must be `container`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

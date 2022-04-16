@@ -112,91 +112,91 @@ public final class EndpointS3Settings {
      * S3 Bucket Object prefix.
      * 
     */
-    public Optional<String> getBucketFolder() {
+    public Optional<String> bucketFolder() {
         return Optional.ofNullable(this.bucketFolder);
     }
     /**
      * S3 Bucket name.
      * 
     */
-    public Optional<String> getBucketName() {
+    public Optional<String> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
      * 
     */
-    public Optional<String> getCompressionType() {
+    public Optional<String> compressionType() {
         return Optional.ofNullable(this.compressionType);
     }
     /**
      * Delimiter used to separate columns in the source files. Defaults to `,`.
      * 
     */
-    public Optional<String> getCsvDelimiter() {
+    public Optional<String> csvDelimiter() {
         return Optional.ofNullable(this.csvDelimiter);
     }
     /**
      * Delimiter used to separate rows in the source files. Defaults to `\n`.
      * 
     */
-    public Optional<String> getCsvRowDelimiter() {
+    public Optional<String> csvRowDelimiter() {
         return Optional.ofNullable(this.csvRowDelimiter);
     }
     /**
      * The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
      * 
     */
-    public Optional<String> getDataFormat() {
+    public Optional<String> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
      * Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getDatePartitionEnabled() {
+    public Optional<Boolean> datePartitionEnabled() {
         return Optional.ofNullable(this.datePartitionEnabled);
     }
     /**
      * The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
      * 
     */
-    public Optional<String> getEncryptionMode() {
+    public Optional<String> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
      * JSON document that describes how AWS DMS should interpret the data.
      * 
     */
-    public Optional<String> getExternalTableDefinition() {
+    public Optional<String> externalTableDefinition() {
         return Optional.ofNullable(this.externalTableDefinition);
     }
     /**
      * - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getParquetTimestampInMillisecond() {
+    public Optional<Boolean> parquetTimestampInMillisecond() {
         return Optional.ofNullable(this.parquetTimestampInMillisecond);
     }
     /**
      * The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
      * 
     */
-    public Optional<String> getParquetVersion() {
+    public Optional<String> parquetVersion() {
         return Optional.ofNullable(this.parquetVersion);
     }
     /**
      * If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
      * 
     */
-    public Optional<String> getServerSideEncryptionKmsKeyId() {
+    public Optional<String> serverSideEncryptionKmsKeyId() {
         return Optional.ofNullable(this.serverSideEncryptionKmsKeyId);
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
     */
-    public Optional<String> getServiceAccessRoleArn() {
+    public Optional<String> serviceAccessRoleArn() {
         return Optional.ofNullable(this.serviceAccessRoleArn);
     }
 

@@ -29,7 +29,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -40,7 +40,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
     }
 
@@ -51,7 +51,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> getAvailabilityZoneName() {
+    public Output<String> availabilityZoneName() {
         return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
     }
 
@@ -65,7 +65,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationToken")
       private final @Nullable Output<String> creationToken;
 
-    public Output<String> getCreationToken() {
+    public Output<String> creationToken() {
         return this.creationToken == null ? Codegen.empty() : this.creationToken;
     }
 
@@ -76,7 +76,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -87,7 +87,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -98,7 +98,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -109,7 +109,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecyclePolicy")
       private final @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
 
-    public Output<FileSystemLifecyclePolicyGetArgs> getLifecyclePolicy() {
+    public Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy() {
         return this.lifecyclePolicy == null ? Codegen.empty() : this.lifecyclePolicy;
     }
 
@@ -120,7 +120,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfMountTargets")
       private final @Nullable Output<Integer> numberOfMountTargets;
 
-    public Output<Integer> getNumberOfMountTargets() {
+    public Output<Integer> numberOfMountTargets() {
         return this.numberOfMountTargets == null ? Codegen.empty() : this.numberOfMountTargets;
     }
 
@@ -131,7 +131,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -142,7 +142,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
-    public Output<String> getPerformanceMode() {
+    public Output<String> performanceMode() {
         return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
     }
 
@@ -153,7 +153,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> getProvisionedThroughputInMibps() {
+    public Output<Double> provisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
     }
 
@@ -164,7 +164,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sizeInBytes")
       private final @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
 
-    public Output<List<FileSystemSizeInByteGetArgs>> getSizeInBytes() {
+    public Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes() {
         return this.sizeInBytes == null ? Codegen.empty() : this.sizeInBytes;
     }
 
@@ -175,7 +175,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -186,7 +186,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -197,7 +197,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
     @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
-    public Output<String> getThroughputMode() {
+    public Output<String> throughputMode() {
         return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
     }
 

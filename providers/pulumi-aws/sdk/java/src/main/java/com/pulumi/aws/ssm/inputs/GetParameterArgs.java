@@ -22,7 +22,7 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class GetParameterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="withDecryption")
       private final @Nullable Boolean withDecryption;
 
-    public Optional<Boolean> getWithDecryption() {
+    public Optional<Boolean> withDecryption() {
         return this.withDecryption == null ? Optional.empty() : Optional.ofNullable(this.withDecryption);
     }
 

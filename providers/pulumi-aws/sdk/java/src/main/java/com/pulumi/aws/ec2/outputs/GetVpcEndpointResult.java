@@ -133,109 +133,109 @@ public final class GetVpcEndpointResult {
      * The Amazon Resource Name (ARN) of the VPC endpoint.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
     */
-    public List<String> getCidrBlocks() {
+    public List<String> cidrBlocks() {
         return this.cidrBlocks;
     }
     /**
      * The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
      * 
     */
-    public List<GetVpcEndpointDnsEntry> getDnsEntries() {
+    public List<GetVpcEndpointDnsEntry> dnsEntries() {
         return this.dnsEntries;
     }
-    public List<GetVpcEndpointFilter> getFilters() {
+    public List<GetVpcEndpointFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
      * 
     */
-    public List<String> getNetworkInterfaceIds() {
+    public List<String> networkInterfaceIds() {
         return this.networkInterfaceIds;
     }
     /**
      * The ID of the AWS account that owns the VPC endpoint.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * The policy document associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
      * 
     */
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
     /**
      * The prefix list ID of the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
     */
-    public String getPrefixListId() {
+    public String prefixListId() {
         return this.prefixListId;
     }
     /**
      * Whether or not the VPC is associated with a private hosted zone - `true` or `false`. Applicable for endpoints of type `Interface`.
      * 
     */
-    public Boolean getPrivateDnsEnabled() {
+    public Boolean privateDnsEnabled() {
         return this.privateDnsEnabled;
     }
     /**
      * Whether or not the VPC Endpoint is being managed by its service - `true` or `false`.
      * 
     */
-    public Boolean getRequesterManaged() {
+    public Boolean requesterManaged() {
         return this.requesterManaged;
     }
     /**
      * One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
      * 
     */
-    public List<String> getRouteTableIds() {
+    public List<String> routeTableIds() {
         return this.routeTableIds;
     }
     /**
      * One or more security groups associated with the network interfaces. Applicable for endpoints of type `Interface`.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type `Interface`.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The VPC Endpoint type, `Gateway` or `Interface`.
      * 
     */
-    public String getVpcEndpointType() {
+    public String vpcEndpointType() {
         return this.vpcEndpointType;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

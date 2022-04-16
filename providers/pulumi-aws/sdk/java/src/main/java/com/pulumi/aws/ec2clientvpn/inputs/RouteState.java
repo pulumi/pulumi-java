@@ -22,7 +22,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientVpnEndpointId")
       private final @Nullable Output<String> clientVpnEndpointId;
 
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId == null ? Codegen.empty() : this.clientVpnEndpointId;
     }
 
@@ -33,7 +33,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -55,7 +55,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="origin")
       private final @Nullable Output<String> origin;
 
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin == null ? Codegen.empty() : this.origin;
     }
 
@@ -66,7 +66,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetVpcSubnetId")
       private final @Nullable Output<String> targetVpcSubnetId;
 
-    public Output<String> getTargetVpcSubnetId() {
+    public Output<String> targetVpcSubnetId() {
         return this.targetVpcSubnetId == null ? Codegen.empty() : this.targetVpcSubnetId;
     }
 
@@ -77,7 +77,7 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

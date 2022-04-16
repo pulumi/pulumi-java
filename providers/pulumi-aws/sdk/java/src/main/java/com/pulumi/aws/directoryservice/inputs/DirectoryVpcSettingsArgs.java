@@ -19,7 +19,7 @@ public final class DirectoryVpcSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -30,7 +30,7 @@ public final class DirectoryVpcSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -41,7 +41,7 @@ public final class DirectoryVpcSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

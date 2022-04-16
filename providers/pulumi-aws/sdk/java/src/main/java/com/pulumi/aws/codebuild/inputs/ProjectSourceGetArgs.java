@@ -32,7 +32,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
       private final @Nullable Output<ProjectSourceAuthGetArgs> auth;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Output<ProjectSourceAuthGetArgs> getAuth() {
+    public Output<ProjectSourceAuthGetArgs> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -43,7 +43,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildStatusConfig")
       private final @Nullable Output<ProjectSourceBuildStatusConfigGetArgs> buildStatusConfig;
 
-    public Output<ProjectSourceBuildStatusConfigGetArgs> getBuildStatusConfig() {
+    public Output<ProjectSourceBuildStatusConfigGetArgs> buildStatusConfig() {
         return this.buildStatusConfig == null ? Codegen.empty() : this.buildStatusConfig;
     }
 
@@ -54,7 +54,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildspec")
       private final @Nullable Output<String> buildspec;
 
-    public Output<String> getBuildspec() {
+    public Output<String> buildspec() {
         return this.buildspec == null ? Codegen.empty() : this.buildspec;
     }
 
@@ -65,7 +65,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="gitCloneDepth")
       private final @Nullable Output<Integer> gitCloneDepth;
 
-    public Output<Integer> getGitCloneDepth() {
+    public Output<Integer> gitCloneDepth() {
         return this.gitCloneDepth == null ? Codegen.empty() : this.gitCloneDepth;
     }
 
@@ -76,7 +76,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="gitSubmodulesConfig")
       private final @Nullable Output<ProjectSourceGitSubmodulesConfigGetArgs> gitSubmodulesConfig;
 
-    public Output<ProjectSourceGitSubmodulesConfigGetArgs> getGitSubmodulesConfig() {
+    public Output<ProjectSourceGitSubmodulesConfigGetArgs> gitSubmodulesConfig() {
         return this.gitSubmodulesConfig == null ? Codegen.empty() : this.gitSubmodulesConfig;
     }
 
@@ -87,7 +87,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="insecureSsl")
       private final @Nullable Output<Boolean> insecureSsl;
 
-    public Output<Boolean> getInsecureSsl() {
+    public Output<Boolean> insecureSsl() {
         return this.insecureSsl == null ? Codegen.empty() : this.insecureSsl;
     }
 
@@ -98,7 +98,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -109,7 +109,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="reportBuildStatus")
       private final @Nullable Output<Boolean> reportBuildStatus;
 
-    public Output<Boolean> getReportBuildStatus() {
+    public Output<Boolean> reportBuildStatus() {
         return this.reportBuildStatus == null ? Codegen.empty() : this.reportBuildStatus;
     }
 
@@ -120,7 +120,7 @@ public final class ProjectSourceGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

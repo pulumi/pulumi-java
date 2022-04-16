@@ -21,7 +21,7 @@ public final class WebhookFilterGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="jsonPath", required=true)
       private final Output<String> jsonPath;
 
-    public Output<String> getJsonPath() {
+    public Output<String> jsonPath() {
         return this.jsonPath;
     }
 
@@ -32,7 +32,7 @@ public final class WebhookFilterGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="matchEquals", required=true)
       private final Output<String> matchEquals;
 
-    public Output<String> getMatchEquals() {
+    public Output<String> matchEquals() {
         return this.matchEquals;
     }
 

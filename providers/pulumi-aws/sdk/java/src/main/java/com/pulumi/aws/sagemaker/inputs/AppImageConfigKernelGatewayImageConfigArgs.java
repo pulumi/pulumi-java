@@ -23,7 +23,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends com.pulumi
     @Import(name="fileSystemConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig;
 
-    public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> getFileSystemConfig() {
+    public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig() {
         return this.fileSystemConfig == null ? Codegen.empty() : this.fileSystemConfig;
     }
 
@@ -34,7 +34,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends com.pulumi
     @Import(name="kernelSpec", required=true)
       private final Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec;
 
-    public Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> getKernelSpec() {
+    public Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec() {
         return this.kernelSpec;
     }
 

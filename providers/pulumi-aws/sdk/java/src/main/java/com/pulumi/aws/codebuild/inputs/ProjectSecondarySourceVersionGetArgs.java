@@ -21,7 +21,7 @@ public final class ProjectSecondarySourceVersionGetArgs extends com.pulumi.resou
     @Import(name="sourceIdentifier", required=true)
       private final Output<String> sourceIdentifier;
 
-    public Output<String> getSourceIdentifier() {
+    public Output<String> sourceIdentifier() {
         return this.sourceIdentifier;
     }
 
@@ -32,7 +32,7 @@ public final class ProjectSecondarySourceVersionGetArgs extends com.pulumi.resou
     @Import(name="sourceVersion", required=true)
       private final Output<String> sourceVersion;
 
-    public Output<String> getSourceVersion() {
+    public Output<String> sourceVersion() {
         return this.sourceVersion;
     }
 

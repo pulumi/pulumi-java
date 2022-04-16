@@ -24,7 +24,7 @@ public final class JobDefinitionRetryStrategyArgs extends com.pulumi.resources.R
     @Import(name="attempts")
       private final @Nullable Output<Integer> attempts;
 
-    public Output<Integer> getAttempts() {
+    public Output<Integer> attempts() {
         return this.attempts == null ? Codegen.empty() : this.attempts;
     }
 
@@ -35,7 +35,7 @@ public final class JobDefinitionRetryStrategyArgs extends com.pulumi.resources.R
     @Import(name="evaluateOnExits")
       private final @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits;
 
-    public Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> getEvaluateOnExits() {
+    public Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits() {
         return this.evaluateOnExits == null ? Codegen.empty() : this.evaluateOnExits;
     }
 

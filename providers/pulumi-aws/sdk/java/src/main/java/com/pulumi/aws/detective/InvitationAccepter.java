@@ -40,7 +40,7 @@ public class InvitationAccepter extends com.pulumi.resources.CustomResource {
      * @return ARN of the behavior graph that the member account is accepting the invitation for.
      * 
      */
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
 

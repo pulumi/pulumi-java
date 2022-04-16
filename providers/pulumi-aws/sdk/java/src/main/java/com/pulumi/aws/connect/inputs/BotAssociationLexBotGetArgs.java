@@ -22,7 +22,7 @@ public final class BotAssociationLexBotGetArgs extends com.pulumi.resources.Reso
     @Import(name="lexRegion")
       private final @Nullable Output<String> lexRegion;
 
-    public Output<String> getLexRegion() {
+    public Output<String> lexRegion() {
         return this.lexRegion == null ? Codegen.empty() : this.lexRegion;
     }
 
@@ -33,7 +33,7 @@ public final class BotAssociationLexBotGetArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

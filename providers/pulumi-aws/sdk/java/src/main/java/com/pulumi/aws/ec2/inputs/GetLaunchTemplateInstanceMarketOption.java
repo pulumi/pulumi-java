@@ -17,14 +17,14 @@ public final class GetLaunchTemplateInstanceMarketOption extends com.pulumi.reso
     @Import(name="marketType", required=true)
       private final String marketType;
 
-    public String getMarketType() {
+    public String marketType() {
         return this.marketType;
     }
 
     @Import(name="spotOptions", required=true)
       private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
 
-    public List<GetLaunchTemplateInstanceMarketOptionSpotOption> getSpotOptions() {
+    public List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions() {
         return this.spotOptions;
     }
 

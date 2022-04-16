@@ -24,7 +24,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends com.pulumi.
     @Import(name="dailySchedule")
       private final @Nullable Output<Boolean> dailySchedule;
 
-    public Output<Boolean> getDailySchedule() {
+    public Output<Boolean> dailySchedule() {
         return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
     }
 
@@ -35,7 +35,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends com.pulumi.
     @Import(name="monthlySchedule")
       private final @Nullable Output<Integer> monthlySchedule;
 
-    public Output<Integer> getMonthlySchedule() {
+    public Output<Integer> monthlySchedule() {
         return this.monthlySchedule == null ? Codegen.empty() : this.monthlySchedule;
     }
 
@@ -46,7 +46,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends com.pulumi.
     @Import(name="weeklySchedule")
       private final @Nullable Output<String> weeklySchedule;
 
-    public Output<String> getWeeklySchedule() {
+    public Output<String> weeklySchedule() {
         return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
     }
 

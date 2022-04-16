@@ -27,7 +27,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -39,7 +39,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableRollback")
       private final @Nullable Output<Boolean> disableRollback;
 
-    public Output<Boolean> getDisableRollback() {
+    public Output<Boolean> disableRollback() {
         return this.disableRollback == null ? Codegen.empty() : this.disableRollback;
     }
 
@@ -50,7 +50,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
@@ -61,7 +61,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -72,7 +72,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> getNotificationArns() {
+    public Output<List<String>> notificationArns() {
         return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
     }
 
@@ -84,7 +84,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="onFailure")
       private final @Nullable Output<String> onFailure;
 
-    public Output<String> getOnFailure() {
+    public Output<String> onFailure() {
         return this.onFailure == null ? Codegen.empty() : this.onFailure;
     }
 
@@ -95,7 +95,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -107,7 +107,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyBody")
       private final @Nullable Output<String> policyBody;
 
-    public Output<String> getPolicyBody() {
+    public Output<String> policyBody() {
         return this.policyBody == null ? Codegen.empty() : this.policyBody;
     }
 
@@ -119,7 +119,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyUrl")
       private final @Nullable Output<String> policyUrl;
 
-    public Output<String> getPolicyUrl() {
+    public Output<String> policyUrl() {
         return this.policyUrl == null ? Codegen.empty() : this.policyUrl;
     }
 
@@ -130,7 +130,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -141,7 +141,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
@@ -152,7 +152,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
-    public Output<String> getTemplateUrl() {
+    public Output<String> templateUrl() {
         return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
     }
 
@@ -163,7 +163,7 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeoutInMinutes")
       private final @Nullable Output<Integer> timeoutInMinutes;
 
-    public Output<Integer> getTimeoutInMinutes() {
+    public Output<Integer> timeoutInMinutes() {
         return this.timeoutInMinutes == null ? Codegen.empty() : this.timeoutInMinutes;
     }
 

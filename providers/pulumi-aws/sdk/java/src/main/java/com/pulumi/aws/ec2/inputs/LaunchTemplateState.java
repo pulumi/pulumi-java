@@ -42,7 +42,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -54,7 +54,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
-    public Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
+    public Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings() {
         return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
@@ -65,7 +65,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="capacityReservationSpecification")
       private final @Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
-    public Output<LaunchTemplateCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
+    public Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification() {
         return this.capacityReservationSpecification == null ? Codegen.empty() : this.capacityReservationSpecification;
     }
 
@@ -76,7 +76,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="cpuOptions")
       private final @Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
 
-    public Output<LaunchTemplateCpuOptionsGetArgs> getCpuOptions() {
+    public Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions() {
         return this.cpuOptions == null ? Codegen.empty() : this.cpuOptions;
     }
 
@@ -88,7 +88,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="creditSpecification")
       private final @Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
 
-    public Output<LaunchTemplateCreditSpecificationGetArgs> getCreditSpecification() {
+    public Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification() {
         return this.creditSpecification == null ? Codegen.empty() : this.creditSpecification;
     }
 
@@ -99,7 +99,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultVersion")
       private final @Nullable Output<Integer> defaultVersion;
 
-    public Output<Integer> getDefaultVersion() {
+    public Output<Integer> defaultVersion() {
         return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
@@ -110,7 +110,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -122,7 +122,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="disableApiTermination")
       private final @Nullable Output<Boolean> disableApiTermination;
 
-    public Output<Boolean> getDisableApiTermination() {
+    public Output<Boolean> disableApiTermination() {
         return this.disableApiTermination == null ? Codegen.empty() : this.disableApiTermination;
     }
 
@@ -133,7 +133,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="ebsOptimized")
       private final @Nullable Output<String> ebsOptimized;
 
-    public Output<String> getEbsOptimized() {
+    public Output<String> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
@@ -145,7 +145,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="elasticGpuSpecifications")
       private final @Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
 
-    public Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> getElasticGpuSpecifications() {
+    public Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications() {
         return this.elasticGpuSpecifications == null ? Codegen.empty() : this.elasticGpuSpecifications;
     }
 
@@ -156,7 +156,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="elasticInferenceAccelerator")
       private final @Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
 
-    public Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> getElasticInferenceAccelerator() {
+    public Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator() {
         return this.elasticInferenceAccelerator == null ? Codegen.empty() : this.elasticInferenceAccelerator;
     }
 
@@ -167,7 +167,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="enclaveOptions")
       private final @Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
 
-    public Output<LaunchTemplateEnclaveOptionsGetArgs> getEnclaveOptions() {
+    public Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions() {
         return this.enclaveOptions == null ? Codegen.empty() : this.enclaveOptions;
     }
 
@@ -178,7 +178,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="hibernationOptions")
       private final @Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
 
-    public Output<LaunchTemplateHibernationOptionsGetArgs> getHibernationOptions() {
+    public Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions() {
         return this.hibernationOptions == null ? Codegen.empty() : this.hibernationOptions;
     }
 
@@ -190,7 +190,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
 
-    public Output<LaunchTemplateIamInstanceProfileGetArgs> getIamInstanceProfile() {
+    public Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile() {
         return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
@@ -201,7 +201,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 
@@ -213,7 +213,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceInitiatedShutdownBehavior")
       private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
-    public Output<String> getInstanceInitiatedShutdownBehavior() {
+    public Output<String> instanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior == null ? Codegen.empty() : this.instanceInitiatedShutdownBehavior;
     }
 
@@ -225,7 +225,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceMarketOptions")
       private final @Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
 
-    public Output<LaunchTemplateInstanceMarketOptionsGetArgs> getInstanceMarketOptions() {
+    public Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions() {
         return this.instanceMarketOptions == null ? Codegen.empty() : this.instanceMarketOptions;
     }
 
@@ -236,7 +236,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -247,7 +247,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
-    public Output<String> getKernelId() {
+    public Output<String> kernelId() {
         return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
@@ -258,7 +258,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -269,7 +269,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="latestVersion")
       private final @Nullable Output<Integer> latestVersion;
 
-    public Output<Integer> getLatestVersion() {
+    public Output<Integer> latestVersion() {
         return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
     }
 
@@ -280,7 +280,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="licenseSpecifications")
       private final @Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
 
-    public Output<List<LaunchTemplateLicenseSpecificationGetArgs>> getLicenseSpecifications() {
+    public Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications() {
         return this.licenseSpecifications == null ? Codegen.empty() : this.licenseSpecifications;
     }
 
@@ -291,7 +291,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="metadataOptions")
       private final @Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
 
-    public Output<LaunchTemplateMetadataOptionsGetArgs> getMetadataOptions() {
+    public Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions() {
         return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
@@ -302,7 +302,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="monitoring")
       private final @Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring;
 
-    public Output<LaunchTemplateMonitoringGetArgs> getMonitoring() {
+    public Output<LaunchTemplateMonitoringGetArgs> monitoring() {
         return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
@@ -313,7 +313,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -324,7 +324,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -336,7 +336,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
-    public Output<List<LaunchTemplateNetworkInterfaceGetArgs>> getNetworkInterfaces() {
+    public Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -347,7 +347,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="placement")
       private final @Nullable Output<LaunchTemplatePlacementGetArgs> placement;
 
-    public Output<LaunchTemplatePlacementGetArgs> getPlacement() {
+    public Output<LaunchTemplatePlacementGetArgs> placement() {
         return this.placement == null ? Codegen.empty() : this.placement;
     }
 
@@ -358,7 +358,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="ramDiskId")
       private final @Nullable Output<String> ramDiskId;
 
-    public Output<String> getRamDiskId() {
+    public Output<String> ramDiskId() {
         return this.ramDiskId == null ? Codegen.empty() : this.ramDiskId;
     }
 
@@ -370,7 +370,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="securityGroupNames")
       private final @Nullable Output<List<String>> securityGroupNames;
 
-    public Output<List<String>> getSecurityGroupNames() {
+    public Output<List<String>> securityGroupNames() {
         return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
     }
 
@@ -381,7 +381,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
 
-    public Output<List<LaunchTemplateTagSpecificationGetArgs>> getTagSpecifications() {
+    public Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications() {
         return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
@@ -392,7 +392,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -403,7 +403,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -414,7 +414,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="updateDefaultVersion")
       private final @Nullable Output<Boolean> updateDefaultVersion;
 
-    public Output<Boolean> getUpdateDefaultVersion() {
+    public Output<Boolean> updateDefaultVersion() {
         return this.updateDefaultVersion == null ? Codegen.empty() : this.updateDefaultVersion;
     }
 
@@ -425,7 +425,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
@@ -436,7 +436,7 @@ public final class LaunchTemplateState extends com.pulumi.resources.ResourceArgs
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 

@@ -33,14 +33,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
      * 
     */
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters getMappingParameters() {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters mappingParameters() {
         return this.mappingParameters;
     }
     /**
      * The type of record format. Valid values: `CSV`, `JSON`.
      * 
     */
-    public String getRecordFormatType() {
+    public String recordFormatType() {
         return this.recordFormatType;
     }
 

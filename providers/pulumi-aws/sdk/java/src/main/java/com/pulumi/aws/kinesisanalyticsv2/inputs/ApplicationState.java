@@ -27,7 +27,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
 
-    public Output<ApplicationApplicationConfigurationGetArgs> getApplicationConfiguration() {
+    public Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration() {
         return this.applicationConfiguration == null ? Codegen.empty() : this.applicationConfiguration;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<ApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
+    public Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createTimestamp")
       private final @Nullable Output<String> createTimestamp;
 
-    public Output<String> getCreateTimestamp() {
+    public Output<String> createTimestamp() {
         return this.createTimestamp == null ? Codegen.empty() : this.createTimestamp;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceStop")
       private final @Nullable Output<Boolean> forceStop;
 
-    public Output<Boolean> getForceStop() {
+    public Output<Boolean> forceStop() {
         return this.forceStop == null ? Codegen.empty() : this.forceStop;
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdateTimestamp")
       private final @Nullable Output<String> lastUpdateTimestamp;
 
-    public Output<String> getLastUpdateTimestamp() {
+    public Output<String> lastUpdateTimestamp() {
         return this.lastUpdateTimestamp == null ? Codegen.empty() : this.lastUpdateTimestamp;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeEnvironment")
       private final @Nullable Output<String> runtimeEnvironment;
 
-    public Output<String> getRuntimeEnvironment() {
+    public Output<String> runtimeEnvironment() {
         return this.runtimeEnvironment == null ? Codegen.empty() : this.runtimeEnvironment;
     }
 
@@ -126,7 +126,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceExecutionRole")
       private final @Nullable Output<String> serviceExecutionRole;
 
-    public Output<String> getServiceExecutionRole() {
+    public Output<String> serviceExecutionRole() {
         return this.serviceExecutionRole == null ? Codegen.empty() : this.serviceExecutionRole;
     }
 
@@ -137,7 +137,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
-    public Output<Boolean> getStartApplication() {
+    public Output<Boolean> startApplication() {
         return this.startApplication == null ? Codegen.empty() : this.startApplication;
     }
 
@@ -148,7 +148,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -159,7 +159,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -170,7 +170,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -181,7 +181,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionId")
       private final @Nullable Output<Integer> versionId;
 
-    public Output<Integer> getVersionId() {
+    public Output<Integer> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

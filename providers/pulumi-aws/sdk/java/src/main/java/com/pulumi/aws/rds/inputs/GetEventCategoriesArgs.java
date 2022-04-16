@@ -21,7 +21,7 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
     @Import(name="sourceType")
       private final @Nullable String sourceType;
 
-    public Optional<String> getSourceType() {
+    public Optional<String> sourceType() {
         return this.sourceType == null ? Optional.empty() : Optional.ofNullable(this.sourceType);
     }
 

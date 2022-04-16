@@ -113,43 +113,43 @@ public final class GetVpcResult {
      * Amazon Resource Name (ARN) of VPC
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The CIDR block for the association.
      * 
     */
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
-    public List<GetVpcCidrBlockAssociation> getCidrBlockAssociations() {
+    public List<GetVpcCidrBlockAssociation> cidrBlockAssociations() {
         return this.cidrBlockAssociations;
     }
-    public Boolean getDefault_() {
+    public Boolean default_() {
         return this.default_;
     }
-    public String getDhcpOptionsId() {
+    public String dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
      * Whether or not the VPC has DNS hostname support
      * 
     */
-    public Boolean getEnableDnsHostnames() {
+    public Boolean enableDnsHostnames() {
         return this.enableDnsHostnames;
     }
     /**
      * Whether or not the VPC has DNS support
      * 
     */
-    public Boolean getEnableDnsSupport() {
+    public Boolean enableDnsSupport() {
         return this.enableDnsSupport;
     }
-    public List<GetVpcFilter> getFilters() {
+    public List<GetVpcFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -157,45 +157,45 @@ public final class GetVpcResult {
      * selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
      * 
     */
-    public String getInstanceTenancy() {
+    public String instanceTenancy() {
         return this.instanceTenancy;
     }
     /**
      * The association ID for the IPv6 CIDR block.
      * 
     */
-    public String getIpv6AssociationId() {
+    public String ipv6AssociationId() {
         return this.ipv6AssociationId;
     }
     /**
      * The IPv6 CIDR block.
      * 
     */
-    public String getIpv6CidrBlock() {
+    public String ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     /**
      * The ID of the main route table associated with this VPC.
      * 
     */
-    public String getMainRouteTableId() {
+    public String mainRouteTableId() {
         return this.mainRouteTableId;
     }
     /**
      * The ID of the AWS account that owns the VPC.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * The State of the association.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

@@ -23,7 +23,7 @@ public final class InstanceCapacityReservationSpecificationArgs extends com.pulu
     @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
-    public Output<String> getCapacityReservationPreference() {
+    public Output<String> capacityReservationPreference() {
         return this.capacityReservationPreference == null ? Codegen.empty() : this.capacityReservationPreference;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceCapacityReservationSpecificationArgs extends com.pulu
     @Import(name="capacityReservationTarget")
       private final @Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget;
 
-    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> getCapacityReservationTarget() {
+    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetArgs> capacityReservationTarget() {
         return this.capacityReservationTarget == null ? Codegen.empty() : this.capacityReservationTarget;
     }
 

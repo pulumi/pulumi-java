@@ -23,7 +23,7 @@ public final class GroupMixedInstancesPolicyGetArgs extends com.pulumi.resources
     @Import(name="instancesDistribution")
       private final @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution;
 
-    public Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> getInstancesDistribution() {
+    public Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution() {
         return this.instancesDistribution == null ? Codegen.empty() : this.instancesDistribution;
     }
 
@@ -34,7 +34,7 @@ public final class GroupMixedInstancesPolicyGetArgs extends com.pulumi.resources
     @Import(name="launchTemplate", required=true)
       private final Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate;
 
-    public Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> getLaunchTemplate() {
+    public Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate() {
         return this.launchTemplate;
     }
 

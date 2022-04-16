@@ -50,31 +50,31 @@ public final class GetPipelineResult {
      * Description of Pipeline.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of Pipeline.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getPipelineId() {
+    public String pipelineId() {
         return this.pipelineId;
     }
     /**
      * A map of tags assigned to the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

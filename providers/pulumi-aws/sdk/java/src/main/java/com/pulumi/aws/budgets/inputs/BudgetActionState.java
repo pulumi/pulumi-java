@@ -26,7 +26,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -37,7 +37,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionId")
       private final @Nullable Output<String> actionId;
 
-    public Output<String> getActionId() {
+    public Output<String> actionId() {
         return this.actionId == null ? Codegen.empty() : this.actionId;
     }
 
@@ -48,7 +48,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionThreshold")
       private final @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
 
-    public Output<BudgetActionActionThresholdGetArgs> getActionThreshold() {
+    public Output<BudgetActionActionThresholdGetArgs> actionThreshold() {
         return this.actionThreshold == null ? Codegen.empty() : this.actionThreshold;
     }
 
@@ -59,7 +59,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="actionType")
       private final @Nullable Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType == null ? Codegen.empty() : this.actionType;
     }
 
@@ -70,7 +70,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="approvalModel")
       private final @Nullable Output<String> approvalModel;
 
-    public Output<String> getApprovalModel() {
+    public Output<String> approvalModel() {
         return this.approvalModel == null ? Codegen.empty() : this.approvalModel;
     }
 
@@ -81,7 +81,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -92,7 +92,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="budgetName")
       private final @Nullable Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName == null ? Codegen.empty() : this.budgetName;
     }
 
@@ -103,7 +103,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition")
       private final @Nullable Output<BudgetActionDefinitionGetArgs> definition;
 
-    public Output<BudgetActionDefinitionGetArgs> getDefinition() {
+    public Output<BudgetActionDefinitionGetArgs> definition() {
         return this.definition == null ? Codegen.empty() : this.definition;
     }
 
@@ -114,7 +114,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -125,7 +125,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType == null ? Codegen.empty() : this.notificationType;
     }
 
@@ -136,7 +136,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -147,7 +147,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscribers")
       private final @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
 
-    public Output<List<BudgetActionSubscriberGetArgs>> getSubscribers() {
+    public Output<List<BudgetActionSubscriberGetArgs>> subscribers() {
         return this.subscribers == null ? Codegen.empty() : this.subscribers;
     }
 

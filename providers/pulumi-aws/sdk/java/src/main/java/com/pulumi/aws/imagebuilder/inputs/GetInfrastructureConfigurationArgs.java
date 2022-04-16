@@ -22,7 +22,7 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="resourceTags")
       private final @Nullable Map<String,String> resourceTags;
 
-    public Map<String,String> getResourceTags() {
+    public Map<String,String> resourceTags() {
         return this.resourceTags == null ? Map.of() : this.resourceTags;
     }
 
@@ -44,7 +44,7 @@ public final class GetInfrastructureConfigurationArgs extends com.pulumi.resourc
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

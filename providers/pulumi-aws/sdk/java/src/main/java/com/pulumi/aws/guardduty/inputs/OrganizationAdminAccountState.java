@@ -22,7 +22,7 @@ public final class OrganizationAdminAccountState extends com.pulumi.resources.Re
     @Import(name="adminAccountId")
       private final @Nullable Output<String> adminAccountId;
 
-    public Output<String> getAdminAccountId() {
+    public Output<String> adminAccountId() {
         return this.adminAccountId == null ? Codegen.empty() : this.adminAccountId;
     }
 

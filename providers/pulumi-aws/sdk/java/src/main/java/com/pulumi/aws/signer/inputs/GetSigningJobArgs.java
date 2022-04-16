@@ -19,7 +19,7 @@ public final class GetSigningJobArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobId", required=true)
       private final String jobId;
 
-    public String getJobId() {
+    public String jobId() {
         return this.jobId;
     }
 

@@ -19,7 +19,7 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -30,7 +30,7 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
     @Import(name="refValue", required=true)
       private final String refValue;
 
-    public String getRefValue() {
+    public String refValue() {
         return this.refValue;
     }
 
@@ -41,7 +41,7 @@ public final class GetPipelineDefinitionPipelineObjectField extends com.pulumi.r
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

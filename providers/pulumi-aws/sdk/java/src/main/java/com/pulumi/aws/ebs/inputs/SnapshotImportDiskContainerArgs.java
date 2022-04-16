@@ -23,7 +23,7 @@ public final class SnapshotImportDiskContainerArgs extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class SnapshotImportDiskContainerArgs extends com.pulumi.resources.
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -45,7 +45,7 @@ public final class SnapshotImportDiskContainerArgs extends com.pulumi.resources.
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 
@@ -56,7 +56,7 @@ public final class SnapshotImportDiskContainerArgs extends com.pulumi.resources.
     @Import(name="userBucket")
       private final @Nullable Output<SnapshotImportDiskContainerUserBucketArgs> userBucket;
 
-    public Output<SnapshotImportDiskContainerUserBucketArgs> getUserBucket() {
+    public Output<SnapshotImportDiskContainerUserBucketArgs> userBucket() {
         return this.userBucket == null ? Codegen.empty() : this.userBucket;
     }
 

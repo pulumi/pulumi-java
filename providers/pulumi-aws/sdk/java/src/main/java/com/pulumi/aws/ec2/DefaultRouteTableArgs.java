@@ -25,7 +25,7 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
     @Import(name="defaultRouteTableId", required=true)
       private final Output<String> defaultRouteTableId;
 
-    public Output<String> getDefaultRouteTableId() {
+    public Output<String> defaultRouteTableId() {
         return this.defaultRouteTableId;
     }
 
@@ -36,7 +36,7 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
     @Import(name="propagatingVgws")
       private final @Nullable Output<List<String>> propagatingVgws;
 
-    public Output<List<String>> getPropagatingVgws() {
+    public Output<List<String>> propagatingVgws() {
         return this.propagatingVgws == null ? Codegen.empty() : this.propagatingVgws;
     }
 
@@ -47,7 +47,7 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routes")
       private final @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
 
-    public Output<List<DefaultRouteTableRouteArgs>> getRoutes() {
+    public Output<List<DefaultRouteTableRouteArgs>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 
@@ -58,7 +58,7 @@ public final class DefaultRouteTableArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

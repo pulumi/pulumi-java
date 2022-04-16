@@ -24,7 +24,7 @@ public final class ListenerDefaultActionForwardGetArgs extends com.pulumi.resour
     @Import(name="stickiness")
       private final @Nullable Output<ListenerDefaultActionForwardStickinessGetArgs> stickiness;
 
-    public Output<ListenerDefaultActionForwardStickinessGetArgs> getStickiness() {
+    public Output<ListenerDefaultActionForwardStickinessGetArgs> stickiness() {
         return this.stickiness == null ? Codegen.empty() : this.stickiness;
     }
 
@@ -35,7 +35,7 @@ public final class ListenerDefaultActionForwardGetArgs extends com.pulumi.resour
     @Import(name="targetGroups", required=true)
       private final Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups;
 
-    public Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> getTargetGroups() {
+    public Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups() {
         return this.targetGroups;
     }
 

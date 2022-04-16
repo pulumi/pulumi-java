@@ -26,7 +26,7 @@ public final class DistributionOriginS3OriginConfig {
      * identity][5] to associate with the origin.
      * 
     */
-    public String getOriginAccessIdentity() {
+    public String originAccessIdentity() {
         return this.originAccessIdentity;
     }
 

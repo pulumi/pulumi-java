@@ -19,7 +19,7 @@ public final class GetDomainSnapshotOption extends com.pulumi.resources.InvokeAr
     @Import(name="automatedSnapshotStartHour", required=true)
       private final Integer automatedSnapshotStartHour;
 
-    public Integer getAutomatedSnapshotStartHour() {
+    public Integer automatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
 

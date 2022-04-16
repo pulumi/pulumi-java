@@ -20,7 +20,7 @@ public final class GetInstanceTypeOfferingsFilter extends com.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -31,7 +31,7 @@ public final class GetInstanceTypeOfferingsFilter extends com.pulumi.resources.I
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

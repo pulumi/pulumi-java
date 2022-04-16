@@ -26,7 +26,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -37,7 +37,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memberDefinitions", required=true)
       private final Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
 
-    public Output<List<WorkteamMemberDefinitionArgs>> getMemberDefinitions() {
+    public Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions() {
         return this.memberDefinitions;
     }
 
@@ -48,7 +48,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfiguration")
       private final @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
-    public Output<WorkteamNotificationConfigurationArgs> getNotificationConfiguration() {
+    public Output<WorkteamNotificationConfigurationArgs> notificationConfiguration() {
         return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
     }
 
@@ -59,7 +59,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -70,7 +70,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workforceName", required=true)
       private final Output<String> workforceName;
 
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName;
     }
 
@@ -81,7 +81,7 @@ public final class WorkteamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workteamName", required=true)
       private final Output<String> workteamName;
 
-    public Output<String> getWorkteamName() {
+    public Output<String> workteamName() {
         return this.workteamName;
     }
 

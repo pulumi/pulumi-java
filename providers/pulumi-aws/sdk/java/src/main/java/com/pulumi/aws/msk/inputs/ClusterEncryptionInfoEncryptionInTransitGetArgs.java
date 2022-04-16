@@ -23,7 +23,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends com.p
     @Import(name="clientBroker")
       private final @Nullable Output<String> clientBroker;
 
-    public Output<String> getClientBroker() {
+    public Output<String> clientBroker() {
         return this.clientBroker == null ? Codegen.empty() : this.clientBroker;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends com.p
     @Import(name="inCluster")
       private final @Nullable Output<Boolean> inCluster;
 
-    public Output<Boolean> getInCluster() {
+    public Output<Boolean> inCluster() {
         return this.inCluster == null ? Codegen.empty() : this.inCluster;
     }
 

@@ -21,7 +21,7 @@ public final class StackUserSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -32,7 +32,7 @@ public final class StackUserSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="permission", required=true)
       private final Output<String> permission;
 
-    public Output<String> getPermission() {
+    public Output<String> permission() {
         return this.permission;
     }
 

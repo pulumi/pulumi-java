@@ -25,7 +25,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     @Import(name="aggregateKeyType")
       private final @Nullable Output<String> aggregateKeyType;
 
-    public Output<String> getAggregateKeyType() {
+    public Output<String> aggregateKeyType() {
         return this.aggregateKeyType == null ? Codegen.empty() : this.aggregateKeyType;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     @Import(name="forwardedIpConfig")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig;
 
-    public Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> getForwardedIpConfig() {
+    public Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig() {
         return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit;
     }
 
@@ -58,7 +58,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     @Import(name="scopeDownStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> getScopeDownStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement() {
         return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
     }
 

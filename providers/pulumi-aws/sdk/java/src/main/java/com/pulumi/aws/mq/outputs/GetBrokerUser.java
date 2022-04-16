@@ -25,13 +25,13 @@ public final class GetBrokerUser {
         this.username = username;
     }
 
-    public Boolean getConsoleAccess() {
+    public Boolean consoleAccess() {
         return this.consoleAccess;
     }
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups;
     }
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

@@ -26,7 +26,7 @@ public final class DetectorDatasources {
      * Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
      * 
     */
-    public Optional<DetectorDatasourcesS3Logs> getS3Logs() {
+    public Optional<DetectorDatasourcesS3Logs> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }
 

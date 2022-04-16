@@ -22,7 +22,7 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs 
     @Import(name="maxConcurrentInvocationsPerInstance")
       private final @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
 
-    public Output<Integer> getMaxConcurrentInvocationsPerInstance() {
+    public Output<Integer> maxConcurrentInvocationsPerInstance() {
         return this.maxConcurrentInvocationsPerInstance == null ? Codegen.empty() : this.maxConcurrentInvocationsPerInstance;
     }
 

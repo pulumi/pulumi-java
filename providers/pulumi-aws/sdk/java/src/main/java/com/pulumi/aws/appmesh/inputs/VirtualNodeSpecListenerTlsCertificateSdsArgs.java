@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsCertificateSdsArgs extends com.pulu
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 

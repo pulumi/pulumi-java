@@ -41,20 +41,20 @@ public final class ApplicationApplicationConfigurationVpcConfiguration {
      * The Security Group IDs used by the VPC configuration.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * The Subnet IDs used by the VPC configuration.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
-    public Optional<String> getVpcConfigurationId() {
+    public Optional<String> vpcConfigurationId() {
         return Optional.ofNullable(this.vpcConfigurationId);
     }
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

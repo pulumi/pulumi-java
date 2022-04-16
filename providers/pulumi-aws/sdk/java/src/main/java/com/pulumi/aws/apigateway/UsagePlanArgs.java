@@ -27,7 +27,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
-    public Output<List<UsagePlanApiStageArgs>> getApiStages() {
+    public Output<List<UsagePlanApiStageArgs>> apiStages() {
         return this.apiStages == null ? Codegen.empty() : this.apiStages;
     }
 
@@ -38,7 +38,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productCode")
       private final @Nullable Output<String> productCode;
 
-    public Output<String> getProductCode() {
+    public Output<String> productCode() {
         return this.productCode == null ? Codegen.empty() : this.productCode;
     }
 
@@ -71,7 +71,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quotaSettings")
       private final @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
 
-    public Output<UsagePlanQuotaSettingsArgs> getQuotaSettings() {
+    public Output<UsagePlanQuotaSettingsArgs> quotaSettings() {
         return this.quotaSettings == null ? Codegen.empty() : this.quotaSettings;
     }
 
@@ -82,7 +82,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="throttleSettings")
       private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
-    public Output<UsagePlanThrottleSettingsArgs> getThrottleSettings() {
+    public Output<UsagePlanThrottleSettingsArgs> throttleSettings() {
         return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
     }
 

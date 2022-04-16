@@ -21,7 +21,7 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
     @Import(name="owner", required=true)
       private final Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
 

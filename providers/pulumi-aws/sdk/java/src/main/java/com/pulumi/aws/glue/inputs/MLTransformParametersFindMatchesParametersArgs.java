@@ -24,7 +24,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
     @Import(name="accuracyCostTradeOff")
       private final @Nullable Output<Double> accuracyCostTradeOff;
 
-    public Output<Double> getAccuracyCostTradeOff() {
+    public Output<Double> accuracyCostTradeOff() {
         return this.accuracyCostTradeOff == null ? Codegen.empty() : this.accuracyCostTradeOff;
     }
 
@@ -35,7 +35,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
     @Import(name="enforceProvidedLabels")
       private final @Nullable Output<Boolean> enforceProvidedLabels;
 
-    public Output<Boolean> getEnforceProvidedLabels() {
+    public Output<Boolean> enforceProvidedLabels() {
         return this.enforceProvidedLabels == null ? Codegen.empty() : this.enforceProvidedLabels;
     }
 
@@ -46,7 +46,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
     @Import(name="precisionRecallTradeOff")
       private final @Nullable Output<Double> precisionRecallTradeOff;
 
-    public Output<Double> getPrecisionRecallTradeOff() {
+    public Output<Double> precisionRecallTradeOff() {
         return this.precisionRecallTradeOff == null ? Codegen.empty() : this.precisionRecallTradeOff;
     }
 
@@ -57,7 +57,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends com.pu
     @Import(name="primaryKeyColumnName")
       private final @Nullable Output<String> primaryKeyColumnName;
 
-    public Output<String> getPrimaryKeyColumnName() {
+    public Output<String> primaryKeyColumnName() {
         return this.primaryKeyColumnName == null ? Codegen.empty() : this.primaryKeyColumnName;
     }
 

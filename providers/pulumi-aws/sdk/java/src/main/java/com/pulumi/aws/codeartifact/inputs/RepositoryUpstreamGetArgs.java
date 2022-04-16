@@ -21,7 +21,7 @@ public final class RepositoryUpstreamGetArgs extends com.pulumi.resources.Resour
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 

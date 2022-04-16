@@ -25,7 +25,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily == null ? Codegen.empty() : this.addressFamily;
     }
 
@@ -36,14 +36,14 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
+    public Output<String> amazonAddress() {
         return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
     @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
-    public Output<String> getAmazonSideAsn() {
+    public Output<String> amazonSideAsn() {
         return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
     }
 
@@ -54,7 +54,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -65,7 +65,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
-    public Output<String> getAwsDevice() {
+    public Output<String> awsDevice() {
         return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
     }
 
@@ -76,7 +76,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="bgpAsn")
       private final @Nullable Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn == null ? Codegen.empty() : this.bgpAsn;
     }
 
@@ -87,7 +87,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
+    public Output<String> bgpAuthKey() {
         return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
@@ -98,7 +98,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -109,7 +109,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
+    public Output<String> customerAddress() {
         return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
@@ -120,7 +120,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
@@ -131,7 +131,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
@@ -143,7 +143,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -154,14 +154,14 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="sitelinkEnabled")
       private final @Nullable Output<Boolean> sitelinkEnabled;
 
-    public Output<Boolean> getSitelinkEnabled() {
+    public Output<Boolean> sitelinkEnabled() {
         return this.sitelinkEnabled == null ? Codegen.empty() : this.sitelinkEnabled;
     }
 
@@ -172,7 +172,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -183,7 +183,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -194,7 +194,7 @@ public final class TransitVirtualInterfaceState extends com.pulumi.resources.Res
     @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan == null ? Codegen.empty() : this.vlan;
     }
 

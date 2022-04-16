@@ -24,7 +24,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -35,7 +35,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
+    public Output<Integer> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -46,7 +46,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -57,7 +57,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
+    public Output<Integer> maxTtl() {
         return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
@@ -68,7 +68,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> getMinTtl() {
+    public Output<Integer> minTtl() {
         return this.minTtl == null ? Codegen.empty() : this.minTtl;
     }
 
@@ -79,7 +79,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class CachePolicyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parametersInCacheKeyAndForwardedToOrigin")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> getParametersInCacheKeyAndForwardedToOrigin() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin == null ? Codegen.empty() : this.parametersInCacheKeyAndForwardedToOrigin;
     }
 

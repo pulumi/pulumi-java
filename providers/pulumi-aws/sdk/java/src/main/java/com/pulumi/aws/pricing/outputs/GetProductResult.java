@@ -36,24 +36,24 @@ public final class GetProductResult {
         this.serviceCode = serviceCode;
     }
 
-    public List<GetProductFilter> getFilters() {
+    public List<GetProductFilter> filters() {
         return this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set to the product returned from the API.
      * 
     */
-    public String getResult() {
+    public String result() {
         return this.result;
     }
-    public String getServiceCode() {
+    public String serviceCode() {
         return this.serviceCode;
     }
 

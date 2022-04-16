@@ -22,7 +22,7 @@ public final class ProjectSecondarySourceBuildStatusConfigArgs extends com.pulum
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -33,7 +33,7 @@ public final class ProjectSecondarySourceBuildStatusConfigArgs extends com.pulum
     @Import(name="targetUrl")
       private final @Nullable Output<String> targetUrl;
 
-    public Output<String> getTargetUrl() {
+    public Output<String> targetUrl() {
         return this.targetUrl == null ? Codegen.empty() : this.targetUrl;
     }
 

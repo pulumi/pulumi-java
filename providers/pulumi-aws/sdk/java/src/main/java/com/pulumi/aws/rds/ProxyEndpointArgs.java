@@ -24,7 +24,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbProxyEndpointName", required=true)
       private final Output<String> dbProxyEndpointName;
 
-    public Output<String> getDbProxyEndpointName() {
+    public Output<String> dbProxyEndpointName() {
         return this.dbProxyEndpointName;
     }
 
@@ -35,7 +35,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dbProxyName", required=true)
       private final Output<String> dbProxyName;
 
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName;
     }
 
@@ -46,7 +46,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetRole")
       private final @Nullable Output<String> targetRole;
 
-    public Output<String> getTargetRole() {
+    public Output<String> targetRole() {
         return this.targetRole == null ? Codegen.empty() : this.targetRole;
     }
 
@@ -68,7 +68,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -79,7 +79,7 @@ public final class ProxyEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 

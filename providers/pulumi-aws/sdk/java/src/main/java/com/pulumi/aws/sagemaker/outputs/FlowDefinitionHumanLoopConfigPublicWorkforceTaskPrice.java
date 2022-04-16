@@ -26,7 +26,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
      * Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
      * 
     */
-    public Optional<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd> getAmountInUsd() {
+    public Optional<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd> amountInUsd() {
         return Optional.ofNullable(this.amountInUsd);
     }
 

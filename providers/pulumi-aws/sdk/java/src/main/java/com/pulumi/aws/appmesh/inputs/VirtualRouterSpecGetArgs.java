@@ -22,7 +22,7 @@ public final class VirtualRouterSpecGetArgs extends com.pulumi.resources.Resourc
     @Import(name="listener", required=true)
       private final Output<VirtualRouterSpecListenerGetArgs> listener;
 
-    public Output<VirtualRouterSpecListenerGetArgs> getListener() {
+    public Output<VirtualRouterSpecListenerGetArgs> listener() {
         return this.listener;
     }
 

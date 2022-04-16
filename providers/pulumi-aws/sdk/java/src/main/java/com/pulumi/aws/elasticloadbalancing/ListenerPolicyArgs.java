@@ -24,7 +24,7 @@ public final class ListenerPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -35,7 +35,7 @@ public final class ListenerPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loadBalancerPort", required=true)
       private final Output<Integer> loadBalancerPort;
 
-    public Output<Integer> getLoadBalancerPort() {
+    public Output<Integer> loadBalancerPort() {
         return this.loadBalancerPort;
     }
 
@@ -46,7 +46,7 @@ public final class ListenerPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="policyNames")
       private final @Nullable Output<List<String>> policyNames;
 
-    public Output<List<String>> getPolicyNames() {
+    public Output<List<String>> policyNames() {
         return this.policyNames == null ? Codegen.empty() : this.policyNames;
     }
 

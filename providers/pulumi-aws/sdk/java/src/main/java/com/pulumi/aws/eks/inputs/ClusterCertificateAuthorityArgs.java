@@ -22,7 +22,7 @@ public final class ClusterCertificateAuthorityArgs extends com.pulumi.resources.
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 

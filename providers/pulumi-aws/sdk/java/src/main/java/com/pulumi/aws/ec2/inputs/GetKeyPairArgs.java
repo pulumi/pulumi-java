@@ -24,7 +24,7 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetKeyPairFilter> filters;
 
-    public List<GetKeyPairFilter> getFilters() {
+    public List<GetKeyPairFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,14 +35,14 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyName")
       private final @Nullable String keyName;
 
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
     @Import(name="keyPairId")
       private final @Nullable String keyPairId;
 
-    public Optional<String> getKeyPairId() {
+    public Optional<String> keyPairId() {
         return this.keyPairId == null ? Optional.empty() : Optional.ofNullable(this.keyPairId);
     }
 
@@ -53,7 +53,7 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

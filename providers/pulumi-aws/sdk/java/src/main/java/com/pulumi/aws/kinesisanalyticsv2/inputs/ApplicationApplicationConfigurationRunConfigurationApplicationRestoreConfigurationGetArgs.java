@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     @Import(name="applicationRestoreType")
       private final @Nullable Output<String> applicationRestoreType;
 
-    public Output<String> getApplicationRestoreType() {
+    public Output<String> applicationRestoreType() {
         return this.applicationRestoreType == null ? Codegen.empty() : this.applicationRestoreType;
     }
 
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 

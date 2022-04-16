@@ -23,7 +23,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionStatus")
       private final @Nullable Output<String> connectionStatus;
 
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus == null ? Codegen.empty() : this.connectionStatus;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostArn")
       private final @Nullable Output<String> hostArn;
 
-    public Output<String> getHostArn() {
+    public Output<String> hostArn() {
         return this.hostArn == null ? Codegen.empty() : this.hostArn;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
@@ -78,7 +78,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -89,7 +89,7 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

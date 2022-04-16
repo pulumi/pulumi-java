@@ -25,7 +25,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationOptions")
       private final @Nullable Output<FlowLogDestinationOptionsArgs> destinationOptions;
 
-    public Output<FlowLogDestinationOptionsArgs> getDestinationOptions() {
+    public Output<FlowLogDestinationOptionsArgs> destinationOptions() {
         return this.destinationOptions == null ? Codegen.empty() : this.destinationOptions;
     }
 
@@ -36,7 +36,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eniId")
       private final @Nullable Output<String> eniId;
 
-    public Output<String> getEniId() {
+    public Output<String> eniId() {
         return this.eniId == null ? Codegen.empty() : this.eniId;
     }
 
@@ -47,7 +47,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
@@ -58,7 +58,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logDestination")
       private final @Nullable Output<String> logDestination;
 
-    public Output<String> getLogDestination() {
+    public Output<String> logDestination() {
         return this.logDestination == null ? Codegen.empty() : this.logDestination;
     }
 
@@ -69,7 +69,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logDestinationType")
       private final @Nullable Output<String> logDestinationType;
 
-    public Output<String> getLogDestinationType() {
+    public Output<String> logDestinationType() {
         return this.logDestinationType == null ? Codegen.empty() : this.logDestinationType;
     }
 
@@ -80,7 +80,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logFormat")
       private final @Nullable Output<String> logFormat;
 
-    public Output<String> getLogFormat() {
+    public Output<String> logFormat() {
         return this.logFormat == null ? Codegen.empty() : this.logFormat;
     }
 
@@ -96,7 +96,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logGroupName;
 
     @Deprecated /* use 'log_destination' argument instead */
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
@@ -110,7 +110,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxAggregationInterval")
       private final @Nullable Output<Integer> maxAggregationInterval;
 
-    public Output<Integer> getMaxAggregationInterval() {
+    public Output<Integer> maxAggregationInterval() {
         return this.maxAggregationInterval == null ? Codegen.empty() : this.maxAggregationInterval;
     }
 
@@ -121,7 +121,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -132,7 +132,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -143,7 +143,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficType", required=true)
       private final Output<String> trafficType;
 
-    public Output<String> getTrafficType() {
+    public Output<String> trafficType() {
         return this.trafficType;
     }
 
@@ -154,7 +154,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

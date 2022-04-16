@@ -31,14 +31,14 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="clientToken")
       private final @Nullable Output<String> clientToken;
 
-    public Output<String> getClientToken() {
+    public Output<String> clientToken() {
         return this.clientToken == null ? Codegen.empty() : this.clientToken;
     }
 
@@ -51,7 +51,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<String> excessCapacityTerminationPolicy;
 
-    public Output<String> getExcessCapacityTerminationPolicy() {
+    public Output<String> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
     }
 
@@ -63,7 +63,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
-    public Output<String> getFleetType() {
+    public Output<String> fleetType() {
         return this.fleetType == null ? Codegen.empty() : this.fleetType;
     }
 
@@ -77,7 +77,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="iamFleetRole")
       private final @Nullable Output<String> iamFleetRole;
 
-    public Output<String> getIamFleetRole() {
+    public Output<String> iamFleetRole() {
         return this.iamFleetRole == null ? Codegen.empty() : this.iamFleetRole;
     }
 
@@ -90,7 +90,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="instanceInterruptionBehaviour")
       private final @Nullable Output<String> instanceInterruptionBehaviour;
 
-    public Output<String> getInstanceInterruptionBehaviour() {
+    public Output<String> instanceInterruptionBehaviour() {
         return this.instanceInterruptionBehaviour == null ? Codegen.empty() : this.instanceInterruptionBehaviour;
     }
 
@@ -104,7 +104,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Output<Integer> getInstancePoolsToUseCount() {
+    public Output<Integer> instancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
     }
 
@@ -117,7 +117,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="launchSpecifications")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationGetArgs>> launchSpecifications;
 
-    public Output<List<SpotFleetRequestLaunchSpecificationGetArgs>> getLaunchSpecifications() {
+    public Output<List<SpotFleetRequestLaunchSpecificationGetArgs>> launchSpecifications() {
         return this.launchSpecifications == null ? Codegen.empty() : this.launchSpecifications;
     }
 
@@ -128,7 +128,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="launchTemplateConfigs")
       private final @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigGetArgs>> launchTemplateConfigs;
 
-    public Output<List<SpotFleetRequestLaunchTemplateConfigGetArgs>> getLaunchTemplateConfigs() {
+    public Output<List<SpotFleetRequestLaunchTemplateConfigGetArgs>> launchTemplateConfigs() {
         return this.launchTemplateConfigs == null ? Codegen.empty() : this.launchTemplateConfigs;
     }
 
@@ -139,7 +139,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="loadBalancers")
       private final @Nullable Output<List<String>> loadBalancers;
 
-    public Output<List<String>> getLoadBalancers() {
+    public Output<List<String>> loadBalancers() {
         return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
@@ -150,7 +150,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="onDemandAllocationStrategy")
       private final @Nullable Output<String> onDemandAllocationStrategy;
 
-    public Output<String> getOnDemandAllocationStrategy() {
+    public Output<String> onDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy == null ? Codegen.empty() : this.onDemandAllocationStrategy;
     }
 
@@ -161,7 +161,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="onDemandMaxTotalPrice")
       private final @Nullable Output<String> onDemandMaxTotalPrice;
 
-    public Output<String> getOnDemandMaxTotalPrice() {
+    public Output<String> onDemandMaxTotalPrice() {
         return this.onDemandMaxTotalPrice == null ? Codegen.empty() : this.onDemandMaxTotalPrice;
     }
 
@@ -172,7 +172,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
-    public Output<Integer> getOnDemandTargetCapacity() {
+    public Output<Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
     }
 
@@ -183,7 +183,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
-    public Output<Boolean> getReplaceUnhealthyInstances() {
+    public Output<Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
     }
 
@@ -194,7 +194,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="spotMaintenanceStrategies")
       private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesGetArgs> spotMaintenanceStrategies;
 
-    public Output<SpotFleetRequestSpotMaintenanceStrategiesGetArgs> getSpotMaintenanceStrategies() {
+    public Output<SpotFleetRequestSpotMaintenanceStrategiesGetArgs> spotMaintenanceStrategies() {
         return this.spotMaintenanceStrategies == null ? Codegen.empty() : this.spotMaintenanceStrategies;
     }
 
@@ -205,7 +205,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
@@ -216,7 +216,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="spotRequestState")
       private final @Nullable Output<String> spotRequestState;
 
-    public Output<String> getSpotRequestState() {
+    public Output<String> spotRequestState() {
         return this.spotRequestState == null ? Codegen.empty() : this.spotRequestState;
     }
 
@@ -227,7 +227,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -238,7 +238,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -251,7 +251,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="targetCapacity")
       private final @Nullable Output<Integer> targetCapacity;
 
-    public Output<Integer> getTargetCapacity() {
+    public Output<Integer> targetCapacity() {
         return this.targetCapacity == null ? Codegen.empty() : this.targetCapacity;
     }
 
@@ -262,7 +262,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="targetGroupArns")
       private final @Nullable Output<List<String>> targetGroupArns;
 
-    public Output<List<String>> getTargetGroupArns() {
+    public Output<List<String>> targetGroupArns() {
         return this.targetGroupArns == null ? Codegen.empty() : this.targetGroupArns;
     }
 
@@ -274,7 +274,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
-    public Output<Boolean> getTerminateInstancesWithExpiration() {
+    public Output<Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
     }
 
@@ -285,7 +285,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
-    public Output<String> getValidFrom() {
+    public Output<String> validFrom() {
         return this.validFrom == null ? Codegen.empty() : this.validFrom;
     }
 
@@ -296,7 +296,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
+    public Output<String> validUntil() {
         return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 
@@ -309,7 +309,7 @@ public final class SpotFleetRequestState extends com.pulumi.resources.ResourceAr
     @Import(name="waitForFulfillment")
       private final @Nullable Output<Boolean> waitForFulfillment;
 
-    public Output<Boolean> getWaitForFulfillment() {
+    public Output<Boolean> waitForFulfillment() {
         return this.waitForFulfillment == null ? Codegen.empty() : this.waitForFulfillment;
     }
 

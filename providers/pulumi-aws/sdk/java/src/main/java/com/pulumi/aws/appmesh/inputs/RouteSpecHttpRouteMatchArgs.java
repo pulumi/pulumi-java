@@ -24,7 +24,7 @@ public final class RouteSpecHttpRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="headers")
       private final @Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
 
-    public Output<List<RouteSpecHttpRouteMatchHeaderArgs>> getHeaders() {
+    public Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -35,7 +35,7 @@ public final class RouteSpecHttpRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -47,7 +47,7 @@ public final class RouteSpecHttpRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
 
@@ -58,7 +58,7 @@ public final class RouteSpecHttpRouteMatchArgs extends com.pulumi.resources.Reso
     @Import(name="scheme")
       private final @Nullable Output<String> scheme;
 
-    public Output<String> getScheme() {
+    public Output<String> scheme() {
         return this.scheme == null ? Codegen.empty() : this.scheme;
     }
 

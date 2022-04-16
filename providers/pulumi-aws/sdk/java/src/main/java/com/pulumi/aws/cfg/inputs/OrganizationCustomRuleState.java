@@ -23,7 +23,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
-    public Output<List<String>> getExcludedAccounts() {
+    public Output<List<String>> excludedAccounts() {
         return this.excludedAccounts == null ? Codegen.empty() : this.excludedAccounts;
     }
 
@@ -56,7 +56,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
-    public Output<String> getInputParameters() {
+    public Output<String> inputParameters() {
         return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
@@ -67,7 +67,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="lambdaFunctionArn")
       private final @Nullable Output<String> lambdaFunctionArn;
 
-    public Output<String> getLambdaFunctionArn() {
+    public Output<String> lambdaFunctionArn() {
         return this.lambdaFunctionArn == null ? Codegen.empty() : this.lambdaFunctionArn;
     }
 
@@ -78,7 +78,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
+    public Output<String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
@@ -89,7 +89,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -100,7 +100,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="resourceIdScope")
       private final @Nullable Output<String> resourceIdScope;
 
-    public Output<String> getResourceIdScope() {
+    public Output<String> resourceIdScope() {
         return this.resourceIdScope == null ? Codegen.empty() : this.resourceIdScope;
     }
 
@@ -111,7 +111,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="resourceTypesScopes")
       private final @Nullable Output<List<String>> resourceTypesScopes;
 
-    public Output<List<String>> getResourceTypesScopes() {
+    public Output<List<String>> resourceTypesScopes() {
         return this.resourceTypesScopes == null ? Codegen.empty() : this.resourceTypesScopes;
     }
 
@@ -122,7 +122,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="tagKeyScope")
       private final @Nullable Output<String> tagKeyScope;
 
-    public Output<String> getTagKeyScope() {
+    public Output<String> tagKeyScope() {
         return this.tagKeyScope == null ? Codegen.empty() : this.tagKeyScope;
     }
 
@@ -133,7 +133,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="tagValueScope")
       private final @Nullable Output<String> tagValueScope;
 
-    public Output<String> getTagValueScope() {
+    public Output<String> tagValueScope() {
         return this.tagValueScope == null ? Codegen.empty() : this.tagValueScope;
     }
 
@@ -144,7 +144,7 @@ public final class OrganizationCustomRuleState extends com.pulumi.resources.Reso
     @Import(name="triggerTypes")
       private final @Nullable Output<List<String>> triggerTypes;
 
-    public Output<List<String>> getTriggerTypes() {
+    public Output<List<String>> triggerTypes() {
         return this.triggerTypes == null ? Codegen.empty() : this.triggerTypes;
     }
 

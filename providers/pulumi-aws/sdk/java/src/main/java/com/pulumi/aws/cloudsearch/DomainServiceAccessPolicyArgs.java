@@ -21,7 +21,7 @@ public final class DomainServiceAccessPolicyArgs extends com.pulumi.resources.Re
     @Import(name="accessPolicy", required=true)
       private final Output<String> accessPolicy;
 
-    public Output<String> getAccessPolicy() {
+    public Output<String> accessPolicy() {
         return this.accessPolicy;
     }
 
@@ -32,7 +32,7 @@ public final class DomainServiceAccessPolicyArgs extends com.pulumi.resources.Re
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 

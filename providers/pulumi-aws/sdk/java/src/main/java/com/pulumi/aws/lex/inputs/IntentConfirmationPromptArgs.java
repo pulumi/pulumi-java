@@ -25,7 +25,7 @@ public final class IntentConfirmationPromptArgs extends com.pulumi.resources.Res
     @Import(name="maxAttempts", required=true)
       private final Output<Integer> maxAttempts;
 
-    public Output<Integer> getMaxAttempts() {
+    public Output<Integer> maxAttempts() {
         return this.maxAttempts;
     }
 
@@ -38,7 +38,7 @@ public final class IntentConfirmationPromptArgs extends com.pulumi.resources.Res
     @Import(name="messages", required=true)
       private final Output<List<IntentConfirmationPromptMessageArgs>> messages;
 
-    public Output<List<IntentConfirmationPromptMessageArgs>> getMessages() {
+    public Output<List<IntentConfirmationPromptMessageArgs>> messages() {
         return this.messages;
     }
 
@@ -51,7 +51,7 @@ public final class IntentConfirmationPromptArgs extends com.pulumi.resources.Res
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

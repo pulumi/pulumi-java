@@ -25,7 +25,7 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endpoint", required=true)
       private final Output<RealtimeLogConfigEndpointArgs> endpoint;
 
-    public Output<RealtimeLogConfigEndpointArgs> getEndpoint() {
+    public Output<RealtimeLogConfigEndpointArgs> endpoint() {
         return this.endpoint;
     }
 
@@ -36,7 +36,7 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fields", required=true)
       private final Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields;
     }
 
@@ -47,7 +47,7 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class RealtimeLogConfigArgs extends com.pulumi.resources.ResourceAr
     @Import(name="samplingRate", required=true)
       private final Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
+    public Output<Integer> samplingRate() {
         return this.samplingRate;
     }
 

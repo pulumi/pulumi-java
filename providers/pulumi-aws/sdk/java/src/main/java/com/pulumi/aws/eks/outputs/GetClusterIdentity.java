@@ -25,7 +25,7 @@ public final class GetClusterIdentity {
      * Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
      * 
     */
-    public List<GetClusterIdentityOidc> getOidcs() {
+    public List<GetClusterIdentityOidc> oidcs() {
         return this.oidcs;
     }
 

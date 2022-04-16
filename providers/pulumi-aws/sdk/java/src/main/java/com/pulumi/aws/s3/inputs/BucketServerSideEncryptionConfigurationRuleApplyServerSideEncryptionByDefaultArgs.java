@@ -22,7 +22,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
     @Import(name="kmsMasterKeyId")
       private final @Nullable Output<String> kmsMasterKeyId;
 
-    public Output<String> getKmsMasterKeyId() {
+    public Output<String> kmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
@@ -33,7 +33,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
     @Import(name="sseAlgorithm", required=true)
       private final Output<String> sseAlgorithm;
 
-    public Output<String> getSseAlgorithm() {
+    public Output<String> sseAlgorithm() {
         return this.sseAlgorithm;
     }
 

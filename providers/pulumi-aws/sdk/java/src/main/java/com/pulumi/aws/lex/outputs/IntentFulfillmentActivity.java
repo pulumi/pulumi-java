@@ -38,7 +38,7 @@ public final class IntentFulfillmentActivity {
      * Required if type is CodeHook. Attributes are documented under code_hook.
      * 
     */
-    public Optional<IntentFulfillmentActivityCodeHook> getCodeHook() {
+    public Optional<IntentFulfillmentActivityCodeHook> codeHook() {
         return Optional.ofNullable(this.codeHook);
     }
     /**
@@ -46,7 +46,7 @@ public final class IntentFulfillmentActivity {
      * returning the slot data to the client application.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

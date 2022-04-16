@@ -23,7 +23,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="deleteOnTermination")
       private final @Nullable Output<String> deleteOnTermination;
 
-    public Output<String> getDeleteOnTermination() {
+    public Output<String> deleteOnTermination() {
         return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
@@ -35,7 +35,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="encrypted")
       private final @Nullable Output<String> encrypted;
 
-    public Output<String> getEncrypted() {
+    public Output<String> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -48,7 +48,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
@@ -60,7 +60,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -71,7 +71,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
@@ -82,7 +82,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
-    public Output<Integer> getThroughput() {
+    public Output<Integer> throughput() {
         return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
@@ -93,7 +93,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
@@ -104,7 +104,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends com.pulumi
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

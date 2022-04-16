@@ -43,7 +43,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return The ARN of the state machine.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return The date the state machine was created.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -71,7 +71,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return The [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html) definition of the state machine.
      * 
      */
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
     /**
@@ -85,7 +85,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return Defines what execution history events are logged and where they are logged. The `logging_configuration` parameter is only valid when `type` is set to `EXPRESS`. Defaults to `OFF`. For more information see [Logging Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) and [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide.
      * 
      */
-    public Output<StateMachineLoggingConfiguration> getLoggingConfiguration() {
+    public Output<StateMachineLoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
     /**
@@ -99,7 +99,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return The name of the state machine. To enable logging with CloudWatch Logs, the name should only contain `0`-`9`, `A`-`Z`, `a`-`z`, `-` and `_`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -127,7 +127,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return The current status of the state machine. Either `ACTIVE` or `DELETING`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -141,7 +141,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +155,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -169,7 +169,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return Selects whether AWS X-Ray tracing is enabled.
      * 
      */
-    public Output<StateMachineTracingConfiguration> getTracingConfiguration() {
+    public Output<StateMachineTracingConfiguration> tracingConfiguration() {
         return this.tracingConfiguration;
     }
     /**
@@ -183,7 +183,7 @@ public class StateMachine extends com.pulumi.resources.CustomResource {
      * @return Determines whether a Standard or Express state machine is created. The default is `STANDARD`. You cannot update the type of a state machine once it has been created. Valid values: `STANDARD`, `EXPRESS`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

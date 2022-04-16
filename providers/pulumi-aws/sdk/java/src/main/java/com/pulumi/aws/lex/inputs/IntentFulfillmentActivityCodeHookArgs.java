@@ -23,7 +23,7 @@ public final class IntentFulfillmentActivityCodeHookArgs extends com.pulumi.reso
     @Import(name="messageVersion", required=true)
       private final Output<String> messageVersion;
 
-    public Output<String> getMessageVersion() {
+    public Output<String> messageVersion() {
         return this.messageVersion;
     }
 
@@ -34,7 +34,7 @@ public final class IntentFulfillmentActivityCodeHookArgs extends com.pulumi.reso
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

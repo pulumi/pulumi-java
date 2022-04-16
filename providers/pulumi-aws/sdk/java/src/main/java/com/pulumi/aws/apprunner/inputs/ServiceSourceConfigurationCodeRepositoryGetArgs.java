@@ -24,7 +24,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends com.p
     @Import(name="codeConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> getCodeConfiguration() {
+    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends com.p
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends com.p
     @Import(name="sourceCodeVersion", required=true)
       private final Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion;
 
-    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> getSourceCodeVersion() {
+    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 

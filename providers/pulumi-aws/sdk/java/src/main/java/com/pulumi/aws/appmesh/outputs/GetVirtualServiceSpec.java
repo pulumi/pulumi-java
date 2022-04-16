@@ -25,7 +25,7 @@ public final class GetVirtualServiceSpec {
      * The App Mesh object that is acting as the provider for a virtual service.
      * 
     */
-    public List<GetVirtualServiceSpecProvider> getProviders() {
+    public List<GetVirtualServiceSpecProvider> providers() {
         return this.providers;
     }
 

@@ -24,7 +24,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends com.pulu
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -35,7 +35,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends com.pulu
     @Import(name="s3", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesS3Args> getS3() {
+    public Output<AnalyticsApplicationReferenceDataSourcesS3Args> s3() {
         return this.s3;
     }
 
@@ -46,7 +46,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends com.pulu
     @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> getSchema() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaArgs> schema() {
         return this.schema;
     }
 
@@ -57,7 +57,7 @@ public final class AnalyticsApplicationReferenceDataSourcesArgs extends com.pulu
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

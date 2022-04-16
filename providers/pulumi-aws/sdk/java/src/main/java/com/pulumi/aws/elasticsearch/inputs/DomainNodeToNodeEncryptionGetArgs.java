@@ -21,7 +21,7 @@ public final class DomainNodeToNodeEncryptionGetArgs extends com.pulumi.resource
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

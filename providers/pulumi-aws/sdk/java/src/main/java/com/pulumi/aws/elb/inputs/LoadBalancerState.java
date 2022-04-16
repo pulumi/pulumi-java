@@ -29,7 +29,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogs")
       private final @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
 
-    public Output<LoadBalancerAccessLogsGetArgs> getAccessLogs() {
+    public Output<LoadBalancerAccessLogsGetArgs> accessLogs() {
         return this.accessLogs == null ? Codegen.empty() : this.accessLogs;
     }
 
@@ -40,7 +40,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -51,7 +51,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -62,7 +62,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionDraining")
       private final @Nullable Output<Boolean> connectionDraining;
 
-    public Output<Boolean> getConnectionDraining() {
+    public Output<Boolean> connectionDraining() {
         return this.connectionDraining == null ? Codegen.empty() : this.connectionDraining;
     }
 
@@ -73,7 +73,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionDrainingTimeout")
       private final @Nullable Output<Integer> connectionDrainingTimeout;
 
-    public Output<Integer> getConnectionDrainingTimeout() {
+    public Output<Integer> connectionDrainingTimeout() {
         return this.connectionDrainingTimeout == null ? Codegen.empty() : this.connectionDrainingTimeout;
     }
 
@@ -84,7 +84,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="crossZoneLoadBalancing")
       private final @Nullable Output<Boolean> crossZoneLoadBalancing;
 
-    public Output<Boolean> getCrossZoneLoadBalancing() {
+    public Output<Boolean> crossZoneLoadBalancing() {
         return this.crossZoneLoadBalancing == null ? Codegen.empty() : this.crossZoneLoadBalancing;
     }
 
@@ -95,7 +95,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="desyncMitigationMode")
       private final @Nullable Output<String> desyncMitigationMode;
 
-    public Output<String> getDesyncMitigationMode() {
+    public Output<String> desyncMitigationMode() {
         return this.desyncMitigationMode == null ? Codegen.empty() : this.desyncMitigationMode;
     }
 
@@ -106,7 +106,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -117,7 +117,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheck")
       private final @Nullable Output<LoadBalancerHealthCheckGetArgs> healthCheck;
 
-    public Output<LoadBalancerHealthCheckGetArgs> getHealthCheck() {
+    public Output<LoadBalancerHealthCheckGetArgs> healthCheck() {
         return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
@@ -128,7 +128,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> getIdleTimeout() {
+    public Output<Integer> idleTimeout() {
         return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
@@ -139,7 +139,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -150,7 +150,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
-    public Output<Boolean> getInternal() {
+    public Output<Boolean> internal() {
         return this.internal == null ? Codegen.empty() : this.internal;
     }
 
@@ -161,7 +161,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="listeners")
       private final @Nullable Output<List<LoadBalancerListenerGetArgs>> listeners;
 
-    public Output<List<LoadBalancerListenerGetArgs>> getListeners() {
+    public Output<List<LoadBalancerListenerGetArgs>> listeners() {
         return this.listeners == null ? Codegen.empty() : this.listeners;
     }
 
@@ -172,7 +172,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -184,7 +184,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -196,7 +196,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -209,7 +209,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSecurityGroup")
       private final @Nullable Output<String> sourceSecurityGroup;
 
-    public Output<String> getSourceSecurityGroup() {
+    public Output<String> sourceSecurityGroup() {
         return this.sourceSecurityGroup == null ? Codegen.empty() : this.sourceSecurityGroup;
     }
 
@@ -222,7 +222,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceSecurityGroupId")
       private final @Nullable Output<String> sourceSecurityGroupId;
 
-    public Output<String> getSourceSecurityGroupId() {
+    public Output<String> sourceSecurityGroupId() {
         return this.sourceSecurityGroupId == null ? Codegen.empty() : this.sourceSecurityGroupId;
     }
 
@@ -233,7 +233,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnets")
       private final @Nullable Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -244,7 +244,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -255,7 +255,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -266,7 +266,7 @@ public final class LoadBalancerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 

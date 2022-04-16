@@ -27,7 +27,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterEndpointEncryptionType")
       private final @Nullable Output<String> clusterEndpointEncryptionType;
 
-    public Output<String> getClusterEndpointEncryptionType() {
+    public Output<String> clusterEndpointEncryptionType() {
         return this.clusterEndpointEncryptionType == null ? Codegen.empty() : this.clusterEndpointEncryptionType;
     }
 
@@ -52,7 +52,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -63,7 +63,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
 
@@ -90,7 +90,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -102,7 +102,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeType", required=true)
       private final Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType;
     }
 
@@ -115,7 +115,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notificationTopicArn")
       private final @Nullable Output<String> notificationTopicArn;
 
-    public Output<String> getNotificationTopicArn() {
+    public Output<String> notificationTopicArn() {
         return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
     }
 
@@ -127,7 +127,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
@@ -140,7 +140,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicationFactor", required=true)
       private final Output<Integer> replicationFactor;
 
-    public Output<Integer> getReplicationFactor() {
+    public Output<Integer> replicationFactor() {
         return this.replicationFactor;
     }
 
@@ -152,7 +152,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -163,7 +163,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
       private final @Nullable Output<ClusterServerSideEncryptionArgs> serverSideEncryption;
 
-    public Output<ClusterServerSideEncryptionArgs> getServerSideEncryption() {
+    public Output<ClusterServerSideEncryptionArgs> serverSideEncryption() {
         return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
@@ -175,7 +175,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
@@ -186,7 +186,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

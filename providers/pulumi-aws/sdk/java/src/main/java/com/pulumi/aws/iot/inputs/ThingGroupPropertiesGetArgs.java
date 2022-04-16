@@ -23,7 +23,7 @@ public final class ThingGroupPropertiesGetArgs extends com.pulumi.resources.Reso
     @Import(name="attributePayload")
       private final @Nullable Output<ThingGroupPropertiesAttributePayloadGetArgs> attributePayload;
 
-    public Output<ThingGroupPropertiesAttributePayloadGetArgs> getAttributePayload() {
+    public Output<ThingGroupPropertiesAttributePayloadGetArgs> attributePayload() {
         return this.attributePayload == null ? Codegen.empty() : this.attributePayload;
     }
 
@@ -34,7 +34,7 @@ public final class ThingGroupPropertiesGetArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

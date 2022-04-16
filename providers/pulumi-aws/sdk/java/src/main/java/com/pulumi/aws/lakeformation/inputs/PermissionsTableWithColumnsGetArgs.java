@@ -24,7 +24,7 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -35,7 +35,7 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="columnNames")
       private final @Nullable Output<List<String>> columnNames;
 
-    public Output<List<String>> getColumnNames() {
+    public Output<List<String>> columnNames() {
         return this.columnNames == null ? Codegen.empty() : this.columnNames;
     }
 
@@ -46,14 +46,14 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="excludedColumnNames")
       private final @Nullable Output<List<String>> excludedColumnNames;
 
-    public Output<List<String>> getExcludedColumnNames() {
+    public Output<List<String>> excludedColumnNames() {
         return this.excludedColumnNames == null ? Codegen.empty() : this.excludedColumnNames;
     }
 
@@ -64,14 +64,14 @@ public final class PermissionsTableWithColumnsGetArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="wildcard")
       private final @Nullable Output<Boolean> wildcard;
 
-    public Output<Boolean> getWildcard() {
+    public Output<Boolean> wildcard() {
         return this.wildcard == null ? Codegen.empty() : this.wildcard;
     }
 

@@ -109,91 +109,91 @@ public final class GetRouteTableRoute {
      * ID of the Carrier Gateway.
      * 
     */
-    public String getCarrierGatewayId() {
+    public String carrierGatewayId() {
         return this.carrierGatewayId;
     }
     /**
      * CIDR block of the route.
      * 
     */
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
      * The ID of a managed prefix list destination of the route.
      * 
     */
-    public String getDestinationPrefixListId() {
+    public String destinationPrefixListId() {
         return this.destinationPrefixListId;
     }
     /**
      * ID of the Egress Only Internet Gateway.
      * 
     */
-    public String getEgressOnlyGatewayId() {
+    public String egressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
     }
     /**
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
      * 
     */
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
     /**
      * EC2 instance ID.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * IPv6 CIDR block of the route.
      * 
     */
-    public String getIpv6CidrBlock() {
+    public String ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     /**
      * Local Gateway ID.
      * 
     */
-    public String getLocalGatewayId() {
+    public String localGatewayId() {
         return this.localGatewayId;
     }
     /**
      * NAT Gateway ID.
      * 
     */
-    public String getNatGatewayId() {
+    public String natGatewayId() {
         return this.natGatewayId;
     }
     /**
      * ID of the elastic network interface (eni) to use.
      * 
     */
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * EC2 Transit Gateway ID.
      * 
     */
-    public String getTransitGatewayId() {
+    public String transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
      * VPC Endpoint ID.
      * 
     */
-    public String getVpcEndpointId() {
+    public String vpcEndpointId() {
         return this.vpcEndpointId;
     }
     /**
      * VPC Peering ID.
      * 
     */
-    public String getVpcPeeringConnectionId() {
+    public String vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 

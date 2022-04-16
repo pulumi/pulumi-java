@@ -41,21 +41,21 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * Pass client-specific information to the Lambda function that you are invoking.
      * 
     */
-    public Optional<String> getClientContext() {
+    public Optional<String> clientContext() {
         return Optional.ofNullable(this.clientContext);
     }
     /**
      * JSON to provide to your Lambda function as input.
      * 
     */
-    public Optional<String> getPayload() {
+    public Optional<String> payload() {
         return Optional.ofNullable(this.payload);
     }
     /**
      * Specify a Lambda function version or alias name.
      * 
     */
-    public Optional<String> getQualifier() {
+    public Optional<String> qualifier() {
         return Optional.ofNullable(this.qualifier);
     }
 

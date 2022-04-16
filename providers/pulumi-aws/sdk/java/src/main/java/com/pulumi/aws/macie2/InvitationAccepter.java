@@ -40,7 +40,7 @@ public class InvitationAccepter extends com.pulumi.resources.CustomResource {
      * @return The AWS account ID for the account that sent the invitation.
      * 
      */
-    public Output<String> getAdministratorAccountId() {
+    public Output<String> administratorAccountId() {
         return this.administratorAccountId;
     }
     /**
@@ -54,7 +54,7 @@ public class InvitationAccepter extends com.pulumi.resources.CustomResource {
      * @return The unique identifier for the invitation.
      * 
      */
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId;
     }
 

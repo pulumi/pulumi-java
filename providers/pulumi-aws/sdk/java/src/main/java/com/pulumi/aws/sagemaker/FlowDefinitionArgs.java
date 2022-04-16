@@ -27,7 +27,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="flowDefinitionName", required=true)
       private final Output<String> flowDefinitionName;
 
-    public Output<String> getFlowDefinitionName() {
+    public Output<String> flowDefinitionName() {
         return this.flowDefinitionName;
     }
 
@@ -38,7 +38,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="humanLoopActivationConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig;
 
-    public Output<FlowDefinitionHumanLoopActivationConfigArgs> getHumanLoopActivationConfig() {
+    public Output<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig() {
         return this.humanLoopActivationConfig == null ? Codegen.empty() : this.humanLoopActivationConfig;
     }
 
@@ -49,7 +49,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="humanLoopConfig", required=true)
       private final Output<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig;
 
-    public Output<FlowDefinitionHumanLoopConfigArgs> getHumanLoopConfig() {
+    public Output<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig() {
         return this.humanLoopConfig;
     }
 
@@ -60,7 +60,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="humanLoopRequestSource")
       private final @Nullable Output<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource;
 
-    public Output<FlowDefinitionHumanLoopRequestSourceArgs> getHumanLoopRequestSource() {
+    public Output<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource() {
         return this.humanLoopRequestSource == null ? Codegen.empty() : this.humanLoopRequestSource;
     }
 
@@ -71,7 +71,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="outputConfig", required=true)
       private final Output<FlowDefinitionOutputConfigArgs> outputConfig;
 
-    public Output<FlowDefinitionOutputConfigArgs> getOutputConfig() {
+    public Output<FlowDefinitionOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 
@@ -82,7 +82,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -93,7 +93,7 @@ public final class FlowDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

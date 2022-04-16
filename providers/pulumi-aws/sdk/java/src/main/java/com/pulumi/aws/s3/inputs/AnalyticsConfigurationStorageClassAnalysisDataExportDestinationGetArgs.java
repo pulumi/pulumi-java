@@ -21,7 +21,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="s3BucketDestination", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> getS3BucketDestination() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination() {
         return this.s3BucketDestination;
     }
 

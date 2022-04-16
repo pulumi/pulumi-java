@@ -22,7 +22,7 @@ public final class WebAclDefaultActionBlockGetArgs extends com.pulumi.resources.
     @Import(name="customResponse")
       private final @Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse;
 
-    public Output<WebAclDefaultActionBlockCustomResponseGetArgs> getCustomResponse() {
+    public Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse() {
         return this.customResponse == null ? Codegen.empty() : this.customResponse;
     }
 

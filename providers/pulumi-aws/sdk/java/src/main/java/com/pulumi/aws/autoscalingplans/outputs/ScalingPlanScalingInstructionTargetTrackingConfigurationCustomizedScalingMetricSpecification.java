@@ -56,35 +56,35 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      * The dimensions of the metric.
      * 
     */
-    public Map<String,String> getDimensions() {
+    public Map<String,String> dimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
     /**
      * The name of the metric.
      * 
     */
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
     /**
      * The namespace of the metric.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
      * 
     */
-    public String getStatistic() {
+    public String statistic() {
         return this.statistic;
     }
     /**
      * The unit of the metric.
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
 

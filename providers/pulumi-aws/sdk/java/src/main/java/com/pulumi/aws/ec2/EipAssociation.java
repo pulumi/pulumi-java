@@ -47,7 +47,7 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * @return The allocation ID. This is required for EC2-VPC.
      * 
      */
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId;
     }
     /**
@@ -63,7 +63,7 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * be re-associated. Defaults to `true` in VPC.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowReassociation() {
+    public Output</* @Nullable */ Boolean> allowReassociation() {
         return this.allowReassociation;
     }
     /**
@@ -83,7 +83,7 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * instance ID unless exactly one network interface is attached.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -101,7 +101,7 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * interface ID.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -121,7 +121,7 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * address.
      * 
      */
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
@@ -135,7 +135,7 @@ public class EipAssociation extends com.pulumi.resources.CustomResource {
      * @return The Elastic IP address. This is required for EC2-Classic.
      * 
      */
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp;
     }
 

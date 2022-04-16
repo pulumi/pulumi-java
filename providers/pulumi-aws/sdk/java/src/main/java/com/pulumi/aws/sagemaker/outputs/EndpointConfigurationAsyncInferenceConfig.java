@@ -35,14 +35,14 @@ public final class EndpointConfigurationAsyncInferenceConfig {
      * Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
      * 
     */
-    public Optional<EndpointConfigurationAsyncInferenceConfigClientConfig> getClientConfig() {
+    public Optional<EndpointConfigurationAsyncInferenceConfigClientConfig> clientConfig() {
         return Optional.ofNullable(this.clientConfig);
     }
     /**
      * Specifies the configuration for asynchronous inference invocation outputs.
      * 
     */
-    public EndpointConfigurationAsyncInferenceConfigOutputConfig getOutputConfig() {
+    public EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig() {
         return this.outputConfig;
     }
 

@@ -28,7 +28,7 @@ public final class DomainDkimState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dkimTokens")
       private final @Nullable Output<List<String>> dkimTokens;
 
-    public Output<List<String>> getDkimTokens() {
+    public Output<List<String>> dkimTokens() {
         return this.dkimTokens == null ? Codegen.empty() : this.dkimTokens;
     }
 
@@ -39,7 +39,7 @@ public final class DomainDkimState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 

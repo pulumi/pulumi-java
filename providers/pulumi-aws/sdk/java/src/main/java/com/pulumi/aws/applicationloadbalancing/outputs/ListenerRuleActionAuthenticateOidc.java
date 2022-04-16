@@ -99,77 +99,77 @@ public final class ListenerRuleActionAuthenticateOidc {
      * The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
     */
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
      * The authorization endpoint of the IdP.
      * 
     */
-    public String getAuthorizationEndpoint() {
+    public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
     /**
      * The OAuth 2.0 client identifier.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The OAuth 2.0 client secret.
      * 
     */
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
     /**
      * The OIDC issuer identifier of the IdP.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
     */
-    public Optional<String> getOnUnauthenticatedRequest() {
+    public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
      * The set of user claims to be requested from the IdP.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The name of the cookie used to maintain session information.
      * 
     */
-    public Optional<String> getSessionCookieName() {
+    public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
      * The maximum duration of the authentication session, in seconds.
      * 
     */
-    public Optional<Integer> getSessionTimeout() {
+    public Optional<Integer> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
      * The token endpoint of the IdP.
      * 
     */
-    public String getTokenEndpoint() {
+    public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
     /**
      * The user info endpoint of the IdP.
      * 
     */
-    public String getUserInfoEndpoint() {
+    public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

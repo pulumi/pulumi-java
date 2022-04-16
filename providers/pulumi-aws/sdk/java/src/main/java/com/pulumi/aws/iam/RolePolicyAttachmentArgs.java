@@ -21,7 +21,7 @@ public final class RolePolicyAttachmentArgs extends com.pulumi.resources.Resourc
     @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 
@@ -32,7 +32,7 @@ public final class RolePolicyAttachmentArgs extends com.pulumi.resources.Resourc
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

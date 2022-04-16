@@ -34,23 +34,23 @@ public final class GetLedgerResult {
         this.permissionsMode = permissionsMode;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Boolean getDeletionProtection() {
+    public Boolean deletionProtection() {
         return this.deletionProtection;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getPermissionsMode() {
+    public String permissionsMode() {
         return this.permissionsMode;
     }
 

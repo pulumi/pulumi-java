@@ -46,7 +46,7 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    public Output</* @Nullable */ String> getAccessGroupId() {
+    public Output</* @Nullable */ String> accessGroupId() {
         return this.accessGroupId;
     }
     /**
@@ -60,7 +60,7 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAuthorizeAllGroups() {
+    public Output</* @Nullable */ Boolean> authorizeAllGroups() {
         return this.authorizeAllGroups;
     }
     /**
@@ -74,7 +74,7 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return The ID of the Client VPN endpoint.
      * 
      */
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId;
     }
     /**
@@ -88,7 +88,7 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return A brief description of the authorization rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -102,7 +102,7 @@ public class AuthorizationRule extends com.pulumi.resources.CustomResource {
      * @return The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
      * 
      */
-    public Output<String> getTargetNetworkCidr() {
+    public Output<String> targetNetworkCidr() {
         return this.targetNetworkCidr;
     }
 

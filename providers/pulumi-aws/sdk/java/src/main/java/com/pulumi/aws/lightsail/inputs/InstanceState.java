@@ -27,7 +27,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="blueprintId")
       private final @Nullable Output<String> blueprintId;
 
-    public Output<String> getBlueprintId() {
+    public Output<String> blueprintId() {
         return this.blueprintId == null ? Codegen.empty() : this.blueprintId;
     }
 
@@ -61,7 +61,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
@@ -72,7 +72,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> getCpuCount() {
+    public Output<Integer> cpuCount() {
         return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
     }
 
@@ -83,7 +83,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -99,7 +99,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipv6Address;
 
     @Deprecated /* use `ipv6_addresses` attribute instead */
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
@@ -110,7 +110,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
@@ -121,7 +121,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="isStaticIp")
       private final @Nullable Output<Boolean> isStaticIp;
 
-    public Output<Boolean> getIsStaticIp() {
+    public Output<Boolean> isStaticIp() {
         return this.isStaticIp == null ? Codegen.empty() : this.isStaticIp;
     }
 
@@ -133,7 +133,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
-    public Output<String> getKeyPairName() {
+    public Output<String> keyPairName() {
         return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
     }
 
@@ -144,7 +144,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -155,7 +155,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -166,7 +166,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
+    public Output<String> publicIpAddress() {
         return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 
@@ -177,7 +177,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ramSize")
       private final @Nullable Output<Double> ramSize;
 
-    public Output<Double> getRamSize() {
+    public Output<Double> ramSize() {
         return this.ramSize == null ? Codegen.empty() : this.ramSize;
     }
 
@@ -188,7 +188,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -199,7 +199,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -210,7 +210,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
@@ -221,7 +221,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

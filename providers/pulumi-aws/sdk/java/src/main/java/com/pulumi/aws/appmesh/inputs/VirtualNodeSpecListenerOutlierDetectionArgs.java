@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
     @Import(name="baseEjectionDuration", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> getBaseEjectionDuration() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration() {
         return this.baseEjectionDuration;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
     @Import(name="interval", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> getInterval() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval() {
         return this.interval;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
     @Import(name="maxEjectionPercent", required=true)
       private final Output<Integer> maxEjectionPercent;
 
-    public Output<Integer> getMaxEjectionPercent() {
+    public Output<Integer> maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
     @Import(name="maxServerErrors", required=true)
       private final Output<Integer> maxServerErrors;
 
-    public Output<Integer> getMaxServerErrors() {
+    public Output<Integer> maxServerErrors() {
         return this.maxServerErrors;
     }
 

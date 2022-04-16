@@ -23,7 +23,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference == null ? Codegen.empty() : this.callerReference;
     }
 
@@ -35,7 +35,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="cloudfrontAccessIdentityPath")
       private final @Nullable Output<String> cloudfrontAccessIdentityPath;
 
-    public Output<String> getCloudfrontAccessIdentityPath() {
+    public Output<String> cloudfrontAccessIdentityPath() {
         return this.cloudfrontAccessIdentityPath == null ? Codegen.empty() : this.cloudfrontAccessIdentityPath;
     }
 
@@ -46,7 +46,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -58,7 +58,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -71,7 +71,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="iamArn")
       private final @Nullable Output<String> iamArn;
 
-    public Output<String> getIamArn() {
+    public Output<String> iamArn() {
         return this.iamArn == null ? Codegen.empty() : this.iamArn;
     }
 
@@ -84,7 +84,7 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
     @Import(name="s3CanonicalUserId")
       private final @Nullable Output<String> s3CanonicalUserId;
 
-    public Output<String> getS3CanonicalUserId() {
+    public Output<String> s3CanonicalUserId() {
         return this.s3CanonicalUserId == null ? Codegen.empty() : this.s3CanonicalUserId;
     }
 

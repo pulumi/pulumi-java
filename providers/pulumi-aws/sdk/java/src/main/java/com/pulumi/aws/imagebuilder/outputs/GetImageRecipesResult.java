@@ -49,27 +49,27 @@ public final class GetImageRecipesResult {
      * Set of ARNs of the matched Image Builder Image Recipes.
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
-    public List<GetImageRecipesFilter> getFilters() {
+    public List<GetImageRecipesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of names of the matched Image Builder Image Recipes.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
 

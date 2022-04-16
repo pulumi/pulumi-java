@@ -22,7 +22,7 @@ public final class FlowDefinitionHumanLoopActivationConfigGetArgs extends com.pu
     @Import(name="humanLoopActivationConditionsConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig;
 
-    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> getHumanLoopActivationConditionsConfig() {
+    public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig() {
         return this.humanLoopActivationConditionsConfig == null ? Codegen.empty() : this.humanLoopActivationConditionsConfig;
     }
 

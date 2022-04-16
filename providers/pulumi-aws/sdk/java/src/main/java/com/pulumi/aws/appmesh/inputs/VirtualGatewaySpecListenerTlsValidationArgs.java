@@ -23,7 +23,7 @@ public final class VirtualGatewaySpecListenerTlsValidationArgs extends com.pulum
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs> getSubjectAlternativeNames() {
+    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualGatewaySpecListenerTlsValidationArgs extends com.pulum
     @Import(name="trust", required=true)
       private final Output<VirtualGatewaySpecListenerTlsValidationTrustArgs> trust;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationTrustArgs> getTrust() {
+    public Output<VirtualGatewaySpecListenerTlsValidationTrustArgs> trust() {
         return this.trust;
     }
 

@@ -42,7 +42,7 @@ public class GeoMatchSet extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class GeoMatchSet extends com.pulumi.resources.CustomResource {
      * @return The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
      * 
      */
-    public Output</* @Nullable */ List<GeoMatchSetGeoMatchConstraint>> getGeoMatchConstraints() {
+    public Output</* @Nullable */ List<GeoMatchSetGeoMatchConstraint>> geoMatchConstraints() {
         return this.geoMatchConstraints;
     }
     /**
@@ -70,7 +70,7 @@ public class GeoMatchSet extends com.pulumi.resources.CustomResource {
      * @return The name or description of the GeoMatchSet.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -23,7 +23,7 @@ public final class RegistryScanningConfigurationRuleGetArgs extends com.pulumi.r
     @Import(name="repositoryFilters", required=true)
       private final Output<List<RegistryScanningConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
 
-    public Output<List<RegistryScanningConfigurationRuleRepositoryFilterGetArgs>> getRepositoryFilters() {
+    public Output<List<RegistryScanningConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters() {
         return this.repositoryFilters;
     }
 
@@ -34,7 +34,7 @@ public final class RegistryScanningConfigurationRuleGetArgs extends com.pulumi.r
     @Import(name="scanFrequency", required=true)
       private final Output<String> scanFrequency;
 
-    public Output<String> getScanFrequency() {
+    public Output<String> scanFrequency() {
         return this.scanFrequency;
     }
 

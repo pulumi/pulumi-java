@@ -48,7 +48,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAirflowConfigurationOptions() {
+    public Output</* @Nullable */ Map<String,String>> airflowConfigurationOptions() {
         return this.airflowConfigurationOptions;
     }
     /**
@@ -62,7 +62,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Airflow version of your environment, will be set by default to the latest version that MWAA supports.
      * 
      */
-    public Output<String> getAirflowVersion() {
+    public Output<String> airflowVersion() {
         return this.airflowVersion;
     }
     /**
@@ -76,7 +76,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The ARN of the MWAA Environment
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -92,7 +92,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * * `logging_configuration[0].<LOG_CONFIGURATION_TYPE>[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -106,7 +106,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    public Output<String> getDagS3Path() {
+    public Output<String> dagS3Path() {
         return this.dagS3Path;
     }
     /**
@@ -120,7 +120,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
      * 
      */
-    public Output<String> getEnvironmentClass() {
+    public Output<String> environmentClass() {
         return this.environmentClass;
     }
     /**
@@ -134,7 +134,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
      * 
      */
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -148,13 +148,13 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKey() {
+    public Output</* @Nullable */ String> kmsKey() {
         return this.kmsKey;
     }
     @Export(name="lastUpdateds", type=List.class, parameters={EnvironmentLastUpdated.class})
     private Output<List<EnvironmentLastUpdated>> lastUpdateds;
 
-    public Output<List<EnvironmentLastUpdated>> getLastUpdateds() {
+    public Output<List<EnvironmentLastUpdated>> lastUpdateds() {
         return this.lastUpdateds;
     }
     /**
@@ -168,7 +168,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
      * 
      */
-    public Output<EnvironmentLoggingConfiguration> getLoggingConfiguration() {
+    public Output<EnvironmentLoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
     /**
@@ -182,7 +182,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
      * 
      */
-    public Output<Integer> getMaxWorkers() {
+    public Output<Integer> maxWorkers() {
         return this.maxWorkers;
     }
     /**
@@ -196,7 +196,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The minimum number of workers that you want to run in your environment. Will be `1` by default.
      * 
      */
-    public Output<Integer> getMinWorkers() {
+    public Output<Integer> minWorkers() {
         return this.minWorkers;
     }
     /**
@@ -210,7 +210,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The name of the Apache Airflow Environment
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -224,7 +224,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
      * 
      */
-    public Output<EnvironmentNetworkConfiguration> getNetworkConfiguration() {
+    public Output<EnvironmentNetworkConfiguration> networkConfiguration() {
         return this.networkConfiguration;
     }
     /**
@@ -238,7 +238,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The plugins.zip file version you want to use.
      * 
      */
-    public Output<String> getPluginsS3ObjectVersion() {
+    public Output<String> pluginsS3ObjectVersion() {
         return this.pluginsS3ObjectVersion;
     }
     /**
@@ -252,7 +252,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    public Output</* @Nullable */ String> getPluginsS3Path() {
+    public Output</* @Nullable */ String> pluginsS3Path() {
         return this.pluginsS3Path;
     }
     /**
@@ -266,7 +266,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The requirements.txt file version you want to use.
      * 
      */
-    public Output<String> getRequirementsS3ObjectVersion() {
+    public Output<String> requirementsS3ObjectVersion() {
         return this.requirementsS3ObjectVersion;
     }
     /**
@@ -280,7 +280,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    public Output</* @Nullable */ String> getRequirementsS3Path() {
+    public Output</* @Nullable */ String> requirementsS3Path() {
         return this.requirementsS3Path;
     }
     /**
@@ -294,7 +294,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Service Role ARN of the Amazon MWAA Environment
      * 
      */
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
     /**
@@ -308,7 +308,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
      * 
      */
-    public Output<String> getSourceBucketArn() {
+    public Output<String> sourceBucketArn() {
         return this.sourceBucketArn;
     }
     /**
@@ -322,7 +322,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The status of the Amazon MWAA Environment
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -336,7 +336,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -350,7 +350,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -364,7 +364,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
      * 
      */
-    public Output<String> getWebserverAccessMode() {
+    public Output<String> webserverAccessMode() {
         return this.webserverAccessMode;
     }
     /**
@@ -378,7 +378,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The webserver URL of the MWAA Environment
      * 
      */
-    public Output<String> getWebserverUrl() {
+    public Output<String> webserverUrl() {
         return this.webserverUrl;
     }
     /**
@@ -392,7 +392,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Specifies the start date for the weekly maintenance window.
      * 
      */
-    public Output<String> getWeeklyMaintenanceWindowStart() {
+    public Output<String> weeklyMaintenanceWindowStart() {
         return this.weeklyMaintenanceWindowStart;
     }
 

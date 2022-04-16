@@ -23,7 +23,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
     @Import(name="isValueSecret")
       private final @Nullable Output<Boolean> isValueSecret;
 
-    public Output<Boolean> getIsValueSecret() {
+    public Output<Boolean> isValueSecret() {
         return this.isValueSecret == null ? Codegen.empty() : this.isValueSecret;
     }
 
@@ -34,7 +34,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -45,7 +45,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersHeaderAr
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

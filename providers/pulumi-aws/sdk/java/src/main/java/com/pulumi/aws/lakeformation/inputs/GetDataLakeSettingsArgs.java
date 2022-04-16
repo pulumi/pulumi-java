@@ -21,7 +21,7 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
     @Import(name="catalogId")
       private final @Nullable String catalogId;
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 

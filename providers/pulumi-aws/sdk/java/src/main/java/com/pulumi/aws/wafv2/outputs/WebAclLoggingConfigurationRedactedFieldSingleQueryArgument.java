@@ -32,7 +32,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
      * 
     */
     @Deprecated /* Not supported by WAFv2 API */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

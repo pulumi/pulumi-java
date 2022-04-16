@@ -22,7 +22,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends com.pulumi.
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -33,7 +33,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends com.pulumi.
     @Import(name="messageBody")
       private final @Nullable Output<String> messageBody;
 
-    public Output<String> getMessageBody() {
+    public Output<String> messageBody() {
         return this.messageBody == null ? Codegen.empty() : this.messageBody;
     }
 
@@ -44,7 +44,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends com.pulumi.
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 

@@ -22,7 +22,7 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardArn")
       private final @Nullable Output<String> dashboardArn;
 
-    public Output<String> getDashboardArn() {
+    public Output<String> dashboardArn() {
         return this.dashboardArn == null ? Codegen.empty() : this.dashboardArn;
     }
 
@@ -33,7 +33,7 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardBody")
       private final @Nullable Output<String> dashboardBody;
 
-    public Output<String> getDashboardBody() {
+    public Output<String> dashboardBody() {
         return this.dashboardBody == null ? Codegen.empty() : this.dashboardBody;
     }
 
@@ -44,7 +44,7 @@ public final class DashboardState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
 
-    public Output<String> getDashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName == null ? Codegen.empty() : this.dashboardName;
     }
 

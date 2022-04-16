@@ -23,7 +23,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
@@ -34,7 +34,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultResult")
       private final @Nullable Output<String> defaultResult;
 
-    public Output<String> getDefaultResult() {
+    public Output<String> defaultResult() {
         return this.defaultResult == null ? Codegen.empty() : this.defaultResult;
     }
 
@@ -45,7 +45,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="heartbeatTimeout")
       private final @Nullable Output<Integer> heartbeatTimeout;
 
-    public Output<Integer> getHeartbeatTimeout() {
+    public Output<Integer> heartbeatTimeout() {
         return this.heartbeatTimeout == null ? Codegen.empty() : this.heartbeatTimeout;
     }
 
@@ -56,7 +56,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="lifecycleTransition")
       private final @Nullable Output<String> lifecycleTransition;
 
-    public Output<String> getLifecycleTransition() {
+    public Output<String> lifecycleTransition() {
         return this.lifecycleTransition == null ? Codegen.empty() : this.lifecycleTransition;
     }
 
@@ -67,7 +67,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="notificationMetadata")
       private final @Nullable Output<String> notificationMetadata;
 
-    public Output<String> getNotificationMetadata() {
+    public Output<String> notificationMetadata() {
         return this.notificationMetadata == null ? Codegen.empty() : this.notificationMetadata;
     }
 
@@ -89,7 +89,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="notificationTargetArn")
       private final @Nullable Output<String> notificationTargetArn;
 
-    public Output<String> getNotificationTargetArn() {
+    public Output<String> notificationTargetArn() {
         return this.notificationTargetArn == null ? Codegen.empty() : this.notificationTargetArn;
     }
 
@@ -100,7 +100,7 @@ public final class LifecycleHookState extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

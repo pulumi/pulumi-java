@@ -36,14 +36,14 @@ public final class TrailAdvancedEventSelector {
      * Specifies the selector statements in an advanced event selector. Fields documented below.
      * 
     */
-    public List<TrailAdvancedEventSelectorFieldSelector> getFieldSelectors() {
+    public List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors() {
         return this.fieldSelectors;
     }
     /**
      * Specifies the name of the advanced event selector.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

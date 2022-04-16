@@ -24,7 +24,7 @@ public final class SecretRotationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rotationLambdaArn", required=true)
       private final Output<String> rotationLambdaArn;
 
-    public Output<String> getRotationLambdaArn() {
+    public Output<String> rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
 
@@ -35,7 +35,7 @@ public final class SecretRotationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rotationRules", required=true)
       private final Output<SecretRotationRotationRulesArgs> rotationRules;
 
-    public Output<SecretRotationRotationRulesArgs> getRotationRules() {
+    public Output<SecretRotationRotationRulesArgs> rotationRules() {
         return this.rotationRules;
     }
 
@@ -46,14 +46,14 @@ public final class SecretRotationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

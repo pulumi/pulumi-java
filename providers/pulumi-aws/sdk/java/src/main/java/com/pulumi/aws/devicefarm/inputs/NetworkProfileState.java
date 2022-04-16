@@ -24,7 +24,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="downlinkBandwidthBits")
       private final @Nullable Output<Integer> downlinkBandwidthBits;
 
-    public Output<Integer> getDownlinkBandwidthBits() {
+    public Output<Integer> downlinkBandwidthBits() {
         return this.downlinkBandwidthBits == null ? Codegen.empty() : this.downlinkBandwidthBits;
     }
 
@@ -57,7 +57,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="downlinkDelayMs")
       private final @Nullable Output<Integer> downlinkDelayMs;
 
-    public Output<Integer> getDownlinkDelayMs() {
+    public Output<Integer> downlinkDelayMs() {
         return this.downlinkDelayMs == null ? Codegen.empty() : this.downlinkDelayMs;
     }
 
@@ -68,7 +68,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="downlinkJitterMs")
       private final @Nullable Output<Integer> downlinkJitterMs;
 
-    public Output<Integer> getDownlinkJitterMs() {
+    public Output<Integer> downlinkJitterMs() {
         return this.downlinkJitterMs == null ? Codegen.empty() : this.downlinkJitterMs;
     }
 
@@ -79,7 +79,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="downlinkLossPercent")
       private final @Nullable Output<Integer> downlinkLossPercent;
 
-    public Output<Integer> getDownlinkLossPercent() {
+    public Output<Integer> downlinkLossPercent() {
         return this.downlinkLossPercent == null ? Codegen.empty() : this.downlinkLossPercent;
     }
 
@@ -90,7 +90,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="projectArn")
       private final @Nullable Output<String> projectArn;
 
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn == null ? Codegen.empty() : this.projectArn;
     }
 
@@ -112,7 +112,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -123,7 +123,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -134,7 +134,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -145,7 +145,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="uplinkBandwidthBits")
       private final @Nullable Output<Integer> uplinkBandwidthBits;
 
-    public Output<Integer> getUplinkBandwidthBits() {
+    public Output<Integer> uplinkBandwidthBits() {
         return this.uplinkBandwidthBits == null ? Codegen.empty() : this.uplinkBandwidthBits;
     }
 
@@ -156,7 +156,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="uplinkDelayMs")
       private final @Nullable Output<Integer> uplinkDelayMs;
 
-    public Output<Integer> getUplinkDelayMs() {
+    public Output<Integer> uplinkDelayMs() {
         return this.uplinkDelayMs == null ? Codegen.empty() : this.uplinkDelayMs;
     }
 
@@ -167,7 +167,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="uplinkJitterMs")
       private final @Nullable Output<Integer> uplinkJitterMs;
 
-    public Output<Integer> getUplinkJitterMs() {
+    public Output<Integer> uplinkJitterMs() {
         return this.uplinkJitterMs == null ? Codegen.empty() : this.uplinkJitterMs;
     }
 
@@ -178,7 +178,7 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="uplinkLossPercent")
       private final @Nullable Output<Integer> uplinkLossPercent;
 
-    public Output<Integer> getUplinkLossPercent() {
+    public Output<Integer> uplinkLossPercent() {
         return this.uplinkLossPercent == null ? Codegen.empty() : this.uplinkLossPercent;
     }
 

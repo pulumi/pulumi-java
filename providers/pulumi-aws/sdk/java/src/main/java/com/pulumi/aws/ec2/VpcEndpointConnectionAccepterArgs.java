@@ -21,7 +21,7 @@ public final class VpcEndpointConnectionAccepterArgs extends com.pulumi.resource
     @Import(name="vpcEndpointId", required=true)
       private final Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 
@@ -32,7 +32,7 @@ public final class VpcEndpointConnectionAccepterArgs extends com.pulumi.resource
     @Import(name="vpcEndpointServiceId", required=true)
       private final Output<String> vpcEndpointServiceId;
 
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 

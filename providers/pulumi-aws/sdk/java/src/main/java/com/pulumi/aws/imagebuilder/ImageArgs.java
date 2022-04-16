@@ -25,7 +25,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> getDistributionConfigurationArn() {
+    public Output<String> distributionConfigurationArn() {
         return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
     }
 
@@ -36,7 +36,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> getEnhancedImageMetadataEnabled() {
+    public Output<Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
     }
 
@@ -47,7 +47,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn", required=true)
       private final Output<String> imageRecipeArn;
 
-    public Output<String> getImageRecipeArn() {
+    public Output<String> imageRecipeArn() {
         return this.imageRecipeArn;
     }
 
@@ -58,7 +58,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration;
 
-    public Output<ImageImageTestsConfigurationArgs> getImageTestsConfiguration() {
+    public Output<ImageImageTestsConfigurationArgs> imageTestsConfiguration() {
         return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
     }
 
@@ -69,7 +69,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn", required=true)
       private final Output<String> infrastructureConfigurationArn;
 
-    public Output<String> getInfrastructureConfigurationArn() {
+    public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
 
@@ -80,7 +80,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class ScramSecretAssociationArgs extends com.pulumi.resources.Resou
     @Import(name="clusterArn", required=true)
       private final Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
 
@@ -33,7 +33,7 @@ public final class ScramSecretAssociationArgs extends com.pulumi.resources.Resou
     @Import(name="secretArnLists", required=true)
       private final Output<List<String>> secretArnLists;
 
-    public Output<List<String>> getSecretArnLists() {
+    public Output<List<String>> secretArnLists() {
         return this.secretArnLists;
     }
 

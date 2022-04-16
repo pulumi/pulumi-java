@@ -22,7 +22,7 @@ public final class DocumentationPartLocationArgs extends com.pulumi.resources.Re
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -33,7 +33,7 @@ public final class DocumentationPartLocationArgs extends com.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class DocumentationPartLocationArgs extends com.pulumi.resources.Re
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -55,7 +55,7 @@ public final class DocumentationPartLocationArgs extends com.pulumi.resources.Re
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
@@ -66,7 +66,7 @@ public final class DocumentationPartLocationArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

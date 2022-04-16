@@ -22,7 +22,7 @@ public final class VpcDhcpOptionsAssociationState extends com.pulumi.resources.R
     @Import(name="dhcpOptionsId")
       private final @Nullable Output<String> dhcpOptionsId;
 
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId == null ? Codegen.empty() : this.dhcpOptionsId;
     }
 
@@ -33,7 +33,7 @@ public final class VpcDhcpOptionsAssociationState extends com.pulumi.resources.R
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

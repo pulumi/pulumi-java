@@ -35,14 +35,14 @@ public final class ClusterMasterInstanceFleetLaunchSpecifications {
      * Configuration block for on demand instances launch specifications.
      * 
     */
-    public List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification> getOnDemandSpecifications() {
+    public List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications() {
         return this.onDemandSpecifications == null ? List.of() : this.onDemandSpecifications;
     }
     /**
      * Configuration block for spot instances launch specifications.
      * 
     */
-    public List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> getSpotSpecifications() {
+    public List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications() {
         return this.spotSpecifications == null ? List.of() : this.spotSpecifications;
     }
 

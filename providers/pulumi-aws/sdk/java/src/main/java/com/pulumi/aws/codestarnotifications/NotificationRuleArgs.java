@@ -25,7 +25,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="detailType", required=true)
       private final Output<String> detailType;
 
-    public Output<String> getDetailType() {
+    public Output<String> detailType() {
         return this.detailType;
     }
 
@@ -37,7 +37,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eventTypeIds", required=true)
       private final Output<List<String>> eventTypeIds;
 
-    public Output<List<String>> getEventTypeIds() {
+    public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds;
     }
 
@@ -48,7 +48,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -70,7 +70,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -81,7 +81,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class NotificationRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="targets")
       private final @Nullable Output<List<NotificationRuleTargetArgs>> targets;
 
-    public Output<List<NotificationRuleTargetArgs>> getTargets() {
+    public Output<List<NotificationRuleTargetArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 

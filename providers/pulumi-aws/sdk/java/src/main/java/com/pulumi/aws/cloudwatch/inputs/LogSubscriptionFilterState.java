@@ -22,7 +22,7 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
     }
 
@@ -33,7 +33,7 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
     @Import(name="distribution")
       private final @Nullable Output<String> distribution;
 
-    public Output<String> getDistribution() {
+    public Output<String> distribution() {
         return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
@@ -44,7 +44,7 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
     @Import(name="filterPattern")
       private final @Nullable Output<String> filterPattern;
 
-    public Output<String> getFilterPattern() {
+    public Output<String> filterPattern() {
         return this.filterPattern == null ? Codegen.empty() : this.filterPattern;
     }
 
@@ -55,7 +55,7 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
     @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
-    public Output<String> getLogGroup() {
+    public Output<String> logGroup() {
         return this.logGroup == null ? Codegen.empty() : this.logGroup;
     }
 
@@ -66,7 +66,7 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

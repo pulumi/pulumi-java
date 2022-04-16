@@ -23,7 +23,7 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="connectionPoolConfig")
       private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig;
 
-    public Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> getConnectionPoolConfig() {
+    public Output<ProxyDefaultTargetGroupConnectionPoolConfigGetArgs> connectionPoolConfig() {
         return this.connectionPoolConfig == null ? Codegen.empty() : this.connectionPoolConfig;
     }
 
@@ -45,7 +45,7 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="dbProxyName")
       private final @Nullable Output<String> dbProxyName;
 
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName == null ? Codegen.empty() : this.dbProxyName;
     }
 
@@ -56,7 +56,7 @@ public final class ProxyDefaultTargetGroupState extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

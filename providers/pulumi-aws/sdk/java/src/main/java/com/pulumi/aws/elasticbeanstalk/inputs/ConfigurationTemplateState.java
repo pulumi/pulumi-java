@@ -24,7 +24,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
     @Import(name="application")
       private final @Nullable Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application == null ? Codegen.empty() : this.application;
     }
 
@@ -35,7 +35,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -57,7 +57,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
     @Import(name="settings")
       private final @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
 
-    public Output<List<ConfigurationTemplateSettingGetArgs>> getSettings() {
+    public Output<List<ConfigurationTemplateSettingGetArgs>> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -82,7 +82,7 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
     @Import(name="solutionStackName")
       private final @Nullable Output<String> solutionStackName;
 
-    public Output<String> getSolutionStackName() {
+    public Output<String> solutionStackName() {
         return this.solutionStackName == null ? Codegen.empty() : this.solutionStackName;
     }
 

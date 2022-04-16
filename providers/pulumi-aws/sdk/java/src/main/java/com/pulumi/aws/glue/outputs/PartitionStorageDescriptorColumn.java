@@ -41,21 +41,21 @@ public final class PartitionStorageDescriptorColumn {
      * Free-form text comment.
      * 
     */
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * Name of the SerDe.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The datatype of data in the Column.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

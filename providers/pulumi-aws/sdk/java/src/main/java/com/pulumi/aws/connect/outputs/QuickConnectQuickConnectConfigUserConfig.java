@@ -32,14 +32,14 @@ public final class QuickConnectQuickConnectConfigUserConfig {
      * Specifies the identifier of the contact flow.
      * 
     */
-    public String getContactFlowId() {
+    public String contactFlowId() {
         return this.contactFlowId;
     }
     /**
      * Specifies the identifier for the user.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

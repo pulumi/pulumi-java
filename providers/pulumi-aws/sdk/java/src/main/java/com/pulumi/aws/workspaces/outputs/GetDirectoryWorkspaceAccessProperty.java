@@ -74,56 +74,56 @@ public final class GetDirectoryWorkspaceAccessProperty {
      * (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeAndroid() {
+    public String deviceTypeAndroid() {
         return this.deviceTypeAndroid;
     }
     /**
      * (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeChromeos() {
+    public String deviceTypeChromeos() {
         return this.deviceTypeChromeos;
     }
     /**
      * (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeIos() {
+    public String deviceTypeIos() {
         return this.deviceTypeIos;
     }
     /**
      * (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeLinux() {
+    public String deviceTypeLinux() {
         return this.deviceTypeLinux;
     }
     /**
      * (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeOsx() {
+    public String deviceTypeOsx() {
         return this.deviceTypeOsx;
     }
     /**
      * (Optional) Indicates whether users can access their WorkSpaces through a web browser.
      * 
     */
-    public String getDeviceTypeWeb() {
+    public String deviceTypeWeb() {
         return this.deviceTypeWeb;
     }
     /**
      * (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeWindows() {
+    public String deviceTypeWindows() {
         return this.deviceTypeWindows;
     }
     /**
      * (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
      * 
     */
-    public String getDeviceTypeZeroclient() {
+    public String deviceTypeZeroclient() {
         return this.deviceTypeZeroclient;
     }
 

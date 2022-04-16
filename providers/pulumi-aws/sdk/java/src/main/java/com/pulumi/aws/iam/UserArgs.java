@@ -26,7 +26,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -37,7 +37,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -59,7 +59,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsBoundary")
       private final @Nullable Output<String> permissionsBoundary;
 
-    public Output<String> getPermissionsBoundary() {
+    public Output<String> permissionsBoundary() {
         return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
     }
 
@@ -70,7 +70,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

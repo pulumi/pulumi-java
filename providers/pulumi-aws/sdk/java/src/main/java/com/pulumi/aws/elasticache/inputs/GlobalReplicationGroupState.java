@@ -28,7 +28,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
       private final @Nullable Output<String> actualEngineVersion;
 
     @Deprecated /* Use engine_version_actual instead */
-    public Output<String> getActualEngineVersion() {
+    public Output<String> actualEngineVersion() {
         return this.actualEngineVersion == null ? Codegen.empty() : this.actualEngineVersion;
     }
 
@@ -39,7 +39,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -50,7 +50,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="atRestEncryptionEnabled")
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
-    public Output<Boolean> getAtRestEncryptionEnabled() {
+    public Output<Boolean> atRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
     }
 
@@ -61,7 +61,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="authTokenEnabled")
       private final @Nullable Output<Boolean> authTokenEnabled;
 
-    public Output<Boolean> getAuthTokenEnabled() {
+    public Output<Boolean> authTokenEnabled() {
         return this.authTokenEnabled == null ? Codegen.empty() : this.authTokenEnabled;
     }
 
@@ -72,7 +72,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="cacheNodeType")
       private final @Nullable Output<String> cacheNodeType;
 
-    public Output<String> getCacheNodeType() {
+    public Output<String> cacheNodeType() {
         return this.cacheNodeType == null ? Codegen.empty() : this.cacheNodeType;
     }
 
@@ -83,7 +83,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="clusterEnabled")
       private final @Nullable Output<Boolean> clusterEnabled;
 
-    public Output<Boolean> getClusterEnabled() {
+    public Output<Boolean> clusterEnabled() {
         return this.clusterEnabled == null ? Codegen.empty() : this.clusterEnabled;
     }
 
@@ -94,7 +94,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -105,7 +105,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="engineVersionActual")
       private final @Nullable Output<String> engineVersionActual;
 
-    public Output<String> getEngineVersionActual() {
+    public Output<String> engineVersionActual() {
         return this.engineVersionActual == null ? Codegen.empty() : this.engineVersionActual;
     }
 
@@ -116,7 +116,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Output<String> getGlobalReplicationGroupDescription() {
+    public Output<String> globalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription == null ? Codegen.empty() : this.globalReplicationGroupDescription;
     }
 
@@ -127,7 +127,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="globalReplicationGroupId")
       private final @Nullable Output<String> globalReplicationGroupId;
 
-    public Output<String> getGlobalReplicationGroupId() {
+    public Output<String> globalReplicationGroupId() {
         return this.globalReplicationGroupId == null ? Codegen.empty() : this.globalReplicationGroupId;
     }
 
@@ -138,7 +138,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="globalReplicationGroupIdSuffix")
       private final @Nullable Output<String> globalReplicationGroupIdSuffix;
 
-    public Output<String> getGlobalReplicationGroupIdSuffix() {
+    public Output<String> globalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix == null ? Codegen.empty() : this.globalReplicationGroupIdSuffix;
     }
 
@@ -149,7 +149,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="primaryReplicationGroupId")
       private final @Nullable Output<String> primaryReplicationGroupId;
 
-    public Output<String> getPrimaryReplicationGroupId() {
+    public Output<String> primaryReplicationGroupId() {
         return this.primaryReplicationGroupId == null ? Codegen.empty() : this.primaryReplicationGroupId;
     }
 
@@ -160,7 +160,7 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     @Import(name="transitEncryptionEnabled")
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
-    public Output<Boolean> getTransitEncryptionEnabled() {
+    public Output<Boolean> transitEncryptionEnabled() {
         return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
     }
 

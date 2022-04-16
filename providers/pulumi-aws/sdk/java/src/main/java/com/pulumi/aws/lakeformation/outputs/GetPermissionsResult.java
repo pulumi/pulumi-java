@@ -64,46 +64,46 @@ public final class GetPermissionsResult {
         this.tableWithColumns = tableWithColumns;
     }
 
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
-    public Optional<Boolean> getCatalogResource() {
+    public Optional<Boolean> catalogResource() {
         return Optional.ofNullable(this.catalogResource);
     }
-    public GetPermissionsDataLocation getDataLocation() {
+    public GetPermissionsDataLocation dataLocation() {
         return this.dataLocation;
     }
-    public GetPermissionsDatabase getDatabase() {
+    public GetPermissionsDatabase database() {
         return this.database;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of permissions granted to the principal. For details on permissions, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
      * 
     */
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
     /**
      * Subset of `permissions` which the principal can pass.
      * 
     */
-    public List<String> getPermissionsWithGrantOptions() {
+    public List<String> permissionsWithGrantOptions() {
         return this.permissionsWithGrantOptions;
     }
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
-    public GetPermissionsTable getTable() {
+    public GetPermissionsTable table() {
         return this.table;
     }
-    public GetPermissionsTableWithColumns getTableWithColumns() {
+    public GetPermissionsTableWithColumns tableWithColumns() {
         return this.tableWithColumns;
     }
 

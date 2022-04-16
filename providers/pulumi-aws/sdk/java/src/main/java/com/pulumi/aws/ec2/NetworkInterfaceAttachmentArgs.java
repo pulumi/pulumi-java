@@ -22,7 +22,7 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
     @Import(name="deviceIndex", required=true)
       private final Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
 
@@ -33,7 +33,7 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -44,7 +44,7 @@ public final class NetworkInterfaceAttachmentArgs extends com.pulumi.resources.R
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 

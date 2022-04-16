@@ -23,7 +23,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends com.
     @Import(name="clientConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> getClientConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig() {
         return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends com.
     @Import(name="outputConfig", required=true)
       private final Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> getOutputConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig() {
         return this.outputConfig;
     }
 

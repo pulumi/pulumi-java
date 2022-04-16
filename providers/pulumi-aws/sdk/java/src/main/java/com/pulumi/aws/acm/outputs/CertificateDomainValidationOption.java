@@ -48,28 +48,28 @@ public final class CertificateDomainValidationOption {
      * A domain name for which the certificate should be issued
      * 
     */
-    public Optional<String> getDomainName() {
+    public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The name of the DNS record to create to validate the certificate
      * 
     */
-    public Optional<String> getResourceRecordName() {
+    public Optional<String> resourceRecordName() {
         return Optional.ofNullable(this.resourceRecordName);
     }
     /**
      * The type of DNS record to create
      * 
     */
-    public Optional<String> getResourceRecordType() {
+    public Optional<String> resourceRecordType() {
         return Optional.ofNullable(this.resourceRecordType);
     }
     /**
      * The value the DNS record needs to have
      * 
     */
-    public Optional<String> getResourceRecordValue() {
+    public Optional<String> resourceRecordValue() {
         return Optional.ofNullable(this.resourceRecordValue);
     }
 

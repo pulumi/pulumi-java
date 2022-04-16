@@ -24,7 +24,7 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class RegexMatchSetState extends com.pulumi.resources.ResourceArgs 
     @Import(name="regexMatchTuples")
       private final @Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
 
-    public Output<List<RegexMatchSetRegexMatchTupleGetArgs>> getRegexMatchTuples() {
+    public Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples() {
         return this.regexMatchTuples == null ? Codegen.empty() : this.regexMatchTuples;
     }
 

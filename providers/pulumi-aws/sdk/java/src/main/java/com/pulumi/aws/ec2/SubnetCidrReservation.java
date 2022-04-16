@@ -40,7 +40,7 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @return The CIDR block for the reservation.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -54,7 +54,7 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @return A brief description of the reservation.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +68,7 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @return ID of the AWS account that owns this CIDR reservation.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -82,7 +82,7 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @return The type of reservation to create. Valid values: `explicit`, `prefix`
      * 
      */
-    public Output<String> getReservationType() {
+    public Output<String> reservationType() {
         return this.reservationType;
     }
     /**
@@ -96,7 +96,7 @@ public class SubnetCidrReservation extends com.pulumi.resources.CustomResource {
      * @return The ID of the subnet to create the reservation for.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

@@ -17,7 +17,7 @@ public final class VpcIpamOrganizationAdminAccountArgs extends com.pulumi.resour
     @Import(name="delegatedAdminAccountId", required=true)
       private final Output<String> delegatedAdminAccountId;
 
-    public Output<String> getDelegatedAdminAccountId() {
+    public Output<String> delegatedAdminAccountId() {
         return this.delegatedAdminAccountId;
     }
 

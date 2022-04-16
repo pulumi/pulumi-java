@@ -23,7 +23,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -45,7 +45,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> getInvite() {
+    public Output<Boolean> invite() {
         return this.invite == null ? Codegen.empty() : this.invite;
     }
 

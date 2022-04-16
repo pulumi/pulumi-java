@@ -24,7 +24,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="excludeCompliantResources")
       private final @Nullable Boolean excludeCompliantResources;
 
-    public Optional<Boolean> getExcludeCompliantResources() {
+    public Optional<Boolean> excludeCompliantResources() {
         return this.excludeCompliantResources == null ? Optional.empty() : Optional.ofNullable(this.excludeCompliantResources);
     }
 
@@ -35,7 +35,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="includeComplianceDetails")
       private final @Nullable Boolean includeComplianceDetails;
 
-    public Optional<Boolean> getIncludeComplianceDetails() {
+    public Optional<Boolean> includeComplianceDetails() {
         return this.includeComplianceDetails == null ? Optional.empty() : Optional.ofNullable(this.includeComplianceDetails);
     }
 
@@ -46,7 +46,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceArnLists")
       private final @Nullable List<String> resourceArnLists;
 
-    public List<String> getResourceArnLists() {
+    public List<String> resourceArnLists() {
         return this.resourceArnLists == null ? List.of() : this.resourceArnLists;
     }
 
@@ -57,7 +57,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceTypeFilters")
       private final @Nullable List<String> resourceTypeFilters;
 
-    public List<String> getResourceTypeFilters() {
+    public List<String> resourceTypeFilters() {
         return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
     }
 
@@ -68,7 +68,7 @@ public final class GetResourcesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tagFilters")
       private final @Nullable List<GetResourcesTagFilter> tagFilters;
 
-    public List<GetResourcesTagFilter> getTagFilters() {
+    public List<GetResourcesTagFilter> tagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 

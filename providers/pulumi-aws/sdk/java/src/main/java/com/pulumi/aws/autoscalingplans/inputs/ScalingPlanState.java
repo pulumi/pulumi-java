@@ -26,7 +26,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationSource")
       private final @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
 
-    public Output<ScalingPlanApplicationSourceGetArgs> getApplicationSource() {
+    public Output<ScalingPlanApplicationSourceGetArgs> applicationSource() {
         return this.applicationSource == null ? Codegen.empty() : this.applicationSource;
     }
 
@@ -37,7 +37,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingInstructions")
       private final @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
 
-    public Output<List<ScalingPlanScalingInstructionGetArgs>> getScalingInstructions() {
+    public Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions() {
         return this.scalingInstructions == null ? Codegen.empty() : this.scalingInstructions;
     }
 
@@ -59,7 +59,7 @@ public final class ScalingPlanState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingPlanVersion")
       private final @Nullable Output<Integer> scalingPlanVersion;
 
-    public Output<Integer> getScalingPlanVersion() {
+    public Output<Integer> scalingPlanVersion() {
         return this.scalingPlanVersion == null ? Codegen.empty() : this.scalingPlanVersion;
     }
 

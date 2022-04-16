@@ -21,7 +21,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleGetArgs extends
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 

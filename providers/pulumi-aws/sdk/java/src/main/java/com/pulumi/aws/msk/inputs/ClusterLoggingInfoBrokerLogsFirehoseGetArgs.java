@@ -23,7 +23,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends com.pulum
     @Import(name="deliveryStream")
       private final @Nullable Output<String> deliveryStream;
 
-    public Output<String> getDeliveryStream() {
+    public Output<String> deliveryStream() {
         return this.deliveryStream == null ? Codegen.empty() : this.deliveryStream;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends com.pulum
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

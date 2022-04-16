@@ -49,35 +49,35 @@ public final class GetPortfolioConstraintsResult {
         this.productId = productId;
     }
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * List of information about the constraints. See details below.
      * 
     */
-    public List<GetPortfolioConstraintsDetail> getDetails() {
+    public List<GetPortfolioConstraintsDetail> details() {
         return this.details;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identifier of the portfolio the product resides in. The constraint applies only to the instance of the product that lives within this portfolio.
      * 
     */
-    public String getPortfolioId() {
+    public String portfolioId() {
         return this.portfolioId;
     }
     /**
      * Identifier of the product the constraint applies to. A constraint applies to a specific instance of a product within a certain portfolio.
      * 
     */
-    public Optional<String> getProductId() {
+    public Optional<String> productId() {
         return Optional.ofNullable(this.productId);
     }
 

@@ -35,14 +35,14 @@ public final class IntegrationResponseParameter {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
      * 
     */
-    public Map<String,String> getMappings() {
+    public Map<String,String> mappings() {
         return this.mappings;
     }
     /**
      * The HTTP status code in the range 200-599.
      * 
     */
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

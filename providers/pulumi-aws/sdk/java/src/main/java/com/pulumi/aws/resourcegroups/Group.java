@@ -42,7 +42,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS for this resource group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A description of the resource group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The resource group's name. A resource group name can have a maximum of 127 characters, including letters, numbers, hyphens, dots, and underscores. The name cannot start with `AWS` or `aws`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A `resource_query` block. Resource queries are documented below.
      * 
      */
-    public Output<GroupResourceQuery> getResourceQuery() {
+    public Output<GroupResourceQuery> resourceQuery() {
         return this.resourceQuery;
     }
     /**
@@ -98,7 +98,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

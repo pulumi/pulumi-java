@@ -26,7 +26,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="csvClassifier")
       private final @Nullable Output<ClassifierCsvClassifierGetArgs> csvClassifier;
 
-    public Output<ClassifierCsvClassifierGetArgs> getCsvClassifier() {
+    public Output<ClassifierCsvClassifierGetArgs> csvClassifier() {
         return this.csvClassifier == null ? Codegen.empty() : this.csvClassifier;
     }
 
@@ -37,7 +37,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="grokClassifier")
       private final @Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier;
 
-    public Output<ClassifierGrokClassifierGetArgs> getGrokClassifier() {
+    public Output<ClassifierGrokClassifierGetArgs> grokClassifier() {
         return this.grokClassifier == null ? Codegen.empty() : this.grokClassifier;
     }
 
@@ -48,7 +48,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jsonClassifier")
       private final @Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier;
 
-    public Output<ClassifierJsonClassifierGetArgs> getJsonClassifier() {
+    public Output<ClassifierJsonClassifierGetArgs> jsonClassifier() {
         return this.jsonClassifier == null ? Codegen.empty() : this.jsonClassifier;
     }
 
@@ -59,7 +59,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class ClassifierState extends com.pulumi.resources.ResourceArgs {
     @Import(name="xmlClassifier")
       private final @Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier;
 
-    public Output<ClassifierXmlClassifierGetArgs> getXmlClassifier() {
+    public Output<ClassifierXmlClassifierGetArgs> xmlClassifier() {
         return this.xmlClassifier == null ? Codegen.empty() : this.xmlClassifier;
     }
 

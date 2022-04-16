@@ -51,7 +51,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Canary.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -65,7 +65,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return configuration for canary artifacts, including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See Artifact Config.
      * 
      */
-    public Output</* @Nullable */ CanaryArtifactConfig> getArtifactConfig() {
+    public Output</* @Nullable */ CanaryArtifactConfig> artifactConfig() {
         return this.artifactConfig;
     }
     /**
@@ -79,7 +79,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
      * 
      */
-    public Output<String> getArtifactS3Location() {
+    public Output<String> artifactS3Location() {
         return this.artifactS3Location;
     }
     /**
@@ -93,7 +93,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return ARN of the Lambda function that is used as your canary's engine.
      * 
      */
-    public Output<String> getEngineArn() {
+    public Output<String> engineArn() {
         return this.engineArn;
     }
     /**
@@ -107,7 +107,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
      * 
      */
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -121,7 +121,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    public Output</* @Nullable */ Integer> getFailureRetentionPeriod() {
+    public Output</* @Nullable */ Integer> failureRetentionPeriod() {
         return this.failureRetentionPeriod;
     }
     /**
@@ -135,7 +135,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
      * 
      */
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler;
     }
     /**
@@ -149,7 +149,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Name for this canary. Has a maximum length of 21 characters. Valid characters are lowercase alphanumeric, hyphen, or underscore.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +163,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Configuration block for individual canary runs. Detailed below.
      * 
      */
-    public Output<CanaryRunConfig> getRunConfig() {
+    public Output<CanaryRunConfig> runConfig() {
         return this.runConfig;
     }
     /**
@@ -177,7 +177,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
      * 
      */
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
@@ -191,7 +191,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
      * 
      */
-    public Output</* @Nullable */ String> getS3Bucket() {
+    public Output</* @Nullable */ String> s3Bucket() {
         return this.s3Bucket;
     }
     /**
@@ -205,7 +205,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return S3 key of your script. **Conflicts with `zip_file`.**
      * 
      */
-    public Output</* @Nullable */ String> getS3Key() {
+    public Output</* @Nullable */ String> s3Key() {
         return this.s3Key;
     }
     /**
@@ -219,7 +219,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return S3 version ID of your script. **Conflicts with `zip_file`.**
      * 
      */
-    public Output</* @Nullable */ String> getS3Version() {
+    public Output</* @Nullable */ String> s3Version() {
         return this.s3Version;
     }
     /**
@@ -233,7 +233,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
      * 
      */
-    public Output<CanarySchedule> getSchedule() {
+    public Output<CanarySchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -247,7 +247,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return ARN of the Lambda layer where Synthetics stores the canary script code.
      * 
      */
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn;
     }
     /**
@@ -261,7 +261,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Whether to run or stop the canary.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStartCanary() {
+    public Output</* @Nullable */ Boolean> startCanary() {
         return this.startCanary;
     }
     /**
@@ -275,7 +275,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Canary status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -289,7 +289,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    public Output</* @Nullable */ Integer> getSuccessRetentionPeriod() {
+    public Output</* @Nullable */ Integer> successRetentionPeriod() {
         return this.successRetentionPeriod;
     }
     /**
@@ -303,7 +303,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -317,7 +317,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -331,7 +331,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Structure that contains information about when the canary was created, modified, and most recently run. see Timeline.
      * 
      */
-    public Output<List<CanaryTimeline>> getTimelines() {
+    public Output<List<CanaryTimeline>> timelines() {
         return this.timelines;
     }
     /**
@@ -345,7 +345,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ CanaryVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ CanaryVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
     /**
@@ -359,7 +359,7 @@ public class Canary extends com.pulumi.resources.CustomResource {
      * @return ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
      * 
      */
-    public Output</* @Nullable */ String> getZipFile() {
+    public Output</* @Nullable */ String> zipFile() {
         return this.zipFile;
     }
 

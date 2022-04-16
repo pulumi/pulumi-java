@@ -24,7 +24,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
     @Import(name="ownerInformation")
       private final @Nullable Output<String> ownerInformation;
 
-    public Output<String> getOwnerInformation() {
+    public Output<String> ownerInformation() {
         return this.ownerInformation == null ? Codegen.empty() : this.ownerInformation;
     }
 
@@ -57,7 +57,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -69,7 +69,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
     @Import(name="targets", required=true)
       private final Output<List<MaintenanceWindowTargetTargetArgs>> targets;
 
-    public Output<List<MaintenanceWindowTargetTargetArgs>> getTargets() {
+    public Output<List<MaintenanceWindowTargetTargetArgs>> targets() {
         return this.targets;
     }
 
@@ -80,7 +80,7 @@ public final class MaintenanceWindowTargetArgs extends com.pulumi.resources.Reso
     @Import(name="windowId", required=true)
       private final Output<String> windowId;
 
-    public Output<String> getWindowId() {
+    public Output<String> windowId() {
         return this.windowId;
     }
 

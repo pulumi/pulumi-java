@@ -46,28 +46,28 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
      * The claim name that must be present in the token, for example, "isAdmin" or "paid".
      * 
     */
-    public String getClaim() {
+    public String claim() {
         return this.claim;
     }
     /**
      * The match condition that specifies how closely the claim value in the IdP token must match Value.
      * 
     */
-    public String getMatchType() {
+    public String matchType() {
         return this.matchType;
     }
     /**
      * The role ARN.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * A brief string that the claim must match, for example, "paid" or "yes".
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

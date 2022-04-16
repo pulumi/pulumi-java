@@ -162,140 +162,140 @@ public final class GetSnapshotResult {
      * Specifies the allocated storage size in gigabytes (GB).
      * 
     */
-    public Integer getAllocatedStorage() {
+    public Integer allocatedStorage() {
         return this.allocatedStorage;
     }
     /**
      * Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public Optional<String> getDbInstanceIdentifier() {
+    public Optional<String> dbInstanceIdentifier() {
         return Optional.ofNullable(this.dbInstanceIdentifier);
     }
     /**
      * The Amazon Resource Name (ARN) for the DB snapshot.
      * 
     */
-    public String getDbSnapshotArn() {
+    public String dbSnapshotArn() {
         return this.dbSnapshotArn;
     }
-    public Optional<String> getDbSnapshotIdentifier() {
+    public Optional<String> dbSnapshotIdentifier() {
         return Optional.ofNullable(this.dbSnapshotIdentifier);
     }
     /**
      * Specifies whether the DB snapshot is encrypted.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
     /**
      * Specifies the name of the database engine.
      * 
     */
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
     /**
      * Specifies the version of the database engine.
      * 
     */
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getIncludePublic() {
+    public Optional<Boolean> includePublic() {
         return Optional.ofNullable(this.includePublic);
     }
-    public Optional<Boolean> getIncludeShared() {
+    public Optional<Boolean> includeShared() {
         return Optional.ofNullable(this.includeShared);
     }
     /**
      * Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
      * 
     */
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * License model information for the restored DB instance.
      * 
     */
-    public String getLicenseModel() {
+    public String licenseModel() {
         return this.licenseModel;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * Provides the option group name for the DB snapshot.
      * 
     */
-    public String getOptionGroupName() {
+    public String optionGroupName() {
         return this.optionGroupName;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * 
     */
-    public String getSnapshotCreateTime() {
+    public String snapshotCreateTime() {
         return this.snapshotCreateTime;
     }
-    public Optional<String> getSnapshotType() {
+    public Optional<String> snapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
     /**
      * The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
      * 
     */
-    public String getSourceDbSnapshotIdentifier() {
+    public String sourceDbSnapshotIdentifier() {
         return this.sourceDbSnapshotIdentifier;
     }
     /**
      * The region that the DB snapshot was created in or copied from.
      * 
     */
-    public String getSourceRegion() {
+    public String sourceRegion() {
         return this.sourceRegion;
     }
     /**
      * Specifies the status of this DB snapshot.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Specifies the storage type associated with DB snapshot.
      * 
     */
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
     /**
      * Specifies the ID of the VPC associated with the DB snapshot.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

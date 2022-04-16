@@ -21,7 +21,7 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseConfigurationArn", required=true)
       private final Output<String> licenseConfigurationArn;
 
-    public Output<String> getLicenseConfigurationArn() {
+    public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 
@@ -32,7 +32,7 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

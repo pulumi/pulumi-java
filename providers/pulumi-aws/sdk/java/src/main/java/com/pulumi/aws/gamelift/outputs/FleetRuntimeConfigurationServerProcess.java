@@ -42,21 +42,21 @@ public final class FleetRuntimeConfigurationServerProcess {
      * Number of server processes using this configuration to run concurrently on an instance.
      * 
     */
-    public Integer getConcurrentExecutions() {
+    public Integer concurrentExecutions() {
         return this.concurrentExecutions;
     }
     /**
      * Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
      * 
     */
-    public String getLaunchPath() {
+    public String launchPath() {
         return this.launchPath;
     }
     /**
      * Optional list of parameters to pass to the server executable on launch.
      * 
     */
-    public Optional<String> getParameters() {
+    public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 

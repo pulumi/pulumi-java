@@ -24,7 +24,7 @@ public final class HumanTaskUIArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="humanTaskUiName", required=true)
       private final Output<String> humanTaskUiName;
 
-    public Output<String> getHumanTaskUiName() {
+    public Output<String> humanTaskUiName() {
         return this.humanTaskUiName;
     }
 
@@ -35,7 +35,7 @@ public final class HumanTaskUIArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -46,7 +46,7 @@ public final class HumanTaskUIArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uiTemplate", required=true)
       private final Output<HumanTaskUIUiTemplateArgs> uiTemplate;
 
-    public Output<HumanTaskUIUiTemplateArgs> getUiTemplate() {
+    public Output<HumanTaskUIUiTemplateArgs> uiTemplate() {
         return this.uiTemplate;
     }
 

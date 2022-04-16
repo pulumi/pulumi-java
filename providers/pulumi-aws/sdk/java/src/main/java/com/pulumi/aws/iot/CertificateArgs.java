@@ -23,7 +23,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="active", required=true)
       private final Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="csr")
       private final @Nullable Output<String> csr;
 
-    public Output<String> getCsr() {
+    public Output<String> csr() {
         return this.csr == null ? Codegen.empty() : this.csr;
     }
 

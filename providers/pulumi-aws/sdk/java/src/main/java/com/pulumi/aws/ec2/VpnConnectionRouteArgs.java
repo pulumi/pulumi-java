@@ -21,7 +21,7 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
     @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
     }
 
@@ -32,7 +32,7 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
     @Import(name="vpnConnectionId", required=true)
       private final Output<String> vpnConnectionId;
 
-    public Output<String> getVpnConnectionId() {
+    public Output<String> vpnConnectionId() {
         return this.vpnConnectionId;
     }
 

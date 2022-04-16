@@ -23,7 +23,7 @@ public final class BrokerConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -34,7 +34,7 @@ public final class BrokerConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 

@@ -19,7 +19,7 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -30,7 +30,7 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="hasPublicAccessPolicy")
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
     }
 
@@ -41,7 +41,7 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

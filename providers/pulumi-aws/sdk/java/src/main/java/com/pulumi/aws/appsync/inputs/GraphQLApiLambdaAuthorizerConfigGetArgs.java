@@ -23,7 +23,7 @@ public final class GraphQLApiLambdaAuthorizerConfigGetArgs extends com.pulumi.re
     @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Output<Integer> getAuthorizerResultTtlInSeconds() {
+    public Output<Integer> authorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
     }
 
@@ -34,7 +34,7 @@ public final class GraphQLApiLambdaAuthorizerConfigGetArgs extends com.pulumi.re
     @Import(name="authorizerUri", required=true)
       private final Output<String> authorizerUri;
 
-    public Output<String> getAuthorizerUri() {
+    public Output<String> authorizerUri() {
         return this.authorizerUri;
     }
 
@@ -45,7 +45,7 @@ public final class GraphQLApiLambdaAuthorizerConfigGetArgs extends com.pulumi.re
     @Import(name="identityValidationExpression")
       private final @Nullable Output<String> identityValidationExpression;
 
-    public Output<String> getIdentityValidationExpression() {
+    public Output<String> identityValidationExpression() {
         return this.identityValidationExpression == null ? Codegen.empty() : this.identityValidationExpression;
     }
 

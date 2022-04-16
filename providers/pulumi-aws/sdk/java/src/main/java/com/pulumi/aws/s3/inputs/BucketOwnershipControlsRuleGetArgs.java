@@ -21,7 +21,7 @@ public final class BucketOwnershipControlsRuleGetArgs extends com.pulumi.resourc
     @Import(name="objectOwnership", required=true)
       private final Output<String> objectOwnership;
 
-    public Output<String> getObjectOwnership() {
+    public Output<String> objectOwnership() {
         return this.objectOwnership;
     }
 

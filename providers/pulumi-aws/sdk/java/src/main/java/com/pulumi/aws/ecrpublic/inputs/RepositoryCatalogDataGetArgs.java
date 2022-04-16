@@ -23,7 +23,7 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
     @Import(name="aboutText")
       private final @Nullable Output<String> aboutText;
 
-    public Output<String> getAboutText() {
+    public Output<String> aboutText() {
         return this.aboutText == null ? Codegen.empty() : this.aboutText;
     }
 
@@ -34,7 +34,7 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
     @Import(name="architectures")
       private final @Nullable Output<List<String>> architectures;
 
-    public Output<List<String>> getArchitectures() {
+    public Output<List<String>> architectures() {
         return this.architectures == null ? Codegen.empty() : this.architectures;
     }
 
@@ -45,7 +45,7 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
     @Import(name="logoImageBlob")
       private final @Nullable Output<String> logoImageBlob;
 
-    public Output<String> getLogoImageBlob() {
+    public Output<String> logoImageBlob() {
         return this.logoImageBlob == null ? Codegen.empty() : this.logoImageBlob;
     }
 
@@ -67,7 +67,7 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
     @Import(name="operatingSystems")
       private final @Nullable Output<List<String>> operatingSystems;
 
-    public Output<List<String>> getOperatingSystems() {
+    public Output<List<String>> operatingSystems() {
         return this.operatingSystems == null ? Codegen.empty() : this.operatingSystems;
     }
 
@@ -78,7 +78,7 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
     @Import(name="usageText")
       private final @Nullable Output<String> usageText;
 
-    public Output<String> getUsageText() {
+    public Output<String> usageText() {
         return this.usageText == null ? Codegen.empty() : this.usageText;
     }
 

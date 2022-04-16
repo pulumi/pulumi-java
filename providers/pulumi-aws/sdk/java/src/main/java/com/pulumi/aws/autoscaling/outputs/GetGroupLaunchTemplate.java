@@ -35,17 +35,17 @@ public final class GetGroupLaunchTemplate {
      * Name of the Auto Scaling Group.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specify the exact name of the desired autoscaling group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

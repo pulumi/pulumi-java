@@ -23,7 +23,7 @@ public final class OntapFileSystemDiskIopsConfigurationArgs extends com.pulumi.r
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
@@ -34,7 +34,7 @@ public final class OntapFileSystemDiskIopsConfigurationArgs extends com.pulumi.r
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

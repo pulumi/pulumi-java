@@ -25,7 +25,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiKeyRequired")
       private final @Nullable Output<Boolean> apiKeyRequired;
 
-    public Output<Boolean> getApiKeyRequired() {
+    public Output<Boolean> apiKeyRequired() {
         return this.apiKeyRequired == null ? Codegen.empty() : this.apiKeyRequired;
     }
 
@@ -36,7 +36,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorization")
       private final @Nullable Output<String> authorization;
 
-    public Output<String> getAuthorization() {
+    public Output<String> authorization() {
         return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
@@ -47,7 +47,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationScopes")
       private final @Nullable Output<List<String>> authorizationScopes;
 
-    public Output<List<String>> getAuthorizationScopes() {
+    public Output<List<String>> authorizationScopes() {
         return this.authorizationScopes == null ? Codegen.empty() : this.authorizationScopes;
     }
 
@@ -58,7 +58,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerId")
       private final @Nullable Output<String> authorizerId;
 
-    public Output<String> getAuthorizerId() {
+    public Output<String> authorizerId() {
         return this.authorizerId == null ? Codegen.empty() : this.authorizerId;
     }
 
@@ -69,7 +69,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -80,7 +80,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationName")
       private final @Nullable Output<String> operationName;
 
-    public Output<String> getOperationName() {
+    public Output<String> operationName() {
         return this.operationName == null ? Codegen.empty() : this.operationName;
     }
 
@@ -93,7 +93,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestModels")
       private final @Nullable Output<Map<String,String>> requestModels;
 
-    public Output<Map<String,String>> getRequestModels() {
+    public Output<Map<String,String>> requestModels() {
         return this.requestModels == null ? Codegen.empty() : this.requestModels;
     }
 
@@ -105,7 +105,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestParameters")
       private final @Nullable Output<Map<String,Boolean>> requestParameters;
 
-    public Output<Map<String,Boolean>> getRequestParameters() {
+    public Output<Map<String,Boolean>> requestParameters() {
         return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
     }
 
@@ -116,7 +116,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requestValidatorId")
       private final @Nullable Output<String> requestValidatorId;
 
-    public Output<String> getRequestValidatorId() {
+    public Output<String> requestValidatorId() {
         return this.requestValidatorId == null ? Codegen.empty() : this.requestValidatorId;
     }
 
@@ -127,7 +127,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -138,7 +138,7 @@ public final class MethodState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 

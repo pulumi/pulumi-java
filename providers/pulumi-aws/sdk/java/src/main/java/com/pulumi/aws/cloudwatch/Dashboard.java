@@ -40,7 +40,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the dashboard.
      * 
      */
-    public Output<String> getDashboardArn() {
+    public Output<String> dashboardArn() {
         return this.dashboardArn;
     }
     /**
@@ -54,7 +54,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
      * 
      */
-    public Output<String> getDashboardBody() {
+    public Output<String> dashboardBody() {
         return this.dashboardBody;
     }
     /**
@@ -68,7 +68,7 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return The name of the dashboard.
      * 
      */
-    public Output<String> getDashboardName() {
+    public Output<String> dashboardName() {
         return this.dashboardName;
     }
 

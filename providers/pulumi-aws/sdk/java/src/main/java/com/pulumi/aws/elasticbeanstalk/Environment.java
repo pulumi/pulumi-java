@@ -66,7 +66,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * the configuration.
      * 
      */
-    public Output<List<EnvironmentAllSetting>> getAllSettings() {
+    public Output<List<EnvironmentAllSetting>> allSettings() {
         return this.allSettings;
     }
     /**
@@ -82,13 +82,13 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * to be deployed
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -102,7 +102,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The autoscaling groups used by this Environment.
      * 
      */
-    public Output<List<String>> getAutoscalingGroups() {
+    public Output<List<String>> autoscalingGroups() {
         return this.autoscalingGroups;
     }
     /**
@@ -116,7 +116,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Fully qualified DNS name for this Environment.
      * 
      */
-    public Output<String> getCname() {
+    public Output<String> cname() {
         return this.cname;
     }
     /**
@@ -132,7 +132,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * the Environment.
      * 
      */
-    public Output<String> getCnamePrefix() {
+    public Output<String> cnamePrefix() {
         return this.cnamePrefix;
     }
     /**
@@ -146,7 +146,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Short description of the Environment
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -160,7 +160,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The URL to the Load Balancer for this Environment
      * 
      */
-    public Output<String> getEndpointUrl() {
+    public Output<String> endpointUrl() {
         return this.endpointUrl;
     }
     /**
@@ -174,7 +174,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Instances used by this Environment.
      * 
      */
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances;
     }
     /**
@@ -188,7 +188,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Launch configurations in use by this Environment.
      * 
      */
-    public Output<List<String>> getLaunchConfigurations() {
+    public Output<List<String>> launchConfigurations() {
         return this.launchConfigurations;
     }
     /**
@@ -202,7 +202,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Elastic load balancers in use by this Environment.
      * 
      */
-    public Output<List<String>> getLoadBalancers() {
+    public Output<List<String>> loadBalancers() {
         return this.loadBalancers;
     }
     /**
@@ -218,7 +218,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * in the application URL
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -234,7 +234,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * to use in deployment
      * 
      */
-    public Output<String> getPlatformArn() {
+    public Output<String> platformArn() {
         return this.platformArn;
     }
     /**
@@ -254,7 +254,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * use the default behavior, which is an exponential backoff
      * 
      */
-    public Output</* @Nullable */ String> getPollInterval() {
+    public Output</* @Nullable */ String> pollInterval() {
         return this.pollInterval;
     }
     /**
@@ -268,7 +268,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return SQS queues in use by this Environment.
      * 
      */
-    public Output<List<String>> getQueues() {
+    public Output<List<String>> queues() {
         return this.queues;
     }
     /**
@@ -286,7 +286,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * below in Option Settings
      * 
      */
-    public Output</* @Nullable */ List<EnvironmentSetting>> getSettings() {
+    public Output</* @Nullable */ List<EnvironmentSetting>> settings() {
         return this.settings;
     }
     /**
@@ -302,7 +302,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    public Output<String> getSolutionStackName() {
+    public Output<String> solutionStackName() {
         return this.solutionStackName;
     }
     /**
@@ -316,7 +316,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A set of tags to apply to the Environment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -330,7 +330,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -346,7 +346,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * template to use in deployment
      * 
      */
-    public Output</* @Nullable */ String> getTemplateName() {
+    public Output</* @Nullable */ String> templateName() {
         return this.templateName;
     }
     /**
@@ -362,7 +362,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * or `WebServer`. If tier is left blank `WebServer` will be used.
      * 
      */
-    public Output</* @Nullable */ String> getTier() {
+    public Output</* @Nullable */ String> tier() {
         return this.tier;
     }
     /**
@@ -376,7 +376,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return Autoscaling triggers in use by this Environment.
      * 
      */
-    public Output<List<String>> getTriggers() {
+    public Output<List<String>> triggers() {
         return this.triggers;
     }
     /**
@@ -392,7 +392,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * to use in deployment.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
     /**
@@ -412,7 +412,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * out.
      * 
      */
-    public Output</* @Nullable */ String> getWaitForReadyTimeout() {
+    public Output</* @Nullable */ String> waitForReadyTimeout() {
         return this.waitForReadyTimeout;
     }
 

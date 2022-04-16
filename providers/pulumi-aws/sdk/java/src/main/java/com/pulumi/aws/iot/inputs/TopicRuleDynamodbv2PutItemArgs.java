@@ -21,7 +21,7 @@ public final class TopicRuleDynamodbv2PutItemArgs extends com.pulumi.resources.R
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

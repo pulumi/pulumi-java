@@ -32,14 +32,14 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
      * The encryption-at-rest mode for encrypting Data Catalog data.
      * 
     */
-    public String getCatalogEncryptionMode() {
+    public String catalogEncryptionMode() {
         return this.catalogEncryptionMode;
     }
     /**
      * The ARN of the AWS KMS key to use for encryption at rest.
      * 
     */
-    public String getSseAwsKmsKeyId() {
+    public String sseAwsKmsKeyId() {
         return this.sseAwsKmsKeyId;
     }
 

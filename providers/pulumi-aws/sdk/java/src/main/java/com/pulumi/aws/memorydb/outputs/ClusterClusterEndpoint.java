@@ -35,14 +35,14 @@ public final class ClusterClusterEndpoint {
      * DNS hostname of the node.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The port number on which each of the nodes accepts connections. Defaults to `6379`.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

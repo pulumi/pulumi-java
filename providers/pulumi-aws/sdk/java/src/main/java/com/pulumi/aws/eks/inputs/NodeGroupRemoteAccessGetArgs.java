@@ -23,7 +23,7 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
     @Import(name="ec2SshKey")
       private final @Nullable Output<String> ec2SshKey;
 
-    public Output<String> getEc2SshKey() {
+    public Output<String> ec2SshKey() {
         return this.ec2SshKey == null ? Codegen.empty() : this.ec2SshKey;
     }
 
@@ -34,7 +34,7 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
     @Import(name="sourceSecurityGroupIds")
       private final @Nullable Output<List<String>> sourceSecurityGroupIds;
 
-    public Output<List<String>> getSourceSecurityGroupIds() {
+    public Output<List<String>> sourceSecurityGroupIds() {
         return this.sourceSecurityGroupIds == null ? Codegen.empty() : this.sourceSecurityGroupIds;
     }
 

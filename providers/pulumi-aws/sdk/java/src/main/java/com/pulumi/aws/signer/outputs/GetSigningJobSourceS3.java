@@ -23,13 +23,13 @@ public final class GetSigningJobSourceS3 {
         this.version = version;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

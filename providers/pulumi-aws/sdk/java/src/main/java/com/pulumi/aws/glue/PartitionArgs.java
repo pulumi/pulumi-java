@@ -25,7 +25,7 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -36,7 +36,7 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -47,7 +47,7 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -58,7 +58,7 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionValues", required=true)
       private final Output<List<String>> partitionValues;
 
-    public Output<List<String>> getPartitionValues() {
+    public Output<List<String>> partitionValues() {
         return this.partitionValues;
     }
 
@@ -69,14 +69,14 @@ public final class PartitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageDescriptor")
       private final @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor;
 
-    public Output<PartitionStorageDescriptorArgs> getStorageDescriptor() {
+    public Output<PartitionStorageDescriptorArgs> storageDescriptor() {
         return this.storageDescriptor == null ? Codegen.empty() : this.storageDescriptor;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

@@ -23,7 +23,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
-    public Output<String> getAutoPlacement() {
+    public Output<String> autoPlacement() {
         return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
     }
 
@@ -45,7 +45,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -56,7 +56,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
-    public Output<String> getHostRecovery() {
+    public Output<String> hostRecovery() {
         return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
     }
 
@@ -67,7 +67,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceFamily")
       private final @Nullable Output<String> instanceFamily;
 
-    public Output<String> getInstanceFamily() {
+    public Output<String> instanceFamily() {
         return this.instanceFamily == null ? Codegen.empty() : this.instanceFamily;
     }
 
@@ -78,7 +78,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -89,7 +89,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -100,7 +100,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -111,7 +111,7 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

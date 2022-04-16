@@ -48,7 +48,7 @@ public final class BotClarificationPrompt {
      * The number of times to prompt the user for information.
      * 
     */
-    public Integer getMaxAttempts() {
+    public Integer maxAttempts() {
         return this.maxAttempts;
     }
     /**
@@ -57,7 +57,7 @@ public final class BotClarificationPrompt {
      * are documented under message.
      * 
     */
-    public List<BotClarificationPromptMessage> getMessages() {
+    public List<BotClarificationPromptMessage> messages() {
         return this.messages;
     }
     /**
@@ -66,7 +66,7 @@ public final class BotClarificationPrompt {
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
      * 
     */
-    public Optional<String> getResponseCard() {
+    public Optional<String> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
 

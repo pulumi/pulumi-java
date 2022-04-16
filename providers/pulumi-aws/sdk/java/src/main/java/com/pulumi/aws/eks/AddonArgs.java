@@ -24,7 +24,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName", required=true)
       private final Output<String> addonName;
 
-    public Output<String> getAddonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
 
@@ -36,7 +36,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonVersion")
       private final @Nullable Output<String> addonVersion;
 
-    public Output<String> getAddonVersion() {
+    public Output<String> addonVersion() {
         return this.addonVersion == null ? Codegen.empty() : this.addonVersion;
     }
 
@@ -47,7 +47,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -60,7 +60,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resolveConflicts")
       private final @Nullable Output<String> resolveConflicts;
 
-    public Output<String> getResolveConflicts() {
+    public Output<String> resolveConflicts() {
         return this.resolveConflicts == null ? Codegen.empty() : this.resolveConflicts;
     }
 
@@ -76,7 +76,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountRoleArn")
       private final @Nullable Output<String> serviceAccountRoleArn;
 
-    public Output<String> getServiceAccountRoleArn() {
+    public Output<String> serviceAccountRoleArn() {
         return this.serviceAccountRoleArn == null ? Codegen.empty() : this.serviceAccountRoleArn;
     }
 
@@ -87,7 +87,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

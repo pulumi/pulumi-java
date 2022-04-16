@@ -23,7 +23,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="engine")
       private final @Nullable String engine;
 
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
     }
 
@@ -34,7 +34,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="engineVersion")
       private final @Nullable String engineVersion;
 
-    public Optional<String> getEngineVersion() {
+    public Optional<String> engineVersion() {
         return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
     }
 
@@ -45,7 +45,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="instanceClass")
       private final @Nullable String instanceClass;
 
-    public Optional<String> getInstanceClass() {
+    public Optional<String> instanceClass() {
         return this.instanceClass == null ? Optional.empty() : Optional.ofNullable(this.instanceClass);
     }
 
@@ -56,7 +56,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="licenseModel")
       private final @Nullable String licenseModel;
 
-    public Optional<String> getLicenseModel() {
+    public Optional<String> licenseModel() {
         return this.licenseModel == null ? Optional.empty() : Optional.ofNullable(this.licenseModel);
     }
 
@@ -67,7 +67,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="preferredInstanceClasses")
       private final @Nullable List<String> preferredInstanceClasses;
 
-    public List<String> getPreferredInstanceClasses() {
+    public List<String> preferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
     }
 
@@ -78,7 +78,7 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
     @Import(name="vpc")
       private final @Nullable Boolean vpc;
 
-    public Optional<Boolean> getVpc() {
+    public Optional<Boolean> vpc() {
         return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);
     }
 

@@ -26,7 +26,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -37,7 +37,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="campaignHook")
       private final @Nullable Output<AppCampaignHookGetArgs> campaignHook;
 
-    public Output<AppCampaignHookGetArgs> getCampaignHook() {
+    public Output<AppCampaignHookGetArgs> campaignHook() {
         return this.campaignHook == null ? Codegen.empty() : this.campaignHook;
     }
 
@@ -59,7 +59,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="limits")
       private final @Nullable Output<AppLimitsGetArgs> limits;
 
-    public Output<AppLimitsGetArgs> getLimits() {
+    public Output<AppLimitsGetArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -70,7 +70,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -92,7 +92,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="quietTime")
       private final @Nullable Output<AppQuietTimeGetArgs> quietTime;
 
-    public Output<AppQuietTimeGetArgs> getQuietTime() {
+    public Output<AppQuietTimeGetArgs> quietTime() {
         return this.quietTime == null ? Codegen.empty() : this.quietTime;
     }
 
@@ -103,7 +103,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class AppState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

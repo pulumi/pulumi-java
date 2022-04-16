@@ -30,7 +30,7 @@ public final class NfsFileShareCacheAttributes {
      * to first refresh that directory's contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
      * 
     */
-    public Optional<Integer> getCacheStaleTimeoutInSeconds() {
+    public Optional<Integer> cacheStaleTimeoutInSeconds() {
         return Optional.ofNullable(this.cacheStaleTimeoutInSeconds);
     }
 

@@ -25,7 +25,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedMasterCount", required=true)
       private final Integer dedicatedMasterCount;
 
-    public Integer getDedicatedMasterCount() {
+    public Integer dedicatedMasterCount() {
         return this.dedicatedMasterCount;
     }
 
@@ -36,7 +36,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedMasterEnabled", required=true)
       private final Boolean dedicatedMasterEnabled;
 
-    public Boolean getDedicatedMasterEnabled() {
+    public Boolean dedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled;
     }
 
@@ -47,7 +47,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="dedicatedMasterType", required=true)
       private final String dedicatedMasterType;
 
-    public String getDedicatedMasterType() {
+    public String dedicatedMasterType() {
         return this.dedicatedMasterType;
     }
 
@@ -58,7 +58,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="instanceCount", required=true)
       private final Integer instanceCount;
 
-    public Integer getInstanceCount() {
+    public Integer instanceCount() {
         return this.instanceCount;
     }
 
@@ -69,7 +69,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -80,7 +80,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="warmCount", required=true)
       private final Integer warmCount;
 
-    public Integer getWarmCount() {
+    public Integer warmCount() {
         return this.warmCount;
     }
 
@@ -91,7 +91,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="warmEnabled")
       private final @Nullable Boolean warmEnabled;
 
-    public Optional<Boolean> getWarmEnabled() {
+    public Optional<Boolean> warmEnabled() {
         return this.warmEnabled == null ? Optional.empty() : Optional.ofNullable(this.warmEnabled);
     }
 
@@ -102,7 +102,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="warmType", required=true)
       private final String warmType;
 
-    public String getWarmType() {
+    public String warmType() {
         return this.warmType;
     }
 
@@ -113,7 +113,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="zoneAwarenessConfigs", required=true)
       private final List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
 
-    public List<GetDomainClusterConfigZoneAwarenessConfig> getZoneAwarenessConfigs() {
+    public List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs() {
         return this.zoneAwarenessConfigs;
     }
 
@@ -124,7 +124,7 @@ public final class GetDomainClusterConfig extends com.pulumi.resources.InvokeArg
     @Import(name="zoneAwarenessEnabled", required=true)
       private final Boolean zoneAwarenessEnabled;
 
-    public Boolean getZoneAwarenessEnabled() {
+    public Boolean zoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled;
     }
 

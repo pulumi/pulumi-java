@@ -17,28 +17,28 @@ public final class GetLoadBalancerAccessLogs extends com.pulumi.resources.Invoke
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketPrefix", required=true)
       private final String bucketPrefix;
 
-    public String getBucketPrefix() {
+    public String bucketPrefix() {
         return this.bucketPrefix;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="interval", required=true)
       private final Integer interval;
 
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
 

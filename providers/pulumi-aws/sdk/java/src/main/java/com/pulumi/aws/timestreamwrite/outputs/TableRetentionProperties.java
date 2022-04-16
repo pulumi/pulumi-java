@@ -32,14 +32,14 @@ public final class TableRetentionProperties {
      * The duration for which data must be stored in the magnetic store. Minimum value of 1. Maximum value of 73000.
      * 
     */
-    public Integer getMagneticStoreRetentionPeriodInDays() {
+    public Integer magneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays;
     }
     /**
      * The duration for which data must be stored in the memory store. Minimum value of 1. Maximum value of 8766.
      * 
     */
-    public Integer getMemoryStoreRetentionPeriodInHours() {
+    public Integer memoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours;
     }
 

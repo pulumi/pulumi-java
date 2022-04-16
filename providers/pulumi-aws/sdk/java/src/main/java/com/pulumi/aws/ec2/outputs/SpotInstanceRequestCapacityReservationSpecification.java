@@ -35,14 +35,14 @@ public final class SpotInstanceRequestCapacityReservationSpecification {
      * Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
      * 
     */
-    public Optional<String> getCapacityReservationPreference() {
+    public Optional<String> capacityReservationPreference() {
         return Optional.ofNullable(this.capacityReservationPreference);
     }
     /**
      * Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
      * 
     */
-    public Optional<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget> getCapacityReservationTarget() {
+    public Optional<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget> capacityReservationTarget() {
         return Optional.ofNullable(this.capacityReservationTarget);
     }
 

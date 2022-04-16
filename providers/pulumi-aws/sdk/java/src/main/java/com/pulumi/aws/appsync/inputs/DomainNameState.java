@@ -22,7 +22,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appsyncDomainName")
       private final @Nullable Output<String> appsyncDomainName;
 
-    public Output<String> getAppsyncDomainName() {
+    public Output<String> appsyncDomainName() {
         return this.appsyncDomainName == null ? Codegen.empty() : this.appsyncDomainName;
     }
 
@@ -33,7 +33,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -44,7 +44,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -66,7 +66,7 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 

@@ -60,35 +60,35 @@ public final class VirtualNodeSpec {
      * The defaults for backends.
      * 
     */
-    public Optional<VirtualNodeSpecBackendDefaults> getBackendDefaults() {
+    public Optional<VirtualNodeSpecBackendDefaults> backendDefaults() {
         return Optional.ofNullable(this.backendDefaults);
     }
     /**
      * The backends to which the virtual node is expected to send outbound traffic.
      * 
     */
-    public List<VirtualNodeSpecBackend> getBackends() {
+    public List<VirtualNodeSpecBackend> backends() {
         return this.backends == null ? List.of() : this.backends;
     }
     /**
      * The listeners from which the virtual node is expected to receive inbound traffic.
      * 
     */
-    public Optional<VirtualNodeSpecListener> getListener() {
+    public Optional<VirtualNodeSpecListener> listener() {
         return Optional.ofNullable(this.listener);
     }
     /**
      * The inbound and outbound access logging information for the virtual node.
      * 
     */
-    public Optional<VirtualNodeSpecLogging> getLogging() {
+    public Optional<VirtualNodeSpecLogging> logging() {
         return Optional.ofNullable(this.logging);
     }
     /**
      * The service discovery information for the virtual node.
      * 
     */
-    public Optional<VirtualNodeSpecServiceDiscovery> getServiceDiscovery() {
+    public Optional<VirtualNodeSpecServiceDiscovery> serviceDiscovery() {
         return Optional.ofNullable(this.serviceDiscovery);
     }
 

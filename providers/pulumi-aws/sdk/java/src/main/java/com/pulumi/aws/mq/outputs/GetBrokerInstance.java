@@ -24,13 +24,13 @@ public final class GetBrokerInstance {
         this.ipAddress = ipAddress;
     }
 
-    public String getConsoleUrl() {
+    public String consoleUrl() {
         return this.consoleUrl;
     }
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints;
     }
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 

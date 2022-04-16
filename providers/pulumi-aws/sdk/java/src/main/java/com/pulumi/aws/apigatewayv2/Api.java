@@ -45,7 +45,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
      * 
      */
-    public Output<String> getApiEndpoint() {
+    public Output<String> apiEndpoint() {
         return this.apiEndpoint;
     }
     /**
@@ -63,7 +63,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * Applicable for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> getApiKeySelectionExpression() {
+    public Output</* @Nullable */ String> apiKeySelectionExpression() {
         return this.apiKeySelectionExpression;
     }
     /**
@@ -77,7 +77,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The ARN of the API.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -91,7 +91,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> getBody() {
+    public Output</* @Nullable */ String> body() {
         return this.body;
     }
     /**
@@ -105,7 +105,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ ApiCorsConfiguration> getCorsConfiguration() {
+    public Output</* @Nullable */ ApiCorsConfiguration> corsConfiguration() {
         return this.corsConfiguration;
     }
     /**
@@ -119,7 +119,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> getCredentialsArn() {
+    public Output</* @Nullable */ String> credentialsArn() {
         return this.credentialsArn;
     }
     /**
@@ -133,7 +133,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The description of the API. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -151,7 +151,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * To require that clients use a custom domain name to invoke the API, disable the default endpoint.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableExecuteApiEndpoint() {
+    public Output</* @Nullable */ Boolean> disableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint;
     }
     /**
@@ -169,7 +169,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
      */
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn;
     }
     /**
@@ -183,7 +183,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Whether warnings should return an error while API Gateway is creating or updating the resource using an OpenAPI specification. Defaults to `false`. Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getFailOnWarnings() {
+    public Output</* @Nullable */ Boolean> failOnWarnings() {
         return this.failOnWarnings;
     }
     /**
@@ -197,7 +197,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The name of the API. Must be less than or equal to 128 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -211,7 +211,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
      * 
      */
-    public Output<String> getProtocolType() {
+    public Output<String> protocolType() {
         return this.protocolType;
     }
     /**
@@ -225,7 +225,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Part of _quick create_. Specifies any [route key](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html). Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> getRouteKey() {
+    public Output</* @Nullable */ String> routeKey() {
         return this.routeKey;
     }
     /**
@@ -241,7 +241,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * Defaults to `$request.method $request.path`.
      * 
      */
-    public Output</* @Nullable */ String> getRouteSelectionExpression() {
+    public Output</* @Nullable */ String> routeSelectionExpression() {
         return this.routeSelectionExpression;
     }
     /**
@@ -255,7 +255,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the API. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -269,7 +269,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -287,7 +287,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. Applicable for HTTP APIs.
      * 
      */
-    public Output</* @Nullable */ String> getTarget() {
+    public Output</* @Nullable */ String> target() {
         return this.target;
     }
     /**
@@ -301,7 +301,7 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return A version identifier for the API. Must be between 1 and 64 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

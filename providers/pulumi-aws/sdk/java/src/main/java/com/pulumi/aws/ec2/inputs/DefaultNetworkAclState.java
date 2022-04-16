@@ -26,7 +26,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="defaultNetworkAclId")
       private final @Nullable Output<String> defaultNetworkAclId;
 
-    public Output<String> getDefaultNetworkAclId() {
+    public Output<String> defaultNetworkAclId() {
         return this.defaultNetworkAclId == null ? Codegen.empty() : this.defaultNetworkAclId;
     }
 
@@ -48,7 +48,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="egress")
       private final @Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress;
 
-    public Output<List<DefaultNetworkAclEgressGetArgs>> getEgress() {
+    public Output<List<DefaultNetworkAclEgressGetArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -59,7 +59,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="ingress")
       private final @Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress;
 
-    public Output<List<DefaultNetworkAclIngressGetArgs>> getIngress() {
+    public Output<List<DefaultNetworkAclIngressGetArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -70,7 +70,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -81,7 +81,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -92,7 +92,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -114,7 +114,7 @@ public final class DefaultNetworkAclState extends com.pulumi.resources.ResourceA
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

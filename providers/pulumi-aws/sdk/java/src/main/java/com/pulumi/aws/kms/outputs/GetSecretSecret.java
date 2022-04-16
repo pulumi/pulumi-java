@@ -29,16 +29,16 @@ public final class GetSecretSecret {
         this.payload = payload;
     }
 
-    public Map<String,String> getContext() {
+    public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 

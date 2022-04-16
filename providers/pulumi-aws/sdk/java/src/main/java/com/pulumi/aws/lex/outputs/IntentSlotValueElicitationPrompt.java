@@ -48,7 +48,7 @@ public final class IntentSlotValueElicitationPrompt {
      * The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
      * 
     */
-    public Integer getMaxAttempts() {
+    public Integer maxAttempts() {
         return this.maxAttempts;
     }
     /**
@@ -57,7 +57,7 @@ public final class IntentSlotValueElicitationPrompt {
      * Attributes are documented under message. Must contain between 1 and 15 messages.
      * 
     */
-    public List<IntentSlotValueElicitationPromptMessage> getMessages() {
+    public List<IntentSlotValueElicitationPromptMessage> messages() {
         return this.messages;
     }
     /**
@@ -66,7 +66,7 @@ public final class IntentSlotValueElicitationPrompt {
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
     */
-    public Optional<String> getResponseCard() {
+    public Optional<String> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
 

@@ -23,7 +23,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configurationSet")
       private final @Nullable Output<String> configurationSet;
 
-    public Output<String> getConfigurationSet() {
+    public Output<String> configurationSet() {
         return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
     }
 
@@ -45,7 +45,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -56,7 +56,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fromAddress", required=true)
       private final Output<String> fromAddress;
 
-    public Output<String> getFromAddress() {
+    public Output<String> fromAddress() {
         return this.fromAddress;
     }
 
@@ -67,7 +67,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity", required=true)
       private final Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
 
@@ -78,7 +78,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

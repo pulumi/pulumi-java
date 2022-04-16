@@ -63,49 +63,49 @@ public final class MysqlLayerEbsVolume {
         this.type = type;
     }
 
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * For PIOPS volumes, the IOPS per disk.
      * 
     */
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * The path to mount the EBS volume on the layer's instances.
      * 
     */
-    public String getMountPoint() {
+    public String mountPoint() {
         return this.mountPoint;
     }
     /**
      * The number of disks to use for the EBS volume.
      * 
     */
-    public Integer getNumberOfDisks() {
+    public Integer numberOfDisks() {
         return this.numberOfDisks;
     }
     /**
      * The RAID level to use for the volume.
      * 
     */
-    public Optional<String> getRaidLevel() {
+    public Optional<String> raidLevel() {
         return Optional.ofNullable(this.raidLevel);
     }
     /**
      * The size of the volume in gigabytes.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

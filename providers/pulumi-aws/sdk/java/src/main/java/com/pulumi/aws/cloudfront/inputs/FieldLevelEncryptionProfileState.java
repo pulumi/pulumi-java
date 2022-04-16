@@ -23,7 +23,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
     @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference == null ? Codegen.empty() : this.callerReference;
     }
 
@@ -34,7 +34,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -45,7 +45,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
     @Import(name="encryptionEntities")
       private final @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
 
-    public Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> getEncryptionEntities() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities() {
         return this.encryptionEntities == null ? Codegen.empty() : this.encryptionEntities;
     }
 
@@ -56,7 +56,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -67,7 +67,7 @@ public final class FieldLevelEncryptionProfileState extends com.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

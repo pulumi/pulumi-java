@@ -34,14 +34,14 @@ public final class PlanRuleCopyActionLifecycle {
      * Specifies the number of days after creation that a recovery point is moved to cold storage.
      * 
     */
-    public Optional<Integer> getColdStorageAfter() {
+    public Optional<Integer> coldStorageAfter() {
         return Optional.ofNullable(this.coldStorageAfter);
     }
     /**
      * Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
      * 
     */
-    public Optional<Integer> getDeleteAfter() {
+    public Optional<Integer> deleteAfter() {
         return Optional.ofNullable(this.deleteAfter);
     }
 

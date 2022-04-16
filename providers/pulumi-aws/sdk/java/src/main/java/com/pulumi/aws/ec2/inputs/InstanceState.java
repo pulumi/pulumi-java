@@ -38,7 +38,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ami")
       private final @Nullable Output<String> ami;
 
-    public Output<String> getAmi() {
+    public Output<String> ami() {
         return this.ami == null ? Codegen.empty() : this.ami;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -60,7 +60,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
+    public Output<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -82,7 +82,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityReservationSpecification")
       private final @Nullable Output<InstanceCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
-    public Output<InstanceCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
+    public Output<InstanceCapacityReservationSpecificationGetArgs> capacityReservationSpecification() {
         return this.capacityReservationSpecification == null ? Codegen.empty() : this.capacityReservationSpecification;
     }
 
@@ -93,7 +93,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuCoreCount")
       private final @Nullable Output<Integer> cpuCoreCount;
 
-    public Output<Integer> getCpuCoreCount() {
+    public Output<Integer> cpuCoreCount() {
         return this.cpuCoreCount == null ? Codegen.empty() : this.cpuCoreCount;
     }
 
@@ -104,7 +104,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cpuThreadsPerCore")
       private final @Nullable Output<Integer> cpuThreadsPerCore;
 
-    public Output<Integer> getCpuThreadsPerCore() {
+    public Output<Integer> cpuThreadsPerCore() {
         return this.cpuThreadsPerCore == null ? Codegen.empty() : this.cpuThreadsPerCore;
     }
 
@@ -115,7 +115,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creditSpecification")
       private final @Nullable Output<InstanceCreditSpecificationGetArgs> creditSpecification;
 
-    public Output<InstanceCreditSpecificationGetArgs> getCreditSpecification() {
+    public Output<InstanceCreditSpecificationGetArgs> creditSpecification() {
         return this.creditSpecification == null ? Codegen.empty() : this.creditSpecification;
     }
 
@@ -126,7 +126,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableApiTermination")
       private final @Nullable Output<Boolean> disableApiTermination;
 
-    public Output<Boolean> getDisableApiTermination() {
+    public Output<Boolean> disableApiTermination() {
         return this.disableApiTermination == null ? Codegen.empty() : this.disableApiTermination;
     }
 
@@ -137,7 +137,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
-    public Output<List<InstanceEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
+    public Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
@@ -148,7 +148,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
@@ -159,7 +159,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enclaveOptions")
       private final @Nullable Output<InstanceEnclaveOptionsGetArgs> enclaveOptions;
 
-    public Output<InstanceEnclaveOptionsGetArgs> getEnclaveOptions() {
+    public Output<InstanceEnclaveOptionsGetArgs> enclaveOptions() {
         return this.enclaveOptions == null ? Codegen.empty() : this.enclaveOptions;
     }
 
@@ -170,7 +170,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
-    public Output<List<InstanceEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
+    public Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
@@ -181,7 +181,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="getPasswordData")
       private final @Nullable Output<Boolean> getPasswordData;
 
-    public Output<Boolean> getGetPasswordData() {
+    public Output<Boolean> getPasswordData() {
         return this.getPasswordData == null ? Codegen.empty() : this.getPasswordData;
     }
 
@@ -192,7 +192,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hibernation")
       private final @Nullable Output<Boolean> hibernation;
 
-    public Output<Boolean> getHibernation() {
+    public Output<Boolean> hibernation() {
         return this.hibernation == null ? Codegen.empty() : this.hibernation;
     }
 
@@ -203,7 +203,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
-    public Output<String> getHostId() {
+    public Output<String> hostId() {
         return this.hostId == null ? Codegen.empty() : this.hostId;
     }
 
@@ -214,7 +214,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
+    public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
@@ -225,7 +225,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceInitiatedShutdownBehavior")
       private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
-    public Output<String> getInstanceInitiatedShutdownBehavior() {
+    public Output<String> instanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior == null ? Codegen.empty() : this.instanceInitiatedShutdownBehavior;
     }
 
@@ -236,7 +236,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceState")
       private final @Nullable Output<String> instanceState;
 
-    public Output<String> getInstanceState() {
+    public Output<String> instanceState() {
         return this.instanceState == null ? Codegen.empty() : this.instanceState;
     }
 
@@ -247,7 +247,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceType")
       private final @Nullable Output<Either<String,InstanceType>> instanceType;
 
-    public Output<Either<String,InstanceType>> getInstanceType() {
+    public Output<Either<String,InstanceType>> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -258,7 +258,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
@@ -269,7 +269,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
@@ -280,7 +280,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -292,7 +292,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="launchTemplate")
       private final @Nullable Output<InstanceLaunchTemplateGetArgs> launchTemplate;
 
-    public Output<InstanceLaunchTemplateGetArgs> getLaunchTemplate() {
+    public Output<InstanceLaunchTemplateGetArgs> launchTemplate() {
         return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
@@ -303,7 +303,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataOptions")
       private final @Nullable Output<InstanceMetadataOptionsGetArgs> metadataOptions;
 
-    public Output<InstanceMetadataOptionsGetArgs> getMetadataOptions() {
+    public Output<InstanceMetadataOptionsGetArgs> metadataOptions() {
         return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
@@ -314,7 +314,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitoring")
       private final @Nullable Output<Boolean> monitoring;
 
-    public Output<Boolean> getMonitoring() {
+    public Output<Boolean> monitoring() {
         return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
@@ -325,7 +325,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces;
 
-    public Output<List<InstanceNetworkInterfaceGetArgs>> getNetworkInterfaces() {
+    public Output<List<InstanceNetworkInterfaceGetArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -336,7 +336,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
@@ -347,7 +347,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="passwordData")
       private final @Nullable Output<String> passwordData;
 
-    public Output<String> getPasswordData() {
+    public Output<String> passwordData() {
         return this.passwordData == null ? Codegen.empty() : this.passwordData;
     }
 
@@ -358,7 +358,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="placementGroup")
       private final @Nullable Output<String> placementGroup;
 
-    public Output<String> getPlacementGroup() {
+    public Output<String> placementGroup() {
         return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
     }
 
@@ -369,7 +369,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="placementPartitionNumber")
       private final @Nullable Output<Integer> placementPartitionNumber;
 
-    public Output<Integer> getPlacementPartitionNumber() {
+    public Output<Integer> placementPartitionNumber() {
         return this.placementPartitionNumber == null ? Codegen.empty() : this.placementPartitionNumber;
     }
 
@@ -380,7 +380,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryNetworkInterfaceId")
       private final @Nullable Output<String> primaryNetworkInterfaceId;
 
-    public Output<String> getPrimaryNetworkInterfaceId() {
+    public Output<String> primaryNetworkInterfaceId() {
         return this.primaryNetworkInterfaceId == null ? Codegen.empty() : this.primaryNetworkInterfaceId;
     }
 
@@ -391,7 +391,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateDns")
       private final @Nullable Output<String> privateDns;
 
-    public Output<String> getPrivateDns() {
+    public Output<String> privateDns() {
         return this.privateDns == null ? Codegen.empty() : this.privateDns;
     }
 
@@ -402,7 +402,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
@@ -413,7 +413,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
-    public Output<String> getPublicDns() {
+    public Output<String> publicDns() {
         return this.publicDns == null ? Codegen.empty() : this.publicDns;
     }
 
@@ -424,7 +424,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp == null ? Codegen.empty() : this.publicIp;
     }
 
@@ -435,7 +435,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootBlockDevice")
       private final @Nullable Output<InstanceRootBlockDeviceGetArgs> rootBlockDevice;
 
-    public Output<InstanceRootBlockDeviceGetArgs> getRootBlockDevice() {
+    public Output<InstanceRootBlockDeviceGetArgs> rootBlockDevice() {
         return this.rootBlockDevice == null ? Codegen.empty() : this.rootBlockDevice;
     }
 
@@ -446,7 +446,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryPrivateIps")
       private final @Nullable Output<List<String>> secondaryPrivateIps;
 
-    public Output<List<String>> getSecondaryPrivateIps() {
+    public Output<List<String>> secondaryPrivateIps() {
         return this.secondaryPrivateIps == null ? Codegen.empty() : this.secondaryPrivateIps;
     }
 
@@ -462,7 +462,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> securityGroups;
 
     @Deprecated /* Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates. */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -473,7 +473,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDestCheck")
       private final @Nullable Output<Boolean> sourceDestCheck;
 
-    public Output<Boolean> getSourceDestCheck() {
+    public Output<Boolean> sourceDestCheck() {
         return this.sourceDestCheck == null ? Codegen.empty() : this.sourceDestCheck;
     }
 
@@ -484,7 +484,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -495,7 +495,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -506,7 +506,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -517,7 +517,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenancy")
       private final @Nullable Output<Either<String,Tenancy>> tenancy;
 
-    public Output<Either<String,Tenancy>> getTenancy() {
+    public Output<Either<String,Tenancy>> tenancy() {
         return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
@@ -528,7 +528,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
@@ -539,7 +539,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="userDataBase64")
       private final @Nullable Output<String> userDataBase64;
 
-    public Output<String> getUserDataBase64() {
+    public Output<String> userDataBase64() {
         return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
     }
 
@@ -550,7 +550,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="volumeTags")
       private final @Nullable Output<Map<String,String>> volumeTags;
 
-    public Output<Map<String,String>> getVolumeTags() {
+    public Output<Map<String,String>> volumeTags() {
         return this.volumeTags == null ? Codegen.empty() : this.volumeTags;
     }
 
@@ -561,7 +561,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 

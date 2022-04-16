@@ -22,28 +22,28 @@ public final class SelectionConditionGetArgs extends com.pulumi.resources.Resour
     @Import(name="stringEquals")
       private final @Nullable Output<List<SelectionConditionStringEqualGetArgs>> stringEquals;
 
-    public Output<List<SelectionConditionStringEqualGetArgs>> getStringEquals() {
+    public Output<List<SelectionConditionStringEqualGetArgs>> stringEquals() {
         return this.stringEquals == null ? Codegen.empty() : this.stringEquals;
     }
 
     @Import(name="stringLikes")
       private final @Nullable Output<List<SelectionConditionStringLikeGetArgs>> stringLikes;
 
-    public Output<List<SelectionConditionStringLikeGetArgs>> getStringLikes() {
+    public Output<List<SelectionConditionStringLikeGetArgs>> stringLikes() {
         return this.stringLikes == null ? Codegen.empty() : this.stringLikes;
     }
 
     @Import(name="stringNotEquals")
       private final @Nullable Output<List<SelectionConditionStringNotEqualGetArgs>> stringNotEquals;
 
-    public Output<List<SelectionConditionStringNotEqualGetArgs>> getStringNotEquals() {
+    public Output<List<SelectionConditionStringNotEqualGetArgs>> stringNotEquals() {
         return this.stringNotEquals == null ? Codegen.empty() : this.stringNotEquals;
     }
 
     @Import(name="stringNotLikes")
       private final @Nullable Output<List<SelectionConditionStringNotLikeGetArgs>> stringNotLikes;
 
-    public Output<List<SelectionConditionStringNotLikeGetArgs>> getStringNotLikes() {
+    public Output<List<SelectionConditionStringNotLikeGetArgs>> stringNotLikes() {
         return this.stringNotLikes == null ? Codegen.empty() : this.stringNotLikes;
     }
 

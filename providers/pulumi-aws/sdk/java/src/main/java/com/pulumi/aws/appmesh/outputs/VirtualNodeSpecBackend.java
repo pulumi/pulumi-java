@@ -24,7 +24,7 @@ public final class VirtualNodeSpecBackend {
      * Specifies a virtual service to use as a backend for a virtual node.
      * 
     */
-    public VirtualNodeSpecBackendVirtualService getVirtualService() {
+    public VirtualNodeSpecBackendVirtualService virtualService() {
         return this.virtualService;
     }
 

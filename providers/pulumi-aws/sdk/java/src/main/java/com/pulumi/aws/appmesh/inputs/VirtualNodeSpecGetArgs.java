@@ -27,7 +27,7 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="backendDefaults")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
 
-    public Output<VirtualNodeSpecBackendDefaultsGetArgs> getBackendDefaults() {
+    public Output<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults() {
         return this.backendDefaults == null ? Codegen.empty() : this.backendDefaults;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="backends")
       private final @Nullable Output<List<VirtualNodeSpecBackendGetArgs>> backends;
 
-    public Output<List<VirtualNodeSpecBackendGetArgs>> getBackends() {
+    public Output<List<VirtualNodeSpecBackendGetArgs>> backends() {
         return this.backends == null ? Codegen.empty() : this.backends;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="listener")
       private final @Nullable Output<VirtualNodeSpecListenerGetArgs> listener;
 
-    public Output<VirtualNodeSpecListenerGetArgs> getListener() {
+    public Output<VirtualNodeSpecListenerGetArgs> listener() {
         return this.listener == null ? Codegen.empty() : this.listener;
     }
 
@@ -60,7 +60,7 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="logging")
       private final @Nullable Output<VirtualNodeSpecLoggingGetArgs> logging;
 
-    public Output<VirtualNodeSpecLoggingGetArgs> getLogging() {
+    public Output<VirtualNodeSpecLoggingGetArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -71,7 +71,7 @@ public final class VirtualNodeSpecGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceDiscovery")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
 
-    public Output<VirtualNodeSpecServiceDiscoveryGetArgs> getServiceDiscovery() {
+    public Output<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery() {
         return this.serviceDiscovery == null ? Codegen.empty() : this.serviceDiscovery;
     }
 

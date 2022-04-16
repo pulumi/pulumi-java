@@ -24,7 +24,7 @@ public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.Resour
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -35,7 +35,7 @@ public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.Resour
     @Import(name="scanAll")
       private final @Nullable Output<Boolean> scanAll;
 
-    public Output<Boolean> getScanAll() {
+    public Output<Boolean> scanAll() {
         return this.scanAll == null ? Codegen.empty() : this.scanAll;
     }
 
@@ -46,7 +46,7 @@ public final class CrawlerDynamodbTargetArgs extends com.pulumi.resources.Resour
     @Import(name="scanRate")
       private final @Nullable Output<Double> scanRate;
 
-    public Output<Double> getScanRate() {
+    public Output<Double> scanRate() {
         return this.scanRate == null ? Codegen.empty() : this.scanRate;
     }
 

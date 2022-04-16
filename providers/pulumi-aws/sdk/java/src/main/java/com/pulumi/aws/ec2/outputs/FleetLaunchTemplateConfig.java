@@ -35,14 +35,14 @@ public final class FleetLaunchTemplateConfig {
      * Nested argument containing EC2 Launch Template to use. Defined below.
      * 
     */
-    public FleetLaunchTemplateConfigLaunchTemplateSpecification getLaunchTemplateSpecification() {
+    public FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
     /**
      * Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
      * 
     */
-    public List<FleetLaunchTemplateConfigOverride> getOverrides() {
+    public List<FleetLaunchTemplateConfigOverride> overrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }
 

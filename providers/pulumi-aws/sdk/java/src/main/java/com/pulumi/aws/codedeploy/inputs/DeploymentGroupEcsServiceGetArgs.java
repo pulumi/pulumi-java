@@ -21,7 +21,7 @@ public final class DeploymentGroupEcsServiceGetArgs extends com.pulumi.resources
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -32,7 +32,7 @@ public final class DeploymentGroupEcsServiceGetArgs extends com.pulumi.resources
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

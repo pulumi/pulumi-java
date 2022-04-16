@@ -36,26 +36,26 @@ public final class GetListenerDefaultActionRedirect {
         this.statusCode = statusCode;
     }
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * Port of the listener. Required if `arn` is not set.
      * 
     */
-    public String getPort() {
+    public String port() {
         return this.port;
     }
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

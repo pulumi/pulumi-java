@@ -26,7 +26,7 @@ public final class RouteSpecTcpRouteTimeout {
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
     */
-    public Optional<RouteSpecTcpRouteTimeoutIdle> getIdle() {
+    public Optional<RouteSpecTcpRouteTimeoutIdle> idle() {
         return Optional.ofNullable(this.idle);
     }
 

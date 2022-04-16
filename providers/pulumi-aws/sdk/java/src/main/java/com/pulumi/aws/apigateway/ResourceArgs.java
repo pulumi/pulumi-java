@@ -21,7 +21,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
 
@@ -32,7 +32,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathPart", required=true)
       private final Output<String> pathPart;
 
-    public Output<String> getPathPart() {
+    public Output<String> pathPart() {
         return this.pathPart;
     }
 
@@ -43,7 +43,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 

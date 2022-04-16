@@ -20,7 +20,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -31,7 +31,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
@@ -42,7 +42,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="mountPoint", required=true)
       private final Output<String> mountPoint;
 
-    public Output<String> getMountPoint() {
+    public Output<String> mountPoint() {
         return this.mountPoint;
     }
 
@@ -53,7 +53,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="numberOfDisks", required=true)
       private final Output<Integer> numberOfDisks;
 
-    public Output<Integer> getNumberOfDisks() {
+    public Output<Integer> numberOfDisks() {
         return this.numberOfDisks;
     }
 
@@ -64,7 +64,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="raidLevel")
       private final @Nullable Output<String> raidLevel;
 
-    public Output<String> getRaidLevel() {
+    public Output<String> raidLevel() {
         return this.raidLevel == null ? Codegen.empty() : this.raidLevel;
     }
 
@@ -75,7 +75,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -86,7 +86,7 @@ public final class RailsAppLayerEbsVolumeArgs extends com.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -23,7 +23,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -34,7 +34,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 
@@ -45,7 +45,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
     @Import(name="years")
       private final @Nullable Output<Integer> years;
 
-    public Output<Integer> getYears() {
+    public Output<Integer> years() {
         return this.years == null ? Codegen.empty() : this.years;
     }
 

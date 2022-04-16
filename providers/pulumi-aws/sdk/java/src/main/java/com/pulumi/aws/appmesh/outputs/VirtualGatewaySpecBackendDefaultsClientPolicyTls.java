@@ -52,28 +52,28 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTls {
      * The listener's TLS certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate> getCertificate() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * Whether the policy is enforced. Default is `true`.
      * 
     */
-    public Optional<Boolean> getEnforce() {
+    public Optional<Boolean> enforce() {
         return Optional.ofNullable(this.enforce);
     }
     /**
      * One or more ports that the policy is enforced for.
      * 
     */
-    public List<Integer> getPorts() {
+    public List<Integer> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
      * The listener's Transport Layer Security (TLS) validation context.
      * 
     */
-    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation getValidation() {
+    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation() {
         return this.validation;
     }
 

@@ -28,7 +28,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -39,7 +39,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogResource")
       private final @Nullable Output<Boolean> catalogResource;
 
-    public Output<Boolean> getCatalogResource() {
+    public Output<Boolean> catalogResource() {
         return this.catalogResource == null ? Codegen.empty() : this.catalogResource;
     }
 
@@ -50,7 +50,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataLocation")
       private final @Nullable Output<PermissionsDataLocationArgs> dataLocation;
 
-    public Output<PermissionsDataLocationArgs> getDataLocation() {
+    public Output<PermissionsDataLocationArgs> dataLocation() {
         return this.dataLocation == null ? Codegen.empty() : this.dataLocation;
     }
 
@@ -61,7 +61,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<PermissionsDatabaseArgs> database;
 
-    public Output<PermissionsDatabaseArgs> getDatabase() {
+    public Output<PermissionsDatabaseArgs> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -72,7 +72,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions;
     }
 
@@ -83,7 +83,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionsWithGrantOptions")
       private final @Nullable Output<List<String>> permissionsWithGrantOptions;
 
-    public Output<List<String>> getPermissionsWithGrantOptions() {
+    public Output<List<String>> permissionsWithGrantOptions() {
         return this.permissionsWithGrantOptions == null ? Codegen.empty() : this.permissionsWithGrantOptions;
     }
 
@@ -94,7 +94,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -105,7 +105,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="table")
       private final @Nullable Output<PermissionsTableArgs> table;
 
-    public Output<PermissionsTableArgs> getTable() {
+    public Output<PermissionsTableArgs> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 
@@ -116,7 +116,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableWithColumns")
       private final @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns;
 
-    public Output<PermissionsTableWithColumnsArgs> getTableWithColumns() {
+    public Output<PermissionsTableWithColumnsArgs> tableWithColumns() {
         return this.tableWithColumns == null ? Codegen.empty() : this.tableWithColumns;
     }
 

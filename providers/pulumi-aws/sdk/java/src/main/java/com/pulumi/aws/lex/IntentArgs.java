@@ -35,7 +35,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conclusionStatement")
       private final @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
 
-    public Output<IntentConclusionStatementArgs> getConclusionStatement() {
+    public Output<IntentConclusionStatementArgs> conclusionStatement() {
         return this.conclusionStatement == null ? Codegen.empty() : this.conclusionStatement;
     }
 
@@ -48,7 +48,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="confirmationPrompt")
       private final @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
 
-    public Output<IntentConfirmationPromptArgs> getConfirmationPrompt() {
+    public Output<IntentConfirmationPromptArgs> confirmationPrompt() {
         return this.confirmationPrompt == null ? Codegen.empty() : this.confirmationPrompt;
     }
 
@@ -60,7 +60,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> getCreateVersion() {
+    public Output<Boolean> createVersion() {
         return this.createVersion == null ? Codegen.empty() : this.createVersion;
     }
 
@@ -71,7 +71,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -83,7 +83,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dialogCodeHook")
       private final @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
 
-    public Output<IntentDialogCodeHookArgs> getDialogCodeHook() {
+    public Output<IntentDialogCodeHookArgs> dialogCodeHook() {
         return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
     }
 
@@ -97,7 +97,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="followUpPrompt")
       private final @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
 
-    public Output<IntentFollowUpPromptArgs> getFollowUpPrompt() {
+    public Output<IntentFollowUpPromptArgs> followUpPrompt() {
         return this.followUpPrompt == null ? Codegen.empty() : this.followUpPrompt;
     }
 
@@ -110,7 +110,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fulfillmentActivity", required=true)
       private final Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
 
-    public Output<IntentFulfillmentActivityArgs> getFulfillmentActivity() {
+    public Output<IntentFulfillmentActivityArgs> fulfillmentActivity() {
         return this.fulfillmentActivity;
     }
 
@@ -121,7 +121,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -135,7 +135,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentIntentSignature")
       private final @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> getParentIntentSignature() {
+    public Output<String> parentIntentSignature() {
         return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
     }
 
@@ -148,7 +148,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rejectionStatement")
       private final @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
 
-    public Output<IntentRejectionStatementArgs> getRejectionStatement() {
+    public Output<IntentRejectionStatementArgs> rejectionStatement() {
         return this.rejectionStatement == null ? Codegen.empty() : this.rejectionStatement;
     }
 
@@ -161,7 +161,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> getSampleUtterances() {
+    public Output<List<String>> sampleUtterances() {
         return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
@@ -173,7 +173,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slots")
       private final @Nullable Output<List<IntentSlotArgs>> slots;
 
-    public Output<List<IntentSlotArgs>> getSlots() {
+    public Output<List<IntentSlotArgs>> slots() {
         return this.slots == null ? Codegen.empty() : this.slots;
     }
 

@@ -36,14 +36,14 @@ public final class IntentFulfillmentActivityCodeHook {
      * [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
      * 
     */
-    public String getMessageVersion() {
+    public String messageVersion() {
         return this.messageVersion;
     }
     /**
      * The Amazon Resource Name (ARN) of the Lambda function.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

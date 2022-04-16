@@ -23,7 +23,7 @@ public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.Res
     @Import(name="creationInfo")
       private final @Nullable Output<AccessPointRootDirectoryCreationInfoArgs> creationInfo;
 
-    public Output<AccessPointRootDirectoryCreationInfoArgs> getCreationInfo() {
+    public Output<AccessPointRootDirectoryCreationInfoArgs> creationInfo() {
         return this.creationInfo == null ? Codegen.empty() : this.creationInfo;
     }
 
@@ -34,7 +34,7 @@ public final class AccessPointRootDirectoryArgs extends com.pulumi.resources.Res
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

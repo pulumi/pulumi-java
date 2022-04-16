@@ -20,7 +20,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -31,7 +31,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="ebs", required=true)
       private final Map<String,String> ebs;
 
-    public Map<String,String> getEbs() {
+    public Map<String,String> ebs() {
         return this.ebs;
     }
 
@@ -42,7 +42,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="noDevice", required=true)
       private final String noDevice;
 
-    public String getNoDevice() {
+    public String noDevice() {
         return this.noDevice;
     }
 
@@ -53,7 +53,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
     @Import(name="virtualName", required=true)
       private final String virtualName;
 
-    public String getVirtualName() {
+    public String virtualName() {
         return this.virtualName;
     }
 

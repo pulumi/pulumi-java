@@ -24,7 +24,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfigurationGetA
     @Import(name="classification")
       private final @Nullable Output<String> classification;
 
-    public Output<String> getClassification() {
+    public Output<String> classification() {
         return this.classification == null ? Codegen.empty() : this.classification;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfigurationGetA
     @Import(name="properties")
       private final @Nullable Output<Map<String,Object>> properties;
 
-    public Output<Map<String,Object>> getProperties() {
+    public Output<Map<String,Object>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

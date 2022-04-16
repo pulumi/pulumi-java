@@ -23,7 +23,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends com.pulumi.re
     @Import(name="defaultTargetCapacityType", required=true)
       private final Output<String> defaultTargetCapacityType;
 
-    public Output<String> getDefaultTargetCapacityType() {
+    public Output<String> defaultTargetCapacityType() {
         return this.defaultTargetCapacityType;
     }
 
@@ -34,7 +34,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends com.pulumi.re
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
-    public Output<Integer> getOnDemandTargetCapacity() {
+    public Output<Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
     }
 
@@ -45,7 +45,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends com.pulumi.re
     @Import(name="spotTargetCapacity")
       private final @Nullable Output<Integer> spotTargetCapacity;
 
-    public Output<Integer> getSpotTargetCapacity() {
+    public Output<Integer> spotTargetCapacity() {
         return this.spotTargetCapacity == null ? Codegen.empty() : this.spotTargetCapacity;
     }
 
@@ -56,7 +56,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends com.pulumi.re
     @Import(name="totalTargetCapacity", required=true)
       private final Output<Integer> totalTargetCapacity;
 
-    public Output<Integer> getTotalTargetCapacity() {
+    public Output<Integer> totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 

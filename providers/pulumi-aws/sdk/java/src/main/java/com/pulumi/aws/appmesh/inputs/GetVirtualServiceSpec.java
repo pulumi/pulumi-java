@@ -20,7 +20,7 @@ public final class GetVirtualServiceSpec extends com.pulumi.resources.InvokeArgs
     @Import(name="providers", required=true)
       private final List<GetVirtualServiceSpecProvider> providers;
 
-    public List<GetVirtualServiceSpecProvider> getProviders() {
+    public List<GetVirtualServiceSpecProvider> providers() {
         return this.providers;
     }
 

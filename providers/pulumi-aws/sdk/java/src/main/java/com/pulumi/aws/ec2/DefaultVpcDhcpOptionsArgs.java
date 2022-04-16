@@ -24,7 +24,7 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
-    public Output<List<String>> getNetbiosNameServers() {
+    public Output<List<String>> netbiosNameServers() {
         return this.netbiosNameServers == null ? Codegen.empty() : this.netbiosNameServers;
     }
 
@@ -35,7 +35,7 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="netbiosNodeType")
       private final @Nullable Output<String> netbiosNodeType;
 
-    public Output<String> getNetbiosNodeType() {
+    public Output<String> netbiosNodeType() {
         return this.netbiosNodeType == null ? Codegen.empty() : this.netbiosNodeType;
     }
 
@@ -46,7 +46,7 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -57,7 +57,7 @@ public final class DefaultVpcDhcpOptionsArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

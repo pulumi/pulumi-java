@@ -16,21 +16,21 @@ public final class GetInstanceTypeInferenceAccelerator extends com.pulumi.resour
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
     @Import(name="manufacturer", required=true)
       private final String manufacturer;
 
-    public String getManufacturer() {
+    public String manufacturer() {
         return this.manufacturer;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

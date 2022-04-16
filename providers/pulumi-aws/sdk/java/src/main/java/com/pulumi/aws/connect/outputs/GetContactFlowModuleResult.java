@@ -77,58 +77,58 @@ public final class GetContactFlowModuleResult {
      * The Amazon Resource Name (ARN) of the Contact Flow Module.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getContactFlowModuleId() {
+    public String contactFlowModuleId() {
         return this.contactFlowModuleId;
     }
     /**
      * Specifies the logic of the Contact Flow Module.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * Specifies the description of the Contact Flow Module.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the type of Contact Flow Module Module. Values are either `ACTIVE` or `ARCHIVED`.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The status of the Contact Flow Module Module. Values are either `PUBLISHED` or `SAVED`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * A map of tags to assign to the Contact Flow Module.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

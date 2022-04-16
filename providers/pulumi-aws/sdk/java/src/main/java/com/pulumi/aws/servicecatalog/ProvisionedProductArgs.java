@@ -27,7 +27,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -38,7 +38,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="ignoreErrors")
       private final @Nullable Output<Boolean> ignoreErrors;
 
-    public Output<Boolean> getIgnoreErrors() {
+    public Output<Boolean> ignoreErrors() {
         return this.ignoreErrors == null ? Codegen.empty() : this.ignoreErrors;
     }
 
@@ -49,7 +49,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> getNotificationArns() {
+    public Output<List<String>> notificationArns() {
         return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
     }
 
@@ -71,7 +71,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
+    public Output<String> pathId() {
         return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
@@ -82,7 +82,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="pathName")
       private final @Nullable Output<String> pathName;
 
-    public Output<String> getPathName() {
+    public Output<String> pathName() {
         return this.pathName == null ? Codegen.empty() : this.pathName;
     }
 
@@ -93,7 +93,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -104,7 +104,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName == null ? Codegen.empty() : this.productName;
     }
 
@@ -115,7 +115,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
@@ -126,7 +126,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="provisioningArtifactName")
       private final @Nullable Output<String> provisioningArtifactName;
 
-    public Output<String> getProvisioningArtifactName() {
+    public Output<String> provisioningArtifactName() {
         return this.provisioningArtifactName == null ? Codegen.empty() : this.provisioningArtifactName;
     }
 
@@ -137,7 +137,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<ProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
+    public Output<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters() {
         return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 
@@ -148,7 +148,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="retainPhysicalResources")
       private final @Nullable Output<Boolean> retainPhysicalResources;
 
-    public Output<Boolean> getRetainPhysicalResources() {
+    public Output<Boolean> retainPhysicalResources() {
         return this.retainPhysicalResources == null ? Codegen.empty() : this.retainPhysicalResources;
     }
 
@@ -159,7 +159,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="stackSetProvisioningPreferences")
       private final @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
 
-    public Output<ProvisionedProductStackSetProvisioningPreferencesArgs> getStackSetProvisioningPreferences() {
+    public Output<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences() {
         return this.stackSetProvisioningPreferences == null ? Codegen.empty() : this.stackSetProvisioningPreferences;
     }
 
@@ -170,7 +170,7 @@ public final class ProvisionedProductArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

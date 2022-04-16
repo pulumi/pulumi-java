@@ -120,91 +120,91 @@ public final class CatalogTableStorageDescriptor {
      * List of reducer grouping columns, clustering columns, and bucketing columns in the table.
      * 
     */
-    public List<String> getBucketColumns() {
+    public List<String> bucketColumns() {
         return this.bucketColumns == null ? List.of() : this.bucketColumns;
     }
     /**
      * Configuration block for columns in the table. See `columns` below.
      * 
     */
-    public List<CatalogTableStorageDescriptorColumn> getColumns() {
+    public List<CatalogTableStorageDescriptorColumn> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * Whether the data in the table is compressed.
      * 
     */
-    public Optional<Boolean> getCompressed() {
+    public Optional<Boolean> compressed() {
         return Optional.ofNullable(this.compressed);
     }
     /**
      * Input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
      * 
     */
-    public Optional<String> getInputFormat() {
+    public Optional<String> inputFormat() {
         return Optional.ofNullable(this.inputFormat);
     }
     /**
      * Physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Must be specified if the table contains any dimension columns.
      * 
     */
-    public Optional<Integer> getNumberOfBuckets() {
+    public Optional<Integer> numberOfBuckets() {
         return Optional.ofNullable(this.numberOfBuckets);
     }
     /**
      * Output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
      * 
     */
-    public Optional<String> getOutputFormat() {
+    public Optional<String> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
      * 
     */
-    public Optional<CatalogTableStorageDescriptorSchemaReference> getSchemaReference() {
+    public Optional<CatalogTableStorageDescriptorSchemaReference> schemaReference() {
         return Optional.ofNullable(this.schemaReference);
     }
     /**
      * Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
      * 
     */
-    public Optional<CatalogTableStorageDescriptorSerDeInfo> getSerDeInfo() {
+    public Optional<CatalogTableStorageDescriptorSerDeInfo> serDeInfo() {
         return Optional.ofNullable(this.serDeInfo);
     }
     /**
      * Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
      * 
     */
-    public Optional<CatalogTableStorageDescriptorSkewedInfo> getSkewedInfo() {
+    public Optional<CatalogTableStorageDescriptorSkewedInfo> skewedInfo() {
         return Optional.ofNullable(this.skewedInfo);
     }
     /**
      * Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
      * 
     */
-    public List<CatalogTableStorageDescriptorSortColumn> getSortColumns() {
+    public List<CatalogTableStorageDescriptorSortColumn> sortColumns() {
         return this.sortColumns == null ? List.of() : this.sortColumns;
     }
     /**
      * Whether the table data is stored in subdirectories.
      * 
     */
-    public Optional<Boolean> getStoredAsSubDirectories() {
+    public Optional<Boolean> storedAsSubDirectories() {
         return Optional.ofNullable(this.storedAsSubDirectories);
     }
 

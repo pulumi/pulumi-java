@@ -26,7 +26,7 @@ public final class IntentFollowUpPromptRejectionStatementGetArgs extends com.pul
     @Import(name="messages", required=true)
       private final Output<List<IntentFollowUpPromptRejectionStatementMessageGetArgs>> messages;
 
-    public Output<List<IntentFollowUpPromptRejectionStatementMessageGetArgs>> getMessages() {
+    public Output<List<IntentFollowUpPromptRejectionStatementMessageGetArgs>> messages() {
         return this.messages;
     }
 
@@ -39,7 +39,7 @@ public final class IntentFollowUpPromptRejectionStatementGetArgs extends com.pul
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

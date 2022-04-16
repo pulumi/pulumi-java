@@ -44,7 +44,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
      */
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
     /**
@@ -58,13 +58,13 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
      * 
      */
-    public Output<String> getAmazonAddress() {
+    public Output<String> amazonAddress() {
         return this.amazonAddress;
     }
     @Export(name="amazonSideAsn", type=String.class, parameters={})
     private Output<String> amazonSideAsn;
 
-    public Output<String> getAmazonSideAsn() {
+    public Output<String> amazonSideAsn() {
         return this.amazonSideAsn;
     }
     /**
@@ -78,7 +78,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The ARN of the virtual interface.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -92,7 +92,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The Direct Connect endpoint on which the virtual interface terminates.
      * 
      */
-    public Output<String> getAwsDevice() {
+    public Output<String> awsDevice() {
         return this.awsDevice;
     }
     /**
@@ -106,7 +106,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
      * 
      */
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
     /**
@@ -120,7 +120,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The authentication key for BGP configuration.
      * 
      */
-    public Output<String> getBgpAuthKey() {
+    public Output<String> bgpAuthKey() {
         return this.bgpAuthKey;
     }
     /**
@@ -134,7 +134,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -148,7 +148,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
      * 
      */
-    public Output<String> getCustomerAddress() {
+    public Output<String> customerAddress() {
         return this.customerAddress;
     }
     /**
@@ -162,7 +162,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
     /**
@@ -176,7 +176,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return Indicates whether jumbo frames (8500 MTU) are supported.
      * 
      */
-    public Output<Boolean> getJumboFrameCapable() {
+    public Output<Boolean> jumboFrameCapable() {
         return this.jumboFrameCapable;
     }
     /**
@@ -192,7 +192,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
      * 
      */
-    public Output</* @Nullable */ Integer> getMtu() {
+    public Output</* @Nullable */ Integer> mtu() {
         return this.mtu;
     }
     /**
@@ -206,13 +206,13 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The name for the virtual interface.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="sitelinkEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sitelinkEnabled;
 
-    public Output</* @Nullable */ Boolean> getSitelinkEnabled() {
+    public Output</* @Nullable */ Boolean> sitelinkEnabled() {
         return this.sitelinkEnabled;
     }
     /**
@@ -226,7 +226,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -240,7 +240,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -254,7 +254,7 @@ public class TransitVirtualInterface extends com.pulumi.resources.CustomResource
      * @return The VLAN ID.
      * 
      */
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 

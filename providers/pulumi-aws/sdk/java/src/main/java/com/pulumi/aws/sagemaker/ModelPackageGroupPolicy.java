@@ -40,13 +40,13 @@ public class ModelPackageGroupPolicy extends com.pulumi.resources.CustomResource
      * @return The name of the model package group.
      * 
      */
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName;
     }
     @Export(name="resourcePolicy", type=String.class, parameters={})
     private Output<String> resourcePolicy;
 
-    public Output<String> getResourcePolicy() {
+    public Output<String> resourcePolicy() {
         return this.resourcePolicy;
     }
 

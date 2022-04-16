@@ -47,7 +47,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -75,7 +75,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing algorithms and certificate subject information. Defined below.
      * 
      */
-    public Output<CertificateAuthorityCertificateAuthorityConfiguration> getCertificateAuthorityConfiguration() {
+    public Output<CertificateAuthorityCertificateAuthorityConfiguration> certificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration;
     }
     /**
@@ -89,7 +89,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
      * 
      */
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain;
     }
     /**
@@ -103,7 +103,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
      * 
      */
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
@@ -117,7 +117,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -131,7 +131,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
      */
-    public Output<String> getNotAfter() {
+    public Output<String> notAfter() {
         return this.notAfter;
     }
     /**
@@ -145,7 +145,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
      */
-    public Output<String> getNotBefore() {
+    public Output<String> notBefore() {
         return this.notBefore;
     }
     /**
@@ -159,7 +159,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
      * 
      */
-    public Output</* @Nullable */ Integer> getPermanentDeletionTimeInDays() {
+    public Output</* @Nullable */ Integer> permanentDeletionTimeInDays() {
         return this.permanentDeletionTimeInDays;
     }
     /**
@@ -173,7 +173,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing revocation configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
+    public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration() {
         return this.revocationConfiguration;
     }
     /**
@@ -187,7 +187,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
      * 
      */
-    public Output<String> getSerial() {
+    public Output<String> serial() {
         return this.serial;
     }
     /**
@@ -201,7 +201,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Status of the certificate authority.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -215,7 +215,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -229,7 +229,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -243,7 +243,7 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

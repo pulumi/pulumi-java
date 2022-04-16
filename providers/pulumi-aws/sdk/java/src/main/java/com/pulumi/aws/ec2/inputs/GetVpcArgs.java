@@ -25,7 +25,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="cidrBlock")
       private final @Nullable String cidrBlock;
 
-    public Optional<String> getCidrBlock() {
+    public Optional<String> cidrBlock() {
         return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
     }
 
@@ -37,7 +37,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="default")
       private final @Nullable Boolean default_;
 
-    public Optional<Boolean> getDefault_() {
+    public Optional<Boolean> default_() {
         return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
@@ -48,7 +48,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dhcpOptionsId")
       private final @Nullable String dhcpOptionsId;
 
-    public Optional<String> getDhcpOptionsId() {
+    public Optional<String> dhcpOptionsId() {
         return this.dhcpOptionsId == null ? Optional.empty() : Optional.ofNullable(this.dhcpOptionsId);
     }
 
@@ -59,7 +59,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetVpcFilter> filters;
 
-    public List<GetVpcFilter> getFilters() {
+    public List<GetVpcFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -70,7 +70,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -82,7 +82,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -94,7 +94,7 @@ public final class GetVpcArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

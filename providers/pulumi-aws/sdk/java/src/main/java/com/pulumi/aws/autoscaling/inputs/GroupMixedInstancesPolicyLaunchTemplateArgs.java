@@ -24,7 +24,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends com.pulum
     @Import(name="launchTemplateSpecification", required=true)
       private final Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
-    public Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
+    public Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
 
@@ -35,7 +35,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends com.pulum
     @Import(name="overrides")
       private final @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
 
-    public Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> getOverrides() {
+    public Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 

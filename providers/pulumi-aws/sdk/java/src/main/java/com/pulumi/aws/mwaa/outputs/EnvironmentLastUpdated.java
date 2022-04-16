@@ -41,17 +41,17 @@ public final class EnvironmentLastUpdated {
      * * `logging_configuration[0].<LOG_CONFIGURATION_TYPE>[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
-    public List<EnvironmentLastUpdatedError> getErrors() {
+    public List<EnvironmentLastUpdatedError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The status of the Amazon MWAA Environment
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

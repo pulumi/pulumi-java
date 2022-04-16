@@ -23,7 +23,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
     @Import(name="restoreTime")
       private final @Nullable Output<String> restoreTime;
 
-    public Output<String> getRestoreTime() {
+    public Output<String> restoreTime() {
         return this.restoreTime == null ? Codegen.empty() : this.restoreTime;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
     @Import(name="sourceDbInstanceIdentifier")
       private final @Nullable Output<String> sourceDbInstanceIdentifier;
 
-    public Output<String> getSourceDbInstanceIdentifier() {
+    public Output<String> sourceDbInstanceIdentifier() {
         return this.sourceDbInstanceIdentifier == null ? Codegen.empty() : this.sourceDbInstanceIdentifier;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
     @Import(name="sourceDbiResourceId")
       private final @Nullable Output<String> sourceDbiResourceId;
 
-    public Output<String> getSourceDbiResourceId() {
+    public Output<String> sourceDbiResourceId() {
         return this.sourceDbiResourceId == null ? Codegen.empty() : this.sourceDbiResourceId;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
     @Import(name="useLatestRestorableTime")
       private final @Nullable Output<Boolean> useLatestRestorableTime;
 
-    public Output<Boolean> getUseLatestRestorableTime() {
+    public Output<Boolean> useLatestRestorableTime() {
         return this.useLatestRestorableTime == null ? Codegen.empty() : this.useLatestRestorableTime;
     }
 

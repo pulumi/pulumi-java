@@ -21,7 +21,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="deleteSourceFromS3", required=true)
       private final Boolean deleteSourceFromS3;
 
-    public Boolean getDeleteSourceFromS3() {
+    public Boolean deleteSourceFromS3() {
         return this.deleteSourceFromS3;
     }
 
@@ -32,7 +32,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="maxAgeInDays", required=true)
       private final Integer maxAgeInDays;
 
-    public Integer getMaxAgeInDays() {
+    public Integer maxAgeInDays() {
         return this.maxAgeInDays;
     }
 
@@ -43,7 +43,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="maxCount", required=true)
       private final Integer maxCount;
 
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
 
@@ -54,7 +54,7 @@ public final class GetApplicationAppversionLifecycle extends com.pulumi.resource
     @Import(name="serviceRole", required=true)
       private final String serviceRole;
 
-    public String getServiceRole() {
+    public String serviceRole() {
         return this.serviceRole;
     }
 

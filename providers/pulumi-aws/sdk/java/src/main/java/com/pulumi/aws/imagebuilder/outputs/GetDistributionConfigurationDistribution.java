@@ -41,21 +41,21 @@ public final class GetDistributionConfigurationDistribution {
      * Nested list of AMI distribution configuration.
      * 
     */
-    public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> getAmiDistributionConfigurations() {
+    public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
     }
     /**
      * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
     */
-    public List<String> getLicenseConfigurationArns() {
+    public List<String> licenseConfigurationArns() {
         return this.licenseConfigurationArns;
     }
     /**
      * AWS Region of distribution.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

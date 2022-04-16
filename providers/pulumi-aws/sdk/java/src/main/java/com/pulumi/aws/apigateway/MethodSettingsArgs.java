@@ -22,7 +22,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="methodPath", required=true)
       private final Output<String> methodPath;
 
-    public Output<String> getMethodPath() {
+    public Output<String> methodPath() {
         return this.methodPath;
     }
 
@@ -33,7 +33,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -44,7 +44,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="settings", required=true)
       private final Output<MethodSettingsSettingsArgs> settings;
 
-    public Output<MethodSettingsSettingsArgs> getSettings() {
+    public Output<MethodSettingsSettingsArgs> settings() {
         return this.settings;
     }
 
@@ -55,7 +55,7 @@ public final class MethodSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="stageName", required=true)
       private final Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
 

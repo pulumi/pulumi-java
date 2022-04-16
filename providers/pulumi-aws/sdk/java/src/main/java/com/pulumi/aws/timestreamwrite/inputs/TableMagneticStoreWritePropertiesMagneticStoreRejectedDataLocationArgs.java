@@ -22,7 +22,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="s3Configuration")
       private final @Nullable Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
 
-    public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> getS3Configuration() {
+    public Output<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration() {
         return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
     }
 

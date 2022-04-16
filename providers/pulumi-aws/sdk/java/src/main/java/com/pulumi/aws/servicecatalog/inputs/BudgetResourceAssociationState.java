@@ -22,7 +22,7 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
     @Import(name="budgetName")
       private final @Nullable Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName == null ? Codegen.empty() : this.budgetName;
     }
 
@@ -33,7 +33,7 @@ public final class BudgetResourceAssociationState extends com.pulumi.resources.R
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

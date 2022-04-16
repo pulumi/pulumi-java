@@ -39,21 +39,21 @@ public final class BuildStorageLocation {
      * Name of your S3 bucket.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Name of the zip file containing your build files.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * ARN of the access role that allows Amazon GameLift to access your S3 bucket.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

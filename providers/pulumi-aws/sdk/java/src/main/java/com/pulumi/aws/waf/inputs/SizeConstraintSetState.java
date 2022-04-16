@@ -24,7 +24,7 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
     @Import(name="sizeConstraints")
       private final @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
 
-    public Output<List<SizeConstraintSetSizeConstraintGetArgs>> getSizeConstraints() {
+    public Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints() {
         return this.sizeConstraints == null ? Codegen.empty() : this.sizeConstraints;
     }
 

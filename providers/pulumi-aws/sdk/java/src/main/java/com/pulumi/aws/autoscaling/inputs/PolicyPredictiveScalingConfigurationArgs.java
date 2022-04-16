@@ -23,7 +23,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
     @Import(name="maxCapacityBreachBehavior")
       private final @Nullable Output<String> maxCapacityBreachBehavior;
 
-    public Output<String> getMaxCapacityBreachBehavior() {
+    public Output<String> maxCapacityBreachBehavior() {
         return this.maxCapacityBreachBehavior == null ? Codegen.empty() : this.maxCapacityBreachBehavior;
     }
 
@@ -34,7 +34,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
     @Import(name="maxCapacityBuffer")
       private final @Nullable Output<String> maxCapacityBuffer;
 
-    public Output<String> getMaxCapacityBuffer() {
+    public Output<String> maxCapacityBuffer() {
         return this.maxCapacityBuffer == null ? Codegen.empty() : this.maxCapacityBuffer;
     }
 
@@ -45,7 +45,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
     @Import(name="metricSpecification", required=true)
       private final Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
 
-    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> getMetricSpecification() {
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification() {
         return this.metricSpecification;
     }
 
@@ -56,7 +56,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -67,7 +67,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends com.pulumi.r
     @Import(name="schedulingBufferTime")
       private final @Nullable Output<String> schedulingBufferTime;
 
-    public Output<String> getSchedulingBufferTime() {
+    public Output<String> schedulingBufferTime() {
         return this.schedulingBufferTime == null ? Codegen.empty() : this.schedulingBufferTime;
     }
 

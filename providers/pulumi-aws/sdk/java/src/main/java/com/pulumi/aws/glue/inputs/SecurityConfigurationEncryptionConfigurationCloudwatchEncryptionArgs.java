@@ -22,7 +22,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     @Import(name="cloudwatchEncryptionMode")
       private final @Nullable Output<String> cloudwatchEncryptionMode;
 
-    public Output<String> getCloudwatchEncryptionMode() {
+    public Output<String> cloudwatchEncryptionMode() {
         return this.cloudwatchEncryptionMode == null ? Codegen.empty() : this.cloudwatchEncryptionMode;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 

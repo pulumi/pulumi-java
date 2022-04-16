@@ -23,7 +23,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -45,21 +45,21 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamUserAccessToBilling")
       private final @Nullable Output<String> iamUserAccessToBilling;
 
-    public Output<String> getIamUserAccessToBilling() {
+    public Output<String> iamUserAccessToBilling() {
         return this.iamUserAccessToBilling == null ? Codegen.empty() : this.iamUserAccessToBilling;
     }
 
     @Import(name="joinedMethod")
       private final @Nullable Output<String> joinedMethod;
 
-    public Output<String> getJoinedMethod() {
+    public Output<String> joinedMethod() {
         return this.joinedMethod == null ? Codegen.empty() : this.joinedMethod;
     }
 
     @Import(name="joinedTimestamp")
       private final @Nullable Output<String> joinedTimestamp;
 
-    public Output<String> getJoinedTimestamp() {
+    public Output<String> joinedTimestamp() {
         return this.joinedTimestamp == null ? Codegen.empty() : this.joinedTimestamp;
     }
 
@@ -70,7 +70,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
@@ -92,14 +92,14 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -110,7 +110,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -121,7 +121,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

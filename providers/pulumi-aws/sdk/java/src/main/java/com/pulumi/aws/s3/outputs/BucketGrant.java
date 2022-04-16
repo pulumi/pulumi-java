@@ -49,28 +49,28 @@ public final class BucketGrant {
      * Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
      * 
     */
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
     /**
      * - Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Uri address to grant for. Used only when `type` is `Group`.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

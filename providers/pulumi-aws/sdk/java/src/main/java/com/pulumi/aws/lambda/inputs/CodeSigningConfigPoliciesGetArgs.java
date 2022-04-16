@@ -21,7 +21,7 @@ public final class CodeSigningConfigPoliciesGetArgs extends com.pulumi.resources
     @Import(name="untrustedArtifactOnDeployment", required=true)
       private final Output<String> untrustedArtifactOnDeployment;
 
-    public Output<String> getUntrustedArtifactOnDeployment() {
+    public Output<String> untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 

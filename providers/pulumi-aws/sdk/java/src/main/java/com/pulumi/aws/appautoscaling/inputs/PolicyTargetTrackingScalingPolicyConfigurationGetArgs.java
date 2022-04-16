@@ -26,7 +26,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="customizedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification() {
         return this.customizedMetricSpecification == null ? Codegen.empty() : this.customizedMetricSpecification;
     }
 
@@ -37,7 +37,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="disableScaleIn")
       private final @Nullable Output<Boolean> disableScaleIn;
 
-    public Output<Boolean> getDisableScaleIn() {
+    public Output<Boolean> disableScaleIn() {
         return this.disableScaleIn == null ? Codegen.empty() : this.disableScaleIn;
     }
 
@@ -48,7 +48,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="predefinedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
+    public Output<PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification() {
         return this.predefinedMetricSpecification == null ? Codegen.empty() : this.predefinedMetricSpecification;
     }
 
@@ -59,7 +59,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="scaleInCooldown")
       private final @Nullable Output<Integer> scaleInCooldown;
 
-    public Output<Integer> getScaleInCooldown() {
+    public Output<Integer> scaleInCooldown() {
         return this.scaleInCooldown == null ? Codegen.empty() : this.scaleInCooldown;
     }
 
@@ -70,7 +70,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="scaleOutCooldown")
       private final @Nullable Output<Integer> scaleOutCooldown;
 
-    public Output<Integer> getScaleOutCooldown() {
+    public Output<Integer> scaleOutCooldown() {
         return this.scaleOutCooldown == null ? Codegen.empty() : this.scaleOutCooldown;
     }
 
@@ -81,7 +81,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationGetArgs extends
     @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
-    public Output<Double> getTargetValue() {
+    public Output<Double> targetValue() {
         return this.targetValue;
     }
 

@@ -41,21 +41,21 @@ public final class ParameterGroupParameter {
      * The apply method of the Neptune parameter. Valid values are `immediate` and `pending-reboot`. Defaults to `pending-reboot`.
      * 
     */
-    public Optional<String> getApplyMethod() {
+    public Optional<String> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * The name of the Neptune parameter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The value of the Neptune parameter.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

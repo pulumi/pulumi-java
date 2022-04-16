@@ -22,7 +22,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="bucketAccountId")
       private final @Nullable Output<String> bucketAccountId;
 
-    public Output<String> getBucketAccountId() {
+    public Output<String> bucketAccountId() {
         return this.bucketAccountId == null ? Codegen.empty() : this.bucketAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -44,7 +44,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -55,7 +55,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

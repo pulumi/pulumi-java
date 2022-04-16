@@ -22,7 +22,7 @@ public final class InsightFiltersFirstObservedAtDateRangeGetArgs extends com.pul
     @Import(name="unit", required=true)
       private final Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit;
     }
 
@@ -33,7 +33,7 @@ public final class InsightFiltersFirstObservedAtDateRangeGetArgs extends com.pul
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 

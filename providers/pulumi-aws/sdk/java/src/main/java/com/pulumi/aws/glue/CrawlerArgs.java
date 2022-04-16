@@ -29,7 +29,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogTargets")
       private final @Nullable Output<List<CrawlerCatalogTargetArgs>> catalogTargets;
 
-    public Output<List<CrawlerCatalogTargetArgs>> getCatalogTargets() {
+    public Output<List<CrawlerCatalogTargetArgs>> catalogTargets() {
         return this.catalogTargets == null ? Codegen.empty() : this.catalogTargets;
     }
 
@@ -40,7 +40,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classifiers")
       private final @Nullable Output<List<String>> classifiers;
 
-    public Output<List<String>> getClassifiers() {
+    public Output<List<String>> classifiers() {
         return this.classifiers == null ? Codegen.empty() : this.classifiers;
     }
 
@@ -51,7 +51,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
-    public Output<String> getConfiguration() {
+    public Output<String> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -62,14 +62,14 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="deltaTargets")
       private final @Nullable Output<List<CrawlerDeltaTargetArgs>> deltaTargets;
 
-    public Output<List<CrawlerDeltaTargetArgs>> getDeltaTargets() {
+    public Output<List<CrawlerDeltaTargetArgs>> deltaTargets() {
         return this.deltaTargets == null ? Codegen.empty() : this.deltaTargets;
     }
 
@@ -80,7 +80,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -91,7 +91,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dynamodbTargets")
       private final @Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets;
 
-    public Output<List<CrawlerDynamodbTargetArgs>> getDynamodbTargets() {
+    public Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets() {
         return this.dynamodbTargets == null ? Codegen.empty() : this.dynamodbTargets;
     }
 
@@ -102,7 +102,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jdbcTargets")
       private final @Nullable Output<List<CrawlerJdbcTargetArgs>> jdbcTargets;
 
-    public Output<List<CrawlerJdbcTargetArgs>> getJdbcTargets() {
+    public Output<List<CrawlerJdbcTargetArgs>> jdbcTargets() {
         return this.jdbcTargets == null ? Codegen.empty() : this.jdbcTargets;
     }
 
@@ -113,7 +113,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lineageConfiguration")
       private final @Nullable Output<CrawlerLineageConfigurationArgs> lineageConfiguration;
 
-    public Output<CrawlerLineageConfigurationArgs> getLineageConfiguration() {
+    public Output<CrawlerLineageConfigurationArgs> lineageConfiguration() {
         return this.lineageConfiguration == null ? Codegen.empty() : this.lineageConfiguration;
     }
 
@@ -124,7 +124,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mongodbTargets")
       private final @Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets;
 
-    public Output<List<CrawlerMongodbTargetArgs>> getMongodbTargets() {
+    public Output<List<CrawlerMongodbTargetArgs>> mongodbTargets() {
         return this.mongodbTargets == null ? Codegen.empty() : this.mongodbTargets;
     }
 
@@ -135,7 +135,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -146,7 +146,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recrawlPolicy")
       private final @Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy;
 
-    public Output<CrawlerRecrawlPolicyArgs> getRecrawlPolicy() {
+    public Output<CrawlerRecrawlPolicyArgs> recrawlPolicy() {
         return this.recrawlPolicy == null ? Codegen.empty() : this.recrawlPolicy;
     }
 
@@ -157,7 +157,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -168,7 +168,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Targets")
       private final @Nullable Output<List<CrawlerS3TargetArgs>> s3Targets;
 
-    public Output<List<CrawlerS3TargetArgs>> getS3Targets() {
+    public Output<List<CrawlerS3TargetArgs>> s3Targets() {
         return this.s3Targets == null ? Codegen.empty() : this.s3Targets;
     }
 
@@ -179,7 +179,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -190,7 +190,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaChangePolicy")
       private final @Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy;
 
-    public Output<CrawlerSchemaChangePolicyArgs> getSchemaChangePolicy() {
+    public Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy() {
         return this.schemaChangePolicy == null ? Codegen.empty() : this.schemaChangePolicy;
     }
 
@@ -201,7 +201,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
-    public Output<String> getSecurityConfiguration() {
+    public Output<String> securityConfiguration() {
         return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
     }
 
@@ -212,7 +212,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
-    public Output<String> getTablePrefix() {
+    public Output<String> tablePrefix() {
         return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
     }
 
@@ -223,7 +223,7 @@ public final class CrawlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -24,7 +24,7 @@ public final class MetricStreamIncludeFilter {
      * Name of the metric namespace in the filter.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

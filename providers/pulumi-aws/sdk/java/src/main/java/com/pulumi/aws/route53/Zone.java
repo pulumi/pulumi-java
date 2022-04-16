@@ -44,7 +44,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Hosted Zone.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
      * 
      */
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment;
     }
     /**
@@ -72,7 +72,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
      * 
      */
-    public Output</* @Nullable */ String> getDelegationSetId() {
+    public Output</* @Nullable */ String> delegationSetId() {
         return this.delegationSetId;
     }
     /**
@@ -86,7 +86,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -100,7 +100,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return This is the name of the hosted zone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -130,7 +130,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the zone.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -158,7 +158,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<ZoneVpc>> getVpcs() {
+    public Output</* @Nullable */ List<ZoneVpc>> vpcs() {
         return this.vpcs;
     }
     /**
@@ -172,7 +172,7 @@ public class Zone extends com.pulumi.resources.CustomResource {
      * @return The Hosted Zone ID. This can be referenced by zone records.
      * 
      */
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 

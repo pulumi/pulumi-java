@@ -25,7 +25,7 @@ public final class TrailEventSelectorArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataResources")
       private final @Nullable Output<List<TrailEventSelectorDataResourceArgs>> dataResources;
 
-    public Output<List<TrailEventSelectorDataResourceArgs>> getDataResources() {
+    public Output<List<TrailEventSelectorDataResourceArgs>> dataResources() {
         return this.dataResources == null ? Codegen.empty() : this.dataResources;
     }
 
@@ -36,7 +36,7 @@ public final class TrailEventSelectorArgs extends com.pulumi.resources.ResourceA
     @Import(name="excludeManagementEventSources")
       private final @Nullable Output<List<String>> excludeManagementEventSources;
 
-    public Output<List<String>> getExcludeManagementEventSources() {
+    public Output<List<String>> excludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? Codegen.empty() : this.excludeManagementEventSources;
     }
 
@@ -47,7 +47,7 @@ public final class TrailEventSelectorArgs extends com.pulumi.resources.ResourceA
     @Import(name="includeManagementEvents")
       private final @Nullable Output<Boolean> includeManagementEvents;
 
-    public Output<Boolean> getIncludeManagementEvents() {
+    public Output<Boolean> includeManagementEvents() {
         return this.includeManagementEvents == null ? Codegen.empty() : this.includeManagementEvents;
     }
 
@@ -58,7 +58,7 @@ public final class TrailEventSelectorArgs extends com.pulumi.resources.ResourceA
     @Import(name="readWriteType")
       private final @Nullable Output<String> readWriteType;
 
-    public Output<String> getReadWriteType() {
+    public Output<String> readWriteType() {
         return this.readWriteType == null ? Codegen.empty() : this.readWriteType;
     }
 

@@ -22,7 +22,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="context")
       private final @Nullable Map<String,String> context;
 
-    public Map<String,String> getContext() {
+    public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
 
@@ -33,7 +33,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 
@@ -44,7 +44,7 @@ public final class GetCipherTextArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="plaintext", required=true)
       private final String plaintext;
 
-    public String getPlaintext() {
+    public String plaintext() {
         return this.plaintext;
     }
 

@@ -22,7 +22,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -33,7 +33,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
     @Import(name="percentage")
       private final @Nullable Output<Integer> percentage;
 
-    public Output<Integer> getPercentage() {
+    public Output<Integer> percentage() {
         return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 

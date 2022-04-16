@@ -19,7 +19,7 @@ public final class GetPermissionsDataLocation extends com.pulumi.resources.Invok
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -30,7 +30,7 @@ public final class GetPermissionsDataLocation extends com.pulumi.resources.Invok
     @Import(name="catalogId", required=true)
       private final String catalogId;
 
-    public String getCatalogId() {
+    public String catalogId() {
         return this.catalogId;
     }
 

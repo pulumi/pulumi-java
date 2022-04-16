@@ -25,7 +25,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineName", required=true)
       private final Output<String> engineName;
 
-    public Output<String> getEngineName() {
+    public Output<String> engineName() {
         return this.engineName;
     }
 
@@ -36,7 +36,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="majorEngineVersion", required=true)
       private final Output<String> majorEngineVersion;
 
-    public Output<String> getMajorEngineVersion() {
+    public Output<String> majorEngineVersion() {
         return this.majorEngineVersion;
     }
 
@@ -47,7 +47,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -69,7 +69,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="optionGroupDescription")
       private final @Nullable Output<String> optionGroupDescription;
 
-    public Output<String> getOptionGroupDescription() {
+    public Output<String> optionGroupDescription() {
         return this.optionGroupDescription == null ? Codegen.empty() : this.optionGroupDescription;
     }
 
@@ -80,7 +80,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionGroupOptionArgs>> options;
 
-    public Output<List<OptionGroupOptionArgs>> getOptions() {
+    public Output<List<OptionGroupOptionArgs>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -91,7 +91,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

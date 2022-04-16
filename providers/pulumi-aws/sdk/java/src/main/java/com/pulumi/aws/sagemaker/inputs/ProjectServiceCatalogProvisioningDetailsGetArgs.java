@@ -24,7 +24,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends com.p
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
+    public Output<String> pathId() {
         return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends com.p
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -46,7 +46,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends com.p
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
@@ -57,7 +57,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends com.p
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> provisioningParameters;
 
-    public Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> getProvisioningParameters() {
+    public Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> provisioningParameters() {
         return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 

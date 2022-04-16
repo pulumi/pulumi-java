@@ -68,49 +68,49 @@ public final class GetUserResult {
      * The Amazon Resource Name (ARN) assigned by AWS for this user.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Path in which this user was created.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The ARN of the policy that is used to set the permissions boundary for the user.
      * 
     */
-    public String getPermissionsBoundary() {
+    public String permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
      * Map of key-value pairs associated with the user.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The unique ID assigned by AWS for this user.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
     /**
      * The name associated to this User
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

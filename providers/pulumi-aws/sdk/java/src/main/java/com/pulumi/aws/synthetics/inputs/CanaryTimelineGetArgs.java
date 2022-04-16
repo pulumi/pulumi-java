@@ -22,7 +22,7 @@ public final class CanaryTimelineGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="created")
       private final @Nullable Output<String> created;
 
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created == null ? Codegen.empty() : this.created;
     }
 
@@ -33,7 +33,7 @@ public final class CanaryTimelineGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
@@ -44,7 +44,7 @@ public final class CanaryTimelineGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="lastStarted")
       private final @Nullable Output<String> lastStarted;
 
-    public Output<String> getLastStarted() {
+    public Output<String> lastStarted() {
         return this.lastStarted == null ? Codegen.empty() : this.lastStarted;
     }
 
@@ -55,7 +55,7 @@ public final class CanaryTimelineGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="lastStopped")
       private final @Nullable Output<String> lastStopped;
 
-    public Output<String> getLastStopped() {
+    public Output<String> lastStopped() {
         return this.lastStopped == null ? Codegen.empty() : this.lastStopped;
     }
 

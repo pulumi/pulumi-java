@@ -46,7 +46,7 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return ARN for the subnet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +62,7 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * * `availability_zone_id`- AZ ID of the subnet.
      * 
      */
-    public Output<Boolean> getAssignIpv6AddressOnCreation() {
+    public Output<Boolean> assignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation;
     }
     /**
@@ -76,13 +76,13 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return AZ for the subnet.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
@@ -96,31 +96,31 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return CIDR block for the subnet.
      * 
      */
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
     @Export(name="customerOwnedIpv4Pool", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerOwnedIpv4Pool;
 
-    public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
+    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     @Export(name="enableDns64", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDns64;
 
-    public Output</* @Nullable */ Boolean> getEnableDns64() {
+    public Output</* @Nullable */ Boolean> enableDns64() {
         return this.enableDns64;
     }
     @Export(name="enableResourceNameDnsARecordOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch;
 
-    public Output</* @Nullable */ Boolean> getEnableResourceNameDnsARecordOnLaunch() {
+    public Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch;
     }
     @Export(name="enableResourceNameDnsAaaaRecordOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
 
-    public Output</* @Nullable */ Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
+    public Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
     /**
@@ -134,25 +134,25 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return IPv6 CIDR block.
      * 
      */
-    public Output<String> getIpv6CidrBlock() {
+    public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     @Export(name="ipv6CidrBlockAssociationId", type=String.class, parameters={})
     private Output<String> ipv6CidrBlockAssociationId;
 
-    public Output<String> getIpv6CidrBlockAssociationId() {
+    public Output<String> ipv6CidrBlockAssociationId() {
         return this.ipv6CidrBlockAssociationId;
     }
     @Export(name="ipv6Native", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6Native;
 
-    public Output</* @Nullable */ Boolean> getIpv6Native() {
+    public Output</* @Nullable */ Boolean> ipv6Native() {
         return this.ipv6Native;
     }
     @Export(name="mapCustomerOwnedIpOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch;
 
-    public Output</* @Nullable */ Boolean> getMapCustomerOwnedIpOnLaunch() {
+    public Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch() {
         return this.mapCustomerOwnedIpOnLaunch;
     }
     /**
@@ -166,13 +166,13 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return Whether instances launched into the subnet should be assigned a public IP address.
      * 
      */
-    public Output<Boolean> getMapPublicIpOnLaunch() {
+    public Output<Boolean> mapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
-    public Output</* @Nullable */ String> getOutpostArn() {
+    public Output</* @Nullable */ String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -186,13 +186,13 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return ID of the AWS account that owns the subnet.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     @Export(name="privateDnsHostnameTypeOnLaunch", type=String.class, parameters={})
     private Output<String> privateDnsHostnameTypeOnLaunch;
 
-    public Output<String> getPrivateDnsHostnameTypeOnLaunch() {
+    public Output<String> privateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch;
     }
     /**
@@ -206,13 +206,13 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -226,7 +226,7 @@ public class DefaultSubnet extends com.pulumi.resources.CustomResource {
      * @return VPC ID.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

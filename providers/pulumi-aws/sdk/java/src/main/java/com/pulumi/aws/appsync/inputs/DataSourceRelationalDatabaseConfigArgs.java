@@ -23,7 +23,7 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
     @Import(name="httpEndpointConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig;
 
-    public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> getHttpEndpointConfig() {
+    public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs> httpEndpointConfig() {
         return this.httpEndpointConfig == null ? Codegen.empty() : this.httpEndpointConfig;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceRelationalDatabaseConfigArgs extends com.pulumi.res
     @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 

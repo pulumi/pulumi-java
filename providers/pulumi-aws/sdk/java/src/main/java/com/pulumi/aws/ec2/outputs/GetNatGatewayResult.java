@@ -75,53 +75,53 @@ public final class GetNatGatewayResult {
      * The Id of the EIP allocated to the selected Nat Gateway.
      * 
     */
-    public String getAllocationId() {
+    public String allocationId() {
         return this.allocationId;
     }
     /**
      * The connectivity type of the NAT Gateway.
      * 
     */
-    public String getConnectivityType() {
+    public String connectivityType() {
         return this.connectivityType;
     }
-    public List<GetNatGatewayFilter> getFilters() {
+    public List<GetNatGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Id of the ENI allocated to the selected Nat Gateway.
      * 
     */
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * The private Ip address of the selected Nat Gateway.
      * 
     */
-    public String getPrivateIp() {
+    public String privateIp() {
         return this.privateIp;
     }
     /**
      * The public Ip (EIP) address of the selected Nat Gateway.
      * 
     */
-    public String getPublicIp() {
+    public String publicIp() {
         return this.publicIp;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

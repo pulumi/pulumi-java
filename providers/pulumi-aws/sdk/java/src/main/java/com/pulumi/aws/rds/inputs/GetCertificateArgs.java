@@ -22,7 +22,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -33,7 +33,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="latestValidTill")
       private final @Nullable Boolean latestValidTill;
 
-    public Optional<Boolean> getLatestValidTill() {
+    public Optional<Boolean> latestValidTill() {
         return this.latestValidTill == null ? Optional.empty() : Optional.ofNullable(this.latestValidTill);
     }
 

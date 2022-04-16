@@ -22,7 +22,7 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -33,7 +33,7 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
     @Import(name="originShieldRegion", required=true)
       private final Output<String> originShieldRegion;
 
-    public Output<String> getOriginShieldRegion() {
+    public Output<String> originShieldRegion() {
         return this.originShieldRegion;
     }
 

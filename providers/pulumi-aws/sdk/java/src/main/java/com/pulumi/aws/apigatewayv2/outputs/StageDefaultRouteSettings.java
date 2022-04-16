@@ -61,14 +61,14 @@ public final class StageDefaultRouteSettings {
      * Defaults to `false`. Supported only for WebSocket APIs.
      * 
     */
-    public Optional<Boolean> getDataTraceEnabled() {
+    public Optional<Boolean> dataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
     /**
      * Whether detailed metrics are enabled for the default route. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getDetailedMetricsEnabled() {
+    public Optional<Boolean> detailedMetricsEnabled() {
         return Optional.ofNullable(this.detailedMetricsEnabled);
     }
     /**
@@ -76,21 +76,21 @@ public final class StageDefaultRouteSettings {
      * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
      * 
     */
-    public Optional<String> getLoggingLevel() {
+    public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
      * The throttling burst limit for the default route.
      * 
     */
-    public Optional<Integer> getThrottlingBurstLimit() {
+    public Optional<Integer> throttlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
     /**
      * The throttling rate limit for the default route.
      * 
     */
-    public Optional<Double> getThrottlingRateLimit() {
+    public Optional<Double> throttlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
 

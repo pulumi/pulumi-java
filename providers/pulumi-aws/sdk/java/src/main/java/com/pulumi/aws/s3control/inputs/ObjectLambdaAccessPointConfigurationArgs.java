@@ -25,7 +25,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends com.pulumi.r
     @Import(name="allowedFeatures")
       private final @Nullable Output<List<String>> allowedFeatures;
 
-    public Output<List<String>> getAllowedFeatures() {
+    public Output<List<String>> allowedFeatures() {
         return this.allowedFeatures == null ? Codegen.empty() : this.allowedFeatures;
     }
 
@@ -36,7 +36,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends com.pulumi.r
     @Import(name="cloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
-    public Output<Boolean> getCloudWatchMetricsEnabled() {
+    public Output<Boolean> cloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled == null ? Codegen.empty() : this.cloudWatchMetricsEnabled;
     }
 
@@ -47,7 +47,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends com.pulumi.r
     @Import(name="supportingAccessPoint", required=true)
       private final Output<String> supportingAccessPoint;
 
-    public Output<String> getSupportingAccessPoint() {
+    public Output<String> supportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
@@ -58,7 +58,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends com.pulumi.r
     @Import(name="transformationConfigurations", required=true)
       private final Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> transformationConfigurations;
 
-    public Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> getTransformationConfigurations() {
+    public Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> transformationConfigurations() {
         return this.transformationConfigurations;
     }
 

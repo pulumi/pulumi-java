@@ -22,7 +22,7 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends com.pulumi.resource
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -33,7 +33,7 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends com.pulumi.resource
     @Import(name="headerValue", required=true)
       private final Output<String> headerValue;
 
-    public Output<String> getHeaderValue() {
+    public Output<String> headerValue() {
         return this.headerValue;
     }
 
@@ -44,7 +44,7 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends com.pulumi.resource
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 

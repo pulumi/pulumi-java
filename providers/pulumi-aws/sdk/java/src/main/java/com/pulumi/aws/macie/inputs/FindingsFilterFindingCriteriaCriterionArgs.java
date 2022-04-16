@@ -23,7 +23,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="eqExactMatches")
       private final @Nullable Output<List<String>> eqExactMatches;
 
-    public Output<List<String>> getEqExactMatches() {
+    public Output<List<String>> eqExactMatches() {
         return this.eqExactMatches == null ? Codegen.empty() : this.eqExactMatches;
     }
 
@@ -34,7 +34,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="eqs")
       private final @Nullable Output<List<String>> eqs;
 
-    public Output<List<String>> getEqs() {
+    public Output<List<String>> eqs() {
         return this.eqs == null ? Codegen.empty() : this.eqs;
     }
 
@@ -45,7 +45,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="field", required=true)
       private final Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field;
     }
 
@@ -56,7 +56,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="gt")
       private final @Nullable Output<String> gt;
 
-    public Output<String> getGt() {
+    public Output<String> gt() {
         return this.gt == null ? Codegen.empty() : this.gt;
     }
 
@@ -67,7 +67,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="gte")
       private final @Nullable Output<String> gte;
 
-    public Output<String> getGte() {
+    public Output<String> gte() {
         return this.gte == null ? Codegen.empty() : this.gte;
     }
 
@@ -78,7 +78,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="lt")
       private final @Nullable Output<String> lt;
 
-    public Output<String> getLt() {
+    public Output<String> lt() {
         return this.lt == null ? Codegen.empty() : this.lt;
     }
 
@@ -89,7 +89,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="lte")
       private final @Nullable Output<String> lte;
 
-    public Output<String> getLte() {
+    public Output<String> lte() {
         return this.lte == null ? Codegen.empty() : this.lte;
     }
 
@@ -100,7 +100,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends com.pulumi
     @Import(name="neqs")
       private final @Nullable Output<List<String>> neqs;
 
-    public Output<List<String>> getNeqs() {
+    public Output<List<String>> neqs() {
         return this.neqs == null ? Codegen.empty() : this.neqs;
     }
 

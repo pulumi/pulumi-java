@@ -23,7 +23,7 @@ public final class InvocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -34,7 +34,7 @@ public final class InvocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
       private final Output<String> input;
 
-    public Output<String> getInput() {
+    public Output<String> input() {
         return this.input;
     }
 
@@ -45,14 +45,14 @@ public final class InvocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
+    public Output<Map<String,String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

@@ -22,7 +22,7 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
     @Import(name="originalRouteTableId")
       private final @Nullable Output<String> originalRouteTableId;
 
-    public Output<String> getOriginalRouteTableId() {
+    public Output<String> originalRouteTableId() {
         return this.originalRouteTableId == null ? Codegen.empty() : this.originalRouteTableId;
     }
 
@@ -34,7 +34,7 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
     @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
@@ -45,7 +45,7 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

@@ -26,7 +26,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accounts")
       private final @Nullable Output<List<OrganizationAccountGetArgs>> accounts;
 
-    public Output<List<OrganizationAccountGetArgs>> getAccounts() {
+    public Output<List<OrganizationAccountGetArgs>> accounts() {
         return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
@@ -37,7 +37,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsServiceAccessPrincipals")
       private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
-    public Output<List<String>> getAwsServiceAccessPrincipals() {
+    public Output<List<String>> awsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals == null ? Codegen.empty() : this.awsServiceAccessPrincipals;
     }
 
@@ -59,7 +59,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledPolicyTypes")
       private final @Nullable Output<List<String>> enabledPolicyTypes;
 
-    public Output<List<String>> getEnabledPolicyTypes() {
+    public Output<List<String>> enabledPolicyTypes() {
         return this.enabledPolicyTypes == null ? Codegen.empty() : this.enabledPolicyTypes;
     }
 
@@ -70,7 +70,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureSet")
       private final @Nullable Output<String> featureSet;
 
-    public Output<String> getFeatureSet() {
+    public Output<String> featureSet() {
         return this.featureSet == null ? Codegen.empty() : this.featureSet;
     }
 
@@ -81,7 +81,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAccountArn")
       private final @Nullable Output<String> masterAccountArn;
 
-    public Output<String> getMasterAccountArn() {
+    public Output<String> masterAccountArn() {
         return this.masterAccountArn == null ? Codegen.empty() : this.masterAccountArn;
     }
 
@@ -92,7 +92,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAccountEmail")
       private final @Nullable Output<String> masterAccountEmail;
 
-    public Output<String> getMasterAccountEmail() {
+    public Output<String> masterAccountEmail() {
         return this.masterAccountEmail == null ? Codegen.empty() : this.masterAccountEmail;
     }
 
@@ -103,7 +103,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterAccountId")
       private final @Nullable Output<String> masterAccountId;
 
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId == null ? Codegen.empty() : this.masterAccountId;
     }
 
@@ -114,7 +114,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="nonMasterAccounts")
       private final @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
 
-    public Output<List<OrganizationNonMasterAccountGetArgs>> getNonMasterAccounts() {
+    public Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts() {
         return this.nonMasterAccounts == null ? Codegen.empty() : this.nonMasterAccounts;
     }
 
@@ -125,7 +125,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roots")
       private final @Nullable Output<List<OrganizationRootGetArgs>> roots;
 
-    public Output<List<OrganizationRootGetArgs>> getRoots() {
+    public Output<List<OrganizationRootGetArgs>> roots() {
         return this.roots == null ? Codegen.empty() : this.roots;
     }
 

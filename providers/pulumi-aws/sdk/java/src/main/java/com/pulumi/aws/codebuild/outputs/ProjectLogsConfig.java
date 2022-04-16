@@ -35,14 +35,14 @@ public final class ProjectLogsConfig {
      * Configuration block. Detailed below.
      * 
     */
-    public Optional<ProjectLogsConfigCloudwatchLogs> getCloudwatchLogs() {
+    public Optional<ProjectLogsConfigCloudwatchLogs> cloudwatchLogs() {
         return Optional.ofNullable(this.cloudwatchLogs);
     }
     /**
      * Configuration block. Detailed below.
      * 
     */
-    public Optional<ProjectLogsConfigS3Logs> getS3Logs() {
+    public Optional<ProjectLogsConfigS3Logs> s3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }
 

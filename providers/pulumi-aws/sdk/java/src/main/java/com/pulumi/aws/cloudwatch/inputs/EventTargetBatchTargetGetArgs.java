@@ -23,7 +23,7 @@ public final class EventTargetBatchTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="arraySize")
       private final @Nullable Output<Integer> arraySize;
 
-    public Output<Integer> getArraySize() {
+    public Output<Integer> arraySize() {
         return this.arraySize == null ? Codegen.empty() : this.arraySize;
     }
 
@@ -34,7 +34,7 @@ public final class EventTargetBatchTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="jobAttempts")
       private final @Nullable Output<Integer> jobAttempts;
 
-    public Output<Integer> getJobAttempts() {
+    public Output<Integer> jobAttempts() {
         return this.jobAttempts == null ? Codegen.empty() : this.jobAttempts;
     }
 
@@ -45,7 +45,7 @@ public final class EventTargetBatchTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="jobDefinition", required=true)
       private final Output<String> jobDefinition;
 
-    public Output<String> getJobDefinition() {
+    public Output<String> jobDefinition() {
         return this.jobDefinition;
     }
 
@@ -56,7 +56,7 @@ public final class EventTargetBatchTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 

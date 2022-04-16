@@ -21,7 +21,7 @@ public final class UserPoolSmsConfigurationGetArgs extends com.pulumi.resources.
     @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
 
@@ -32,7 +32,7 @@ public final class UserPoolSmsConfigurationGetArgs extends com.pulumi.resources.
     @Import(name="snsCallerArn", required=true)
       private final Output<String> snsCallerArn;
 
-    public Output<String> getSnsCallerArn() {
+    public Output<String> snsCallerArn() {
         return this.snsCallerArn;
     }
 

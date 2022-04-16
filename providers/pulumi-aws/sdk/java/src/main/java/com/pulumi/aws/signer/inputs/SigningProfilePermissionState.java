@@ -22,7 +22,7 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -33,7 +33,7 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 
@@ -44,7 +44,7 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
@@ -55,7 +55,7 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
     @Import(name="profileVersion")
       private final @Nullable Output<String> profileVersion;
 
-    public Output<String> getProfileVersion() {
+    public Output<String> profileVersion() {
         return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
     }
 
@@ -66,7 +66,7 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
     @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
-    public Output<String> getStatementId() {
+    public Output<String> statementId() {
         return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 
@@ -77,7 +77,7 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
     @Import(name="statementIdPrefix")
       private final @Nullable Output<String> statementIdPrefix;
 
-    public Output<String> getStatementIdPrefix() {
+    public Output<String> statementIdPrefix() {
         return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
     }
 

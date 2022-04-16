@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     @Import(name="parameters")
       private final @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
-    public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
+    public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

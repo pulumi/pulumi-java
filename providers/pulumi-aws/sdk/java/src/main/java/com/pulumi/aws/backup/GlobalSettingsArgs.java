@@ -22,7 +22,7 @@ public final class GlobalSettingsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="globalSettings", required=true)
       private final Output<Map<String,String>> globalSettings;
 
-    public Output<Map<String,String>> getGlobalSettings() {
+    public Output<Map<String,String>> globalSettings() {
         return this.globalSettings;
     }
 

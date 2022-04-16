@@ -35,14 +35,14 @@ public final class TaskSetScale {
      * The unit of measure for the scale value. Default: `PERCENT`.
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
     /**
      * The value, specified as a percent total of a service's `desiredCount`, to scale the task set. Defaults to `0` if not specified. Accepted values are numbers between 0.0 and 100.0.
      * 
     */
-    public Optional<Double> getValue() {
+    public Optional<Double> value() {
         return Optional.ofNullable(this.value);
     }
 

@@ -20,7 +20,7 @@ public final class GetInfrastructureConfigurationLogging extends com.pulumi.reso
     @Import(name="s3Logs", required=true)
       private final List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
 
-    public List<GetInfrastructureConfigurationLoggingS3Log> getS3Logs() {
+    public List<GetInfrastructureConfigurationLoggingS3Log> s3Logs() {
         return this.s3Logs;
     }
 

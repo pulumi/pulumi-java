@@ -22,7 +22,7 @@ public final class NodeGroupUpdateConfigGetArgs extends com.pulumi.resources.Res
     @Import(name="maxUnavailable")
       private final @Nullable Output<Integer> maxUnavailable;
 
-    public Output<Integer> getMaxUnavailable() {
+    public Output<Integer> maxUnavailable() {
         return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
@@ -33,7 +33,7 @@ public final class NodeGroupUpdateConfigGetArgs extends com.pulumi.resources.Res
     @Import(name="maxUnavailablePercentage")
       private final @Nullable Output<Integer> maxUnavailablePercentage;
 
-    public Output<Integer> getMaxUnavailablePercentage() {
+    public Output<Integer> maxUnavailablePercentage() {
         return this.maxUnavailablePercentage == null ? Codegen.empty() : this.maxUnavailablePercentage;
     }
 

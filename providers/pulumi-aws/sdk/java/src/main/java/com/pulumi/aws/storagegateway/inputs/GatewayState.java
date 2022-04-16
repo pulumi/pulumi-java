@@ -28,7 +28,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="activationKey")
       private final @Nullable Output<String> activationKey;
 
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey == null ? Codegen.empty() : this.activationKey;
     }
 
@@ -39,7 +39,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -50,7 +50,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="averageDownloadRateLimitInBitsPerSec")
       private final @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
 
-    public Output<Integer> getAverageDownloadRateLimitInBitsPerSec() {
+    public Output<Integer> averageDownloadRateLimitInBitsPerSec() {
         return this.averageDownloadRateLimitInBitsPerSec == null ? Codegen.empty() : this.averageDownloadRateLimitInBitsPerSec;
     }
 
@@ -61,7 +61,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="averageUploadRateLimitInBitsPerSec")
       private final @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
 
-    public Output<Integer> getAverageUploadRateLimitInBitsPerSec() {
+    public Output<Integer> averageUploadRateLimitInBitsPerSec() {
         return this.averageUploadRateLimitInBitsPerSec == null ? Codegen.empty() : this.averageUploadRateLimitInBitsPerSec;
     }
 
@@ -72,7 +72,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
@@ -83,7 +83,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ec2InstanceId")
       private final @Nullable Output<String> ec2InstanceId;
 
-    public Output<String> getEc2InstanceId() {
+    public Output<String> ec2InstanceId() {
         return this.ec2InstanceId == null ? Codegen.empty() : this.ec2InstanceId;
     }
 
@@ -94,7 +94,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
@@ -105,7 +105,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
@@ -116,7 +116,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayIpAddress")
       private final @Nullable Output<String> gatewayIpAddress;
 
-    public Output<String> getGatewayIpAddress() {
+    public Output<String> gatewayIpAddress() {
         return this.gatewayIpAddress == null ? Codegen.empty() : this.gatewayIpAddress;
     }
 
@@ -127,7 +127,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
@@ -138,7 +138,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayNetworkInterfaces")
       private final @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
 
-    public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> getGatewayNetworkInterfaces() {
+    public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces() {
         return this.gatewayNetworkInterfaces == null ? Codegen.empty() : this.gatewayNetworkInterfaces;
     }
 
@@ -149,7 +149,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayTimezone")
       private final @Nullable Output<String> gatewayTimezone;
 
-    public Output<String> getGatewayTimezone() {
+    public Output<String> gatewayTimezone() {
         return this.gatewayTimezone == null ? Codegen.empty() : this.gatewayTimezone;
     }
 
@@ -160,7 +160,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayType")
       private final @Nullable Output<String> gatewayType;
 
-    public Output<String> getGatewayType() {
+    public Output<String> gatewayType() {
         return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
     }
 
@@ -171,7 +171,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayVpcEndpoint")
       private final @Nullable Output<String> gatewayVpcEndpoint;
 
-    public Output<String> getGatewayVpcEndpoint() {
+    public Output<String> gatewayVpcEndpoint() {
         return this.gatewayVpcEndpoint == null ? Codegen.empty() : this.gatewayVpcEndpoint;
     }
 
@@ -182,7 +182,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostEnvironment")
       private final @Nullable Output<String> hostEnvironment;
 
-    public Output<String> getHostEnvironment() {
+    public Output<String> hostEnvironment() {
         return this.hostEnvironment == null ? Codegen.empty() : this.hostEnvironment;
     }
 
@@ -193,7 +193,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediumChangerType")
       private final @Nullable Output<String> mediumChangerType;
 
-    public Output<String> getMediumChangerType() {
+    public Output<String> mediumChangerType() {
         return this.mediumChangerType == null ? Codegen.empty() : this.mediumChangerType;
     }
 
@@ -204,7 +204,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbActiveDirectorySettings")
       private final @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
 
-    public Output<GatewaySmbActiveDirectorySettingsGetArgs> getSmbActiveDirectorySettings() {
+    public Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings() {
         return this.smbActiveDirectorySettings == null ? Codegen.empty() : this.smbActiveDirectorySettings;
     }
 
@@ -215,7 +215,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbFileShareVisibility")
       private final @Nullable Output<Boolean> smbFileShareVisibility;
 
-    public Output<Boolean> getSmbFileShareVisibility() {
+    public Output<Boolean> smbFileShareVisibility() {
         return this.smbFileShareVisibility == null ? Codegen.empty() : this.smbFileShareVisibility;
     }
 
@@ -226,7 +226,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbGuestPassword")
       private final @Nullable Output<String> smbGuestPassword;
 
-    public Output<String> getSmbGuestPassword() {
+    public Output<String> smbGuestPassword() {
         return this.smbGuestPassword == null ? Codegen.empty() : this.smbGuestPassword;
     }
 
@@ -237,7 +237,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="smbSecurityStrategy")
       private final @Nullable Output<String> smbSecurityStrategy;
 
-    public Output<String> getSmbSecurityStrategy() {
+    public Output<String> smbSecurityStrategy() {
         return this.smbSecurityStrategy == null ? Codegen.empty() : this.smbSecurityStrategy;
     }
 
@@ -248,7 +248,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -259,7 +259,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -270,7 +270,7 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tapeDriveType")
       private final @Nullable Output<String> tapeDriveType;
 
-    public Output<String> getTapeDriveType() {
+    public Output<String> tapeDriveType() {
         return this.tapeDriveType == null ? Codegen.empty() : this.tapeDriveType;
     }
 

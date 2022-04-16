@@ -21,7 +21,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -32,7 +32,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="domainOwner")
       private final @Nullable String domainOwner;
 
-    public Optional<String> getDomainOwner() {
+    public Optional<String> domainOwner() {
         return this.domainOwner == null ? Optional.empty() : Optional.ofNullable(this.domainOwner);
     }
 
@@ -43,7 +43,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="format", required=true)
       private final String format;
 
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 
@@ -54,7 +54,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
     @Import(name="repository", required=true)
       private final String repository;
 
-    public String getRepository() {
+    public String repository() {
         return this.repository;
     }
 

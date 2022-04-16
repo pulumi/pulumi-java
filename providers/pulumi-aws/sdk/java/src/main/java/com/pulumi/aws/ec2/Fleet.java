@@ -46,7 +46,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
      * 
      */
-    public Output</* @Nullable */ String> getExcessCapacityTerminationPolicy() {
+    public Output</* @Nullable */ String> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
     }
     /**
@@ -60,7 +60,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing EC2 Launch Template configurations. Defined below.
      * 
      */
-    public Output<FleetLaunchTemplateConfig> getLaunchTemplateConfig() {
+    public Output<FleetLaunchTemplateConfig> launchTemplateConfig() {
         return this.launchTemplateConfig;
     }
     /**
@@ -74,7 +74,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing On-Demand configurations. Defined below.
      * 
      */
-    public Output</* @Nullable */ FleetOnDemandOptions> getOnDemandOptions() {
+    public Output</* @Nullable */ FleetOnDemandOptions> onDemandOptions() {
         return this.onDemandOptions;
     }
     /**
@@ -88,7 +88,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReplaceUnhealthyInstances() {
+    public Output</* @Nullable */ Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances;
     }
     /**
@@ -102,7 +102,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing Spot configurations. Defined below.
      * 
      */
-    public Output</* @Nullable */ FleetSpotOptions> getSpotOptions() {
+    public Output</* @Nullable */ FleetSpotOptions> spotOptions() {
         return this.spotOptions;
     }
     /**
@@ -116,7 +116,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +130,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -144,7 +144,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing target capacity configurations. Defined below.
      * 
      */
-    public Output<FleetTargetCapacitySpecification> getTargetCapacitySpecification() {
+    public Output<FleetTargetCapacitySpecification> targetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
     /**
@@ -158,7 +158,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTerminateInstances() {
+    public Output</* @Nullable */ Boolean> terminateInstances() {
         return this.terminateInstances;
     }
     /**
@@ -172,7 +172,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Whether running instances should be terminated when the EC2 Fleet expires. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTerminateInstancesWithExpiration() {
+    public Output</* @Nullable */ Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration;
     }
     /**
@@ -186,7 +186,7 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: `maintain`, `request`. Defaults to `maintain`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

@@ -39,28 +39,28 @@ public final class GetLaunchTemplateBlockDeviceMappingEb {
         this.volumeType = volumeType;
     }
 
-    public String getDeleteOnTermination() {
+    public String deleteOnTermination() {
         return this.deleteOnTermination;
     }
-    public String getEncrypted() {
+    public String encrypted() {
         return this.encrypted;
     }
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
-    public Integer getThroughput() {
+    public Integer throughput() {
         return this.throughput;
     }
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

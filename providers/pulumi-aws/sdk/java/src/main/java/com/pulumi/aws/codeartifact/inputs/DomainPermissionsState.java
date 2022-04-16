@@ -22,7 +22,7 @@ public final class DomainPermissionsState extends com.pulumi.resources.ResourceA
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -33,7 +33,7 @@ public final class DomainPermissionsState extends com.pulumi.resources.ResourceA
     @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
@@ -44,7 +44,7 @@ public final class DomainPermissionsState extends com.pulumi.resources.ResourceA
     @Import(name="policyDocument")
       private final @Nullable Output<String> policyDocument;
 
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument == null ? Codegen.empty() : this.policyDocument;
     }
 
@@ -55,7 +55,7 @@ public final class DomainPermissionsState extends com.pulumi.resources.ResourceA
     @Import(name="policyRevision")
       private final @Nullable Output<String> policyRevision;
 
-    public Output<String> getPolicyRevision() {
+    public Output<String> policyRevision() {
         return this.policyRevision == null ? Codegen.empty() : this.policyRevision;
     }
 
@@ -66,7 +66,7 @@ public final class DomainPermissionsState extends com.pulumi.resources.ResourceA
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 

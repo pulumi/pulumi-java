@@ -71,59 +71,59 @@ public final class GetConstraintResult {
         this.type = type;
     }
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * Description of the constraint.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Owner of the constraint.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
     /**
      * Constraint parameters in JSON format.
      * 
     */
-    public String getParameters() {
+    public String parameters() {
         return this.parameters;
     }
     /**
      * Portfolio identifier.
      * 
     */
-    public String getPortfolioId() {
+    public String portfolioId() {
         return this.portfolioId;
     }
     /**
      * Product identifier.
      * 
     */
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
     /**
      * Constraint status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

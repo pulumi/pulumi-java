@@ -23,7 +23,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
     @Import(name="fieldToMatch", required=true)
       private final Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
 
-    public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> getFieldToMatch() {
+    public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -38,7 +38,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
     @Import(name="positionalConstraint", required=true)
       private final Output<String> positionalConstraint;
 
-    public Output<String> getPositionalConstraint() {
+    public Output<String> positionalConstraint() {
         return this.positionalConstraint;
     }
 
@@ -51,7 +51,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
     @Import(name="targetString")
       private final @Nullable Output<String> targetString;
 
-    public Output<String> getTargetString() {
+    public Output<String> targetString() {
         return this.targetString == null ? Codegen.empty() : this.targetString;
     }
 
@@ -66,7 +66,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends com.pulumi.resources.R
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 

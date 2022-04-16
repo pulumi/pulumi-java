@@ -41,21 +41,21 @@ public final class ClusterParameterGroupParameter {
      * Valid values are `immediate` and `pending-reboot`. Defaults to `pending-reboot`.
      * 
     */
-    public Optional<String> getApplyMethod() {
+    public Optional<String> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * The name of the neptune parameter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The value of the neptune parameter.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

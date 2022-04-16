@@ -41,21 +41,21 @@ public final class VpnConnectionRoute {
      * The CIDR block associated with the local subnet of the customer data center.
      * 
     */
-    public Optional<String> getDestinationCidrBlock() {
+    public Optional<String> destinationCidrBlock() {
         return Optional.ofNullable(this.destinationCidrBlock);
     }
     /**
      * Indicates how the routes were provided.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The current state of the static route.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

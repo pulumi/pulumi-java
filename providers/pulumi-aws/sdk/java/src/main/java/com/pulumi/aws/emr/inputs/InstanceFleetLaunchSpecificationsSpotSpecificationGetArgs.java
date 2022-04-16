@@ -23,7 +23,7 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     @Import(name="allocationStrategy", required=true)
       private final Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     @Import(name="blockDurationMinutes")
       private final @Nullable Output<Integer> blockDurationMinutes;
 
-    public Output<Integer> getBlockDurationMinutes() {
+    public Output<Integer> blockDurationMinutes() {
         return this.blockDurationMinutes == null ? Codegen.empty() : this.blockDurationMinutes;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     @Import(name="timeoutAction", required=true)
       private final Output<String> timeoutAction;
 
-    public Output<String> getTimeoutAction() {
+    public Output<String> timeoutAction() {
         return this.timeoutAction;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecificationGetArgs ext
     @Import(name="timeoutDurationMinutes", required=true)
       private final Output<Integer> timeoutDurationMinutes;
 
-    public Output<Integer> getTimeoutDurationMinutes() {
+    public Output<Integer> timeoutDurationMinutes() {
         return this.timeoutDurationMinutes;
     }
 

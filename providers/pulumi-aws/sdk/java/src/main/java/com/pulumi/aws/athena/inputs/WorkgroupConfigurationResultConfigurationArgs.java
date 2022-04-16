@@ -23,7 +23,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends com.pul
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -34,7 +34,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends com.pul
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
-    public Output<String> getOutputLocation() {
+    public Output<String> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 

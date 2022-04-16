@@ -23,7 +23,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsServiceAccessPrincipals")
       private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
-    public Output<List<String>> getAwsServiceAccessPrincipals() {
+    public Output<List<String>> awsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals == null ? Codegen.empty() : this.awsServiceAccessPrincipals;
     }
 
@@ -34,7 +34,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledPolicyTypes")
       private final @Nullable Output<List<String>> enabledPolicyTypes;
 
-    public Output<List<String>> getEnabledPolicyTypes() {
+    public Output<List<String>> enabledPolicyTypes() {
         return this.enabledPolicyTypes == null ? Codegen.empty() : this.enabledPolicyTypes;
     }
 
@@ -45,7 +45,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureSet")
       private final @Nullable Output<String> featureSet;
 
-    public Output<String> getFeatureSet() {
+    public Output<String> featureSet() {
         return this.featureSet == null ? Codegen.empty() : this.featureSet;
     }
 

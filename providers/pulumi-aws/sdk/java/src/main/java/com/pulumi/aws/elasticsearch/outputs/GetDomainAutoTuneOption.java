@@ -41,21 +41,21 @@ public final class GetDomainAutoTuneOption {
      * The Auto-Tune desired state for the domain.
      * 
     */
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
     /**
      * A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
      * 
     */
-    public List<GetDomainAutoTuneOptionMaintenanceSchedule> getMaintenanceSchedules() {
+    public List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules() {
         return this.maintenanceSchedules;
     }
     /**
      * Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
      * 
     */
-    public String getRollbackOnDisable() {
+    public String rollbackOnDisable() {
         return this.rollbackOnDisable;
     }
 

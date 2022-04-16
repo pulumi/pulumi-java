@@ -23,7 +23,7 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
@@ -34,7 +34,7 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
     @Import(name="dnsIps")
       private final @Nullable Output<List<String>> dnsIps;
 
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps == null ? Codegen.empty() : this.dnsIps;
     }
 
@@ -45,7 +45,7 @@ public final class ConditionalForwaderState extends com.pulumi.resources.Resourc
     @Import(name="remoteDomainName")
       private final @Nullable Output<String> remoteDomainName;
 
-    public Output<String> getRemoteDomainName() {
+    public Output<String> remoteDomainName() {
         return this.remoteDomainName == null ? Codegen.empty() : this.remoteDomainName;
     }
 

@@ -45,7 +45,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return List of actions initiated by this trigger when it fires. See Actions Below.
      * 
      */
-    public Output<List<TriggerAction>> getActions() {
+    public Output<List<TriggerAction>> actions() {
         return this.actions;
     }
     /**
@@ -59,7 +59,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of Glue Trigger
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -73,7 +73,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A description of the new trigger.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +87,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Start the trigger. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -101,7 +101,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return The name of the trigger.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
      * 
      */
-    public Output</* @Nullable */ TriggerPredicate> getPredicate() {
+    public Output</* @Nullable */ TriggerPredicate> predicate() {
         return this.predicate;
     }
     /**
@@ -129,7 +129,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
      * 
      */
-    public Output</* @Nullable */ String> getSchedule() {
+    public Output</* @Nullable */ String> schedule() {
         return this.schedule;
     }
     /**
@@ -143,7 +143,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStartOnCreation() {
+    public Output</* @Nullable */ Boolean> startOnCreation() {
         return this.startOnCreation;
     }
     /**
@@ -157,7 +157,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -171,7 +171,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -199,7 +199,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -213,7 +213,7 @@ public class Trigger extends com.pulumi.resources.CustomResource {
      * @return A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
      * 
      */
-    public Output</* @Nullable */ String> getWorkflowName() {
+    public Output</* @Nullable */ String> workflowName() {
         return this.workflowName;
     }
 

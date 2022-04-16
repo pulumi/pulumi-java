@@ -41,7 +41,7 @@ public class AdmChannel extends com.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -55,7 +55,7 @@ public class AdmChannel extends com.pulumi.resources.CustomResource {
      * @return Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -69,7 +69,7 @@ public class AdmChannel extends com.pulumi.resources.CustomResource {
      * @return Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
      * 
      */
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -83,7 +83,7 @@ public class AdmChannel extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to enable the channel. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
 

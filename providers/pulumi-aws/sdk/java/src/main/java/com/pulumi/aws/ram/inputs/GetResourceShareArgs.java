@@ -24,7 +24,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="filters")
       private final @Nullable List<GetResourceShareFilter> filters;
 
-    public List<GetResourceShareFilter> getFilters() {
+    public List<GetResourceShareFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceOwner", required=true)
       private final String resourceOwner;
 
-    public String getResourceOwner() {
+    public String resourceOwner() {
         return this.resourceOwner;
     }
 
@@ -57,7 +57,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

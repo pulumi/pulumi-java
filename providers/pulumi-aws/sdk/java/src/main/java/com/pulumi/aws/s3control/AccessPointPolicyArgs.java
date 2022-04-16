@@ -21,7 +21,7 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accessPointArn", required=true)
       private final Output<String> accessPointArn;
 
-    public Output<String> getAccessPointArn() {
+    public Output<String> accessPointArn() {
         return this.accessPointArn;
     }
 
@@ -32,7 +32,7 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

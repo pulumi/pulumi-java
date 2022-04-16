@@ -24,7 +24,7 @@ public final class FileSystemAssociationCacheAttributesArgs extends com.pulumi.r
     @Import(name="cacheStaleTimeoutInSeconds")
       private final @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
-    public Output<Integer> getCacheStaleTimeoutInSeconds() {
+    public Output<Integer> cacheStaleTimeoutInSeconds() {
         return this.cacheStaleTimeoutInSeconds == null ? Codegen.empty() : this.cacheStaleTimeoutInSeconds;
     }
 

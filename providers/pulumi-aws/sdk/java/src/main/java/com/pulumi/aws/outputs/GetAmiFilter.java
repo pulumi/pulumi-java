@@ -29,10 +29,10 @@ public final class GetAmiFilter {
      * The name of the AMI that was provided during image creation.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

@@ -26,7 +26,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="campaignHook")
       private final @Nullable Output<AppCampaignHookArgs> campaignHook;
 
-    public Output<AppCampaignHookArgs> getCampaignHook() {
+    public Output<AppCampaignHookArgs> campaignHook() {
         return this.campaignHook == null ? Codegen.empty() : this.campaignHook;
     }
 
@@ -37,7 +37,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limits")
       private final @Nullable Output<AppLimitsArgs> limits;
 
-    public Output<AppLimitsArgs> getLimits() {
+    public Output<AppLimitsArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -48,7 +48,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,7 +59,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -70,7 +70,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quietTime")
       private final @Nullable Output<AppQuietTimeArgs> quietTime;
 
-    public Output<AppQuietTimeArgs> getQuietTime() {
+    public Output<AppQuietTimeArgs> quietTime() {
         return this.quietTime == null ? Codegen.empty() : this.quietTime;
     }
 
@@ -81,7 +81,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

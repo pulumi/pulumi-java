@@ -35,14 +35,14 @@ public final class GetNetworkInterfacesFilter {
      * [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkInterfaces.html).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Set of values that are accepted for the given field.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

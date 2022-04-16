@@ -21,7 +21,7 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elb", required=true)
       private final Output<String> elb;
 
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb;
     }
 
@@ -32,7 +32,7 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 

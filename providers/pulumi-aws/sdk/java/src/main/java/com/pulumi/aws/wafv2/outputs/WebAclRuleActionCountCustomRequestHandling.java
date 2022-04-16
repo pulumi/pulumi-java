@@ -25,7 +25,7 @@ public final class WebAclRuleActionCountCustomRequestHandling {
      * The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
      * 
     */
-    public List<WebAclRuleActionCountCustomRequestHandlingInsertHeader> getInsertHeaders() {
+    public List<WebAclRuleActionCountCustomRequestHandlingInsertHeader> insertHeaders() {
         return this.insertHeaders;
     }
 

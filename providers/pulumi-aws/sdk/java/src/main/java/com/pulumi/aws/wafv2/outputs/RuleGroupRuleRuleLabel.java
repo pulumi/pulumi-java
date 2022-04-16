@@ -24,7 +24,7 @@ public final class RuleGroupRuleRuleLabel {
      * The label string.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

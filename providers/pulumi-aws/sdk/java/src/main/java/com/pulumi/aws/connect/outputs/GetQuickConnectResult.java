@@ -69,48 +69,48 @@ public final class GetQuickConnectResult {
      * The Amazon Resource Name (ARN) of the Quick Connect.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Specifies the description of the Quick Connect.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A block that defines the configuration information for the Quick Connect: `quick_connect_type` and one of `phone_config`, `queue_config`, `user_config` . The Quick Connect Config block is documented below.
      * 
     */
-    public List<GetQuickConnectQuickConnectConfig> getQuickConnectConfigs() {
+    public List<GetQuickConnectQuickConnectConfig> quickConnectConfigs() {
         return this.quickConnectConfigs;
     }
     /**
      * The identifier for the Quick Connect.
      * 
     */
-    public String getQuickConnectId() {
+    public String quickConnectId() {
         return this.quickConnectId;
     }
     /**
      * A map of tags to assign to the Quick Connect.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

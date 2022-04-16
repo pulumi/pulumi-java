@@ -20,10 +20,10 @@ public final class GetFileSystemLifecyclePolicy {
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }
 
-    public String getTransitionToIa() {
+    public String transitionToIa() {
         return this.transitionToIa;
     }
-    public String getTransitionToPrimaryStorageClass() {
+    public String transitionToPrimaryStorageClass() {
         return this.transitionToPrimaryStorageClass;
     }
 

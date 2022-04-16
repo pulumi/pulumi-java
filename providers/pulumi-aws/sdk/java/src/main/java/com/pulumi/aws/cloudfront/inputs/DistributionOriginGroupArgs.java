@@ -24,7 +24,7 @@ public final class DistributionOriginGroupArgs extends com.pulumi.resources.Reso
     @Import(name="failoverCriteria", required=true)
       private final Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
 
-    public Output<DistributionOriginGroupFailoverCriteriaArgs> getFailoverCriteria() {
+    public Output<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria() {
         return this.failoverCriteria;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionOriginGroupArgs extends com.pulumi.resources.Reso
     @Import(name="members", required=true)
       private final Output<List<DistributionOriginGroupMemberArgs>> members;
 
-    public Output<List<DistributionOriginGroupMemberArgs>> getMembers() {
+    public Output<List<DistributionOriginGroupMemberArgs>> members() {
         return this.members;
     }
 
@@ -46,7 +46,7 @@ public final class DistributionOriginGroupArgs extends com.pulumi.resources.Reso
     @Import(name="originId", required=true)
       private final Output<String> originId;
 
-    public Output<String> getOriginId() {
+    public Output<String> originId() {
         return this.originId;
     }
 

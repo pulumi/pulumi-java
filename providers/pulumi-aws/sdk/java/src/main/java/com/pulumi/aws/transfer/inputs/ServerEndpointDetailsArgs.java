@@ -23,7 +23,7 @@ public final class ServerEndpointDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="addressAllocationIds")
       private final @Nullable Output<List<String>> addressAllocationIds;
 
-    public Output<List<String>> getAddressAllocationIds() {
+    public Output<List<String>> addressAllocationIds() {
         return this.addressAllocationIds == null ? Codegen.empty() : this.addressAllocationIds;
     }
 
@@ -34,7 +34,7 @@ public final class ServerEndpointDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -45,7 +45,7 @@ public final class ServerEndpointDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -56,7 +56,7 @@ public final class ServerEndpointDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
@@ -67,7 +67,7 @@ public final class ServerEndpointDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

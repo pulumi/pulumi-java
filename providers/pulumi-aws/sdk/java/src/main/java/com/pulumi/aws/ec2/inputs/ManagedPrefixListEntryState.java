@@ -22,7 +22,7 @@ public final class ManagedPrefixListEntryState extends com.pulumi.resources.Reso
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
@@ -33,7 +33,7 @@ public final class ManagedPrefixListEntryState extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedPrefixListEntryState extends com.pulumi.resources.Reso
     @Import(name="prefixListId")
       private final @Nullable Output<String> prefixListId;
 
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId == null ? Codegen.empty() : this.prefixListId;
     }
 

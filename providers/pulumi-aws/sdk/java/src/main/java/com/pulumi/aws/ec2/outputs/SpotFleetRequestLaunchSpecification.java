@@ -106,88 +106,88 @@ public final class SpotFleetRequestLaunchSpecification {
         this.weightedCapacity = weightedCapacity;
     }
 
-    public String getAmi() {
+    public String ami() {
         return this.ami;
     }
-    public Optional<Boolean> getAssociatePublicIpAddress() {
+    public Optional<Boolean> associatePublicIpAddress() {
         return Optional.ofNullable(this.associatePublicIpAddress);
     }
     /**
      * The availability zone in which to place the request.
      * 
     */
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> getEbsBlockDevices() {
+    public List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? List.of() : this.ebsBlockDevices;
     }
-    public Optional<Boolean> getEbsOptimized() {
+    public Optional<Boolean> ebsOptimized() {
         return Optional.ofNullable(this.ebsOptimized);
     }
-    public List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> getEphemeralBlockDevices() {
+    public List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? List.of() : this.ephemeralBlockDevices;
     }
-    public Optional<String> getIamInstanceProfile() {
+    public Optional<String> iamInstanceProfile() {
         return Optional.ofNullable(this.iamInstanceProfile);
     }
-    public Optional<String> getIamInstanceProfileArn() {
+    public Optional<String> iamInstanceProfileArn() {
         return Optional.ofNullable(this.iamInstanceProfileArn);
     }
     /**
      * The type of instance to request.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
-    public Optional<Boolean> getMonitoring() {
+    public Optional<Boolean> monitoring() {
         return Optional.ofNullable(this.monitoring);
     }
-    public Optional<String> getPlacementGroup() {
+    public Optional<String> placementGroup() {
         return Optional.ofNullable(this.placementGroup);
     }
-    public Optional<String> getPlacementTenancy() {
+    public Optional<String> placementTenancy() {
         return Optional.ofNullable(this.placementTenancy);
     }
-    public List<SpotFleetRequestLaunchSpecificationRootBlockDevice> getRootBlockDevices() {
+    public List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices() {
         return this.rootBlockDevices == null ? List.of() : this.rootBlockDevices;
     }
     /**
      * The maximum spot bid for this override request.
      * 
     */
-    public Optional<String> getSpotPrice() {
+    public Optional<String> spotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
     /**
      * The subnet in which to launch the requested instance.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-    public Optional<String> getUserData() {
+    public Optional<String> userData() {
         return Optional.ofNullable(this.userData);
     }
-    public List<String> getVpcSecurityGroupIds() {
+    public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
     /**
      * The capacity added to the fleet by a fulfilled request.
      * 
     */
-    public Optional<String> getWeightedCapacity() {
+    public Optional<String> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

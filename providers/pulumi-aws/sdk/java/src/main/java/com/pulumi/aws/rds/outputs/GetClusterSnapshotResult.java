@@ -147,123 +147,123 @@ public final class GetClusterSnapshotResult {
      * Specifies the allocated storage size in gigabytes (GB).
      * 
     */
-    public Integer getAllocatedStorage() {
+    public Integer allocatedStorage() {
         return this.allocatedStorage;
     }
     /**
      * List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
     /**
      * Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * 
     */
-    public Optional<String> getDbClusterIdentifier() {
+    public Optional<String> dbClusterIdentifier() {
         return Optional.ofNullable(this.dbClusterIdentifier);
     }
     /**
      * The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
      * 
     */
-    public String getDbClusterSnapshotArn() {
+    public String dbClusterSnapshotArn() {
         return this.dbClusterSnapshotArn;
     }
-    public Optional<String> getDbClusterSnapshotIdentifier() {
+    public Optional<String> dbClusterSnapshotIdentifier() {
         return Optional.ofNullable(this.dbClusterSnapshotIdentifier);
     }
     /**
      * Specifies the name of the database engine.
      * 
     */
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
     /**
      * Version of the database engine for this DB cluster snapshot.
      * 
     */
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getIncludePublic() {
+    public Optional<Boolean> includePublic() {
         return Optional.ofNullable(this.includePublic);
     }
-    public Optional<Boolean> getIncludeShared() {
+    public Optional<Boolean> includeShared() {
         return Optional.ofNullable(this.includeShared);
     }
     /**
      * If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * License model information for the restored DB cluster.
      * 
     */
-    public String getLicenseModel() {
+    public String licenseModel() {
         return this.licenseModel;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * Port that the DB cluster was listening on at the time of the snapshot.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * 
     */
-    public String getSnapshotCreateTime() {
+    public String snapshotCreateTime() {
         return this.snapshotCreateTime;
     }
-    public Optional<String> getSnapshotType() {
+    public Optional<String> snapshotType() {
         return Optional.ofNullable(this.snapshotType);
     }
-    public String getSourceDbClusterSnapshotArn() {
+    public String sourceDbClusterSnapshotArn() {
         return this.sourceDbClusterSnapshotArn;
     }
     /**
      * The status of this DB Cluster Snapshot.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Specifies whether the DB cluster snapshot is encrypted.
      * 
     */
-    public Boolean getStorageEncrypted() {
+    public Boolean storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
      * A map of tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The VPC ID associated with the DB cluster snapshot.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

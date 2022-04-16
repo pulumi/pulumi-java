@@ -42,21 +42,21 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
      * 
     */
-    public Optional<String> getComparator() {
+    public Optional<String> comparator() {
         return Optional.ofNullable(this.comparator);
     }
     /**
      * The object property to use in the condition.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * An array that lists the values to use in the condition.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

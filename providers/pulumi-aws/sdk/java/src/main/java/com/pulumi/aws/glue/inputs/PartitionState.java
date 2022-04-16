@@ -25,7 +25,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -36,7 +36,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -47,7 +47,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -58,7 +58,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastAccessedTime")
       private final @Nullable Output<String> lastAccessedTime;
 
-    public Output<String> getLastAccessedTime() {
+    public Output<String> lastAccessedTime() {
         return this.lastAccessedTime == null ? Codegen.empty() : this.lastAccessedTime;
     }
 
@@ -69,7 +69,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastAnalyzedTime")
       private final @Nullable Output<String> lastAnalyzedTime;
 
-    public Output<String> getLastAnalyzedTime() {
+    public Output<String> lastAnalyzedTime() {
         return this.lastAnalyzedTime == null ? Codegen.empty() : this.lastAnalyzedTime;
     }
 
@@ -80,7 +80,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -91,7 +91,7 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionValues")
       private final @Nullable Output<List<String>> partitionValues;
 
-    public Output<List<String>> getPartitionValues() {
+    public Output<List<String>> partitionValues() {
         return this.partitionValues == null ? Codegen.empty() : this.partitionValues;
     }
 
@@ -102,14 +102,14 @@ public final class PartitionState extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageDescriptor")
       private final @Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor;
 
-    public Output<PartitionStorageDescriptorGetArgs> getStorageDescriptor() {
+    public Output<PartitionStorageDescriptorGetArgs> storageDescriptor() {
         return this.storageDescriptor == null ? Codegen.empty() : this.storageDescriptor;
     }
 
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

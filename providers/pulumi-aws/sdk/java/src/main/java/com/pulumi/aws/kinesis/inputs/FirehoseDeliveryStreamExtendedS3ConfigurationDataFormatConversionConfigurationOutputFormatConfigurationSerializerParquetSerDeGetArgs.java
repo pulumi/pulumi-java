@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="blockSizeBytes")
       private final @Nullable Output<Integer> blockSizeBytes;
 
-    public Output<Integer> getBlockSizeBytes() {
+    public Output<Integer> blockSizeBytes() {
         return this.blockSizeBytes == null ? Codegen.empty() : this.blockSizeBytes;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -46,7 +46,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="enableDictionaryCompression")
       private final @Nullable Output<Boolean> enableDictionaryCompression;
 
-    public Output<Boolean> getEnableDictionaryCompression() {
+    public Output<Boolean> enableDictionaryCompression() {
         return this.enableDictionaryCompression == null ? Codegen.empty() : this.enableDictionaryCompression;
     }
 
@@ -57,7 +57,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="maxPaddingBytes")
       private final @Nullable Output<Integer> maxPaddingBytes;
 
-    public Output<Integer> getMaxPaddingBytes() {
+    public Output<Integer> maxPaddingBytes() {
         return this.maxPaddingBytes == null ? Codegen.empty() : this.maxPaddingBytes;
     }
 
@@ -68,7 +68,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="pageSizeBytes")
       private final @Nullable Output<Integer> pageSizeBytes;
 
-    public Output<Integer> getPageSizeBytes() {
+    public Output<Integer> pageSizeBytes() {
         return this.pageSizeBytes == null ? Codegen.empty() : this.pageSizeBytes;
     }
 
@@ -79,7 +79,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="writerVersion")
       private final @Nullable Output<String> writerVersion;
 
-    public Output<String> getWriterVersion() {
+    public Output<String> writerVersion() {
         return this.writerVersion == null ? Codegen.empty() : this.writerVersion;
     }
 

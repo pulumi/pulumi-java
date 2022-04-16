@@ -21,7 +21,7 @@ public final class EventDestinationSnsDestinationGetArgs extends com.pulumi.reso
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 

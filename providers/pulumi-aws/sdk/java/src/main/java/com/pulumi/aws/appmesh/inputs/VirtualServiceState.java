@@ -24,7 +24,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="meshName")
       private final @Nullable Output<String> meshName;
 
-    public Output<String> getMeshName() {
+    public Output<String> meshName() {
         return this.meshName == null ? Codegen.empty() : this.meshName;
     }
 
@@ -68,7 +68,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
-    public Output<String> getMeshOwner() {
+    public Output<String> meshOwner() {
         return this.meshOwner == null ? Codegen.empty() : this.meshOwner;
     }
 
@@ -79,7 +79,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
-    public Output<String> getResourceOwner() {
+    public Output<String> resourceOwner() {
         return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
     }
 
@@ -101,7 +101,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="spec")
       private final @Nullable Output<VirtualServiceSpecGetArgs> spec;
 
-    public Output<VirtualServiceSpecGetArgs> getSpec() {
+    public Output<VirtualServiceSpecGetArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -112,7 +112,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -123,7 +123,7 @@ public final class VirtualServiceState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

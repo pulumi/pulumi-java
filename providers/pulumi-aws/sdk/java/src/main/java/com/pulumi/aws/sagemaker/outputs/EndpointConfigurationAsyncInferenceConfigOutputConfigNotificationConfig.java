@@ -34,14 +34,14 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
      * 
     */
-    public Optional<String> getErrorTopic() {
+    public Optional<String> errorTopic() {
         return Optional.ofNullable(this.errorTopic);
     }
     /**
      * Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
      * 
     */
-    public Optional<String> getSuccessTopic() {
+    public Optional<String> successTopic() {
         return Optional.ofNullable(this.successTopic);
     }
 

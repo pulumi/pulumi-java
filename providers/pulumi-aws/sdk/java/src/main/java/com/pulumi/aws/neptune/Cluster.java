@@ -52,7 +52,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`.
      * 
      */
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -66,7 +66,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Neptune Cluster Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -80,7 +80,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -94,7 +94,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The days to retain backups for. Default `1`
      * 
      */
-    public Output</* @Nullable */ Integer> getBackupRetentionPeriod() {
+    public Output</* @Nullable */ Integer> backupRetentionPeriod() {
         return this.backupRetentionPeriod;
     }
     /**
@@ -108,7 +108,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -122,7 +122,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
      * 
      */
-    public Output<String> getClusterIdentifierPrefix() {
+    public Output<String> clusterIdentifierPrefix() {
         return this.clusterIdentifierPrefix;
     }
     /**
@@ -136,7 +136,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of Neptune Instances that are a part of this cluster
      * 
      */
-    public Output<List<String>> getClusterMembers() {
+    public Output<List<String>> clusterMembers() {
         return this.clusterMembers;
     }
     /**
@@ -150,7 +150,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Neptune Cluster Resource ID
      * 
      */
-    public Output<String> getClusterResourceId() {
+    public Output<String> clusterResourceId() {
         return this.clusterResourceId;
     }
     /**
@@ -164,7 +164,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If set to true, tags are copied to any snapshot of the DB cluster that is created.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCopyTagsToSnapshot() {
+    public Output</* @Nullable */ Boolean> copyTagsToSnapshot() {
         return this.copyTagsToSnapshot;
     }
     /**
@@ -178,7 +178,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -192,7 +192,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports `audit`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEnableCloudwatchLogsExports() {
+    public Output</* @Nullable */ List<String>> enableCloudwatchLogsExports() {
         return this.enableCloudwatchLogsExports;
     }
     /**
@@ -206,7 +206,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The DNS address of the Neptune instance
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -220,7 +220,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for this Neptune cluster. Defaults to `neptune`.
      * 
      */
-    public Output</* @Nullable */ String> getEngine() {
+    public Output</* @Nullable */ String> engine() {
         return this.engine;
     }
     /**
@@ -234,7 +234,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The database engine version.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -248,7 +248,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> getFinalSnapshotIdentifier() {
+    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier;
     }
     /**
@@ -262,7 +262,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Route53 Hosted Zone ID of the endpoint
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -276,7 +276,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIamDatabaseAuthenticationEnabled() {
+    public Output</* @Nullable */ Boolean> iamDatabaseAuthenticationEnabled() {
         return this.iamDatabaseAuthenticationEnabled;
     }
     /**
@@ -290,7 +290,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A List of ARNs for the IAM roles to associate to the Neptune Cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIamRoles() {
+    public Output</* @Nullable */ List<String>> iamRoles() {
         return this.iamRoles;
     }
     /**
@@ -304,7 +304,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key. When specifying `kms_key_arn`, `storage_encrypted` needs to be set to true.
      * 
      */
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -318,7 +318,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A cluster parameter group to associate with the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getNeptuneClusterParameterGroupName() {
+    public Output</* @Nullable */ String> neptuneClusterParameterGroupName() {
         return this.neptuneClusterParameterGroupName;
     }
     /**
@@ -332,7 +332,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A Neptune subnet group to associate with this Neptune instance.
      * 
      */
-    public Output<String> getNeptuneSubnetGroupName() {
+    public Output<String> neptuneSubnetGroupName() {
         return this.neptuneSubnetGroupName;
     }
     /**
@@ -346,7 +346,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The port on which the Neptune accepts connections. Default is `8182`.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -360,7 +360,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
      * 
      */
-    public Output<String> getPreferredBackupWindow() {
+    public Output<String> preferredBackupWindow() {
         return this.preferredBackupWindow;
     }
     /**
@@ -374,7 +374,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
      * 
      */
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
@@ -388,7 +388,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A read-only endpoint for the Neptune cluster, automatically load-balanced across replicas
      * 
      */
-    public Output<String> getReaderEndpoint() {
+    public Output<String> readerEndpoint() {
         return this.readerEndpoint;
     }
     /**
@@ -402,7 +402,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.
      * 
      */
-    public Output</* @Nullable */ String> getReplicationSourceIdentifier() {
+    public Output</* @Nullable */ String> replicationSourceIdentifier() {
         return this.replicationSourceIdentifier;
     }
     /**
@@ -416,7 +416,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipFinalSnapshot() {
+    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
         return this.skipFinalSnapshot;
     }
     /**
@@ -430,7 +430,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotIdentifier() {
+    public Output</* @Nullable */ String> snapshotIdentifier() {
         return this.snapshotIdentifier;
     }
     /**
@@ -444,7 +444,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the Neptune cluster is encrypted. The default is `false` if not specified.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStorageEncrypted() {
+    public Output</* @Nullable */ Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
@@ -458,7 +458,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the Neptune cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -472,7 +472,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -486,7 +486,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return List of VPC security groups to associate with the Cluster
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 

@@ -59,35 +59,35 @@ public final class OpenZfsFileSystemRootVolumeConfiguration {
      * - A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
     */
-    public Optional<Boolean> getCopyTagsToSnapshots() {
+    public Optional<Boolean> copyTagsToSnapshots() {
         return Optional.ofNullable(this.copyTagsToSnapshots);
     }
     /**
      * - Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don't specify compression option will inherit from parent volume. This option on file system applies to the root volume.
      * 
     */
-    public Optional<String> getDataCompressionType() {
+    public Optional<String> dataCompressionType() {
         return Optional.ofNullable(this.dataCompressionType);
     }
     /**
      * - NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
      * 
     */
-    public Optional<OpenZfsFileSystemRootVolumeConfigurationNfsExports> getNfsExports() {
+    public Optional<OpenZfsFileSystemRootVolumeConfigurationNfsExports> nfsExports() {
         return Optional.ofNullable(this.nfsExports);
     }
     /**
      * - specifies whether the volume is read-only. Default is false.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
      * 
     */
-    public List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> getUserAndGroupQuotas() {
+    public List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas() {
         return this.userAndGroupQuotas == null ? List.of() : this.userAndGroupQuotas;
     }
 

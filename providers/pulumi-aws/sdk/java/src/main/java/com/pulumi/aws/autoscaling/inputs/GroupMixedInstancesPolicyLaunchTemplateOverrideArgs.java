@@ -23,7 +23,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends c
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -34,7 +34,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends c
     @Import(name="launchTemplateSpecification")
       private final @Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
-    public Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
+    public Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification == null ? Codegen.empty() : this.launchTemplateSpecification;
     }
 
@@ -45,7 +45,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends c
     @Import(name="weightedCapacity")
       private final @Nullable Output<String> weightedCapacity;
 
-    public Output<String> getWeightedCapacity() {
+    public Output<String> weightedCapacity() {
         return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 

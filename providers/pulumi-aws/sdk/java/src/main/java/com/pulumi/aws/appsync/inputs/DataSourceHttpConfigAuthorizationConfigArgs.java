@@ -23,7 +23,7 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends com.pulum
     @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends com.pulum
     @Import(name="awsIamConfig")
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig;
 
-    public Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> getAwsIamConfig() {
+    public Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig() {
         return this.awsIamConfig == null ? Codegen.empty() : this.awsIamConfig;
     }
 

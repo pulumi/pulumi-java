@@ -39,7 +39,7 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * @return Hash key to use for lookups and identification of the item
      * 
      */
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey;
     }
     /**
@@ -55,7 +55,7 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
-    public Output<String> getItem() {
+    public Output<String> item() {
         return this.item;
     }
     /**
@@ -69,7 +69,7 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * @return Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
      * 
      */
-    public Output</* @Nullable */ String> getRangeKey() {
+    public Output</* @Nullable */ String> rangeKey() {
         return this.rangeKey;
     }
     /**
@@ -83,7 +83,7 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * @return The name of the table to contain the item.
      * 
      */
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

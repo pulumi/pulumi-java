@@ -23,14 +23,14 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs
     @Import(name="netbiosName")
       private final @Nullable Output<String> netbiosName;
 
-    public Output<String> getNetbiosName() {
+    public Output<String> netbiosName() {
         return this.netbiosName == null ? Codegen.empty() : this.netbiosName;
     }
 
     @Import(name="selfManagedActiveDirectoryConfiguration")
       private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs> selfManagedActiveDirectoryConfiguration;
 
-    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs> getSelfManagedActiveDirectoryConfiguration() {
+    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationGetArgs> selfManagedActiveDirectoryConfiguration() {
         return this.selfManagedActiveDirectoryConfiguration == null ? Codegen.empty() : this.selfManagedActiveDirectoryConfiguration;
     }
 

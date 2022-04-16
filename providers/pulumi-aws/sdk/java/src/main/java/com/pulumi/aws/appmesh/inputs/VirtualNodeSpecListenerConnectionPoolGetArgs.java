@@ -25,7 +25,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
     @Import(name="grpc")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> getGrpc() {
+    public Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc() {
         return this.grpc == null ? Codegen.empty() : this.grpc;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
     @Import(name="http")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> getHttp() {
+    public Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
     @Import(name="http2")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> getHttp2() {
+    public Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2() {
         return this.http2 == null ? Codegen.empty() : this.http2;
     }
 
@@ -58,7 +58,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends com.pulu
     @Import(name="tcp")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> getTcp() {
+    public Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp() {
         return this.tcp == null ? Codegen.empty() : this.tcp;
     }
 

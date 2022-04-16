@@ -25,7 +25,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="duration", required=true)
       private final Output<Integer> duration;
 
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration;
     }
 
@@ -36,7 +36,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="rulesPackageArns", required=true)
       private final Output<List<String>> rulesPackageArns;
 
-    public Output<List<String>> getRulesPackageArns() {
+    public Output<List<String>> rulesPackageArns() {
         return this.rulesPackageArns;
     }
 
@@ -58,7 +58,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -69,7 +69,7 @@ public final class AssessmentTemplateArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 

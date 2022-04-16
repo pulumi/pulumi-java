@@ -22,7 +22,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchRoleArn")
       private final @Nullable Output<String> cloudwatchRoleArn;
 
-    public Output<String> getCloudwatchRoleArn() {
+    public Output<String> cloudwatchRoleArn() {
         return this.cloudwatchRoleArn == null ? Codegen.empty() : this.cloudwatchRoleArn;
     }
 

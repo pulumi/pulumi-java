@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
         this.items = items;
     }
 
-    public List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> getItems() {
+    public List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items() {
         return this.items == null ? List.of() : this.items;
     }
 

@@ -23,7 +23,7 @@ public final class LogDestinationPolicyState extends com.pulumi.resources.Resour
     @Import(name="accessPolicy")
       private final @Nullable Output<String> accessPolicy;
 
-    public Output<String> getAccessPolicy() {
+    public Output<String> accessPolicy() {
         return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
@@ -34,7 +34,7 @@ public final class LogDestinationPolicyState extends com.pulumi.resources.Resour
     @Import(name="destinationName")
       private final @Nullable Output<String> destinationName;
 
-    public Output<String> getDestinationName() {
+    public Output<String> destinationName() {
         return this.destinationName == null ? Codegen.empty() : this.destinationName;
     }
 
@@ -45,7 +45,7 @@ public final class LogDestinationPolicyState extends com.pulumi.resources.Resour
     @Import(name="forceUpdate")
       private final @Nullable Output<Boolean> forceUpdate;
 
-    public Output<Boolean> getForceUpdate() {
+    public Output<Boolean> forceUpdate() {
         return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
     }
 

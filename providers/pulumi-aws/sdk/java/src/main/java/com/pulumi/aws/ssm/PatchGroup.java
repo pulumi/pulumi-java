@@ -32,7 +32,7 @@ public class PatchGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of the patch baseline to register the patch group with.
      * 
      */
-    public Output<String> getBaselineId() {
+    public Output<String> baselineId() {
         return this.baselineId;
     }
     /**
@@ -46,7 +46,7 @@ public class PatchGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the patch group that should be registered with the patch baseline.
      * 
      */
-    public Output<String> getPatchGroup() {
+    public Output<String> patchGroup() {
         return this.patchGroup;
     }
 

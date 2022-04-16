@@ -25,7 +25,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -63,7 +63,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 
@@ -76,7 +76,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> getSampleUtterances() {
+    public Output<List<String>> sampleUtterances() {
         return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
@@ -87,7 +87,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotConstraint", required=true)
       private final Output<String> slotConstraint;
 
-    public Output<String> getSlotConstraint() {
+    public Output<String> slotConstraint() {
         return this.slotConstraint;
     }
 
@@ -99,7 +99,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotType", required=true)
       private final Output<String> slotType;
 
-    public Output<String> getSlotType() {
+    public Output<String> slotType() {
         return this.slotType;
     }
 
@@ -110,7 +110,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotTypeVersion")
       private final @Nullable Output<String> slotTypeVersion;
 
-    public Output<String> getSlotTypeVersion() {
+    public Output<String> slotTypeVersion() {
         return this.slotTypeVersion == null ? Codegen.empty() : this.slotTypeVersion;
     }
 
@@ -122,7 +122,7 @@ public final class IntentSlotGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="valueElicitationPrompt")
       private final @Nullable Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt;
 
-    public Output<IntentSlotValueElicitationPromptGetArgs> getValueElicitationPrompt() {
+    public Output<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt() {
         return this.valueElicitationPrompt == null ? Codegen.empty() : this.valueElicitationPrompt;
     }
 

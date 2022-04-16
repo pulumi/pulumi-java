@@ -36,17 +36,17 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
      * - The ID of the user or group. Valid values between `0` and `2147483647`
      * 
     */
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
     /**
      * - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
     */
-    public Integer getStorageCapacityQuotaGib() {
+    public Integer storageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

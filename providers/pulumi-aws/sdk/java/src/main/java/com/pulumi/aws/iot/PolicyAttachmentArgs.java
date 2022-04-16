@@ -21,7 +21,7 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -32,7 +32,7 @@ public final class PolicyAttachmentArgs extends com.pulumi.resources.ResourceArg
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

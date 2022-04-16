@@ -24,7 +24,7 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedScalingPolicyState extends com.pulumi.resources.Resour
     @Import(name="computeLimits")
       private final @Nullable Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
 
-    public Output<List<ManagedScalingPolicyComputeLimitGetArgs>> getComputeLimits() {
+    public Output<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits() {
         return this.computeLimits == null ? Codegen.empty() : this.computeLimits;
     }
 

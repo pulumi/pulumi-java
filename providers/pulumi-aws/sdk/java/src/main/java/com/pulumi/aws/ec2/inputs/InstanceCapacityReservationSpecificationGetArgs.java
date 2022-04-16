@@ -23,7 +23,7 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends com.p
     @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
-    public Output<String> getCapacityReservationPreference() {
+    public Output<String> capacityReservationPreference() {
         return this.capacityReservationPreference == null ? Codegen.empty() : this.capacityReservationPreference;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceCapacityReservationSpecificationGetArgs extends com.p
     @Import(name="capacityReservationTarget")
       private final @Nullable Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
-    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {
+    public Output<InstanceCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget() {
         return this.capacityReservationTarget == null ? Codegen.empty() : this.capacityReservationTarget;
     }
 

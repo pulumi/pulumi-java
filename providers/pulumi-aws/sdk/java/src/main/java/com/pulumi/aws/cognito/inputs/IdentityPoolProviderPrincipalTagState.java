@@ -24,7 +24,7 @@ public final class IdentityPoolProviderPrincipalTagState extends com.pulumi.reso
     @Import(name="identityPoolId")
       private final @Nullable Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
     }
 
@@ -37,21 +37,21 @@ public final class IdentityPoolProviderPrincipalTagState extends com.pulumi.reso
     @Import(name="identityProviderName")
       private final @Nullable Output<String> identityProviderName;
 
-    public Output<String> getIdentityProviderName() {
+    public Output<String> identityProviderName() {
         return this.identityProviderName == null ? Codegen.empty() : this.identityProviderName;
     }
 
     @Import(name="principalTags")
       private final @Nullable Output<Map<String,String>> principalTags;
 
-    public Output<Map<String,String>> getPrincipalTags() {
+    public Output<Map<String,String>> principalTags() {
         return this.principalTags == null ? Codegen.empty() : this.principalTags;
     }
 
     @Import(name="useDefaults")
       private final @Nullable Output<Boolean> useDefaults;
 
-    public Output<Boolean> getUseDefaults() {
+    public Output<Boolean> useDefaults() {
         return this.useDefaults == null ? Codegen.empty() : this.useDefaults;
     }
 

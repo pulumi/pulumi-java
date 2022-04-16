@@ -23,7 +23,7 @@ public final class InsightFiltersResourceContainerLaunchedAtGetArgs extends com.
     @Import(name="dateRange")
       private final @Nullable Output<InsightFiltersResourceContainerLaunchedAtDateRangeGetArgs> dateRange;
 
-    public Output<InsightFiltersResourceContainerLaunchedAtDateRangeGetArgs> getDateRange() {
+    public Output<InsightFiltersResourceContainerLaunchedAtDateRangeGetArgs> dateRange() {
         return this.dateRange == null ? Codegen.empty() : this.dateRange;
     }
 
@@ -34,7 +34,7 @@ public final class InsightFiltersResourceContainerLaunchedAtGetArgs extends com.
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -45,7 +45,7 @@ public final class InsightFiltersResourceContainerLaunchedAtGetArgs extends com.
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

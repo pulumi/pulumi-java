@@ -42,13 +42,13 @@ public class OpenZfsSnapshot extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name of the snapshot.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -62,7 +62,7 @@ public class OpenZfsSnapshot extends com.pulumi.resources.CustomResource {
      * @return The name of the Snapshot. You can use a maximum of 203 alphanumeric characters plus either _ or -  or : or . for the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -76,7 +76,7 @@ public class OpenZfsSnapshot extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -90,7 +90,7 @@ public class OpenZfsSnapshot extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -104,7 +104,7 @@ public class OpenZfsSnapshot extends com.pulumi.resources.CustomResource {
      * @return The ID of the volume to snapshot. This can be the root volume or a child volume.
      * 
      */
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 

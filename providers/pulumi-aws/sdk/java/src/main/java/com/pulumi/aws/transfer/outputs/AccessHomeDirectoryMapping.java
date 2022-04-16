@@ -32,14 +32,14 @@ public final class AccessHomeDirectoryMapping {
      * Represents an entry and a target.
      * 
     */
-    public String getEntry() {
+    public String entry() {
         return this.entry;
     }
     /**
      * Represents the map target.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

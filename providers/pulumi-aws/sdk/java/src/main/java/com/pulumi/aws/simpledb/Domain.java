@@ -40,7 +40,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The name of the SimpleDB domain
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

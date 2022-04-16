@@ -27,7 +27,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appSources")
       private final @Nullable Output<List<ApplicationAppSourceGetArgs>> appSources;
 
-    public Output<List<ApplicationAppSourceGetArgs>> getAppSources() {
+    public Output<List<ApplicationAppSourceGetArgs>> appSources() {
         return this.appSources == null ? Codegen.empty() : this.appSources;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoBundleOnDeploy")
       private final @Nullable Output<String> autoBundleOnDeploy;
 
-    public Output<String> getAutoBundleOnDeploy() {
+    public Output<String> autoBundleOnDeploy() {
         return this.autoBundleOnDeploy == null ? Codegen.empty() : this.autoBundleOnDeploy;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="awsFlowRubySettings")
       private final @Nullable Output<String> awsFlowRubySettings;
 
-    public Output<String> getAwsFlowRubySettings() {
+    public Output<String> awsFlowRubySettings() {
         return this.awsFlowRubySettings == null ? Codegen.empty() : this.awsFlowRubySettings;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceArn")
       private final @Nullable Output<String> dataSourceArn;
 
-    public Output<String> getDataSourceArn() {
+    public Output<String> dataSourceArn() {
         return this.dataSourceArn == null ? Codegen.empty() : this.dataSourceArn;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceDatabaseName")
       private final @Nullable Output<String> dataSourceDatabaseName;
 
-    public Output<String> getDataSourceDatabaseName() {
+    public Output<String> dataSourceDatabaseName() {
         return this.dataSourceDatabaseName == null ? Codegen.empty() : this.dataSourceDatabaseName;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceType")
       private final @Nullable Output<String> dataSourceType;
 
-    public Output<String> getDataSourceType() {
+    public Output<String> dataSourceType() {
         return this.dataSourceType == null ? Codegen.empty() : this.dataSourceType;
     }
 
@@ -93,7 +93,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -104,7 +104,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentRoot")
       private final @Nullable Output<String> documentRoot;
 
-    public Output<String> getDocumentRoot() {
+    public Output<String> documentRoot() {
         return this.documentRoot == null ? Codegen.empty() : this.documentRoot;
     }
 
@@ -115,7 +115,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> getDomains() {
+    public Output<List<String>> domains() {
         return this.domains == null ? Codegen.empty() : this.domains;
     }
 
@@ -126,7 +126,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSsl")
       private final @Nullable Output<Boolean> enableSsl;
 
-    public Output<Boolean> getEnableSsl() {
+    public Output<Boolean> enableSsl() {
         return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
     }
 
@@ -137,7 +137,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="environments")
       private final @Nullable Output<List<ApplicationEnvironmentGetArgs>> environments;
 
-    public Output<List<ApplicationEnvironmentGetArgs>> getEnvironments() {
+    public Output<List<ApplicationEnvironmentGetArgs>> environments() {
         return this.environments == null ? Codegen.empty() : this.environments;
     }
 
@@ -148,7 +148,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -159,7 +159,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="railsEnv")
       private final @Nullable Output<String> railsEnv;
 
-    public Output<String> getRailsEnv() {
+    public Output<String> railsEnv() {
         return this.railsEnv == null ? Codegen.empty() : this.railsEnv;
     }
 
@@ -170,7 +170,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
@@ -181,7 +181,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslConfigurations")
       private final @Nullable Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations;
 
-    public Output<List<ApplicationSslConfigurationGetArgs>> getSslConfigurations() {
+    public Output<List<ApplicationSslConfigurationGetArgs>> sslConfigurations() {
         return this.sslConfigurations == null ? Codegen.empty() : this.sslConfigurations;
     }
 
@@ -192,7 +192,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 
@@ -203,7 +203,7 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

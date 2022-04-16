@@ -41,21 +41,21 @@ public final class ProjectLogsConfigCloudwatchLogs {
      * Group name of the logs in CloudWatch Logs.
      * 
     */
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
     /**
      * Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Stream name of the logs in CloudWatch Logs.
      * 
     */
-    public Optional<String> getStreamName() {
+    public Optional<String> streamName() {
         return Optional.ofNullable(this.streamName);
     }
 

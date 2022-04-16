@@ -138,117 +138,117 @@ public final class GetEngineVersionResult {
      * The default character set for new instances of this engine version.
      * 
     */
-    public String getDefaultCharacterSet() {
+    public String defaultCharacterSet() {
         return this.defaultCharacterSet;
     }
-    public String getEngine() {
+    public String engine() {
         return this.engine;
     }
     /**
      * The description of the database engine.
      * 
     */
-    public String getEngineDescription() {
+    public String engineDescription() {
         return this.engineDescription;
     }
     /**
      * Set of log types that the database engine has available for export to CloudWatch Logs.
      * 
     */
-    public List<String> getExportableLogTypes() {
+    public List<String> exportableLogTypes() {
         return this.exportableLogTypes;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getParameterGroupFamily() {
+    public String parameterGroupFamily() {
         return this.parameterGroupFamily;
     }
-    public List<String> getPreferredVersions() {
+    public List<String> preferredVersions() {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
     /**
      * The status of the DB engine version, either available or deprecated.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Set of the character sets supported by this engine.
      * 
     */
-    public List<String> getSupportedCharacterSets() {
+    public List<String> supportedCharacterSets() {
         return this.supportedCharacterSets;
     }
     /**
      * Set of features supported by the DB engine.
      * 
     */
-    public List<String> getSupportedFeatureNames() {
+    public List<String> supportedFeatureNames() {
         return this.supportedFeatureNames;
     }
     /**
      * Set of the supported DB engine modes.
      * 
     */
-    public List<String> getSupportedModes() {
+    public List<String> supportedModes() {
         return this.supportedModes;
     }
     /**
      * Set of the time zones supported by this engine.
      * 
     */
-    public List<String> getSupportedTimezones() {
+    public List<String> supportedTimezones() {
         return this.supportedTimezones;
     }
     /**
      * Indicates whether you can use Aurora global databases with a specific DB engine version.
      * 
     */
-    public Boolean getSupportsGlobalDatabases() {
+    public Boolean supportsGlobalDatabases() {
         return this.supportsGlobalDatabases;
     }
     /**
      * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
      * 
     */
-    public Boolean getSupportsLogExportsToCloudwatch() {
+    public Boolean supportsLogExportsToCloudwatch() {
         return this.supportsLogExportsToCloudwatch;
     }
     /**
      * Indicates whether you can use Aurora parallel query with a specific DB engine version.
      * 
     */
-    public Boolean getSupportsParallelQuery() {
+    public Boolean supportsParallelQuery() {
         return this.supportsParallelQuery;
     }
     /**
      * Indicates whether the database engine version supports read replicas.
      * 
     */
-    public Boolean getSupportsReadReplica() {
+    public Boolean supportsReadReplica() {
         return this.supportsReadReplica;
     }
     /**
      * Set of engine versions that this database engine version can be upgraded to.
      * 
     */
-    public List<String> getValidUpgradeTargets() {
+    public List<String> validUpgradeTargets() {
         return this.validUpgradeTargets;
     }
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * The description of the database engine version.
      * 
     */
-    public String getVersionDescription() {
+    public String versionDescription() {
         return this.versionDescription;
     }
 

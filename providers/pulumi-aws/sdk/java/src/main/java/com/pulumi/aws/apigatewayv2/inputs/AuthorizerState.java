@@ -26,7 +26,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -38,7 +38,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerCredentialsArn")
       private final @Nullable Output<String> authorizerCredentialsArn;
 
-    public Output<String> getAuthorizerCredentialsArn() {
+    public Output<String> authorizerCredentialsArn() {
         return this.authorizerCredentialsArn == null ? Codegen.empty() : this.authorizerCredentialsArn;
     }
 
@@ -50,7 +50,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerPayloadFormatVersion")
       private final @Nullable Output<String> authorizerPayloadFormatVersion;
 
-    public Output<String> getAuthorizerPayloadFormatVersion() {
+    public Output<String> authorizerPayloadFormatVersion() {
         return this.authorizerPayloadFormatVersion == null ? Codegen.empty() : this.authorizerPayloadFormatVersion;
     }
 
@@ -63,7 +63,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
-    public Output<Integer> getAuthorizerResultTtlInSeconds() {
+    public Output<Integer> authorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
     }
 
@@ -76,7 +76,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerType")
       private final @Nullable Output<String> authorizerType;
 
-    public Output<String> getAuthorizerType() {
+    public Output<String> authorizerType() {
         return this.authorizerType == null ? Codegen.empty() : this.authorizerType;
     }
 
@@ -89,7 +89,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
 
-    public Output<String> getAuthorizerUri() {
+    public Output<String> authorizerUri() {
         return this.authorizerUri == null ? Codegen.empty() : this.authorizerUri;
     }
 
@@ -101,7 +101,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSimpleResponses")
       private final @Nullable Output<Boolean> enableSimpleResponses;
 
-    public Output<Boolean> getEnableSimpleResponses() {
+    public Output<Boolean> enableSimpleResponses() {
         return this.enableSimpleResponses == null ? Codegen.empty() : this.enableSimpleResponses;
     }
 
@@ -114,7 +114,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="identitySources")
       private final @Nullable Output<List<String>> identitySources;
 
-    public Output<List<String>> getIdentitySources() {
+    public Output<List<String>> identitySources() {
         return this.identitySources == null ? Codegen.empty() : this.identitySources;
     }
 
@@ -126,7 +126,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="jwtConfiguration")
       private final @Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
 
-    public Output<AuthorizerJwtConfigurationGetArgs> getJwtConfiguration() {
+    public Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration() {
         return this.jwtConfiguration == null ? Codegen.empty() : this.jwtConfiguration;
     }
 
@@ -137,7 +137,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

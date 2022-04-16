@@ -24,7 +24,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentConfig")
       private final @Nullable Output<EndpointDeploymentConfigGetArgs> deploymentConfig;
 
-    public Output<EndpointDeploymentConfigGetArgs> getDeploymentConfig() {
+    public Output<EndpointDeploymentConfigGetArgs> deploymentConfig() {
         return this.deploymentConfig == null ? Codegen.empty() : this.deploymentConfig;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfigName")
       private final @Nullable Output<String> endpointConfigName;
 
-    public Output<String> getEndpointConfigName() {
+    public Output<String> endpointConfigName() {
         return this.endpointConfigName == null ? Codegen.empty() : this.endpointConfigName;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

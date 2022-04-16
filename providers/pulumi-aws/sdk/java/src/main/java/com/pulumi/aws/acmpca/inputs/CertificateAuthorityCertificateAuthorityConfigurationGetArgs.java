@@ -22,7 +22,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     @Import(name="keyAlgorithm", required=true)
       private final Output<String> keyAlgorithm;
 
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
 
@@ -33,7 +33,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     @Import(name="subject", required=true)
       private final Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
 
-    public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> getSubject() {
+    public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject() {
         return this.subject;
     }
 

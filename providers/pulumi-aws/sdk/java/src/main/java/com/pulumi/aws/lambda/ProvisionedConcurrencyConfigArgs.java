@@ -22,7 +22,7 @@ public final class ProvisionedConcurrencyConfigArgs extends com.pulumi.resources
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -33,7 +33,7 @@ public final class ProvisionedConcurrencyConfigArgs extends com.pulumi.resources
     @Import(name="provisionedConcurrentExecutions", required=true)
       private final Output<Integer> provisionedConcurrentExecutions;
 
-    public Output<Integer> getProvisionedConcurrentExecutions() {
+    public Output<Integer> provisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions;
     }
 
@@ -44,7 +44,7 @@ public final class ProvisionedConcurrencyConfigArgs extends com.pulumi.resources
     @Import(name="qualifier", required=true)
       private final Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier;
     }
 

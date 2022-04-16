@@ -25,7 +25,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     @Import(name="customImages")
       private final @Nullable Output<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
 
-    public Output<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> getCustomImages() {
+    public Output<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages() {
         return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
@@ -36,7 +36,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
@@ -47,7 +47,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
+    public Output<List<String>> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 

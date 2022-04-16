@@ -21,7 +21,7 @@ public final class VpnGatewayRoutePropagationArgs extends com.pulumi.resources.R
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -32,7 +32,7 @@ public final class VpnGatewayRoutePropagationArgs extends com.pulumi.resources.R
     @Import(name="vpnGatewayId", required=true)
       private final Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 

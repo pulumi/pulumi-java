@@ -49,28 +49,28 @@ public final class DataSourceParametersRedshift {
      * The ID of the cluster to which to connect.
      * 
     */
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * The database to which to connect.
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * The host to which to connect.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * The port to which to connect.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

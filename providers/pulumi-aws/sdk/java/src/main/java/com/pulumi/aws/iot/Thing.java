@@ -42,7 +42,7 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return The ARN of the thing.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return Map of attributes of the thing.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAttributes() {
+    public Output</* @Nullable */ Map<String,String>> attributes() {
         return this.attributes;
     }
     /**
@@ -70,7 +70,7 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return The default client ID.
      * 
      */
-    public Output<String> getDefaultClientId() {
+    public Output<String> defaultClientId() {
         return this.defaultClientId;
     }
     /**
@@ -84,7 +84,7 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return The name of the thing.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return The thing type name.
      * 
      */
-    public Output</* @Nullable */ String> getThingTypeName() {
+    public Output</* @Nullable */ String> thingTypeName() {
         return this.thingTypeName;
     }
     /**
@@ -112,7 +112,7 @@ public class Thing extends com.pulumi.resources.CustomResource {
      * @return The current version of the thing record in the registry.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

@@ -24,7 +24,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hsmType", required=true)
       private final Output<String> hsmType;
 
-    public Output<String> getHsmType() {
+    public Output<String> hsmType() {
         return this.hsmType;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceBackupIdentifier")
       private final @Nullable Output<String> sourceBackupIdentifier;
 
-    public Output<String> getSourceBackupIdentifier() {
+    public Output<String> sourceBackupIdentifier() {
         return this.sourceBackupIdentifier == null ? Codegen.empty() : this.sourceBackupIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

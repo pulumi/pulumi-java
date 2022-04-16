@@ -55,35 +55,35 @@ public final class ResourceDataSyncS3Destination {
      * Name of S3 bucket where the aggregated data is stored.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * ARN of an encryption key for a destination in Amazon S3.
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * Prefix for the bucket.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Region with the bucket targeted by the Resource Data Sync.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
      * 
     */
-    public Optional<String> getSyncFormat() {
+    public Optional<String> syncFormat() {
         return Optional.ofNullable(this.syncFormat);
     }
 

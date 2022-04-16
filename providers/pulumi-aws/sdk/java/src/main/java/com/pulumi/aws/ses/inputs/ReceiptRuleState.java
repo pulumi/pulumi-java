@@ -31,7 +31,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="addHeaderActions")
       private final @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
 
-    public Output<List<ReceiptRuleAddHeaderActionGetArgs>> getAddHeaderActions() {
+    public Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions() {
         return this.addHeaderActions == null ? Codegen.empty() : this.addHeaderActions;
     }
 
@@ -42,7 +42,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="after")
       private final @Nullable Output<String> after;
 
-    public Output<String> getAfter() {
+    public Output<String> after() {
         return this.after == null ? Codegen.empty() : this.after;
     }
 
@@ -53,7 +53,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -64,7 +64,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="bounceActions")
       private final @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
 
-    public Output<List<ReceiptRuleBounceActionGetArgs>> getBounceActions() {
+    public Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions() {
         return this.bounceActions == null ? Codegen.empty() : this.bounceActions;
     }
 
@@ -75,7 +75,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -86,7 +86,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaActions")
       private final @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
 
-    public Output<List<ReceiptRuleLambdaActionGetArgs>> getLambdaActions() {
+    public Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions() {
         return this.lambdaActions == null ? Codegen.empty() : this.lambdaActions;
     }
 
@@ -97,7 +97,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -108,7 +108,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="recipients")
       private final @Nullable Output<List<String>> recipients;
 
-    public Output<List<String>> getRecipients() {
+    public Output<List<String>> recipients() {
         return this.recipients == null ? Codegen.empty() : this.recipients;
     }
 
@@ -119,7 +119,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
@@ -130,7 +130,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Actions")
       private final @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
 
-    public Output<List<ReceiptRuleS3ActionGetArgs>> getS3Actions() {
+    public Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions() {
         return this.s3Actions == null ? Codegen.empty() : this.s3Actions;
     }
 
@@ -141,7 +141,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="scanEnabled")
       private final @Nullable Output<Boolean> scanEnabled;
 
-    public Output<Boolean> getScanEnabled() {
+    public Output<Boolean> scanEnabled() {
         return this.scanEnabled == null ? Codegen.empty() : this.scanEnabled;
     }
 
@@ -152,7 +152,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="snsActions")
       private final @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
 
-    public Output<List<ReceiptRuleSnsActionGetArgs>> getSnsActions() {
+    public Output<List<ReceiptRuleSnsActionGetArgs>> snsActions() {
         return this.snsActions == null ? Codegen.empty() : this.snsActions;
     }
 
@@ -163,7 +163,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="stopActions")
       private final @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
 
-    public Output<List<ReceiptRuleStopActionGetArgs>> getStopActions() {
+    public Output<List<ReceiptRuleStopActionGetArgs>> stopActions() {
         return this.stopActions == null ? Codegen.empty() : this.stopActions;
     }
 
@@ -174,7 +174,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tlsPolicy")
       private final @Nullable Output<String> tlsPolicy;
 
-    public Output<String> getTlsPolicy() {
+    public Output<String> tlsPolicy() {
         return this.tlsPolicy == null ? Codegen.empty() : this.tlsPolicy;
     }
 
@@ -185,7 +185,7 @@ public final class ReceiptRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workmailActions")
       private final @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
-    public Output<List<ReceiptRuleWorkmailActionGetArgs>> getWorkmailActions() {
+    public Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions() {
         return this.workmailActions == null ? Codegen.empty() : this.workmailActions;
     }
 

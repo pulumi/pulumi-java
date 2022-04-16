@@ -35,21 +35,21 @@ public final class GetReleaseLabelsResult {
         this.releaseLabels = releaseLabels;
     }
 
-    public Optional<GetReleaseLabelsFilters> getFilters() {
+    public Optional<GetReleaseLabelsFilters> filters() {
         return Optional.ofNullable(this.filters);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The returned release labels.
      * 
     */
-    public List<String> getReleaseLabels() {
+    public List<String> releaseLabels() {
         return this.releaseLabels;
     }
 

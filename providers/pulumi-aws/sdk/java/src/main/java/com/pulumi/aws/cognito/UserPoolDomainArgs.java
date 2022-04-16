@@ -22,7 +22,7 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

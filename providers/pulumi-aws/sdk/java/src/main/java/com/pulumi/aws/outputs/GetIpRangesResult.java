@@ -67,34 +67,34 @@ public final class GetIpRangesResult {
      * The lexically ordered list of CIDR blocks.
      * 
     */
-    public List<String> getCidrBlocks() {
+    public List<String> cidrBlocks() {
         return this.cidrBlocks;
     }
     /**
      * The publication time of the IP ranges (e.g., `2016-08-03-23-46-05`).
      * 
     */
-    public String getCreateDate() {
+    public String createDate() {
         return this.createDate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The lexically ordered list of IPv6 CIDR blocks.
      * 
     */
-    public List<String> getIpv6CidrBlocks() {
+    public List<String> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks;
     }
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
-    public List<String> getServices() {
+    public List<String> services() {
         return this.services;
     }
     /**
@@ -102,10 +102,10 @@ public final class GetIpRangesResult {
      * (e.g., `1470267965`).
      * 
     */
-    public Integer getSyncToken() {
+    public Integer syncToken() {
         return this.syncToken;
     }
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

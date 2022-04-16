@@ -47,26 +47,26 @@ public final class GetResolverRulesResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getOwnerId() {
+    public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
-    public Optional<String> getResolverEndpointId() {
+    public Optional<String> resolverEndpointId() {
         return Optional.ofNullable(this.resolverEndpointId);
     }
     /**
      * The IDs of the matched resolver rules.
      * 
     */
-    public List<String> getResolverRuleIds() {
+    public List<String> resolverRuleIds() {
         return this.resolverRuleIds;
     }
-    public Optional<String> getRuleType() {
+    public Optional<String> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
-    public Optional<String> getShareStatus() {
+    public Optional<String> shareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
 

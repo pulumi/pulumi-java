@@ -21,7 +21,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs ex
     @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName;
     }
 

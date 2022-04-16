@@ -23,7 +23,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="digestAlgorithmMnemonic")
       private final @Nullable Output<String> digestAlgorithmMnemonic;
 
-    public Output<String> getDigestAlgorithmMnemonic() {
+    public Output<String> digestAlgorithmMnemonic() {
         return this.digestAlgorithmMnemonic == null ? Codegen.empty() : this.digestAlgorithmMnemonic;
     }
 
@@ -34,7 +34,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="digestAlgorithmType")
       private final @Nullable Output<Integer> digestAlgorithmType;
 
-    public Output<Integer> getDigestAlgorithmType() {
+    public Output<Integer> digestAlgorithmType() {
         return this.digestAlgorithmType == null ? Codegen.empty() : this.digestAlgorithmType;
     }
 
@@ -45,7 +45,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="digestValue")
       private final @Nullable Output<String> digestValue;
 
-    public Output<String> getDigestValue() {
+    public Output<String> digestValue() {
         return this.digestValue == null ? Codegen.empty() : this.digestValue;
     }
 
@@ -56,7 +56,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnskeyRecord")
       private final @Nullable Output<String> dnskeyRecord;
 
-    public Output<String> getDnskeyRecord() {
+    public Output<String> dnskeyRecord() {
         return this.dnskeyRecord == null ? Codegen.empty() : this.dnskeyRecord;
     }
 
@@ -67,7 +67,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dsRecord")
       private final @Nullable Output<String> dsRecord;
 
-    public Output<String> getDsRecord() {
+    public Output<String> dsRecord() {
         return this.dsRecord == null ? Codegen.empty() : this.dsRecord;
     }
 
@@ -78,7 +78,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="flag")
       private final @Nullable Output<Integer> flag;
 
-    public Output<Integer> getFlag() {
+    public Output<Integer> flag() {
         return this.flag == null ? Codegen.empty() : this.flag;
     }
 
@@ -89,7 +89,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
@@ -100,7 +100,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyManagementServiceArn")
       private final @Nullable Output<String> keyManagementServiceArn;
 
-    public Output<String> getKeyManagementServiceArn() {
+    public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn == null ? Codegen.empty() : this.keyManagementServiceArn;
     }
 
@@ -111,7 +111,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyTag")
       private final @Nullable Output<Integer> keyTag;
 
-    public Output<Integer> getKeyTag() {
+    public Output<Integer> keyTag() {
         return this.keyTag == null ? Codegen.empty() : this.keyTag;
     }
 
@@ -122,7 +122,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -133,7 +133,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -144,7 +144,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="signingAlgorithmMnemonic")
       private final @Nullable Output<String> signingAlgorithmMnemonic;
 
-    public Output<String> getSigningAlgorithmMnemonic() {
+    public Output<String> signingAlgorithmMnemonic() {
         return this.signingAlgorithmMnemonic == null ? Codegen.empty() : this.signingAlgorithmMnemonic;
     }
 
@@ -155,7 +155,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="signingAlgorithmType")
       private final @Nullable Output<Integer> signingAlgorithmType;
 
-    public Output<Integer> getSigningAlgorithmType() {
+    public Output<Integer> signingAlgorithmType() {
         return this.signingAlgorithmType == null ? Codegen.empty() : this.signingAlgorithmType;
     }
 
@@ -166,7 +166,7 @@ public final class KeySigningKeyState extends com.pulumi.resources.ResourceArgs 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

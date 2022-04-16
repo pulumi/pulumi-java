@@ -21,7 +21,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends com.pulumi.res
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -32,7 +32,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends com.pulumi.res
     @Import(name="deviceType", required=true)
       private final Output<String> deviceType;
 
-    public Output<String> getDeviceType() {
+    public Output<String> deviceType() {
         return this.deviceType;
     }
 

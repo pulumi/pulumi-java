@@ -23,7 +23,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="connectionArn", required=true)
       private final Output<String> connectionArn;
 
-    public Output<String> getConnectionArn() {
+    public Output<String> connectionArn() {
         return this.connectionArn;
     }
 
@@ -34,7 +34,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -56,7 +56,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="invocationEndpoint", required=true)
       private final Output<String> invocationEndpoint;
 
-    public Output<String> getInvocationEndpoint() {
+    public Output<String> invocationEndpoint() {
         return this.invocationEndpoint;
     }
 
@@ -67,7 +67,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="invocationRateLimitPerSecond")
       private final @Nullable Output<Integer> invocationRateLimitPerSecond;
 
-    public Output<Integer> getInvocationRateLimitPerSecond() {
+    public Output<Integer> invocationRateLimitPerSecond() {
         return this.invocationRateLimitPerSecond == null ? Codegen.empty() : this.invocationRateLimitPerSecond;
     }
 
@@ -78,7 +78,7 @@ public final class EventApiDestinationArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

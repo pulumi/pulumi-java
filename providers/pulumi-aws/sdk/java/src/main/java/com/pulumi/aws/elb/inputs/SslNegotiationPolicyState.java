@@ -25,7 +25,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
     @Import(name="attributes")
       private final @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes;
 
-    public Output<List<SslNegotiationPolicyAttributeGetArgs>> getAttributes() {
+    public Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -38,7 +38,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
     @Import(name="lbPort")
       private final @Nullable Output<Integer> lbPort;
 
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort == null ? Codegen.empty() : this.lbPort;
     }
 
@@ -50,7 +50,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
     @Import(name="loadBalancer")
       private final @Nullable Output<String> loadBalancer;
 
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 
@@ -61,7 +61,7 @@ public final class SslNegotiationPolicyState extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

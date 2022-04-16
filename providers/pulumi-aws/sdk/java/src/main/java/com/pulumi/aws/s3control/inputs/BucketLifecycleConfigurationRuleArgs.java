@@ -25,7 +25,7 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
     @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
+    public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
     }
 
@@ -36,7 +36,7 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
     @Import(name="expiration")
       private final @Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration;
 
-    public Output<BucketLifecycleConfigurationRuleExpirationArgs> getExpiration() {
+    public Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -47,7 +47,7 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
     @Import(name="filter")
       private final @Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter;
 
-    public Output<BucketLifecycleConfigurationRuleFilterArgs> getFilter() {
+    public Output<BucketLifecycleConfigurationRuleFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -58,7 +58,7 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -69,7 +69,7 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

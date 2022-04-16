@@ -23,7 +23,7 @@ public final class ResolverRuleTargetIpArgs extends com.pulumi.resources.Resourc
     @Import(name="ip", required=true)
       private final Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip;
     }
 
@@ -34,7 +34,7 @@ public final class ResolverRuleTargetIpArgs extends com.pulumi.resources.Resourc
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

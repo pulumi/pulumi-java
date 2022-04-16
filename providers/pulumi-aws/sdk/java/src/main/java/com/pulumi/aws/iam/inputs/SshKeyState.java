@@ -22,7 +22,7 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -33,7 +33,7 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -44,7 +44,7 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -55,7 +55,7 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKeyId")
       private final @Nullable Output<String> sshPublicKeyId;
 
-    public Output<String> getSshPublicKeyId() {
+    public Output<String> sshPublicKeyId() {
         return this.sshPublicKeyId == null ? Codegen.empty() : this.sshPublicKeyId;
     }
 
@@ -66,7 +66,7 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -77,7 +77,7 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

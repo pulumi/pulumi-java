@@ -40,7 +40,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -54,7 +54,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The ID of Cloud HSM v2 cluster to which HSM will be added.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -68,7 +68,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The id of the ENI interface allocated for HSM module.
      * 
      */
-    public Output<String> getHsmEniId() {
+    public Output<String> hsmEniId() {
         return this.hsmEniId;
     }
     /**
@@ -82,7 +82,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The id of the HSM module.
      * 
      */
-    public Output<String> getHsmId() {
+    public Output<String> hsmId() {
         return this.hsmId;
     }
     /**
@@ -96,7 +96,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The state of the HSM module.
      * 
      */
-    public Output<String> getHsmState() {
+    public Output<String> hsmState() {
         return this.hsmState;
     }
     /**
@@ -110,7 +110,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The IP address of HSM module. Must be within the CIDR of selected subnet.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -124,7 +124,7 @@ public class Hsm extends com.pulumi.resources.CustomResource {
      * @return The ID of subnet in which HSM module will be located.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

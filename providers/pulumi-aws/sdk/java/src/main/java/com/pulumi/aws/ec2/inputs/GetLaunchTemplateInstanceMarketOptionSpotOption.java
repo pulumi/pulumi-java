@@ -16,35 +16,35 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption extends com.p
     @Import(name="blockDurationMinutes", required=true)
       private final Integer blockDurationMinutes;
 
-    public Integer getBlockDurationMinutes() {
+    public Integer blockDurationMinutes() {
         return this.blockDurationMinutes;
     }
 
     @Import(name="instanceInterruptionBehavior", required=true)
       private final String instanceInterruptionBehavior;
 
-    public String getInstanceInterruptionBehavior() {
+    public String instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior;
     }
 
     @Import(name="maxPrice", required=true)
       private final String maxPrice;
 
-    public String getMaxPrice() {
+    public String maxPrice() {
         return this.maxPrice;
     }
 
     @Import(name="spotInstanceType", required=true)
       private final String spotInstanceType;
 
-    public String getSpotInstanceType() {
+    public String spotInstanceType() {
         return this.spotInstanceType;
     }
 
     @Import(name="validUntil", required=true)
       private final String validUntil;
 
-    public String getValidUntil() {
+    public String validUntil() {
         return this.validUntil;
     }
 

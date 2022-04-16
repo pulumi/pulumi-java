@@ -43,7 +43,7 @@ public class EventBus extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the event bus.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class EventBus extends com.pulumi.resources.CustomResource {
      * @return The partner event source that the new event bus will be matched with. Must match `name`.
      * 
      */
-    public Output</* @Nullable */ String> getEventSourceName() {
+    public Output</* @Nullable */ String> eventSourceName() {
         return this.eventSourceName;
     }
     /**
@@ -71,7 +71,7 @@ public class EventBus extends com.pulumi.resources.CustomResource {
      * @return The name of the new event bus. The names of custom event buses can't contain the / character. To create a partner event bus, ensure the `name` matches the `event_source_name`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class EventBus extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class EventBus extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

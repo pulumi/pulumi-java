@@ -21,7 +21,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends com.pulumi.resou
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -32,7 +32,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends com.pulumi.resou
     @Import(name="timeOfDay", required=true)
       private final Output<String> timeOfDay;
 
-    public Output<String> getTimeOfDay() {
+    public Output<String> timeOfDay() {
         return this.timeOfDay;
     }
 
@@ -43,7 +43,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends com.pulumi.resou
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

@@ -22,7 +22,7 @@ public final class MonitoringSubscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="distributionId", required=true)
       private final Output<String> distributionId;
 
-    public Output<String> getDistributionId() {
+    public Output<String> distributionId() {
         return this.distributionId;
     }
 
@@ -33,7 +33,7 @@ public final class MonitoringSubscriptionArgs extends com.pulumi.resources.Resou
     @Import(name="monitoringSubscription", required=true)
       private final Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionArgs> getMonitoringSubscription() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription() {
         return this.monitoringSubscription;
     }
 

@@ -15,35 +15,35 @@ public final class GetClusterClusterCertificates extends com.pulumi.resources.In
     @Import(name="awsHardwareCertificate", required=true)
       private final String awsHardwareCertificate;
 
-    public String getAwsHardwareCertificate() {
+    public String awsHardwareCertificate() {
         return this.awsHardwareCertificate;
     }
 
     @Import(name="clusterCertificate", required=true)
       private final String clusterCertificate;
 
-    public String getClusterCertificate() {
+    public String clusterCertificate() {
         return this.clusterCertificate;
     }
 
     @Import(name="clusterCsr", required=true)
       private final String clusterCsr;
 
-    public String getClusterCsr() {
+    public String clusterCsr() {
         return this.clusterCsr;
     }
 
     @Import(name="hsmCertificate", required=true)
       private final String hsmCertificate;
 
-    public String getHsmCertificate() {
+    public String hsmCertificate() {
         return this.hsmCertificate;
     }
 
     @Import(name="manufacturerHardwareCertificate", required=true)
       private final String manufacturerHardwareCertificate;
 
-    public String getManufacturerHardwareCertificate() {
+    public String manufacturerHardwareCertificate() {
         return this.manufacturerHardwareCertificate;
     }
 

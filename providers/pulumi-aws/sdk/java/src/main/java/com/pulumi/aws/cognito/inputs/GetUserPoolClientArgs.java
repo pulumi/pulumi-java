@@ -19,7 +19,7 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -30,7 +30,7 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="userPoolId", required=true)
       private final String userPoolId;
 
-    public String getUserPoolId() {
+    public String userPoolId() {
         return this.userPoolId;
     }
 

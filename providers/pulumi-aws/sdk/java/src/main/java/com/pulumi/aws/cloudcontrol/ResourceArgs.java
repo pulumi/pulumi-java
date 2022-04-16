@@ -18,7 +18,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState;
     }
 
@@ -29,7 +29,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -51,7 +51,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeName", required=true)
       private final Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
 
@@ -62,7 +62,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeVersionId")
       private final @Nullable Output<String> typeVersionId;
 
-    public Output<String> getTypeVersionId() {
+    public Output<String> typeVersionId() {
         return this.typeVersionId == null ? Codegen.empty() : this.typeVersionId;
     }
 

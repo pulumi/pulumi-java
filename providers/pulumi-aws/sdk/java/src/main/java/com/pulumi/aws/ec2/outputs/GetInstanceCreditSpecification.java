@@ -16,7 +16,7 @@ public final class GetInstanceCreditSpecification {
         this.cpuCredits = cpuCredits;
     }
 
-    public String getCpuCredits() {
+    public String cpuCredits() {
         return this.cpuCredits;
     }
 

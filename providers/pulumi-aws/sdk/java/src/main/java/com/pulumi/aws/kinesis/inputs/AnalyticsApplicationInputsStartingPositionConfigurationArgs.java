@@ -22,7 +22,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
     @Import(name="startingPosition")
       private final @Nullable Output<String> startingPosition;
 
-    public Output<String> getStartingPosition() {
+    public Output<String> startingPosition() {
         return this.startingPosition == null ? Codegen.empty() : this.startingPosition;
     }
 

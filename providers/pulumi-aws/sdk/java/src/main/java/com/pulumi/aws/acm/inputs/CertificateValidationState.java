@@ -23,7 +23,7 @@ public final class CertificateValidationState extends com.pulumi.resources.Resou
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateValidationState extends com.pulumi.resources.Resou
     @Import(name="validationRecordFqdns")
       private final @Nullable Output<List<String>> validationRecordFqdns;
 
-    public Output<List<String>> getValidationRecordFqdns() {
+    public Output<List<String>> validationRecordFqdns() {
         return this.validationRecordFqdns == null ? Codegen.empty() : this.validationRecordFqdns;
     }
 

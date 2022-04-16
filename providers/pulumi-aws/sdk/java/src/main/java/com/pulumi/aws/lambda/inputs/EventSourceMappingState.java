@@ -31,21 +31,21 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
+    public Output<Integer> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     @Import(name="bisectBatchOnFunctionError")
       private final @Nullable Output<Boolean> bisectBatchOnFunctionError;
 
-    public Output<Boolean> getBisectBatchOnFunctionError() {
+    public Output<Boolean> bisectBatchOnFunctionError() {
         return this.bisectBatchOnFunctionError == null ? Codegen.empty() : this.bisectBatchOnFunctionError;
     }
 
     @Import(name="destinationConfig")
       private final @Nullable Output<EventSourceMappingDestinationConfigGetArgs> destinationConfig;
 
-    public Output<EventSourceMappingDestinationConfigGetArgs> getDestinationConfig() {
+    public Output<EventSourceMappingDestinationConfigGetArgs> destinationConfig() {
         return this.destinationConfig == null ? Codegen.empty() : this.destinationConfig;
     }
 
@@ -56,7 +56,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -67,7 +67,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="eventSourceArn")
       private final @Nullable Output<String> eventSourceArn;
 
-    public Output<String> getEventSourceArn() {
+    public Output<String> eventSourceArn() {
         return this.eventSourceArn == null ? Codegen.empty() : this.eventSourceArn;
     }
 
@@ -78,7 +78,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="filterCriteria")
       private final @Nullable Output<EventSourceMappingFilterCriteriaGetArgs> filterCriteria;
 
-    public Output<EventSourceMappingFilterCriteriaGetArgs> getFilterCriteria() {
+    public Output<EventSourceMappingFilterCriteriaGetArgs> filterCriteria() {
         return this.filterCriteria == null ? Codegen.empty() : this.filterCriteria;
     }
 
@@ -89,7 +89,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="functionArn")
       private final @Nullable Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn == null ? Codegen.empty() : this.functionArn;
     }
 
@@ -100,7 +100,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
@@ -111,7 +111,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="functionResponseTypes")
       private final @Nullable Output<List<String>> functionResponseTypes;
 
-    public Output<List<String>> getFunctionResponseTypes() {
+    public Output<List<String>> functionResponseTypes() {
         return this.functionResponseTypes == null ? Codegen.empty() : this.functionResponseTypes;
     }
 
@@ -122,7 +122,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
@@ -133,7 +133,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="lastProcessingResult")
       private final @Nullable Output<String> lastProcessingResult;
 
-    public Output<String> getLastProcessingResult() {
+    public Output<String> lastProcessingResult() {
         return this.lastProcessingResult == null ? Codegen.empty() : this.lastProcessingResult;
     }
 
@@ -147,28 +147,28 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="maximumBatchingWindowInSeconds")
       private final @Nullable Output<Integer> maximumBatchingWindowInSeconds;
 
-    public Output<Integer> getMaximumBatchingWindowInSeconds() {
+    public Output<Integer> maximumBatchingWindowInSeconds() {
         return this.maximumBatchingWindowInSeconds == null ? Codegen.empty() : this.maximumBatchingWindowInSeconds;
     }
 
     @Import(name="maximumRecordAgeInSeconds")
       private final @Nullable Output<Integer> maximumRecordAgeInSeconds;
 
-    public Output<Integer> getMaximumRecordAgeInSeconds() {
+    public Output<Integer> maximumRecordAgeInSeconds() {
         return this.maximumRecordAgeInSeconds == null ? Codegen.empty() : this.maximumRecordAgeInSeconds;
     }
 
     @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> getMaximumRetryAttempts() {
+    public Output<Integer> maximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
     }
 
     @Import(name="parallelizationFactor")
       private final @Nullable Output<Integer> parallelizationFactor;
 
-    public Output<Integer> getParallelizationFactor() {
+    public Output<Integer> parallelizationFactor() {
         return this.parallelizationFactor == null ? Codegen.empty() : this.parallelizationFactor;
     }
 
@@ -181,21 +181,21 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="queues")
       private final @Nullable Output<List<String>> queues;
 
-    public Output<List<String>> getQueues() {
+    public Output<List<String>> queues() {
         return this.queues == null ? Codegen.empty() : this.queues;
     }
 
     @Import(name="selfManagedEventSource")
       private final @Nullable Output<EventSourceMappingSelfManagedEventSourceGetArgs> selfManagedEventSource;
 
-    public Output<EventSourceMappingSelfManagedEventSourceGetArgs> getSelfManagedEventSource() {
+    public Output<EventSourceMappingSelfManagedEventSourceGetArgs> selfManagedEventSource() {
         return this.selfManagedEventSource == null ? Codegen.empty() : this.selfManagedEventSource;
     }
 
     @Import(name="sourceAccessConfigurations")
       private final @Nullable Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> sourceAccessConfigurations;
 
-    public Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> getSourceAccessConfigurations() {
+    public Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> sourceAccessConfigurations() {
         return this.sourceAccessConfigurations == null ? Codegen.empty() : this.sourceAccessConfigurations;
     }
 
@@ -206,7 +206,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="startingPosition")
       private final @Nullable Output<String> startingPosition;
 
-    public Output<String> getStartingPosition() {
+    public Output<String> startingPosition() {
         return this.startingPosition == null ? Codegen.empty() : this.startingPosition;
     }
 
@@ -217,7 +217,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="startingPositionTimestamp")
       private final @Nullable Output<String> startingPositionTimestamp;
 
-    public Output<String> getStartingPositionTimestamp() {
+    public Output<String> startingPositionTimestamp() {
         return this.startingPositionTimestamp == null ? Codegen.empty() : this.startingPositionTimestamp;
     }
 
@@ -228,7 +228,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -239,7 +239,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="stateTransitionReason")
       private final @Nullable Output<String> stateTransitionReason;
 
-    public Output<String> getStateTransitionReason() {
+    public Output<String> stateTransitionReason() {
         return this.stateTransitionReason == null ? Codegen.empty() : this.stateTransitionReason;
     }
 
@@ -250,7 +250,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="topics")
       private final @Nullable Output<List<String>> topics;
 
-    public Output<List<String>> getTopics() {
+    public Output<List<String>> topics() {
         return this.topics == null ? Codegen.empty() : this.topics;
     }
 
@@ -261,7 +261,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="tumblingWindowInSeconds")
       private final @Nullable Output<Integer> tumblingWindowInSeconds;
 
-    public Output<Integer> getTumblingWindowInSeconds() {
+    public Output<Integer> tumblingWindowInSeconds() {
         return this.tumblingWindowInSeconds == null ? Codegen.empty() : this.tumblingWindowInSeconds;
     }
 
@@ -272,7 +272,7 @@ public final class EventSourceMappingState extends com.pulumi.resources.Resource
     @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid == null ? Codegen.empty() : this.uuid;
     }
 

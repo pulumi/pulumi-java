@@ -29,7 +29,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="allowedMethods", required=true)
       private final Output<List<String>> allowedMethods;
 
-    public Output<List<String>> getAllowedMethods() {
+    public Output<List<String>> allowedMethods() {
         return this.allowedMethods;
     }
 
@@ -41,7 +41,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="cachePolicyId")
       private final @Nullable Output<String> cachePolicyId;
 
-    public Output<String> getCachePolicyId() {
+    public Output<String> cachePolicyId() {
         return this.cachePolicyId == null ? Codegen.empty() : this.cachePolicyId;
     }
 
@@ -53,7 +53,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="cachedMethods", required=true)
       private final Output<List<String>> cachedMethods;
 
-    public Output<List<String>> getCachedMethods() {
+    public Output<List<String>> cachedMethods() {
         return this.cachedMethods;
     }
 
@@ -66,7 +66,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="compress")
       private final @Nullable Output<Boolean> compress;
 
-    public Output<Boolean> getCompress() {
+    public Output<Boolean> compress() {
         return this.compress == null ? Codegen.empty() : this.compress;
     }
 
@@ -79,7 +79,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
+    public Output<Integer> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -90,7 +90,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="fieldLevelEncryptionId")
       private final @Nullable Output<String> fieldLevelEncryptionId;
 
-    public Output<String> getFieldLevelEncryptionId() {
+    public Output<String> fieldLevelEncryptionId() {
         return this.fieldLevelEncryptionId == null ? Codegen.empty() : this.fieldLevelEncryptionId;
     }
 
@@ -102,7 +102,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="forwardedValues")
       private final @Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesGetArgs> forwardedValues;
 
-    public Output<DistributionOrderedCacheBehaviorForwardedValuesGetArgs> getForwardedValues() {
+    public Output<DistributionOrderedCacheBehaviorForwardedValuesGetArgs> forwardedValues() {
         return this.forwardedValues == null ? Codegen.empty() : this.forwardedValues;
     }
 
@@ -114,7 +114,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="functionAssociations")
       private final @Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationGetArgs>> functionAssociations;
 
-    public Output<List<DistributionOrderedCacheBehaviorFunctionAssociationGetArgs>> getFunctionAssociations() {
+    public Output<List<DistributionOrderedCacheBehaviorFunctionAssociationGetArgs>> functionAssociations() {
         return this.functionAssociations == null ? Codegen.empty() : this.functionAssociations;
     }
 
@@ -126,7 +126,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="lambdaFunctionAssociations")
       private final @Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs>> lambdaFunctionAssociations;
 
-    public Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs>> getLambdaFunctionAssociations() {
+    public Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs>> lambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? Codegen.empty() : this.lambdaFunctionAssociations;
     }
 
@@ -141,7 +141,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
+    public Output<Integer> maxTtl() {
         return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
@@ -154,7 +154,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> getMinTtl() {
+    public Output<Integer> minTtl() {
         return this.minTtl == null ? Codegen.empty() : this.minTtl;
     }
 
@@ -166,7 +166,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="originRequestPolicyId")
       private final @Nullable Output<String> originRequestPolicyId;
 
-    public Output<String> getOriginRequestPolicyId() {
+    public Output<String> originRequestPolicyId() {
         return this.originRequestPolicyId == null ? Codegen.empty() : this.originRequestPolicyId;
     }
 
@@ -178,7 +178,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="pathPattern", required=true)
       private final Output<String> pathPattern;
 
-    public Output<String> getPathPattern() {
+    public Output<String> pathPattern() {
         return this.pathPattern;
     }
 
@@ -190,7 +190,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="realtimeLogConfigArn")
       private final @Nullable Output<String> realtimeLogConfigArn;
 
-    public Output<String> getRealtimeLogConfigArn() {
+    public Output<String> realtimeLogConfigArn() {
         return this.realtimeLogConfigArn == null ? Codegen.empty() : this.realtimeLogConfigArn;
     }
 
@@ -201,7 +201,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="responseHeadersPolicyId")
       private final @Nullable Output<String> responseHeadersPolicyId;
 
-    public Output<String> getResponseHeadersPolicyId() {
+    public Output<String> responseHeadersPolicyId() {
         return this.responseHeadersPolicyId == null ? Codegen.empty() : this.responseHeadersPolicyId;
     }
 
@@ -214,7 +214,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="smoothStreaming")
       private final @Nullable Output<Boolean> smoothStreaming;
 
-    public Output<Boolean> getSmoothStreaming() {
+    public Output<Boolean> smoothStreaming() {
         return this.smoothStreaming == null ? Codegen.empty() : this.smoothStreaming;
     }
 
@@ -227,7 +227,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="targetOriginId", required=true)
       private final Output<String> targetOriginId;
 
-    public Output<String> getTargetOriginId() {
+    public Output<String> targetOriginId() {
         return this.targetOriginId;
     }
 
@@ -239,7 +239,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="trustedKeyGroups")
       private final @Nullable Output<List<String>> trustedKeyGroups;
 
-    public Output<List<String>> getTrustedKeyGroups() {
+    public Output<List<String>> trustedKeyGroups() {
         return this.trustedKeyGroups == null ? Codegen.empty() : this.trustedKeyGroups;
     }
 
@@ -251,7 +251,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="trustedSigners")
       private final @Nullable Output<List<String>> trustedSigners;
 
-    public Output<List<String>> getTrustedSigners() {
+    public Output<List<String>> trustedSigners() {
         return this.trustedSigners == null ? Codegen.empty() : this.trustedSigners;
     }
 
@@ -265,7 +265,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends com.pulumi.re
     @Import(name="viewerProtocolPolicy", required=true)
       private final Output<String> viewerProtocolPolicy;
 
-    public Output<String> getViewerProtocolPolicy() {
+    public Output<String> viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 

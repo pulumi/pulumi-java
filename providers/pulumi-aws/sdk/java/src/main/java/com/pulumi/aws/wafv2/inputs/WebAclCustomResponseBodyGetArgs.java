@@ -21,7 +21,7 @@ public final class WebAclCustomResponseBodyGetArgs extends com.pulumi.resources.
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -32,7 +32,7 @@ public final class WebAclCustomResponseBodyGetArgs extends com.pulumi.resources.
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -43,7 +43,7 @@ public final class WebAclCustomResponseBodyGetArgs extends com.pulumi.resources.
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 

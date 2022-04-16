@@ -35,14 +35,14 @@ public final class OntapFileSystemEndpoint {
      * An endpoint for managing your file system by setting up NetApp SnapMirror with other ONTAP systems. See Endpoint.
      * 
     */
-    public List<OntapFileSystemEndpointIntercluster> getInterclusters() {
+    public List<OntapFileSystemEndpointIntercluster> interclusters() {
         return this.interclusters == null ? List.of() : this.interclusters;
     }
     /**
      * An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
      * 
     */
-    public List<OntapFileSystemEndpointManagement> getManagements() {
+    public List<OntapFileSystemEndpointManagement> managements() {
         return this.managements == null ? List.of() : this.managements;
     }
 

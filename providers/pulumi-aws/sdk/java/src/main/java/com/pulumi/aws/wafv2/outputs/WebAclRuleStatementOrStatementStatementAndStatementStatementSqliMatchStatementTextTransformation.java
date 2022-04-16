@@ -33,14 +33,14 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementS
      * The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * The transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

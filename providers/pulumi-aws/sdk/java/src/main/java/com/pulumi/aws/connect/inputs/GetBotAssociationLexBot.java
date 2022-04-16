@@ -19,7 +19,7 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
     @Import(name="lexRegion", required=true)
       private final String lexRegion;
 
-    public String getLexRegion() {
+    public String lexRegion() {
         return this.lexRegion;
     }
 
@@ -30,7 +30,7 @@ public final class GetBotAssociationLexBot extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

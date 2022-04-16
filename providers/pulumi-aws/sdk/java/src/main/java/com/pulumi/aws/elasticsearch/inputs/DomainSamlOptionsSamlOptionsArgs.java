@@ -25,7 +25,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -36,7 +36,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="idp")
       private final @Nullable Output<DomainSamlOptionsSamlOptionsIdpArgs> idp;
 
-    public Output<DomainSamlOptionsSamlOptionsIdpArgs> getIdp() {
+    public Output<DomainSamlOptionsSamlOptionsIdpArgs> idp() {
         return this.idp == null ? Codegen.empty() : this.idp;
     }
 
@@ -47,7 +47,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="masterBackendRole")
       private final @Nullable Output<String> masterBackendRole;
 
-    public Output<String> getMasterBackendRole() {
+    public Output<String> masterBackendRole() {
         return this.masterBackendRole == null ? Codegen.empty() : this.masterBackendRole;
     }
 
@@ -58,7 +58,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
-    public Output<String> getMasterUserName() {
+    public Output<String> masterUserName() {
         return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
     }
 
@@ -69,7 +69,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="rolesKey")
       private final @Nullable Output<String> rolesKey;
 
-    public Output<String> getRolesKey() {
+    public Output<String> rolesKey() {
         return this.rolesKey == null ? Codegen.empty() : this.rolesKey;
     }
 
@@ -80,7 +80,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="sessionTimeoutMinutes")
       private final @Nullable Output<Integer> sessionTimeoutMinutes;
 
-    public Output<Integer> getSessionTimeoutMinutes() {
+    public Output<Integer> sessionTimeoutMinutes() {
         return this.sessionTimeoutMinutes == null ? Codegen.empty() : this.sessionTimeoutMinutes;
     }
 
@@ -91,7 +91,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     @Import(name="subjectKey")
       private final @Nullable Output<String> subjectKey;
 
-    public Output<String> getSubjectKey() {
+    public Output<String> subjectKey() {
         return this.subjectKey == null ? Codegen.empty() : this.subjectKey;
     }
 

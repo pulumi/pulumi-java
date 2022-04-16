@@ -21,7 +21,7 @@ public final class EnvironmentMembershipArgs extends com.pulumi.resources.Resour
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -32,7 +32,7 @@ public final class EnvironmentMembershipArgs extends com.pulumi.resources.Resour
     @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
 
@@ -43,7 +43,7 @@ public final class EnvironmentMembershipArgs extends com.pulumi.resources.Resour
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 

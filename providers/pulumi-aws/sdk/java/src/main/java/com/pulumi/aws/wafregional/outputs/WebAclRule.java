@@ -59,14 +59,14 @@ public final class WebAclRule {
      * Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
      * 
     */
-    public Optional<WebAclRuleAction> getAction() {
+    public Optional<WebAclRuleAction> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
      * 
     */
-    public Optional<WebAclRuleOverrideAction> getOverrideAction() {
+    public Optional<WebAclRuleOverrideAction> overrideAction() {
         return Optional.ofNullable(this.overrideAction);
     }
     /**
@@ -74,21 +74,21 @@ public final class WebAclRule {
      * Rules with a lower value are evaluated before rules with a higher value.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * ID of the associated WAF (Regional) rule (e.g. `aws.wafregional.Rule`). WAF (Global) rules cannot be used.
      * 
     */
-    public String getRuleId() {
+    public String ruleId() {
         return this.ruleId;
     }
     /**
      * Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. Valid values for `action` are `ALLOW`, `BLOCK` or `COUNT`. Valid values for `override_action` are `COUNT` and `NONE`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

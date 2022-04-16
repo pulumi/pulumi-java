@@ -51,14 +51,14 @@ public final class RouteSpecGrpcRouteMatch {
      * The data to match from the gRPC request.
      * 
     */
-    public List<RouteSpecGrpcRouteMatchMetadata> getMetadatas() {
+    public List<RouteSpecGrpcRouteMatchMetadata> metadatas() {
         return this.metadatas == null ? List.of() : this.metadatas;
     }
     /**
      * The method name to match from the request. If you specify a name, you must also specify a `service_name`.
      * 
     */
-    public Optional<String> getMethodName() {
+    public Optional<String> methodName() {
         return Optional.ofNullable(this.methodName);
     }
     /**
@@ -66,14 +66,14 @@ public final class RouteSpecGrpcRouteMatch {
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The fully qualified domain name for the service to match from the request.
      * 
     */
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
 

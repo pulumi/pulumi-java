@@ -22,7 +22,7 @@ public final class WebAclRuleStatementNotStatementGetArgs extends com.pulumi.res
     @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementNotStatementStatementGetArgs>> statements;
 
-    public Output<List<WebAclRuleStatementNotStatementStatementGetArgs>> getStatements() {
+    public Output<List<WebAclRuleStatementNotStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 

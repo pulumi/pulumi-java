@@ -26,7 +26,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="administratorAccount")
       private final @Nullable Output<String> administratorAccount;
 
-    public Output<String> getAdministratorAccount() {
+    public Output<String> administratorAccount() {
         return this.administratorAccount == null ? Codegen.empty() : this.administratorAccount;
     }
 
@@ -37,7 +37,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -70,7 +70,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
@@ -81,7 +81,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalConnections")
       private final @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections;
 
-    public Output<RepositoryExternalConnectionsGetArgs> getExternalConnections() {
+    public Output<RepositoryExternalConnectionsGetArgs> externalConnections() {
         return this.externalConnections == null ? Codegen.empty() : this.externalConnections;
     }
 
@@ -92,7 +92,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="repository")
       private final @Nullable Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 
@@ -103,7 +103,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -125,7 +125,7 @@ public final class RepositoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="upstreams")
       private final @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams;
 
-    public Output<List<RepositoryUpstreamGetArgs>> getUpstreams() {
+    public Output<List<RepositoryUpstreamGetArgs>> upstreams() {
         return this.upstreams == null ? Codegen.empty() : this.upstreams;
     }
 

@@ -22,7 +22,7 @@ public final class MainRouteTableAssociationArgs extends com.pulumi.resources.Re
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -33,7 +33,7 @@ public final class MainRouteTableAssociationArgs extends com.pulumi.resources.Re
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -23,7 +23,7 @@ public final class FindingsFilterFindingCriteriaArgs extends com.pulumi.resource
     @Import(name="criterions")
       private final @Nullable Output<List<FindingsFilterFindingCriteriaCriterionArgs>> criterions;
 
-    public Output<List<FindingsFilterFindingCriteriaCriterionArgs>> getCriterions() {
+    public Output<List<FindingsFilterFindingCriteriaCriterionArgs>> criterions() {
         return this.criterions == null ? Codegen.empty() : this.criterions;
     }
 

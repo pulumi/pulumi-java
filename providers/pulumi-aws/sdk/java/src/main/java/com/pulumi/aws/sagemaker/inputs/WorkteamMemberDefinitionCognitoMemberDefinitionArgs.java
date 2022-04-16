@@ -21,7 +21,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends c
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -32,7 +32,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends c
     @Import(name="userGroup", required=true)
       private final Output<String> userGroup;
 
-    public Output<String> getUserGroup() {
+    public Output<String> userGroup() {
         return this.userGroup;
     }
 
@@ -43,7 +43,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends c
     @Import(name="userPool", required=true)
       private final Output<String> userPool;
 
-    public Output<String> getUserPool() {
+    public Output<String> userPool() {
         return this.userPool;
     }
 

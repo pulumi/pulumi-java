@@ -23,7 +23,7 @@ public final class FeatureGroupOnlineStoreConfigArgs extends com.pulumi.resource
     @Import(name="enableOnlineStore")
       private final @Nullable Output<Boolean> enableOnlineStore;
 
-    public Output<Boolean> getEnableOnlineStore() {
+    public Output<Boolean> enableOnlineStore() {
         return this.enableOnlineStore == null ? Codegen.empty() : this.enableOnlineStore;
     }
 
@@ -34,7 +34,7 @@ public final class FeatureGroupOnlineStoreConfigArgs extends com.pulumi.resource
     @Import(name="securityConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigArgs> securityConfig;
 
-    public Output<FeatureGroupOnlineStoreConfigSecurityConfigArgs> getSecurityConfig() {
+    public Output<FeatureGroupOnlineStoreConfigSecurityConfigArgs> securityConfig() {
         return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 

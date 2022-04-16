@@ -99,77 +99,77 @@ public final class GetOrganizationResult {
      * List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
     */
-    public List<GetOrganizationAccount> getAccounts() {
+    public List<GetOrganizationAccount> accounts() {
         return this.accounts;
     }
     /**
      * ARN of the root
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * A list of AWS service principal names that have integration enabled with your organization. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
     */
-    public List<String> getAwsServiceAccessPrincipals() {
+    public List<String> awsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals;
     }
     /**
      * A list of Organizations policy types that are enabled in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `SERVICE_CONTROL_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
     */
-    public List<String> getEnabledPolicyTypes() {
+    public List<String> enabledPolicyTypes() {
         return this.enabledPolicyTypes;
     }
     /**
      * The FeatureSet of the organization.
      * 
     */
-    public String getFeatureSet() {
+    public String featureSet() {
         return this.featureSet;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization.
      * 
     */
-    public String getMasterAccountArn() {
+    public String masterAccountArn() {
         return this.masterAccountArn;
     }
     /**
      * The email address that is associated with the AWS account that is designated as the master account for the organization.
      * 
     */
-    public String getMasterAccountEmail() {
+    public String masterAccountEmail() {
         return this.masterAccountEmail;
     }
     /**
      * The unique identifier (ID) of the master account of an organization.
      * 
     */
-    public String getMasterAccountId() {
+    public String masterAccountId() {
         return this.masterAccountId;
     }
     /**
      * List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
     */
-    public List<GetOrganizationNonMasterAccount> getNonMasterAccounts() {
+    public List<GetOrganizationNonMasterAccount> nonMasterAccounts() {
         return this.nonMasterAccounts;
     }
     /**
      * List of organization roots. All elements have these attributes:
      * 
     */
-    public List<GetOrganizationRoot> getRoots() {
+    public List<GetOrganizationRoot> roots() {
         return this.roots;
     }
 

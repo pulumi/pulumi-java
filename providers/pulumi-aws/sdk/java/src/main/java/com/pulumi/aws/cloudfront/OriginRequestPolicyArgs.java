@@ -25,7 +25,7 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -36,7 +36,7 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="cookiesConfig", required=true)
       private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
-    public Output<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
+    public Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
@@ -47,7 +47,7 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="headersConfig", required=true)
       private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
-    public Output<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
+    public Output<OriginRequestPolicyHeadersConfigArgs> headersConfig() {
         return this.headersConfig;
     }
 
@@ -58,7 +58,7 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class OriginRequestPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="queryStringsConfig", required=true)
       private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
-    public Output<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {
+    public Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

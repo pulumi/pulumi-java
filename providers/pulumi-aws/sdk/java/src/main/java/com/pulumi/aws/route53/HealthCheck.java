@@ -44,7 +44,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Health Check.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
      * 
      */
-    public Output</* @Nullable */ Integer> getChildHealthThreshold() {
+    public Output</* @Nullable */ Integer> childHealthThreshold() {
         return this.childHealthThreshold;
     }
     /**
@@ -72,7 +72,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
      * 
      */
-    public Output</* @Nullable */ List<String>> getChildHealthchecks() {
+    public Output</* @Nullable */ List<String>> childHealthchecks() {
         return this.childHealthchecks;
     }
     /**
@@ -86,7 +86,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The name of the CloudWatch alarm.
      * 
      */
-    public Output</* @Nullable */ String> getCloudwatchAlarmName() {
+    public Output</* @Nullable */ String> cloudwatchAlarmName() {
         return this.cloudwatchAlarmName;
     }
     /**
@@ -100,7 +100,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The CloudWatchRegion that the CloudWatch alarm was created in.
      * 
      */
-    public Output</* @Nullable */ String> getCloudwatchAlarmRegion() {
+    public Output</* @Nullable */ String> cloudwatchAlarmRegion() {
         return this.cloudwatchAlarmRegion;
     }
     /**
@@ -120,7 +120,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -134,7 +134,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
      * 
      */
-    public Output<Boolean> getEnableSni() {
+    public Output<Boolean> enableSni() {
         return this.enableSni;
     }
     /**
@@ -148,7 +148,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The number of consecutive health checks that an endpoint must pass or fail.
      * 
      */
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold;
     }
     /**
@@ -162,7 +162,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The fully qualified domain name of the endpoint to be checked.
      * 
      */
-    public Output</* @Nullable */ String> getFqdn() {
+    public Output</* @Nullable */ String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -176,7 +176,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
      * 
      */
-    public Output</* @Nullable */ String> getInsufficientDataHealthStatus() {
+    public Output</* @Nullable */ String> insufficientDataHealthStatus() {
         return this.insufficientDataHealthStatus;
     }
     /**
@@ -190,7 +190,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInvertHealthcheck() {
+    public Output</* @Nullable */ Boolean> invertHealthcheck() {
         return this.invertHealthcheck;
     }
     /**
@@ -204,7 +204,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The IP address of the endpoint to be checked.
      * 
      */
-    public Output</* @Nullable */ String> getIpAddress() {
+    public Output</* @Nullable */ String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -218,7 +218,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMeasureLatency() {
+    public Output</* @Nullable */ Boolean> measureLatency() {
         return this.measureLatency;
     }
     /**
@@ -232,7 +232,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The port of the endpoint to be checked.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -248,7 +248,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * (helpful for identifying single health_check set amongst others)
      * 
      */
-    public Output</* @Nullable */ String> getReferenceName() {
+    public Output</* @Nullable */ String> referenceName() {
         return this.referenceName;
     }
     /**
@@ -262,7 +262,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRegions() {
+    public Output</* @Nullable */ List<String>> regions() {
         return this.regions;
     }
     /**
@@ -276,7 +276,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
      * 
      */
-    public Output</* @Nullable */ Integer> getRequestInterval() {
+    public Output</* @Nullable */ Integer> requestInterval() {
         return this.requestInterval;
     }
     /**
@@ -290,7 +290,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The path that you want Amazon Route 53 to request when performing health checks.
      * 
      */
-    public Output</* @Nullable */ String> getResourcePath() {
+    public Output</* @Nullable */ String> resourcePath() {
         return this.resourcePath;
     }
     /**
@@ -304,7 +304,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
      * 
      */
-    public Output</* @Nullable */ String> getRoutingControlArn() {
+    public Output</* @Nullable */ String> routingControlArn() {
         return this.routingControlArn;
     }
     /**
@@ -318,7 +318,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
      * 
      */
-    public Output</* @Nullable */ String> getSearchString() {
+    public Output</* @Nullable */ String> searchString() {
         return this.searchString;
     }
     /**
@@ -332,7 +332,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -346,7 +346,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -360,7 +360,7 @@ public class HealthCheck extends com.pulumi.resources.CustomResource {
      * @return The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

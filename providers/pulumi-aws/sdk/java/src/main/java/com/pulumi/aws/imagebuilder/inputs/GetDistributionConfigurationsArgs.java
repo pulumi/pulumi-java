@@ -22,7 +22,7 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
     @Import(name="filters")
       private final @Nullable List<GetDistributionConfigurationsFilter> filters;
 
-    public List<GetDistributionConfigurationsFilter> getFilters() {
+    public List<GetDistributionConfigurationsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

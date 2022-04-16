@@ -22,7 +22,7 @@ public final class FeatureGroupFeatureDefinitionArgs extends com.pulumi.resource
     @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName == null ? Codegen.empty() : this.featureName;
     }
 
@@ -33,7 +33,7 @@ public final class FeatureGroupFeatureDefinitionArgs extends com.pulumi.resource
     @Import(name="featureType")
       private final @Nullable Output<String> featureType;
 
-    public Output<String> getFeatureType() {
+    public Output<String> featureType() {
         return this.featureType == null ? Codegen.empty() : this.featureType;
     }
 

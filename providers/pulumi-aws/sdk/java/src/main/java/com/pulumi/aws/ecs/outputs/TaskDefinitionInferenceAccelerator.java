@@ -32,14 +32,14 @@ public final class TaskDefinitionInferenceAccelerator {
      * Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * Elastic Inference accelerator type to use.
      * 
     */
-    public String getDeviceType() {
+    public String deviceType() {
         return this.deviceType;
     }
 

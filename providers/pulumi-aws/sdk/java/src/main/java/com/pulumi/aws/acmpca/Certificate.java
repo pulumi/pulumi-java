@@ -37,7 +37,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the certificate.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -51,7 +51,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The PEM-encoded certificate value.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -65,7 +65,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -79,7 +79,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
      * 
      */
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain;
     }
     /**
@@ -93,7 +93,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Certificate Signing Request in PEM format.
      * 
      */
-    public Output<String> getCertificateSigningRequest() {
+    public Output<String> certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
@@ -107,7 +107,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Algorithm to use to sign certificate requests. Valid values: `SHA256WITHRSA`, `SHA256WITHECDSA`, `SHA384WITHRSA`, `SHA384WITHECDSA`, `SHA512WITHRSA`, `SHA512WITHECDSA`
      * 
      */
-    public Output<String> getSigningAlgorithm() {
+    public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
     /**
@@ -121,7 +121,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateArn() {
+    public Output</* @Nullable */ String> templateArn() {
         return this.templateArn;
     }
     /**
@@ -135,7 +135,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Configures end of the validity period for the certificate. See validity block below.
      * 
      */
-    public Output<CertificateValidity> getValidity() {
+    public Output<CertificateValidity> validity() {
         return this.validity;
     }
 

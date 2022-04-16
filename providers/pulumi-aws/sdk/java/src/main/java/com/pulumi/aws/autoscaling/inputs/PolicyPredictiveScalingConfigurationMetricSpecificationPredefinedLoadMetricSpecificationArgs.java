@@ -21,7 +21,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     @Import(name="predefinedMetricType", required=true)
       private final Output<String> predefinedMetricType;
 
-    public Output<String> getPredefinedMetricType() {
+    public Output<String> predefinedMetricType() {
         return this.predefinedMetricType;
     }
 
@@ -32,7 +32,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     @Import(name="resourceLabel", required=true)
       private final Output<String> resourceLabel;
 
-    public Output<String> getResourceLabel() {
+    public Output<String> resourceLabel() {
         return this.resourceLabel;
     }
 

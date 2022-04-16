@@ -26,7 +26,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<String> authentication;
 
-    public Output<String> getAuthentication() {
+    public Output<String> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -48,7 +48,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
-    public Output<WebhookAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
+    public Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -59,7 +59,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="filters")
       private final @Nullable Output<List<WebhookFilterGetArgs>> filters;
 
-    public Output<List<WebhookFilterGetArgs>> getFilters() {
+    public Output<List<WebhookFilterGetArgs>> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 
@@ -70,7 +70,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -92,7 +92,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -103,7 +103,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetAction")
       private final @Nullable Output<String> targetAction;
 
-    public Output<String> getTargetAction() {
+    public Output<String> targetAction() {
         return this.targetAction == null ? Codegen.empty() : this.targetAction;
     }
 
@@ -114,7 +114,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPipeline")
       private final @Nullable Output<String> targetPipeline;
 
-    public Output<String> getTargetPipeline() {
+    public Output<String> targetPipeline() {
         return this.targetPipeline == null ? Codegen.empty() : this.targetPipeline;
     }
 
@@ -125,7 +125,7 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

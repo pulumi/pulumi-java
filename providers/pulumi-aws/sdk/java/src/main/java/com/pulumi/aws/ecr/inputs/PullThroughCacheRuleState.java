@@ -22,7 +22,7 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
     @Import(name="ecrRepositoryPrefix")
       private final @Nullable Output<String> ecrRepositoryPrefix;
 
-    public Output<String> getEcrRepositoryPrefix() {
+    public Output<String> ecrRepositoryPrefix() {
         return this.ecrRepositoryPrefix == null ? Codegen.empty() : this.ecrRepositoryPrefix;
     }
 
@@ -33,7 +33,7 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
@@ -44,7 +44,7 @@ public final class PullThroughCacheRuleState extends com.pulumi.resources.Resour
     @Import(name="upstreamRegistryUrl")
       private final @Nullable Output<String> upstreamRegistryUrl;
 
-    public Output<String> getUpstreamRegistryUrl() {
+    public Output<String> upstreamRegistryUrl() {
         return this.upstreamRegistryUrl == null ? Codegen.empty() : this.upstreamRegistryUrl;
     }
 

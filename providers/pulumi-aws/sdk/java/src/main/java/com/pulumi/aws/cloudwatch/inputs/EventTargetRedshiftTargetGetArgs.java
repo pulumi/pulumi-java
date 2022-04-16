@@ -23,7 +23,7 @@ public final class EventTargetRedshiftTargetGetArgs extends com.pulumi.resources
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -34,7 +34,7 @@ public final class EventTargetRedshiftTargetGetArgs extends com.pulumi.resources
     @Import(name="dbUser")
       private final @Nullable Output<String> dbUser;
 
-    public Output<String> getDbUser() {
+    public Output<String> dbUser() {
         return this.dbUser == null ? Codegen.empty() : this.dbUser;
     }
 
@@ -45,7 +45,7 @@ public final class EventTargetRedshiftTargetGetArgs extends com.pulumi.resources
     @Import(name="secretsManagerArn")
       private final @Nullable Output<String> secretsManagerArn;
 
-    public Output<String> getSecretsManagerArn() {
+    public Output<String> secretsManagerArn() {
         return this.secretsManagerArn == null ? Codegen.empty() : this.secretsManagerArn;
     }
 
@@ -56,7 +56,7 @@ public final class EventTargetRedshiftTargetGetArgs extends com.pulumi.resources
     @Import(name="sql")
       private final @Nullable Output<String> sql;
 
-    public Output<String> getSql() {
+    public Output<String> sql() {
         return this.sql == null ? Codegen.empty() : this.sql;
     }
 
@@ -67,7 +67,7 @@ public final class EventTargetRedshiftTargetGetArgs extends com.pulumi.resources
     @Import(name="statementName")
       private final @Nullable Output<String> statementName;
 
-    public Output<String> getStatementName() {
+    public Output<String> statementName() {
         return this.statementName == null ? Codegen.empty() : this.statementName;
     }
 
@@ -78,7 +78,7 @@ public final class EventTargetRedshiftTargetGetArgs extends com.pulumi.resources
     @Import(name="withEvent")
       private final @Nullable Output<Boolean> withEvent;
 
-    public Output<Boolean> getWithEvent() {
+    public Output<Boolean> withEvent() {
         return this.withEvent == null ? Codegen.empty() : this.withEvent;
     }
 

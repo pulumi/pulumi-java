@@ -58,14 +58,14 @@ public final class SizeConstraintSetSizeConstraint {
      * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
      * 
     */
-    public String getComparisonOperator() {
+    public String comparisonOperator() {
         return this.comparisonOperator;
     }
     /**
      * Specifies where in a web request to look for the size constraint.
      * 
     */
-    public SizeConstraintSetSizeConstraintFieldToMatch getFieldToMatch() {
+    public SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
@@ -73,7 +73,7 @@ public final class SizeConstraintSetSizeConstraint {
      * Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
@@ -85,7 +85,7 @@ public final class SizeConstraintSetSizeConstraint {
      * **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
      * 
     */
-    public String getTextTransformation() {
+    public String textTransformation() {
         return this.textTransformation;
     }
 

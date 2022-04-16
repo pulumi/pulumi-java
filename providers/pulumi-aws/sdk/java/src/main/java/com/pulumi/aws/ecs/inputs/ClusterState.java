@@ -27,7 +27,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviders")
       private final @Nullable Output<List<String>> capacityProviders;
 
-    public Output<List<String>> getCapacityProviders() {
+    public Output<List<String>> capacityProviders() {
         return this.capacityProviders == null ? Codegen.empty() : this.capacityProviders;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<ClusterConfigurationGetArgs> configuration;
 
-    public Output<ClusterConfigurationGetArgs> getConfiguration() {
+    public Output<ClusterConfigurationGetArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -60,7 +60,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultCapacityProviderStrategies")
       private final @Nullable Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
 
-    public Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> getDefaultCapacityProviderStrategies() {
+    public Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies == null ? Codegen.empty() : this.defaultCapacityProviderStrategies;
     }
 
@@ -71,7 +71,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="settings")
       private final @Nullable Output<List<ClusterSettingGetArgs>> settings;
 
-    public Output<List<ClusterSettingGetArgs>> getSettings() {
+    public Output<List<ClusterSettingGetArgs>> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -93,14 +93,14 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

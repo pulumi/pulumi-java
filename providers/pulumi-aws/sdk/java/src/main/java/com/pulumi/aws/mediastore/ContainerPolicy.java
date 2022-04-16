@@ -40,7 +40,7 @@ public class ContainerPolicy extends com.pulumi.resources.CustomResource {
      * @return The name of the container.
      * 
      */
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
     /**
@@ -54,7 +54,7 @@ public class ContainerPolicy extends com.pulumi.resources.CustomResource {
      * @return The contents of the policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

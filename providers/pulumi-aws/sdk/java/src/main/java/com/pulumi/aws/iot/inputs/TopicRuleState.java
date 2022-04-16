@@ -41,21 +41,21 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="cloudwatchAlarm")
       private final @Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
 
-    public Output<TopicRuleCloudwatchAlarmGetArgs> getCloudwatchAlarm() {
+    public Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm() {
         return this.cloudwatchAlarm == null ? Codegen.empty() : this.cloudwatchAlarm;
     }
 
     @Import(name="cloudwatchMetric")
       private final @Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
 
-    public Output<TopicRuleCloudwatchMetricGetArgs> getCloudwatchMetric() {
+    public Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric() {
         return this.cloudwatchMetric == null ? Codegen.empty() : this.cloudwatchMetric;
     }
 
@@ -66,28 +66,28 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="dynamodb")
       private final @Nullable Output<TopicRuleDynamodbGetArgs> dynamodb;
 
-    public Output<TopicRuleDynamodbGetArgs> getDynamodb() {
+    public Output<TopicRuleDynamodbGetArgs> dynamodb() {
         return this.dynamodb == null ? Codegen.empty() : this.dynamodb;
     }
 
     @Import(name="dynamodbv2s")
       private final @Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
 
-    public Output<List<TopicRuleDynamodbv2GetArgs>> getDynamodbv2s() {
+    public Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s() {
         return this.dynamodbv2s == null ? Codegen.empty() : this.dynamodbv2s;
     }
 
     @Import(name="elasticsearch")
       private final @Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch;
 
-    public Output<TopicRuleElasticsearchGetArgs> getElasticsearch() {
+    public Output<TopicRuleElasticsearchGetArgs> elasticsearch() {
         return this.elasticsearch == null ? Codegen.empty() : this.elasticsearch;
     }
 
@@ -98,7 +98,7 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -109,42 +109,42 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="errorAction")
       private final @Nullable Output<TopicRuleErrorActionGetArgs> errorAction;
 
-    public Output<TopicRuleErrorActionGetArgs> getErrorAction() {
+    public Output<TopicRuleErrorActionGetArgs> errorAction() {
         return this.errorAction == null ? Codegen.empty() : this.errorAction;
     }
 
     @Import(name="firehose")
       private final @Nullable Output<TopicRuleFirehoseGetArgs> firehose;
 
-    public Output<TopicRuleFirehoseGetArgs> getFirehose() {
+    public Output<TopicRuleFirehoseGetArgs> firehose() {
         return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     @Import(name="iotAnalytics")
       private final @Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
 
-    public Output<List<TopicRuleIotAnalyticGetArgs>> getIotAnalytics() {
+    public Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics() {
         return this.iotAnalytics == null ? Codegen.empty() : this.iotAnalytics;
     }
 
     @Import(name="iotEvents")
       private final @Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents;
 
-    public Output<List<TopicRuleIotEventGetArgs>> getIotEvents() {
+    public Output<List<TopicRuleIotEventGetArgs>> iotEvents() {
         return this.iotEvents == null ? Codegen.empty() : this.iotEvents;
     }
 
     @Import(name="kinesis")
       private final @Nullable Output<TopicRuleKinesisGetArgs> kinesis;
 
-    public Output<TopicRuleKinesisGetArgs> getKinesis() {
+    public Output<TopicRuleKinesisGetArgs> kinesis() {
         return this.kinesis == null ? Codegen.empty() : this.kinesis;
     }
 
     @Import(name="lambda")
       private final @Nullable Output<TopicRuleLambdaGetArgs> lambda;
 
-    public Output<TopicRuleLambdaGetArgs> getLambda() {
+    public Output<TopicRuleLambdaGetArgs> lambda() {
         return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
@@ -155,28 +155,28 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="republish")
       private final @Nullable Output<TopicRuleRepublishGetArgs> republish;
 
-    public Output<TopicRuleRepublishGetArgs> getRepublish() {
+    public Output<TopicRuleRepublishGetArgs> republish() {
         return this.republish == null ? Codegen.empty() : this.republish;
     }
 
     @Import(name="s3")
       private final @Nullable Output<TopicRuleS3GetArgs> s3;
 
-    public Output<TopicRuleS3GetArgs> getS3() {
+    public Output<TopicRuleS3GetArgs> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="sns")
       private final @Nullable Output<TopicRuleSnsGetArgs> sns;
 
-    public Output<TopicRuleSnsGetArgs> getSns() {
+    public Output<TopicRuleSnsGetArgs> sns() {
         return this.sns == null ? Codegen.empty() : this.sns;
     }
 
@@ -187,7 +187,7 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sql")
       private final @Nullable Output<String> sql;
 
-    public Output<String> getSql() {
+    public Output<String> sql() {
         return this.sql == null ? Codegen.empty() : this.sql;
     }
 
@@ -198,21 +198,21 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlVersion")
       private final @Nullable Output<String> sqlVersion;
 
-    public Output<String> getSqlVersion() {
+    public Output<String> sqlVersion() {
         return this.sqlVersion == null ? Codegen.empty() : this.sqlVersion;
     }
 
     @Import(name="sqs")
       private final @Nullable Output<TopicRuleSqsGetArgs> sqs;
 
-    public Output<TopicRuleSqsGetArgs> getSqs() {
+    public Output<TopicRuleSqsGetArgs> sqs() {
         return this.sqs == null ? Codegen.empty() : this.sqs;
     }
 
     @Import(name="stepFunctions")
       private final @Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
 
-    public Output<List<TopicRuleStepFunctionGetArgs>> getStepFunctions() {
+    public Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions() {
         return this.stepFunctions == null ? Codegen.empty() : this.stepFunctions;
     }
 
@@ -223,7 +223,7 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -234,7 +234,7 @@ public final class TopicRuleState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

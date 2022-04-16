@@ -22,7 +22,7 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
     @Import(name="clusterType")
       private final @Nullable String clusterType;
 
-    public Optional<String> getClusterType() {
+    public Optional<String> clusterType() {
         return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
     }
 
@@ -33,7 +33,7 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
     @Import(name="clusterVersion")
       private final @Nullable String clusterVersion;
 
-    public Optional<String> getClusterVersion() {
+    public Optional<String> clusterVersion() {
         return this.clusterVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterVersion);
     }
 
@@ -44,7 +44,7 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
     @Import(name="nodeType")
       private final @Nullable String nodeType;
 
-    public Optional<String> getNodeType() {
+    public Optional<String> nodeType() {
         return this.nodeType == null ? Optional.empty() : Optional.ofNullable(this.nodeType);
     }
 
@@ -55,7 +55,7 @@ public final class GetOrderableClusterArgs extends com.pulumi.resources.InvokeAr
     @Import(name="preferredNodeTypes")
       private final @Nullable List<String> preferredNodeTypes;
 
-    public List<String> getPreferredNodeTypes() {
+    public List<String> preferredNodeTypes() {
         return this.preferredNodeTypes == null ? List.of() : this.preferredNodeTypes;
     }
 

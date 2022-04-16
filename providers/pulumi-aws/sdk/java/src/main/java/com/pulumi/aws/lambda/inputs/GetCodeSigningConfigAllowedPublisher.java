@@ -20,7 +20,7 @@ public final class GetCodeSigningConfigAllowedPublisher extends com.pulumi.resou
     @Import(name="signingProfileVersionArns", required=true)
       private final List<String> signingProfileVersionArns;
 
-    public List<String> getSigningProfileVersionArns() {
+    public List<String> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 

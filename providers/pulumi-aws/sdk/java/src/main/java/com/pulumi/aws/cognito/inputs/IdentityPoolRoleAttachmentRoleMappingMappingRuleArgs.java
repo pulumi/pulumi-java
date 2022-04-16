@@ -21,7 +21,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="claim", required=true)
       private final Output<String> claim;
 
-    public Output<String> getClaim() {
+    public Output<String> claim() {
         return this.claim;
     }
 
@@ -32,7 +32,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="matchType", required=true)
       private final Output<String> matchType;
 
-    public Output<String> getMatchType() {
+    public Output<String> matchType() {
         return this.matchType;
     }
 
@@ -43,7 +43,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -54,7 +54,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleArgs extends 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

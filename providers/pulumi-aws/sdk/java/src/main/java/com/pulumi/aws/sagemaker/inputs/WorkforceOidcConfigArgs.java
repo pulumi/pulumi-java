@@ -21,7 +21,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -32,7 +32,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -43,7 +43,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -54,7 +54,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
@@ -65,7 +65,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="jwksUri", required=true)
       private final Output<String> jwksUri;
 
-    public Output<String> getJwksUri() {
+    public Output<String> jwksUri() {
         return this.jwksUri;
     }
 
@@ -76,7 +76,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="logoutEndpoint", required=true)
       private final Output<String> logoutEndpoint;
 
-    public Output<String> getLogoutEndpoint() {
+    public Output<String> logoutEndpoint() {
         return this.logoutEndpoint;
     }
 
@@ -87,7 +87,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
-    public Output<String> getTokenEndpoint() {
+    public Output<String> tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
@@ -98,7 +98,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
     @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
-    public Output<String> getUserInfoEndpoint() {
+    public Output<String> userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

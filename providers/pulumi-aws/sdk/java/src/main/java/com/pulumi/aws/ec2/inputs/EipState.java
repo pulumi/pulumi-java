@@ -24,7 +24,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -35,7 +35,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
@@ -46,7 +46,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="associateWithPrivateIp")
       private final @Nullable Output<String> associateWithPrivateIp;
 
-    public Output<String> getAssociateWithPrivateIp() {
+    public Output<String> associateWithPrivateIp() {
         return this.associateWithPrivateIp == null ? Codegen.empty() : this.associateWithPrivateIp;
     }
 
@@ -57,7 +57,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="associationId")
       private final @Nullable Output<String> associationId;
 
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId == null ? Codegen.empty() : this.associationId;
     }
 
@@ -68,7 +68,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="carrierIp")
       private final @Nullable Output<String> carrierIp;
 
-    public Output<String> getCarrierIp() {
+    public Output<String> carrierIp() {
         return this.carrierIp == null ? Codegen.empty() : this.carrierIp;
     }
 
@@ -79,7 +79,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerOwnedIp")
       private final @Nullable Output<String> customerOwnedIp;
 
-    public Output<String> getCustomerOwnedIp() {
+    public Output<String> customerOwnedIp() {
         return this.customerOwnedIp == null ? Codegen.empty() : this.customerOwnedIp;
     }
 
@@ -90,7 +90,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
-    public Output<String> getCustomerOwnedIpv4Pool() {
+    public Output<String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Codegen.empty() : this.customerOwnedIpv4Pool;
     }
 
@@ -101,7 +101,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -112,7 +112,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -123,7 +123,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkBorderGroup")
       private final @Nullable Output<String> networkBorderGroup;
 
-    public Output<String> getNetworkBorderGroup() {
+    public Output<String> networkBorderGroup() {
         return this.networkBorderGroup == null ? Codegen.empty() : this.networkBorderGroup;
     }
 
@@ -134,7 +134,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkInterface")
       private final @Nullable Output<String> networkInterface;
 
-    public Output<String> getNetworkInterface() {
+    public Output<String> networkInterface() {
         return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
     }
 
@@ -145,7 +145,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateDns")
       private final @Nullable Output<String> privateDns;
 
-    public Output<String> getPrivateDns() {
+    public Output<String> privateDns() {
         return this.privateDns == null ? Codegen.empty() : this.privateDns;
     }
 
@@ -156,7 +156,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
@@ -167,7 +167,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
-    public Output<String> getPublicDns() {
+    public Output<String> publicDns() {
         return this.publicDns == null ? Codegen.empty() : this.publicDns;
     }
 
@@ -178,7 +178,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
-    public Output<String> getPublicIp() {
+    public Output<String> publicIp() {
         return this.publicIp == null ? Codegen.empty() : this.publicIp;
     }
 
@@ -189,7 +189,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicIpv4Pool")
       private final @Nullable Output<String> publicIpv4Pool;
 
-    public Output<String> getPublicIpv4Pool() {
+    public Output<String> publicIpv4Pool() {
         return this.publicIpv4Pool == null ? Codegen.empty() : this.publicIpv4Pool;
     }
 
@@ -200,7 +200,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -211,7 +211,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -222,7 +222,7 @@ public final class EipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpc")
       private final @Nullable Output<Boolean> vpc;
 
-    public Output<Boolean> getVpc() {
+    public Output<Boolean> vpc() {
         return this.vpc == null ? Codegen.empty() : this.vpc;
     }
 

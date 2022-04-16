@@ -36,14 +36,14 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
      * Enables or disables data processing.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Array of data processors. More details are given below
      * 
     */
-    public List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor> getProcessors() {
+    public List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor> processors() {
         return this.processors == null ? List.of() : this.processors;
     }
 

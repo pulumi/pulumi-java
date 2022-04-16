@@ -23,7 +23,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndArgs extend
     @Import(name="simpleScopeTerm")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> getSimpleScopeTerm() {
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs> simpleScopeTerm() {
         return this.simpleScopeTerm == null ? Codegen.empty() : this.simpleScopeTerm;
     }
 
@@ -34,7 +34,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndArgs extend
     @Import(name="tagScopeTerm")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> getTagScopeTerm() {
+    public Output<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs> tagScopeTerm() {
         return this.tagScopeTerm == null ? Codegen.empty() : this.tagScopeTerm;
     }
 

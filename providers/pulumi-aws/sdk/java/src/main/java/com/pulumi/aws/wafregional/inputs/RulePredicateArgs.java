@@ -18,21 +18,21 @@ public final class RulePredicateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataId", required=true)
       private final Output<String> dataId;
 
-    public Output<String> getDataId() {
+    public Output<String> dataId() {
         return this.dataId;
     }
 
     @Import(name="negated", required=true)
       private final Output<Boolean> negated;
 
-    public Output<Boolean> getNegated() {
+    public Output<Boolean> negated() {
         return this.negated;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

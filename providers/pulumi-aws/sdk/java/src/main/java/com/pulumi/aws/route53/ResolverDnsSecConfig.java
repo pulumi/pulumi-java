@@ -40,7 +40,7 @@ public class ResolverDnsSecConfig extends com.pulumi.resources.CustomResource {
      * @return The ARN for a configuration for DNSSEC validation.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class ResolverDnsSecConfig extends com.pulumi.resources.CustomResource {
      * @return The owner account ID of the virtual private cloud (VPC) for a configuration for DNSSEC validation.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -68,7 +68,7 @@ public class ResolverDnsSecConfig extends com.pulumi.resources.CustomResource {
      * @return The ID of the virtual private cloud (VPC) that you're updating the DNSSEC validation status for.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -82,7 +82,7 @@ public class ResolverDnsSecConfig extends com.pulumi.resources.CustomResource {
      * @return The validation status for a DNSSEC configuration. The status can be one of the following: `ENABLING`, `ENABLED`, `DISABLING` and `DISABLED`.
      * 
      */
-    public Output<String> getValidationStatus() {
+    public Output<String> validationStatus() {
         return this.validationStatus;
     }
 

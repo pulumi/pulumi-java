@@ -22,7 +22,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs ext
     @Import(name="clientConfigurations", required=true)
       private final Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs>> clientConfigurations;
 
-    public Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs>> getClientConfigurations() {
+    public Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationGetArgs>> clientConfigurations() {
         return this.clientConfigurations;
     }
 

@@ -23,7 +23,7 @@ public final class DomainScalingParametersArgs extends com.pulumi.resources.Reso
     @Import(name="desiredInstanceType")
       private final @Nullable Output<String> desiredInstanceType;
 
-    public Output<String> getDesiredInstanceType() {
+    public Output<String> desiredInstanceType() {
         return this.desiredInstanceType == null ? Codegen.empty() : this.desiredInstanceType;
     }
 
@@ -34,7 +34,7 @@ public final class DomainScalingParametersArgs extends com.pulumi.resources.Reso
     @Import(name="desiredPartitionCount")
       private final @Nullable Output<Integer> desiredPartitionCount;
 
-    public Output<Integer> getDesiredPartitionCount() {
+    public Output<Integer> desiredPartitionCount() {
         return this.desiredPartitionCount == null ? Codegen.empty() : this.desiredPartitionCount;
     }
 
@@ -45,7 +45,7 @@ public final class DomainScalingParametersArgs extends com.pulumi.resources.Reso
     @Import(name="desiredReplicationCount")
       private final @Nullable Output<Integer> desiredReplicationCount;
 
-    public Output<Integer> getDesiredReplicationCount() {
+    public Output<Integer> desiredReplicationCount() {
         return this.desiredReplicationCount == null ? Codegen.empty() : this.desiredReplicationCount;
     }
 

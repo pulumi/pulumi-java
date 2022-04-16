@@ -16,7 +16,7 @@ public final class GetLaunchTemplateHibernationOption {
         this.configured = configured;
     }
 
-    public Boolean getConfigured() {
+    public Boolean configured() {
         return this.configured;
     }
 

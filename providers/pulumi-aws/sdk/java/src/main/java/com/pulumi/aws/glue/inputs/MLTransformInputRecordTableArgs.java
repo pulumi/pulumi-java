@@ -22,7 +22,7 @@ public final class MLTransformInputRecordTableArgs extends com.pulumi.resources.
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -33,7 +33,7 @@ public final class MLTransformInputRecordTableArgs extends com.pulumi.resources.
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -44,7 +44,7 @@ public final class MLTransformInputRecordTableArgs extends com.pulumi.resources.
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -55,7 +55,7 @@ public final class MLTransformInputRecordTableArgs extends com.pulumi.resources.
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

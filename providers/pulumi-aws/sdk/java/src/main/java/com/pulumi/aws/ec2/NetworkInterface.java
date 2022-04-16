@@ -61,7 +61,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return ARN of the network interface.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -75,7 +75,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Configuration block to define the attachment of the ENI. See below.
      * 
      */
-    public Output<List<NetworkInterfaceAttachment>> getAttachments() {
+    public Output<List<NetworkInterfaceAttachment>> attachments() {
         return this.attachments;
     }
     /**
@@ -89,7 +89,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Description for the network interface.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +103,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Type of network interface to create. Set to `efa` for Elastic Fabric Adapter. Changing `interface_type` will cause the resource to be destroyed and re-created.
      * 
      */
-    public Output<String> getInterfaceType() {
+    public Output<String> interfaceType() {
         return this.interfaceType;
     }
     /**
@@ -117,7 +117,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Number of IPv4 prefixes that AWS automatically assigns to the network interface.
      * 
      */
-    public Output<Integer> getIpv4PrefixCount() {
+    public Output<Integer> ipv4PrefixCount() {
         return this.ipv4PrefixCount;
     }
     /**
@@ -131,7 +131,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return One or more IPv4 prefixes assigned to the network interface.
      * 
      */
-    public Output<List<String>> getIpv4Prefixes() {
+    public Output<List<String>> ipv4Prefixes() {
         return this.ipv4Prefixes;
     }
     /**
@@ -145,13 +145,13 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Number of IPv6 addresses to assign to a network interface. You can't use this option if specifying specific `ipv6_addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
      * 
      */
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount;
     }
     @Export(name="ipv6AddressListEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6AddressListEnabled;
 
-    public Output</* @Nullable */ Boolean> getIpv6AddressListEnabled() {
+    public Output</* @Nullable */ Boolean> ipv6AddressListEnabled() {
         return this.ipv6AddressListEnabled;
     }
     /**
@@ -165,7 +165,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return List of private IPs to assign to the ENI in sequential order.
      * 
      */
-    public Output<List<String>> getIpv6AddressLists() {
+    public Output<List<String>> ipv6AddressLists() {
         return this.ipv6AddressLists;
     }
     /**
@@ -179,7 +179,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying `ipv6_address_count`.
      * 
      */
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
@@ -193,7 +193,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Number of IPv6 prefixes that AWS automatically assigns to the network interface.
      * 
      */
-    public Output<Integer> getIpv6PrefixCount() {
+    public Output<Integer> ipv6PrefixCount() {
         return this.ipv6PrefixCount;
     }
     /**
@@ -207,7 +207,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return One or more IPv6 prefixes assigned to the network interface.
      * 
      */
-    public Output<List<String>> getIpv6Prefixes() {
+    public Output<List<String>> ipv6Prefixes() {
         return this.ipv6Prefixes;
     }
     /**
@@ -221,13 +221,13 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return MAC address of the network interface.
      * 
      */
-    public Output<String> getMacAddress() {
+    public Output<String> macAddress() {
         return this.macAddress;
     }
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -241,7 +241,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return AWS account ID of the owner of the network interface.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -255,19 +255,19 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Private DNS name of the network interface (IPv4).
      * 
      */
-    public Output<String> getPrivateDnsName() {
+    public Output<String> privateDnsName() {
         return this.privateDnsName;
     }
     @Export(name="privateIp", type=String.class, parameters={})
     private Output<String> privateIp;
 
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp;
     }
     @Export(name="privateIpListEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privateIpListEnabled;
 
-    public Output</* @Nullable */ Boolean> getPrivateIpListEnabled() {
+    public Output</* @Nullable */ Boolean> privateIpListEnabled() {
         return this.privateIpListEnabled;
     }
     /**
@@ -281,7 +281,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return List of private IPs to assign to the ENI in sequential order. Requires setting `private_ip_list_enable` to `true`.
      * 
      */
-    public Output<List<String>> getPrivateIpLists() {
+    public Output<List<String>> privateIpLists() {
         return this.privateIpLists;
     }
     /**
@@ -295,7 +295,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return List of private IPs to assign to the ENI without regard to order.
      * 
      */
-    public Output<List<String>> getPrivateIps() {
+    public Output<List<String>> privateIps() {
         return this.privateIps;
     }
     /**
@@ -309,7 +309,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + `private_ips_count`, as a primary private IP will be assiged to an ENI by default.
      * 
      */
-    public Output<Integer> getPrivateIpsCount() {
+    public Output<Integer> privateIpsCount() {
         return this.privateIpsCount;
     }
     /**
@@ -323,7 +323,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return List of security group IDs to assign to the ENI.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -337,7 +337,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Whether to enable source destination checking for the ENI. Default true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSourceDestCheck() {
+    public Output</* @Nullable */ Boolean> sourceDestCheck() {
         return this.sourceDestCheck;
     }
     /**
@@ -351,7 +351,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Subnet ID to create the ENI in.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -365,7 +365,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -379,7 +379,7 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

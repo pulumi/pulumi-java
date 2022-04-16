@@ -21,7 +21,7 @@ public final class ContainerPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -32,7 +32,7 @@ public final class ContainerPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

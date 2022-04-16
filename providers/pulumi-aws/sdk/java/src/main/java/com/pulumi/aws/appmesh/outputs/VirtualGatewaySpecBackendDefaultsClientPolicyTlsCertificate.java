@@ -35,14 +35,14 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate {
      * A local file certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile> getFile() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
     */
-    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds> getSds() {
+    public Optional<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds> sds() {
         return Optional.ofNullable(this.sds);
     }
 

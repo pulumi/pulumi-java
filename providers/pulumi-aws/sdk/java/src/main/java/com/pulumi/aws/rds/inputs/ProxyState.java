@@ -27,7 +27,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="auths")
       private final @Nullable Output<List<ProxyAuthGetArgs>> auths;
 
-    public Output<List<ProxyAuthGetArgs>> getAuths() {
+    public Output<List<ProxyAuthGetArgs>> auths() {
         return this.auths == null ? Codegen.empty() : this.auths;
     }
 
@@ -49,7 +49,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="debugLogging")
       private final @Nullable Output<Boolean> debugLogging;
 
-    public Output<Boolean> getDebugLogging() {
+    public Output<Boolean> debugLogging() {
         return this.debugLogging == null ? Codegen.empty() : this.debugLogging;
     }
 
@@ -60,7 +60,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -71,7 +71,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineFamily")
       private final @Nullable Output<String> engineFamily;
 
-    public Output<String> getEngineFamily() {
+    public Output<String> engineFamily() {
         return this.engineFamily == null ? Codegen.empty() : this.engineFamily;
     }
 
@@ -82,7 +82,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="idleClientTimeout")
       private final @Nullable Output<Integer> idleClientTimeout;
 
-    public Output<Integer> getIdleClientTimeout() {
+    public Output<Integer> idleClientTimeout() {
         return this.idleClientTimeout == null ? Codegen.empty() : this.idleClientTimeout;
     }
 
@@ -93,7 +93,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireTls")
       private final @Nullable Output<Boolean> requireTls;
 
-    public Output<Boolean> getRequireTls() {
+    public Output<Boolean> requireTls() {
         return this.requireTls == null ? Codegen.empty() : this.requireTls;
     }
 
@@ -115,7 +115,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -126,7 +126,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -137,7 +137,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -148,7 +148,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -159,7 +159,7 @@ public final class ProxyState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSubnetIds")
       private final @Nullable Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds == null ? Codegen.empty() : this.vpcSubnetIds;
     }
 

@@ -26,7 +26,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters;
 
-    public Output<List<MetricStreamExcludeFilterArgs>> getExcludeFilters() {
+    public Output<List<MetricStreamExcludeFilterArgs>> excludeFilters() {
         return this.excludeFilters == null ? Codegen.empty() : this.excludeFilters;
     }
 
@@ -37,7 +37,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firehoseArn", required=true)
       private final Output<String> firehoseArn;
 
-    public Output<String> getFirehoseArn() {
+    public Output<String> firehoseArn() {
         return this.firehoseArn;
     }
 
@@ -48,14 +48,14 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters;
 
-    public Output<List<MetricStreamIncludeFilterArgs>> getIncludeFilters() {
+    public Output<List<MetricStreamIncludeFilterArgs>> includeFilters() {
         return this.includeFilters == null ? Codegen.empty() : this.includeFilters;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -77,7 +77,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat", required=true)
       private final Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat;
     }
 
@@ -88,7 +88,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -99,7 +99,7 @@ public final class MetricStreamArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

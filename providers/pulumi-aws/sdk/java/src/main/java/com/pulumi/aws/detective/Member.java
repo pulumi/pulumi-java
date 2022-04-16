@@ -41,7 +41,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return AWS account ID for the account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -55,7 +55,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return AWS account ID for the administrator account.
      * 
      */
-    public Output<String> getAdministratorId() {
+    public Output<String> administratorId() {
         return this.administratorId;
     }
     /**
@@ -69,13 +69,13 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return If set to true, then the root user of the invited account will _not_ receive an email notification. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. By default, this is set to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableEmailNotification() {
+    public Output</* @Nullable */ Boolean> disableEmailNotification() {
         return this.disableEmailNotification;
     }
     @Export(name="disabledReason", type=String.class, parameters={})
     private Output<String> disabledReason;
 
-    public Output<String> getDisabledReason() {
+    public Output<String> disabledReason() {
         return this.disabledReason;
     }
     /**
@@ -89,7 +89,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Email address for the account.
      * 
      */
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
     /**
@@ -103,7 +103,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return ARN of the behavior graph to invite the member accounts to contribute their data to.
      * 
      */
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
     /**
@@ -117,7 +117,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, when an Amazon Detective membership invitation was last sent to the account.
      * 
      */
-    public Output<String> getInvitedTime() {
+    public Output<String> invitedTime() {
         return this.invitedTime;
     }
     /**
@@ -131,7 +131,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return A custom message to include in the invitation. Amazon Detective adds this message to the standard content that it sends for an invitation.
      * 
      */
-    public Output</* @Nullable */ String> getMessage() {
+    public Output</* @Nullable */ String> message() {
         return this.message;
     }
     /**
@@ -145,7 +145,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Current membership status of the member account.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -159,7 +159,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account's status.
      * 
      */
-    public Output<String> getUpdatedTime() {
+    public Output<String> updatedTime() {
         return this.updatedTime;
     }
     /**
@@ -173,7 +173,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Data volume in bytes per day for the member account.
      * 
      */
-    public Output<String> getVolumeUsageInBytes() {
+    public Output<String> volumeUsageInBytes() {
         return this.volumeUsageInBytes;
     }
 

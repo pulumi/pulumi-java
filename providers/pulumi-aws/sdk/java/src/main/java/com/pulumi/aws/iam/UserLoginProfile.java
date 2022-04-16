@@ -62,7 +62,7 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
      * 
      */
-    public Output<String> getEncryptedPassword() {
+    public Output<String> encryptedPassword() {
         return this.encryptedPassword;
     }
     /**
@@ -76,7 +76,7 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
      * 
      */
-    public Output<String> getKeyFingerprint() {
+    public Output<String> keyFingerprint() {
         return this.keyFingerprint;
     }
     /**
@@ -90,7 +90,7 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output</* @Nullable */ Integer> getPasswordLength() {
+    public Output</* @Nullable */ Integer> passwordLength() {
         return this.passwordLength;
     }
     /**
@@ -104,7 +104,7 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPasswordResetRequired() {
+    public Output</* @Nullable */ Boolean> passwordResetRequired() {
         return this.passwordResetRequired;
     }
     /**
@@ -118,7 +118,7 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output<String> getPgpKey() {
+    public Output<String> pgpKey() {
         return this.pgpKey;
     }
     /**
@@ -132,7 +132,7 @@ public class UserLoginProfile extends com.pulumi.resources.CustomResource {
      * @return The IAM user's name.
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

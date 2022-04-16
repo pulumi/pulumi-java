@@ -21,7 +21,7 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends com.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +32,7 @@ public final class MultiRegionAccessPointPolicyDetailsArgs extends com.pulumi.re
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

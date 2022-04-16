@@ -23,7 +23,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -34,7 +34,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="modelSelectionExpression")
       private final @Nullable Output<String> modelSelectionExpression;
 
-    public Output<String> getModelSelectionExpression() {
+    public Output<String> modelSelectionExpression() {
         return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
     }
 
@@ -45,7 +45,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseModels")
       private final @Nullable Output<Map<String,String>> responseModels;
 
-    public Output<Map<String,String>> getResponseModels() {
+    public Output<Map<String,String>> responseModels() {
         return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
@@ -56,7 +56,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeId", required=true)
       private final Output<String> routeId;
 
-    public Output<String> getRouteId() {
+    public Output<String> routeId() {
         return this.routeId;
     }
 
@@ -67,7 +67,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeResponseKey", required=true)
       private final Output<String> routeResponseKey;
 
-    public Output<String> getRouteResponseKey() {
+    public Output<String> routeResponseKey() {
         return this.routeResponseKey;
     }
 

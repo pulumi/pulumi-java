@@ -48,28 +48,28 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
      * The instance type.
      * 
     */
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * 
     */
-    public Optional<String> getLifecycleConfigArn() {
+    public Optional<String> lifecycleConfigArn() {
         return Optional.ofNullable(this.lifecycleConfigArn);
     }
     /**
      * The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
     */
-    public Optional<String> getSagemakerImageArn() {
+    public Optional<String> sagemakerImageArn() {
         return Optional.ofNullable(this.sagemakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
     */
-    public Optional<String> getSagemakerImageVersionArn() {
+    public Optional<String> sagemakerImageVersionArn() {
         return Optional.ofNullable(this.sagemakerImageVersionArn);
     }
 

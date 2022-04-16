@@ -22,7 +22,7 @@ public final class ProductSubscriptionState extends com.pulumi.resources.Resourc
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class ProductSubscriptionState extends com.pulumi.resources.Resourc
     @Import(name="productArn")
       private final @Nullable Output<String> productArn;
 
-    public Output<String> getProductArn() {
+    public Output<String> productArn() {
         return this.productArn == null ? Codegen.empty() : this.productArn;
     }
 

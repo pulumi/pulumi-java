@@ -24,7 +24,7 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends com.pulu
     @Import(name="codeConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs> codeConfiguration;
 
-    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs> getCodeConfiguration() {
+    public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends com.pulu
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends com.pulu
     @Import(name="sourceCodeVersion", required=true)
       private final Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs> sourceCodeVersion;
 
-    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs> getSourceCodeVersion() {
+    public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs> sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 

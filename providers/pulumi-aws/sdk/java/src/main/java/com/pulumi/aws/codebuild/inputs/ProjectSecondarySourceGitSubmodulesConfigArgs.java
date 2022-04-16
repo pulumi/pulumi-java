@@ -21,7 +21,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfigArgs extends com.pul
     @Import(name="fetchSubmodules", required=true)
       private final Output<Boolean> fetchSubmodules;
 
-    public Output<Boolean> getFetchSubmodules() {
+    public Output<Boolean> fetchSubmodules() {
         return this.fetchSubmodules;
     }
 

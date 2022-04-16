@@ -22,7 +22,7 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends com.pulumi.reso
     @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy() {
         return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
     }
 

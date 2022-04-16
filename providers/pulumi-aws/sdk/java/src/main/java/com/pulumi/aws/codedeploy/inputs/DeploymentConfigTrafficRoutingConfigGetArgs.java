@@ -24,7 +24,7 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
     @Import(name="timeBasedCanary")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary;
 
-    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> getTimeBasedCanary() {
+    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs> timeBasedCanary() {
         return this.timeBasedCanary == null ? Codegen.empty() : this.timeBasedCanary;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
     @Import(name="timeBasedLinear")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear;
 
-    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> getTimeBasedLinear() {
+    public Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs> timeBasedLinear() {
         return this.timeBasedLinear == null ? Codegen.empty() : this.timeBasedLinear;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentConfigTrafficRoutingConfigGetArgs extends com.pulum
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

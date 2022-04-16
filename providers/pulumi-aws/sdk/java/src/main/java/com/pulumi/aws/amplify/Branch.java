@@ -43,7 +43,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -57,7 +57,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the branch.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return A list of custom resources that are linked to this branch.
      * 
      */
-    public Output<List<String>> getAssociatedResources() {
+    public Output<List<String>> associatedResources() {
         return this.associatedResources;
     }
     /**
@@ -85,7 +85,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    public Output</* @Nullable */ String> getBackendEnvironmentArn() {
+    public Output</* @Nullable */ String> backendEnvironmentArn() {
         return this.backendEnvironmentArn;
     }
     /**
@@ -99,7 +99,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The basic authorization credentials for the branch.
      * 
      */
-    public Output</* @Nullable */ String> getBasicAuthCredentials() {
+    public Output</* @Nullable */ String> basicAuthCredentials() {
         return this.basicAuthCredentials;
     }
     /**
@@ -113,7 +113,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The name for the branch.
      * 
      */
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName;
     }
     /**
@@ -127,7 +127,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The custom domains for the branch.
      * 
      */
-    public Output<List<String>> getCustomDomains() {
+    public Output<List<String>> customDomains() {
         return this.customDomains;
     }
     /**
@@ -141,7 +141,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The description for the branch.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -155,7 +155,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The destination branch if the branch is a pull request branch.
      * 
      */
-    public Output<String> getDestinationBranch() {
+    public Output<String> destinationBranch() {
         return this.destinationBranch;
     }
     /**
@@ -169,7 +169,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The display name for a branch. This is used as the default domain prefix.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -183,7 +183,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables auto building for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAutoBuild() {
+    public Output</* @Nullable */ Boolean> enableAutoBuild() {
         return this.enableAutoBuild;
     }
     /**
@@ -197,7 +197,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables basic authorization for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBasicAuth() {
+    public Output</* @Nullable */ Boolean> enableBasicAuth() {
         return this.enableBasicAuth;
     }
     /**
@@ -211,7 +211,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables notifications for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableNotification() {
+    public Output</* @Nullable */ Boolean> enableNotification() {
         return this.enableNotification;
     }
     /**
@@ -225,7 +225,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables performance mode for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnablePerformanceMode() {
+    public Output</* @Nullable */ Boolean> enablePerformanceMode() {
         return this.enablePerformanceMode;
     }
     /**
@@ -239,7 +239,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables pull request previews for this branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnablePullRequestPreview() {
+    public Output</* @Nullable */ Boolean> enablePullRequestPreview() {
         return this.enablePullRequestPreview;
     }
     /**
@@ -253,7 +253,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The environment variables for the branch.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getEnvironmentVariables() {
+    public Output</* @Nullable */ Map<String,String>> environmentVariables() {
         return this.environmentVariables;
     }
     /**
@@ -267,7 +267,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The framework for the branch.
      * 
      */
-    public Output</* @Nullable */ String> getFramework() {
+    public Output</* @Nullable */ String> framework() {
         return this.framework;
     }
     /**
@@ -281,7 +281,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The Amplify environment name for the pull request.
      * 
      */
-    public Output</* @Nullable */ String> getPullRequestEnvironmentName() {
+    public Output</* @Nullable */ String> pullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName;
     }
     /**
@@ -295,7 +295,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The source branch if the branch is a pull request branch.
      * 
      */
-    public Output<String> getSourceBranch() {
+    public Output<String> sourceBranch() {
         return this.sourceBranch;
     }
     /**
@@ -309,7 +309,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Describes the current stage for the branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
      * 
      */
-    public Output</* @Nullable */ String> getStage() {
+    public Output</* @Nullable */ String> stage() {
         return this.stage;
     }
     /**
@@ -323,7 +323,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -337,7 +337,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -351,7 +351,7 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The content Time To Live (TTL) for the website in seconds.
      * 
      */
-    public Output</* @Nullable */ String> getTtl() {
+    public Output</* @Nullable */ String> ttl() {
         return this.ttl;
     }
 

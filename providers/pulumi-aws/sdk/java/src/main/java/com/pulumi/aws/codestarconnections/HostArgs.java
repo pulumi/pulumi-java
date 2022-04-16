@@ -23,7 +23,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerEndpoint", required=true)
       private final Output<String> providerEndpoint;
 
-    public Output<String> getProviderEndpoint() {
+    public Output<String> providerEndpoint() {
         return this.providerEndpoint;
     }
 
@@ -45,7 +45,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerType", required=true)
       private final Output<String> providerType;
 
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
 
@@ -56,7 +56,7 @@ public final class HostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<HostVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<HostVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

@@ -44,7 +44,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
-    public Output<List<HoursOfOperationConfig>> getConfigs() {
+    public Output<List<HoursOfOperationConfig>> configs() {
         return this.configs;
     }
     /**
@@ -58,7 +58,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return Specifies the description of the Hours of Operation.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
      */
-    public Output<String> getHoursOfOperationArn() {
+    public Output<String> hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
     /**
@@ -86,7 +86,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return The identifier for the hours of operation.
      * 
      */
-    public Output<String> getHoursOfOperationId() {
+    public Output<String> hoursOfOperationId() {
         return this.hoursOfOperationId;
     }
     /**
@@ -100,7 +100,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -114,7 +114,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the Hours of Operation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -156,7 +156,7 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
      * @return Specifies the time zone of the Hours of Operation.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

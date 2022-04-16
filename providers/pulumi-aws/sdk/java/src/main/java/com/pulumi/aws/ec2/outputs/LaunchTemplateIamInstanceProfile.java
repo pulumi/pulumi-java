@@ -34,14 +34,14 @@ public final class LaunchTemplateIamInstanceProfile {
      * The Amazon Resource Name (ARN) of the instance profile.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The name of the instance profile.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

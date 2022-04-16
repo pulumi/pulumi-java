@@ -23,7 +23,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters", required=true)
       private final List<GetUserFilter> filters;
 
-    public List<GetUserFilter> getFilters() {
+    public List<GetUserFilter> filters() {
         return this.filters;
     }
 
@@ -34,7 +34,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="identityStoreId", required=true)
       private final String identityStoreId;
 
-    public String getIdentityStoreId() {
+    public String identityStoreId() {
         return this.identityStoreId;
     }
 
@@ -45,7 +45,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId")
       private final @Nullable String userId;
 
-    public Optional<String> getUserId() {
+    public Optional<String> userId() {
         return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
     }
 

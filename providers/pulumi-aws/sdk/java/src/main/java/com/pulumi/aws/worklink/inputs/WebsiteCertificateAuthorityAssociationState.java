@@ -22,7 +22,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -33,7 +33,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -44,7 +44,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
     @Import(name="fleetArn")
       private final @Nullable Output<String> fleetArn;
 
-    public Output<String> getFleetArn() {
+    public Output<String> fleetArn() {
         return this.fleetArn == null ? Codegen.empty() : this.fleetArn;
     }
 
@@ -55,7 +55,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
     @Import(name="websiteCaId")
       private final @Nullable Output<String> websiteCaId;
 
-    public Output<String> getWebsiteCaId() {
+    public Output<String> websiteCaId() {
         return this.websiteCaId == null ? Codegen.empty() : this.websiteCaId;
     }
 

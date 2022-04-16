@@ -22,7 +22,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -33,7 +33,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
     @Import(name="onExitCode")
       private final @Nullable Output<String> onExitCode;
 
-    public Output<String> getOnExitCode() {
+    public Output<String> onExitCode() {
         return this.onExitCode == null ? Codegen.empty() : this.onExitCode;
     }
 
@@ -44,7 +44,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
     @Import(name="onReason")
       private final @Nullable Output<String> onReason;
 
-    public Output<String> getOnReason() {
+    public Output<String> onReason() {
         return this.onReason == null ? Codegen.empty() : this.onReason;
     }
 
@@ -55,7 +55,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends com.pulu
     @Import(name="onStatusReason")
       private final @Nullable Output<String> onStatusReason;
 
-    public Output<String> getOnStatusReason() {
+    public Output<String> onStatusReason() {
         return this.onStatusReason == null ? Codegen.empty() : this.onStatusReason;
     }
 

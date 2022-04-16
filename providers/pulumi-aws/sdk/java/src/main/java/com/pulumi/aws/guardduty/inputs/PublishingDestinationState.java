@@ -22,7 +22,7 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
     @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
     }
 
@@ -33,7 +33,7 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
+    public Output<String> destinationType() {
         return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
@@ -44,7 +44,7 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
@@ -55,7 +55,7 @@ public final class PublishingDestinationState extends com.pulumi.resources.Resou
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 

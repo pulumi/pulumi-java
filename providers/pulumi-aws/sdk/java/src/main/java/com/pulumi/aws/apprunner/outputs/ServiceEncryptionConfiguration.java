@@ -24,7 +24,7 @@ public final class ServiceEncryptionConfiguration {
      * The ARN of the KMS key used for encryption.
      * 
     */
-    public String getKmsKey() {
+    public String kmsKey() {
         return this.kmsKey;
     }
 

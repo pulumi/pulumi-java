@@ -21,7 +21,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsGetArgs extends 
     @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
+    public Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
     }
 

@@ -27,7 +27,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionType")
       private final @Nullable Output<String> encryptionType;
 
-    public Output<String> getEncryptionType() {
+    public Output<String> encryptionType() {
         return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
     }
 
@@ -49,7 +49,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enforceConsumerDeletion")
       private final @Nullable Output<Boolean> enforceConsumerDeletion;
 
-    public Output<Boolean> getEnforceConsumerDeletion() {
+    public Output<Boolean> enforceConsumerDeletion() {
         return this.enforceConsumerDeletion == null ? Codegen.empty() : this.enforceConsumerDeletion;
     }
 
@@ -60,7 +60,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -71,7 +71,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPeriod")
       private final @Nullable Output<Integer> retentionPeriod;
 
-    public Output<Integer> getRetentionPeriod() {
+    public Output<Integer> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
@@ -94,7 +94,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
-    public Output<Integer> getShardCount() {
+    public Output<Integer> shardCount() {
         return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
@@ -105,7 +105,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shardLevelMetrics")
       private final @Nullable Output<List<String>> shardLevelMetrics;
 
-    public Output<List<String>> getShardLevelMetrics() {
+    public Output<List<String>> shardLevelMetrics() {
         return this.shardLevelMetrics == null ? Codegen.empty() : this.shardLevelMetrics;
     }
 
@@ -116,7 +116,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamModeDetails")
       private final @Nullable Output<StreamStreamModeDetailsGetArgs> streamModeDetails;
 
-    public Output<StreamStreamModeDetailsGetArgs> getStreamModeDetails() {
+    public Output<StreamStreamModeDetailsGetArgs> streamModeDetails() {
         return this.streamModeDetails == null ? Codegen.empty() : this.streamModeDetails;
     }
 
@@ -127,7 +127,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -138,7 +138,7 @@ public final class StreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

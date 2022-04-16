@@ -40,7 +40,7 @@ public class SshKey extends com.pulumi.resources.CustomResource {
      * @return The public key portion of an SSH key pair.
      * 
      */
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
     /**
@@ -54,7 +54,7 @@ public class SshKey extends com.pulumi.resources.CustomResource {
      * @return The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
     /**
@@ -68,7 +68,7 @@ public class SshKey extends com.pulumi.resources.CustomResource {
      * @return The name of the user account that is assigned to one or more servers.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

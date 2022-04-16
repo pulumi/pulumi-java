@@ -25,7 +25,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="executableUsers")
       private final @Nullable List<String> executableUsers;
 
-    public List<String> getExecutableUsers() {
+    public List<String> executableUsers() {
         return this.executableUsers == null ? List.of() : this.executableUsers;
     }
 
@@ -38,7 +38,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetAmiIdsFilter> filters;
 
-    public List<GetAmiIdsFilter> getFilters() {
+    public List<GetAmiIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -53,7 +53,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="nameRegex")
       private final @Nullable String nameRegex;
 
-    public Optional<String> getNameRegex() {
+    public Optional<String> nameRegex() {
         return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
     }
 
@@ -64,7 +64,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owners", required=true)
       private final List<String> owners;
 
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners;
     }
 
@@ -75,7 +75,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sortAscending")
       private final @Nullable Boolean sortAscending;
 
-    public Optional<Boolean> getSortAscending() {
+    public Optional<Boolean> sortAscending() {
         return this.sortAscending == null ? Optional.empty() : Optional.ofNullable(this.sortAscending);
     }
 

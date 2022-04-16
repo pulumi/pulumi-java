@@ -19,7 +19,7 @@ public final class GetDomainClusterConfigZoneAwarenessConfig extends com.pulumi.
     @Import(name="availabilityZoneCount", required=true)
       private final Integer availabilityZoneCount;
 
-    public Integer getAvailabilityZoneCount() {
+    public Integer availabilityZoneCount() {
         return this.availabilityZoneCount;
     }
 

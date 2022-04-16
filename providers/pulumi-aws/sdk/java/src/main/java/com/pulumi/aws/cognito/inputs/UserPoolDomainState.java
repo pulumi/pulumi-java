@@ -22,7 +22,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="cloudfrontDistributionArn")
       private final @Nullable Output<String> cloudfrontDistributionArn;
 
-    public Output<String> getCloudfrontDistributionArn() {
+    public Output<String> cloudfrontDistributionArn() {
         return this.cloudfrontDistributionArn == null ? Codegen.empty() : this.cloudfrontDistributionArn;
     }
 
@@ -55,7 +55,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -66,7 +66,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -77,7 +77,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
     }
 
@@ -88,7 +88,7 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -24,7 +24,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends com
     @Import(name="autoprovision")
       private final @Nullable Output<Boolean> autoprovision;
 
-    public Output<Boolean> getAutoprovision() {
+    public Output<Boolean> autoprovision() {
         return this.autoprovision == null ? Codegen.empty() : this.autoprovision;
     }
 
@@ -35,7 +35,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends com
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver == null ? Codegen.empty() : this.driver;
     }
 
@@ -46,7 +46,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends com
     @Import(name="driverOpts")
       private final @Nullable Output<Map<String,String>> driverOpts;
 
-    public Output<Map<String,String>> getDriverOpts() {
+    public Output<Map<String,String>> driverOpts() {
         return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
     }
 
@@ -57,7 +57,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends com
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -68,7 +68,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends com
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

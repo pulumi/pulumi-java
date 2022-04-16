@@ -29,7 +29,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactConfig")
       private final @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
-    public Output<CanaryArtifactConfigArgs> getArtifactConfig() {
+    public Output<CanaryArtifactConfigArgs> artifactConfig() {
         return this.artifactConfig == null ? Codegen.empty() : this.artifactConfig;
     }
 
@@ -40,7 +40,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactS3Location", required=true)
       private final Output<String> artifactS3Location;
 
-    public Output<String> getArtifactS3Location() {
+    public Output<String> artifactS3Location() {
         return this.artifactS3Location;
     }
 
@@ -51,7 +51,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
 
@@ -62,7 +62,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureRetentionPeriod")
       private final @Nullable Output<Integer> failureRetentionPeriod;
 
-    public Output<Integer> getFailureRetentionPeriod() {
+    public Output<Integer> failureRetentionPeriod() {
         return this.failureRetentionPeriod == null ? Codegen.empty() : this.failureRetentionPeriod;
     }
 
@@ -73,7 +73,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="handler", required=true)
       private final Output<String> handler;
 
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler;
     }
 
@@ -84,7 +84,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -95,7 +95,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runConfig")
       private final @Nullable Output<CanaryRunConfigArgs> runConfig;
 
-    public Output<CanaryRunConfigArgs> getRunConfig() {
+    public Output<CanaryRunConfigArgs> runConfig() {
         return this.runConfig == null ? Codegen.empty() : this.runConfig;
     }
 
@@ -106,7 +106,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -117,7 +117,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -128,7 +128,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
@@ -139,7 +139,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Version")
       private final @Nullable Output<String> s3Version;
 
-    public Output<String> getS3Version() {
+    public Output<String> s3Version() {
         return this.s3Version == null ? Codegen.empty() : this.s3Version;
     }
 
@@ -150,7 +150,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<CanaryScheduleArgs> schedule;
 
-    public Output<CanaryScheduleArgs> getSchedule() {
+    public Output<CanaryScheduleArgs> schedule() {
         return this.schedule;
     }
 
@@ -161,7 +161,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startCanary")
       private final @Nullable Output<Boolean> startCanary;
 
-    public Output<Boolean> getStartCanary() {
+    public Output<Boolean> startCanary() {
         return this.startCanary == null ? Codegen.empty() : this.startCanary;
     }
 
@@ -172,7 +172,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successRetentionPeriod")
       private final @Nullable Output<Integer> successRetentionPeriod;
 
-    public Output<Integer> getSuccessRetentionPeriod() {
+    public Output<Integer> successRetentionPeriod() {
         return this.successRetentionPeriod == null ? Codegen.empty() : this.successRetentionPeriod;
     }
 
@@ -183,7 +183,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -194,7 +194,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<CanaryVpcConfigArgs> vpcConfig;
 
-    public Output<CanaryVpcConfigArgs> getVpcConfig() {
+    public Output<CanaryVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
@@ -205,7 +205,7 @@ public final class CanaryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zipFile")
       private final @Nullable Output<String> zipFile;
 
-    public Output<String> getZipFile() {
+    public Output<String> zipFile() {
         return this.zipFile == null ? Codegen.empty() : this.zipFile;
     }
 

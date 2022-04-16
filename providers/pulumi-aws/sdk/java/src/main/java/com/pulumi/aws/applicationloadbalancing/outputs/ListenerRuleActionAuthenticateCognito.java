@@ -78,56 +78,56 @@ public final class ListenerRuleActionAuthenticateCognito {
      * The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
     */
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
      * The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
     */
-    public Optional<String> getOnUnauthenticatedRequest() {
+    public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
      * The set of user claims to be requested from the IdP.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The name of the cookie used to maintain session information.
      * 
     */
-    public Optional<String> getSessionCookieName() {
+    public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
      * The maximum duration of the authentication session, in seconds.
      * 
     */
-    public Optional<Integer> getSessionTimeout() {
+    public Optional<Integer> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
      * The ARN of the Cognito user pool.
      * 
     */
-    public String getUserPoolArn() {
+    public String userPoolArn() {
         return this.userPoolArn;
     }
     /**
      * The ID of the Cognito user pool client.
      * 
     */
-    public String getUserPoolClientId() {
+    public String userPoolClientId() {
         return this.userPoolClientId;
     }
     /**
      * The domain prefix or fully-qualified domain name of the Cognito user pool.
      * 
     */
-    public String getUserPoolDomain() {
+    public String userPoolDomain() {
         return this.userPoolDomain;
     }
 

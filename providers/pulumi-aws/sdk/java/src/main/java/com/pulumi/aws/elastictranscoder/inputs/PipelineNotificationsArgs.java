@@ -22,7 +22,7 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
     @Import(name="completed")
       private final @Nullable Output<String> completed;
 
-    public Output<String> getCompleted() {
+    public Output<String> completed() {
         return this.completed == null ? Codegen.empty() : this.completed;
     }
 
@@ -33,7 +33,7 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
     @Import(name="error")
       private final @Nullable Output<String> error;
 
-    public Output<String> getError() {
+    public Output<String> error() {
         return this.error == null ? Codegen.empty() : this.error;
     }
 
@@ -44,7 +44,7 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
     @Import(name="progressing")
       private final @Nullable Output<String> progressing;
 
-    public Output<String> getProgressing() {
+    public Output<String> progressing() {
         return this.progressing == null ? Codegen.empty() : this.progressing;
     }
 
@@ -55,7 +55,7 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
     @Import(name="warning")
       private final @Nullable Output<String> warning;
 
-    public Output<String> getWarning() {
+    public Output<String> warning() {
         return this.warning == null ? Codegen.empty() : this.warning;
     }
 

@@ -25,7 +25,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attachmentsSources")
       private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachmentsSources;
 
-    public Output<List<DocumentAttachmentsSourceArgs>> getAttachmentsSources() {
+    public Output<List<DocumentAttachmentsSourceArgs>> attachmentsSources() {
         return this.attachmentsSources == null ? Codegen.empty() : this.attachmentsSources;
     }
 
@@ -36,7 +36,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -47,7 +47,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentFormat")
       private final @Nullable Output<String> documentFormat;
 
-    public Output<String> getDocumentFormat() {
+    public Output<String> documentFormat() {
         return this.documentFormat == null ? Codegen.empty() : this.documentFormat;
     }
 
@@ -58,7 +58,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentType", required=true)
       private final Output<String> documentType;
 
-    public Output<String> getDocumentType() {
+    public Output<String> documentType() {
         return this.documentType;
     }
 
@@ -69,7 +69,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<Map<String,String>> permissions;
 
-    public Output<Map<String,String>> getPermissions() {
+    public Output<Map<String,String>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -91,7 +91,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -102,7 +102,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
@@ -113,7 +113,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
+    public Output<String> versionName() {
         return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 

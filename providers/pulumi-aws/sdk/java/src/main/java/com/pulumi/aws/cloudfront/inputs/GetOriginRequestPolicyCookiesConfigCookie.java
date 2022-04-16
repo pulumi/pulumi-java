@@ -16,7 +16,7 @@ public final class GetOriginRequestPolicyCookiesConfigCookie extends com.pulumi.
     @Import(name="items", required=true)
       private final List<String> items;
 
-    public List<String> getItems() {
+    public List<String> items() {
         return this.items;
     }
 

@@ -40,7 +40,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The unique identifier (ID) of the policy that you want to attach to the target.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
     /**
@@ -54,7 +54,7 @@ public class PolicyAttachment extends com.pulumi.resources.CustomResource {
      * @return The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 

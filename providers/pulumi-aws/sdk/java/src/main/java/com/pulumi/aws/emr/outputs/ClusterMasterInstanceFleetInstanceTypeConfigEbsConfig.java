@@ -49,28 +49,28 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig {
      * Number of I/O operations per second (IOPS) that the volume supports.
      * 
     */
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * Volume size, in gibibytes (GiB).
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * Volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1).
      * 
     */
-    public Optional<Integer> getVolumesPerInstance() {
+    public Optional<Integer> volumesPerInstance() {
         return Optional.ofNullable(this.volumesPerInstance);
     }
 

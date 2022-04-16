@@ -54,35 +54,35 @@ public final class GetRouteTableAssociation {
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
      * 
     */
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
     /**
      * Whether the association is due to the main route table.
      * 
     */
-    public Boolean getMain() {
+    public Boolean main() {
         return this.main;
     }
     /**
      * Association ID.
      * 
     */
-    public String getRouteTableAssociationId() {
+    public String routeTableAssociationId() {
         return this.routeTableAssociationId;
     }
     /**
      * ID of the specific Route Table to retrieve.
      * 
     */
-    public String getRouteTableId() {
+    public String routeTableId() {
         return this.routeTableId;
     }
     /**
      * ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

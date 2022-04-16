@@ -29,7 +29,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
-    public Output<StageAccessLogSettingsArgs> getAccessLogSettings() {
+    public Output<StageAccessLogSettingsArgs> accessLogSettings() {
         return this.accessLogSettings == null ? Codegen.empty() : this.accessLogSettings;
     }
 
@@ -40,7 +40,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -51,7 +51,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeploy")
       private final @Nullable Output<Boolean> autoDeploy;
 
-    public Output<Boolean> getAutoDeploy() {
+    public Output<Boolean> autoDeploy() {
         return this.autoDeploy == null ? Codegen.empty() : this.autoDeploy;
     }
 
@@ -63,7 +63,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
-    public Output<String> getClientCertificateId() {
+    public Output<String> clientCertificateId() {
         return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
@@ -74,7 +74,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultRouteSettings")
       private final @Nullable Output<StageDefaultRouteSettingsArgs> defaultRouteSettings;
 
-    public Output<StageDefaultRouteSettingsArgs> getDefaultRouteSettings() {
+    public Output<StageDefaultRouteSettingsArgs> defaultRouteSettings() {
         return this.defaultRouteSettings == null ? Codegen.empty() : this.defaultRouteSettings;
     }
 
@@ -85,7 +85,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
@@ -96,7 +96,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -107,7 +107,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -118,7 +118,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeSettings")
       private final @Nullable Output<List<StageRouteSettingArgs>> routeSettings;
 
-    public Output<List<StageRouteSettingArgs>> getRouteSettings() {
+    public Output<List<StageRouteSettingArgs>> routeSettings() {
         return this.routeSettings == null ? Codegen.empty() : this.routeSettings;
     }
 
@@ -129,7 +129,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageVariables")
       private final @Nullable Output<Map<String,String>> stageVariables;
 
-    public Output<Map<String,String>> getStageVariables() {
+    public Output<Map<String,String>> stageVariables() {
         return this.stageVariables == null ? Codegen.empty() : this.stageVariables;
     }
 
@@ -140,7 +140,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

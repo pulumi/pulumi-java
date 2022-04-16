@@ -23,7 +23,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
@@ -56,7 +56,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion")
       private final @Nullable Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
+    public Output<String> functionVersion() {
         return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
     }
 
@@ -67,7 +67,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invokeArn")
       private final @Nullable Output<String> invokeArn;
 
-    public Output<String> getInvokeArn() {
+    public Output<String> invokeArn() {
         return this.invokeArn == null ? Codegen.empty() : this.invokeArn;
     }
 
@@ -78,7 +78,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class AliasState extends com.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
 
-    public Output<AliasRoutingConfigGetArgs> getRoutingConfig() {
+    public Output<AliasRoutingConfigGetArgs> routingConfig() {
         return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 

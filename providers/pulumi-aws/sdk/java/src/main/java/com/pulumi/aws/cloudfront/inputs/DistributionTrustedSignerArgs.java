@@ -24,7 +24,7 @@ public final class DistributionTrustedSignerArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionTrustedSignerArgs extends com.pulumi.resources.Re
     @Import(name="items")
       private final @Nullable Output<List<DistributionTrustedSignerItemArgs>> items;
 
-    public Output<List<DistributionTrustedSignerItemArgs>> getItems() {
+    public Output<List<DistributionTrustedSignerItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

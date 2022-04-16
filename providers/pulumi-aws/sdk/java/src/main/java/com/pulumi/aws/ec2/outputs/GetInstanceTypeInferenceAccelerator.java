@@ -24,13 +24,13 @@ public final class GetInstanceTypeInferenceAccelerator {
         this.name = name;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public String getManufacturer() {
+    public String manufacturer() {
         return this.manufacturer;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -23,7 +23,7 @@ public final class TaskSetScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 
@@ -34,7 +34,7 @@ public final class TaskSetScaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

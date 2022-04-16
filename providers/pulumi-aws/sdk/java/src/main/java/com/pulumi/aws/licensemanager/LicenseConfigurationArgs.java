@@ -26,7 +26,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="licenseCount")
       private final @Nullable Output<Integer> licenseCount;
 
-    public Output<Integer> getLicenseCount() {
+    public Output<Integer> licenseCount() {
         return this.licenseCount == null ? Codegen.empty() : this.licenseCount;
     }
 
@@ -48,7 +48,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="licenseCountHardLimit")
       private final @Nullable Output<Boolean> licenseCountHardLimit;
 
-    public Output<Boolean> getLicenseCountHardLimit() {
+    public Output<Boolean> licenseCountHardLimit() {
         return this.licenseCountHardLimit == null ? Codegen.empty() : this.licenseCountHardLimit;
     }
 
@@ -59,7 +59,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="licenseCountingType", required=true)
       private final Output<String> licenseCountingType;
 
-    public Output<String> getLicenseCountingType() {
+    public Output<String> licenseCountingType() {
         return this.licenseCountingType;
     }
 
@@ -70,7 +70,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="licenseRules")
       private final @Nullable Output<List<String>> licenseRules;
 
-    public Output<List<String>> getLicenseRules() {
+    public Output<List<String>> licenseRules() {
         return this.licenseRules == null ? Codegen.empty() : this.licenseRules;
     }
 
@@ -81,7 +81,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -92,7 +92,7 @@ public final class LicenseConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

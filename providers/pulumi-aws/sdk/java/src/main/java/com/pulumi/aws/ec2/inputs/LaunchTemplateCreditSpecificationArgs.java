@@ -22,7 +22,7 @@ public final class LaunchTemplateCreditSpecificationArgs extends com.pulumi.reso
     @Import(name="cpuCredits")
       private final @Nullable Output<String> cpuCredits;
 
-    public Output<String> getCpuCredits() {
+    public Output<String> cpuCredits() {
         return this.cpuCredits == null ? Codegen.empty() : this.cpuCredits;
     }
 

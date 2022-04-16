@@ -21,7 +21,7 @@ public final class ImageRecipeComponentGetArgs extends com.pulumi.resources.Reso
     @Import(name="componentArn", required=true)
       private final Output<String> componentArn;
 
-    public Output<String> getComponentArn() {
+    public Output<String> componentArn() {
         return this.componentArn;
     }
 

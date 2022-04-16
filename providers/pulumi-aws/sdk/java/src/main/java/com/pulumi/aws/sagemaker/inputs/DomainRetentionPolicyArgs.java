@@ -22,7 +22,7 @@ public final class DomainRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="homeEfsFileSystem")
       private final @Nullable Output<String> homeEfsFileSystem;
 
-    public Output<String> getHomeEfsFileSystem() {
+    public Output<String> homeEfsFileSystem() {
         return this.homeEfsFileSystem == null ? Codegen.empty() : this.homeEfsFileSystem;
     }
 

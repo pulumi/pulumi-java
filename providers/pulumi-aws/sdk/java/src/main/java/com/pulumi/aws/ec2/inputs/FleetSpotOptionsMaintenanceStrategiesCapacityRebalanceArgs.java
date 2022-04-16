@@ -22,7 +22,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs ex
     @Import(name="replacementStrategy")
       private final @Nullable Output<String> replacementStrategy;
 
-    public Output<String> getReplacementStrategy() {
+    public Output<String> replacementStrategy() {
         return this.replacementStrategy == null ? Codegen.empty() : this.replacementStrategy;
     }
 

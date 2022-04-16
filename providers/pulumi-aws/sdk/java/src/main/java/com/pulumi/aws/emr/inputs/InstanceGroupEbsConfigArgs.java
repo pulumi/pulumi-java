@@ -23,7 +23,7 @@ public final class InstanceGroupEbsConfigArgs extends com.pulumi.resources.Resou
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops == null ? Codegen.empty() : this.iops;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceGroupEbsConfigArgs extends com.pulumi.resources.Resou
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceGroupEbsConfigArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceGroupEbsConfigArgs extends com.pulumi.resources.Resou
     @Import(name="volumesPerInstance")
       private final @Nullable Output<Integer> volumesPerInstance;
 
-    public Output<Integer> getVolumesPerInstance() {
+    public Output<Integer> volumesPerInstance() {
         return this.volumesPerInstance == null ? Codegen.empty() : this.volumesPerInstance;
     }
 

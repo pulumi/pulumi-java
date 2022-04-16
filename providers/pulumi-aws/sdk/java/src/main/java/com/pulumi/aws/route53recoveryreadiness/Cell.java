@@ -42,7 +42,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return ARN of the cell
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return Unique name describing the cell.
      * 
      */
-    public Output<String> getCellName() {
+    public Output<String> cellName() {
         return this.cellName;
     }
     /**
@@ -70,7 +70,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return List of cell arns to add as nested fault domains within this cell.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCells() {
+    public Output</* @Nullable */ List<String>> cells() {
         return this.cells;
     }
     /**
@@ -84,7 +84,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return List of readiness scopes (recovery groups or cells) that contain this cell.
      * 
      */
-    public Output<List<String>> getParentReadinessScopes() {
+    public Output<List<String>> parentReadinessScopes() {
         return this.parentReadinessScopes;
     }
     /**
@@ -98,7 +98,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -112,7 +112,7 @@ public class Cell extends com.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

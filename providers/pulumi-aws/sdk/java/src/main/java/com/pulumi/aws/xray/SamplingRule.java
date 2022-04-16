@@ -43,7 +43,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return The ARN of the sampling rule.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches attributes derived from the request.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAttributes() {
+    public Output</* @Nullable */ Map<String,String>> attributes() {
         return this.attributes;
     }
     /**
@@ -71,7 +71,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
      */
-    public Output<Double> getFixedRate() {
+    public Output<Double> fixedRate() {
         return this.fixedRate;
     }
     /**
@@ -85,7 +85,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches the hostname from a request URL.
      * 
      */
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
     /**
@@ -99,7 +99,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches the HTTP method of a request.
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -113,7 +113,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return The priority of the sampling rule.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -127,7 +127,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
      */
-    public Output<Integer> getReservoirSize() {
+    public Output<Integer> reservoirSize() {
         return this.reservoirSize;
     }
     /**
@@ -141,7 +141,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches the ARN of the AWS resource on which the service runs.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -155,7 +155,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return The name of the sampling rule.
      * 
      */
-    public Output</* @Nullable */ String> getRuleName() {
+    public Output</* @Nullable */ String> ruleName() {
         return this.ruleName;
     }
     /**
@@ -169,7 +169,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches the `name` that the service uses to identify itself in segments.
      * 
      */
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
     /**
@@ -183,7 +183,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches the `origin` that the service uses to identify its type in segments.
      * 
      */
-    public Output<String> getServiceType() {
+    public Output<String> serviceType() {
         return this.serviceType;
     }
     /**
@@ -197,7 +197,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -211,7 +211,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -225,7 +225,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return Matches the path from a request URL.
      * 
      */
-    public Output<String> getUrlPath() {
+    public Output<String> urlPath() {
         return this.urlPath;
     }
     /**
@@ -239,7 +239,7 @@ public class SamplingRule extends com.pulumi.resources.CustomResource {
      * @return The version of the sampling rule format (`1` )
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

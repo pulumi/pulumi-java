@@ -22,7 +22,7 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dbPassword")
       private final @Nullable Output<String> dbPassword;
 
-    public Output<String> getDbPassword() {
+    public Output<String> dbPassword() {
         return this.dbPassword == null ? Codegen.empty() : this.dbPassword;
     }
 
@@ -33,7 +33,7 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
     @Import(name="dbUser")
       private final @Nullable Output<String> dbUser;
 
-    public Output<String> getDbUser() {
+    public Output<String> dbUser() {
         return this.dbUser == null ? Codegen.empty() : this.dbUser;
     }
 
@@ -44,7 +44,7 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
     @Import(name="rdsDbInstanceArn")
       private final @Nullable Output<String> rdsDbInstanceArn;
 
-    public Output<String> getRdsDbInstanceArn() {
+    public Output<String> rdsDbInstanceArn() {
         return this.rdsDbInstanceArn == null ? Codegen.empty() : this.rdsDbInstanceArn;
     }
 
@@ -55,7 +55,7 @@ public final class RdsDbInstanceState extends com.pulumi.resources.ResourceArgs 
     @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 

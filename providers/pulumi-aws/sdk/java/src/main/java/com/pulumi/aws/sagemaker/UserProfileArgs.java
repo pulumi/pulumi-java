@@ -24,7 +24,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainId", required=true)
       private final Output<String> domainId;
 
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
@@ -35,7 +35,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnUserIdentifier")
       private final @Nullable Output<String> singleSignOnUserIdentifier;
 
-    public Output<String> getSingleSignOnUserIdentifier() {
+    public Output<String> singleSignOnUserIdentifier() {
         return this.singleSignOnUserIdentifier == null ? Codegen.empty() : this.singleSignOnUserIdentifier;
     }
 
@@ -46,7 +46,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnUserValue")
       private final @Nullable Output<String> singleSignOnUserValue;
 
-    public Output<String> getSingleSignOnUserValue() {
+    public Output<String> singleSignOnUserValue() {
         return this.singleSignOnUserValue == null ? Codegen.empty() : this.singleSignOnUserValue;
     }
 
@@ -57,7 +57,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName", required=true)
       private final Output<String> userProfileName;
 
-    public Output<String> getUserProfileName() {
+    public Output<String> userProfileName() {
         return this.userProfileName;
     }
 
@@ -79,7 +79,7 @@ public final class UserProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userSettings")
       private final @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
-    public Output<UserProfileUserSettingsArgs> getUserSettings() {
+    public Output<UserProfileUserSettingsArgs> userSettings() {
         return this.userSettings == null ? Codegen.empty() : this.userSettings;
     }
 

@@ -26,7 +26,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
     @Import(name="rulesSourceList")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList;
 
-    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> getRulesSourceList() {
+    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList() {
         return this.rulesSourceList == null ? Codegen.empty() : this.rulesSourceList;
     }
 
@@ -37,7 +37,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
     @Import(name="rulesString")
       private final @Nullable Output<String> rulesString;
 
-    public Output<String> getRulesString() {
+    public Output<String> rulesString() {
         return this.rulesString == null ? Codegen.empty() : this.rulesString;
     }
 
@@ -48,7 +48,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
     @Import(name="statefulRules")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> getStatefulRules() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules() {
         return this.statefulRules == null ? Codegen.empty() : this.statefulRules;
     }
 
@@ -59,7 +59,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
     @Import(name="statelessRulesAndCustomActions")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions() {
         return this.statelessRulesAndCustomActions == null ? Codegen.empty() : this.statelessRulesAndCustomActions;
     }
 

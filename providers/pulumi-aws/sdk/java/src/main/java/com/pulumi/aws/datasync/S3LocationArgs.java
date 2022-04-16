@@ -25,7 +25,7 @@ public final class S3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentArns")
       private final @Nullable Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns == null ? Codegen.empty() : this.agentArns;
     }
 
@@ -36,7 +36,7 @@ public final class S3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
 
-    public Output<String> getS3BucketArn() {
+    public Output<String> s3BucketArn() {
         return this.s3BucketArn;
     }
 
@@ -47,7 +47,7 @@ public final class S3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3Config", required=true)
       private final Output<S3LocationS3ConfigArgs> s3Config;
 
-    public Output<S3LocationS3ConfigArgs> getS3Config() {
+    public Output<S3LocationS3ConfigArgs> s3Config() {
         return this.s3Config;
     }
 
@@ -58,7 +58,7 @@ public final class S3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="s3StorageClass")
       private final @Nullable Output<String> s3StorageClass;
 
-    public Output<String> getS3StorageClass() {
+    public Output<String> s3StorageClass() {
         return this.s3StorageClass == null ? Codegen.empty() : this.s3StorageClass;
     }
 
@@ -69,7 +69,7 @@ public final class S3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
 
@@ -80,7 +80,7 @@ public final class S3LocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

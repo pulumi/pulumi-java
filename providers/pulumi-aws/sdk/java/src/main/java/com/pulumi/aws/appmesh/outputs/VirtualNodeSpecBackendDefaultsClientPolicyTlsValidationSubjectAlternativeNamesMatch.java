@@ -25,7 +25,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
      * The values sent must match the specified values exactly.
      * 
     */
-    public List<String> getExacts() {
+    public List<String> exacts() {
         return this.exacts;
     }
 

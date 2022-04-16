@@ -36,7 +36,7 @@ public class ManagedPrefixListEntry extends com.pulumi.resources.CustomResource 
      * @return CIDR block of this entry.
      * 
      */
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
     /**
@@ -50,7 +50,7 @@ public class ManagedPrefixListEntry extends com.pulumi.resources.CustomResource 
      * @return Description of this entry. Due to API limitations, updating only the description of an entry requires recreating the entry.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -64,7 +64,7 @@ public class ManagedPrefixListEntry extends com.pulumi.resources.CustomResource 
      * @return CIDR block of this entry.
      * 
      */
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
 

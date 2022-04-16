@@ -34,14 +34,14 @@ public final class DataSourceElasticsearchConfig {
      * HTTP URL.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

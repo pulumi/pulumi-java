@@ -26,7 +26,7 @@ public final class VirtualGatewaySpecLoggingAccessLog {
      * The file object to send virtual gateway access logs to.
      * 
     */
-    public Optional<VirtualGatewaySpecLoggingAccessLogFile> getFile() {
+    public Optional<VirtualGatewaySpecLoggingAccessLogFile> file() {
         return Optional.ofNullable(this.file);
     }
 

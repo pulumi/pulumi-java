@@ -32,14 +32,14 @@ public final class InsightFiltersResourceAwsIamAccessKeyUserName {
      * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
      * 
     */
-    public String getComparison() {
+    public String comparison() {
         return this.comparison;
     }
     /**
      * A date range value for the date filter, provided as an Integer.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

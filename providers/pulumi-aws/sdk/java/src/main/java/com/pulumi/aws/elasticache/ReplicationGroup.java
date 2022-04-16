@@ -64,7 +64,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
      * 
      */
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -78,7 +78,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return ARN of the created ElastiCache Replication Group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -92,7 +92,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Whether to enable encryption at rest.
      * 
      */
-    public Output<Boolean> getAtRestEncryptionEnabled() {
+    public Output<Boolean> atRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled;
     }
     /**
@@ -106,7 +106,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
      * 
      */
-    public Output</* @Nullable */ String> getAuthToken() {
+    public Output</* @Nullable */ String> authToken() {
         return this.authToken;
     }
     /**
@@ -120,7 +120,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoMinorVersionUpgrade() {
+    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade;
     }
     /**
@@ -134,7 +134,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutomaticFailoverEnabled() {
+    public Output</* @Nullable */ Boolean> automaticFailoverEnabled() {
         return this.automaticFailoverEnabled;
     }
     /**
@@ -148,7 +148,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return List of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAvailabilityZones() {
+    public Output</* @Nullable */ List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -162,7 +162,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Indicates if cluster mode is enabled.
      * 
      */
-    public Output<Boolean> getClusterEnabled() {
+    public Output<Boolean> clusterEnabled() {
         return this.clusterEnabled;
     }
     /**
@@ -176,7 +176,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
-    public Output<ReplicationGroupClusterMode> getClusterMode() {
+    public Output<ReplicationGroupClusterMode> clusterMode() {
         return this.clusterMode;
     }
     /**
@@ -190,7 +190,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Address of the replication group configuration endpoint when cluster mode is enabled.
      * 
      */
-    public Output<String> getConfigurationEndpointAddress() {
+    public Output<String> configurationEndpointAddress() {
         return this.configurationEndpointAddress;
     }
     /**
@@ -204,7 +204,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to `true` when using r6gd nodes.
      * 
      */
-    public Output<Boolean> getDataTieringEnabled() {
+    public Output<Boolean> dataTieringEnabled() {
         return this.dataTieringEnabled;
     }
     /**
@@ -218,7 +218,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
      * 
      */
-    public Output</* @Nullable */ String> getEngine() {
+    public Output</* @Nullable */ String> engine() {
         return this.engine;
     }
     /**
@@ -232,7 +232,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -246,7 +246,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Running version of the cache engine.
      * 
      */
-    public Output<String> getEngineVersionActual() {
+    public Output<String> engineVersionActual() {
         return this.engineVersionActual;
     }
     /**
@@ -260,7 +260,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> getFinalSnapshotIdentifier() {
+    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier;
     }
     /**
@@ -274,7 +274,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
      * 
      */
-    public Output<String> getGlobalReplicationGroupId() {
+    public Output<String> globalReplicationGroupId() {
         return this.globalReplicationGroupId;
     }
     /**
@@ -288,7 +288,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -302,7 +302,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
      * 
      */
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -316,7 +316,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Identifiers of all the nodes that are part of this replication group.
      * 
      */
-    public Output<List<String>> getMemberClusters() {
+    public Output<List<String>> memberClusters() {
         return this.memberClusters;
     }
     /**
@@ -330,7 +330,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMultiAzEnabled() {
+    public Output</* @Nullable */ Boolean> multiAzEnabled() {
         return this.multiAzEnabled;
     }
     /**
@@ -344,7 +344,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
      * 
      */
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType;
     }
     /**
@@ -358,7 +358,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
      * 
      */
-    public Output</* @Nullable */ String> getNotificationTopicArn() {
+    public Output</* @Nullable */ String> notificationTopicArn() {
         return this.notificationTopicArn;
     }
     /**
@@ -372,7 +372,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
      * 
      */
-    public Output<Integer> getNumberCacheClusters() {
+    public Output<Integer> numberCacheClusters() {
         return this.numberCacheClusters;
     }
     /**
@@ -386,7 +386,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName;
     }
     /**
@@ -400,7 +400,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -414,7 +414,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return (Redis only) Address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
      * 
      */
-    public Output<String> getPrimaryEndpointAddress() {
+    public Output<String> primaryEndpointAddress() {
         return this.primaryEndpointAddress;
     }
     /**
@@ -428,7 +428,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return (Redis only) Address of the endpoint for the reader node in the replication group, if the cluster mode is disabled.
      * 
      */
-    public Output<String> getReaderEndpointAddress() {
+    public Output<String> readerEndpointAddress() {
         return this.readerEndpointAddress;
     }
     /**
@@ -442,7 +442,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return User-created description for the replication group.
      * 
      */
-    public Output<String> getReplicationGroupDescription() {
+    public Output<String> replicationGroupDescription() {
         return this.replicationGroupDescription;
     }
     /**
@@ -456,7 +456,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Replication group identifier. This parameter is stored as a lowercase string.
      * 
      */
-    public Output<String> getReplicationGroupId() {
+    public Output<String> replicationGroupId() {
         return this.replicationGroupId;
     }
     /**
@@ -470,7 +470,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
      * 
      */
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -484,7 +484,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return List of cache security group names to associate with this replication group.
      * 
      */
-    public Output<List<String>> getSecurityGroupNames() {
+    public Output<List<String>> securityGroupNames() {
         return this.securityGroupNames;
     }
     /**
@@ -498,7 +498,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSnapshotArns() {
+    public Output</* @Nullable */ List<String>> snapshotArns() {
         return this.snapshotArns;
     }
     /**
@@ -512,7 +512,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotName() {
+    public Output</* @Nullable */ String> snapshotName() {
         return this.snapshotName;
     }
     /**
@@ -526,7 +526,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of `snapshot_retention_limit` is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
      * 
      */
-    public Output</* @Nullable */ Integer> getSnapshotRetentionLimit() {
+    public Output</* @Nullable */ Integer> snapshotRetentionLimit() {
         return this.snapshotRetentionLimit;
     }
     /**
@@ -540,7 +540,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
      * 
      */
-    public Output<String> getSnapshotWindow() {
+    public Output<String> snapshotWindow() {
         return this.snapshotWindow;
     }
     /**
@@ -554,19 +554,19 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the cache subnet group to be used for the replication group.
      * 
      */
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -580,7 +580,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return Whether to enable encryption in transit.
      * 
      */
-    public Output<Boolean> getTransitEncryptionEnabled() {
+    public Output<Boolean> transitEncryptionEnabled() {
         return this.transitEncryptionEnabled;
     }
     /**
@@ -594,7 +594,7 @@ public class ReplicationGroup extends com.pulumi.resources.CustomResource {
      * @return User Group ID to associate with the replication group. Only a maximum of one (1) user group ID is valid. **NOTE:** This argument _is_ a set because the AWS specification allows for multiple IDs. However, in practice, AWS only allows a maximum size of one.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserGroupIds() {
+    public Output</* @Nullable */ List<String>> userGroupIds() {
         return this.userGroupIds;
     }
 

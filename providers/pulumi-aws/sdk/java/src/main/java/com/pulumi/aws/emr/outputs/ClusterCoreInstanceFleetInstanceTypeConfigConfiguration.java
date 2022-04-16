@@ -36,14 +36,14 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfiguration {
      * Classification within a configuration.
      * 
     */
-    public Optional<String> getClassification() {
+    public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
     /**
      * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
     */
-    public Map<String,Object> getProperties() {
+    public Map<String,Object> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 

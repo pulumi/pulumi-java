@@ -23,7 +23,7 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -34,7 +34,7 @@ public final class BotAssociationState extends com.pulumi.resources.ResourceArgs
     @Import(name="lexBot")
       private final @Nullable Output<BotAssociationLexBotGetArgs> lexBot;
 
-    public Output<BotAssociationLexBotGetArgs> getLexBot() {
+    public Output<BotAssociationLexBotGetArgs> lexBot() {
         return this.lexBot == null ? Codegen.empty() : this.lexBot;
     }
 

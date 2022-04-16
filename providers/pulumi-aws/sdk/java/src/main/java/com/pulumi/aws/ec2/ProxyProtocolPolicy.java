@@ -35,7 +35,7 @@ public class ProxyProtocolPolicy extends com.pulumi.resources.CustomResource {
      * should be applied. This can be specified if the protocol is SSL or TCP.
      * 
      */
-    public Output<List<String>> getInstancePorts() {
+    public Output<List<String>> instancePorts() {
         return this.instancePorts;
     }
     /**
@@ -51,7 +51,7 @@ public class ProxyProtocolPolicy extends com.pulumi.resources.CustomResource {
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
 

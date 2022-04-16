@@ -35,14 +35,14 @@ public final class BrokerConfiguration {
      * The Configuration ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Revision of the Configuration.
      * 
     */
-    public Optional<Integer> getRevision() {
+    public Optional<Integer> revision() {
         return Optional.ofNullable(this.revision);
     }
 

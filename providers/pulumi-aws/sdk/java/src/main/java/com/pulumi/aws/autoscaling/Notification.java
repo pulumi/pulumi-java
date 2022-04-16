@@ -35,7 +35,7 @@ public class Notification extends com.pulumi.resources.CustomResource {
      * @return A list of AutoScaling Group Names
      * 
      */
-    public Output<List<String>> getGroupNames() {
+    public Output<List<String>> groupNames() {
         return this.groupNames;
     }
     /**
@@ -51,7 +51,7 @@ public class Notification extends com.pulumi.resources.CustomResource {
      * notifications. Acceptable values are documented [in the AWS documentation here](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html)
      * 
      */
-    public Output<List<String>> getNotifications() {
+    public Output<List<String>> notifications() {
         return this.notifications;
     }
     /**
@@ -65,7 +65,7 @@ public class Notification extends com.pulumi.resources.CustomResource {
      * @return The Topic ARN for notifications to be sent through
      * 
      */
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 

@@ -16,21 +16,21 @@ public final class GetConnectionPhysicalConnectionRequirement extends com.pulumi
     @Import(name="availabilityZone", required=true)
       private final String availabilityZone;
 
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
 
     @Import(name="securityGroupIdLists", required=true)
       private final List<String> securityGroupIdLists;
 
-    public List<String> getSecurityGroupIdLists() {
+    public List<String> securityGroupIdLists() {
         return this.securityGroupIdLists;
     }
 
     @Import(name="subnetId", required=true)
       private final String subnetId;
 
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

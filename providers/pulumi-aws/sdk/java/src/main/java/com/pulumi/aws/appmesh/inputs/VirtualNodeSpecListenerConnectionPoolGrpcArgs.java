@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcArgs extends com.pul
     @Import(name="maxRequests", required=true)
       private final Output<Integer> maxRequests;
 
-    public Output<Integer> getMaxRequests() {
+    public Output<Integer> maxRequests() {
         return this.maxRequests;
     }
 

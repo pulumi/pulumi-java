@@ -21,7 +21,7 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -32,7 +32,7 @@ public final class SnapshotCreateVolumePermissionArgs extends com.pulumi.resourc
     @Import(name="snapshotId", required=true)
       private final Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 

@@ -49,28 +49,28 @@ public final class GetLaunchPathsSummary {
      * Block for constraints on the portfolio-product relationship. See details below.
      * 
     */
-    public List<GetLaunchPathsSummaryConstraintSummary> getConstraintSummaries() {
+    public List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries() {
         return this.constraintSummaries;
     }
     /**
      * Name of the portfolio to which the path was assigned.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Identifier of the product path.
      * 
     */
-    public String getPathId() {
+    public String pathId() {
         return this.pathId;
     }
     /**
      * Tags associated with this product path.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

@@ -29,7 +29,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="customizedLoadMetricSpecification")
       private final @Nullable Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification;
 
-    public Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> getCustomizedLoadMetricSpecification() {
+    public Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification() {
         return this.customizedLoadMetricSpecification == null ? Codegen.empty() : this.customizedLoadMetricSpecification;
     }
 
@@ -40,7 +40,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="disableDynamicScaling")
       private final @Nullable Output<Boolean> disableDynamicScaling;
 
-    public Output<Boolean> getDisableDynamicScaling() {
+    public Output<Boolean> disableDynamicScaling() {
         return this.disableDynamicScaling == null ? Codegen.empty() : this.disableDynamicScaling;
     }
 
@@ -51,7 +51,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="maxCapacity", required=true)
       private final Output<Integer> maxCapacity;
 
-    public Output<Integer> getMaxCapacity() {
+    public Output<Integer> maxCapacity() {
         return this.maxCapacity;
     }
 
@@ -62,7 +62,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="minCapacity", required=true)
       private final Output<Integer> minCapacity;
 
-    public Output<Integer> getMinCapacity() {
+    public Output<Integer> minCapacity() {
         return this.minCapacity;
     }
 
@@ -74,7 +74,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predefinedLoadMetricSpecification")
       private final @Nullable Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
 
-    public Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> getPredefinedLoadMetricSpecification() {
+    public Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification() {
         return this.predefinedLoadMetricSpecification == null ? Codegen.empty() : this.predefinedLoadMetricSpecification;
     }
 
@@ -86,7 +86,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predictiveScalingMaxCapacityBehavior")
       private final @Nullable Output<String> predictiveScalingMaxCapacityBehavior;
 
-    public Output<String> getPredictiveScalingMaxCapacityBehavior() {
+    public Output<String> predictiveScalingMaxCapacityBehavior() {
         return this.predictiveScalingMaxCapacityBehavior == null ? Codegen.empty() : this.predictiveScalingMaxCapacityBehavior;
     }
 
@@ -97,7 +97,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predictiveScalingMaxCapacityBuffer")
       private final @Nullable Output<Integer> predictiveScalingMaxCapacityBuffer;
 
-    public Output<Integer> getPredictiveScalingMaxCapacityBuffer() {
+    public Output<Integer> predictiveScalingMaxCapacityBuffer() {
         return this.predictiveScalingMaxCapacityBuffer == null ? Codegen.empty() : this.predictiveScalingMaxCapacityBuffer;
     }
 
@@ -108,7 +108,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="predictiveScalingMode")
       private final @Nullable Output<String> predictiveScalingMode;
 
-    public Output<String> getPredictiveScalingMode() {
+    public Output<String> predictiveScalingMode() {
         return this.predictiveScalingMode == null ? Codegen.empty() : this.predictiveScalingMode;
     }
 
@@ -119,7 +119,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -130,7 +130,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="scalableDimension", required=true)
       private final Output<String> scalableDimension;
 
-    public Output<String> getScalableDimension() {
+    public Output<String> scalableDimension() {
         return this.scalableDimension;
     }
 
@@ -141,7 +141,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="scalingPolicyUpdateBehavior")
       private final @Nullable Output<String> scalingPolicyUpdateBehavior;
 
-    public Output<String> getScalingPolicyUpdateBehavior() {
+    public Output<String> scalingPolicyUpdateBehavior() {
         return this.scalingPolicyUpdateBehavior == null ? Codegen.empty() : this.scalingPolicyUpdateBehavior;
     }
 
@@ -152,7 +152,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="scheduledActionBufferTime")
       private final @Nullable Output<Integer> scheduledActionBufferTime;
 
-    public Output<Integer> getScheduledActionBufferTime() {
+    public Output<Integer> scheduledActionBufferTime() {
         return this.scheduledActionBufferTime == null ? Codegen.empty() : this.scheduledActionBufferTime;
     }
 
@@ -163,7 +163,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="serviceNamespace", required=true)
       private final Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace;
     }
 
@@ -175,7 +175,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends com.pulumi.resou
     @Import(name="targetTrackingConfigurations", required=true)
       private final Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations;
 
-    public Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> getTargetTrackingConfigurations() {
+    public Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations() {
         return this.targetTrackingConfigurations;
     }
 

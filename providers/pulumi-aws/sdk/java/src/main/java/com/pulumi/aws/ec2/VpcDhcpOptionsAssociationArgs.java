@@ -21,7 +21,7 @@ public final class VpcDhcpOptionsAssociationArgs extends com.pulumi.resources.Re
     @Import(name="dhcpOptionsId", required=true)
       private final Output<String> dhcpOptionsId;
 
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
 
@@ -32,7 +32,7 @@ public final class VpcDhcpOptionsAssociationArgs extends com.pulumi.resources.Re
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

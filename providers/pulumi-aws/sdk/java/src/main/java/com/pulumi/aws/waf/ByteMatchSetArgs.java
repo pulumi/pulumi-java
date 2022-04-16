@@ -26,7 +26,7 @@ public final class ByteMatchSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="byteMatchTuples")
       private final @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
-    public Output<List<ByteMatchSetByteMatchTupleArgs>> getByteMatchTuples() {
+    public Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples() {
         return this.byteMatchTuples == null ? Codegen.empty() : this.byteMatchTuples;
     }
 
@@ -37,7 +37,7 @@ public final class ByteMatchSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

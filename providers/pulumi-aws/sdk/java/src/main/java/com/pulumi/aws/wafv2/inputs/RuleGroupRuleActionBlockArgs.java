@@ -22,7 +22,7 @@ public final class RuleGroupRuleActionBlockArgs extends com.pulumi.resources.Res
     @Import(name="customResponse")
       private final @Nullable Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse;
 
-    public Output<RuleGroupRuleActionBlockCustomResponseArgs> getCustomResponse() {
+    public Output<RuleGroupRuleActionBlockCustomResponseArgs> customResponse() {
         return this.customResponse == null ? Codegen.empty() : this.customResponse;
     }
 

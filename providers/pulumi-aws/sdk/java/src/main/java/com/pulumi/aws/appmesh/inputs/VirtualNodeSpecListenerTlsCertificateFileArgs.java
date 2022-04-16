@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsCertificateFileArgs extends com.pul
     @Import(name="certificateChain", required=true)
       private final Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain;
     }
 
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecListenerTlsCertificateFileArgs extends com.pul
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 

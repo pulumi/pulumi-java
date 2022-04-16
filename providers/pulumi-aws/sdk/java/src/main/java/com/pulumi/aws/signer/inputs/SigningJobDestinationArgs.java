@@ -21,7 +21,7 @@ public final class SigningJobDestinationArgs extends com.pulumi.resources.Resour
     @Import(name="s3", required=true)
       private final Output<SigningJobDestinationS3Args> s3;
 
-    public Output<SigningJobDestinationS3Args> getS3() {
+    public Output<SigningJobDestinationS3Args> s3() {
         return this.s3;
     }
 

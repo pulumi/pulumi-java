@@ -25,7 +25,7 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="amiDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> amiDistributionConfiguration;
 
-    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> getAmiDistributionConfiguration() {
+    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> amiDistributionConfiguration() {
         return this.amiDistributionConfiguration == null ? Codegen.empty() : this.amiDistributionConfiguration;
     }
 
@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="containerDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> containerDistributionConfiguration;
 
-    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> getContainerDistributionConfiguration() {
+    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> containerDistributionConfiguration() {
         return this.containerDistributionConfiguration == null ? Codegen.empty() : this.containerDistributionConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="licenseConfigurationArns")
       private final @Nullable Output<List<String>> licenseConfigurationArns;
 
-    public Output<List<String>> getLicenseConfigurationArns() {
+    public Output<List<String>> licenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? Codegen.empty() : this.licenseConfigurationArns;
     }
 
@@ -58,7 +58,7 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

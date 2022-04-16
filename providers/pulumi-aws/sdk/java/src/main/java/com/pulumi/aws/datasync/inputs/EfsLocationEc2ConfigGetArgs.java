@@ -22,7 +22,7 @@ public final class EfsLocationEc2ConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
 
@@ -33,7 +33,7 @@ public final class EfsLocationEc2ConfigGetArgs extends com.pulumi.resources.Reso
     @Import(name="subnetArn", required=true)
       private final Output<String> subnetArn;
 
-    public Output<String> getSubnetArn() {
+    public Output<String> subnetArn() {
         return this.subnetArn;
     }
 

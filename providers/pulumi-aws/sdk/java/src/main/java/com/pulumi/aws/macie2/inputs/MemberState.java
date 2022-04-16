@@ -24,7 +24,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -35,7 +35,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="administratorAccountId")
       private final @Nullable Output<String> administratorAccountId;
 
-    public Output<String> getAdministratorAccountId() {
+    public Output<String> administratorAccountId() {
         return this.administratorAccountId == null ? Codegen.empty() : this.administratorAccountId;
     }
 
@@ -46,7 +46,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -57,7 +57,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -68,7 +68,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitationDisableEmailNotification")
       private final @Nullable Output<String> invitationDisableEmailNotification;
 
-    public Output<String> getInvitationDisableEmailNotification() {
+    public Output<String> invitationDisableEmailNotification() {
         return this.invitationDisableEmailNotification == null ? Codegen.empty() : this.invitationDisableEmailNotification;
     }
 
@@ -79,7 +79,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitationMessage")
       private final @Nullable Output<String> invitationMessage;
 
-    public Output<String> getInvitationMessage() {
+    public Output<String> invitationMessage() {
         return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
     }
 
@@ -90,7 +90,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> getInvite() {
+    public Output<Boolean> invite() {
         return this.invite == null ? Codegen.empty() : this.invite;
     }
 
@@ -101,14 +101,14 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="invitedAt")
       private final @Nullable Output<String> invitedAt;
 
-    public Output<String> getInvitedAt() {
+    public Output<String> invitedAt() {
         return this.invitedAt == null ? Codegen.empty() : this.invitedAt;
     }
 
     @Import(name="masterAccountId")
       private final @Nullable Output<String> masterAccountId;
 
-    public Output<String> getMasterAccountId() {
+    public Output<String> masterAccountId() {
         return this.masterAccountId == null ? Codegen.empty() : this.masterAccountId;
     }
 
@@ -119,7 +119,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationshipStatus")
       private final @Nullable Output<String> relationshipStatus;
 
-    public Output<String> getRelationshipStatus() {
+    public Output<String> relationshipStatus() {
         return this.relationshipStatus == null ? Codegen.empty() : this.relationshipStatus;
     }
 
@@ -130,7 +130,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -141,14 +141,14 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -159,7 +159,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;
 
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 

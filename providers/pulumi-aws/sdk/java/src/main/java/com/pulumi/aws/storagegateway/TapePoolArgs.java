@@ -24,7 +24,7 @@ public final class TapePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -35,7 +35,7 @@ public final class TapePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionLockTimeInDays")
       private final @Nullable Output<Integer> retentionLockTimeInDays;
 
-    public Output<Integer> getRetentionLockTimeInDays() {
+    public Output<Integer> retentionLockTimeInDays() {
         return this.retentionLockTimeInDays == null ? Codegen.empty() : this.retentionLockTimeInDays;
     }
 
@@ -46,7 +46,7 @@ public final class TapePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionLockType")
       private final @Nullable Output<String> retentionLockType;
 
-    public Output<String> getRetentionLockType() {
+    public Output<String> retentionLockType() {
         return this.retentionLockType == null ? Codegen.empty() : this.retentionLockType;
     }
 
@@ -57,7 +57,7 @@ public final class TapePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClass", required=true)
       private final Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
 
@@ -68,7 +68,7 @@ public final class TapePoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

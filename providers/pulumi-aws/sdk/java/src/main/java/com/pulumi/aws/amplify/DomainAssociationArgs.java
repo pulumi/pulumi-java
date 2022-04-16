@@ -25,7 +25,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -36,7 +36,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -47,7 +47,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="subDomains", required=true)
       private final Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
-    public Output<List<DomainAssociationSubDomainArgs>> getSubDomains() {
+    public Output<List<DomainAssociationSubDomainArgs>> subDomains() {
         return this.subDomains;
     }
 
@@ -58,7 +58,7 @@ public final class DomainAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="waitForVerification")
       private final @Nullable Output<Boolean> waitForVerification;
 
-    public Output<Boolean> getWaitForVerification() {
+    public Output<Boolean> waitForVerification() {
         return this.waitForVerification == null ? Codegen.empty() : this.waitForVerification;
     }
 

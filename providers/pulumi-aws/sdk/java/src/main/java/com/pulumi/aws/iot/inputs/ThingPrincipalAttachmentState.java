@@ -22,7 +22,7 @@ public final class ThingPrincipalAttachmentState extends com.pulumi.resources.Re
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 
@@ -33,7 +33,7 @@ public final class ThingPrincipalAttachmentState extends com.pulumi.resources.Re
     @Import(name="thing")
       private final @Nullable Output<String> thing;
 
-    public Output<String> getThing() {
+    public Output<String> thing() {
         return this.thing == null ? Codegen.empty() : this.thing;
     }
 

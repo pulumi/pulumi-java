@@ -43,7 +43,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DMS Event Subscription.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Whether the event subscription should be enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -71,7 +71,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
      * 
      */
-    public Output<List<String>> getEventCategories() {
+    public Output<List<String>> eventCategories() {
         return this.eventCategories;
     }
     /**
@@ -85,7 +85,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Name of event subscription.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return SNS topic arn to send events on.
      * 
      */
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
     /**
@@ -113,7 +113,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Ids of sources to listen to.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSourceIds() {
+    public Output</* @Nullable */ List<String>> sourceIds() {
         return this.sourceIds;
     }
     /**
@@ -127,7 +127,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Type of source for events. Valid values: `replication-instance` or `replication-task`
      * 
      */
-    public Output</* @Nullable */ String> getSourceType() {
+    public Output</* @Nullable */ String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -141,7 +141,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +155,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

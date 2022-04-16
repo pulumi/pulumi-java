@@ -21,7 +21,7 @@ public final class ClusterLoggingInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="brokerLogs", required=true)
       private final Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs;
 
-    public Output<ClusterLoggingInfoBrokerLogsArgs> getBrokerLogs() {
+    public Output<ClusterLoggingInfoBrokerLogsArgs> brokerLogs() {
         return this.brokerLogs;
     }
 

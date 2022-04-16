@@ -21,7 +21,7 @@ public final class ClassifierJsonClassifierArgs extends com.pulumi.resources.Res
     @Import(name="jsonPath", required=true)
       private final Output<String> jsonPath;
 
-    public Output<String> getJsonPath() {
+    public Output<String> jsonPath() {
         return this.jsonPath;
     }
 

@@ -40,7 +40,7 @@ public class IdentityPolicy extends com.pulumi.resources.CustomResource {
      * @return Name or Amazon Resource Name (ARN) of the SES Identity.
      * 
      */
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity;
     }
     /**
@@ -54,7 +54,7 @@ public class IdentityPolicy extends com.pulumi.resources.CustomResource {
      * @return Name of the policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +68,7 @@ public class IdentityPolicy extends com.pulumi.resources.CustomResource {
      * @return JSON string of the policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

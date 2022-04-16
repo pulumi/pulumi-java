@@ -34,14 +34,14 @@ public final class PermissionsDatabase {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Name of the table resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

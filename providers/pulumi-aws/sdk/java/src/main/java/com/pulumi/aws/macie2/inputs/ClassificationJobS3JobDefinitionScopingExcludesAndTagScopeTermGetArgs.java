@@ -24,7 +24,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     @Import(name="comparator")
       private final @Nullable Output<String> comparator;
 
-    public Output<String> getComparator() {
+    public Output<String> comparator() {
         return this.comparator == null ? Codegen.empty() : this.comparator;
     }
 
@@ -35,7 +35,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -46,7 +46,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     @Import(name="tagValues")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueGetArgs>> tagValues;
 
-    public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueGetArgs>> getTagValues() {
+    public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueGetArgs>> tagValues() {
         return this.tagValues == null ? Codegen.empty() : this.tagValues;
     }
 
@@ -57,7 +57,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

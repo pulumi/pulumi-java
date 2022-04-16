@@ -21,7 +21,7 @@ public final class BudgetResourceAssociationArgs extends com.pulumi.resources.Re
     @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
 
@@ -32,7 +32,7 @@ public final class BudgetResourceAssociationArgs extends com.pulumi.resources.Re
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

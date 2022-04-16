@@ -44,7 +44,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
      * 
      */
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey;
     }
     /**
@@ -58,7 +58,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the DataSync Agent.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. DataSync Agent must be accessible on port 80 from where the provider is running.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -86,7 +86,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return Name of the DataSync Agent.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkEndpoint() {
+    public Output</* @Nullable */ String> privateLinkEndpoint() {
         return this.privateLinkEndpoint;
     }
     /**
@@ -114,7 +114,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ARNs of the security groups used to protect your data transfer task subnets.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSecurityGroupArns() {
+    public Output</* @Nullable */ List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
@@ -128,7 +128,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSubnetArns() {
+    public Output</* @Nullable */ List<String>> subnetArns() {
         return this.subnetArns;
     }
     /**
@@ -142,7 +142,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +156,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -170,7 +170,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointId() {
+    public Output</* @Nullable */ String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 

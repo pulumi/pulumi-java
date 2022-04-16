@@ -21,7 +21,7 @@ public final class GetLogDeliveryCanonicalUserIdArgs extends com.pulumi.resource
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 

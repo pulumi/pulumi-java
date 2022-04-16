@@ -26,7 +26,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="rulesSourceList")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
 
-    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> getRulesSourceList() {
+    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList() {
         return this.rulesSourceList == null ? Codegen.empty() : this.rulesSourceList;
     }
 
@@ -37,7 +37,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="rulesString")
       private final @Nullable Output<String> rulesString;
 
-    public Output<String> getRulesString() {
+    public Output<String> rulesString() {
         return this.rulesString == null ? Codegen.empty() : this.rulesString;
     }
 
@@ -48,7 +48,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="statefulRules")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> getStatefulRules() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules() {
         return this.statefulRules == null ? Codegen.empty() : this.statefulRules;
     }
 
@@ -59,7 +59,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends com.pulumi.resou
     @Import(name="statelessRulesAndCustomActions")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> getStatelessRulesAndCustomActions() {
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions() {
         return this.statelessRulesAndCustomActions == null ? Codegen.empty() : this.statelessRulesAndCustomActions;
     }
 

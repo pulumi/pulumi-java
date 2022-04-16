@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="checkpointInterval")
       private final @Nullable Output<Integer> checkpointInterval;
 
-    public Output<Integer> getCheckpointInterval() {
+    public Output<Integer> checkpointInterval() {
         return this.checkpointInterval == null ? Codegen.empty() : this.checkpointInterval;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="checkpointingEnabled")
       private final @Nullable Output<Boolean> checkpointingEnabled;
 
-    public Output<Boolean> getCheckpointingEnabled() {
+    public Output<Boolean> checkpointingEnabled() {
         return this.checkpointingEnabled == null ? Codegen.empty() : this.checkpointingEnabled;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="configurationType", required=true)
       private final Output<String> configurationType;
 
-    public Output<String> getConfigurationType() {
+    public Output<String> configurationType() {
         return this.configurationType;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     @Import(name="minPauseBetweenCheckpoints")
       private final @Nullable Output<Integer> minPauseBetweenCheckpoints;
 
-    public Output<Integer> getMinPauseBetweenCheckpoints() {
+    public Output<Integer> minPauseBetweenCheckpoints() {
         return this.minPauseBetweenCheckpoints == null ? Codegen.empty() : this.minPauseBetweenCheckpoints;
     }
 

@@ -35,14 +35,14 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * Information about the Amazon S3 bucket containing the application code.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation> getS3ContentLocation() {
+    public Optional<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation> s3ContentLocation() {
         return Optional.ofNullable(this.s3ContentLocation);
     }
     /**
      * The text-format code for the application.
      * 
     */
-    public Optional<String> getTextContent() {
+    public Optional<String> textContent() {
         return Optional.ofNullable(this.textContent);
     }
 

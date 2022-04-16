@@ -21,7 +21,7 @@ public final class WebAclRuleStatementLabelMatchStatementArgs extends com.pulumi
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,7 +32,7 @@ public final class WebAclRuleStatementLabelMatchStatementArgs extends com.pulumi
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

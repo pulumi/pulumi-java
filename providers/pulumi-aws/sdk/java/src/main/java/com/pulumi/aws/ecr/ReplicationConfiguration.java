@@ -44,7 +44,7 @@ public class ReplicationConfiguration extends com.pulumi.resources.CustomResourc
      * @return The account ID of the destination registry to replicate to.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -58,7 +58,7 @@ public class ReplicationConfiguration extends com.pulumi.resources.CustomResourc
      * @return Replication configuration for a registry. See Replication Configuration.
      * 
      */
-    public Output</* @Nullable */ ReplicationConfigurationReplicationConfiguration> getReplicationConfiguration() {
+    public Output</* @Nullable */ ReplicationConfigurationReplicationConfiguration> replicationConfiguration() {
         return this.replicationConfiguration;
     }
 

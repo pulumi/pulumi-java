@@ -22,7 +22,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -33,7 +33,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
     @Import(name="configurationProfileId", required=true)
       private final Output<String> configurationProfileId;
 
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId;
     }
 
@@ -44,7 +44,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 
@@ -55,7 +55,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -66,7 +66,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 

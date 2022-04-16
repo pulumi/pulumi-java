@@ -23,7 +23,7 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<ServiceActionDefinitionArgs> definition;
 
-    public Output<ServiceActionDefinitionArgs> getDefinition() {
+    public Output<ServiceActionDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

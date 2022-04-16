@@ -24,7 +24,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends com.pulumi
     @Import(name="computeTypesAlloweds")
       private final @Nullable Output<List<String>> computeTypesAlloweds;
 
-    public Output<List<String>> getComputeTypesAlloweds() {
+    public Output<List<String>> computeTypesAlloweds() {
         return this.computeTypesAlloweds == null ? Codegen.empty() : this.computeTypesAlloweds;
     }
 
@@ -35,7 +35,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends com.pulumi
     @Import(name="maximumBuildsAllowed")
       private final @Nullable Output<Integer> maximumBuildsAllowed;
 
-    public Output<Integer> getMaximumBuildsAllowed() {
+    public Output<Integer> maximumBuildsAllowed() {
         return this.maximumBuildsAllowed == null ? Codegen.empty() : this.maximumBuildsAllowed;
     }
 

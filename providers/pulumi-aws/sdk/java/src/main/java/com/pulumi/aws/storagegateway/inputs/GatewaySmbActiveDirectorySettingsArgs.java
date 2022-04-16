@@ -20,7 +20,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="activeDirectoryStatus")
       private final @Nullable Output<String> activeDirectoryStatus;
 
-    public Output<String> getActiveDirectoryStatus() {
+    public Output<String> activeDirectoryStatus() {
         return this.activeDirectoryStatus == null ? Codegen.empty() : this.activeDirectoryStatus;
     }
 
@@ -32,7 +32,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="domainControllers")
       private final @Nullable Output<List<String>> domainControllers;
 
-    public Output<List<String>> getDomainControllers() {
+    public Output<List<String>> domainControllers() {
         return this.domainControllers == null ? Codegen.empty() : this.domainControllers;
     }
 
@@ -43,7 +43,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -55,7 +55,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
+    public Output<String> organizationalUnit() {
         return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
@@ -66,7 +66,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -77,7 +77,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
+    public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
@@ -88,7 +88,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends com.pulumi.reso
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

@@ -42,7 +42,7 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
      * 
      */
-    public Output</* @Nullable */ String> getAvailabilityZone() {
+    public Output</* @Nullable */ String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -56,7 +56,7 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @return The port on which targets receive traffic.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -70,7 +70,7 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @return The ARN of the target group with which to register targets
      * 
      */
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn;
     }
     /**
@@ -84,7 +84,7 @@ public class TargetGroupAttachment extends com.pulumi.resources.CustomResource {
      * @return The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 

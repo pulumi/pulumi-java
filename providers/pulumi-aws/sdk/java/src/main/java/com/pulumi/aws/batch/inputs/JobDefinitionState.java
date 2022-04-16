@@ -28,7 +28,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -40,7 +40,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerProperties")
       private final @Nullable Output<String> containerProperties;
 
-    public Output<String> getContainerProperties() {
+    public Output<String> containerProperties() {
         return this.containerProperties == null ? Codegen.empty() : this.containerProperties;
     }
 
@@ -51,7 +51,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -73,7 +73,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="platformCapabilities")
       private final @Nullable Output<List<String>> platformCapabilities;
 
-    public Output<List<String>> getPlatformCapabilities() {
+    public Output<List<String>> platformCapabilities() {
         return this.platformCapabilities == null ? Codegen.empty() : this.platformCapabilities;
     }
 
@@ -84,7 +84,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="propagateTags")
       private final @Nullable Output<Boolean> propagateTags;
 
-    public Output<Boolean> getPropagateTags() {
+    public Output<Boolean> propagateTags() {
         return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
@@ -96,7 +96,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="retryStrategy")
       private final @Nullable Output<JobDefinitionRetryStrategyGetArgs> retryStrategy;
 
-    public Output<JobDefinitionRetryStrategyGetArgs> getRetryStrategy() {
+    public Output<JobDefinitionRetryStrategyGetArgs> retryStrategy() {
         return this.retryStrategy == null ? Codegen.empty() : this.retryStrategy;
     }
 
@@ -107,7 +107,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -118,7 +118,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -129,7 +129,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -140,7 +140,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<JobDefinitionTimeoutGetArgs> timeout;
 
-    public Output<JobDefinitionTimeoutGetArgs> getTimeout() {
+    public Output<JobDefinitionTimeoutGetArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -151,7 +151,7 @@ public final class JobDefinitionState extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

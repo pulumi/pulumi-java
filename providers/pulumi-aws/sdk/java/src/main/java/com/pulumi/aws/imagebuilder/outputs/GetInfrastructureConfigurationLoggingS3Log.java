@@ -32,14 +32,14 @@ public final class GetInfrastructureConfigurationLoggingS3Log {
      * Name of the S3 Bucket for logging.
      * 
     */
-    public String getS3BucketName() {
+    public String s3BucketName() {
         return this.s3BucketName;
     }
     /**
      * Key prefix for S3 Bucket logging.
      * 
     */
-    public String getS3KeyPrefix() {
+    public String s3KeyPrefix() {
         return this.s3KeyPrefix;
     }
 

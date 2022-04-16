@@ -22,7 +22,7 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     @Import(name="jobBookmarksEncryptionMode")
       private final @Nullable Output<String> jobBookmarksEncryptionMode;
 
-    public Output<String> getJobBookmarksEncryptionMode() {
+    public Output<String> jobBookmarksEncryptionMode() {
         return this.jobBookmarksEncryptionMode == null ? Codegen.empty() : this.jobBookmarksEncryptionMode;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 

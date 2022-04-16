@@ -22,7 +22,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends com.pulumi.resour
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -33,7 +33,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends com.pulumi.resour
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -44,7 +44,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends com.pulumi.resour
     @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
-    public Output<String> getStreamName() {
+    public Output<String> streamName() {
         return this.streamName == null ? Codegen.empty() : this.streamName;
     }
 

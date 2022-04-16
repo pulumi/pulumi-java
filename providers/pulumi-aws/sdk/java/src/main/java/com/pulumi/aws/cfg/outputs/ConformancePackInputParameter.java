@@ -32,14 +32,14 @@ public final class ConformancePackInputParameter {
      * The input key.
      * 
     */
-    public String getParameterName() {
+    public String parameterName() {
         return this.parameterName;
     }
     /**
      * The input value.
      * 
     */
-    public String getParameterValue() {
+    public String parameterValue() {
         return this.parameterValue;
     }
 

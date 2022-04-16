@@ -23,7 +23,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoResolveBestVoicesEnabled")
       private final @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
 
-    public Output<Boolean> getAutoResolveBestVoicesEnabled() {
+    public Output<Boolean> autoResolveBestVoicesEnabled() {
         return this.autoResolveBestVoicesEnabled == null ? Codegen.empty() : this.autoResolveBestVoicesEnabled;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactFlowLogsEnabled")
       private final @Nullable Output<Boolean> contactFlowLogsEnabled;
 
-    public Output<Boolean> getContactFlowLogsEnabled() {
+    public Output<Boolean> contactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled == null ? Codegen.empty() : this.contactFlowLogsEnabled;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contactLensEnabled")
       private final @Nullable Output<Boolean> contactLensEnabled;
 
-    public Output<Boolean> getContactLensEnabled() {
+    public Output<Boolean> contactLensEnabled() {
         return this.contactLensEnabled == null ? Codegen.empty() : this.contactLensEnabled;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
@@ -67,7 +67,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="earlyMediaEnabled")
       private final @Nullable Output<Boolean> earlyMediaEnabled;
 
-    public Output<Boolean> getEarlyMediaEnabled() {
+    public Output<Boolean> earlyMediaEnabled() {
         return this.earlyMediaEnabled == null ? Codegen.empty() : this.earlyMediaEnabled;
     }
 
@@ -78,7 +78,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityManagementType", required=true)
       private final Output<String> identityManagementType;
 
-    public Output<String> getIdentityManagementType() {
+    public Output<String> identityManagementType() {
         return this.identityManagementType;
     }
 
@@ -89,7 +89,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundCallsEnabled", required=true)
       private final Output<Boolean> inboundCallsEnabled;
 
-    public Output<Boolean> getInboundCallsEnabled() {
+    public Output<Boolean> inboundCallsEnabled() {
         return this.inboundCallsEnabled;
     }
 
@@ -100,7 +100,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceAlias")
       private final @Nullable Output<String> instanceAlias;
 
-    public Output<String> getInstanceAlias() {
+    public Output<String> instanceAlias() {
         return this.instanceAlias == null ? Codegen.empty() : this.instanceAlias;
     }
 
@@ -112,7 +112,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outboundCallsEnabled", required=true)
       private final Output<Boolean> outboundCallsEnabled;
 
-    public Output<Boolean> getOutboundCallsEnabled() {
+    public Output<Boolean> outboundCallsEnabled() {
         return this.outboundCallsEnabled;
     }
 

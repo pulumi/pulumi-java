@@ -22,7 +22,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends c
     @Import(name="header", required=true)
       private final Output<String> header;
 
-    public Output<String> getHeader() {
+    public Output<String> header() {
         return this.header;
     }
 
@@ -33,7 +33,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends c
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
@@ -44,7 +44,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends c
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

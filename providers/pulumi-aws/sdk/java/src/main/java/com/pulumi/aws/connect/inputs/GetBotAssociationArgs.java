@@ -20,7 +20,7 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -31,7 +31,7 @@ public final class GetBotAssociationArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="lexBot", required=true)
       private final GetBotAssociationLexBot lexBot;
 
-    public GetBotAssociationLexBot getLexBot() {
+    public GetBotAssociationLexBot lexBot() {
         return this.lexBot;
     }
 

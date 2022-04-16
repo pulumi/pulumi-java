@@ -25,7 +25,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedRate", required=true)
       private final Output<Double> fixedRate;
 
-    public Output<Double> getFixedRate() {
+    public Output<Double> fixedRate() {
         return this.fixedRate;
     }
 
@@ -47,7 +47,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -58,7 +58,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -69,7 +69,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -80,7 +80,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservoirSize", required=true)
       private final Output<Integer> reservoirSize;
 
-    public Output<Integer> getReservoirSize() {
+    public Output<Integer> reservoirSize() {
         return this.reservoirSize;
     }
 
@@ -91,7 +91,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -102,7 +102,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -113,7 +113,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -124,7 +124,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceType", required=true)
       private final Output<String> serviceType;
 
-    public Output<String> getServiceType() {
+    public Output<String> serviceType() {
         return this.serviceType;
     }
 
@@ -135,7 +135,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -146,7 +146,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlPath", required=true)
       private final Output<String> urlPath;
 
-    public Output<String> getUrlPath() {
+    public Output<String> urlPath() {
         return this.urlPath;
     }
 
@@ -157,7 +157,7 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version", required=true)
       private final Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

@@ -68,53 +68,53 @@ public final class GetBucketObjectsResult {
         this.startAfter = startAfter;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * List of any keys between `prefix` and the next occurrence of `delimiter` (i.e., similar to subdirectories of the `prefix` "directory"); the list is only returned when you specify `delimiter`
      * 
     */
-    public List<String> getCommonPrefixes() {
+    public List<String> commonPrefixes() {
         return this.commonPrefixes;
     }
-    public Optional<String> getDelimiter() {
+    public Optional<String> delimiter() {
         return Optional.ofNullable(this.delimiter);
     }
-    public Optional<String> getEncodingType() {
+    public Optional<String> encodingType() {
         return Optional.ofNullable(this.encodingType);
     }
-    public Optional<Boolean> getFetchOwner() {
+    public Optional<Boolean> fetchOwner() {
         return Optional.ofNullable(this.fetchOwner);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of strings representing object keys
      * 
     */
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys;
     }
-    public Optional<Integer> getMaxKeys() {
+    public Optional<Integer> maxKeys() {
         return Optional.ofNullable(this.maxKeys);
     }
     /**
      * List of strings representing object owner IDs (see `fetch_owner` above)
      * 
     */
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners;
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
-    public Optional<String> getStartAfter() {
+    public Optional<String> startAfter() {
         return Optional.ofNullable(this.startAfter);
     }
 

@@ -24,7 +24,7 @@ public final class GetClusterIdentityOidc {
      * Issuer URL for the OpenID Connect identity provider.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 

@@ -23,7 +23,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends com.pulumi.r
     @Import(name="truststoreUri", required=true)
       private final Output<String> truststoreUri;
 
-    public Output<String> getTruststoreUri() {
+    public Output<String> truststoreUri() {
         return this.truststoreUri;
     }
 
@@ -34,7 +34,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends com.pulumi.r
     @Import(name="truststoreVersion")
       private final @Nullable Output<String> truststoreVersion;
 
-    public Output<String> getTruststoreVersion() {
+    public Output<String> truststoreVersion() {
         return this.truststoreVersion == null ? Codegen.empty() : this.truststoreVersion;
     }
 

@@ -47,7 +47,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The date and time, in UTC and extended RFC 3339 format, when the job was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -61,7 +61,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The custom data identifiers to use for data analysis and classification.
      * 
      */
-    public Output<List<String>> getCustomDataIdentifierIds() {
+    public Output<List<String>> customDataIdentifierIds() {
         return this.customDataIdentifierIds;
     }
     /**
@@ -75,7 +75,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return A custom description of the job. The description can contain as many as 200 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -89,19 +89,19 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to analyze all existing, eligible objects immediately after the job is created.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInitialRun() {
+    public Output</* @Nullable */ Boolean> initialRun() {
         return this.initialRun;
     }
     @Export(name="jobArn", type=String.class, parameters={})
     private Output<String> jobArn;
 
-    public Output<String> getJobArn() {
+    public Output<String> jobArn() {
         return this.jobArn;
     }
     @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
     /**
@@ -115,7 +115,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The status for the job. Valid values are: `CANCELLED`, `RUNNING` and `USER_PAUSED`
      * 
      */
-    public Output<String> getJobStatus() {
+    public Output<String> jobStatus() {
         return this.jobStatus;
     }
     /**
@@ -129,13 +129,13 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don't specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
      * 
      */
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +149,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -163,7 +163,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
      * 
      */
-    public Output<ClassificationJobS3JobDefinition> getS3JobDefinition() {
+    public Output<ClassificationJobS3JobDefinition> s3JobDefinition() {
         return this.s3JobDefinition;
     }
     /**
@@ -177,7 +177,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The sampling depth, as a percentage, to apply when processing objects. This value determines the percentage of eligible objects that the job analyzes. If this value is less than 100, Amazon Macie selects the objects to analyze at random, up to the specified percentage, and analyzes all the data in those objects.
      * 
      */
-    public Output<Integer> getSamplingPercentage() {
+    public Output<Integer> samplingPercentage() {
         return this.samplingPercentage;
     }
     /**
@@ -191,7 +191,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
-    public Output<ClassificationJobScheduleFrequency> getScheduleFrequency() {
+    public Output<ClassificationJobScheduleFrequency> scheduleFrequency() {
         return this.scheduleFrequency;
     }
     /**
@@ -205,13 +205,13 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -225,7 +225,7 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
      * 
      */
-    public Output<List<ClassificationJobUserPausedDetail>> getUserPausedDetails() {
+    public Output<List<ClassificationJobUserPausedDetail>> userPausedDetails() {
         return this.userPausedDetails;
     }
 

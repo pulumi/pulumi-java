@@ -38,7 +38,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return (Optional) Amazon Resource Name (ARN) of the CloudFormation Type version. See also `type_arn`.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -52,7 +52,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Identifier of the CloudFormation Type default version.
      * 
      */
-    public Output<String> getDefaultVersionId() {
+    public Output<String> defaultVersionId() {
         return this.defaultVersionId;
     }
     /**
@@ -66,7 +66,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Deprecation status of the version.
      * 
      */
-    public Output<String> getDeprecatedStatus() {
+    public Output<String> deprecatedStatus() {
         return this.deprecatedStatus;
     }
     /**
@@ -80,7 +80,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Description of the version.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -94,7 +94,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return URL of the documentation for the CloudFormation Type.
      * 
      */
-    public Output<String> getDocumentationUrl() {
+    public Output<String> documentationUrl() {
         return this.documentationUrl;
     }
     /**
@@ -108,7 +108,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role for CloudFormation to assume when invoking the extension. If your extension calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. When CloudFormation needs to invoke the extension handler, CloudFormation assumes this execution role to create a temporary session token, which it then passes to the extension handler, thereby supplying your extension with the appropriate credentials.
      * 
      */
-    public Output</* @Nullable */ String> getExecutionRoleArn() {
+    public Output</* @Nullable */ String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -122,7 +122,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Whether the CloudFormation Type version is the default version.
      * 
      */
-    public Output<Boolean> getIsDefaultVersion() {
+    public Output<Boolean> isDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
@@ -136,7 +136,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing logging configuration.
      * 
      */
-    public Output</* @Nullable */ CloudFormationTypeLoggingConfig> getLoggingConfig() {
+    public Output</* @Nullable */ CloudFormationTypeLoggingConfig> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -150,7 +150,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Provisioning behavior of the CloudFormation Type.
      * 
      */
-    public Output<String> getProvisioningType() {
+    public Output<String> provisioningType() {
         return this.provisioningType;
     }
     /**
@@ -164,7 +164,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return JSON document of the CloudFormation Type schema.
      * 
      */
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema;
     }
     /**
@@ -178,7 +178,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return URL to the S3 bucket containing the extension project package that contains the necessary files for the extension you want to register. Must begin with `s3://` or `https://`. For example, `s3://example-bucket/example-object`.
      * 
      */
-    public Output<String> getSchemaHandlerPackage() {
+    public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
     /**
@@ -192,7 +192,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return URL of the source code for the CloudFormation Type.
      * 
      */
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
     /**
@@ -206,7 +206,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return CloudFormation Registry Type. For example, `RESOURCE` or `MODULE`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -220,7 +220,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return (Optional) Amazon Resource Name (ARN) of the CloudFormation Type. See also `arn`.
      * 
      */
-    public Output<String> getTypeArn() {
+    public Output<String> typeArn() {
         return this.typeArn;
     }
     /**
@@ -234,7 +234,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return CloudFormation Type name. For example, `ExampleCompany::ExampleService::ExampleResource`.
      * 
      */
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
     /**
@@ -248,7 +248,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return (Optional) Identifier of the CloudFormation Type version.
      * 
      */
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId;
     }
     /**
@@ -262,7 +262,7 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Scope of the CloudFormation Type.
      * 
      */
-    public Output<String> getVisibility() {
+    public Output<String> visibility() {
         return this.visibility;
     }
 

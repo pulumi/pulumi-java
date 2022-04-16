@@ -23,7 +23,7 @@ public final class ClusterClientAuthenticationTlsArgs extends com.pulumi.resourc
     @Import(name="certificateAuthorityArns")
       private final @Nullable Output<List<String>> certificateAuthorityArns;
 
-    public Output<List<String>> getCertificateAuthorityArns() {
+    public Output<List<String>> certificateAuthorityArns() {
         return this.certificateAuthorityArns == null ? Codegen.empty() : this.certificateAuthorityArns;
     }
 

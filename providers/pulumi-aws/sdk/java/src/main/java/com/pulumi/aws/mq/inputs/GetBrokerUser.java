@@ -17,21 +17,21 @@ public final class GetBrokerUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="consoleAccess", required=true)
       private final Boolean consoleAccess;
 
-    public Boolean getConsoleAccess() {
+    public Boolean consoleAccess() {
         return this.consoleAccess;
     }
 
     @Import(name="groups", required=true)
       private final List<String> groups;
 
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups;
     }
 
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

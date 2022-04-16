@@ -24,7 +24,7 @@ public final class MethodResponseState extends com.pulumi.resources.ResourceArgs
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -35,7 +35,7 @@ public final class MethodResponseState extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -46,7 +46,7 @@ public final class MethodResponseState extends com.pulumi.resources.ResourceArgs
     @Import(name="responseModels")
       private final @Nullable Output<Map<String,String>> responseModels;
 
-    public Output<Map<String,String>> getResponseModels() {
+    public Output<Map<String,String>> responseModels() {
         return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
@@ -59,7 +59,7 @@ public final class MethodResponseState extends com.pulumi.resources.ResourceArgs
     @Import(name="responseParameters")
       private final @Nullable Output<Map<String,Boolean>> responseParameters;
 
-    public Output<Map<String,Boolean>> getResponseParameters() {
+    public Output<Map<String,Boolean>> responseParameters() {
         return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
@@ -70,7 +70,7 @@ public final class MethodResponseState extends com.pulumi.resources.ResourceArgs
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
@@ -81,7 +81,7 @@ public final class MethodResponseState extends com.pulumi.resources.ResourceArgs
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 

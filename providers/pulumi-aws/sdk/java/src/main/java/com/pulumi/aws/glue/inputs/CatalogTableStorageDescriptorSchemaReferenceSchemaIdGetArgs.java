@@ -22,7 +22,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs e
     @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName == null ? Codegen.empty() : this.registryName;
     }
 
@@ -33,7 +33,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs e
     @Import(name="schemaArn")
       private final @Nullable Output<String> schemaArn;
 
-    public Output<String> getSchemaArn() {
+    public Output<String> schemaArn() {
         return this.schemaArn == null ? Codegen.empty() : this.schemaArn;
     }
 
@@ -44,7 +44,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs e
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 

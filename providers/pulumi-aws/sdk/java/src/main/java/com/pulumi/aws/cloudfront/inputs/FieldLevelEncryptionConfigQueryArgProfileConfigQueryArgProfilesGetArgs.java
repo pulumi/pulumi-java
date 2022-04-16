@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     @Import(name="items")
       private final @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items;
 
-    public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> getItems() {
+    public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

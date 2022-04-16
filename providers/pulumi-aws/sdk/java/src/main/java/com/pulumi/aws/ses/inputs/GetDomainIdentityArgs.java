@@ -19,7 +19,7 @@ public final class GetDomainIdentityArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 

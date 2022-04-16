@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
     @Import(name="logDestination", required=true)
       private final Output<String> logDestination;
 
-    public Output<String> getLogDestination() {
+    public Output<String> logDestination() {
         return this.logDestination;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
     @Import(name="redactedFields")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> getRedactedFields() {
+    public Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields() {
         return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 

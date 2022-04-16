@@ -23,7 +23,7 @@ public final class DataCatalogEncryptionSettingsArgs extends com.pulumi.resource
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -34,7 +34,7 @@ public final class DataCatalogEncryptionSettingsArgs extends com.pulumi.resource
     @Import(name="dataCatalogEncryptionSettings", required=true)
       private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
 
-    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> getDataCatalogEncryptionSettings() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings() {
         return this.dataCatalogEncryptionSettings;
     }
 

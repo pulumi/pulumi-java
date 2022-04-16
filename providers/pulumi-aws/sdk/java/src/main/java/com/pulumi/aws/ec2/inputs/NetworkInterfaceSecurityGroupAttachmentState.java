@@ -22,7 +22,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends com.pulu
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -33,7 +33,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends com.pulu
     @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 

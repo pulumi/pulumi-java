@@ -75,49 +75,49 @@ public final class TopicRuleErrorAction {
         this.stepFunctions = stepFunctions;
     }
 
-    public Optional<TopicRuleErrorActionCloudwatchAlarm> getCloudwatchAlarm() {
+    public Optional<TopicRuleErrorActionCloudwatchAlarm> cloudwatchAlarm() {
         return Optional.ofNullable(this.cloudwatchAlarm);
     }
-    public Optional<TopicRuleErrorActionCloudwatchMetric> getCloudwatchMetric() {
+    public Optional<TopicRuleErrorActionCloudwatchMetric> cloudwatchMetric() {
         return Optional.ofNullable(this.cloudwatchMetric);
     }
-    public Optional<TopicRuleErrorActionDynamodb> getDynamodb() {
+    public Optional<TopicRuleErrorActionDynamodb> dynamodb() {
         return Optional.ofNullable(this.dynamodb);
     }
-    public Optional<TopicRuleErrorActionDynamodbv2> getDynamodbv2() {
+    public Optional<TopicRuleErrorActionDynamodbv2> dynamodbv2() {
         return Optional.ofNullable(this.dynamodbv2);
     }
-    public Optional<TopicRuleErrorActionElasticsearch> getElasticsearch() {
+    public Optional<TopicRuleErrorActionElasticsearch> elasticsearch() {
         return Optional.ofNullable(this.elasticsearch);
     }
-    public Optional<TopicRuleErrorActionFirehose> getFirehose() {
+    public Optional<TopicRuleErrorActionFirehose> firehose() {
         return Optional.ofNullable(this.firehose);
     }
-    public Optional<TopicRuleErrorActionIotAnalytics> getIotAnalytics() {
+    public Optional<TopicRuleErrorActionIotAnalytics> iotAnalytics() {
         return Optional.ofNullable(this.iotAnalytics);
     }
-    public Optional<TopicRuleErrorActionIotEvents> getIotEvents() {
+    public Optional<TopicRuleErrorActionIotEvents> iotEvents() {
         return Optional.ofNullable(this.iotEvents);
     }
-    public Optional<TopicRuleErrorActionKinesis> getKinesis() {
+    public Optional<TopicRuleErrorActionKinesis> kinesis() {
         return Optional.ofNullable(this.kinesis);
     }
-    public Optional<TopicRuleErrorActionLambda> getLambda() {
+    public Optional<TopicRuleErrorActionLambda> lambda() {
         return Optional.ofNullable(this.lambda);
     }
-    public Optional<TopicRuleErrorActionRepublish> getRepublish() {
+    public Optional<TopicRuleErrorActionRepublish> republish() {
         return Optional.ofNullable(this.republish);
     }
-    public Optional<TopicRuleErrorActionS3> getS3() {
+    public Optional<TopicRuleErrorActionS3> s3() {
         return Optional.ofNullable(this.s3);
     }
-    public Optional<TopicRuleErrorActionSns> getSns() {
+    public Optional<TopicRuleErrorActionSns> sns() {
         return Optional.ofNullable(this.sns);
     }
-    public Optional<TopicRuleErrorActionSqs> getSqs() {
+    public Optional<TopicRuleErrorActionSqs> sqs() {
         return Optional.ofNullable(this.sqs);
     }
-    public Optional<TopicRuleErrorActionStepFunctions> getStepFunctions() {
+    public Optional<TopicRuleErrorActionStepFunctions> stepFunctions() {
         return Optional.ofNullable(this.stepFunctions);
     }
 

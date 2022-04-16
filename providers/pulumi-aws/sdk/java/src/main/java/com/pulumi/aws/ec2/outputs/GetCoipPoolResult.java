@@ -55,33 +55,33 @@ public final class GetCoipPoolResult {
      * ARN of the COIP pool
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<GetCoipPoolFilter> getFilters() {
+    public List<GetCoipPoolFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLocalGatewayRouteTableId() {
+    public String localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
     /**
      * Set of CIDR blocks in pool
      * 
     */
-    public List<String> getPoolCidrs() {
+    public List<String> poolCidrs() {
         return this.poolCidrs;
     }
-    public String getPoolId() {
+    public String poolId() {
         return this.poolId;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

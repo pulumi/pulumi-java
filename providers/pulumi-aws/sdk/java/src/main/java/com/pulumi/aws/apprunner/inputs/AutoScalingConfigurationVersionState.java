@@ -25,7 +25,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="autoScalingConfigurationName")
       private final @Nullable Output<String> autoScalingConfigurationName;
 
-    public Output<String> getAutoScalingConfigurationName() {
+    public Output<String> autoScalingConfigurationName() {
         return this.autoScalingConfigurationName == null ? Codegen.empty() : this.autoScalingConfigurationName;
     }
 
@@ -47,7 +47,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="autoScalingConfigurationRevision")
       private final @Nullable Output<Integer> autoScalingConfigurationRevision;
 
-    public Output<Integer> getAutoScalingConfigurationRevision() {
+    public Output<Integer> autoScalingConfigurationRevision() {
         return this.autoScalingConfigurationRevision == null ? Codegen.empty() : this.autoScalingConfigurationRevision;
     }
 
@@ -58,7 +58,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="latest")
       private final @Nullable Output<Boolean> latest;
 
-    public Output<Boolean> getLatest() {
+    public Output<Boolean> latest() {
         return this.latest == null ? Codegen.empty() : this.latest;
     }
 
@@ -69,7 +69,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="maxConcurrency")
       private final @Nullable Output<Integer> maxConcurrency;
 
-    public Output<Integer> getMaxConcurrency() {
+    public Output<Integer> maxConcurrency() {
         return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
     }
 
@@ -80,7 +80,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -91,7 +91,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -102,7 +102,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -113,7 +113,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class AutoScalingConfigurationVersionState extends com.pulumi.resou
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

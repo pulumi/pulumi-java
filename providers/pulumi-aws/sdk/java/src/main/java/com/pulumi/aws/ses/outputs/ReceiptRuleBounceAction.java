@@ -63,42 +63,42 @@ public final class ReceiptRuleBounceAction {
      * The message to send
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The position of the action in the receipt rule
      * 
     */
-    public Integer getPosition() {
+    public Integer position() {
         return this.position;
     }
     /**
      * The email address of the sender
      * 
     */
-    public String getSender() {
+    public String sender() {
         return this.sender;
     }
     /**
      * The RFC 5321 SMTP reply code
      * 
     */
-    public String getSmtpReplyCode() {
+    public String smtpReplyCode() {
         return this.smtpReplyCode;
     }
     /**
      * The RFC 3463 SMTP enhanced status code
      * 
     */
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
     /**
      * The ARN of an SNS topic to notify
      * 
     */
-    public Optional<String> getTopicArn() {
+    public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
 

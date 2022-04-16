@@ -18,21 +18,21 @@ public final class ClassificationJobUserPausedDetailArgs extends com.pulumi.reso
     @Import(name="jobExpiresAt")
       private final @Nullable Output<String> jobExpiresAt;
 
-    public Output<String> getJobExpiresAt() {
+    public Output<String> jobExpiresAt() {
         return this.jobExpiresAt == null ? Codegen.empty() : this.jobExpiresAt;
     }
 
     @Import(name="jobImminentExpirationHealthEventArn")
       private final @Nullable Output<String> jobImminentExpirationHealthEventArn;
 
-    public Output<String> getJobImminentExpirationHealthEventArn() {
+    public Output<String> jobImminentExpirationHealthEventArn() {
         return this.jobImminentExpirationHealthEventArn == null ? Codegen.empty() : this.jobImminentExpirationHealthEventArn;
     }
 
     @Import(name="jobPausedAt")
       private final @Nullable Output<String> jobPausedAt;
 
-    public Output<String> getJobPausedAt() {
+    public Output<String> jobPausedAt() {
         return this.jobPausedAt == null ? Codegen.empty() : this.jobPausedAt;
     }
 

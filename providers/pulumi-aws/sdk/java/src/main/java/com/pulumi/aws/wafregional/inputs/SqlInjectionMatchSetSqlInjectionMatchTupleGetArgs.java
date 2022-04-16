@@ -22,7 +22,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends com
     @Import(name="fieldToMatch", required=true)
       private final Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -37,7 +37,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends com
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 

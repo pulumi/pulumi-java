@@ -19,7 +19,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="constraintId", required=true)
       private final String constraintId;
 
-    public String getConstraintId() {
+    public String constraintId() {
         return this.constraintId;
     }
 
@@ -30,14 +30,14 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="owner", required=true)
       private final String owner;
 
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
 
@@ -48,7 +48,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="portfolioId", required=true)
       private final String portfolioId;
 
-    public String getPortfolioId() {
+    public String portfolioId() {
         return this.portfolioId;
     }
 
@@ -59,7 +59,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="productId", required=true)
       private final String productId;
 
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
 
@@ -70,7 +70,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

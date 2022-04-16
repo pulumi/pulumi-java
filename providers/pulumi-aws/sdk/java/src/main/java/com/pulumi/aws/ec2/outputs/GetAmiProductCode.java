@@ -20,10 +20,10 @@ public final class GetAmiProductCode {
         this.productCodeType = productCodeType;
     }
 
-    public String getProductCodeId() {
+    public String productCodeId() {
         return this.productCodeId;
     }
-    public String getProductCodeType() {
+    public String productCodeType() {
         return this.productCodeType;
     }
 

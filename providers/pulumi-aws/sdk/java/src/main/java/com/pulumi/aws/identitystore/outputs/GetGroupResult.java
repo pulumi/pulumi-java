@@ -43,23 +43,23 @@ public final class GetGroupResult {
      * The group's display name value.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
-    public List<GetGroupFilter> getFilters() {
+    public List<GetGroupFilter> filters() {
         return this.filters;
     }
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIdentityStoreId() {
+    public String identityStoreId() {
         return this.identityStoreId;
     }
 

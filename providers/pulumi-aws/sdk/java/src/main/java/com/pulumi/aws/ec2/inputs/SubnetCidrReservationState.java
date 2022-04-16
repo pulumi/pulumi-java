@@ -22,7 +22,7 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
     @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
@@ -33,7 +33,7 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -55,7 +55,7 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
     @Import(name="reservationType")
       private final @Nullable Output<String> reservationType;
 
-    public Output<String> getReservationType() {
+    public Output<String> reservationType() {
         return this.reservationType == null ? Codegen.empty() : this.reservationType;
     }
 
@@ -66,7 +66,7 @@ public final class SubnetCidrReservationState extends com.pulumi.resources.Resou
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

@@ -19,14 +19,14 @@ public final class OriginRequestPolicyCookiesConfigArgs extends com.pulumi.resou
     @Import(name="cookieBehavior", required=true)
       private final Output<String> cookieBehavior;
 
-    public Output<String> getCookieBehavior() {
+    public Output<String> cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
       private final @Nullable Output<OriginRequestPolicyCookiesConfigCookiesArgs> cookies;
 
-    public Output<OriginRequestPolicyCookiesConfigCookiesArgs> getCookies() {
+    public Output<OriginRequestPolicyCookiesConfigCookiesArgs> cookies() {
         return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 

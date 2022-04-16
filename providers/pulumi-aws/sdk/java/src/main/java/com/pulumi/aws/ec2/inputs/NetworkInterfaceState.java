@@ -27,7 +27,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="attachments")
       private final @Nullable Output<List<NetworkInterfaceAttachmentGetArgs>> attachments;
 
-    public Output<List<NetworkInterfaceAttachmentGetArgs>> getAttachments() {
+    public Output<List<NetworkInterfaceAttachmentGetArgs>> attachments() {
         return this.attachments == null ? Codegen.empty() : this.attachments;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
 
-    public Output<String> getInterfaceType() {
+    public Output<String> interfaceType() {
         return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
     }
 
@@ -71,7 +71,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv4PrefixCount")
       private final @Nullable Output<Integer> ipv4PrefixCount;
 
-    public Output<Integer> getIpv4PrefixCount() {
+    public Output<Integer> ipv4PrefixCount() {
         return this.ipv4PrefixCount == null ? Codegen.empty() : this.ipv4PrefixCount;
     }
 
@@ -82,7 +82,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv4Prefixes")
       private final @Nullable Output<List<String>> ipv4Prefixes;
 
-    public Output<List<String>> getIpv4Prefixes() {
+    public Output<List<String>> ipv4Prefixes() {
         return this.ipv4Prefixes == null ? Codegen.empty() : this.ipv4Prefixes;
     }
 
@@ -93,14 +93,14 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> getIpv6AddressCount() {
+    public Output<Integer> ipv6AddressCount() {
         return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
     @Import(name="ipv6AddressListEnabled")
       private final @Nullable Output<Boolean> ipv6AddressListEnabled;
 
-    public Output<Boolean> getIpv6AddressListEnabled() {
+    public Output<Boolean> ipv6AddressListEnabled() {
         return this.ipv6AddressListEnabled == null ? Codegen.empty() : this.ipv6AddressListEnabled;
     }
 
@@ -111,7 +111,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6AddressLists")
       private final @Nullable Output<List<String>> ipv6AddressLists;
 
-    public Output<List<String>> getIpv6AddressLists() {
+    public Output<List<String>> ipv6AddressLists() {
         return this.ipv6AddressLists == null ? Codegen.empty() : this.ipv6AddressLists;
     }
 
@@ -122,7 +122,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
+    public Output<List<String>> ipv6Addresses() {
         return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
@@ -133,7 +133,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6PrefixCount")
       private final @Nullable Output<Integer> ipv6PrefixCount;
 
-    public Output<Integer> getIpv6PrefixCount() {
+    public Output<Integer> ipv6PrefixCount() {
         return this.ipv6PrefixCount == null ? Codegen.empty() : this.ipv6PrefixCount;
     }
 
@@ -144,7 +144,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ipv6Prefixes")
       private final @Nullable Output<List<String>> ipv6Prefixes;
 
-    public Output<List<String>> getIpv6Prefixes() {
+    public Output<List<String>> ipv6Prefixes() {
         return this.ipv6Prefixes == null ? Codegen.empty() : this.ipv6Prefixes;
     }
 
@@ -155,14 +155,14 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="macAddress")
       private final @Nullable Output<String> macAddress;
 
-    public Output<String> getMacAddress() {
+    public Output<String> macAddress() {
         return this.macAddress == null ? Codegen.empty() : this.macAddress;
     }
 
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
@@ -173,7 +173,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -184,21 +184,21 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="privateDnsName")
       private final @Nullable Output<String> privateDnsName;
 
-    public Output<String> getPrivateDnsName() {
+    public Output<String> privateDnsName() {
         return this.privateDnsName == null ? Codegen.empty() : this.privateDnsName;
     }
 
     @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
-    public Output<String> getPrivateIp() {
+    public Output<String> privateIp() {
         return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
     @Import(name="privateIpListEnabled")
       private final @Nullable Output<Boolean> privateIpListEnabled;
 
-    public Output<Boolean> getPrivateIpListEnabled() {
+    public Output<Boolean> privateIpListEnabled() {
         return this.privateIpListEnabled == null ? Codegen.empty() : this.privateIpListEnabled;
     }
 
@@ -209,7 +209,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="privateIpLists")
       private final @Nullable Output<List<String>> privateIpLists;
 
-    public Output<List<String>> getPrivateIpLists() {
+    public Output<List<String>> privateIpLists() {
         return this.privateIpLists == null ? Codegen.empty() : this.privateIpLists;
     }
 
@@ -220,7 +220,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="privateIps")
       private final @Nullable Output<List<String>> privateIps;
 
-    public Output<List<String>> getPrivateIps() {
+    public Output<List<String>> privateIps() {
         return this.privateIps == null ? Codegen.empty() : this.privateIps;
     }
 
@@ -231,7 +231,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="privateIpsCount")
       private final @Nullable Output<Integer> privateIpsCount;
 
-    public Output<Integer> getPrivateIpsCount() {
+    public Output<Integer> privateIpsCount() {
         return this.privateIpsCount == null ? Codegen.empty() : this.privateIpsCount;
     }
 
@@ -242,7 +242,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -253,7 +253,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="sourceDestCheck")
       private final @Nullable Output<Boolean> sourceDestCheck;
 
-    public Output<Boolean> getSourceDestCheck() {
+    public Output<Boolean> sourceDestCheck() {
         return this.sourceDestCheck == null ? Codegen.empty() : this.sourceDestCheck;
     }
 
@@ -264,7 +264,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -275,7 +275,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -286,7 +286,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

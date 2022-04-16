@@ -22,7 +22,7 @@ public final class EventSourceMappingSelfManagedEventSourceGetArgs extends com.p
     @Import(name="endpoints", required=true)
       private final Output<Map<String,String>> endpoints;
 
-    public Output<Map<String,String>> getEndpoints() {
+    public Output<Map<String,String>> endpoints() {
         return this.endpoints;
     }
 

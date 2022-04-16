@@ -22,7 +22,7 @@ public final class AnalyticsApplicationInputsParallelismArgs extends com.pulumi.
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

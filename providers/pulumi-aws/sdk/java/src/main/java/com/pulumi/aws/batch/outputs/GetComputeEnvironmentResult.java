@@ -85,66 +85,66 @@ public final class GetComputeEnvironmentResult {
      * The ARN of the compute environment.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getComputeEnvironmentName() {
+    public String computeEnvironmentName() {
         return this.computeEnvironmentName;
     }
     /**
      * The ARN of the underlying Amazon ECS cluster used by the compute environment.
      * 
     */
-    public String getEcsClusterArn() {
+    public String ecsClusterArn() {
         return this.ecsClusterArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ARN of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
      * 
     */
-    public String getServiceRole() {
+    public String serviceRole() {
         return this.serviceRole;
     }
     /**
      * The state of the compute environment (for example, `ENABLED` or `DISABLED`). If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The current status of the compute environment (for example, `CREATING` or `VALID`).
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * A short, human-readable string to provide additional details about the current status of the compute environment.
      * 
     */
-    public String getStatusReason() {
+    public String statusReason() {
         return this.statusReason;
     }
     /**
      * Key-value map of resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

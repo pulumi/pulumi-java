@@ -23,7 +23,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends com.pulumi.resou
     @Import(name="maximumCapacityUnits", required=true)
       private final Output<Integer> maximumCapacityUnits;
 
-    public Output<Integer> getMaximumCapacityUnits() {
+    public Output<Integer> maximumCapacityUnits() {
         return this.maximumCapacityUnits;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends com.pulumi.resou
     @Import(name="maximumCoreCapacityUnits")
       private final @Nullable Output<Integer> maximumCoreCapacityUnits;
 
-    public Output<Integer> getMaximumCoreCapacityUnits() {
+    public Output<Integer> maximumCoreCapacityUnits() {
         return this.maximumCoreCapacityUnits == null ? Codegen.empty() : this.maximumCoreCapacityUnits;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends com.pulumi.resou
     @Import(name="maximumOndemandCapacityUnits")
       private final @Nullable Output<Integer> maximumOndemandCapacityUnits;
 
-    public Output<Integer> getMaximumOndemandCapacityUnits() {
+    public Output<Integer> maximumOndemandCapacityUnits() {
         return this.maximumOndemandCapacityUnits == null ? Codegen.empty() : this.maximumOndemandCapacityUnits;
     }
 
@@ -56,7 +56,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends com.pulumi.resou
     @Import(name="minimumCapacityUnits", required=true)
       private final Output<Integer> minimumCapacityUnits;
 
-    public Output<Integer> getMinimumCapacityUnits() {
+    public Output<Integer> minimumCapacityUnits() {
         return this.minimumCapacityUnits;
     }
 
@@ -67,7 +67,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends com.pulumi.resou
     @Import(name="unitType", required=true)
       private final Output<String> unitType;
 
-    public Output<String> getUnitType() {
+    public Output<String> unitType() {
         return this.unitType;
     }
 

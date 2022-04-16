@@ -37,7 +37,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -51,7 +51,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The client-specific data. Detailed below.
      * 
      */
-    public Output</* @Nullable */ SnapshotImportClientData> getClientData() {
+    public Output</* @Nullable */ SnapshotImportClientData> clientData() {
         return this.clientData;
     }
     /**
@@ -65,7 +65,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The data encryption key identifier for the snapshot.
      * 
      */
-    public Output<String> getDataEncryptionKeyId() {
+    public Output<String> dataEncryptionKeyId() {
         return this.dataEncryptionKeyId;
     }
     /**
@@ -79,7 +79,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The description of the disk image being imported.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -93,7 +93,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return Information about the disk container. Detailed below.
      * 
      */
-    public Output<SnapshotImportDiskContainer> getDiskContainer() {
+    public Output<SnapshotImportDiskContainer> diskContainer() {
         return this.diskContainer;
     }
     /**
@@ -107,7 +107,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the destination snapshot of the imported image should be encrypted. The default KMS key for EBS is used unless you specify a non-default KMS key using KmsKeyId.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEncrypted() {
+    public Output</* @Nullable */ Boolean> encrypted() {
         return this.encrypted;
     }
     /**
@@ -121,13 +121,13 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return An identifier for the symmetric KMS key to use when creating the encrypted snapshot. This parameter is only required if you want to use a non-default KMS key; if this parameter is not specified, the default KMS key for EBS is used. If a KmsKeyId is specified, the Encrypted flag must also be set.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
+    public Output<String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -141,7 +141,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
      */
-    public Output<String> getOwnerAlias() {
+    public Output<String> ownerAlias() {
         return this.ownerAlias;
     }
     /**
@@ -155,7 +155,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The AWS account ID of the EBS snapshot owner.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -169,7 +169,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPermanentRestore() {
+    public Output</* @Nullable */ Boolean> permanentRestore() {
         return this.permanentRestore;
     }
     /**
@@ -183,7 +183,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The name of the IAM Role the VM Import/Export service will assume. This role needs certain permissions. See https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#vmimport-role. Default: `vmimport`
      * 
      */
-    public Output</* @Nullable */ String> getRoleName() {
+    public Output</* @Nullable */ String> roleName() {
         return this.roleName;
     }
     /**
@@ -197,7 +197,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
      * 
      */
-    public Output<String> getStorageTier() {
+    public Output<String> storageTier() {
         return this.storageTier;
     }
     /**
@@ -211,13 +211,13 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the snapshot.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -231,13 +231,13 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    public Output</* @Nullable */ Integer> getTemporaryRestoreDays() {
+    public Output</* @Nullable */ Integer> temporaryRestoreDays() {
         return this.temporaryRestoreDays;
     }
     @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
     /**
@@ -251,7 +251,7 @@ public class SnapshotImport extends com.pulumi.resources.CustomResource {
      * @return The size of the drive in GiBs.
      * 
      */
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize;
     }
 

@@ -22,7 +22,7 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="attribute")
       private final @Nullable Output<String> attribute;
 
-    public Output<String> getAttribute() {
+    public Output<String> attribute() {
         return this.attribute == null ? Codegen.empty() : this.attribute;
     }
 
@@ -33,7 +33,7 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="operator")
       private final @Nullable Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 
@@ -44,7 +44,7 @@ public final class DevicePoolRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

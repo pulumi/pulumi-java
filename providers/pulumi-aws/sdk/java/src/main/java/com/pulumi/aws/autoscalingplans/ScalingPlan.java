@@ -49,7 +49,7 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return A CloudFormation stack or set of tags. You can create one scaling plan per application source.
      * 
      */
-    public Output<ScalingPlanApplicationSource> getApplicationSource() {
+    public Output<ScalingPlanApplicationSource> applicationSource() {
         return this.applicationSource;
     }
     /**
@@ -63,7 +63,7 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -77,7 +77,7 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
      * 
      */
-    public Output<List<ScalingPlanScalingInstruction>> getScalingInstructions() {
+    public Output<List<ScalingPlanScalingInstruction>> scalingInstructions() {
         return this.scalingInstructions;
     }
     /**
@@ -91,7 +91,7 @@ public class ScalingPlan extends com.pulumi.resources.CustomResource {
      * @return The version number of the scaling plan. This value is always 1.
      * 
      */
-    public Output<Integer> getScalingPlanVersion() {
+    public Output<Integer> scalingPlanVersion() {
         return this.scalingPlanVersion;
     }
 

@@ -36,14 +36,14 @@ public final class TriggerPredicate {
      * A list of the conditions that determine when the trigger will fire. See Conditions.
      * 
     */
-    public List<TriggerPredicateCondition> getConditions() {
+    public List<TriggerPredicateCondition> conditions() {
         return this.conditions;
     }
     /**
      * How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
      * 
     */
-    public Optional<String> getLogical() {
+    public Optional<String> logical() {
         return Optional.ofNullable(this.logical);
     }
 

@@ -25,7 +25,7 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteReports")
       private final @Nullable Output<Boolean> deleteReports;
 
-    public Output<Boolean> getDeleteReports() {
+    public Output<Boolean> deleteReports() {
         return this.deleteReports == null ? Codegen.empty() : this.deleteReports;
     }
 
@@ -36,7 +36,7 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exportConfig", required=true)
       private final Output<ReportGroupExportConfigArgs> exportConfig;
 
-    public Output<ReportGroupExportConfigArgs> getExportConfig() {
+    public Output<ReportGroupExportConfigArgs> exportConfig() {
         return this.exportConfig;
     }
 
@@ -47,7 +47,7 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -69,7 +69,7 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

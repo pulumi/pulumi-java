@@ -40,21 +40,21 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
      * String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
      * 
     */
-    public String getGeneratedRulesType() {
+    public String generatedRulesType() {
         return this.generatedRulesType;
     }
     /**
      * Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
      * 
     */
-    public List<String> getTargetTypes() {
+    public List<String> targetTypes() {
         return this.targetTypes;
     }
     /**
      * Set of domains that you want to inspect for in your traffic flows.
      * 
     */
-    public List<String> getTargets() {
+    public List<String> targets() {
         return this.targets;
     }
 

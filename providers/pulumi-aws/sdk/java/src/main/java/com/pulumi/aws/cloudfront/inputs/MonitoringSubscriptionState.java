@@ -23,7 +23,7 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
     @Import(name="distributionId")
       private final @Nullable Output<String> distributionId;
 
-    public Output<String> getDistributionId() {
+    public Output<String> distributionId() {
         return this.distributionId == null ? Codegen.empty() : this.distributionId;
     }
 
@@ -34,7 +34,7 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
     @Import(name="monitoringSubscription")
       private final @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> getMonitoringSubscription() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription() {
         return this.monitoringSubscription == null ? Codegen.empty() : this.monitoringSubscription;
     }
 

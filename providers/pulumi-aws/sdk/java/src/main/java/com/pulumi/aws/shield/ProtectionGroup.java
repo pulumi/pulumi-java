@@ -44,7 +44,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and report events.
      * 
      */
-    public Output<String> getAggregation() {
+    public Output<String> aggregation() {
         return this.aggregation;
     }
     /**
@@ -58,7 +58,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
      * 
      */
-    public Output</* @Nullable */ List<String>> getMembers() {
+    public Output</* @Nullable */ List<String>> members() {
         return this.members;
     }
     /**
@@ -72,7 +72,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return The criteria to use to choose the protected resources for inclusion in the group.
      * 
      */
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
     /**
@@ -86,7 +86,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return The ARN (Amazon Resource Name) of the protection group.
      * 
      */
-    public Output<String> getProtectionGroupArn() {
+    public Output<String> protectionGroupArn() {
         return this.protectionGroupArn;
     }
     /**
@@ -100,7 +100,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return The name of the protection group.
      * 
      */
-    public Output<String> getProtectionGroupId() {
+    public Output<String> protectionGroupId() {
         return this.protectionGroupId;
     }
     /**
@@ -114,7 +114,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return The resource type to include in the protection group. You must set this when you set `pattern` to BY_RESOURCE_TYPE and you must not set it for any other `pattern` setting.
      * 
      */
-    public Output</* @Nullable */ String> getPropResourceType() {
+    public Output</* @Nullable */ String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -128,7 +128,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class ProtectionGroup extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

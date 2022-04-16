@@ -21,7 +21,7 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -32,7 +32,7 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 
@@ -43,7 +43,7 @@ public final class GetScriptDagEdge extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetParameter")
       private final @Nullable String targetParameter;
 
-    public Optional<String> getTargetParameter() {
+    public Optional<String> targetParameter() {
         return this.targetParameter == null ? Optional.empty() : Optional.ofNullable(this.targetParameter);
     }
 

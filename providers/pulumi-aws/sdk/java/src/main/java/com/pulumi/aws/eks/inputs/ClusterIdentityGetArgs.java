@@ -23,7 +23,7 @@ public final class ClusterIdentityGetArgs extends com.pulumi.resources.ResourceA
     @Import(name="oidcs")
       private final @Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs;
 
-    public Output<List<ClusterIdentityOidcGetArgs>> getOidcs() {
+    public Output<List<ClusterIdentityOidcGetArgs>> oidcs() {
         return this.oidcs == null ? Codegen.empty() : this.oidcs;
     }
 

@@ -23,7 +23,7 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -34,7 +34,7 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -45,7 +45,7 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="partitionIndex")
       private final @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex;
 
-    public Output<PartitionIndexPartitionIndexGetArgs> getPartitionIndex() {
+    public Output<PartitionIndexPartitionIndexGetArgs> partitionIndex() {
         return this.partitionIndex == null ? Codegen.empty() : this.partitionIndex;
     }
 
@@ -56,7 +56,7 @@ public final class PartitionIndexState extends com.pulumi.resources.ResourceArgs
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

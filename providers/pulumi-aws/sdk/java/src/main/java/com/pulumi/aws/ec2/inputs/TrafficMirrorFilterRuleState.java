@@ -25,7 +25,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -58,7 +58,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="destinationPortRange")
       private final @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange;
 
-    public Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> getDestinationPortRange() {
+    public Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange() {
         return this.destinationPortRange == null ? Codegen.empty() : this.destinationPortRange;
     }
 
@@ -69,7 +69,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="protocol")
       private final @Nullable Output<Integer> protocol;
 
-    public Output<Integer> getProtocol() {
+    public Output<Integer> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -80,7 +80,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="ruleAction")
       private final @Nullable Output<String> ruleAction;
 
-    public Output<String> getRuleAction() {
+    public Output<String> ruleAction() {
         return this.ruleAction == null ? Codegen.empty() : this.ruleAction;
     }
 
@@ -91,7 +91,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="ruleNumber")
       private final @Nullable Output<Integer> ruleNumber;
 
-    public Output<Integer> getRuleNumber() {
+    public Output<Integer> ruleNumber() {
         return this.ruleNumber == null ? Codegen.empty() : this.ruleNumber;
     }
 
@@ -102,7 +102,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="sourceCidrBlock")
       private final @Nullable Output<String> sourceCidrBlock;
 
-    public Output<String> getSourceCidrBlock() {
+    public Output<String> sourceCidrBlock() {
         return this.sourceCidrBlock == null ? Codegen.empty() : this.sourceCidrBlock;
     }
 
@@ -113,7 +113,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="sourcePortRange")
       private final @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange;
 
-    public Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> getSourcePortRange() {
+    public Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange() {
         return this.sourcePortRange == null ? Codegen.empty() : this.sourcePortRange;
     }
 
@@ -124,7 +124,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="trafficDirection")
       private final @Nullable Output<String> trafficDirection;
 
-    public Output<String> getTrafficDirection() {
+    public Output<String> trafficDirection() {
         return this.trafficDirection == null ? Codegen.empty() : this.trafficDirection;
     }
 
@@ -135,7 +135,7 @@ public final class TrafficMirrorFilterRuleState extends com.pulumi.resources.Res
     @Import(name="trafficMirrorFilterId")
       private final @Nullable Output<String> trafficMirrorFilterId;
 
-    public Output<String> getTrafficMirrorFilterId() {
+    public Output<String> trafficMirrorFilterId() {
         return this.trafficMirrorFilterId == null ? Codegen.empty() : this.trafficMirrorFilterId;
     }
 

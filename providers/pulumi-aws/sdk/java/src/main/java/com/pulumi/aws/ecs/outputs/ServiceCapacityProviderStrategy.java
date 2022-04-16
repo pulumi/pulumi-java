@@ -42,21 +42,21 @@ public final class ServiceCapacityProviderStrategy {
      * Number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
      * 
     */
-    public Optional<Integer> getBase() {
+    public Optional<Integer> base() {
         return Optional.ofNullable(this.base);
     }
     /**
      * Short name of the capacity provider.
      * 
     */
-    public String getCapacityProvider() {
+    public String capacityProvider() {
         return this.capacityProvider;
     }
     /**
      * Relative percentage of the total number of launched tasks that should use the specified capacity provider.
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

@@ -25,7 +25,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
     @Import(name="excludedRules")
       private final @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
 
-    public Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> getExcludedRules() {
+    public Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules() {
         return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
     @Import(name="scopeDownStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> getScopeDownStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement() {
         return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
     }
 
@@ -58,7 +58,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
     @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
-    public Output<String> getVendorName() {
+    public Output<String> vendorName() {
         return this.vendorName;
     }
 

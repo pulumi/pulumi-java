@@ -23,7 +23,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -34,7 +34,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyNamePrefix")
       private final @Nullable Output<String> keyNamePrefix;
 
-    public Output<String> getKeyNamePrefix() {
+    public Output<String> keyNamePrefix() {
         return this.keyNamePrefix == null ? Codegen.empty() : this.keyNamePrefix;
     }
 
@@ -45,7 +45,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey", required=true)
       private final Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
 
@@ -56,7 +56,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

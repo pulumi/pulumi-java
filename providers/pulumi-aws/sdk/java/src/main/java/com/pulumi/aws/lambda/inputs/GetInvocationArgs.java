@@ -21,7 +21,7 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="functionName", required=true)
       private final String functionName;
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
 
@@ -32,7 +32,7 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="input", required=true)
       private final String input;
 
-    public String getInput() {
+    public String input() {
         return this.input;
     }
 
@@ -44,7 +44,7 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="qualifier")
       private final @Nullable String qualifier;
 
-    public Optional<String> getQualifier() {
+    public Optional<String> qualifier() {
         return this.qualifier == null ? Optional.empty() : Optional.ofNullable(this.qualifier);
     }
 

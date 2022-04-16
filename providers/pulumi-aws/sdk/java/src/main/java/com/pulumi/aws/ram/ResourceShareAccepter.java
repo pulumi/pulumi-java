@@ -43,7 +43,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The ARN of the resource share invitation.
      * 
      */
-    public Output<String> getInvitationArn() {
+    public Output<String> invitationArn() {
         return this.invitationArn;
     }
     /**
@@ -57,7 +57,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The account ID of the receiver account which accepts the invitation.
      * 
      */
-    public Output<String> getReceiverAccountId() {
+    public Output<String> receiverAccountId() {
         return this.receiverAccountId;
     }
     /**
@@ -71,7 +71,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return A list of the resource ARNs shared via the resource share.
      * 
      */
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources;
     }
     /**
@@ -85,7 +85,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The account ID of the sender account which submits the invitation.
      * 
      */
-    public Output<String> getSenderAccountId() {
+    public Output<String> senderAccountId() {
         return this.senderAccountId;
     }
     /**
@@ -99,7 +99,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The ARN of the resource share.
      * 
      */
-    public Output<String> getShareArn() {
+    public Output<String> shareArn() {
         return this.shareArn;
     }
     /**
@@ -113,7 +113,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The ID of the resource share as displayed in the console.
      * 
      */
-    public Output<String> getShareId() {
+    public Output<String> shareId() {
         return this.shareId;
     }
     /**
@@ -127,7 +127,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The name of the resource share.
      * 
      */
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
     /**
@@ -141,7 +141,7 @@ public class ResourceShareAccepter extends com.pulumi.resources.CustomResource {
      * @return The status of the resource share (ACTIVE, PENDING, FAILED, DELETING, DELETED).
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

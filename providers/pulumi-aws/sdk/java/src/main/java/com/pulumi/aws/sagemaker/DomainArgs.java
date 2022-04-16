@@ -26,7 +26,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appNetworkAccessType")
       private final @Nullable Output<String> appNetworkAccessType;
 
-    public Output<String> getAppNetworkAccessType() {
+    public Output<String> appNetworkAccessType() {
         return this.appNetworkAccessType == null ? Codegen.empty() : this.appNetworkAccessType;
     }
 
@@ -37,7 +37,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authMode", required=true)
       private final Output<String> authMode;
 
-    public Output<String> getAuthMode() {
+    public Output<String> authMode() {
         return this.authMode;
     }
 
@@ -48,7 +48,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultUserSettings", required=true)
       private final Output<DomainDefaultUserSettingsArgs> defaultUserSettings;
 
-    public Output<DomainDefaultUserSettingsArgs> getDefaultUserSettings() {
+    public Output<DomainDefaultUserSettingsArgs> defaultUserSettings() {
         return this.defaultUserSettings;
     }
 
@@ -59,7 +59,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -70,7 +70,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -81,7 +81,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
 
-    public Output<DomainRetentionPolicyArgs> getRetentionPolicy() {
+    public Output<DomainRetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -92,7 +92,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -103,7 +103,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

@@ -21,7 +21,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterSecurityGroupId", required=true)
       private final String clusterSecurityGroupId;
 
-    public String getClusterSecurityGroupId() {
+    public String clusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
 
@@ -32,7 +32,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointPrivateAccess", required=true)
       private final Boolean endpointPrivateAccess;
 
-    public Boolean getEndpointPrivateAccess() {
+    public Boolean endpointPrivateAccess() {
         return this.endpointPrivateAccess;
     }
 
@@ -43,7 +43,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointPublicAccess", required=true)
       private final Boolean endpointPublicAccess;
 
-    public Boolean getEndpointPublicAccess() {
+    public Boolean endpointPublicAccess() {
         return this.endpointPublicAccess;
     }
 
@@ -54,7 +54,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="publicAccessCidrs", required=true)
       private final List<String> publicAccessCidrs;
 
-    public List<String> getPublicAccessCidrs() {
+    public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs;
     }
 
@@ -65,7 +65,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -76,7 +76,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 
@@ -87,7 +87,7 @@ public final class GetClusterVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcId", required=true)
       private final String vpcId;
 
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

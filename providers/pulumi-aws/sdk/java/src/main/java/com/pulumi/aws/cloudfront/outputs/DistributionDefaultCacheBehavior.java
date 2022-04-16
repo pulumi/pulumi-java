@@ -187,7 +187,7 @@ public final class DistributionDefaultCacheBehavior {
      * processes and forwards to your Amazon S3 bucket or your custom origin.
      * 
     */
-    public List<String> getAllowedMethods() {
+    public List<String> allowedMethods() {
         return this.allowedMethods;
     }
     /**
@@ -195,7 +195,7 @@ public final class DistributionDefaultCacheBehavior {
      * is attached to the cache behavior.
      * 
     */
-    public Optional<String> getCachePolicyId() {
+    public Optional<String> cachePolicyId() {
         return Optional.ofNullable(this.cachePolicyId);
     }
     /**
@@ -203,7 +203,7 @@ public final class DistributionDefaultCacheBehavior {
      * response to requests using the specified HTTP methods.
      * 
     */
-    public List<String> getCachedMethods() {
+    public List<String> cachedMethods() {
         return this.cachedMethods;
     }
     /**
@@ -212,7 +212,7 @@ public final class DistributionDefaultCacheBehavior {
      * the request header (default: `false`).
      * 
     */
-    public Optional<Boolean> getCompress() {
+    public Optional<Boolean> compress() {
         return Optional.ofNullable(this.compress);
     }
     /**
@@ -221,14 +221,14 @@ public final class DistributionDefaultCacheBehavior {
      * in the absence of an `Cache-Control max-age` or `Expires` header.
      * 
     */
-    public Optional<Integer> getDefaultTtl() {
+    public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * Field level encryption configuration ID
      * 
     */
-    public Optional<String> getFieldLevelEncryptionId() {
+    public Optional<String> fieldLevelEncryptionId() {
         return Optional.ofNullable(this.fieldLevelEncryptionId);
     }
     /**
@@ -236,7 +236,7 @@ public final class DistributionDefaultCacheBehavior {
      * handles query strings, cookies and headers (maximum one).
      * 
     */
-    public Optional<DistributionDefaultCacheBehaviorForwardedValues> getForwardedValues() {
+    public Optional<DistributionDefaultCacheBehaviorForwardedValues> forwardedValues() {
         return Optional.ofNullable(this.forwardedValues);
     }
     /**
@@ -244,7 +244,7 @@ public final class DistributionDefaultCacheBehavior {
      * function with specific actions (maximum 2).
      * 
     */
-    public List<DistributionDefaultCacheBehaviorFunctionAssociation> getFunctionAssociations() {
+    public List<DistributionDefaultCacheBehaviorFunctionAssociation> functionAssociations() {
         return this.functionAssociations == null ? List.of() : this.functionAssociations;
     }
     /**
@@ -252,7 +252,7 @@ public final class DistributionDefaultCacheBehavior {
      * function with specific actions (maximum 4).
      * 
     */
-    public List<DistributionDefaultCacheBehaviorLambdaFunctionAssociation> getLambdaFunctionAssociations() {
+    public List<DistributionDefaultCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? List.of() : this.lambdaFunctionAssociations;
     }
     /**
@@ -263,7 +263,7 @@ public final class DistributionDefaultCacheBehavior {
      * s-maxage`, and `Expires` headers.
      * 
     */
-    public Optional<Integer> getMaxTtl() {
+    public Optional<Integer> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
@@ -272,7 +272,7 @@ public final class DistributionDefaultCacheBehavior {
      * whether the object has been updated. Defaults to 0 seconds.
      * 
     */
-    public Optional<Integer> getMinTtl() {
+    public Optional<Integer> minTtl() {
         return Optional.ofNullable(this.minTtl);
     }
     /**
@@ -280,7 +280,7 @@ public final class DistributionDefaultCacheBehavior {
      * that is attached to the behavior.
      * 
     */
-    public Optional<String> getOriginRequestPolicyId() {
+    public Optional<String> originRequestPolicyId() {
         return Optional.ofNullable(this.originRequestPolicyId);
     }
     /**
@@ -288,14 +288,14 @@ public final class DistributionDefaultCacheBehavior {
      * that is attached to this cache behavior.
      * 
     */
-    public Optional<String> getRealtimeLogConfigArn() {
+    public Optional<String> realtimeLogConfigArn() {
         return Optional.ofNullable(this.realtimeLogConfigArn);
     }
     /**
      * The identifier for a response headers policy.
      * 
     */
-    public Optional<String> getResponseHeadersPolicyId() {
+    public Optional<String> responseHeadersPolicyId() {
         return Optional.ofNullable(this.responseHeadersPolicyId);
     }
     /**
@@ -304,7 +304,7 @@ public final class DistributionDefaultCacheBehavior {
      * associated with this cache behavior.
      * 
     */
-    public Optional<Boolean> getSmoothStreaming() {
+    public Optional<Boolean> smoothStreaming() {
         return Optional.ofNullable(this.smoothStreaming);
     }
     /**
@@ -313,7 +313,7 @@ public final class DistributionDefaultCacheBehavior {
      * either for a cache behavior or for the default cache behavior.
      * 
     */
-    public String getTargetOriginId() {
+    public String targetOriginId() {
         return this.targetOriginId;
     }
     /**
@@ -321,7 +321,7 @@ public final class DistributionDefaultCacheBehavior {
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
     */
-    public List<String> getTrustedKeyGroups() {
+    public List<String> trustedKeyGroups() {
         return this.trustedKeyGroups == null ? List.of() : this.trustedKeyGroups;
     }
     /**
@@ -329,7 +329,7 @@ public final class DistributionDefaultCacheBehavior {
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
     */
-    public List<String> getTrustedSigners() {
+    public List<String> trustedSigners() {
         return this.trustedSigners == null ? List.of() : this.trustedSigners;
     }
     /**
@@ -339,7 +339,7 @@ public final class DistributionDefaultCacheBehavior {
      * of `allow-all`, `https-only`, or `redirect-to-https`.
      * 
     */
-    public String getViewerProtocolPolicy() {
+    public String viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 

@@ -24,7 +24,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -35,7 +35,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyTypes")
       private final @Nullable List<String> keyTypes;
 
-    public List<String> getKeyTypes() {
+    public List<String> keyTypes() {
         return this.keyTypes == null ? List.of() : this.keyTypes;
     }
 
@@ -46,7 +46,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -59,7 +59,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="statuses")
       private final @Nullable List<String> statuses;
 
-    public List<String> getStatuses() {
+    public List<String> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 
@@ -70,7 +70,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -81,7 +81,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="types")
       private final @Nullable List<String> types;
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types == null ? List.of() : this.types;
     }
 

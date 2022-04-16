@@ -42,31 +42,31 @@ public final class GetApplicationResult {
         this.name = name;
     }
 
-    public GetApplicationAppversionLifecycle getAppversionLifecycle() {
+    public GetApplicationAppversionLifecycle appversionLifecycle() {
         return this.appversionLifecycle;
     }
     /**
      * The Amazon Resource Name (ARN) of the application.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Short description of the application
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

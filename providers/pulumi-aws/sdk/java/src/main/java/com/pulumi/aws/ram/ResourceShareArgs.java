@@ -24,7 +24,7 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowExternalPrincipals")
       private final @Nullable Output<Boolean> allowExternalPrincipals;
 
-    public Output<Boolean> getAllowExternalPrincipals() {
+    public Output<Boolean> allowExternalPrincipals() {
         return this.allowExternalPrincipals == null ? Codegen.empty() : this.allowExternalPrincipals;
     }
 
@@ -35,7 +35,7 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

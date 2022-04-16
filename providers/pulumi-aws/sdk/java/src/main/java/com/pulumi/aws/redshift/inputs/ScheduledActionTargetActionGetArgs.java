@@ -24,7 +24,7 @@ public final class ScheduledActionTargetActionGetArgs extends com.pulumi.resourc
     @Import(name="pauseCluster")
       private final @Nullable Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
 
-    public Output<ScheduledActionTargetActionPauseClusterGetArgs> getPauseCluster() {
+    public Output<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster() {
         return this.pauseCluster == null ? Codegen.empty() : this.pauseCluster;
     }
 
@@ -35,7 +35,7 @@ public final class ScheduledActionTargetActionGetArgs extends com.pulumi.resourc
     @Import(name="resizeCluster")
       private final @Nullable Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
 
-    public Output<ScheduledActionTargetActionResizeClusterGetArgs> getResizeCluster() {
+    public Output<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster() {
         return this.resizeCluster == null ? Codegen.empty() : this.resizeCluster;
     }
 
@@ -46,7 +46,7 @@ public final class ScheduledActionTargetActionGetArgs extends com.pulumi.resourc
     @Import(name="resumeCluster")
       private final @Nullable Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
 
-    public Output<ScheduledActionTargetActionResumeClusterGetArgs> getResumeCluster() {
+    public Output<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster() {
         return this.resumeCluster == null ? Codegen.empty() : this.resumeCluster;
     }
 

@@ -25,7 +25,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -36,7 +36,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentTargets")
       private final @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
 
-    public Output<StackSetInstanceDeploymentTargetsGetArgs> getDeploymentTargets() {
+    public Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets() {
         return this.deploymentTargets == null ? Codegen.empty() : this.deploymentTargets;
     }
 
@@ -47,7 +47,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="organizationalUnitId")
       private final @Nullable Output<String> organizationalUnitId;
 
-    public Output<String> getOrganizationalUnitId() {
+    public Output<String> organizationalUnitId() {
         return this.organizationalUnitId == null ? Codegen.empty() : this.organizationalUnitId;
     }
 
@@ -58,7 +58,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="parameterOverrides")
       private final @Nullable Output<Map<String,String>> parameterOverrides;
 
-    public Output<Map<String,String>> getParameterOverrides() {
+    public Output<Map<String,String>> parameterOverrides() {
         return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
     }
 
@@ -69,7 +69,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -80,7 +80,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="retainStack")
       private final @Nullable Output<Boolean> retainStack;
 
-    public Output<Boolean> getRetainStack() {
+    public Output<Boolean> retainStack() {
         return this.retainStack == null ? Codegen.empty() : this.retainStack;
     }
 
@@ -91,7 +91,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 
@@ -102,7 +102,7 @@ public final class StackSetInstanceState extends com.pulumi.resources.ResourceAr
     @Import(name="stackSetName")
       private final @Nullable Output<String> stackSetName;
 
-    public Output<String> getStackSetName() {
+    public Output<String> stackSetName() {
         return this.stackSetName == null ? Codegen.empty() : this.stackSetName;
     }
 

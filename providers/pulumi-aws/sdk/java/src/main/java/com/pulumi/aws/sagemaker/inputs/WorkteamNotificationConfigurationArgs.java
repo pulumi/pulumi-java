@@ -22,7 +22,7 @@ public final class WorkteamNotificationConfigurationArgs extends com.pulumi.reso
     @Import(name="notificationTopicArn")
       private final @Nullable Output<String> notificationTopicArn;
 
-    public Output<String> getNotificationTopicArn() {
+    public Output<String> notificationTopicArn() {
         return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
     }
 

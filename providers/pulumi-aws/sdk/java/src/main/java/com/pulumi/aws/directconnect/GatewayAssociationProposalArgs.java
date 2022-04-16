@@ -23,7 +23,7 @@ public final class GatewayAssociationProposalArgs extends com.pulumi.resources.R
     @Import(name="allowedPrefixes")
       private final @Nullable Output<List<String>> allowedPrefixes;
 
-    public Output<List<String>> getAllowedPrefixes() {
+    public Output<List<String>> allowedPrefixes() {
         return this.allowedPrefixes == null ? Codegen.empty() : this.allowedPrefixes;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayAssociationProposalArgs extends com.pulumi.resources.R
     @Import(name="associatedGatewayId", required=true)
       private final Output<String> associatedGatewayId;
 
-    public Output<String> getAssociatedGatewayId() {
+    public Output<String> associatedGatewayId() {
         return this.associatedGatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayAssociationProposalArgs extends com.pulumi.resources.R
     @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayAssociationProposalArgs extends com.pulumi.resources.R
     @Import(name="dxGatewayOwnerAccountId", required=true)
       private final Output<String> dxGatewayOwnerAccountId;
 
-    public Output<String> getDxGatewayOwnerAccountId() {
+    public Output<String> dxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId;
     }
 

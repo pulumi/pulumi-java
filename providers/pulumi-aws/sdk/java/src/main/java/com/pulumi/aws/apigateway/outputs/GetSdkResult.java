@@ -60,40 +60,40 @@ public final class GetSdkResult {
      * The SDK as a string.
      * 
     */
-    public String getBody() {
+    public String body() {
         return this.body;
     }
     /**
      * The content-disposition header value in the HTTP response.
      * 
     */
-    public String getContentDisposition() {
+    public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
      * The content-type header value in the HTTP response.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
-    public String getSdkType() {
+    public String sdkType() {
         return this.sdkType;
     }
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
 

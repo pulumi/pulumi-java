@@ -24,7 +24,7 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -46,7 +46,7 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="platformId", required=true)
       private final Output<String> platformId;
 
-    public Output<String> getPlatformId() {
+    public Output<String> platformId() {
         return this.platformId;
     }
 
@@ -57,7 +57,7 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
+    public Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod() {
         return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
     }
 
@@ -68,7 +68,7 @@ public final class SigningProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

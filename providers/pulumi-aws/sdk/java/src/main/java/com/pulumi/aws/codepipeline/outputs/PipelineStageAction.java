@@ -107,84 +107,84 @@ public final class PipelineStageAction {
      * A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
      * 
     */
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
     /**
      * A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
     */
-    public Map<String,String> getConfiguration() {
+    public Map<String,String> configuration() {
         return this.configuration == null ? Map.of() : this.configuration;
     }
     /**
      * A list of artifact names to be worked on.
      * 
     */
-    public List<String> getInputArtifacts() {
+    public List<String> inputArtifacts() {
         return this.inputArtifacts == null ? List.of() : this.inputArtifacts;
     }
     /**
      * The action declaration's name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The namespace all output variables will be accessed from.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * A list of artifact names to output. Output artifact names must be unique within a pipeline.
      * 
     */
-    public List<String> getOutputArtifacts() {
+    public List<String> outputArtifacts() {
         return this.outputArtifacts == null ? List.of() : this.outputArtifacts;
     }
     /**
      * The creator of the action being called. Possible values are `AWS`, `Custom` and `ThirdParty`.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
     /**
      * The provider of the service being called by the action. Valid providers are determined by the action category. Provider names are listed in the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
     */
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
     /**
      * The region in which to run the action.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * The order in which actions are run.
      * 
     */
-    public Optional<Integer> getRunOrder() {
+    public Optional<Integer> runOrder() {
         return Optional.ofNullable(this.runOrder);
     }
     /**
      * A string that identifies the action type.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

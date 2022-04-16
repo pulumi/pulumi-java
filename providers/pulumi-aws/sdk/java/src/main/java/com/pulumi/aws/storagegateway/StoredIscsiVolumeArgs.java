@@ -24,7 +24,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
-    public Output<String> getDiskId() {
+    public Output<String> diskId() {
         return this.diskId;
     }
 
@@ -35,7 +35,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
 
@@ -46,7 +46,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kmsEncrypted")
       private final @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> getKmsEncrypted() {
+    public Output<Boolean> kmsEncrypted() {
         return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
     }
 
@@ -57,7 +57,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
@@ -68,7 +68,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -79,7 +79,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="preserveExistingData", required=true)
       private final Output<Boolean> preserveExistingData;
 
-    public Output<Boolean> getPreserveExistingData() {
+    public Output<Boolean> preserveExistingData() {
         return this.preserveExistingData;
     }
 
@@ -90,7 +90,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
@@ -101,7 +101,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -112,7 +112,7 @@ public final class StoredIscsiVolumeArgs extends com.pulumi.resources.ResourceAr
     @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
 

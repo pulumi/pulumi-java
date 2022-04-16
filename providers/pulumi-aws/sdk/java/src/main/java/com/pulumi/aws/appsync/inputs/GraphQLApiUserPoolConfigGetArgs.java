@@ -22,7 +22,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends com.pulumi.resources.
     @Import(name="appIdClientRegex")
       private final @Nullable Output<String> appIdClientRegex;
 
-    public Output<String> getAppIdClientRegex() {
+    public Output<String> appIdClientRegex() {
         return this.appIdClientRegex == null ? Codegen.empty() : this.appIdClientRegex;
     }
 
@@ -33,7 +33,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends com.pulumi.resources.
     @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
-    public Output<String> getAwsRegion() {
+    public Output<String> awsRegion() {
         return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
     }
 
@@ -44,7 +44,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends com.pulumi.resources.
     @Import(name="defaultAction", required=true)
       private final Output<String> defaultAction;
 
-    public Output<String> getDefaultAction() {
+    public Output<String> defaultAction() {
         return this.defaultAction;
     }
 
@@ -55,7 +55,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends com.pulumi.resources.
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

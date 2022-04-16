@@ -23,7 +23,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
     @Import(name="comparator")
       private final @Nullable Output<String> comparator;
 
-    public Output<String> getComparator() {
+    public Output<String> comparator() {
         return this.comparator == null ? Codegen.empty() : this.comparator;
     }
 
@@ -34,7 +34,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -45,7 +45,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

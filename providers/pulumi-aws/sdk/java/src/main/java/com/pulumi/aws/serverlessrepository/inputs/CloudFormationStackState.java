@@ -24,7 +24,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -35,7 +35,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -46,7 +46,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="outputs")
       private final @Nullable Output<Map<String,String>> outputs;
 
-    public Output<Map<String,String>> getOutputs() {
+    public Output<Map<String,String>> outputs() {
         return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
@@ -68,7 +68,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -79,7 +79,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="semanticVersion")
       private final @Nullable Output<String> semanticVersion;
 
-    public Output<String> getSemanticVersion() {
+    public Output<String> semanticVersion() {
         return this.semanticVersion == null ? Codegen.empty() : this.semanticVersion;
     }
 
@@ -90,7 +90,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class CloudFormationStackState extends com.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

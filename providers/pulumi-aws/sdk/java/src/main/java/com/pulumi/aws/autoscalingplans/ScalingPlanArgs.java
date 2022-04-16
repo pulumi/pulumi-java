@@ -25,7 +25,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationSource", required=true)
       private final Output<ScalingPlanApplicationSourceArgs> applicationSource;
 
-    public Output<ScalingPlanApplicationSourceArgs> getApplicationSource() {
+    public Output<ScalingPlanApplicationSourceArgs> applicationSource() {
         return this.applicationSource;
     }
 
@@ -36,7 +36,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scalingInstructions", required=true)
       private final Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
 
-    public Output<List<ScalingPlanScalingInstructionArgs>> getScalingInstructions() {
+    public Output<List<ScalingPlanScalingInstructionArgs>> scalingInstructions() {
         return this.scalingInstructions;
     }
 

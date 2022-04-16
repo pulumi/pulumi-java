@@ -23,7 +23,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -45,7 +45,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageDescription")
       private final @Nullable Output<String> stageDescription;
 
-    public Output<String> getStageDescription() {
+    public Output<String> stageDescription() {
         return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
     }
 
@@ -56,7 +56,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
@@ -67,7 +67,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
+    public Output<Map<String,String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
@@ -78,7 +78,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> getVariables() {
+    public Output<Map<String,String>> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 

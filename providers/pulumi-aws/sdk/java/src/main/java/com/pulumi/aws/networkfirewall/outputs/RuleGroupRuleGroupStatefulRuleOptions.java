@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
      * Indicates how to manage the order of the rule evaluation for the rule group. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
      * 
     */
-    public String getRuleOrder() {
+    public String ruleOrder() {
         return this.ruleOrder;
     }
 

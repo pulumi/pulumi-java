@@ -22,7 +22,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="constraintSummaries", required=true)
       private final List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
 
-    public List<GetLaunchPathsSummaryConstraintSummary> getConstraintSummaries() {
+    public List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries() {
         return this.constraintSummaries;
     }
 
@@ -33,7 +33,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -44,7 +44,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="pathId", required=true)
       private final String pathId;
 
-    public String getPathId() {
+    public String pathId() {
         return this.pathId;
     }
 
@@ -55,7 +55,7 @@ public final class GetLaunchPathsSummary extends com.pulumi.resources.InvokeArgs
     @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

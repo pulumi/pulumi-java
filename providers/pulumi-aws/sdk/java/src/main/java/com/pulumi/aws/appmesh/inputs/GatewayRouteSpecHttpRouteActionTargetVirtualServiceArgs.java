@@ -21,7 +21,7 @@ public final class GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs exten
     @Import(name="virtualServiceName", required=true)
       private final Output<String> virtualServiceName;
 
-    public Output<String> getVirtualServiceName() {
+    public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
 

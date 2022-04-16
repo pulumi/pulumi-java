@@ -37,14 +37,14 @@ public final class DataSourceCredentials {
      *   When the value is not null, the `credential_pair` from the data source in the ARN is used.
      * 
     */
-    public Optional<String> getCopySourceArn() {
+    public Optional<String> copySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }
     /**
      * - Credential pair. See Credential Pair below for more details.
      * 
     */
-    public Optional<DataSourceCredentialsCredentialPair> getCredentialPair() {
+    public Optional<DataSourceCredentialsCredentialPair> credentialPair() {
         return Optional.ofNullable(this.credentialPair);
     }
 

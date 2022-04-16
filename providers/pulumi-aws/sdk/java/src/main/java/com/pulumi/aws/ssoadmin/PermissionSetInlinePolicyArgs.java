@@ -21,7 +21,7 @@ public final class PermissionSetInlinePolicyArgs extends com.pulumi.resources.Re
     @Import(name="inlinePolicy", required=true)
       private final Output<String> inlinePolicy;
 
-    public Output<String> getInlinePolicy() {
+    public Output<String> inlinePolicy() {
         return this.inlinePolicy;
     }
 
@@ -32,7 +32,7 @@ public final class PermissionSetInlinePolicyArgs extends com.pulumi.resources.Re
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -43,7 +43,7 @@ public final class PermissionSetInlinePolicyArgs extends com.pulumi.resources.Re
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 

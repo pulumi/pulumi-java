@@ -25,7 +25,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationFailureFeedbackRoleArn")
       private final @Nullable Output<String> applicationFailureFeedbackRoleArn;
 
-    public Output<String> getApplicationFailureFeedbackRoleArn() {
+    public Output<String> applicationFailureFeedbackRoleArn() {
         return this.applicationFailureFeedbackRoleArn == null ? Codegen.empty() : this.applicationFailureFeedbackRoleArn;
     }
 
@@ -36,7 +36,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationSuccessFeedbackRoleArn")
       private final @Nullable Output<String> applicationSuccessFeedbackRoleArn;
 
-    public Output<String> getApplicationSuccessFeedbackRoleArn() {
+    public Output<String> applicationSuccessFeedbackRoleArn() {
         return this.applicationSuccessFeedbackRoleArn == null ? Codegen.empty() : this.applicationSuccessFeedbackRoleArn;
     }
 
@@ -47,7 +47,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> applicationSuccessFeedbackSampleRate;
 
-    public Output<Integer> getApplicationSuccessFeedbackSampleRate() {
+    public Output<Integer> applicationSuccessFeedbackSampleRate() {
         return this.applicationSuccessFeedbackSampleRate == null ? Codegen.empty() : this.applicationSuccessFeedbackSampleRate;
     }
 
@@ -58,7 +58,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -69,7 +69,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentBasedDeduplication")
       private final @Nullable Output<Boolean> contentBasedDeduplication;
 
-    public Output<Boolean> getContentBasedDeduplication() {
+    public Output<Boolean> contentBasedDeduplication() {
         return this.contentBasedDeduplication == null ? Codegen.empty() : this.contentBasedDeduplication;
     }
 
@@ -80,7 +80,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryPolicy")
       private final @Nullable Output<String> deliveryPolicy;
 
-    public Output<String> getDeliveryPolicy() {
+    public Output<String> deliveryPolicy() {
         return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
     }
 
@@ -91,7 +91,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -102,7 +102,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="fifoTopic")
       private final @Nullable Output<Boolean> fifoTopic;
 
-    public Output<Boolean> getFifoTopic() {
+    public Output<Boolean> fifoTopic() {
         return this.fifoTopic == null ? Codegen.empty() : this.fifoTopic;
     }
 
@@ -113,7 +113,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firehoseFailureFeedbackRoleArn")
       private final @Nullable Output<String> firehoseFailureFeedbackRoleArn;
 
-    public Output<String> getFirehoseFailureFeedbackRoleArn() {
+    public Output<String> firehoseFailureFeedbackRoleArn() {
         return this.firehoseFailureFeedbackRoleArn == null ? Codegen.empty() : this.firehoseFailureFeedbackRoleArn;
     }
 
@@ -124,7 +124,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firehoseSuccessFeedbackRoleArn")
       private final @Nullable Output<String> firehoseSuccessFeedbackRoleArn;
 
-    public Output<String> getFirehoseSuccessFeedbackRoleArn() {
+    public Output<String> firehoseSuccessFeedbackRoleArn() {
         return this.firehoseSuccessFeedbackRoleArn == null ? Codegen.empty() : this.firehoseSuccessFeedbackRoleArn;
     }
 
@@ -135,7 +135,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firehoseSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> firehoseSuccessFeedbackSampleRate;
 
-    public Output<Integer> getFirehoseSuccessFeedbackSampleRate() {
+    public Output<Integer> firehoseSuccessFeedbackSampleRate() {
         return this.firehoseSuccessFeedbackSampleRate == null ? Codegen.empty() : this.firehoseSuccessFeedbackSampleRate;
     }
 
@@ -146,7 +146,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpFailureFeedbackRoleArn")
       private final @Nullable Output<String> httpFailureFeedbackRoleArn;
 
-    public Output<String> getHttpFailureFeedbackRoleArn() {
+    public Output<String> httpFailureFeedbackRoleArn() {
         return this.httpFailureFeedbackRoleArn == null ? Codegen.empty() : this.httpFailureFeedbackRoleArn;
     }
 
@@ -157,7 +157,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpSuccessFeedbackRoleArn")
       private final @Nullable Output<String> httpSuccessFeedbackRoleArn;
 
-    public Output<String> getHttpSuccessFeedbackRoleArn() {
+    public Output<String> httpSuccessFeedbackRoleArn() {
         return this.httpSuccessFeedbackRoleArn == null ? Codegen.empty() : this.httpSuccessFeedbackRoleArn;
     }
 
@@ -168,7 +168,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> httpSuccessFeedbackSampleRate;
 
-    public Output<Integer> getHttpSuccessFeedbackSampleRate() {
+    public Output<Integer> httpSuccessFeedbackSampleRate() {
         return this.httpSuccessFeedbackSampleRate == null ? Codegen.empty() : this.httpSuccessFeedbackSampleRate;
     }
 
@@ -179,7 +179,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsMasterKeyId")
       private final @Nullable Output<String> kmsMasterKeyId;
 
-    public Output<String> getKmsMasterKeyId() {
+    public Output<String> kmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
@@ -190,7 +190,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaFailureFeedbackRoleArn")
       private final @Nullable Output<String> lambdaFailureFeedbackRoleArn;
 
-    public Output<String> getLambdaFailureFeedbackRoleArn() {
+    public Output<String> lambdaFailureFeedbackRoleArn() {
         return this.lambdaFailureFeedbackRoleArn == null ? Codegen.empty() : this.lambdaFailureFeedbackRoleArn;
     }
 
@@ -201,7 +201,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaSuccessFeedbackRoleArn")
       private final @Nullable Output<String> lambdaSuccessFeedbackRoleArn;
 
-    public Output<String> getLambdaSuccessFeedbackRoleArn() {
+    public Output<String> lambdaSuccessFeedbackRoleArn() {
         return this.lambdaSuccessFeedbackRoleArn == null ? Codegen.empty() : this.lambdaSuccessFeedbackRoleArn;
     }
 
@@ -212,7 +212,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lambdaSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> lambdaSuccessFeedbackSampleRate;
 
-    public Output<Integer> getLambdaSuccessFeedbackSampleRate() {
+    public Output<Integer> lambdaSuccessFeedbackSampleRate() {
         return this.lambdaSuccessFeedbackSampleRate == null ? Codegen.empty() : this.lambdaSuccessFeedbackSampleRate;
     }
 
@@ -223,7 +223,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -234,7 +234,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -245,7 +245,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -256,7 +256,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -267,7 +267,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqsFailureFeedbackRoleArn")
       private final @Nullable Output<String> sqsFailureFeedbackRoleArn;
 
-    public Output<String> getSqsFailureFeedbackRoleArn() {
+    public Output<String> sqsFailureFeedbackRoleArn() {
         return this.sqsFailureFeedbackRoleArn == null ? Codegen.empty() : this.sqsFailureFeedbackRoleArn;
     }
 
@@ -278,7 +278,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqsSuccessFeedbackRoleArn")
       private final @Nullable Output<String> sqsSuccessFeedbackRoleArn;
 
-    public Output<String> getSqsSuccessFeedbackRoleArn() {
+    public Output<String> sqsSuccessFeedbackRoleArn() {
         return this.sqsSuccessFeedbackRoleArn == null ? Codegen.empty() : this.sqsSuccessFeedbackRoleArn;
     }
 
@@ -289,7 +289,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqsSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> sqsSuccessFeedbackSampleRate;
 
-    public Output<Integer> getSqsSuccessFeedbackSampleRate() {
+    public Output<Integer> sqsSuccessFeedbackSampleRate() {
         return this.sqsSuccessFeedbackSampleRate == null ? Codegen.empty() : this.sqsSuccessFeedbackSampleRate;
     }
 
@@ -300,7 +300,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -311,7 +311,7 @@ public final class TopicState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -42,7 +42,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The CIDR you want to assign to the pool.
      * 
      */
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
     /**
@@ -56,7 +56,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The description for the allocation.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,13 +70,13 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDisallowedCidrs() {
+    public Output</* @Nullable */ List<String>> disallowedCidrs() {
         return this.disallowedCidrs;
     }
     @Export(name="ipamPoolAllocationId", type=String.class, parameters={})
     private Output<String> ipamPoolAllocationId;
 
-    public Output<String> getIpamPoolAllocationId() {
+    public Output<String> ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
     /**
@@ -90,7 +90,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
     /**
@@ -104,7 +104,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The netmask length of the CIDR you would like to allocate to the IPAM pool. Valid Values: `0-32`.
      * 
      */
-    public Output</* @Nullable */ Integer> getNetmaskLength() {
+    public Output</* @Nullable */ Integer> netmaskLength() {
         return this.netmaskLength;
     }
     /**
@@ -118,7 +118,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The ID of the resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -132,7 +132,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The owner of the resource.
      * 
      */
-    public Output<String> getResourceOwner() {
+    public Output<String> resourceOwner() {
         return this.resourceOwner;
     }
     /**
@@ -146,7 +146,7 @@ public class VpcIpamPoolCidrAllocation extends com.pulumi.resources.CustomResour
      * @return The type of the resource.
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 

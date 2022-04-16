@@ -23,7 +23,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
@@ -45,7 +45,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
@@ -56,7 +56,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
     @Import(name="s3KmsKeyArn")
       private final @Nullable Output<String> s3KmsKeyArn;
 
-    public Output<String> getS3KmsKeyArn() {
+    public Output<String> s3KmsKeyArn() {
         return this.s3KmsKeyArn == null ? Codegen.empty() : this.s3KmsKeyArn;
     }
 
@@ -67,7 +67,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
     @Import(name="snapshotDeliveryProperties")
       private final @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> snapshotDeliveryProperties;
 
-    public Output<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> getSnapshotDeliveryProperties() {
+    public Output<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> snapshotDeliveryProperties() {
         return this.snapshotDeliveryProperties == null ? Codegen.empty() : this.snapshotDeliveryProperties;
     }
 
@@ -78,7 +78,7 @@ public final class DeliveryChannelState extends com.pulumi.resources.ResourceArg
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 

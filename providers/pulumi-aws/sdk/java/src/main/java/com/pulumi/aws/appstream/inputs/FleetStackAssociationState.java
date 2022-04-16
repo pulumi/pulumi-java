@@ -22,7 +22,7 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
     @Import(name="fleetName")
       private final @Nullable Output<String> fleetName;
 
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName == null ? Codegen.empty() : this.fleetName;
     }
 
@@ -33,7 +33,7 @@ public final class FleetStackAssociationState extends com.pulumi.resources.Resou
     @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName == null ? Codegen.empty() : this.stackName;
     }
 

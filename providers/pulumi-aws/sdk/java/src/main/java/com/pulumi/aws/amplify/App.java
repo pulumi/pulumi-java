@@ -44,7 +44,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The personal access token for a third-party source control system for an Amplify app. The personal access token is used to create a webhook and a read-only deploy key. The token is not stored.
      * 
      */
-    public Output</* @Nullable */ String> getAccessToken() {
+    public Output</* @Nullable */ String> accessToken() {
         return this.accessToken;
     }
     /**
@@ -58,7 +58,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amplify app.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
      * 
      */
-    public Output<AppAutoBranchCreationConfig> getAutoBranchCreationConfig() {
+    public Output<AppAutoBranchCreationConfig> autoBranchCreationConfig() {
         return this.autoBranchCreationConfig;
     }
     /**
@@ -86,7 +86,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The automated branch creation glob patterns for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAutoBranchCreationPatterns() {
+    public Output</* @Nullable */ List<String>> autoBranchCreationPatterns() {
         return this.autoBranchCreationPatterns;
     }
     /**
@@ -100,7 +100,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The credentials for basic authorization for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ String> getBasicAuthCredentials() {
+    public Output</* @Nullable */ String> basicAuthCredentials() {
         return this.basicAuthCredentials;
     }
     /**
@@ -114,7 +114,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The [build specification](https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html) (build spec) for an Amplify app.
      * 
      */
-    public Output<String> getBuildSpec() {
+    public Output<String> buildSpec() {
         return this.buildSpec;
     }
     /**
@@ -128,7 +128,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
      * 
      */
-    public Output</* @Nullable */ List<AppCustomRule>> getCustomRules() {
+    public Output</* @Nullable */ List<AppCustomRule>> customRules() {
         return this.customRules;
     }
     /**
@@ -142,7 +142,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The default domain for the Amplify app.
      * 
      */
-    public Output<String> getDefaultDomain() {
+    public Output<String> defaultDomain() {
         return this.defaultDomain;
     }
     /**
@@ -156,7 +156,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The description for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -170,7 +170,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Enables automated branch creation for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableAutoBranchCreation() {
+    public Output</* @Nullable */ Boolean> enableAutoBranchCreation() {
         return this.enableAutoBranchCreation;
     }
     /**
@@ -184,7 +184,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Enables basic authorization for an Amplify app. This will apply to all branches that are part of this app.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBasicAuth() {
+    public Output</* @Nullable */ Boolean> enableBasicAuth() {
         return this.enableBasicAuth;
     }
     /**
@@ -198,7 +198,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Enables auto-building of branches for the Amplify App.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBranchAutoBuild() {
+    public Output</* @Nullable */ Boolean> enableBranchAutoBuild() {
         return this.enableBranchAutoBuild;
     }
     /**
@@ -212,7 +212,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Automatically disconnects a branch in the Amplify Console when you delete a branch from your Git repository.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBranchAutoDeletion() {
+    public Output</* @Nullable */ Boolean> enableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion;
     }
     /**
@@ -226,7 +226,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The environment variables map for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getEnvironmentVariables() {
+    public Output</* @Nullable */ Map<String,String>> environmentVariables() {
         return this.environmentVariables;
     }
     /**
@@ -240,7 +240,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The AWS Identity and Access Management (IAM) service role for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ String> getIamServiceRoleArn() {
+    public Output</* @Nullable */ String> iamServiceRoleArn() {
         return this.iamServiceRoleArn;
     }
     /**
@@ -254,7 +254,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The name for an Amplify app.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -268,7 +268,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.
      * 
      */
-    public Output</* @Nullable */ String> getOauthToken() {
+    public Output</* @Nullable */ String> oauthToken() {
         return this.oauthToken;
     }
     /**
@@ -282,7 +282,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The platform or framework for an Amplify app. Valid values: `WEB`.
      * 
      */
-    public Output</* @Nullable */ String> getPlatform() {
+    public Output</* @Nullable */ String> platform() {
         return this.platform;
     }
     /**
@@ -296,7 +296,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Describes the information about a production branch for an Amplify app. A `production_branch` block is documented below.
      * 
      */
-    public Output<List<AppProductionBranch>> getProductionBranches() {
+    public Output<List<AppProductionBranch>> productionBranches() {
         return this.productionBranches;
     }
     /**
@@ -310,7 +310,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The repository for an Amplify app.
      * 
      */
-    public Output</* @Nullable */ String> getRepository() {
+    public Output</* @Nullable */ String> repository() {
         return this.repository;
     }
     /**
@@ -324,7 +324,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -338,7 +338,7 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

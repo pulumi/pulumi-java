@@ -21,7 +21,7 @@ public final class PipelineDefinitionParameterValueGetArgs extends com.pulumi.re
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -32,7 +32,7 @@ public final class PipelineDefinitionParameterValueGetArgs extends com.pulumi.re
     @Import(name="stringValue", required=true)
       private final Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue;
     }
 

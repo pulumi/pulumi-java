@@ -33,14 +33,14 @@ public final class GetInstanceTypesFilter {
      * Name of the filter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of one or more values for the filter.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

@@ -26,7 +26,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily == null ? Codegen.empty() : this.addressFamily;
     }
 
@@ -37,7 +37,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -48,7 +48,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="entries")
       private final @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
 
-    public Output<List<ManagedPrefixListEntryGetArgs>> getEntries() {
+    public Output<List<ManagedPrefixListEntryGetArgs>> entries() {
         return this.entries == null ? Codegen.empty() : this.entries;
     }
 
@@ -59,7 +59,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="maxEntries")
       private final @Nullable Output<Integer> maxEntries;
 
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries == null ? Codegen.empty() : this.maxEntries;
     }
 
@@ -70,7 +70,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -92,14 +92,14 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -110,7 +110,7 @@ public final class ManagedPrefixListState extends com.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

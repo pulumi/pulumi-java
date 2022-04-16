@@ -32,14 +32,14 @@ public final class GetPermissionsDatabase {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
     */
-    public String getCatalogId() {
+    public String catalogId() {
         return this.catalogId;
     }
     /**
      * Name of the table resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

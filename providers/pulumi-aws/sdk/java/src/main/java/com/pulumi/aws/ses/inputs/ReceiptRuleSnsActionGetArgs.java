@@ -23,7 +23,7 @@ public final class ReceiptRuleSnsActionGetArgs extends com.pulumi.resources.Reso
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -34,7 +34,7 @@ public final class ReceiptRuleSnsActionGetArgs extends com.pulumi.resources.Reso
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -45,7 +45,7 @@ public final class ReceiptRuleSnsActionGetArgs extends com.pulumi.resources.Reso
     @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
+    public Output<String> topicArn() {
         return this.topicArn;
     }
 

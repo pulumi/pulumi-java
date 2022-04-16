@@ -34,7 +34,7 @@ public class ObjectLambdaAccessPoint extends com.pulumi.resources.CustomResource
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -48,7 +48,7 @@ public class ObjectLambdaAccessPoint extends com.pulumi.resources.CustomResource
      * @return Amazon Resource Name (ARN) of the Object Lambda Access Point.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +62,7 @@ public class ObjectLambdaAccessPoint extends com.pulumi.resources.CustomResource
      * @return A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
      * 
      */
-    public Output<ObjectLambdaAccessPointConfiguration> getConfiguration() {
+    public Output<ObjectLambdaAccessPointConfiguration> configuration() {
         return this.configuration;
     }
     /**
@@ -76,7 +76,7 @@ public class ObjectLambdaAccessPoint extends com.pulumi.resources.CustomResource
      * @return The name for this Object Lambda Access Point.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

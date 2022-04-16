@@ -25,7 +25,7 @@ public final class WorkforceSourceIpConfig {
      * A list of up to 10 CIDR values.
      * 
     */
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs;
     }
 

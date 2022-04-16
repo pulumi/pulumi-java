@@ -25,7 +25,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends com.pulumi.res
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -36,7 +36,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends com.pulumi.res
     @Import(name="fieldToMatch", required=true)
       private final Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -48,7 +48,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends com.pulumi.res
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -64,7 +64,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends com.pulumi.res
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 

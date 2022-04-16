@@ -39,14 +39,14 @@ public final class GetEbsVolumesResult {
         this.tags = tags;
     }
 
-    public List<GetEbsVolumesFilter> getFilters() {
+    public List<GetEbsVolumesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -54,10 +54,10 @@ public final class GetEbsVolumesResult {
      * no volumes match the provided criteria.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

@@ -42,27 +42,27 @@ public final class GetRouteTablesResult {
         this.vpcId = vpcId;
     }
 
-    public List<GetRouteTablesFilter> getFilters() {
+    public List<GetRouteTablesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A set of all the route table ids found. This data source will fail if none are found.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

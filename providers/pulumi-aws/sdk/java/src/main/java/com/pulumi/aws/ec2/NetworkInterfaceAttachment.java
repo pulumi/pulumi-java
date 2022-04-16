@@ -33,7 +33,7 @@ public class NetworkInterfaceAttachment extends com.pulumi.resources.CustomResou
      * @return The ENI Attachment ID.
      * 
      */
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
     /**
@@ -47,7 +47,7 @@ public class NetworkInterfaceAttachment extends com.pulumi.resources.CustomResou
      * @return Network interface index (int).
      * 
      */
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
     /**
@@ -61,7 +61,7 @@ public class NetworkInterfaceAttachment extends com.pulumi.resources.CustomResou
      * @return Instance ID to attach.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -75,7 +75,7 @@ public class NetworkInterfaceAttachment extends com.pulumi.resources.CustomResou
      * @return ENI ID to attach.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -89,7 +89,7 @@ public class NetworkInterfaceAttachment extends com.pulumi.resources.CustomResou
      * @return The status of the Network Interface Attachment.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

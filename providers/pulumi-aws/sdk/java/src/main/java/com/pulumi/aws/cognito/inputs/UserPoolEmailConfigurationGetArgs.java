@@ -22,7 +22,7 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
     @Import(name="configurationSet")
       private final @Nullable Output<String> configurationSet;
 
-    public Output<String> getConfigurationSet() {
+    public Output<String> configurationSet() {
         return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
     @Import(name="emailSendingAccount")
       private final @Nullable Output<String> emailSendingAccount;
 
-    public Output<String> getEmailSendingAccount() {
+    public Output<String> emailSendingAccount() {
         return this.emailSendingAccount == null ? Codegen.empty() : this.emailSendingAccount;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
     @Import(name="fromEmailAddress")
       private final @Nullable Output<String> fromEmailAddress;
 
-    public Output<String> getFromEmailAddress() {
+    public Output<String> fromEmailAddress() {
         return this.fromEmailAddress == null ? Codegen.empty() : this.fromEmailAddress;
     }
 
@@ -55,7 +55,7 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
     @Import(name="replyToEmailAddress")
       private final @Nullable Output<String> replyToEmailAddress;
 
-    public Output<String> getReplyToEmailAddress() {
+    public Output<String> replyToEmailAddress() {
         return this.replyToEmailAddress == null ? Codegen.empty() : this.replyToEmailAddress;
     }
 
@@ -66,7 +66,7 @@ public final class UserPoolEmailConfigurationGetArgs extends com.pulumi.resource
     @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
     }
 

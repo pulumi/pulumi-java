@@ -21,7 +21,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 
@@ -32,7 +32,7 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterState")
       private final @Nullable String clusterState;
 
-    public Optional<String> getClusterState() {
+    public Optional<String> clusterState() {
         return this.clusterState == null ? Optional.empty() : Optional.ofNullable(this.clusterState);
     }
 

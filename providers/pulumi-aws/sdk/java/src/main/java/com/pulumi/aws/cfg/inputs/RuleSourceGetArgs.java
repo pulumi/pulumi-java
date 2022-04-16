@@ -24,7 +24,7 @@ public final class RuleSourceGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner", required=true)
       private final Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
 
@@ -35,7 +35,7 @@ public final class RuleSourceGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDetails")
       private final @Nullable Output<List<RuleSourceSourceDetailGetArgs>> sourceDetails;
 
-    public Output<List<RuleSourceSourceDetailGetArgs>> getSourceDetails() {
+    public Output<List<RuleSourceSourceDetailGetArgs>> sourceDetails() {
         return this.sourceDetails == null ? Codegen.empty() : this.sourceDetails;
     }
 
@@ -46,7 +46,7 @@ public final class RuleSourceGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceIdentifier", required=true)
       private final Output<String> sourceIdentifier;
 
-    public Output<String> getSourceIdentifier() {
+    public Output<String> sourceIdentifier() {
         return this.sourceIdentifier;
     }
 

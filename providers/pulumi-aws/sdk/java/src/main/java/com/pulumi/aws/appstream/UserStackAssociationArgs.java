@@ -23,7 +23,7 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -34,7 +34,7 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> getSendEmailNotification() {
+    public Output<Boolean> sendEmailNotification() {
         return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
     }
 
@@ -45,7 +45,7 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -56,7 +56,7 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

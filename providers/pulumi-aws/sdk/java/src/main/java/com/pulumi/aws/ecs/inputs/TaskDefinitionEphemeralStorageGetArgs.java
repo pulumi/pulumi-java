@@ -21,7 +21,7 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends com.pulumi.reso
     @Import(name="sizeInGib", required=true)
       private final Output<Integer> sizeInGib;
 
-    public Output<Integer> getSizeInGib() {
+    public Output<Integer> sizeInGib() {
         return this.sizeInGib;
     }
 

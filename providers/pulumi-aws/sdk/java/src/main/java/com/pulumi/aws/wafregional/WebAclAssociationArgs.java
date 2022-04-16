@@ -21,7 +21,7 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -32,7 +32,7 @@ public final class WebAclAssociationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="webAclId", required=true)
       private final Output<String> webAclId;
 
-    public Output<String> getWebAclId() {
+    public Output<String> webAclId() {
         return this.webAclId;
     }
 

@@ -22,7 +22,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends c
     @Import(name="catalog")
       private final @Nullable Output<String> catalog;
 
-    public Output<String> getCatalog() {
+    public Output<String> catalog() {
         return this.catalog == null ? Codegen.empty() : this.catalog;
     }
 
@@ -33,7 +33,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends c
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -44,7 +44,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends c
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

@@ -20,7 +20,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
     @Import(name="header", required=true)
       private final String header;
 
-    public String getHeader() {
+    public String header() {
         return this.header;
     }
 
@@ -31,7 +31,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
@@ -42,7 +42,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends com.p
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

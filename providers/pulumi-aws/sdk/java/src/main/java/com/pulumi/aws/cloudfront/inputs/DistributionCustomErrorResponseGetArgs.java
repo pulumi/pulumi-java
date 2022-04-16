@@ -25,7 +25,7 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
     @Import(name="errorCachingMinTtl")
       private final @Nullable Output<Integer> errorCachingMinTtl;
 
-    public Output<Integer> getErrorCachingMinTtl() {
+    public Output<Integer> errorCachingMinTtl() {
         return this.errorCachingMinTtl == null ? Codegen.empty() : this.errorCachingMinTtl;
     }
 
@@ -37,7 +37,7 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
     @Import(name="errorCode", required=true)
       private final Output<Integer> errorCode;
 
-    public Output<Integer> getErrorCode() {
+    public Output<Integer> errorCode() {
         return this.errorCode;
     }
 
@@ -49,7 +49,7 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
     @Import(name="responseCode")
       private final @Nullable Output<Integer> responseCode;
 
-    public Output<Integer> getResponseCode() {
+    public Output<Integer> responseCode() {
         return this.responseCode == null ? Codegen.empty() : this.responseCode;
     }
 
@@ -61,7 +61,7 @@ public final class DistributionCustomErrorResponseGetArgs extends com.pulumi.res
     @Import(name="responsePagePath")
       private final @Nullable Output<String> responsePagePath;
 
-    public Output<String> getResponsePagePath() {
+    public Output<String> responsePagePath() {
         return this.responsePagePath == null ? Codegen.empty() : this.responsePagePath;
     }
 

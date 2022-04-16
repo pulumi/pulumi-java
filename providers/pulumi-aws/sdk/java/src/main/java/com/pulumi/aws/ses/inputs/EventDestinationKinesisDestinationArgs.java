@@ -21,7 +21,7 @@ public final class EventDestinationKinesisDestinationArgs extends com.pulumi.res
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -32,7 +32,7 @@ public final class EventDestinationKinesisDestinationArgs extends com.pulumi.res
     @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
-    public Output<String> getStreamArn() {
+    public Output<String> streamArn() {
         return this.streamArn;
     }
 

@@ -27,7 +27,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="executionRole", required=true)
       private final Output<String> executionRole;
 
-    public Output<String> getExecutionRole() {
+    public Output<String> executionRole() {
         return this.executionRole;
     }
 
@@ -38,7 +38,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="jupyterServerAppSettings")
       private final @Nullable Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings;
 
-    public Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> getJupyterServerAppSettings() {
+    public Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Codegen.empty() : this.jupyterServerAppSettings;
     }
 
@@ -49,7 +49,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings;
 
-    public Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> getKernelGatewayAppSettings() {
+    public Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Codegen.empty() : this.kernelGatewayAppSettings;
     }
 
@@ -60,7 +60,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -71,7 +71,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="sharingSettings")
       private final @Nullable Output<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings;
 
-    public Output<UserProfileUserSettingsSharingSettingsGetArgs> getSharingSettings() {
+    public Output<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings() {
         return this.sharingSettings == null ? Codegen.empty() : this.sharingSettings;
     }
 
@@ -82,7 +82,7 @@ public final class UserProfileUserSettingsGetArgs extends com.pulumi.resources.R
     @Import(name="tensorBoardAppSettings")
       private final @Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings;
 
-    public Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> getTensorBoardAppSettings() {
+    public Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings() {
         return this.tensorBoardAppSettings == null ? Codegen.empty() : this.tensorBoardAppSettings;
     }
 

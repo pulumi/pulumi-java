@@ -57,38 +57,38 @@ public final class GetWorkerConfigurationResult {
      * the Amazon Resource Name (ARN) of the worker configuration.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * a summary description of the worker configuration.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * an ID of the latest successfully created revision of the worker configuration.
      * 
     */
-    public Integer getLatestRevision() {
+    public Integer latestRevision() {
         return this.latestRevision;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * contents of connect-distributed.properties file.
      * 
     */
-    public String getPropertiesFileContent() {
+    public String propertiesFileContent() {
         return this.propertiesFileContent;
     }
 

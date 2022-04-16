@@ -22,7 +22,7 @@ public final class WebAclRuleActionCountGetArgs extends com.pulumi.resources.Res
     @Import(name="customRequestHandling")
       private final @Nullable Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling;
 
-    public Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> getCustomRequestHandling() {
+    public Output<WebAclRuleActionCountCustomRequestHandlingGetArgs> customRequestHandling() {
         return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 

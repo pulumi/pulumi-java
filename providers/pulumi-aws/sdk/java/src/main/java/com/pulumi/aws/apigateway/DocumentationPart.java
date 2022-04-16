@@ -41,7 +41,7 @@ public class DocumentationPart extends com.pulumi.resources.CustomResource {
      * @return The location of the targeted API entity of the to-be-created documentation part. See below.
      * 
      */
-    public Output<DocumentationPartLocation> getLocation() {
+    public Output<DocumentationPartLocation> location() {
         return this.location;
     }
     /**
@@ -55,7 +55,7 @@ public class DocumentationPart extends com.pulumi.resources.CustomResource {
      * @return A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
      * 
      */
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
     /**
@@ -69,7 +69,7 @@ public class DocumentationPart extends com.pulumi.resources.CustomResource {
      * @return The ID of the associated Rest API
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 

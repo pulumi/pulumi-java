@@ -40,7 +40,7 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The ARN of the SES template
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    public Output</* @Nullable */ String> getHtml() {
+    public Output</* @Nullable */ String> html() {
         return this.html;
     }
     /**
@@ -68,7 +68,7 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -82,7 +82,7 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The subject line of the email.
      * 
      */
-    public Output</* @Nullable */ String> getSubject() {
+    public Output</* @Nullable */ String> subject() {
         return this.subject;
     }
     /**
@@ -96,7 +96,7 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    public Output</* @Nullable */ String> getText() {
+    public Output</* @Nullable */ String> text() {
         return this.text;
     }
 

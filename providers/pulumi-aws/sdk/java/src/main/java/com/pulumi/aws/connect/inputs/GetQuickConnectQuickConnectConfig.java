@@ -23,7 +23,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="phoneConfigs", required=true)
       private final List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
 
-    public List<GetQuickConnectQuickConnectConfigPhoneConfig> getPhoneConfigs() {
+    public List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs() {
         return this.phoneConfigs;
     }
 
@@ -34,7 +34,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="queueConfigs", required=true)
       private final List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
 
-    public List<GetQuickConnectQuickConnectConfigQueueConfig> getQueueConfigs() {
+    public List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs() {
         return this.queueConfigs;
     }
 
@@ -45,7 +45,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="quickConnectType", required=true)
       private final String quickConnectType;
 
-    public String getQuickConnectType() {
+    public String quickConnectType() {
         return this.quickConnectType;
     }
 
@@ -56,7 +56,7 @@ public final class GetQuickConnectQuickConnectConfig extends com.pulumi.resource
     @Import(name="userConfigs", required=true)
       private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
-    public List<GetQuickConnectQuickConnectConfigUserConfig> getUserConfigs() {
+    public List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs() {
         return this.userConfigs;
     }
 

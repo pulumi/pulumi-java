@@ -22,7 +22,7 @@ public final class ServiceActionDefinitionGetArgs extends com.pulumi.resources.R
     @Import(name="assumeRole")
       private final @Nullable Output<String> assumeRole;
 
-    public Output<String> getAssumeRole() {
+    public Output<String> assumeRole() {
         return this.assumeRole == null ? Codegen.empty() : this.assumeRole;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceActionDefinitionGetArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,7 +44,7 @@ public final class ServiceActionDefinitionGetArgs extends com.pulumi.resources.R
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -55,7 +55,7 @@ public final class ServiceActionDefinitionGetArgs extends com.pulumi.resources.R
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -66,7 +66,7 @@ public final class ServiceActionDefinitionGetArgs extends com.pulumi.resources.R
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

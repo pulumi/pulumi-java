@@ -46,7 +46,7 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
      * 
      */
-    public Output</* @Nullable */ String> getAccountId() {
+    public Output</* @Nullable */ String> accountId() {
         return this.accountId;
     }
     /**
@@ -60,7 +60,7 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
      * 
      */
-    public Output<String> getAlternateContactType() {
+    public Output<String> alternateContactType() {
         return this.alternateContactType;
     }
     /**
@@ -74,7 +74,7 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return An email address for the alternate contact.
      * 
      */
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
     /**
@@ -88,7 +88,7 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return The name of the alternate contact.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return A phone number for the alternate contact.
      * 
      */
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
     /**
@@ -116,7 +116,7 @@ public class AlternativeContact extends com.pulumi.resources.CustomResource {
      * @return A title for the alternate contact.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

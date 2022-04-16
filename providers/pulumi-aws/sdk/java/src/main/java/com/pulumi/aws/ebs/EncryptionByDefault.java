@@ -42,7 +42,7 @@ public class EncryptionByDefault extends com.pulumi.resources.CustomResource {
      * @return Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
 

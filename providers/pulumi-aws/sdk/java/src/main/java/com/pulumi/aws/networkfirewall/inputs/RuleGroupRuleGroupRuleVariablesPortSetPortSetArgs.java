@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs extends com
     @Import(name="definitions", required=true)
       private final Output<List<String>> definitions;
 
-    public Output<List<String>> getDefinitions() {
+    public Output<List<String>> definitions() {
         return this.definitions;
     }
 

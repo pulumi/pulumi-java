@@ -46,7 +46,7 @@ public class ByteMatchSet extends com.pulumi.resources.CustomResource {
      * the location in requests that you want to search, and other settings.
      * 
      */
-    public Output</* @Nullable */ List<ByteMatchSetByteMatchTuple>> getByteMatchTuples() {
+    public Output</* @Nullable */ List<ByteMatchSetByteMatchTuple>> byteMatchTuples() {
         return this.byteMatchTuples;
     }
     /**
@@ -60,7 +60,7 @@ public class ByteMatchSet extends com.pulumi.resources.CustomResource {
      * @return The name or description of the Byte Match Set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

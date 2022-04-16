@@ -23,7 +23,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends com.pulumi.
     @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
 
@@ -34,7 +34,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends com.pulumi.
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -45,7 +45,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends com.pulumi.
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 

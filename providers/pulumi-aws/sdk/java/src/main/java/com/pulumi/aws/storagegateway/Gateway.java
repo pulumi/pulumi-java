@@ -50,7 +50,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
      * 
      */
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey;
     }
     /**
@@ -64,7 +64,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -78,7 +78,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    public Output</* @Nullable */ Integer> getAverageDownloadRateLimitInBitsPerSec() {
+    public Output</* @Nullable */ Integer> averageDownloadRateLimitInBitsPerSec() {
         return this.averageDownloadRateLimitInBitsPerSec;
     }
     /**
@@ -92,7 +92,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    public Output</* @Nullable */ Integer> getAverageUploadRateLimitInBitsPerSec() {
+    public Output</* @Nullable */ Integer> averageUploadRateLimitInBitsPerSec() {
         return this.averageUploadRateLimitInBitsPerSec;
     }
     /**
@@ -106,7 +106,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
      * 
      */
-    public Output</* @Nullable */ String> getCloudwatchLogGroupArn() {
+    public Output</* @Nullable */ String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
     /**
@@ -120,7 +120,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EC2 instance that was used to launch the gateway.
      * 
      */
-    public Output<String> getEc2InstanceId() {
+    public Output<String> ec2InstanceId() {
         return this.ec2InstanceId;
     }
     /**
@@ -134,7 +134,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The type of endpoint for your gateway.
      * 
      */
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
     /**
@@ -148,7 +148,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Identifier of the gateway.
      * 
      */
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -162,7 +162,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
      * 
      */
-    public Output<String> getGatewayIpAddress() {
+    public Output<String> gatewayIpAddress() {
         return this.gatewayIpAddress;
     }
     /**
@@ -176,7 +176,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Name of the gateway.
      * 
      */
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
     /**
@@ -190,7 +190,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
      * 
      */
-    public Output<List<GatewayGatewayNetworkInterface>> getGatewayNetworkInterfaces() {
+    public Output<List<GatewayGatewayNetworkInterface>> gatewayNetworkInterfaces() {
         return this.gatewayNetworkInterfaces;
     }
     /**
@@ -204,7 +204,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
      * 
      */
-    public Output<String> getGatewayTimezone() {
+    public Output<String> gatewayTimezone() {
         return this.gatewayTimezone;
     }
     /**
@@ -218,7 +218,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayType() {
+    public Output</* @Nullable */ String> gatewayType() {
         return this.gatewayType;
     }
     /**
@@ -232,7 +232,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
      * 
      */
-    public Output</* @Nullable */ String> getGatewayVpcEndpoint() {
+    public Output</* @Nullable */ String> gatewayVpcEndpoint() {
         return this.gatewayVpcEndpoint;
     }
     /**
@@ -246,7 +246,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The type of hypervisor environment used by the host.
      * 
      */
-    public Output<String> getHostEnvironment() {
+    public Output<String> hostEnvironment() {
         return this.hostEnvironment;
     }
     /**
@@ -260,7 +260,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
      * 
      */
-    public Output</* @Nullable */ String> getMediumChangerType() {
+    public Output</* @Nullable */ String> mediumChangerType() {
         return this.mediumChangerType;
     }
     /**
@@ -274,7 +274,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
      * 
      */
-    public Output</* @Nullable */ GatewaySmbActiveDirectorySettings> getSmbActiveDirectorySettings() {
+    public Output</* @Nullable */ GatewaySmbActiveDirectorySettings> smbActiveDirectorySettings() {
         return this.smbActiveDirectorySettings;
     }
     /**
@@ -288,7 +288,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the shares on this gateway appear when listing shares.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSmbFileShareVisibility() {
+    public Output</* @Nullable */ Boolean> smbFileShareVisibility() {
         return this.smbFileShareVisibility;
     }
     /**
@@ -302,7 +302,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
      * 
      */
-    public Output</* @Nullable */ String> getSmbGuestPassword() {
+    public Output</* @Nullable */ String> smbGuestPassword() {
         return this.smbGuestPassword;
     }
     /**
@@ -316,7 +316,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
      * 
      */
-    public Output<String> getSmbSecurityStrategy() {
+    public Output<String> smbSecurityStrategy() {
         return this.smbSecurityStrategy;
     }
     /**
@@ -330,7 +330,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -344,7 +344,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -358,7 +358,7 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
      * 
      */
-    public Output</* @Nullable */ String> getTapeDriveType() {
+    public Output</* @Nullable */ String> tapeDriveType() {
         return this.tapeDriveType;
     }
 

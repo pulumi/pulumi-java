@@ -70,49 +70,49 @@ public final class FilterFindingCriteriaCriterion {
      * List of string values to be evaluated.
      * 
     */
-    public List<String> getEquals() {
+    public List<String> equals_() {
         return this.equals == null ? List.of() : this.equals;
     }
     /**
      * The name of the field to be evaluated. The full list of field names can be found in [AWS documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_filter-findings.html#filter_criteria).
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public Optional<String> getGreaterThan() {
+    public Optional<String> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public Optional<String> getGreaterThanOrEqual() {
+    public Optional<String> greaterThanOrEqual() {
         return Optional.ofNullable(this.greaterThanOrEqual);
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public Optional<String> getLessThan() {
+    public Optional<String> lessThan() {
         return Optional.ofNullable(this.lessThan);
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public Optional<String> getLessThanOrEqual() {
+    public Optional<String> lessThanOrEqual() {
         return Optional.ofNullable(this.lessThanOrEqual);
     }
     /**
      * List of string values to be evaluated.
      * 
     */
-    public List<String> getNotEquals() {
+    public List<String> notEquals() {
         return this.notEquals == null ? List.of() : this.notEquals;
     }
 
@@ -148,12 +148,12 @@ public final class FilterFindingCriteriaCriterion {
     	      this.notEquals = defaults.notEquals;
         }
 
-        public Builder equals(@Nullable List<String> equals) {
+        public Builder equals_(@Nullable List<String> equals) {
             this.equals = equals;
             return this;
         }
-        public Builder equals(String... equals) {
-            return equals(List.of(equals));
+        public Builder equals_(String... equals) {
+            return equals_(List.of(equals));
         }
         public Builder field(String field) {
             this.field = Objects.requireNonNull(field);

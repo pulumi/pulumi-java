@@ -24,13 +24,13 @@ public final class GetConnectionPhysicalConnectionRequirement {
         this.subnetId = subnetId;
     }
 
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public List<String> getSecurityGroupIdLists() {
+    public List<String> securityGroupIdLists() {
         return this.securityGroupIdLists;
     }
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

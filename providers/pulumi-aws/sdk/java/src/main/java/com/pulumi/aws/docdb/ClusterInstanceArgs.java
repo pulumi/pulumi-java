@@ -26,7 +26,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> getAutoMinorVersionUpgrade() {
+    public Output<Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
@@ -59,7 +59,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="caCertIdentifier")
       private final @Nullable Output<String> caCertIdentifier;
 
-    public Output<String> getCaCertIdentifier() {
+    public Output<String> caCertIdentifier() {
         return this.caCertIdentifier == null ? Codegen.empty() : this.caCertIdentifier;
     }
 
@@ -70,7 +70,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -81,7 +81,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine == null ? Codegen.empty() : this.engine;
     }
 
@@ -92,7 +92,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
@@ -103,7 +103,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identifierPrefix")
       private final @Nullable Output<String> identifierPrefix;
 
-    public Output<String> getIdentifierPrefix() {
+    public Output<String> identifierPrefix() {
         return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
     }
 
@@ -128,7 +128,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="instanceClass", required=true)
       private final Output<String> instanceClass;
 
-    public Output<String> getInstanceClass() {
+    public Output<String> instanceClass() {
         return this.instanceClass;
     }
 
@@ -140,7 +140,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
@@ -151,7 +151,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="promotionTier")
       private final @Nullable Output<Integer> promotionTier;
 
-    public Output<Integer> getPromotionTier() {
+    public Output<Integer> promotionTier() {
         return this.promotionTier == null ? Codegen.empty() : this.promotionTier;
     }
 
@@ -162,7 +162,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

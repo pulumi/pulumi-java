@@ -24,7 +24,7 @@ public final class DistributionLoggingConfigArgs extends com.pulumi.resources.Re
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class DistributionLoggingConfigArgs extends com.pulumi.resources.Re
     @Import(name="includeCookies")
       private final @Nullable Output<Boolean> includeCookies;
 
-    public Output<Boolean> getIncludeCookies() {
+    public Output<Boolean> includeCookies() {
         return this.includeCookies == null ? Codegen.empty() : this.includeCookies;
     }
 
@@ -48,7 +48,7 @@ public final class DistributionLoggingConfigArgs extends com.pulumi.resources.Re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

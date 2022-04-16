@@ -30,7 +30,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="abortIncompleteMultipartUploadDays")
       private final @Nullable Output<Integer> abortIncompleteMultipartUploadDays;
 
-    public Output<Integer> getAbortIncompleteMultipartUploadDays() {
+    public Output<Integer> abortIncompleteMultipartUploadDays() {
         return this.abortIncompleteMultipartUploadDays == null ? Codegen.empty() : this.abortIncompleteMultipartUploadDays;
     }
 
@@ -41,7 +41,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -52,7 +52,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="expiration")
       private final @Nullable Output<BucketLifecycleRuleExpirationGetArgs> expiration;
 
-    public Output<BucketLifecycleRuleExpirationGetArgs> getExpiration() {
+    public Output<BucketLifecycleRuleExpirationGetArgs> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -63,7 +63,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -74,7 +74,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="noncurrentVersionExpiration")
       private final @Nullable Output<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> noncurrentVersionExpiration;
 
-    public Output<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> getNoncurrentVersionExpiration() {
+    public Output<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> noncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration == null ? Codegen.empty() : this.noncurrentVersionExpiration;
     }
 
@@ -85,7 +85,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="noncurrentVersionTransitions")
       private final @Nullable Output<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> noncurrentVersionTransitions;
 
-    public Output<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> getNoncurrentVersionTransitions() {
+    public Output<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> noncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? Codegen.empty() : this.noncurrentVersionTransitions;
     }
 
@@ -96,7 +96,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -107,7 +107,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -118,7 +118,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
     @Import(name="transitions")
       private final @Nullable Output<List<BucketLifecycleRuleTransitionGetArgs>> transitions;
 
-    public Output<List<BucketLifecycleRuleTransitionGetArgs>> getTransitions() {
+    public Output<List<BucketLifecycleRuleTransitionGetArgs>> transitions() {
         return this.transitions == null ? Codegen.empty() : this.transitions;
     }
 

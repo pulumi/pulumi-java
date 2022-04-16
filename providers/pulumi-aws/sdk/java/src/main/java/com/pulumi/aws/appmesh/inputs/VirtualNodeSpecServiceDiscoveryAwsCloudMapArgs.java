@@ -23,7 +23,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends com.pu
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends com.pu
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends com.pu
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

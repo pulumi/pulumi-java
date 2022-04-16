@@ -41,7 +41,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of Glue Registry.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return A description of the registry.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +69,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The Name of the registry.
      * 
      */
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
     /**
@@ -83,7 +83,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -97,7 +97,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

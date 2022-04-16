@@ -26,7 +26,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="destinationSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> getDestinationSchema() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema() {
         return this.destinationSchema;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisFirehoseOutput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> getKinesisFirehoseOutput() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput() {
         return this.kinesisFirehoseOutput == null ? Codegen.empty() : this.kinesisFirehoseOutput;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="kinesisStreamsOutput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> getKinesisStreamsOutput() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput() {
         return this.kinesisStreamsOutput == null ? Codegen.empty() : this.kinesisStreamsOutput;
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="lambdaOutput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> getLambdaOutput() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput() {
         return this.lambdaOutput == null ? Codegen.empty() : this.lambdaOutput;
     }
 
@@ -70,14 +70,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="outputId")
       private final @Nullable Output<String> outputId;
 
-    public Output<String> getOutputId() {
+    public Output<String> outputId() {
         return this.outputId == null ? Codegen.empty() : this.outputId;
     }
 

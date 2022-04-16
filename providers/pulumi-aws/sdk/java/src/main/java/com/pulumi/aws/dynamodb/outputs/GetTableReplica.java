@@ -20,10 +20,10 @@ public final class GetTableReplica {
         this.regionName = regionName;
     }
 
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
-    public String getRegionName() {
+    public String regionName() {
         return this.regionName;
     }
 

@@ -35,14 +35,14 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
      * A single action condition. See Action Condition below for more details.
      * 
     */
-    public Optional<WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition> getActionCondition() {
+    public Optional<WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition> actionCondition() {
         return Optional.ofNullable(this.actionCondition);
     }
     /**
      * A single label name condition. See Label Name Condition below for more details.
      * 
     */
-    public Optional<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition> getLabelNameCondition() {
+    public Optional<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition> labelNameCondition() {
         return Optional.ofNullable(this.labelNameCondition);
     }
 

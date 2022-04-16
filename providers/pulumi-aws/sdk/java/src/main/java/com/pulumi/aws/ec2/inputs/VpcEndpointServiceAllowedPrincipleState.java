@@ -22,7 +22,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends com.pulumi.re
     @Import(name="principalArn")
       private final @Nullable Output<String> principalArn;
 
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn == null ? Codegen.empty() : this.principalArn;
     }
 
@@ -33,7 +33,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends com.pulumi.re
     @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
-    public Output<String> getVpcEndpointServiceId() {
+    public Output<String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
     }
 

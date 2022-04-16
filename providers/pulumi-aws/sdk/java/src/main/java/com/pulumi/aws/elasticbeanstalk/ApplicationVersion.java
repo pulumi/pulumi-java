@@ -44,7 +44,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return Name of the Beanstalk Application the version is associated with.
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     /**
@@ -58,7 +58,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return ARN assigned by AWS for this Elastic Beanstalk Application.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return S3 bucket that contains the Application Version source bundle.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -86,7 +86,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return Short description of the Application Version.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -100,7 +100,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDelete() {
+    public Output</* @Nullable */ Boolean> forceDelete() {
         return this.forceDelete;
     }
     /**
@@ -114,7 +114,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return S3 object that is the Application Version source bundle.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -128,7 +128,7 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return Unique name for the this Application Version.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,13 +142,13 @@ public class ApplicationVersion extends com.pulumi.resources.CustomResource {
      * @return Key-value map of tags for the Elastic Beanstalk Application Version. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

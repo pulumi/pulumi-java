@@ -19,7 +19,7 @@ public final class GetEmailIdentityArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 

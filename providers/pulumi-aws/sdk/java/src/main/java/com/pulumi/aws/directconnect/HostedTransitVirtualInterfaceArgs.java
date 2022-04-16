@@ -23,7 +23,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -34,7 +34,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
+    public Output<String> amazonAddress() {
         return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
@@ -45,7 +45,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="bgpAsn", required=true)
       private final Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
 
@@ -56,7 +56,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
+    public Output<String> bgpAuthKey() {
         return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
@@ -67,7 +67,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -78,7 +78,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
+    public Output<String> customerAddress() {
         return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
@@ -89,7 +89,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -100,7 +100,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -111,7 +111,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="ownerAccountId", required=true)
       private final Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
 
@@ -122,7 +122,7 @@ public final class HostedTransitVirtualInterfaceArgs extends com.pulumi.resource
     @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 

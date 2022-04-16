@@ -23,7 +23,7 @@ public final class TriggerTriggerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="branches")
       private final @Nullable Output<List<String>> branches;
 
-    public Output<List<String>> getBranches() {
+    public Output<List<String>> branches() {
         return this.branches == null ? Codegen.empty() : this.branches;
     }
 
@@ -34,7 +34,7 @@ public final class TriggerTriggerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
+    public Output<String> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 
@@ -45,7 +45,7 @@ public final class TriggerTriggerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
@@ -56,7 +56,7 @@ public final class TriggerTriggerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="events", required=true)
       private final Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events;
     }
 
@@ -67,7 +67,7 @@ public final class TriggerTriggerArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

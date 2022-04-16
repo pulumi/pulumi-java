@@ -20,7 +20,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="customSecurityGroupId", required=true)
       private final String customSecurityGroupId;
 
-    public String getCustomSecurityGroupId() {
+    public String customSecurityGroupId() {
         return this.customSecurityGroupId;
     }
 
@@ -31,7 +31,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="defaultOu", required=true)
       private final String defaultOu;
 
-    public String getDefaultOu() {
+    public String defaultOu() {
         return this.defaultOu;
     }
 
@@ -42,7 +42,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="enableInternetAccess", required=true)
       private final Boolean enableInternetAccess;
 
-    public Boolean getEnableInternetAccess() {
+    public Boolean enableInternetAccess() {
         return this.enableInternetAccess;
     }
 
@@ -53,7 +53,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="enableMaintenanceMode", required=true)
       private final Boolean enableMaintenanceMode;
 
-    public Boolean getEnableMaintenanceMode() {
+    public Boolean enableMaintenanceMode() {
         return this.enableMaintenanceMode;
     }
 
@@ -64,7 +64,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends com.pulumi.reso
     @Import(name="userEnabledAsLocalAdministrator", required=true)
       private final Boolean userEnabledAsLocalAdministrator;
 
-    public Boolean getUserEnabledAsLocalAdministrator() {
+    public Boolean userEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator;
     }
 

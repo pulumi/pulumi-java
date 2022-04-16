@@ -41,7 +41,7 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseParameters() {
+    public Output</* @Nullable */ Map<String,String>> responseParameters() {
         return this.responseParameters;
     }
     /**
@@ -55,7 +55,7 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return A map specifying the templates used to transform the response body.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseTemplates() {
+    public Output</* @Nullable */ Map<String,String>> responseTemplates() {
         return this.responseTemplates;
     }
     /**
@@ -69,7 +69,7 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return The response type of the associated GatewayResponse.
      * 
      */
-    public Output<String> getResponseType() {
+    public Output<String> responseType() {
         return this.responseType;
     }
     /**
@@ -83,7 +83,7 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return The string identifier of the associated REST API.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -97,7 +97,7 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return The HTTP status code of the Gateway Response.
      * 
      */
-    public Output</* @Nullable */ String> getStatusCode() {
+    public Output</* @Nullable */ String> statusCode() {
         return this.statusCode;
     }
 

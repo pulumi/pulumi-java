@@ -38,17 +38,17 @@ public final class PartitionIndexPartitionIndex {
      * Name of the partition index.
      * 
     */
-    public Optional<String> getIndexName() {
+    public Optional<String> indexName() {
         return Optional.ofNullable(this.indexName);
     }
-    public Optional<String> getIndexStatus() {
+    public Optional<String> indexStatus() {
         return Optional.ofNullable(this.indexStatus);
     }
     /**
      * Keys for the partition index.
      * 
     */
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 

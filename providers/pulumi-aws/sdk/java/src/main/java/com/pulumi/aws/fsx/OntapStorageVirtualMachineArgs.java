@@ -24,7 +24,7 @@ public final class OntapStorageVirtualMachineArgs extends com.pulumi.resources.R
     @Import(name="activeDirectoryConfiguration")
       private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
-    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
+    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Codegen.empty() : this.activeDirectoryConfiguration;
     }
 
@@ -35,7 +35,7 @@ public final class OntapStorageVirtualMachineArgs extends com.pulumi.resources.R
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -46,7 +46,7 @@ public final class OntapStorageVirtualMachineArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,14 +57,14 @@ public final class OntapStorageVirtualMachineArgs extends com.pulumi.resources.R
     @Import(name="rootVolumeSecurityStyle")
       private final @Nullable Output<String> rootVolumeSecurityStyle;
 
-    public Output<String> getRootVolumeSecurityStyle() {
+    public Output<String> rootVolumeSecurityStyle() {
         return this.rootVolumeSecurityStyle == null ? Codegen.empty() : this.rootVolumeSecurityStyle;
     }
 
     @Import(name="svmAdminPassword")
       private final @Nullable Output<String> svmAdminPassword;
 
-    public Output<String> getSvmAdminPassword() {
+    public Output<String> svmAdminPassword() {
         return this.svmAdminPassword == null ? Codegen.empty() : this.svmAdminPassword;
     }
 
@@ -75,7 +75,7 @@ public final class OntapStorageVirtualMachineArgs extends com.pulumi.resources.R
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

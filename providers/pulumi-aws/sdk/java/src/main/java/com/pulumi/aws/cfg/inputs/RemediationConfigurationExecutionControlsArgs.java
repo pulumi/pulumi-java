@@ -22,7 +22,7 @@ public final class RemediationConfigurationExecutionControlsArgs extends com.pul
     @Import(name="ssmControls")
       private final @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
 
-    public Output<RemediationConfigurationExecutionControlsSsmControlsArgs> getSsmControls() {
+    public Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls() {
         return this.ssmControls == null ? Codegen.empty() : this.ssmControls;
     }
 

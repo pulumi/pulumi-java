@@ -25,7 +25,7 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -36,7 +36,7 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
 
-    public Output<String> getFargateProfileName() {
+    public Output<String> fargateProfileName() {
         return this.fargateProfileName == null ? Codegen.empty() : this.fargateProfileName;
     }
 
@@ -47,7 +47,7 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podExecutionRoleArn", required=true)
       private final Output<String> podExecutionRoleArn;
 
-    public Output<String> getPodExecutionRoleArn() {
+    public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn;
     }
 
@@ -58,7 +58,7 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="selectors", required=true)
       private final Output<List<FargateProfileSelectorArgs>> selectors;
 
-    public Output<List<FargateProfileSelectorArgs>> getSelectors() {
+    public Output<List<FargateProfileSelectorArgs>> selectors() {
         return this.selectors;
     }
 
@@ -69,7 +69,7 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -80,7 +80,7 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

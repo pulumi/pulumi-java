@@ -38,24 +38,24 @@ public final class GetTransitGatewayRouteTablesResult {
         this.tags = tags;
     }
 
-    public List<GetTransitGatewayRouteTablesFilter> getFilters() {
+    public List<GetTransitGatewayRouteTablesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of Transit Gateway Route Table identifiers.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

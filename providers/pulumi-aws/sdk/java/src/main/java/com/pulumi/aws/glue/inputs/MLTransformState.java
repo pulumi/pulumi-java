@@ -29,7 +29,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -40,7 +40,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
-    public Output<String> getGlueVersion() {
+    public Output<String> glueVersion() {
         return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
     }
 
@@ -62,7 +62,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputRecordTables")
       private final @Nullable Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables;
 
-    public Output<List<MLTransformInputRecordTableGetArgs>> getInputRecordTables() {
+    public Output<List<MLTransformInputRecordTableGetArgs>> inputRecordTables() {
         return this.inputRecordTables == null ? Codegen.empty() : this.inputRecordTables;
     }
 
@@ -73,7 +73,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelCount")
       private final @Nullable Output<Integer> labelCount;
 
-    public Output<Integer> getLabelCount() {
+    public Output<Integer> labelCount() {
         return this.labelCount == null ? Codegen.empty() : this.labelCount;
     }
 
@@ -84,7 +84,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxCapacity")
       private final @Nullable Output<Double> maxCapacity;
 
-    public Output<Double> getMaxCapacity() {
+    public Output<Double> maxCapacity() {
         return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
@@ -95,7 +95,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
@@ -106,7 +106,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -117,7 +117,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> getNumberOfWorkers() {
+    public Output<Integer> numberOfWorkers() {
         return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
     }
 
@@ -128,7 +128,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<MLTransformParametersGetArgs> parameters;
 
-    public Output<MLTransformParametersGetArgs> getParameters() {
+    public Output<MLTransformParametersGetArgs> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -139,7 +139,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -150,7 +150,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemas")
       private final @Nullable Output<List<MLTransformSchemaGetArgs>> schemas;
 
-    public Output<List<MLTransformSchemaGetArgs>> getSchemas() {
+    public Output<List<MLTransformSchemaGetArgs>> schemas() {
         return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
@@ -161,7 +161,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -172,7 +172,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -183,7 +183,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -194,7 +194,7 @@ public final class MLTransformState extends com.pulumi.resources.ResourceArgs {
     @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
-    public Output<String> getWorkerType() {
+    public Output<String> workerType() {
         return this.workerType == null ? Codegen.empty() : this.workerType;
     }
 

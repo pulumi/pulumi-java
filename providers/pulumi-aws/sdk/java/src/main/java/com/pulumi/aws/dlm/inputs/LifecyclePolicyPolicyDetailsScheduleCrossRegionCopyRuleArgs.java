@@ -25,7 +25,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     @Import(name="cmkArn")
       private final @Nullable Output<String> cmkArn;
 
-    public Output<String> getCmkArn() {
+    public Output<String> cmkArn() {
         return this.cmkArn == null ? Codegen.empty() : this.cmkArn;
     }
 
@@ -36,7 +36,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     @Import(name="copyTags")
       private final @Nullable Output<Boolean> copyTags;
 
-    public Output<Boolean> getCopyTags() {
+    public Output<Boolean> copyTags() {
         return this.copyTags == null ? Codegen.empty() : this.copyTags;
     }
 
@@ -47,7 +47,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     @Import(name="deprecateRule")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> getDeprecateRule() {
+    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule() {
         return this.deprecateRule == null ? Codegen.empty() : this.deprecateRule;
     }
 
@@ -58,7 +58,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     @Import(name="encrypted", required=true)
       private final Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted;
     }
 
@@ -69,7 +69,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     @Import(name="retainRule")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
 
-    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> getRetainRule() {
+    public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule() {
         return this.retainRule == null ? Codegen.empty() : this.retainRule;
     }
 
@@ -80,7 +80,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

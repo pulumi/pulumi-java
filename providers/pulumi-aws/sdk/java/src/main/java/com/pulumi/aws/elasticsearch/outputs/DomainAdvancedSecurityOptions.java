@@ -42,21 +42,21 @@ public final class DomainAdvancedSecurityOptions {
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
      * 
     */
-    public Optional<Boolean> getInternalUserDatabaseEnabled() {
+    public Optional<Boolean> internalUserDatabaseEnabled() {
         return Optional.ofNullable(this.internalUserDatabaseEnabled);
     }
     /**
      * Configuration block for the main user. Detailed below.
      * 
     */
-    public Optional<DomainAdvancedSecurityOptionsMasterUserOptions> getMasterUserOptions() {
+    public Optional<DomainAdvancedSecurityOptionsMasterUserOptions> masterUserOptions() {
         return Optional.ofNullable(this.masterUserOptions);
     }
 

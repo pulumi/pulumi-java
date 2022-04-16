@@ -32,14 +32,14 @@ public final class GetLaunchPathsSummaryConstraintSummary {
      * Description of the constraint.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

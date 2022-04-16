@@ -46,7 +46,7 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
      * @return The ARN of the DynamoDB Global Table
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
      * @return The name of the global table. Must match underlying DynamoDB Table names in all regions.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
      * @return Underlying DynamoDB Table. At least 1 replica must be defined. See below.
      * 
      */
-    public Output<List<GlobalTableReplica>> getReplicas() {
+    public Output<List<GlobalTableReplica>> replicas() {
         return this.replicas;
     }
 

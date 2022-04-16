@@ -24,7 +24,7 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -46,7 +46,7 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class OrganizationRootGetArgs extends com.pulumi.resources.Resource
     @Import(name="policyTypes")
       private final @Nullable Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes;
 
-    public Output<List<OrganizationRootPolicyTypeGetArgs>> getPolicyTypes() {
+    public Output<List<OrganizationRootPolicyTypeGetArgs>> policyTypes() {
         return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
     }
 

@@ -24,7 +24,7 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class XssMatchSetState extends com.pulumi.resources.ResourceArgs {
     @Import(name="xssMatchTuples")
       private final @Nullable Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples;
 
-    public Output<List<XssMatchSetXssMatchTupleGetArgs>> getXssMatchTuples() {
+    public Output<List<XssMatchSetXssMatchTupleGetArgs>> xssMatchTuples() {
         return this.xssMatchTuples == null ? Codegen.empty() : this.xssMatchTuples;
     }
 

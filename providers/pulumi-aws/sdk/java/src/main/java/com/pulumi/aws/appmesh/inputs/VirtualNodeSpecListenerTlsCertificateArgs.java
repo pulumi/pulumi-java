@@ -24,7 +24,7 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
     @Import(name="acm")
       private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateAcmArgs> getAcm() {
+    public Output<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm() {
         return this.acm == null ? Codegen.empty() : this.acm;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileArgs> file;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateFileArgs> getFile() {
+    public Output<VirtualNodeSpecListenerTlsCertificateFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends com.pulumi.
     @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateSdsArgs> getSds() {
+    public Output<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds() {
         return this.sds == null ? Codegen.empty() : this.sds;
     }
 

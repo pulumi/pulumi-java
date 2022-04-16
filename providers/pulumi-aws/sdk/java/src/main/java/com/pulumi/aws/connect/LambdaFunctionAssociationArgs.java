@@ -21,7 +21,7 @@ public final class LambdaFunctionAssociationArgs extends com.pulumi.resources.Re
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -32,7 +32,7 @@ public final class LambdaFunctionAssociationArgs extends com.pulumi.resources.Re
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 

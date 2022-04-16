@@ -34,7 +34,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliases")
       private final @Nullable Output<List<String>> aliases;
 
-    public Output<List<String>> getAliases() {
+    public Output<List<String>> aliases() {
         return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
@@ -46,7 +46,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -57,7 +57,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customErrorResponses")
       private final @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
 
-    public Output<List<DistributionCustomErrorResponseArgs>> getCustomErrorResponses() {
+    public Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses() {
         return this.customErrorResponses == null ? Codegen.empty() : this.customErrorResponses;
     }
 
@@ -69,7 +69,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultCacheBehavior", required=true)
       private final Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
 
-    public Output<DistributionDefaultCacheBehaviorArgs> getDefaultCacheBehavior() {
+    public Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior() {
         return this.defaultCacheBehavior;
     }
 
@@ -81,7 +81,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultRootObject")
       private final @Nullable Output<String> defaultRootObject;
 
-    public Output<String> getDefaultRootObject() {
+    public Output<String> defaultRootObject() {
         return this.defaultRootObject == null ? Codegen.empty() : this.defaultRootObject;
     }
 
@@ -92,7 +92,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -105,7 +105,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpVersion")
       private final @Nullable Output<String> httpVersion;
 
-    public Output<String> getHttpVersion() {
+    public Output<String> httpVersion() {
         return this.httpVersion == null ? Codegen.empty() : this.httpVersion;
     }
 
@@ -116,7 +116,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isIpv6Enabled")
       private final @Nullable Output<Boolean> isIpv6Enabled;
 
-    public Output<Boolean> getIsIpv6Enabled() {
+    public Output<Boolean> isIpv6Enabled() {
         return this.isIpv6Enabled == null ? Codegen.empty() : this.isIpv6Enabled;
     }
 
@@ -129,7 +129,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
       private final @Nullable Output<DistributionLoggingConfigArgs> loggingConfig;
 
-    public Output<DistributionLoggingConfigArgs> getLoggingConfig() {
+    public Output<DistributionLoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -142,7 +142,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orderedCacheBehaviors")
       private final @Nullable Output<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors;
 
-    public Output<List<DistributionOrderedCacheBehaviorArgs>> getOrderedCacheBehaviors() {
+    public Output<List<DistributionOrderedCacheBehaviorArgs>> orderedCacheBehaviors() {
         return this.orderedCacheBehaviors == null ? Codegen.empty() : this.orderedCacheBehaviors;
     }
 
@@ -154,7 +154,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originGroups")
       private final @Nullable Output<List<DistributionOriginGroupArgs>> originGroups;
 
-    public Output<List<DistributionOriginGroupArgs>> getOriginGroups() {
+    public Output<List<DistributionOriginGroupArgs>> originGroups() {
         return this.originGroups == null ? Codegen.empty() : this.originGroups;
     }
 
@@ -166,7 +166,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="origins", required=true)
       private final Output<List<DistributionOriginArgs>> origins;
 
-    public Output<List<DistributionOriginArgs>> getOrigins() {
+    public Output<List<DistributionOriginArgs>> origins() {
         return this.origins;
     }
 
@@ -178,7 +178,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priceClass")
       private final @Nullable Output<String> priceClass;
 
-    public Output<String> getPriceClass() {
+    public Output<String> priceClass() {
         return this.priceClass == null ? Codegen.empty() : this.priceClass;
     }
 
@@ -190,7 +190,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restrictions", required=true)
       private final Output<DistributionRestrictionsArgs> restrictions;
 
-    public Output<DistributionRestrictionsArgs> getRestrictions() {
+    public Output<DistributionRestrictionsArgs> restrictions() {
         return this.restrictions;
     }
 
@@ -203,7 +203,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retainOnDelete")
       private final @Nullable Output<Boolean> retainOnDelete;
 
-    public Output<Boolean> getRetainOnDelete() {
+    public Output<Boolean> retainOnDelete() {
         return this.retainOnDelete == null ? Codegen.empty() : this.retainOnDelete;
     }
 
@@ -214,7 +214,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -227,7 +227,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="viewerCertificate", required=true)
       private final Output<DistributionViewerCertificateArgs> viewerCertificate;
 
-    public Output<DistributionViewerCertificateArgs> getViewerCertificate() {
+    public Output<DistributionViewerCertificateArgs> viewerCertificate() {
         return this.viewerCertificate;
     }
 
@@ -240,7 +240,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitForDeployment")
       private final @Nullable Output<Boolean> waitForDeployment;
 
-    public Output<Boolean> getWaitForDeployment() {
+    public Output<Boolean> waitForDeployment() {
         return this.waitForDeployment == null ? Codegen.empty() : this.waitForDeployment;
     }
 
@@ -257,7 +257,7 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webAclId")
       private final @Nullable Output<String> webAclId;
 
-    public Output<String> getWebAclId() {
+    public Output<String> webAclId() {
         return this.webAclId == null ? Codegen.empty() : this.webAclId;
     }
 

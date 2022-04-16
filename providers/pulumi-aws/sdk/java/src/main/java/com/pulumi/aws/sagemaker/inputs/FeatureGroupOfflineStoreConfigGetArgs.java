@@ -24,7 +24,7 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends com.pulumi.reso
     @Import(name="dataCatalogConfig")
       private final @Nullable Output<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> dataCatalogConfig;
 
-    public Output<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> getDataCatalogConfig() {
+    public Output<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> dataCatalogConfig() {
         return this.dataCatalogConfig == null ? Codegen.empty() : this.dataCatalogConfig;
     }
 
@@ -35,7 +35,7 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends com.pulumi.reso
     @Import(name="disableGlueTableCreation")
       private final @Nullable Output<Boolean> disableGlueTableCreation;
 
-    public Output<Boolean> getDisableGlueTableCreation() {
+    public Output<Boolean> disableGlueTableCreation() {
         return this.disableGlueTableCreation == null ? Codegen.empty() : this.disableGlueTableCreation;
     }
 
@@ -46,7 +46,7 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends com.pulumi.reso
     @Import(name="s3StorageConfig", required=true)
       private final Output<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig;
 
-    public Output<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> getS3StorageConfig() {
+    public Output<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig() {
         return this.s3StorageConfig;
     }
 

@@ -48,28 +48,28 @@ public final class CanaryTimeline {
      * Date and time the canary was created.
      * 
     */
-    public Optional<String> getCreated() {
+    public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Date and time the canary was most recently modified.
      * 
     */
-    public Optional<String> getLastModified() {
+    public Optional<String> lastModified() {
         return Optional.ofNullable(this.lastModified);
     }
     /**
      * Date and time that the canary's most recent run started.
      * 
     */
-    public Optional<String> getLastStarted() {
+    public Optional<String> lastStarted() {
         return Optional.ofNullable(this.lastStarted);
     }
     /**
      * Date and time that the canary's most recent run ended.
      * 
     */
-    public Optional<String> getLastStopped() {
+    public Optional<String> lastStopped() {
         return Optional.ofNullable(this.lastStopped);
     }
 

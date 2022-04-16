@@ -20,14 +20,14 @@ public final class GetListenerDefaultActionForwardTargetGroup extends com.pulumi
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
     @Import(name="weight", required=true)
       private final Integer weight;
 
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

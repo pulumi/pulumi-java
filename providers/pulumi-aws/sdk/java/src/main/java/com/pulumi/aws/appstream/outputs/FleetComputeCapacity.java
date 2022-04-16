@@ -48,28 +48,28 @@ public final class FleetComputeCapacity {
      * Number of currently available instances that can be used to stream sessions.
      * 
     */
-    public Optional<Integer> getAvailable() {
+    public Optional<Integer> available() {
         return Optional.ofNullable(this.available);
     }
     /**
      * Desired number of streaming instances.
      * 
     */
-    public Integer getDesiredInstances() {
+    public Integer desiredInstances() {
         return this.desiredInstances;
     }
     /**
      * Number of instances in use for streaming.
      * 
     */
-    public Optional<Integer> getInUse() {
+    public Optional<Integer> inUse() {
         return Optional.ofNullable(this.inUse);
     }
     /**
      * Total number of simultaneous streaming instances that are running.
      * 
     */
-    public Optional<Integer> getRunning() {
+    public Optional<Integer> running() {
         return Optional.ofNullable(this.running);
     }
 

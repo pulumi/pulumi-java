@@ -32,14 +32,14 @@ public final class GetBotAssociationLexBot {
      * The Region that the Amazon Lex (V1) bot was created in.
      * 
     */
-    public String getLexRegion() {
+    public String lexRegion() {
         return this.lexRegion;
     }
     /**
      * The name of the Amazon Lex (V1) bot.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

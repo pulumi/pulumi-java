@@ -23,7 +23,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
-    public Output<String> getCertificatePem() {
+    public Output<String> certificatePem() {
         return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
     }
 
@@ -56,7 +56,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateWallet")
       private final @Nullable Output<String> certificateWallet;
 
-    public Output<String> getCertificateWallet() {
+    public Output<String> certificateWallet() {
         return this.certificateWallet == null ? Codegen.empty() : this.certificateWallet;
     }
 
@@ -67,7 +67,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -78,7 +78,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

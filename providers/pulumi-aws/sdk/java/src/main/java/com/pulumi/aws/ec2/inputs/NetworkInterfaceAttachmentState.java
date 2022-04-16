@@ -23,7 +23,7 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
     @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
     @Import(name="deviceIndex")
       private final @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -67,7 +67,7 @@ public final class NetworkInterfaceAttachmentState extends com.pulumi.resources.
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

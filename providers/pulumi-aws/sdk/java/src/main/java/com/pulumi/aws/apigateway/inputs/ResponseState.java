@@ -23,7 +23,7 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseParameters")
       private final @Nullable Output<Map<String,String>> responseParameters;
 
-    public Output<Map<String,String>> getResponseParameters() {
+    public Output<Map<String,String>> responseParameters() {
         return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
@@ -34,7 +34,7 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> getResponseTemplates() {
+    public Output<Map<String,String>> responseTemplates() {
         return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
@@ -45,7 +45,7 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="responseType")
       private final @Nullable Output<String> responseType;
 
-    public Output<String> getResponseType() {
+    public Output<String> responseType() {
         return this.responseType == null ? Codegen.empty() : this.responseType;
     }
 
@@ -56,7 +56,7 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 
@@ -67,7 +67,7 @@ public final class ResponseState extends com.pulumi.resources.ResourceArgs {
     @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 

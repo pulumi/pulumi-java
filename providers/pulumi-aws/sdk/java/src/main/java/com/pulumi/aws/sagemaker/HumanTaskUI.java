@@ -42,7 +42,7 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Human Task UI.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @return The name of the Human Task UI.
      * 
      */
-    public Output<String> getHumanTaskUiName() {
+    public Output<String> humanTaskUiName() {
         return this.humanTaskUiName;
     }
     /**
@@ -70,7 +70,7 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -84,7 +84,7 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -98,7 +98,7 @@ public class HumanTaskUI extends com.pulumi.resources.CustomResource {
      * @return The Liquid template for the worker user interface. See UI Template below.
      * 
      */
-    public Output<HumanTaskUIUiTemplate> getUiTemplate() {
+    public Output<HumanTaskUIUiTemplate> uiTemplate() {
         return this.uiTemplate;
     }
 

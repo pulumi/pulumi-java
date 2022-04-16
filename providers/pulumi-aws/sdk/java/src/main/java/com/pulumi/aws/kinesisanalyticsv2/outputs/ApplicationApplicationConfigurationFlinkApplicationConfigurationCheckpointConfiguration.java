@@ -53,14 +53,14 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the interval in milliseconds between checkpoint operations.
      * 
     */
-    public Optional<Integer> getCheckpointInterval() {
+    public Optional<Integer> checkpointInterval() {
         return Optional.ofNullable(this.checkpointInterval);
     }
     /**
      * Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
      * 
     */
-    public Optional<Boolean> getCheckpointingEnabled() {
+    public Optional<Boolean> checkpointingEnabled() {
         return Optional.ofNullable(this.checkpointingEnabled);
     }
     /**
@@ -70,14 +70,14 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * * `min_pause_between_checkpoints = 5000`
      * 
     */
-    public String getConfigurationType() {
+    public String configurationType() {
         return this.configurationType;
     }
     /**
      * Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
      * 
     */
-    public Optional<Integer> getMinPauseBetweenCheckpoints() {
+    public Optional<Integer> minPauseBetweenCheckpoints() {
         return Optional.ofNullable(this.minPauseBetweenCheckpoints);
     }
 

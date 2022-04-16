@@ -40,7 +40,7 @@ public class EmailIdentity extends com.pulumi.resources.CustomResource {
      * @return The ARN of the email identity.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class EmailIdentity extends com.pulumi.resources.CustomResource {
      * @return The email address to assign to SES
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 

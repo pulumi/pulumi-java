@@ -23,7 +23,7 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
     @Import(name="peerAccountId")
       private final @Nullable Output<String> peerAccountId;
 
-    public Output<String> getPeerAccountId() {
+    public Output<String> peerAccountId() {
         return this.peerAccountId == null ? Codegen.empty() : this.peerAccountId;
     }
 
@@ -34,7 +34,7 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
     @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion == null ? Codegen.empty() : this.peerRegion;
     }
 
@@ -45,7 +45,7 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
     @Import(name="peerTransitGatewayId")
       private final @Nullable Output<String> peerTransitGatewayId;
 
-    public Output<String> getPeerTransitGatewayId() {
+    public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId == null ? Codegen.empty() : this.peerTransitGatewayId;
     }
 
@@ -56,7 +56,7 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -78,7 +78,7 @@ public final class PeeringAttachmentState extends com.pulumi.resources.ResourceA
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 

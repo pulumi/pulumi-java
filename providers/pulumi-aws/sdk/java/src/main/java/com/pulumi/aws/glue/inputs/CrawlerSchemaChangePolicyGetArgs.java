@@ -22,7 +22,7 @@ public final class CrawlerSchemaChangePolicyGetArgs extends com.pulumi.resources
     @Import(name="deleteBehavior")
       private final @Nullable Output<String> deleteBehavior;
 
-    public Output<String> getDeleteBehavior() {
+    public Output<String> deleteBehavior() {
         return this.deleteBehavior == null ? Codegen.empty() : this.deleteBehavior;
     }
 
@@ -33,7 +33,7 @@ public final class CrawlerSchemaChangePolicyGetArgs extends com.pulumi.resources
     @Import(name="updateBehavior")
       private final @Nullable Output<String> updateBehavior;
 
-    public Output<String> getUpdateBehavior() {
+    public Output<String> updateBehavior() {
         return this.updateBehavior == null ? Codegen.empty() : this.updateBehavior;
     }
 

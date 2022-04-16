@@ -21,7 +21,7 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="quotaCode")
       private final @Nullable String quotaCode;
 
-    public Optional<String> getQuotaCode() {
+    public Optional<String> quotaCode() {
         return this.quotaCode == null ? Optional.empty() : Optional.ofNullable(this.quotaCode);
     }
 
@@ -32,7 +32,7 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="quotaName")
       private final @Nullable String quotaName;
 
-    public Optional<String> getQuotaName() {
+    public Optional<String> quotaName() {
         return this.quotaName == null ? Optional.empty() : Optional.ofNullable(this.quotaName);
     }
 
@@ -43,7 +43,7 @@ public final class GetServiceQuotaArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceCode", required=true)
       private final String serviceCode;
 
-    public String getServiceCode() {
+    public String serviceCode() {
         return this.serviceCode;
     }
 

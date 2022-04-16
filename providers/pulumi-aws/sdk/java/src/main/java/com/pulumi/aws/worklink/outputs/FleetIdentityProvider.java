@@ -32,14 +32,14 @@ public final class FleetIdentityProvider {
      * The SAML metadata document provided by the customer’s identity provider.
      * 
     */
-    public String getSamlMetadata() {
+    public String samlMetadata() {
         return this.samlMetadata;
     }
     /**
      * The type of identity provider.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

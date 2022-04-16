@@ -25,7 +25,7 @@ public final class WebAclRuleStatementAndStatementStatementNotStatement {
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementAndStatementStatementNotStatementStatement> getStatements() {
+    public List<WebAclRuleStatementAndStatementStatementNotStatementStatement> statements() {
         return this.statements;
     }
 

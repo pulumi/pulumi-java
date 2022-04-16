@@ -23,7 +23,7 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
     @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> getClientPolicy() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy() {
         return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends com.pulum
     @Import(name="virtualServiceName", required=true)
       private final Output<String> virtualServiceName;
 
-    public Output<String> getVirtualServiceName() {
+    public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
 

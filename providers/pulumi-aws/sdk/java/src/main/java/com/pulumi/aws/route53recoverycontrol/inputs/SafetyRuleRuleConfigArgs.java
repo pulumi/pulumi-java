@@ -23,7 +23,7 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="inverted", required=true)
       private final Output<Boolean> inverted;
 
-    public Output<Boolean> getInverted() {
+    public Output<Boolean> inverted() {
         return this.inverted;
     }
 
@@ -34,7 +34,7 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="threshold", required=true)
       private final Output<Integer> threshold;
 
-    public Output<Integer> getThreshold() {
+    public Output<Integer> threshold() {
         return this.threshold;
     }
 
@@ -45,7 +45,7 @@ public final class SafetyRuleRuleConfigArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

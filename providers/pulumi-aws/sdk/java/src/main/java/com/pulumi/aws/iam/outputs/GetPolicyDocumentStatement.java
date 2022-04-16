@@ -87,63 +87,63 @@ public final class GetPolicyDocumentStatement {
      * List of actions that this statement either allows or denies. For example, `["ec2:RunInstances", "s3:*"]`.
      * 
     */
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * Configuration block for a condition. Detailed below.
      * 
     */
-    public List<GetPolicyDocumentStatementCondition> getConditions() {
+    public List<GetPolicyDocumentStatementCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * Whether this statement allows or denies the given actions. Valid values are `Allow` and `Deny`. Defaults to `Allow`.
      * 
     */
-    public Optional<String> getEffect() {
+    public Optional<String> effect() {
         return Optional.ofNullable(this.effect);
     }
     /**
      * List of actions that this statement does *not* apply to. Use to apply a policy statement to all actions *except* those listed.
      * 
     */
-    public List<String> getNotActions() {
+    public List<String> notActions() {
         return this.notActions == null ? List.of() : this.notActions;
     }
     /**
      * Like `principals` except these are principals that the statement does *not* apply to.
      * 
     */
-    public List<GetPolicyDocumentStatementNotPrincipal> getNotPrincipals() {
+    public List<GetPolicyDocumentStatementNotPrincipal> notPrincipals() {
         return this.notPrincipals == null ? List.of() : this.notPrincipals;
     }
     /**
      * List of resource ARNs that this statement does *not* apply to. Use to apply a policy statement to all resources *except* those listed. Conflicts with `resources`.
      * 
     */
-    public List<String> getNotResources() {
+    public List<String> notResources() {
         return this.notResources == null ? List.of() : this.notResources;
     }
     /**
      * Configuration block for principals. Detailed below.
      * 
     */
-    public List<GetPolicyDocumentStatementPrincipal> getPrincipals() {
+    public List<GetPolicyDocumentStatementPrincipal> principals() {
         return this.principals == null ? List.of() : this.principals;
     }
     /**
      * List of resource ARNs that this statement applies to. This is required by AWS if used for an IAM policy. Conflicts with `not_resources`.
      * 
     */
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
      * Sid (statement ID) is an identifier for a policy statement.
      * 
     */
-    public Optional<String> getSid() {
+    public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
 

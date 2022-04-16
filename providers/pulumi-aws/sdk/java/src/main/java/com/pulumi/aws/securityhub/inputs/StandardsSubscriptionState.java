@@ -22,7 +22,7 @@ public final class StandardsSubscriptionState extends com.pulumi.resources.Resou
     @Import(name="standardsArn")
       private final @Nullable Output<String> standardsArn;
 
-    public Output<String> getStandardsArn() {
+    public Output<String> standardsArn() {
         return this.standardsArn == null ? Codegen.empty() : this.standardsArn;
     }
 

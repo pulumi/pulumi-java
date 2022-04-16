@@ -26,7 +26,7 @@ public final class IntentConclusionStatementGetArgs extends com.pulumi.resources
     @Import(name="messages", required=true)
       private final Output<List<IntentConclusionStatementMessageGetArgs>> messages;
 
-    public Output<List<IntentConclusionStatementMessageGetArgs>> getMessages() {
+    public Output<List<IntentConclusionStatementMessageGetArgs>> messages() {
         return this.messages;
     }
 
@@ -39,7 +39,7 @@ public final class IntentConclusionStatementGetArgs extends com.pulumi.resources
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
+    public Output<String> responseCard() {
         return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 

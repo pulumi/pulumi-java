@@ -92,71 +92,71 @@ public final class GetTableResult {
         this.writeCapacity = writeCapacity;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<GetTableAttribute> getAttributes() {
+    public List<GetTableAttribute> attributes() {
         return this.attributes;
     }
-    public String getBillingMode() {
+    public String billingMode() {
         return this.billingMode;
     }
-    public List<GetTableGlobalSecondaryIndex> getGlobalSecondaryIndexes() {
+    public List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes() {
         return this.globalSecondaryIndexes;
     }
-    public String getHashKey() {
+    public String hashKey() {
         return this.hashKey;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetTableLocalSecondaryIndex> getLocalSecondaryIndexes() {
+    public List<GetTableLocalSecondaryIndex> localSecondaryIndexes() {
         return this.localSecondaryIndexes;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public GetTablePointInTimeRecovery getPointInTimeRecovery() {
+    public GetTablePointInTimeRecovery pointInTimeRecovery() {
         return this.pointInTimeRecovery;
     }
-    public String getRangeKey() {
+    public String rangeKey() {
         return this.rangeKey;
     }
-    public Integer getReadCapacity() {
+    public Integer readCapacity() {
         return this.readCapacity;
     }
-    public List<GetTableReplica> getReplicas() {
+    public List<GetTableReplica> replicas() {
         return this.replicas;
     }
-    public GetTableServerSideEncryption getServerSideEncryption() {
+    public GetTableServerSideEncryption serverSideEncryption() {
         return this.serverSideEncryption;
     }
-    public String getStreamArn() {
+    public String streamArn() {
         return this.streamArn;
     }
-    public Boolean getStreamEnabled() {
+    public Boolean streamEnabled() {
         return this.streamEnabled;
     }
-    public String getStreamLabel() {
+    public String streamLabel() {
         return this.streamLabel;
     }
-    public String getStreamViewType() {
+    public String streamViewType() {
         return this.streamViewType;
     }
-    public String getTableClass() {
+    public String tableClass() {
         return this.tableClass;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public GetTableTtl getTtl() {
+    public GetTableTtl ttl() {
         return this.ttl;
     }
-    public Integer getWriteCapacity() {
+    public Integer writeCapacity() {
         return this.writeCapacity;
     }
 

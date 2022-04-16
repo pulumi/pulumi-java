@@ -20,7 +20,7 @@ public final class GetClusterIdentity extends com.pulumi.resources.InvokeArgs {
     @Import(name="oidcs", required=true)
       private final List<GetClusterIdentityOidc> oidcs;
 
-    public List<GetClusterIdentityOidc> getOidcs() {
+    public List<GetClusterIdentityOidc> oidcs() {
         return this.oidcs;
     }
 

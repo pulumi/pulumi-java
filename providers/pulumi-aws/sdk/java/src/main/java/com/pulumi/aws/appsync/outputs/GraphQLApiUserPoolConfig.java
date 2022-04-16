@@ -48,28 +48,28 @@ public final class GraphQLApiUserPoolConfig {
      * A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
      * 
     */
-    public Optional<String> getAppIdClientRegex() {
+    public Optional<String> appIdClientRegex() {
         return Optional.ofNullable(this.appIdClientRegex);
     }
     /**
      * The AWS region in which the user pool was created.
      * 
     */
-    public Optional<String> getAwsRegion() {
+    public Optional<String> awsRegion() {
         return Optional.ofNullable(this.awsRegion);
     }
     /**
      * The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn't match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
      * 
     */
-    public String getDefaultAction() {
+    public String defaultAction() {
         return this.defaultAction;
     }
     /**
      * The user pool ID.
      * 
     */
-    public String getUserPoolId() {
+    public String userPoolId() {
         return this.userPoolId;
     }
 

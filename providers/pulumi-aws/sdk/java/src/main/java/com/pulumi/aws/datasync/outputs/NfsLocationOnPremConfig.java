@@ -25,7 +25,7 @@ public final class NfsLocationOnPremConfig {
      * List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
      * 
     */
-    public List<String> getAgentArns() {
+    public List<String> agentArns() {
         return this.agentArns;
     }
 

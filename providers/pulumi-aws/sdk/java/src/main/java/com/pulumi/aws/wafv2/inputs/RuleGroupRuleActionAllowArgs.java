@@ -22,7 +22,7 @@ public final class RuleGroupRuleActionAllowArgs extends com.pulumi.resources.Res
     @Import(name="customRequestHandling")
       private final @Nullable Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> getCustomRequestHandling() {
+    public Output<RuleGroupRuleActionAllowCustomRequestHandlingArgs> customRequestHandling() {
         return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 

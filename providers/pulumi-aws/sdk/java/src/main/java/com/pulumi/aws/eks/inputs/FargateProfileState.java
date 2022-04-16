@@ -25,7 +25,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -47,7 +47,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
 
-    public Output<String> getFargateProfileName() {
+    public Output<String> fargateProfileName() {
         return this.fargateProfileName == null ? Codegen.empty() : this.fargateProfileName;
     }
 
@@ -58,7 +58,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="podExecutionRoleArn")
       private final @Nullable Output<String> podExecutionRoleArn;
 
-    public Output<String> getPodExecutionRoleArn() {
+    public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn == null ? Codegen.empty() : this.podExecutionRoleArn;
     }
 
@@ -69,7 +69,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="selectors")
       private final @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
 
-    public Output<List<FargateProfileSelectorGetArgs>> getSelectors() {
+    public Output<List<FargateProfileSelectorGetArgs>> selectors() {
         return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
@@ -80,7 +80,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -91,7 +91,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -102,7 +102,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class FargateProfileState extends com.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

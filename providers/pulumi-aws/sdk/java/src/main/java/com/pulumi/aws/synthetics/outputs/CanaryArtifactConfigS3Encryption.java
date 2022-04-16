@@ -34,14 +34,14 @@ public final class CanaryArtifactConfigS3Encryption {
      * The encryption method to use for artifacts created by this canary. Valid values are: `SSE-S3` and `SSE-KMS`.
      * 
     */
-    public Optional<String> getEncryptionMode() {
+    public Optional<String> encryptionMode() {
         return Optional.ofNullable(this.encryptionMode);
     }
     /**
      * The ARN of the customer-managed KMS key to use, if you specify `SSE-KMS` for `encryption_mode`.
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
 

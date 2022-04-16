@@ -44,21 +44,21 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
      * A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
      * 
     */
-    public List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> getCustomImages() {
+    public List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages() {
         return this.customImages == null ? List.of() : this.customImages;
     }
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
     */
-    public Optional<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec> getDefaultResourceSpec() {
+    public Optional<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
     /**
      * The Amazon Resource Name (ARN) of the Lifecycle Configurations.
      * 
     */
-    public List<String> getLifecycleConfigArns() {
+    public List<String> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? List.of() : this.lifecycleConfigArns;
     }
 

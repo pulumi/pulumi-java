@@ -21,7 +21,7 @@ public final class ClusterEncryptionConfigProviderArgs extends com.pulumi.resour
     @Import(name="keyArn", required=true)
       private final Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn;
     }
 

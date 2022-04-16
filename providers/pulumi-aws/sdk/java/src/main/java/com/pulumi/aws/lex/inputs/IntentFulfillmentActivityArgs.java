@@ -24,7 +24,7 @@ public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.Re
     @Import(name="codeHook")
       private final @Nullable Output<IntentFulfillmentActivityCodeHookArgs> codeHook;
 
-    public Output<IntentFulfillmentActivityCodeHookArgs> getCodeHook() {
+    public Output<IntentFulfillmentActivityCodeHookArgs> codeHook() {
         return this.codeHook == null ? Codegen.empty() : this.codeHook;
     }
 
@@ -36,7 +36,7 @@ public final class IntentFulfillmentActivityArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

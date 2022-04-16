@@ -99,14 +99,14 @@ public final class GetDistributionResult {
      * A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
      * 
     */
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases;
     }
     /**
      * The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
@@ -114,10 +114,10 @@ public final class GetDistributionResult {
      * example: `d604721fxaaqy9.cloudfront.net`.
      * 
     */
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
@@ -125,7 +125,7 @@ public final class GetDistributionResult {
      * `E2QWRUHAPOMQZL`.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
@@ -134,14 +134,14 @@ public final class GetDistributionResult {
      * alias for the zone ID `Z2FDTNDATAQYW2`.
      * 
     */
-    public String getHostedZoneId() {
+    public String hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
      * The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -149,14 +149,14 @@ public final class GetDistributionResult {
      * currently in progress.
      * 
     */
-    public Integer getInProgressValidationBatches() {
+    public Integer inProgressValidationBatches() {
         return this.inProgressValidationBatches;
     }
     /**
      * The date and time the distribution was last modified.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -165,10 +165,10 @@ public final class GetDistributionResult {
      * CloudFront system.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

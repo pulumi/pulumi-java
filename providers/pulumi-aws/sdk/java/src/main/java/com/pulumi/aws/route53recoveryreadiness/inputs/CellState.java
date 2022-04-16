@@ -24,7 +24,7 @@ public final class CellState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class CellState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cellName")
       private final @Nullable Output<String> cellName;
 
-    public Output<String> getCellName() {
+    public Output<String> cellName() {
         return this.cellName == null ? Codegen.empty() : this.cellName;
     }
 
@@ -46,7 +46,7 @@ public final class CellState extends com.pulumi.resources.ResourceArgs {
     @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> getCells() {
+    public Output<List<String>> cells() {
         return this.cells == null ? Codegen.empty() : this.cells;
     }
 
@@ -57,7 +57,7 @@ public final class CellState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentReadinessScopes")
       private final @Nullable Output<List<String>> parentReadinessScopes;
 
-    public Output<List<String>> getParentReadinessScopes() {
+    public Output<List<String>> parentReadinessScopes() {
         return this.parentReadinessScopes == null ? Codegen.empty() : this.parentReadinessScopes;
     }
 
@@ -68,7 +68,7 @@ public final class CellState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class CellState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

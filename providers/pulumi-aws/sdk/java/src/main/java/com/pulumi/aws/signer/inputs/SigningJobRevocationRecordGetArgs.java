@@ -18,21 +18,21 @@ public final class SigningJobRevocationRecordGetArgs extends com.pulumi.resource
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     @Import(name="revokedAt")
       private final @Nullable Output<String> revokedAt;
 
-    public Output<String> getRevokedAt() {
+    public Output<String> revokedAt() {
         return this.revokedAt == null ? Codegen.empty() : this.revokedAt;
     }
 
     @Import(name="revokedBy")
       private final @Nullable Output<String> revokedBy;
 
-    public Output<String> getRevokedBy() {
+    public Output<String> revokedBy() {
         return this.revokedBy == null ? Codegen.empty() : this.revokedBy;
     }
 

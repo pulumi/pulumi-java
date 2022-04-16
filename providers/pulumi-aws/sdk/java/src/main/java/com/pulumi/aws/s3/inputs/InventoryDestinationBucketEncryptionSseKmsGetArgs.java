@@ -21,7 +21,7 @@ public final class InventoryDestinationBucketEncryptionSseKmsGetArgs extends com
     @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
 

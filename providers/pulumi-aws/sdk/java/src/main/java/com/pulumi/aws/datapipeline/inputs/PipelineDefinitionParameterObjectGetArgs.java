@@ -20,7 +20,7 @@ public final class PipelineDefinitionParameterObjectGetArgs extends com.pulumi.r
     @Import(name="attributes")
       private final @Nullable Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes;
 
-    public Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> getAttributes() {
+    public Output<List<PipelineDefinitionParameterObjectAttributeGetArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -31,7 +31,7 @@ public final class PipelineDefinitionParameterObjectGetArgs extends com.pulumi.r
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

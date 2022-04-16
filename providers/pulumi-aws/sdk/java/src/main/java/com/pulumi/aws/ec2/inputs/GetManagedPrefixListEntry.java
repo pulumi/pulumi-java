@@ -15,14 +15,14 @@ public final class GetManagedPrefixListEntry extends com.pulumi.resources.Invoke
     @Import(name="cidr", required=true)
       private final String cidr;
 
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 

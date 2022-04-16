@@ -22,7 +22,7 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
     @Import(name="invitationId")
       private final @Nullable Output<String> invitationId;
 
-    public Output<String> getInvitationId() {
+    public Output<String> invitationId() {
         return this.invitationId == null ? Codegen.empty() : this.invitationId;
     }
 
@@ -33,7 +33,7 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
     @Import(name="masterId")
       private final @Nullable Output<String> masterId;
 
-    public Output<String> getMasterId() {
+    public Output<String> masterId() {
         return this.masterId == null ? Codegen.empty() : this.masterId;
     }
 

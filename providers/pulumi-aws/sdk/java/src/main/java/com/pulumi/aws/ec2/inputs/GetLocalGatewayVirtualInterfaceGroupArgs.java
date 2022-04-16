@@ -24,7 +24,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
     @Import(name="filters")
       private final @Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters;
 
-    public List<GetLocalGatewayVirtualInterfaceGroupFilter> getFilters() {
+    public List<GetLocalGatewayVirtualInterfaceGroupFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -46,7 +46,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
     @Import(name="localGatewayId")
       private final @Nullable String localGatewayId;
 
-    public Optional<String> getLocalGatewayId() {
+    public Optional<String> localGatewayId() {
         return this.localGatewayId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayId);
     }
 
@@ -57,7 +57,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends com.pulumi.r
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

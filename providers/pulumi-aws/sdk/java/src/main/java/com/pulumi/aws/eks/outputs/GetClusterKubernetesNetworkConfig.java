@@ -24,14 +24,14 @@ public final class GetClusterKubernetesNetworkConfig {
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }
 
-    public String getIpFamily() {
+    public String ipFamily() {
         return this.ipFamily;
     }
     /**
      * The CIDR block to assign Kubernetes service IP addresses from.
      * 
     */
-    public String getServiceIpv4Cidr() {
+    public String serviceIpv4Cidr() {
         return this.serviceIpv4Cidr;
     }
 

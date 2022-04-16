@@ -102,80 +102,80 @@ public final class GetStackResult {
      * A list of capabilities
      * 
     */
-    public List<String> getCapabilities() {
+    public List<String> capabilities() {
         return this.capabilities;
     }
     /**
      * Description of the stack
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Whether the rollback of the stack is disabled when stack creation fails
      * 
     */
-    public Boolean getDisableRollback() {
+    public Boolean disableRollback() {
         return this.disableRollback;
     }
     /**
      * The ARN of the IAM role used to create the stack.
      * 
     */
-    public String getIamRoleArn() {
+    public String iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of SNS topic ARNs to publish stack related events
      * 
     */
-    public List<String> getNotificationArns() {
+    public List<String> notificationArns() {
         return this.notificationArns;
     }
     /**
      * A map of outputs from the stack.
      * 
     */
-    public Map<String,String> getOutputs() {
+    public Map<String,String> outputs() {
         return this.outputs;
     }
     /**
      * A map of parameters that specify input parameters for the stack.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters;
     }
     /**
      * A map of tags associated with this stack.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Structure containing the template body.
      * 
     */
-    public String getTemplateBody() {
+    public String templateBody() {
         return this.templateBody;
     }
     /**
      * The amount of time that can pass before the stack status becomes `CREATE_FAILED`
      * 
     */
-    public Integer getTimeoutInMinutes() {
+    public Integer timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 

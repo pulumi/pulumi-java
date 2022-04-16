@@ -22,7 +22,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends com.
     @Import(name="deliveryFrequency")
       private final @Nullable Output<String> deliveryFrequency;
 
-    public Output<String> getDeliveryFrequency() {
+    public Output<String> deliveryFrequency() {
         return this.deliveryFrequency == null ? Codegen.empty() : this.deliveryFrequency;
     }
 

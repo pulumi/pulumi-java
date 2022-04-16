@@ -19,7 +19,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -30,7 +30,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -41,7 +41,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 
@@ -52,7 +52,7 @@ public final class GetGroupUser extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

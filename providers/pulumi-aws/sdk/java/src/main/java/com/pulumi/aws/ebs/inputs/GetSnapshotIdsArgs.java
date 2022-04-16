@@ -25,7 +25,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetSnapshotIdsFilter> filters;
 
-    public List<GetSnapshotIdsFilter> getFilters() {
+    public List<GetSnapshotIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owners")
       private final @Nullable List<String> owners;
 
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners == null ? List.of() : this.owners;
     }
 
@@ -47,7 +47,7 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restorableByUserIds")
       private final @Nullable List<String> restorableByUserIds;
 
-    public List<String> getRestorableByUserIds() {
+    public List<String> restorableByUserIds() {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
     }
 

@@ -24,7 +24,7 @@ public final class GroupInstanceRefreshGetArgs extends com.pulumi.resources.Reso
     @Import(name="preferences")
       private final @Nullable Output<GroupInstanceRefreshPreferencesGetArgs> preferences;
 
-    public Output<GroupInstanceRefreshPreferencesGetArgs> getPreferences() {
+    public Output<GroupInstanceRefreshPreferencesGetArgs> preferences() {
         return this.preferences == null ? Codegen.empty() : this.preferences;
     }
 
@@ -35,7 +35,7 @@ public final class GroupInstanceRefreshGetArgs extends com.pulumi.resources.Reso
     @Import(name="strategy", required=true)
       private final Output<String> strategy;
 
-    public Output<String> getStrategy() {
+    public Output<String> strategy() {
         return this.strategy;
     }
 
@@ -46,7 +46,7 @@ public final class GroupInstanceRefreshGetArgs extends com.pulumi.resources.Reso
     @Import(name="triggers")
       private final @Nullable Output<List<String>> triggers;
 
-    public Output<List<String>> getTriggers() {
+    public Output<List<String>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

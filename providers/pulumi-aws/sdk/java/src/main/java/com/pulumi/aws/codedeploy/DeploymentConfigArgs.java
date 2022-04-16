@@ -24,7 +24,7 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
-    public Output<String> getComputePlatform() {
+    public Output<String> computePlatform() {
         return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deploymentConfigName", required=true)
       private final Output<String> deploymentConfigName;
 
-    public Output<String> getDeploymentConfigName() {
+    public Output<String> deploymentConfigName() {
         return this.deploymentConfigName;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="minimumHealthyHosts")
       private final @Nullable Output<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts;
 
-    public Output<DeploymentConfigMinimumHealthyHostsArgs> getMinimumHealthyHosts() {
+    public Output<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts() {
         return this.minimumHealthyHosts == null ? Codegen.empty() : this.minimumHealthyHosts;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
     @Import(name="trafficRoutingConfig")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig;
 
-    public Output<DeploymentConfigTrafficRoutingConfigArgs> getTrafficRoutingConfig() {
+    public Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig() {
         return this.trafficRoutingConfig == null ? Codegen.empty() : this.trafficRoutingConfig;
     }
 

@@ -28,7 +28,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="completionWindow")
       private final @Nullable Output<Integer> completionWindow;
 
-    public Output<Integer> getCompletionWindow() {
+    public Output<Integer> completionWindow() {
         return this.completionWindow == null ? Codegen.empty() : this.completionWindow;
     }
 
@@ -39,7 +39,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="copyActions")
       private final @Nullable Output<List<PlanRuleCopyActionArgs>> copyActions;
 
-    public Output<List<PlanRuleCopyActionArgs>> getCopyActions() {
+    public Output<List<PlanRuleCopyActionArgs>> copyActions() {
         return this.copyActions == null ? Codegen.empty() : this.copyActions;
     }
 
@@ -50,7 +50,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableContinuousBackup")
       private final @Nullable Output<Boolean> enableContinuousBackup;
 
-    public Output<Boolean> getEnableContinuousBackup() {
+    public Output<Boolean> enableContinuousBackup() {
         return this.enableContinuousBackup == null ? Codegen.empty() : this.enableContinuousBackup;
     }
 
@@ -61,7 +61,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lifecycle")
       private final @Nullable Output<PlanRuleLifecycleArgs> lifecycle;
 
-    public Output<PlanRuleLifecycleArgs> getLifecycle() {
+    public Output<PlanRuleLifecycleArgs> lifecycle() {
         return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
@@ -72,7 +72,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recoveryPointTags")
       private final @Nullable Output<Map<String,String>> recoveryPointTags;
 
-    public Output<Map<String,String>> getRecoveryPointTags() {
+    public Output<Map<String,String>> recoveryPointTags() {
         return this.recoveryPointTags == null ? Codegen.empty() : this.recoveryPointTags;
     }
 
@@ -83,7 +83,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleName", required=true)
       private final Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -94,7 +94,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -105,7 +105,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startWindow")
       private final @Nullable Output<Integer> startWindow;
 
-    public Output<Integer> getStartWindow() {
+    public Output<Integer> startWindow() {
         return this.startWindow == null ? Codegen.empty() : this.startWindow;
     }
 
@@ -116,7 +116,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetVaultName", required=true)
       private final Output<String> targetVaultName;
 
-    public Output<String> getTargetVaultName() {
+    public Output<String> targetVaultName() {
         return this.targetVaultName;
     }
 

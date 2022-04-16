@@ -44,7 +44,7 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the event archive.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return The description of the new event archive.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return Instructs the new event archive to only capture events matched by this pattern. By default, it attempts to archive every event received in the `event_source_arn`.
      * 
      */
-    public Output</* @Nullable */ String> getEventPattern() {
+    public Output</* @Nullable */ String> eventPattern() {
         return this.eventPattern;
     }
     /**
@@ -86,7 +86,7 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return Event bus source ARN from where these events should be archived.
      * 
      */
-    public Output<String> getEventSourceArn() {
+    public Output<String> eventSourceArn() {
         return this.eventSourceArn;
     }
     /**
@@ -100,7 +100,7 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return The name of the new event archive. The archive name cannot exceed 48 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return The maximum number of days to retain events in the new event archive. By default, it archives indefinitely.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
 

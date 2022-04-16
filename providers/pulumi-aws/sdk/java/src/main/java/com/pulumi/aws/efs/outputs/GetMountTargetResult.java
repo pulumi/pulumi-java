@@ -103,90 +103,90 @@ public final class GetMountTargetResult {
         this.subnetId = subnetId;
     }
 
-    public Optional<String> getAccessPointId() {
+    public Optional<String> accessPointId() {
         return Optional.ofNullable(this.accessPointId);
     }
     /**
      * The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
      * 
     */
-    public String getAvailabilityZoneId() {
+    public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * The name of the Availability Zone (AZ) that the mount target resides in.
      * 
     */
-    public String getAvailabilityZoneName() {
+    public String availabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
      * The DNS name for the EFS file system.
      * 
     */
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
     /**
      * Amazon Resource Name of the file system for which the mount target is intended.
      * 
     */
-    public String getFileSystemArn() {
+    public String fileSystemArn() {
         return this.fileSystemArn;
     }
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Address at which the file system may be mounted via the mount target.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
     */
-    public String getMountTargetDnsName() {
+    public String mountTargetDnsName() {
         return this.mountTargetDnsName;
     }
-    public String getMountTargetId() {
+    public String mountTargetId() {
         return this.mountTargetId;
     }
     /**
      * The ID of the network interface that Amazon EFS created when it created the mount target.
      * 
     */
-    public String getNetworkInterfaceId() {
+    public String networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * AWS account ID that owns the resource.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * List of VPC security group IDs attached to the mount target.
      * 
     */
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups;
     }
     /**
      * ID of the mount target's subnet.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

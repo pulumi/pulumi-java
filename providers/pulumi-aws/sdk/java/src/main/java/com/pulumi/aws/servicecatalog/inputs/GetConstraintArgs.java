@@ -21,7 +21,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -32,7 +32,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -43,7 +43,7 @@ public final class GetConstraintArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

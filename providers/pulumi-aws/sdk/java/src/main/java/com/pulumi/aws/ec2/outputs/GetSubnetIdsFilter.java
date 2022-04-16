@@ -38,7 +38,7 @@ public final class GetSubnetIdsFilter {
      * For example, if matching against tag `Name`, use:
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -46,7 +46,7 @@ public final class GetSubnetIdsFilter {
      * Subnet IDs will be selected if any one of the given values match.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

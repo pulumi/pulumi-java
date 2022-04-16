@@ -41,7 +41,7 @@ public class BucketMetric extends com.pulumi.resources.CustomResource {
      * @return The name of the bucket to put metric configuration.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -55,7 +55,7 @@ public class BucketMetric extends com.pulumi.resources.CustomResource {
      * @return [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    public Output</* @Nullable */ BucketMetricFilter> getFilter() {
+    public Output</* @Nullable */ BucketMetricFilter> filter() {
         return this.filter;
     }
     /**
@@ -69,7 +69,7 @@ public class BucketMetric extends com.pulumi.resources.CustomResource {
      * @return Unique identifier of the metrics configuration for the bucket.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

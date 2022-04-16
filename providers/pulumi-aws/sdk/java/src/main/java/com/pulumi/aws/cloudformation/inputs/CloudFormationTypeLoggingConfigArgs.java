@@ -21,7 +21,7 @@ public final class CloudFormationTypeLoggingConfigArgs extends com.pulumi.resour
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
@@ -32,7 +32,7 @@ public final class CloudFormationTypeLoggingConfigArgs extends com.pulumi.resour
     @Import(name="logRoleArn", required=true)
       private final Output<String> logRoleArn;
 
-    public Output<String> getLogRoleArn() {
+    public Output<String> logRoleArn() {
         return this.logRoleArn;
     }
 

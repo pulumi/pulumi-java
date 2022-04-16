@@ -24,7 +24,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="additionalArtifacts")
       private final @Nullable Output<List<String>> additionalArtifacts;
 
-    public Output<List<String>> getAdditionalArtifacts() {
+    public Output<List<String>> additionalArtifacts() {
         return this.additionalArtifacts == null ? Codegen.empty() : this.additionalArtifacts;
     }
 
@@ -35,7 +35,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="additionalSchemaElements")
       private final @Nullable Output<List<String>> additionalSchemaElements;
 
-    public Output<List<String>> getAdditionalSchemaElements() {
+    public Output<List<String>> additionalSchemaElements() {
         return this.additionalSchemaElements == null ? Codegen.empty() : this.additionalSchemaElements;
     }
 
@@ -46,7 +46,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -57,7 +57,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -68,7 +68,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -79,7 +79,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="refreshClosedReports")
       private final @Nullable Output<Boolean> refreshClosedReports;
 
-    public Output<Boolean> getRefreshClosedReports() {
+    public Output<Boolean> refreshClosedReports() {
         return this.refreshClosedReports == null ? Codegen.empty() : this.refreshClosedReports;
     }
 
@@ -90,7 +90,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="reportName")
       private final @Nullable Output<String> reportName;
 
-    public Output<String> getReportName() {
+    public Output<String> reportName() {
         return this.reportName == null ? Codegen.empty() : this.reportName;
     }
 
@@ -101,7 +101,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="reportVersioning")
       private final @Nullable Output<String> reportVersioning;
 
-    public Output<String> getReportVersioning() {
+    public Output<String> reportVersioning() {
         return this.reportVersioning == null ? Codegen.empty() : this.reportVersioning;
     }
 
@@ -112,7 +112,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -123,7 +123,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="s3Prefix")
       private final @Nullable Output<String> s3Prefix;
 
-    public Output<String> getS3Prefix() {
+    public Output<String> s3Prefix() {
         return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
     }
 
@@ -134,7 +134,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="s3Region")
       private final @Nullable Output<String> s3Region;
 
-    public Output<String> getS3Region() {
+    public Output<String> s3Region() {
         return this.s3Region == null ? Codegen.empty() : this.s3Region;
     }
 
@@ -145,7 +145,7 @@ public final class ReportDefinitionState extends com.pulumi.resources.ResourceAr
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
     }
 

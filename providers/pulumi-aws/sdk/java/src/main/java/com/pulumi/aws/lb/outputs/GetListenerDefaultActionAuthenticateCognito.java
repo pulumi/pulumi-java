@@ -40,28 +40,28 @@ public final class GetListenerDefaultActionAuthenticateCognito {
         this.userPoolDomain = userPoolDomain;
     }
 
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
-    public String getOnUnauthenticatedRequest() {
+    public String onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
-    public String getSessionCookieName() {
+    public String sessionCookieName() {
         return this.sessionCookieName;
     }
-    public Integer getSessionTimeout() {
+    public Integer sessionTimeout() {
         return this.sessionTimeout;
     }
-    public String getUserPoolArn() {
+    public String userPoolArn() {
         return this.userPoolArn;
     }
-    public String getUserPoolClientId() {
+    public String userPoolClientId() {
         return this.userPoolClientId;
     }
-    public String getUserPoolDomain() {
+    public String userPoolDomain() {
         return this.userPoolDomain;
     }
 

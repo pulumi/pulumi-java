@@ -24,7 +24,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="ownerInformation")
       private final @Nullable Output<String> ownerInformation;
 
-    public Output<String> getOwnerInformation() {
+    public Output<String> ownerInformation() {
         return this.ownerInformation == null ? Codegen.empty() : this.ownerInformation;
     }
 
@@ -57,7 +57,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -69,7 +69,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="targets")
       private final @Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets;
 
-    public Output<List<MaintenanceWindowTargetTargetGetArgs>> getTargets() {
+    public Output<List<MaintenanceWindowTargetTargetGetArgs>> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 
@@ -80,7 +80,7 @@ public final class MaintenanceWindowTargetState extends com.pulumi.resources.Res
     @Import(name="windowId")
       private final @Nullable Output<String> windowId;
 
-    public Output<String> getWindowId() {
+    public Output<String> windowId() {
         return this.windowId == null ? Codegen.empty() : this.windowId;
     }
 

@@ -78,56 +78,56 @@ public final class ListenerDefaultActionAuthenticateCognito {
      * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
     */
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
      * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
     */
-    public Optional<String> getOnUnauthenticatedRequest() {
+    public Optional<String> onUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
      * Set of user claims to be requested from the IdP.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Name of the cookie used to maintain session information.
      * 
     */
-    public Optional<String> getSessionCookieName() {
+    public Optional<String> sessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
      * Maximum duration of the authentication session, in seconds.
      * 
     */
-    public Optional<Integer> getSessionTimeout() {
+    public Optional<Integer> sessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
      * ARN of the Cognito user pool.
      * 
     */
-    public String getUserPoolArn() {
+    public String userPoolArn() {
         return this.userPoolArn;
     }
     /**
      * ID of the Cognito user pool client.
      * 
     */
-    public String getUserPoolClientId() {
+    public String userPoolClientId() {
         return this.userPoolClientId;
     }
     /**
      * Domain prefix or fully-qualified domain name of the Cognito user pool.
      * 
     */
-    public String getUserPoolDomain() {
+    public String userPoolDomain() {
         return this.userPoolDomain;
     }
 

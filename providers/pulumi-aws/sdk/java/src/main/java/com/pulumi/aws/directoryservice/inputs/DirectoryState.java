@@ -27,7 +27,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessUrl")
       private final @Nullable Output<String> accessUrl;
 
-    public Output<String> getAccessUrl() {
+    public Output<String> accessUrl() {
         return this.accessUrl == null ? Codegen.empty() : this.accessUrl;
     }
 
@@ -38,7 +38,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -49,7 +49,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectSettings")
       private final @Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings;
 
-    public Output<DirectoryConnectSettingsGetArgs> getConnectSettings() {
+    public Output<DirectoryConnectSettingsGetArgs> connectSettings() {
         return this.connectSettings == null ? Codegen.empty() : this.connectSettings;
     }
 
@@ -60,7 +60,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsIpAddresses")
       private final @Nullable Output<List<String>> dnsIpAddresses;
 
-    public Output<List<String>> getDnsIpAddresses() {
+    public Output<List<String>> dnsIpAddresses() {
         return this.dnsIpAddresses == null ? Codegen.empty() : this.dnsIpAddresses;
     }
 
@@ -82,7 +82,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="edition")
       private final @Nullable Output<String> edition;
 
-    public Output<String> getEdition() {
+    public Output<String> edition() {
         return this.edition == null ? Codegen.empty() : this.edition;
     }
 
@@ -93,7 +93,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableSso")
       private final @Nullable Output<Boolean> enableSso;
 
-    public Output<Boolean> getEnableSso() {
+    public Output<Boolean> enableSso() {
         return this.enableSso == null ? Codegen.empty() : this.enableSso;
     }
 
@@ -104,7 +104,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -126,7 +126,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
+    public Output<String> securityGroupId() {
         return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 
@@ -137,7 +137,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
@@ -148,7 +148,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -159,7 +159,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -170,7 +170,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -181,7 +181,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -192,7 +192,7 @@ public final class DirectoryState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcSettings")
       private final @Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings;
 
-    public Output<DirectoryVpcSettingsGetArgs> getVpcSettings() {
+    public Output<DirectoryVpcSettingsGetArgs> vpcSettings() {
         return this.vpcSettings == null ? Codegen.empty() : this.vpcSettings;
     }
 

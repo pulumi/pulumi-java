@@ -41,21 +41,21 @@ public final class NotificationRuleTarget {
      * The ARN of notification rule target. For example, a SNS Topic ARN.
      * 
     */
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
     /**
      * The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The type of the notification target. Default value is `SNS`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

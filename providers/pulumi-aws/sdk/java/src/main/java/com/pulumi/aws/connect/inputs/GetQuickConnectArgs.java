@@ -22,7 +22,7 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -33,7 +33,7 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -44,7 +44,7 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="quickConnectId")
       private final @Nullable String quickConnectId;
 
-    public Optional<String> getQuickConnectId() {
+    public Optional<String> quickConnectId() {
         return this.quickConnectId == null ? Optional.empty() : Optional.ofNullable(this.quickConnectId);
     }
 
@@ -55,7 +55,7 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

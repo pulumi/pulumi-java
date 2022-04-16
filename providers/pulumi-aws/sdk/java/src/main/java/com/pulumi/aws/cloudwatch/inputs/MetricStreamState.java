@@ -26,7 +26,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -48,7 +48,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
 
-    public Output<List<MetricStreamExcludeFilterGetArgs>> getExcludeFilters() {
+    public Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters() {
         return this.excludeFilters == null ? Codegen.empty() : this.excludeFilters;
     }
 
@@ -59,7 +59,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="firehoseArn")
       private final @Nullable Output<String> firehoseArn;
 
-    public Output<String> getFirehoseArn() {
+    public Output<String> firehoseArn() {
         return this.firehoseArn == null ? Codegen.empty() : this.firehoseArn;
     }
 
@@ -70,7 +70,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
 
-    public Output<List<MetricStreamIncludeFilterGetArgs>> getIncludeFilters() {
+    public Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters() {
         return this.includeFilters == null ? Codegen.empty() : this.includeFilters;
     }
 
@@ -81,14 +81,14 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdateDate")
       private final @Nullable Output<String> lastUpdateDate;
 
-    public Output<String> getLastUpdateDate() {
+    public Output<String> lastUpdateDate() {
         return this.lastUpdateDate == null ? Codegen.empty() : this.lastUpdateDate;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -99,7 +99,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -110,7 +110,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
@@ -121,7 +121,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -132,7 +132,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -143,7 +143,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -154,7 +154,7 @@ public final class MetricStreamState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -25,7 +25,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     @Import(name="predefinedLoadMetricSpecification")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
 
-    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> getPredefinedLoadMetricSpecification() {
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification() {
         return this.predefinedLoadMetricSpecification == null ? Codegen.empty() : this.predefinedLoadMetricSpecification;
     }
 
@@ -36,7 +36,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     @Import(name="predefinedMetricPairSpecification")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification;
 
-    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> getPredefinedMetricPairSpecification() {
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationGetArgs> predefinedMetricPairSpecification() {
         return this.predefinedMetricPairSpecification == null ? Codegen.empty() : this.predefinedMetricPairSpecification;
     }
 
@@ -47,7 +47,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     @Import(name="predefinedScalingMetricSpecification")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification;
 
-    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> getPredefinedScalingMetricSpecification() {
+    public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification() {
         return this.predefinedScalingMetricSpecification == null ? Codegen.empty() : this.predefinedScalingMetricSpecification;
     }
 
@@ -58,7 +58,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationGetArg
     @Import(name="targetValue", required=true)
       private final Output<Integer> targetValue;
 
-    public Output<Integer> getTargetValue() {
+    public Output<Integer> targetValue() {
         return this.targetValue;
     }
 

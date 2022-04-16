@@ -40,7 +40,7 @@ public class RouteTablePropagation extends com.pulumi.resources.CustomResource {
      * @return Identifier of the resource
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -54,7 +54,7 @@ public class RouteTablePropagation extends com.pulumi.resources.CustomResource {
      * @return Type of the resource
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -68,7 +68,7 @@ public class RouteTablePropagation extends com.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -82,7 +82,7 @@ public class RouteTablePropagation extends com.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    public Output<String> getTransitGatewayRouteTableId() {
+    public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 

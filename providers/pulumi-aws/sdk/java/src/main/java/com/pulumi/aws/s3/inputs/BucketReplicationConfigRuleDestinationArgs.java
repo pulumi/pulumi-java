@@ -26,7 +26,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="accessControlTranslation")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationAccessControlTranslationArgs> accessControlTranslation;
 
-    public Output<BucketReplicationConfigRuleDestinationAccessControlTranslationArgs> getAccessControlTranslation() {
+    public Output<BucketReplicationConfigRuleDestinationAccessControlTranslationArgs> accessControlTranslation() {
         return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
@@ -37,7 +37,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="account")
       private final @Nullable Output<String> account;
 
-    public Output<String> getAccount() {
+    public Output<String> account() {
         return this.account == null ? Codegen.empty() : this.account;
     }
 
@@ -48,7 +48,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -59,7 +59,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -70,7 +70,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="metrics")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsArgs> metrics;
 
-    public Output<BucketReplicationConfigRuleDestinationMetricsArgs> getMetrics() {
+    public Output<BucketReplicationConfigRuleDestinationMetricsArgs> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -81,7 +81,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationReplicationTimeArgs> replicationTime;
 
-    public Output<BucketReplicationConfigRuleDestinationReplicationTimeArgs> getReplicationTime() {
+    public Output<BucketReplicationConfigRuleDestinationReplicationTimeArgs> replicationTime() {
         return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
@@ -92,7 +92,7 @@ public final class BucketReplicationConfigRuleDestinationArgs extends com.pulumi
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 

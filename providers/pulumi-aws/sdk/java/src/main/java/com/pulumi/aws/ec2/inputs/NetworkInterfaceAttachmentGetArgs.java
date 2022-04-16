@@ -19,7 +19,7 @@ public final class NetworkInterfaceAttachmentGetArgs extends com.pulumi.resource
     @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
@@ -30,7 +30,7 @@ public final class NetworkInterfaceAttachmentGetArgs extends com.pulumi.resource
     @Import(name="deviceIndex", required=true)
       private final Output<Integer> deviceIndex;
 
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkInterfaceAttachmentGetArgs extends com.pulumi.resource
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 

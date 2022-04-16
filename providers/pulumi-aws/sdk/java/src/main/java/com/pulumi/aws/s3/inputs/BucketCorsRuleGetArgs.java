@@ -24,7 +24,7 @@ public final class BucketCorsRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowedHeaders")
       private final @Nullable Output<List<String>> allowedHeaders;
 
-    public Output<List<String>> getAllowedHeaders() {
+    public Output<List<String>> allowedHeaders() {
         return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
     }
 
@@ -35,7 +35,7 @@ public final class BucketCorsRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowedMethods", required=true)
       private final Output<List<String>> allowedMethods;
 
-    public Output<List<String>> getAllowedMethods() {
+    public Output<List<String>> allowedMethods() {
         return this.allowedMethods;
     }
 
@@ -46,7 +46,7 @@ public final class BucketCorsRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="allowedOrigins", required=true)
       private final Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> getAllowedOrigins() {
+    public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins;
     }
 
@@ -57,7 +57,7 @@ public final class BucketCorsRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
-    public Output<List<String>> getExposeHeaders() {
+    public Output<List<String>> exposeHeaders() {
         return this.exposeHeaders == null ? Codegen.empty() : this.exposeHeaders;
     }
 
@@ -68,7 +68,7 @@ public final class BucketCorsRuleGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxAgeSeconds")
       private final @Nullable Output<Integer> maxAgeSeconds;
 
-    public Output<Integer> getMaxAgeSeconds() {
+    public Output<Integer> maxAgeSeconds() {
         return this.maxAgeSeconds == null ? Codegen.empty() : this.maxAgeSeconds;
     }
 

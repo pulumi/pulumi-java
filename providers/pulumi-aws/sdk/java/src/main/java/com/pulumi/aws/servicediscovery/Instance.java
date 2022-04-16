@@ -41,7 +41,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A map contains the attributes of the instance. Check the [doc](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html#API_RegisterInstance_RequestSyntax) for the supported attributes and syntax.
      * 
      */
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes;
     }
     /**
@@ -55,7 +55,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The ID of the service instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -69,7 +69,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The ID of the service that you want to use to create the instance.
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 

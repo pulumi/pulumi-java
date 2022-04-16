@@ -65,42 +65,42 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Key-value map of tags to apply to the distributed AMI.
      * 
     */
-    public Map<String,String> getAmiTags() {
+    public Map<String,String> amiTags() {
         return this.amiTags == null ? Map.of() : this.amiTags;
     }
     /**
      * Description of the container distribution configuration.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key to encrypt the distributed AMI.
      * 
     */
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
      * 
     */
-    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> getLaunchPermission() {
+    public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermission() {
         return Optional.ofNullable(this.launchPermission);
     }
     /**
      * Name to apply to the distributed AMI.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Set of AWS Account identifiers to distribute the AMI.
      * 
     */
-    public List<String> getTargetAccountIds() {
+    public List<String> targetAccountIds() {
         return this.targetAccountIds == null ? List.of() : this.targetAccountIds;
     }
 

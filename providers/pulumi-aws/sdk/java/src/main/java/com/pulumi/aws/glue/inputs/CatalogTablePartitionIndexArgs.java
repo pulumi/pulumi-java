@@ -23,14 +23,14 @@ public final class CatalogTablePartitionIndexArgs extends com.pulumi.resources.R
     @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="indexStatus")
       private final @Nullable Output<String> indexStatus;
 
-    public Output<String> getIndexStatus() {
+    public Output<String> indexStatus() {
         return this.indexStatus == null ? Codegen.empty() : this.indexStatus;
     }
 
@@ -41,7 +41,7 @@ public final class CatalogTablePartitionIndexArgs extends com.pulumi.resources.R
     @Import(name="keys", required=true)
       private final Output<List<String>> keys;
 
-    public Output<List<String>> getKeys() {
+    public Output<List<String>> keys() {
         return this.keys;
     }
 

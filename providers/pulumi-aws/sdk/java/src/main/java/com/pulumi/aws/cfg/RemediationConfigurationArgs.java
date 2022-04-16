@@ -27,7 +27,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="automatic")
       private final @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> getAutomatic() {
+    public Output<Boolean> automatic() {
         return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
@@ -38,7 +38,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="configRuleName", required=true)
       private final Output<String> configRuleName;
 
-    public Output<String> getConfigRuleName() {
+    public Output<String> configRuleName() {
         return this.configRuleName;
     }
 
@@ -49,7 +49,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="executionControls")
       private final @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
 
-    public Output<RemediationConfigurationExecutionControlsArgs> getExecutionControls() {
+    public Output<RemediationConfigurationExecutionControlsArgs> executionControls() {
         return this.executionControls == null ? Codegen.empty() : this.executionControls;
     }
 
@@ -60,7 +60,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="maximumAutomaticAttempts")
       private final @Nullable Output<Integer> maximumAutomaticAttempts;
 
-    public Output<Integer> getMaximumAutomaticAttempts() {
+    public Output<Integer> maximumAutomaticAttempts() {
         return this.maximumAutomaticAttempts == null ? Codegen.empty() : this.maximumAutomaticAttempts;
     }
 
@@ -71,7 +71,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="parameters")
       private final @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
 
-    public Output<List<RemediationConfigurationParameterArgs>> getParameters() {
+    public Output<List<RemediationConfigurationParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -82,7 +82,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -93,7 +93,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="retryAttemptSeconds")
       private final @Nullable Output<Integer> retryAttemptSeconds;
 
-    public Output<Integer> getRetryAttemptSeconds() {
+    public Output<Integer> retryAttemptSeconds() {
         return this.retryAttemptSeconds == null ? Codegen.empty() : this.retryAttemptSeconds;
     }
 
@@ -104,7 +104,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -115,7 +115,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="targetType", required=true)
       private final Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType;
     }
 
@@ -126,7 +126,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="targetVersion")
       private final @Nullable Output<String> targetVersion;
 
-    public Output<String> getTargetVersion() {
+    public Output<String> targetVersion() {
         return this.targetVersion == null ? Codegen.empty() : this.targetVersion;
     }
 

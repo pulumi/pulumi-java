@@ -20,7 +20,7 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
     @Import(name="ownerGid", required=true)
       private final Integer ownerGid;
 
-    public Integer getOwnerGid() {
+    public Integer ownerGid() {
         return this.ownerGid;
     }
 
@@ -31,7 +31,7 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
     @Import(name="ownerUid", required=true)
       private final Integer ownerUid;
 
-    public Integer getOwnerUid() {
+    public Integer ownerUid() {
         return this.ownerUid;
     }
 
@@ -42,7 +42,7 @@ public final class GetAccessPointRootDirectoryCreationInfo extends com.pulumi.re
     @Import(name="permissions", required=true)
       private final String permissions;
 
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 

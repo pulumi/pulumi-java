@@ -22,7 +22,7 @@ public final class NotificationRuleTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="address", required=true)
       private final Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
 
@@ -33,7 +33,7 @@ public final class NotificationRuleTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -44,7 +44,7 @@ public final class NotificationRuleTargetGetArgs extends com.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

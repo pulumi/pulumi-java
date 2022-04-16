@@ -103,49 +103,49 @@ public final class GetCertificateAuthorityResult {
         this.type = type;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
      * 
     */
-    public String getCertificate() {
+    public String certificate() {
         return this.certificate;
     }
     /**
      * Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
      * 
     */
-    public String getCertificateChain() {
+    public String certificateChain() {
         return this.certificateChain;
     }
     /**
      * The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
      * 
     */
-    public String getCertificateSigningRequest() {
+    public String certificateSigningRequest() {
         return this.certificateSigningRequest;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
     */
-    public String getNotAfter() {
+    public String notAfter() {
         return this.notAfter;
     }
     /**
      * Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
     */
-    public String getNotBefore() {
+    public String notBefore() {
         return this.notBefore;
     }
     /**
@@ -158,35 +158,35 @@ public final class GetCertificateAuthorityResult {
      * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
      * 
     */
-    public List<GetCertificateAuthorityRevocationConfiguration> getRevocationConfigurations() {
+    public List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations() {
         return this.revocationConfigurations;
     }
     /**
      * Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
      * 
     */
-    public String getSerial() {
+    public String serial() {
         return this.serial;
     }
     /**
      * Status of the certificate authority.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Specifies a key-value map of user-defined tags that are attached to the certificate authority.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The type of the certificate authority.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class ServiceHealthCheckConfigArgs extends com.pulumi.resources.Res
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceHealthCheckConfigArgs extends com.pulumi.resources.Res
     @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
-    public Output<String> getResourcePath() {
+    public Output<String> resourcePath() {
         return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceHealthCheckConfigArgs extends com.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

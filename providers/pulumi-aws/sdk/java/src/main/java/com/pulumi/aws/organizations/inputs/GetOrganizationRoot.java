@@ -21,7 +21,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -32,7 +32,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -43,7 +43,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -54,7 +54,7 @@ public final class GetOrganizationRoot extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyTypes", required=true)
       private final List<GetOrganizationRootPolicyType> policyTypes;
 
-    public List<GetOrganizationRootPolicyType> getPolicyTypes() {
+    public List<GetOrganizationRootPolicyType> policyTypes() {
         return this.policyTypes;
     }
 

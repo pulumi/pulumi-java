@@ -21,7 +21,7 @@ public final class TopicRuleErrorActionLambdaGetArgs extends com.pulumi.resource
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 

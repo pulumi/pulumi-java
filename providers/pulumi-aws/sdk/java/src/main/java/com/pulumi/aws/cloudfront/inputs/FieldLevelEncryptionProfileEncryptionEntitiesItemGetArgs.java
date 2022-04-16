@@ -22,7 +22,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
     @Import(name="fieldPatterns", required=true)
       private final Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> fieldPatterns;
 
-    public Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> getFieldPatterns() {
+    public Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> fieldPatterns() {
         return this.fieldPatterns;
     }
 
@@ -33,7 +33,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
     @Import(name="providerId", required=true)
       private final Output<String> providerId;
 
-    public Output<String> getProviderId() {
+    public Output<String> providerId() {
         return this.providerId;
     }
 
@@ -44,7 +44,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
     @Import(name="publicKeyId", required=true)
       private final Output<String> publicKeyId;
 
-    public Output<String> getPublicKeyId() {
+    public Output<String> publicKeyId() {
         return this.publicKeyId;
     }
 

@@ -26,7 +26,7 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="acmCertificateArn")
       private final @Nullable Output<String> acmCertificateArn;
 
-    public Output<String> getAcmCertificateArn() {
+    public Output<String> acmCertificateArn() {
         return this.acmCertificateArn == null ? Codegen.empty() : this.acmCertificateArn;
     }
 
@@ -39,7 +39,7 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="cloudfrontDefaultCertificate")
       private final @Nullable Output<Boolean> cloudfrontDefaultCertificate;
 
-    public Output<Boolean> getCloudfrontDefaultCertificate() {
+    public Output<Boolean> cloudfrontDefaultCertificate() {
         return this.cloudfrontDefaultCertificate == null ? Codegen.empty() : this.cloudfrontDefaultCertificate;
     }
 
@@ -52,7 +52,7 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="iamCertificateId")
       private final @Nullable Output<String> iamCertificateId;
 
-    public Output<String> getIamCertificateId() {
+    public Output<String> iamCertificateId() {
         return this.iamCertificateId == null ? Codegen.empty() : this.iamCertificateId;
     }
 
@@ -74,14 +74,14 @@ public final class DistributionViewerCertificateGetArgs extends com.pulumi.resou
     @Import(name="minimumProtocolVersion")
       private final @Nullable Output<String> minimumProtocolVersion;
 
-    public Output<String> getMinimumProtocolVersion() {
+    public Output<String> minimumProtocolVersion() {
         return this.minimumProtocolVersion == null ? Codegen.empty() : this.minimumProtocolVersion;
     }
 
     @Import(name="sslSupportMethod")
       private final @Nullable Output<String> sslSupportMethod;
 
-    public Output<String> getSslSupportMethod() {
+    public Output<String> sslSupportMethod() {
         return this.sslSupportMethod == null ? Codegen.empty() : this.sslSupportMethod;
     }
 

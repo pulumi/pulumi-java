@@ -41,7 +41,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The ID of the member AWS account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -55,7 +55,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The email of the member AWS account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -69,7 +69,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getInvite() {
+    public Output</* @Nullable */ Boolean> invite() {
         return this.invite;
     }
     /**
@@ -83,7 +83,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The ID of the master Security Hub AWS account.
      * 
      */
-    public Output<String> getMasterId() {
+    public Output<String> masterId() {
         return this.masterId;
     }
     /**
@@ -97,7 +97,7 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return The status of the member account relationship.
      * 
      */
-    public Output<String> getMemberStatus() {
+    public Output<String> memberStatus() {
         return this.memberStatus;
     }
 

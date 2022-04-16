@@ -23,7 +23,7 @@ public final class AcceleratorIpSetGetArgs extends com.pulumi.resources.Resource
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
@@ -34,7 +34,7 @@ public final class AcceleratorIpSetGetArgs extends com.pulumi.resources.Resource
     @Import(name="ipFamily")
       private final @Nullable Output<String> ipFamily;
 
-    public Output<String> getIpFamily() {
+    public Output<String> ipFamily() {
         return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 

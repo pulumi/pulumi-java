@@ -23,7 +23,7 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetImageRecipesFilter> filters;
 
-    public List<GetImageRecipesFilter> getFilters() {
+    public List<GetImageRecipesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -34,7 +34,7 @@ public final class GetImageRecipesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="owner")
       private final @Nullable String owner;
 
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
     }
 

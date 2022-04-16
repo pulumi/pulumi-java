@@ -50,28 +50,28 @@ public final class GetQuickConnectQuickConnectConfig {
      * Specifies the phone configuration of the Quick Connect. This is returned only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
      * 
     */
-    public List<GetQuickConnectQuickConnectConfigPhoneConfig> getPhoneConfigs() {
+    public List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs() {
         return this.phoneConfigs;
     }
     /**
      * Specifies the queue configuration of the Quick Connect. This is returned only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
      * 
     */
-    public List<GetQuickConnectQuickConnectConfigQueueConfig> getQueueConfigs() {
+    public List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs() {
         return this.queueConfigs;
     }
     /**
      * Specifies the configuration type of the Quick Connect. Valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
      * 
     */
-    public String getQuickConnectType() {
+    public String quickConnectType() {
         return this.quickConnectType;
     }
     /**
      * Specifies the user configuration of the Quick Connect. This is returned only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
      * 
     */
-    public List<GetQuickConnectQuickConnectConfigUserConfig> getUserConfigs() {
+    public List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs() {
         return this.userConfigs;
     }
 

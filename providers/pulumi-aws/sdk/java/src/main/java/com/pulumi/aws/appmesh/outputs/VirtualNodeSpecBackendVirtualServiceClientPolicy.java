@@ -26,7 +26,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicy {
      * The Transport Layer Security (TLS) client policy.
      * 
     */
-    public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTls> getTls() {
+    public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTls> tls() {
         return Optional.ofNullable(this.tls);
     }
 

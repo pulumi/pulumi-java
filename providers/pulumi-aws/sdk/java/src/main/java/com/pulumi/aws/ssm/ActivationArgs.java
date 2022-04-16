@@ -24,7 +24,7 @@ public final class ActivationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class ActivationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -46,7 +46,7 @@ public final class ActivationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iamRole", required=true)
       private final Output<String> iamRole;
 
-    public Output<String> getIamRole() {
+    public Output<String> iamRole() {
         return this.iamRole;
     }
 
@@ -57,7 +57,7 @@ public final class ActivationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class ActivationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationLimit")
       private final @Nullable Output<Integer> registrationLimit;
 
-    public Output<Integer> getRegistrationLimit() {
+    public Output<Integer> registrationLimit() {
         return this.registrationLimit == null ? Codegen.empty() : this.registrationLimit;
     }
 
@@ -79,7 +79,7 @@ public final class ActivationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

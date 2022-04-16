@@ -24,7 +24,7 @@ public final class ClusterLoggingGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterLoggingGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterLoggingGetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 

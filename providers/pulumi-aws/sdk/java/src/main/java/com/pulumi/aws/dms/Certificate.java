@@ -41,7 +41,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the certificate.
      * 
      */
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -55,7 +55,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate identifier.
      * 
      */
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId;
     }
     /**
@@ -69,7 +69,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The contents of the .pem X.509 certificate file for the certificate. Either `certificate_pem` or `certificate_wallet` must be set.
      * 
      */
-    public Output</* @Nullable */ String> getCertificatePem() {
+    public Output</* @Nullable */ String> certificatePem() {
         return this.certificatePem;
     }
     /**
@@ -83,7 +83,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The contents of the Oracle Wallet certificate for use with SSL, provided as a base64-encoded String. Either `certificate_pem` or `certificate_wallet` must be set.
      * 
      */
-    public Output</* @Nullable */ String> getCertificateWallet() {
+    public Output</* @Nullable */ String> certificateWallet() {
         return this.certificateWallet;
     }
     /**
@@ -97,7 +97,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -111,7 +111,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

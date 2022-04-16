@@ -23,7 +23,7 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
     @Import(name="methodPath")
       private final @Nullable Output<String> methodPath;
 
-    public Output<String> getMethodPath() {
+    public Output<String> methodPath() {
         return this.methodPath == null ? Codegen.empty() : this.methodPath;
     }
 
@@ -34,7 +34,7 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
@@ -45,7 +45,7 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
     @Import(name="settings")
       private final @Nullable Output<MethodSettingsSettingsGetArgs> settings;
 
-    public Output<MethodSettingsSettingsGetArgs> getSettings() {
+    public Output<MethodSettingsSettingsGetArgs> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -56,7 +56,7 @@ public final class MethodSettingsState extends com.pulumi.resources.ResourceArgs
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 

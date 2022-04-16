@@ -34,14 +34,14 @@ public final class IpGroupRule {
      * The description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

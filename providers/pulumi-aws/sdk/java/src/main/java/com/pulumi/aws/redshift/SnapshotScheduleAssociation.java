@@ -38,7 +38,7 @@ public class SnapshotScheduleAssociation extends com.pulumi.resources.CustomReso
      * @return The cluster identifier.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -52,7 +52,7 @@ public class SnapshotScheduleAssociation extends com.pulumi.resources.CustomReso
      * @return The snapshot schedule identifier.
      * 
      */
-    public Output<String> getScheduleIdentifier() {
+    public Output<String> scheduleIdentifier() {
         return this.scheduleIdentifier;
     }
 

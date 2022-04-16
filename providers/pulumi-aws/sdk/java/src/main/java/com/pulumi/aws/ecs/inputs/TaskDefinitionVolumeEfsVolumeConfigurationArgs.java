@@ -24,7 +24,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="authorizationConfig")
       private final @Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
 
-    public Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> getAuthorizationConfig() {
+    public Output<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> authorizationConfig() {
         return this.authorizationConfig == null ? Codegen.empty() : this.authorizationConfig;
     }
 
@@ -35,7 +35,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -46,7 +46,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
-    public Output<String> getRootDirectory() {
+    public Output<String> rootDirectory() {
         return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
@@ -57,7 +57,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="transitEncryption")
       private final @Nullable Output<String> transitEncryption;
 
-    public Output<String> getTransitEncryption() {
+    public Output<String> transitEncryption() {
         return this.transitEncryption == null ? Codegen.empty() : this.transitEncryption;
     }
 
@@ -68,7 +68,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends com.pu
     @Import(name="transitEncryptionPort")
       private final @Nullable Output<Integer> transitEncryptionPort;
 
-    public Output<Integer> getTransitEncryptionPort() {
+    public Output<Integer> transitEncryptionPort() {
         return this.transitEncryptionPort == null ? Codegen.empty() : this.transitEncryptionPort;
     }
 

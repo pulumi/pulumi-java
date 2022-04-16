@@ -40,13 +40,13 @@ public class VpcIpamOrganizationAdminAccount extends com.pulumi.resources.Custom
      * @return The Organizations ARN for the delegate account.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="delegatedAdminAccountId", type=String.class, parameters={})
     private Output<String> delegatedAdminAccountId;
 
-    public Output<String> getDelegatedAdminAccountId() {
+    public Output<String> delegatedAdminAccountId() {
         return this.delegatedAdminAccountId;
     }
     /**
@@ -60,7 +60,7 @@ public class VpcIpamOrganizationAdminAccount extends com.pulumi.resources.Custom
      * @return The Organizations email for the delegate account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -74,7 +74,7 @@ public class VpcIpamOrganizationAdminAccount extends com.pulumi.resources.Custom
      * @return The Organizations name for the delegate account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class VpcIpamOrganizationAdminAccount extends com.pulumi.resources.Custom
      * @return The AWS service principal.
      * 
      */
-    public Output<String> getServicePrincipal() {
+    public Output<String> servicePrincipal() {
         return this.servicePrincipal;
     }
 

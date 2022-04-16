@@ -21,7 +21,7 @@ public final class FirewallSubnetMappingGetArgs extends com.pulumi.resources.Res
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

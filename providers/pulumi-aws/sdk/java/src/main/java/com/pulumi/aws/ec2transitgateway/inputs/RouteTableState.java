@@ -24,7 +24,7 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAssociationRouteTable")
       private final @Nullable Output<Boolean> defaultAssociationRouteTable;
 
-    public Output<Boolean> getDefaultAssociationRouteTable() {
+    public Output<Boolean> defaultAssociationRouteTable() {
         return this.defaultAssociationRouteTable == null ? Codegen.empty() : this.defaultAssociationRouteTable;
     }
 
@@ -46,7 +46,7 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultPropagationRouteTable")
       private final @Nullable Output<Boolean> defaultPropagationRouteTable;
 
-    public Output<Boolean> getDefaultPropagationRouteTable() {
+    public Output<Boolean> defaultPropagationRouteTable() {
         return this.defaultPropagationRouteTable == null ? Codegen.empty() : this.defaultPropagationRouteTable;
     }
 
@@ -57,7 +57,7 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -79,7 +79,7 @@ public final class RouteTableState extends com.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 

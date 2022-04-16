@@ -34,14 +34,14 @@ public final class ImageBuilderAccessEndpoint {
      * Type of interface endpoint.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * Identifier (ID) of the VPC in which the interface endpoint is used.
      * 
     */
-    public Optional<String> getVpceId() {
+    public Optional<String> vpceId() {
         return Optional.ofNullable(this.vpceId);
     }
 

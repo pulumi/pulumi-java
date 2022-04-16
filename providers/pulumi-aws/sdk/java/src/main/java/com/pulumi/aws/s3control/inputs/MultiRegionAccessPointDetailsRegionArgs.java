@@ -21,7 +21,7 @@ public final class MultiRegionAccessPointDetailsRegionArgs extends com.pulumi.re
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 

@@ -22,7 +22,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs exte
     @Import(name="actionDefinition", required=true)
       private final Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition;
 
-    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> getActionDefinition() {
+    public Output<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionGetArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
@@ -33,7 +33,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionGetArgs exte
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 

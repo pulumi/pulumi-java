@@ -34,14 +34,14 @@ public final class PermissionsDataLocation {
      * Amazon Resource Name (ARN) that uniquely identifies the data location resource.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
 

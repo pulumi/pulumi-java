@@ -54,42 +54,42 @@ public final class DirectoryConnectSettings {
         this.vpcId = vpcId;
     }
 
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
     /**
      * The IP addresses of the AD Connector servers.
      * 
     */
-    public List<String> getConnectIps() {
+    public List<String> connectIps() {
         return this.connectIps == null ? List.of() : this.connectIps;
     }
     /**
      * The DNS IP addresses of the domain to connect to.
      * 
     */
-    public List<String> getCustomerDnsIps() {
+    public List<String> customerDnsIps() {
         return this.customerDnsIps;
     }
     /**
      * The username corresponding to the password provided.
      * 
     */
-    public String getCustomerUsername() {
+    public String customerUsername() {
         return this.customerUsername;
     }
     /**
      * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
      * The identifier of the VPC that the directory is in.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

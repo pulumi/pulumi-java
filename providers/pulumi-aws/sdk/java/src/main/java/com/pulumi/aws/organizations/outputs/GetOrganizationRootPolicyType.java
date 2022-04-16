@@ -28,10 +28,10 @@ public final class GetOrganizationRootPolicyType {
      * The status of the policy type as it relates to the associated root
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

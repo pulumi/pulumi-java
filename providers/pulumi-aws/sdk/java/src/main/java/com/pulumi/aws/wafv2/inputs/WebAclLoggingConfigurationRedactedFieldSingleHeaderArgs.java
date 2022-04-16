@@ -21,7 +21,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs exten
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

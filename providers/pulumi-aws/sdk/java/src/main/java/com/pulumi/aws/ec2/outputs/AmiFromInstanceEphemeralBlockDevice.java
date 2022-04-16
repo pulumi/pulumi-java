@@ -35,7 +35,7 @@ public final class AmiFromInstanceEphemeralBlockDevice {
      * The path at which the device is exposed to created instances.
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
@@ -43,7 +43,7 @@ public final class AmiFromInstanceEphemeralBlockDevice {
      * *N* is a volume number starting from zero.
      * 
     */
-    public Optional<String> getVirtualName() {
+    public Optional<String> virtualName() {
         return Optional.ofNullable(this.virtualName);
     }
 

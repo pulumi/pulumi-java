@@ -20,7 +20,7 @@ public final class GetPolicyDocumentStatementNotPrincipal extends com.pulumi.res
     @Import(name="identifiers", required=true)
       private final List<String> identifiers;
 
-    public List<String> getIdentifiers() {
+    public List<String> identifiers() {
         return this.identifiers;
     }
 
@@ -31,7 +31,7 @@ public final class GetPolicyDocumentStatementNotPrincipal extends com.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

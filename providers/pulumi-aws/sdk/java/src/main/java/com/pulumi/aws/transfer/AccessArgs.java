@@ -25,7 +25,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
 
@@ -36,7 +36,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
-    public Output<String> getHomeDirectory() {
+    public Output<String> homeDirectory() {
         return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
     }
 
@@ -47,7 +47,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryMappings")
       private final @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
-    public Output<List<AccessHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
+    public Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings() {
         return this.homeDirectoryMappings == null ? Codegen.empty() : this.homeDirectoryMappings;
     }
 
@@ -58,14 +58,14 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectoryType")
       private final @Nullable Output<String> homeDirectoryType;
 
-    public Output<String> getHomeDirectoryType() {
+    public Output<String> homeDirectoryType() {
         return this.homeDirectoryType == null ? Codegen.empty() : this.homeDirectoryType;
     }
 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -76,7 +76,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="posixProfile")
       private final @Nullable Output<AccessPosixProfileArgs> posixProfile;
 
-    public Output<AccessPosixProfileArgs> getPosixProfile() {
+    public Output<AccessPosixProfileArgs> posixProfile() {
         return this.posixProfile == null ? Codegen.empty() : this.posixProfile;
     }
 
@@ -87,7 +87,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -98,7 +98,7 @@ public final class AccessArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverId", required=true)
       private final Output<String> serverId;
 
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 

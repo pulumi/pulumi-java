@@ -47,28 +47,28 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection {
      * A Boolean value that determines whether CloudFront includes the mode=block directive in the X-XSS-Protection header.
      * 
     */
-    public Boolean getModeBlock() {
+    public Boolean modeBlock() {
         return this.modeBlock;
     }
     /**
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
     */
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
     /**
      * A Boolean value that determines the value of the X-XSS-Protection HTTP response header. When this setting is true, the value of the X-XSS-Protection header is 1. When this setting is false, the value of the X-XSS-Protection header is 0.
      * 
     */
-    public Boolean getProtection() {
+    public Boolean protection() {
         return this.protection;
     }
     /**
      * A Boolean value that determines whether CloudFront sets a reporting URI in the X-XSS-Protection header.
      * 
     */
-    public String getReportUri() {
+    public String reportUri() {
         return this.reportUri;
     }
 

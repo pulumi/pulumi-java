@@ -22,7 +22,7 @@ public final class LoggingConfigurationLoggingConfigurationGetArgs extends com.p
     @Import(name="logDestinationConfigs", required=true)
       private final Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs;
 
-    public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> getLogDestinationConfigs() {
+    public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs() {
         return this.logDestinationConfigs;
     }
 

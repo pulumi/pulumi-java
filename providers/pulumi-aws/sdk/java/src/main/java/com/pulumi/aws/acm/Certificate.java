@@ -57,7 +57,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The ARN of the certificate
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return ARN of an ACM PCA
      * 
      */
-    public Output</* @Nullable */ String> getCertificateAuthorityArn() {
+    public Output</* @Nullable */ String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
     /**
@@ -85,7 +85,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate's PEM-formatted public key
      * 
      */
-    public Output</* @Nullable */ String> getCertificateBody() {
+    public Output</* @Nullable */ String> certificateBody() {
         return this.certificateBody;
     }
     /**
@@ -101,7 +101,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * * Creating a private CA issued certificate
      * 
      */
-    public Output</* @Nullable */ String> getCertificateChain() {
+    public Output</* @Nullable */ String> certificateChain() {
         return this.certificateChain;
     }
     /**
@@ -115,7 +115,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A domain name for which the certificate should be issued
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -129,7 +129,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g., if SANs are defined. Only set if `DNS`-validation was used.
      * 
      */
-    public Output<List<CertificateDomainValidationOption>> getDomainValidationOptions() {
+    public Output<List<CertificateDomainValidationOption>> domainValidationOptions() {
         return this.domainValidationOptions;
     }
     /**
@@ -145,7 +145,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * * Importing an existing certificate
      * 
      */
-    public Output</* @Nullable */ CertificateOptions> getOptions() {
+    public Output</* @Nullable */ CertificateOptions> options() {
         return this.options;
     }
     /**
@@ -159,7 +159,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The certificate's PEM-formatted private key
      * 
      */
-    public Output</* @Nullable */ String> getPrivateKey() {
+    public Output</* @Nullable */ String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -173,7 +173,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Status of the certificate.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -187,7 +187,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
      * 
      */
-    public Output<List<String>> getSubjectAlternativeNames() {
+    public Output<List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
@@ -201,7 +201,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource..
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -215,7 +215,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -229,7 +229,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
      * 
      */
-    public Output<List<String>> getValidationEmails() {
+    public Output<List<String>> validationEmails() {
         return this.validationEmails;
     }
     /**
@@ -243,7 +243,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
      * 
      */
-    public Output<String> getValidationMethod() {
+    public Output<String> validationMethod() {
         return this.validationMethod;
     }
 

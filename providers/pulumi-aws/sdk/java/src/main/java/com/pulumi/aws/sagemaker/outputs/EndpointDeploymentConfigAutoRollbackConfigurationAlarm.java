@@ -24,7 +24,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
      * The name of a CloudWatch alarm in your account.
      * 
     */
-    public String getAlarmName() {
+    public String alarmName() {
         return this.alarmName;
     }
 

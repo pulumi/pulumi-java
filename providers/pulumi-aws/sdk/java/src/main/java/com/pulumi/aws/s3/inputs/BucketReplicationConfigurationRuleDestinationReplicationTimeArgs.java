@@ -23,7 +23,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
     @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
 
-    public Output<Integer> getMinutes() {
+    public Output<Integer> minutes() {
         return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
@@ -34,7 +34,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

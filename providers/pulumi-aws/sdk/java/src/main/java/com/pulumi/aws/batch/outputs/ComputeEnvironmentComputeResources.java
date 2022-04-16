@@ -137,112 +137,112 @@ public final class ComputeEnvironmentComputeResources {
      * The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<String> getAllocationStrategy() {
+    public Optional<String> allocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
     /**
      * Integer of maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. If you leave this field empty, the default value is 100% of the On-Demand price. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<Integer> getBidPercentage() {
+    public Optional<Integer> bidPercentage() {
         return Optional.ofNullable(this.bidPercentage);
     }
     /**
      * The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<Integer> getDesiredVcpus() {
+    public Optional<Integer> desiredVcpus() {
         return Optional.ofNullable(this.desiredVcpus);
     }
     /**
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If Ec2Configuration isn't specified, the default is ECS_AL2. This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<ComputeEnvironmentComputeResourcesEc2Configuration> getEc2Configuration() {
+    public Optional<ComputeEnvironmentComputeResourcesEc2Configuration> ec2Configuration() {
         return Optional.ofNullable(this.ec2Configuration);
     }
     /**
      * The EC2 key pair that is used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<String> getEc2KeyPair() {
+    public Optional<String> ec2KeyPair() {
         return Optional.ofNullable(this.ec2KeyPair);
     }
     /**
      * The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified. (Deprecated, use `image_id_override` instead)
      * 
     */
-    public Optional<String> getImageId() {
+    public Optional<String> imageId() {
         return Optional.ofNullable(this.imageId);
     }
     /**
      * The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<String> getInstanceRole() {
+    public Optional<String> instanceRole() {
         return Optional.ofNullable(this.instanceRole);
     }
     /**
      * A list of instance types that may be launched. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public List<String> getInstanceTypes() {
+    public List<String> instanceTypes() {
         return this.instanceTypes == null ? List.of() : this.instanceTypes;
     }
     /**
      * The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<ComputeEnvironmentComputeResourcesLaunchTemplate> getLaunchTemplate() {
+    public Optional<ComputeEnvironmentComputeResourcesLaunchTemplate> launchTemplate() {
         return Optional.ofNullable(this.launchTemplate);
     }
     /**
      * The maximum number of EC2 vCPUs that an environment can reach.
      * 
     */
-    public Integer getMaxVcpus() {
+    public Integer maxVcpus() {
         return this.maxVcpus;
     }
     /**
      * The minimum number of EC2 vCPUs that an environment should maintain. For `EC2` or `SPOT` compute environments, if the parameter is not explicitly defined, a `0` default value will be set. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<Integer> getMinVcpus() {
+    public Optional<Integer> minVcpus() {
         return Optional.ofNullable(this.minVcpus);
     }
     /**
      * A list of EC2 security group that are associated with instances launched in the compute environment.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Optional<String> getSpotIamFleetRole() {
+    public Optional<String> spotIamFleetRole() {
         return Optional.ofNullable(this.spotIamFleetRole);
     }
     /**
      * A list of VPC subnets into which the compute resources are launched.
      * 
     */
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
     /**
      * Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

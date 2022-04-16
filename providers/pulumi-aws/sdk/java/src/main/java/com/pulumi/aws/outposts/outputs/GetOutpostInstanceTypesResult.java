@@ -32,21 +32,21 @@ public final class GetOutpostInstanceTypesResult {
         this.instanceTypes = instanceTypes;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of instance types.
      * 
     */
-    public List<String> getInstanceTypes() {
+    public List<String> instanceTypes() {
         return this.instanceTypes;
     }
 

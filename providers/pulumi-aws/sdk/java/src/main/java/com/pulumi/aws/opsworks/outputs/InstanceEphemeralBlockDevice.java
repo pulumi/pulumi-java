@@ -20,10 +20,10 @@ public final class InstanceEphemeralBlockDevice {
         this.virtualName = virtualName;
     }
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
-    public String getVirtualName() {
+    public String virtualName() {
         return this.virtualName;
     }
 

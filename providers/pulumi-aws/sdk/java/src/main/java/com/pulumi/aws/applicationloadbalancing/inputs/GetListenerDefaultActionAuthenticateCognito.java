@@ -17,56 +17,56 @@ public final class GetListenerDefaultActionAuthenticateCognito extends com.pulum
     @Import(name="authenticationRequestExtraParams", required=true)
       private final Map<String,String> authenticationRequestExtraParams;
 
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
 
     @Import(name="onUnauthenticatedRequest", required=true)
       private final String onUnauthenticatedRequest;
 
-    public String getOnUnauthenticatedRequest() {
+    public String onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
     @Import(name="sessionCookieName", required=true)
       private final String sessionCookieName;
 
-    public String getSessionCookieName() {
+    public String sessionCookieName() {
         return this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout", required=true)
       private final Integer sessionTimeout;
 
-    public Integer getSessionTimeout() {
+    public Integer sessionTimeout() {
         return this.sessionTimeout;
     }
 
     @Import(name="userPoolArn", required=true)
       private final String userPoolArn;
 
-    public String getUserPoolArn() {
+    public String userPoolArn() {
         return this.userPoolArn;
     }
 
     @Import(name="userPoolClientId", required=true)
       private final String userPoolClientId;
 
-    public String getUserPoolClientId() {
+    public String userPoolClientId() {
         return this.userPoolClientId;
     }
 
     @Import(name="userPoolDomain", required=true)
       private final String userPoolDomain;
 
-    public String getUserPoolDomain() {
+    public String userPoolDomain() {
         return this.userPoolDomain;
     }
 
