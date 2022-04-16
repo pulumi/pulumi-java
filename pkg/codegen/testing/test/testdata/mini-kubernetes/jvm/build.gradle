@@ -27,9 +27,6 @@ repositories {
     }
 }
 
-var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
-var pulumiAwsSdkVersion = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4.37.3";
-
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(11)
@@ -39,25 +36,6 @@ java {
 compileJava {
     options.fork = true
     options.forkOptions.jvmArgs.addAll(["-Xmx4g"])
-}
-
-repositories {
-    maven { // The google mirror is less flaky than mavenCentral()
-        url("https://maven-central.storage-download.googleapis.com/maven2/")
-    }
-    mavenCentral()
-    mavenLocal()
-    if (gprUser) {
-        repositories {
-            maven {
-                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
-                credentials {
-                    username = gprUser
-                    password = gprToken
-                }
-            }
-        }
-    }
 }
 
 var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
