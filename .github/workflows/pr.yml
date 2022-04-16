@@ -153,8 +153,6 @@ jobs:
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
       - name: Configure maven
         run: cp maven/settings.xml ~/.m2/settings.xml
       - run: make test_go
