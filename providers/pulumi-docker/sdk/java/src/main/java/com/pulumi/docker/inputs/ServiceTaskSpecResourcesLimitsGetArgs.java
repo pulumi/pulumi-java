@@ -18,14 +18,14 @@ public final class ServiceTaskSpecResourcesLimitsGetArgs extends com.pulumi.reso
     @Import(name="memoryBytes")
       private final @Nullable Output<Integer> memoryBytes;
 
-    public Output<Integer> getMemoryBytes() {
+    public Output<Integer> memoryBytes() {
         return this.memoryBytes == null ? Codegen.empty() : this.memoryBytes;
     }
 
     @Import(name="nanoCpus")
       private final @Nullable Output<Integer> nanoCpus;
 
-    public Output<Integer> getNanoCpus() {
+    public Output<Integer> nanoCpus() {
         return this.nanoCpus == null ? Codegen.empty() : this.nanoCpus;
     }
 

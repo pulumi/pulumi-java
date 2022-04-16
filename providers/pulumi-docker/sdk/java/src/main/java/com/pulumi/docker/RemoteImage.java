@@ -77,7 +77,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
-    public Output</* @Nullable */ RemoteImageBuild> getBuild() {
+    public Output</* @Nullable */ RemoteImageBuild> build() {
         return this.build;
     }
     /**
@@ -91,7 +91,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return If true, then the image is removed forcibly when the resource is destroyed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceRemove() {
+    public Output</* @Nullable */ Boolean> forceRemove() {
         return this.forceRemove;
     }
     /**
@@ -107,7 +107,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * the docker local storage on destroy operation.
      * 
      */
-    public Output</* @Nullable */ Boolean> getKeepLocally() {
+    public Output</* @Nullable */ Boolean> keepLocally() {
         return this.keepLocally;
     }
     /**
@@ -125,7 +125,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
      * 
      */
-    public Output<String> getLatest() {
+    public Output<String> latest() {
         return this.latest;
     }
     /**
@@ -139,7 +139,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return The name of the Docker image, including any tags or SHA256 repo digests.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -151,7 +151,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
     @Export(name="output", type=String.class, parameters={})
     private Output<String> output;
 
-    public Output<String> getOutput() {
+    public Output<String> output() {
         return this.output;
     }
     /**
@@ -169,7 +169,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return A value which cause an image pull when changed
      * 
      */
-    public Output</* @Nullable */ String> getPullTrigger() {
+    public Output</* @Nullable */ String> pullTrigger() {
         return this.pullTrigger;
     }
     /**
@@ -185,7 +185,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * using the [docker_registry_image](../data-sources/registry_image.md).
      * 
      */
-    public Output</* @Nullable */ List<String>> getPullTriggers() {
+    public Output</* @Nullable */ List<String>> pullTriggers() {
         return this.pullTriggers;
     }
     /**
@@ -199,7 +199,7 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
      * @return The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
      * 
      */
-    public Output<String> getRepoDigest() {
+    public Output<String> repoDigest() {
         return this.repoDigest;
     }
 

@@ -17,14 +17,14 @@ public final class ServiceTaskSpecPlacementPlatformArgs extends com.pulumi.resou
     @Import(name="architecture", required=true)
       private final Output<String> architecture;
 
-    public Output<String> getArchitecture() {
+    public Output<String> architecture() {
         return this.architecture;
     }
 
     @Import(name="os", required=true)
       private final Output<String> os;
 
-    public Output<String> getOs() {
+    public Output<String> os() {
         return this.os;
     }
 

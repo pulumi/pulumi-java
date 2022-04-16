@@ -118,7 +118,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * @return Definition for building the image
      * 
      */
-    public Output</* @Nullable */ RegistryImageBuild> getBuild() {
+    public Output</* @Nullable */ RegistryImageBuild> build() {
         return this.build;
     }
     /**
@@ -132,7 +132,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * @return If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getInsecureSkipVerify() {
+    public Output</* @Nullable */ Boolean> insecureSkipVerify() {
         return this.insecureSkipVerify;
     }
     /**
@@ -148,7 +148,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getKeepRemotely() {
+    public Output</* @Nullable */ Boolean> keepRemotely() {
         return this.keepRemotely;
     }
     /**
@@ -162,7 +162,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * @return The name of the Docker image.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -176,7 +176,7 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * @return The sha256 digest of the image.
      * 
      */
-    public Output<String> getSha256Digest() {
+    public Output<String> sha256Digest() {
         return this.sha256Digest;
     }
 

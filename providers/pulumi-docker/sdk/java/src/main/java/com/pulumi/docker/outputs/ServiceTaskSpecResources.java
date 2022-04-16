@@ -23,10 +23,10 @@ public final class ServiceTaskSpecResources {
         this.reservation = reservation;
     }
 
-    public Optional<ServiceTaskSpecResourcesLimits> getLimits() {
+    public Optional<ServiceTaskSpecResourcesLimits> limits() {
         return Optional.ofNullable(this.limits);
     }
-    public Optional<ServiceTaskSpecResourcesReservation> getReservation() {
+    public Optional<ServiceTaskSpecResourcesReservation> reservation() {
         return Optional.ofNullable(this.reservation);
     }
 

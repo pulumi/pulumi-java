@@ -29,16 +29,16 @@ public final class ContainerPort {
         this.protocol = protocol;
     }
 
-    public Optional<Integer> getExternal() {
+    public Optional<Integer> external() {
         return Optional.ofNullable(this.external);
     }
-    public Integer getInternal() {
+    public Integer internal() {
         return this.internal;
     }
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

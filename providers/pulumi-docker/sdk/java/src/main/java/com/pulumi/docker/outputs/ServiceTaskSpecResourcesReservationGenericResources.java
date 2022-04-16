@@ -22,10 +22,10 @@ public final class ServiceTaskSpecResourcesReservationGenericResources {
         this.namedResourcesSpecs = namedResourcesSpecs;
     }
 
-    public List<String> getDiscreteResourcesSpecs() {
+    public List<String> discreteResourcesSpecs() {
         return this.discreteResourcesSpecs == null ? List.of() : this.discreteResourcesSpecs;
     }
-    public List<String> getNamedResourcesSpecs() {
+    public List<String> namedResourcesSpecs() {
         return this.namedResourcesSpecs == null ? List.of() : this.namedResourcesSpecs;
     }
 

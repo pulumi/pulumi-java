@@ -25,7 +25,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="caMaterial")
       private final @Nullable Output<String> caMaterial;
 
-    public Output<String> getCaMaterial() {
+    public Output<String> caMaterial() {
         return this.caMaterial == null ? Codegen.empty() : this.caMaterial;
     }
 
@@ -36,7 +36,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certMaterial")
       private final @Nullable Output<String> certMaterial;
 
-    public Output<String> getCertMaterial() {
+    public Output<String> certMaterial() {
         return this.certMaterial == null ? Codegen.empty() : this.certMaterial;
     }
 
@@ -47,7 +47,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certPath")
       private final @Nullable Output<String> certPath;
 
-    public Output<String> getCertPath() {
+    public Output<String> certPath() {
         return this.certPath == null ? Codegen.empty() : this.certPath;
     }
 
@@ -58,7 +58,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -69,14 +69,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyMaterial")
       private final @Nullable Output<String> keyMaterial;
 
-    public Output<String> getKeyMaterial() {
+    public Output<String> keyMaterial() {
         return this.keyMaterial == null ? Codegen.empty() : this.keyMaterial;
     }
 
     @Import(name="registryAuth", json=true)
       private final @Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth;
 
-    public Output<List<ProviderRegistryAuthArgs>> getRegistryAuth() {
+    public Output<List<ProviderRegistryAuthArgs>> registryAuth() {
         return this.registryAuth == null ? Codegen.empty() : this.registryAuth;
     }
 

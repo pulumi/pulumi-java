@@ -18,7 +18,7 @@ public final class ServiceModeReplicated {
         this.replicas = replicas;
     }
 
-    public Optional<Integer> getReplicas() {
+    public Optional<Integer> replicas() {
         return Optional.ofNullable(this.replicas);
     }
 

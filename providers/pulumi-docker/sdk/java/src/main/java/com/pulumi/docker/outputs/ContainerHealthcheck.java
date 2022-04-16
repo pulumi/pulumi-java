@@ -33,19 +33,19 @@ public final class ContainerHealthcheck {
         this.timeout = timeout;
     }
 
-    public Optional<String> getInterval() {
+    public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
-    public Optional<Integer> getRetries() {
+    public Optional<Integer> retries() {
         return Optional.ofNullable(this.retries);
     }
-    public Optional<String> getStartPeriod() {
+    public Optional<String> startPeriod() {
         return Optional.ofNullable(this.startPeriod);
     }
-    public List<String> getTests() {
+    public List<String> tests() {
         return this.tests;
     }
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

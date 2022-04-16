@@ -18,21 +18,21 @@ public final class ContainerDeviceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
+    public Output<String> containerPath() {
         return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="hostPath", required=true)
       private final Output<String> hostPath;
 
-    public Output<String> getHostPath() {
+    public Output<String> hostPath() {
         return this.hostPath;
     }
 
     @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 

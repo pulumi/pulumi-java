@@ -31,13 +31,13 @@ public final class GetRemoteImageResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getRepoDigest() {
+    public String repoDigest() {
         return this.repoDigest;
     }
 

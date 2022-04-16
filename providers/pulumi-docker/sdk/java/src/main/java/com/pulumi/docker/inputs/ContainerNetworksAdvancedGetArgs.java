@@ -19,28 +19,28 @@ public final class ContainerNetworksAdvancedGetArgs extends com.pulumi.resources
     @Import(name="aliases")
       private final @Nullable Output<List<String>> aliases;
 
-    public Output<List<String>> getAliases() {
+    public Output<List<String>> aliases() {
         return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
+    public Output<String> ipv4Address() {
         return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
     }
 
     @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

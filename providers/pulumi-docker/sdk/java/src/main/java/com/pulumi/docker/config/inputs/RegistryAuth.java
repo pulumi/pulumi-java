@@ -17,35 +17,35 @@ public final class RegistryAuth extends com.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
       private final String address;
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
 
     @Import(name="configFile")
       private final @Nullable String configFile;
 
-    public Optional<String> getConfigFile() {
+    public Optional<String> configFile() {
         return this.configFile == null ? Optional.empty() : Optional.ofNullable(this.configFile);
     }
 
     @Import(name="configFileContent")
       private final @Nullable String configFileContent;
 
-    public Optional<String> getConfigFileContent() {
+    public Optional<String> configFileContent() {
         return this.configFileContent == null ? Optional.empty() : Optional.ofNullable(this.configFileContent);
     }
 
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
     @Import(name="username")
       private final @Nullable String username;
 
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

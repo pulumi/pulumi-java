@@ -26,7 +26,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="build")
       private final @Nullable Output<RemoteImageBuildArgs> build;
 
-    public Output<RemoteImageBuildArgs> getBuild() {
+    public Output<RemoteImageBuildArgs> build() {
         return this.build == null ? Codegen.empty() : this.build;
     }
 
@@ -37,7 +37,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> getForceRemove() {
+    public Output<Boolean> forceRemove() {
         return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
     }
 
@@ -49,7 +49,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keepLocally")
       private final @Nullable Output<Boolean> keepLocally;
 
-    public Output<Boolean> getKeepLocally() {
+    public Output<Boolean> keepLocally() {
         return this.keepLocally == null ? Codegen.empty() : this.keepLocally;
     }
 
@@ -60,7 +60,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -76,7 +76,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pullTrigger;
 
     @Deprecated /* Use field pull_triggers instead */
-    public Output<String> getPullTrigger() {
+    public Output<String> pullTrigger() {
         return this.pullTrigger == null ? Codegen.empty() : this.pullTrigger;
     }
 
@@ -88,7 +88,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pullTriggers")
       private final @Nullable Output<List<String>> pullTriggers;
 
-    public Output<List<String>> getPullTriggers() {
+    public Output<List<String>> pullTriggers() {
         return this.pullTriggers == null ? Codegen.empty() : this.pullTriggers;
     }
 

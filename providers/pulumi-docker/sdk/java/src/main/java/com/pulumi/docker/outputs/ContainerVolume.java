@@ -32,19 +32,19 @@ public final class ContainerVolume {
         this.volumeName = volumeName;
     }
 
-    public Optional<String> getContainerPath() {
+    public Optional<String> containerPath() {
         return Optional.ofNullable(this.containerPath);
     }
-    public Optional<String> getFromContainer() {
+    public Optional<String> fromContainer() {
         return Optional.ofNullable(this.fromContainer);
     }
-    public Optional<String> getHostPath() {
+    public Optional<String> hostPath() {
         return Optional.ofNullable(this.hostPath);
     }
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
-    public Optional<String> getVolumeName() {
+    public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
 

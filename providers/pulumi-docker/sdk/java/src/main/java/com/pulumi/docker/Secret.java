@@ -34,7 +34,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Base64-url-safe-encoded secret data
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -48,7 +48,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return User-defined key/value metadata
      * 
      */
-    public Output</* @Nullable */ List<SecretLabel>> getLabels() {
+    public Output</* @Nullable */ List<SecretLabel>> labels() {
         return this.labels;
     }
     /**
@@ -62,7 +62,7 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return User-defined name of the secret
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -18,14 +18,14 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs extends com
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
+    public Output<Integer> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> getSizeBytes() {
+    public Output<Integer> sizeBytes() {
         return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 

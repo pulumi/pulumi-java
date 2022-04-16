@@ -21,63 +21,63 @@ public final class RemoteImageBuildArgs extends com.pulumi.resources.ResourceArg
     @Import(name="buildArg")
       private final @Nullable Output<Map<String,String>> buildArg;
 
-    public Output<Map<String,String>> getBuildArg() {
+    public Output<Map<String,String>> buildArg() {
         return this.buildArg == null ? Codegen.empty() : this.buildArg;
     }
 
     @Import(name="dockerfile")
       private final @Nullable Output<String> dockerfile;
 
-    public Output<String> getDockerfile() {
+    public Output<String> dockerfile() {
         return this.dockerfile == null ? Codegen.empty() : this.dockerfile;
     }
 
     @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> getForceRemove() {
+    public Output<Boolean> forceRemove() {
         return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
     }
 
     @Import(name="label")
       private final @Nullable Output<Map<String,String>> label;
 
-    public Output<Map<String,String>> getLabel() {
+    public Output<Map<String,String>> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
     @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> getNoCache() {
+    public Output<Boolean> noCache() {
         return this.noCache == null ? Codegen.empty() : this.noCache;
     }
 
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
     @Import(name="remove")
       private final @Nullable Output<Boolean> remove;
 
-    public Output<Boolean> getRemove() {
+    public Output<Boolean> remove() {
         return this.remove == null ? Codegen.empty() : this.remove;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

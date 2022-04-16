@@ -35,22 +35,22 @@ public final class ContainerUpload {
         this.sourceHash = sourceHash;
     }
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
-    public Optional<String> getContentBase64() {
+    public Optional<String> contentBase64() {
         return Optional.ofNullable(this.contentBase64);
     }
-    public Optional<Boolean> getExecutable() {
+    public Optional<Boolean> executable() {
         return Optional.ofNullable(this.executable);
     }
-    public String getFile() {
+    public String file() {
         return this.file;
     }
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
-    public Optional<String> getSourceHash() {
+    public Optional<String> sourceHash() {
         return Optional.ofNullable(this.sourceHash);
     }
 

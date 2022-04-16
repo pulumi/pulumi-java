@@ -24,10 +24,10 @@ public final class ServiceEndpointSpec {
         this.ports = ports;
     }
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
-    public List<ServiceEndpointSpecPort> getPorts() {
+    public List<ServiceEndpointSpecPort> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 

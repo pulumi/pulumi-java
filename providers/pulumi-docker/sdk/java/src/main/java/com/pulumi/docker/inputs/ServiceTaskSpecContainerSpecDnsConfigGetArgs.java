@@ -19,21 +19,21 @@ public final class ServiceTaskSpecContainerSpecDnsConfigGetArgs extends com.pulu
     @Import(name="nameservers", required=true)
       private final Output<List<String>> nameservers;
 
-    public Output<List<String>> getNameservers() {
+    public Output<List<String>> nameservers() {
         return this.nameservers;
     }
 
     @Import(name="options")
       private final @Nullable Output<List<String>> options;
 
-    public Output<List<String>> getOptions() {
+    public Output<List<String>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="searches")
       private final @Nullable Output<List<String>> searches;
 
-    public Output<List<String>> getSearches() {
+    public Output<List<String>> searches() {
         return this.searches == null ? Codegen.empty() : this.searches;
     }
 

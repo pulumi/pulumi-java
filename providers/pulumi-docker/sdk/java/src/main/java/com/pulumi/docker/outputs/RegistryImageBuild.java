@@ -118,100 +118,100 @@ public final class RegistryImageBuild {
         this.version = version;
     }
 
-    public List<RegistryImageBuildAuthConfig> getAuthConfigs() {
+    public List<RegistryImageBuildAuthConfig> authConfigs() {
         return this.authConfigs == null ? List.of() : this.authConfigs;
     }
-    public Map<String,String> getBuildArgs() {
+    public Map<String,String> buildArgs() {
         return this.buildArgs == null ? Map.of() : this.buildArgs;
     }
-    public Optional<String> getBuildId() {
+    public Optional<String> buildId() {
         return Optional.ofNullable(this.buildId);
     }
-    public List<String> getCacheFroms() {
+    public List<String> cacheFroms() {
         return this.cacheFroms == null ? List.of() : this.cacheFroms;
     }
-    public Optional<String> getCgroupParent() {
+    public Optional<String> cgroupParent() {
         return Optional.ofNullable(this.cgroupParent);
     }
-    public String getContext() {
+    public String context() {
         return this.context;
     }
-    public Optional<Integer> getCpuPeriod() {
+    public Optional<Integer> cpuPeriod() {
         return Optional.ofNullable(this.cpuPeriod);
     }
-    public Optional<Integer> getCpuQuota() {
+    public Optional<Integer> cpuQuota() {
         return Optional.ofNullable(this.cpuQuota);
     }
-    public Optional<String> getCpuSetCpus() {
+    public Optional<String> cpuSetCpus() {
         return Optional.ofNullable(this.cpuSetCpus);
     }
-    public Optional<String> getCpuSetMems() {
+    public Optional<String> cpuSetMems() {
         return Optional.ofNullable(this.cpuSetMems);
     }
-    public Optional<Integer> getCpuShares() {
+    public Optional<Integer> cpuShares() {
         return Optional.ofNullable(this.cpuShares);
     }
-    public Optional<String> getDockerfile() {
+    public Optional<String> dockerfile() {
         return Optional.ofNullable(this.dockerfile);
     }
-    public List<String> getExtraHosts() {
+    public List<String> extraHosts() {
         return this.extraHosts == null ? List.of() : this.extraHosts;
     }
-    public Optional<Boolean> getForceRemove() {
+    public Optional<Boolean> forceRemove() {
         return Optional.ofNullable(this.forceRemove);
     }
-    public Optional<String> getIsolation() {
+    public Optional<String> isolation() {
         return Optional.ofNullable(this.isolation);
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
-    public Optional<Integer> getMemory() {
+    public Optional<Integer> memory() {
         return Optional.ofNullable(this.memory);
     }
-    public Optional<Integer> getMemorySwap() {
+    public Optional<Integer> memorySwap() {
         return Optional.ofNullable(this.memorySwap);
     }
-    public Optional<String> getNetworkMode() {
+    public Optional<String> networkMode() {
         return Optional.ofNullable(this.networkMode);
     }
-    public Optional<Boolean> getNoCache() {
+    public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
-    public Optional<String> getPlatform() {
+    public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
-    public Optional<Boolean> getPullParent() {
+    public Optional<Boolean> pullParent() {
         return Optional.ofNullable(this.pullParent);
     }
-    public Optional<String> getRemoteContext() {
+    public Optional<String> remoteContext() {
         return Optional.ofNullable(this.remoteContext);
     }
-    public Optional<Boolean> getRemove() {
+    public Optional<Boolean> remove() {
         return Optional.ofNullable(this.remove);
     }
-    public List<String> getSecurityOpts() {
+    public List<String> securityOpts() {
         return this.securityOpts == null ? List.of() : this.securityOpts;
     }
-    public Optional<String> getSessionId() {
+    public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
-    public Optional<Integer> getShmSize() {
+    public Optional<Integer> shmSize() {
         return Optional.ofNullable(this.shmSize);
     }
-    public Optional<Boolean> getSquash() {
+    public Optional<Boolean> squash() {
         return Optional.ofNullable(this.squash);
     }
-    public Optional<Boolean> getSuppressOutput() {
+    public Optional<Boolean> suppressOutput() {
         return Optional.ofNullable(this.suppressOutput);
     }
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
-    public List<RegistryImageBuildUlimit> getUlimits() {
+    public List<RegistryImageBuildUlimit> ulimits() {
         return this.ulimits == null ? List.of() : this.ulimits;
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

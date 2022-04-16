@@ -18,35 +18,35 @@ public final class ProviderRegistryAuthArgs extends com.pulumi.resources.Resourc
     @Import(name="address", required=true)
       private final Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address;
     }
 
     @Import(name="configFile")
       private final @Nullable Output<String> configFile;
 
-    public Output<String> getConfigFile() {
+    public Output<String> configFile() {
         return this.configFile == null ? Codegen.empty() : this.configFile;
     }
 
     @Import(name="configFileContent")
       private final @Nullable Output<String> configFileContent;
 
-    public Output<String> getConfigFileContent() {
+    public Output<String> configFileContent() {
         return this.configFileContent == null ? Codegen.empty() : this.configFileContent;
     }
 
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

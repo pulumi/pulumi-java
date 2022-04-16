@@ -22,28 +22,28 @@ public final class ContainerMountVolumeOptionsGetArgs extends com.pulumi.resourc
     @Import(name="driverName")
       private final @Nullable Output<String> driverName;
 
-    public Output<String> getDriverName() {
+    public Output<String> driverName() {
         return this.driverName == null ? Codegen.empty() : this.driverName;
     }
 
     @Import(name="driverOptions")
       private final @Nullable Output<Map<String,String>> driverOptions;
 
-    public Output<Map<String,String>> getDriverOptions() {
+    public Output<Map<String,String>> driverOptions() {
         return this.driverOptions == null ? Codegen.empty() : this.driverOptions;
     }
 
     @Import(name="labels")
       private final @Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels;
 
-    public Output<List<ContainerMountVolumeOptionsLabelGetArgs>> getLabels() {
+    public Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="noCopy")
       private final @Nullable Output<Boolean> noCopy;
 
-    public Output<Boolean> getNoCopy() {
+    public Output<Boolean> noCopy() {
         return this.noCopy == null ? Codegen.empty() : this.noCopy;
     }
 

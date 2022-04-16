@@ -26,13 +26,13 @@ public final class ServiceTaskSpecResourcesReservation {
         this.nanoCpus = nanoCpus;
     }
 
-    public Optional<ServiceTaskSpecResourcesReservationGenericResources> getGenericResources() {
+    public Optional<ServiceTaskSpecResourcesReservationGenericResources> genericResources() {
         return Optional.ofNullable(this.genericResources);
     }
-    public Optional<Integer> getMemoryBytes() {
+    public Optional<Integer> memoryBytes() {
         return Optional.ofNullable(this.memoryBytes);
     }
-    public Optional<Integer> getNanoCpus() {
+    public Optional<Integer> nanoCpus() {
         return Optional.ofNullable(this.nanoCpus);
     }
 

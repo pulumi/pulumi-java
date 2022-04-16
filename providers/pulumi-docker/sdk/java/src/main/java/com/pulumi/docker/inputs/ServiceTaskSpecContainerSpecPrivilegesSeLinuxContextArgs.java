@@ -19,35 +19,35 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
     @Import(name="disable")
       private final @Nullable Output<Boolean> disable;
 
-    public Output<Boolean> getDisable() {
+    public Output<Boolean> disable() {
         return this.disable == null ? Codegen.empty() : this.disable;
     }
 
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

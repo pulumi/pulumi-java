@@ -18,14 +18,14 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="insecureSkipVerify")
       private final @Nullable Boolean insecureSkipVerify;
 
-    public Optional<Boolean> getInsecureSkipVerify() {
+    public Optional<Boolean> insecureSkipVerify() {
         return this.insecureSkipVerify == null ? Optional.empty() : Optional.ofNullable(this.insecureSkipVerify);
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

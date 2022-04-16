@@ -19,35 +19,35 @@ public final class ServiceEndpointSpecPortGetArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     @Import(name="publishMode")
       private final @Nullable Output<String> publishMode;
 
-    public Output<String> getPublishMode() {
+    public Output<String> publishMode() {
         return this.publishMode == null ? Codegen.empty() : this.publishMode;
     }
 
     @Import(name="publishedPort")
       private final @Nullable Output<Integer> publishedPort;
 
-    public Output<Integer> getPublishedPort() {
+    public Output<Integer> publishedPort() {
         return this.publishedPort == null ? Codegen.empty() : this.publishedPort;
     }
 
     @Import(name="targetPort", required=true)
       private final Output<Integer> targetPort;
 
-    public Output<Integer> getTargetPort() {
+    public Output<Integer> targetPort() {
         return this.targetPort;
     }
 
