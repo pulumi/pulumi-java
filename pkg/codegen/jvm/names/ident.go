@@ -147,6 +147,32 @@ func (id Property) Setter() string {
 	return strings.ToLower(setter[0:1]) + setter[1:]
 }
 
+// MakeValidIdentifier replaces characters that are not allowed in Java identifiers with underscores. A reserved word is
+// prefixed with _. No attempt is made to ensure that the result is unique.
+func MakeValidIdentifier(name string) string {
+	var builder strings.Builder
+	for i, c := range name {
+		if i == 0 && c == '@' {
+			builder.WriteRune(c)
+			continue
+		}
+		if !isLegalIdentifierPart(c) {
+			builder.WriteRune('_')
+		} else {
+			if i == 0 && !isLegalIdentifierStart(c) {
+				builder.WriteRune('_')
+			}
+			builder.WriteRune(c)
+		}
+	}
+	name = builder.String()
+	if isReservedWord(name) {
+		return name + "_"
+	}
+
+	return name
+}
+
 // Title converts the input string to a title cased string.
 // If `s` has upper case letters, they are kept.
 func Title(s string) string {
@@ -155,4 +181,27 @@ func Title(s string) string {
 	}
 	runes := []rune(s)
 	return string(append([]rune{unicode.ToUpper(runes[0])}, runes[1:]...))
+}
+
+// Camel converts s to camel case.
+//
+// Examples:
+// "helloWorld"    => "helloWorld"
+// "HelloWorld"    => "helloWorld"
+// "JSONObject"    => "jsonobject"
+// "My-FRIEND.Bob" => "my-FRIEND.Bob"
+func Camel(s string) string {
+	if s == "" {
+		return ""
+	}
+	runes := []rune(s)
+	res := make([]rune, 0, len(runes))
+	for i, r := range runes {
+		if unicode.IsLower(r) {
+			res = append(res, runes[i:]...)
+			break
+		}
+		res = append(res, unicode.ToLower(r))
+	}
+	return string(res)
 }

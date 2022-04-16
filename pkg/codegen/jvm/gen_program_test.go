@@ -1,6 +1,8 @@
 package jvm
 
 import (
+	"github.com/pulumi/pulumi/pkg/v3/codegen"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/test"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -33,21 +35,40 @@ func pclTestFilePaths(dir string) []PclTestFile {
 	return paths
 }
 
+// Returns whether the input directory path already exists
 func directoryExists(dir string) bool {
-	_, err := os.Stat(dir)
-	return !os.IsNotExist(err)
+	info, err := os.Stat(dir)
+	return err == nil && info.IsDir()
 }
 
 var testdataPath = filepath.Join("..", "testing", "test", "testdata")
 
 func TestGenerateProgram(t *testing.T) {
+	t.Parallel()
+
+	test.TestProgramCodegen(t,
+		test.ProgramCodegenOptions{
+			Language:   "jvm",
+			Extension:  "java",
+			OutputFile: "App.java",
+			Check: func(t *testing.T, path string, dependencies codegen.StringSet) {
+				// TODO: implement the check properly
+				// Check(t, path, dependencies, "../../../../../../../sdk")
+			},
+			GenProgram: GenerateProgram,
+			TestCases:  test.PulumiPulumiProgramTests,
+		})
+}
+
+func TestGenerateJavaProgram(t *testing.T) {
 	pclFiles := pclTestFilePaths(testdataPath)
 	assert.NotEmpty(t, pclFiles)
 	for _, pclFile := range pclFiles {
 		t.Logf("Compiling %s", pclFile)
 		pclFileContents, err := ioutil.ReadFile(pclFile.FilePath)
+		assert.NoErrorf(t, err, "Could not read the contents of %s", pclFile.FilePath)
 		assert.Nilf(t, err, "Could not read contents of PCL file %s", pclFile)
-		compiledFile, diagnostics, err := CompilePclToJava(pclFileContents, testdataPath)
+		compiledFile, diagnostics, err := compilePclToJava(pclFileContents, testdataPath)
 		assert.Nilf(t, err, "Could not compile %s", pclFile)
 		if diagnostics != nil {
 			for _, diagError := range diagnostics.Errs() {
@@ -76,7 +97,7 @@ func compileSingleFile(name string, t *testing.T) {
 			t.Logf("Compiling %s", pclFile)
 			pclFileContents, err := ioutil.ReadFile(pclFile.FilePath)
 			assert.Nilf(t, err, "Could not read contents of PCL file %s", pclFile)
-			compiledFile, diagnostics, err := CompilePclToJava(pclFileContents, testdataPath)
+			compiledFile, diagnostics, err := compilePclToJava(pclFileContents, testdataPath)
 			assert.Nilf(t, err, "Could not compile %s", pclFile)
 			if diagnostics != nil {
 				for _, diagError := range diagnostics.Errs() {

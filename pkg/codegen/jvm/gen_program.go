@@ -18,14 +18,14 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/testing/utils"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
+
+	"github.com/pulumi/pulumi-java/pkg/codegen/jvm/names"
 )
 
 type generator struct {
 	// The formatter to use when generating code.
 	*format.Formatter
 	program *pcl.Program
-	// Whether awaits are needed, and therefore an async Initialize method should be declared.
-	asyncInit bool
 	// TODO
 	diagnostics                 hcl.Diagnostics
 	currentResourcePropertyType schema.Type
@@ -139,13 +139,6 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 
 	g.Formatter = format.NewFormatter(g)
 
-	for _, n := range nodes {
-		if r, ok := n.(*pcl.Resource); ok && requiresAsyncInit(r) {
-			g.asyncInit = true
-			break
-		}
-	}
-
 	var index bytes.Buffer
 	g.genPreamble(&index, nodes)
 
@@ -176,36 +169,6 @@ func (g *generator) newline(w io.Writer) {
 	g.Fgen(w, "\n")
 }
 
-func (g *generator) emitOutputFields(w io.Writer, nodes []pcl.Node) {
-	for _, node := range nodes {
-		if outputVariable, isOutput := node.(*pcl.OutputVariable); isOutput {
-			outputType := "Object"
-
-			if outputVariable.Type().AssignableFrom(model.BoolType) {
-				outputType = "Boolean"
-			}
-
-			if outputVariable.Type().AssignableFrom(model.NumberType) {
-				outputType = "Integer"
-			}
-
-			if outputVariable.Type().AssignableFrom(model.StringType) {
-				outputType = "String"
-			}
-
-			g.Indented(func() {
-				g.makeIndent(w)
-				g.Fgenf(w, "@Export(type = String.class)")
-				g.newline(w)
-
-				g.makeIndent(w)
-				g.Fgenf(w, "private final Output<%s> %s;", outputType, outputVariable.Name())
-				g.newline(w)
-			})
-		}
-	}
-}
-
 // Checks whether any of the input nodes is a configuration variable
 func containConfigVariables(nodes []pcl.Node) bool {
 	for _, node := range nodes {
@@ -220,20 +183,23 @@ func containConfigVariables(nodes []pcl.Node) bool {
 
 // genPreamble generates import statements, class definition and constructor.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
+	g.Fgen(w, "package generated_program;")
+	g.newline(w)
+	g.newline(w)
 	g.genImport(w, "java.util.*")
 	g.genImport(w, "java.io.*")
 	g.genImport(w, "java.nio.*")
-	g.genImport(w, "io.pulumi.*")
-	g.newline(w)
+	g.genImport(w, "com.pulumi.*")
 	g.newline(w)
 	// Emit Stack class signature
-	g.Fprint(w, "public class MyStack extends Stack\n")
-	g.Fprint(w, "{")
+	g.Fprint(w, "public class App {")
 	g.newline(w)
-	g.emitOutputFields(w, nodes)
+	g.Fprint(w, "    public static void main(String[] args) {\n")
+	g.Fgen(w, "        int exitCode = Pulumi.run(App::stack);\n")
+	g.Fgen(w, "        System.exit(exitCode);\n")
+	g.Fgen(w, "    }\n")
 	g.newline(w)
-	g.Fprint(w, "    public MyStack()\n")
-	g.Fprint(w, "    {\n")
+	g.Fprint(w, "    public static Exports stack(Context ctx) {\n")
 	if containConfigVariables(nodes) {
 		g.Fprint(w, "        final var config = Config.of();\n")
 	}
@@ -255,7 +221,7 @@ func (g *generator) generateRangeClass(w io.Writer) {
 		g.Fgenf(w, "%spublic static <TValue> List<Range<TValue>> of(Iterable<TValue> items) {\n", g.Indent)
 		g.Indented(func() {
 			g.Fgenf(w, "%svar results = new ArrayList<Range<TValue>>();\n", g.Indent)
-			g.Fgenf(w, "%sInteger counter = 0;\n", g.Indent)
+			g.Fgenf(w, "%sint counter = 0;\n", g.Indent)
 			g.Fgenf(w, "%sfor(var item : items) {\n", g.Indent)
 			g.Indented(func() {
 				g.Fgenf(w, "%sresults.add(new Range<TValue>(counter.toString(), item));\n", g.Indent)
@@ -328,20 +294,22 @@ func (g *generator) generateJsonMethods(w io.Writer) {
 // genPostamble closes the method and the class and declares stack output statements.
 func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	g.Indented(func() {
+		g.makeIndent(w)
+		g.Fprintf(w, "%sreturn ctx.exports();\n", g.Indent)
 		g.Fprintf(w, "%s}\n", g.Indent)
 		if containsFunctionCall("readDir", nodes) {
-			g.generateReadDirMethod(w)
+			// g.generateReadDirMethod(w)
 		}
 
 		if containsFunctionCall("toJSON", nodes) {
-			g.generateJsonMethods(w)
+			// g.generateJsonMethods(w)
 		}
 	})
 	g.Fprint(w, "}\n")
 
 	if containsRangeExpr(nodes) {
-		g.Fprint(w, "\n")
-		g.generateRangeClass(w)
+		// g.Fprint(w, "\n")
+		// g.generateRangeClass(w)
 	}
 }
 
@@ -354,7 +322,7 @@ func resourceArgsTypeName(r *pcl.Resource) string {
 		pkg, module, member = member, "", "Provider"
 	}
 
-	return fmt.Sprintf("%sArgs", toUpperCase(member))
+	return fmt.Sprintf("%sArgs", names.Title(member))
 }
 
 // resourceTypeName computes the Java resource class name for the given resource.
@@ -366,7 +334,7 @@ func resourceTypeName(resource *pcl.Resource) string {
 		pkg, module, member = member, "", "Provider"
 	}
 
-	return toUpperCase(member)
+	return names.Title(member)
 }
 
 // Returns the expression that should be emitted for a resource's "name" parameter given its base name
@@ -400,7 +368,7 @@ func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *sch
 	for _, pkg := range g.program.Packages() {
 		if pkg.Functions != nil {
 			for _, functionSchame := range pkg.Functions {
-				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, toLowerCase(function)) {
+				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, names.Camel(function)) {
 					return true, functionSchame
 				}
 			}
@@ -428,7 +396,7 @@ func getTraversalKey(traversal hcl.Traversal) string {
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
-	variableName := toLowerCase(makeValidIdentifier(resource.Name()))
+	variableName := names.Camel(names.MakeValidIdentifier(resource.Name()))
 	instantiate := func(resName string) {
 		resourceProperties := make(map[string]schema.Type)
 		foundSchema, resourceSchema := g.findResourceSchema(resource)
@@ -447,9 +415,10 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			g.Fgenf(w, "%s\n", g.Indent)
 			g.Indented(func() {
 				for _, attr := range resource.Inputs {
-					attributeType := resourceProperties[attr.Name]
-					g.currentResourcePropertyType = attributeType
-					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, makeValidIdentifier(attr.Name), attr.Value)
+					attributeIdent := names.MakeValidIdentifier(attr.Name)
+					attributeSchemaType := resourceProperties[attr.Name]
+					g.currentResourcePropertyType = attributeSchemaType
+					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, g.lowerExpression(attr.Value, attr.Type()))
 				}
 
 				g.Fgenf(w, "%s.build())", g.Indent)
@@ -466,12 +435,11 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 		isNumericRange := model.InputType(model.NumberType).ConversionFrom(rangeExpr.Type()) != model.NoConversion
 		if isNumericRange {
 			// numeric range
-			g.Fgenf(w, "%sfor (var rangeIndex = 0; rangeIndex < %.12o; rangeIndex++)\n", g.Indent, rangeExpr)
-			g.Fgenf(w, "%s{\n", g.Indent)
+			g.Fgenf(w, "%sfor (var i = 0; i < %.12o; i++) {\n", g.Indent, rangeExpr)
 			g.Indented(func() {
 				// register each resource
 				g.Fgenf(w, "%s", g.Indent)
-				instantiate(makeResourceName(resource.Name(), "rangeIndex"))
+				instantiate(makeResourceName(resource.Name(), "i"))
 				g.Fgenf(w, ";\n\n")
 			})
 			g.Fgenf(w, "%s\n}\n", g.Indent)
@@ -492,15 +460,14 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 							// check whether {root} is actually a variable name that holds the result
 							// of a function invoke
 							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
-								resultTypeName := toLowerCase(typeName(functionSchema.Outputs))
+								resultTypeName := names.Camel(typeName(functionSchema.Outputs))
 								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
 								g.makeIndent(w)
 								g.Fgenf(w, "final var %s = ", resource.Name())
 								g.Fgenf(w, "%s.apply(%s -> {\n", traversalExpr.RootName, resultTypeName)
 								g.Indented(func() {
 									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
-									g.Fgenf(w, "%sfor (var range : Range.of(%s.get%s())\n", g.Indent, resultTypeName, toUpperCase(part))
-									g.Fgenf(w, "%s{\n", g.Indent)
+									g.Fgenf(w, "%sfor (var range : Range.of(%s.get%s()) {\n", g.Indent, resultTypeName, names.Title(part))
 									g.Indented(func() {
 										suffix := "range.getKey()"
 										g.Fgenf(w, "%svar resource = ", g.Indent)
@@ -516,26 +483,25 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 							} else {
 								// not an async function invoke
 								// wrap into range collection
-								g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
+								g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
 							}
 						} else {
 							// wrap into range collection
-							g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
+							g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
 						}
 					}
 					// wrap into range collection
-					g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
+					g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
 				default:
 					// assume function call returns a Range<T>
-					g.Fgenf(w, "%sfor (var range : %.12o)\n", g.Indent, rangeExpr)
+					g.Fgenf(w, "%sfor (var range : %.12o) {\n", g.Indent, rangeExpr)
 				}
 
 			default:
 				// wrap into range collection
-				g.Fgenf(w, "%sfor (var range : Range.of(%.12o))\n", g.Indent, rangeExpr)
+				g.Fgenf(w, "%sfor (var range : Range.of(%.12o)) {\n", g.Indent, rangeExpr)
 			}
 
-			g.Fgenf(w, "%s{\n", g.Indent)
 			g.Indented(func() {
 				suffix := "range.getKey()"
 				g.Fgenf(w, "%s", g.Indent)
@@ -558,12 +524,12 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 	g.makeIndent(w)
 	if configVariable.DefaultValue != nil {
 		g.Fgenf(w, "final var %s = config.get(\"%s\").orElse(%v);",
-			makeValidIdentifier(configVariable.Name()),
+			names.MakeValidIdentifier(configVariable.Name()),
 			configVariable.Name(),
 			configVariable.DefaultValue)
 	} else {
 		g.Fgenf(w, "final var %s = config.get(\"%s\");",
-			makeValidIdentifier(configVariable.Name()),
+			names.MakeValidIdentifier(configVariable.Name()),
 			configVariable.Name())
 	}
 	g.newline(w)
@@ -577,8 +543,8 @@ func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariab
 		switch call.Name {
 		case pcl.Invoke:
 			args := call.Args[0]
-			name := g.functionName(args)
-			foundFunction, functionSchema := g.findFunctionSchema(w, name)
+			_, schemaName := g.functionName(args)
+			foundFunction, functionSchema := g.findFunctionSchema(w, schemaName)
 			if foundFunction {
 				return true, functionSchema
 			}
@@ -596,16 +562,21 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 		g.functionInvokes[variableName] = functionSchema
 		// convert CompletableFuture<T> to Output<T> using Output.of
 		// TODO: call the Output<T>-version of invokes when the SDK allows it.
-		g.Fgenf(w, "final var %s = Output.of(%v);", variableName, localVariable.Definition.Value)
+		functionDefinition := outputOf(localVariable.Definition.Value)
+		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
+		//functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
+		g.Fgenf(w, "final var %s = %v;", variableName, functionDefinition)
 	} else {
-		g.Fgenf(w, "final var %s = %v;", variableName, localVariable.Definition.Value)
+		variable := localVariable.Definition.Value
+		g.Fgenf(w, "final var %s = %v;", variableName, g.lowerExpression(variable, variable.Type()))
 	}
 	g.newline(w)
 }
 
 func (g *generator) genOutputAssignment(w io.Writer, outputVariable *pcl.OutputVariable) {
 	g.makeIndent(w)
-	g.Fgenf(w, "this.%s = %v;", outputVariable.Name(), outputVariable.Value)
+	rewrittenOutVar := g.lowerExpression(outputVariable.Value, outputVariable.Type())
+	g.Fgenf(w, "ctx.export(\"%s\", %v);", outputVariable.Name(), rewrittenOutVar)
 	g.newline(w)
 }
 
@@ -622,16 +593,6 @@ func (g *generator) genNode(w io.Writer, n pcl.Node) {
 	}
 }
 
-// requiresAsyncInit returns true if the program requires awaits in the code, and therefore an asynchronous
-// method must be declared.
-func requiresAsyncInit(r *pcl.Resource) bool {
-	if r.Options == nil || r.Options.Range == nil {
-		return false
-	}
-
-	return model.ContainsPromises(r.Options.Range.Type())
-}
-
 // TODO
 
 func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
@@ -644,7 +605,7 @@ func (g *generator) genNYI(w io.Writer, reason string, vs ...interface{}) {
 	g.Fgenf(w, "\"TODO: %s\"", fmt.Sprintf(reason, vs...))
 }
 
-func CompilePclToJava(source []byte, schemaPath string) ([]byte, hcl.Diagnostics, error) {
+func compilePclToJava(source []byte, schemaPath string) ([]byte, hcl.Diagnostics, error) {
 	parser := syntax.NewParser()
 	parser.ParseFile(bytes.NewReader(source), "")
 	program, programDiags, err := pcl.BindProgram(parser.Files, pcl.PluginHost(utils.NewHost(schemaPath)))
