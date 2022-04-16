@@ -47,7 +47,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The creation date of the elastic pool (ISO8601 format).
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -61,7 +61,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Kind of elastic pool. This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -75,7 +75,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The license type to apply for this elastic pool.
      * 
      */
-    public Output</* @Nullable */ String> getLicenseType() {
+    public Output</* @Nullable */ String> licenseType() {
         return this.licenseType;
     }
     /**
@@ -89,7 +89,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
      * 
      */
-    public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
+    public Output</* @Nullable */ String> maintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
     /**
@@ -117,7 +117,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The storage limit for the database elastic pool in bytes.
      * 
      */
-    public Output</* @Nullable */ Double> getMaxSizeBytes() {
+    public Output</* @Nullable */ Double> maxSizeBytes() {
         return this.maxSizeBytes;
     }
     /**
@@ -131,7 +131,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +145,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The per database settings for the elastic pool.
      * 
      */
-    public Output</* @Nullable */ ElasticPoolPerDatabaseSettingsResponse> getPerDatabaseSettings() {
+    public Output</* @Nullable */ ElasticPoolPerDatabaseSettingsResponse> perDatabaseSettings() {
         return this.perDatabaseSettings;
     }
     /**
@@ -163,7 +163,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -177,7 +177,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return The state of the elastic pool.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -191,7 +191,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -205,7 +205,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -219,7 +219,7 @@ public class ElasticPool extends com.pulumi.resources.CustomResource {
      * @return Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
      * 
      */
-    public Output</* @Nullable */ Boolean> getZoneRedundant() {
+    public Output</* @Nullable */ Boolean> zoneRedundant() {
         return this.zoneRedundant;
     }
 

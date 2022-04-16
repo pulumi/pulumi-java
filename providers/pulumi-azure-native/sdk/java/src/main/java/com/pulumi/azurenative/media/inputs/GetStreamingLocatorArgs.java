@@ -19,7 +19,7 @@ public final class GetStreamingLocatorArgs extends com.pulumi.resources.InvokeAr
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetStreamingLocatorArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetStreamingLocatorArgs extends com.pulumi.resources.InvokeAr
     @Import(name="streamingLocatorName", required=true)
       private final String streamingLocatorName;
 
-    public String getStreamingLocatorName() {
+    public String streamingLocatorName() {
         return this.streamingLocatorName;
     }
 

@@ -24,7 +24,7 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> getPlan() {
+    public Output<PlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -35,7 +35,7 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="properties")
       private final @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
 
-    public Output<RegistrationDefinitionPropertiesArgs> getProperties() {
+    public Output<RegistrationDefinitionPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -46,7 +46,7 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="registrationDefinitionId")
       private final @Nullable Output<String> registrationDefinitionId;
 
-    public Output<String> getRegistrationDefinitionId() {
+    public Output<String> registrationDefinitionId() {
         return this.registrationDefinitionId == null ? Codegen.empty() : this.registrationDefinitionId;
     }
 
@@ -57,7 +57,7 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

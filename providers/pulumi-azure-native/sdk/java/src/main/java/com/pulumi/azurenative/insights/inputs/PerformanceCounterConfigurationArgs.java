@@ -18,21 +18,21 @@ public final class PerformanceCounterConfigurationArgs extends com.pulumi.resour
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="samplingPeriod", required=true)
       private final Output<String> samplingPeriod;
 
-    public Output<String> getSamplingPeriod() {
+    public Output<String> samplingPeriod() {
         return this.samplingPeriod;
     }
 

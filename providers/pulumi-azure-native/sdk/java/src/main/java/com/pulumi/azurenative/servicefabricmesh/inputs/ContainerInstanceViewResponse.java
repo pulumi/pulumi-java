@@ -28,7 +28,7 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
     @Import(name="currentState")
       private final @Nullable ContainerStateResponse currentState;
 
-    public Optional<ContainerStateResponse> getCurrentState() {
+    public Optional<ContainerStateResponse> currentState() {
         return this.currentState == null ? Optional.empty() : Optional.ofNullable(this.currentState);
     }
 
@@ -39,7 +39,7 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
     @Import(name="events")
       private final @Nullable List<ContainerEventResponse> events;
 
-    public List<ContainerEventResponse> getEvents() {
+    public List<ContainerEventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
     @Import(name="previousState")
       private final @Nullable ContainerStateResponse previousState;
 
-    public Optional<ContainerStateResponse> getPreviousState() {
+    public Optional<ContainerStateResponse> previousState() {
         return this.previousState == null ? Optional.empty() : Optional.ofNullable(this.previousState);
     }
 
@@ -61,7 +61,7 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
     @Import(name="restartCount")
       private final @Nullable Integer restartCount;
 
-    public Optional<Integer> getRestartCount() {
+    public Optional<Integer> restartCount() {
         return this.restartCount == null ? Optional.empty() : Optional.ofNullable(this.restartCount);
     }
 

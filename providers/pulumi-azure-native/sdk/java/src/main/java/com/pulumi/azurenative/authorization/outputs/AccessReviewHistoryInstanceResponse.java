@@ -97,77 +97,77 @@ public final class AccessReviewHistoryInstanceResponse {
      * The display name for the parent history definition.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the 'se' parameter in the generated uri.
      * 
     */
-    public String getDownloadUri() {
+    public String downloadUri() {
         return this.downloadUri;
     }
     /**
      * Date time when history data report expires and the associated data is deleted.
      * 
     */
-    public Optional<String> getExpiration() {
+    public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
      * Date time when the history data report is scheduled to be generated.
      * 
     */
-    public Optional<String> getFulfilledDateTime() {
+    public Optional<String> fulfilledDateTime() {
         return Optional.ofNullable(this.fulfilledDateTime);
     }
     /**
      * The access review history definition instance id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The access review history definition instance unique id.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
      * 
     */
-    public Optional<String> getReviewHistoryPeriodEndDateTime() {
+    public Optional<String> reviewHistoryPeriodEndDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
     /**
      * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
      * 
     */
-    public Optional<String> getReviewHistoryPeriodStartDateTime() {
+    public Optional<String> reviewHistoryPeriodStartDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
     /**
      * Date time when the history data report is scheduled to be generated.
      * 
     */
-    public Optional<String> getRunDateTime() {
+    public Optional<String> runDateTime() {
         return Optional.ofNullable(this.runDateTime);
     }
     /**
      * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -> InProgress -> Done -> Expired
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

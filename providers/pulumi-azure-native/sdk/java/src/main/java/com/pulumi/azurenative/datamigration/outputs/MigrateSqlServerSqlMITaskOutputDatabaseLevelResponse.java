@@ -92,35 +92,35 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
      * Name of the database
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Migration exceptions and warnings
      * 
     */
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Migration progress message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
@@ -128,35 +128,35 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
      * Expected value is 'DatabaseLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Size of the database in megabytes
      * 
     */
-    public Double getSizeMB() {
+    public Double sizeMB() {
         return this.sizeMB;
     }
     /**
      * Current stage of migration
      * 
     */
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

@@ -25,7 +25,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bandWidthRateInMbps")
       private final @Nullable Output<Integer> bandWidthRateInMbps;
 
-    public Output<Integer> getBandWidthRateInMbps() {
+    public Output<Integer> bandWidthRateInMbps() {
         return this.bandWidthRateInMbps == null ? Codegen.empty() : this.bandWidthRateInMbps;
     }
 
@@ -36,7 +36,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="bandwidthSettingId")
       private final @Nullable Output<String> bandwidthSettingId;
 
-    public Output<String> getBandwidthSettingId() {
+    public Output<String> bandwidthSettingId() {
         return this.bandwidthSettingId == null ? Codegen.empty() : this.bandwidthSettingId;
     }
 
@@ -47,7 +47,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -58,7 +58,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryptionKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptionKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> getEncryptionKey() {
+    public Output<AsymmetricEncryptedSecretArgs> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -69,7 +69,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -80,7 +80,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -91,7 +91,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="storageAccountCredentialId", required=true)
       private final Output<String> storageAccountCredentialId;
 
-    public Output<String> getStorageAccountCredentialId() {
+    public Output<String> storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 
@@ -113,7 +113,7 @@ public final class VolumeContainerArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="volumeContainerName")
       private final @Nullable Output<String> volumeContainerName;
 
-    public Output<String> getVolumeContainerName() {
+    public Output<String> volumeContainerName() {
         return this.volumeContainerName == null ? Codegen.empty() : this.volumeContainerName;
     }
 

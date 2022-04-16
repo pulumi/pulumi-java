@@ -27,7 +27,7 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="auth")
       private final @Nullable UpstreamAuthSettingsResponse auth;
 
-    public Optional<UpstreamAuthSettingsResponse> getAuth() {
+    public Optional<UpstreamAuthSettingsResponse> auth() {
         return this.auth == null ? Optional.empty() : Optional.ofNullable(this.auth);
     }
 
@@ -38,7 +38,7 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="systemEvents")
       private final @Nullable List<String> systemEvents;
 
-    public List<String> getSystemEvents() {
+    public List<String> systemEvents() {
         return this.systemEvents == null ? List.of() : this.systemEvents;
     }
 
@@ -50,7 +50,7 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="urlTemplate", required=true)
       private final String urlTemplate;
 
-    public String getUrlTemplate() {
+    public String urlTemplate() {
         return this.urlTemplate;
     }
 
@@ -65,7 +65,7 @@ public final class EventHandlerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="userEventPattern")
       private final @Nullable String userEventPattern;
 
-    public Optional<String> getUserEventPattern() {
+    public Optional<String> userEventPattern() {
         return this.userEventPattern == null ? Optional.empty() : Optional.ofNullable(this.userEventPattern);
     }
 

@@ -26,7 +26,7 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
     @Import(name="connectivityType")
       private final @Nullable String connectivityType;
 
-    public Optional<String> getConnectivityType() {
+    public Optional<String> connectivityType() {
         return this.connectivityType == null ? Optional.empty() : Optional.ofNullable(this.connectivityType);
     }
 
@@ -37,7 +37,7 @@ public final class SqlConnectivityUpdateSettingsResponse extends com.pulumi.reso
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 

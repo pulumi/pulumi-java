@@ -26,7 +26,7 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -37,7 +37,7 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -48,7 +48,7 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -59,7 +59,7 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight")
       private final @Nullable Integer weight;
 
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
     }
 

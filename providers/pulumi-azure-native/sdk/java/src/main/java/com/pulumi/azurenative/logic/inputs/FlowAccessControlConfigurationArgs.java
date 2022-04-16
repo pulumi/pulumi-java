@@ -26,7 +26,7 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="actions")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> getActions() {
+    public Output<FlowAccessControlConfigurationPolicyArgs> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -37,7 +37,7 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="contents")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> getContents() {
+    public Output<FlowAccessControlConfigurationPolicyArgs> contents() {
         return this.contents == null ? Codegen.empty() : this.contents;
     }
 
@@ -48,7 +48,7 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="triggers")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> getTriggers() {
+    public Output<FlowAccessControlConfigurationPolicyArgs> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
@@ -59,7 +59,7 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
     @Import(name="workflowManagement")
       private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> getWorkflowManagement() {
+    public Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement() {
         return this.workflowManagement == null ? Codegen.empty() : this.workflowManagement;
     }
 

@@ -25,7 +25,7 @@ public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resou
     @Import(name="dataRetention", required=true)
       private final Output<String> dataRetention;
 
-    public Output<String> getDataRetention() {
+    public Output<String> dataRetention() {
         return this.dataRetention;
     }
 

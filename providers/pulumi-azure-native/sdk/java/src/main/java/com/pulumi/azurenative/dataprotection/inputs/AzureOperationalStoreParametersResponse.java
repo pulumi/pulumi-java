@@ -25,7 +25,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
     @Import(name="dataStoreType", required=true)
       private final String dataStoreType;
 
-    public String getDataStoreType() {
+    public String dataStoreType() {
         return this.dataStoreType;
     }
 
@@ -37,7 +37,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -48,7 +48,7 @@ public final class AzureOperationalStoreParametersResponse extends com.pulumi.re
     @Import(name="resourceGroupId")
       private final @Nullable String resourceGroupId;
 
-    public Optional<String> getResourceGroupId() {
+    public Optional<String> resourceGroupId() {
         return this.resourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupId);
     }
 

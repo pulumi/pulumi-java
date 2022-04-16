@@ -20,7 +20,7 @@ public final class OriginGroupOverrideActionParametersResponse extends com.pulum
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -31,7 +31,7 @@ public final class OriginGroupOverrideActionParametersResponse extends com.pulum
     @Import(name="originGroup", required=true)
       private final ResourceReferenceResponse originGroup;
 
-    public ResourceReferenceResponse getOriginGroup() {
+    public ResourceReferenceResponse originGroup() {
         return this.originGroup;
     }
 

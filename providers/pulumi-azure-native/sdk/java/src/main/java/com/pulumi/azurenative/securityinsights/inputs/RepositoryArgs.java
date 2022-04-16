@@ -28,7 +28,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -39,7 +39,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentLogsUrl")
       private final @Nullable Output<String> deploymentLogsUrl;
 
-    public Output<String> getDeploymentLogsUrl() {
+    public Output<String> deploymentLogsUrl() {
         return this.deploymentLogsUrl == null ? Codegen.empty() : this.deploymentLogsUrl;
     }
 
@@ -50,7 +50,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayUrl")
       private final @Nullable Output<String> displayUrl;
 
-    public Output<String> getDisplayUrl() {
+    public Output<String> displayUrl() {
         return this.displayUrl == null ? Codegen.empty() : this.displayUrl;
     }
 
@@ -61,7 +61,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathMapping")
       private final @Nullable Output<List<ContentPathMapArgs>> pathMapping;
 
-    public Output<List<ContentPathMapArgs>> getPathMapping() {
+    public Output<List<ContentPathMapArgs>> pathMapping() {
         return this.pathMapping == null ? Codegen.empty() : this.pathMapping;
     }
 
@@ -72,7 +72,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -71,28 +71,28 @@ public final class WebLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
@@ -100,14 +100,14 @@ public final class WebLinkedServiceResponse {
      * Expected value is 'Web'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Web linked service properties.
      * 
     */
-    public Object getTypeProperties() {
+    public Object typeProperties() {
         return this.typeProperties;
     }
 

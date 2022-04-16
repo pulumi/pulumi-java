@@ -50,28 +50,28 @@ public final class AutomationActionEventHubResponse {
      * Expected value is 'EventHub'.
      * 
     */
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
     /**
      * The target Event Hub connection string (it will not be included in any response).
      * 
     */
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The target Event Hub Azure Resource ID.
      * 
     */
-    public Optional<String> getEventHubResourceId() {
+    public Optional<String> eventHubResourceId() {
         return Optional.ofNullable(this.eventHubResourceId);
     }
     /**
      * The target Event Hub SAS policy name.
      * 
     */
-    public String getSasPolicyName() {
+    public String sasPolicyName() {
         return this.sasPolicyName;
     }
 

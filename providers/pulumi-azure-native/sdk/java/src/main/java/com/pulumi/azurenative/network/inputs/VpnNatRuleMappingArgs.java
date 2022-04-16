@@ -26,7 +26,7 @@ public final class VpnNatRuleMappingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="addressSpace")
       private final @Nullable Output<String> addressSpace;
 
-    public Output<String> getAddressSpace() {
+    public Output<String> addressSpace() {
         return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
     }
 

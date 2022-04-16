@@ -36,14 +36,14 @@ public final class PowerQuerySinkMappingResponse {
      * List of sinks mapped to Power Query mashup query.
      * 
     */
-    public List<PowerQuerySinkResponse> getDataflowSinks() {
+    public List<PowerQuerySinkResponse> dataflowSinks() {
         return this.dataflowSinks == null ? List.of() : this.dataflowSinks;
     }
     /**
      * Name of the query in Power Query mashup document.
      * 
     */
-    public Optional<String> getQueryName() {
+    public Optional<String> queryName() {
         return Optional.ofNullable(this.queryName);
     }
 

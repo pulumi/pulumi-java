@@ -24,7 +24,7 @@ public final class DockerImagePlatformArgs extends com.pulumi.resources.Resource
     @Import(name="operatingSystemType")
       private final @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;
 
-    public Output<Either<String,OperatingSystemType>> getOperatingSystemType() {
+    public Output<Either<String,OperatingSystemType>> operatingSystemType() {
         return this.operatingSystemType == null ? Codegen.empty() : this.operatingSystemType;
     }
 

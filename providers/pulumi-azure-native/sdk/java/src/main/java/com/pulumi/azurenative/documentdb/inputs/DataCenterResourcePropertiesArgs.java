@@ -29,7 +29,7 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="base64EncodedCassandraYamlFragment")
       private final @Nullable Output<String> base64EncodedCassandraYamlFragment;
 
-    public Output<String> getBase64EncodedCassandraYamlFragment() {
+    public Output<String> base64EncodedCassandraYamlFragment() {
         return this.base64EncodedCassandraYamlFragment == null ? Codegen.empty() : this.base64EncodedCassandraYamlFragment;
     }
 
@@ -40,7 +40,7 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="dataCenterLocation")
       private final @Nullable Output<String> dataCenterLocation;
 
-    public Output<String> getDataCenterLocation() {
+    public Output<String> dataCenterLocation() {
         return this.dataCenterLocation == null ? Codegen.empty() : this.dataCenterLocation;
     }
 
@@ -51,7 +51,7 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="delegatedSubnetId")
       private final @Nullable Output<String> delegatedSubnetId;
 
-    public Output<String> getDelegatedSubnetId() {
+    public Output<String> delegatedSubnetId() {
         return this.delegatedSubnetId == null ? Codegen.empty() : this.delegatedSubnetId;
     }
 
@@ -62,7 +62,7 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
@@ -73,7 +73,7 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
-    public Output<Either<String,ManagedCassandraProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ManagedCassandraProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 

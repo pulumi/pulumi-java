@@ -40,21 +40,21 @@ public final class EnrichmentPropertiesResponse {
      * The list of endpoints for which the enrichment is applied to the message.
      * 
     */
-    public List<String> getEndpointNames() {
+    public List<String> endpointNames() {
         return this.endpointNames;
     }
     /**
      * The key or name for the enrichment property.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value for the enrichment property.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

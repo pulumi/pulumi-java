@@ -22,7 +22,7 @@ public final class IngestionSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ingestionSettingName")
       private final @Nullable Output<String> ingestionSettingName;
 
-    public Output<String> getIngestionSettingName() {
+    public Output<String> ingestionSettingName() {
         return this.ingestionSettingName == null ? Codegen.empty() : this.ingestionSettingName;
     }
 

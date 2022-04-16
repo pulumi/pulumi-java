@@ -93,70 +93,70 @@ public final class GetConnectionMonitorTestResult {
      * The Connection Monitor test destination
      * 
     */
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * The Connection Monitor test destination port
      * 
     */
-    public Optional<Integer> getDestinationPort() {
+    public Optional<Integer> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The flag that indicates if the Connection Monitor test is successful or not.
      * 
     */
-    public Boolean getIsTestSuccessful() {
+    public Boolean isTestSuccessful() {
         return this.isTestSuccessful;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The path representing the Connection Monitor test.
      * 
     */
-    public List<String> getPath() {
+    public List<String> path() {
         return this.path;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The Connection Monitor test source agent
      * 
     */
-    public Optional<String> getSourceAgent() {
+    public Optional<String> sourceAgent() {
         return Optional.ofNullable(this.sourceAgent);
     }
     /**
      * The Connection Monitor test frequency in seconds
      * 
     */
-    public Optional<Integer> getTestFrequencyInSec() {
+    public Optional<Integer> testFrequencyInSec() {
         return Optional.ofNullable(this.testFrequencyInSec);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

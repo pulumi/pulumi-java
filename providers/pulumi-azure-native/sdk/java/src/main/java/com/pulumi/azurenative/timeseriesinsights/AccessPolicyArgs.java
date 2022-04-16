@@ -25,7 +25,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
 
-    public Output<String> getAccessPolicyName() {
+    public Output<String> accessPolicyName() {
         return this.accessPolicyName == null ? Codegen.empty() : this.accessPolicyName;
     }
 
@@ -36,7 +36,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -58,7 +58,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principalObjectId")
       private final @Nullable Output<String> principalObjectId;
 
-    public Output<String> getPrincipalObjectId() {
+    public Output<String> principalObjectId() {
         return this.principalObjectId == null ? Codegen.empty() : this.principalObjectId;
     }
 
@@ -69,7 +69,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;
 
-    public Output<List<Either<String,AccessPolicyRole>>> getRoles() {
+    public Output<List<Either<String,AccessPolicyRole>>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 

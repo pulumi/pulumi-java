@@ -26,7 +26,7 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
     @Import(name="aadAudience")
       private final @Nullable Output<String> aadAudience;
 
-    public Output<String> getAadAudience() {
+    public Output<String> aadAudience() {
         return this.aadAudience == null ? Codegen.empty() : this.aadAudience;
     }
 
@@ -37,7 +37,7 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
     @Import(name="aadIssuer")
       private final @Nullable Output<String> aadIssuer;
 
-    public Output<String> getAadIssuer() {
+    public Output<String> aadIssuer() {
         return this.aadIssuer == null ? Codegen.empty() : this.aadIssuer;
     }
 
@@ -48,7 +48,7 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
     @Import(name="aadTenant")
       private final @Nullable Output<String> aadTenant;
 
-    public Output<String> getAadTenant() {
+    public Output<String> aadTenant() {
         return this.aadTenant == null ? Codegen.empty() : this.aadTenant;
     }
 

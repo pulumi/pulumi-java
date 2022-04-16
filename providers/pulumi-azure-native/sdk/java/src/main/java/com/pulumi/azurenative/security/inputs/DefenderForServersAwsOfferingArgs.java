@@ -28,7 +28,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
     @Import(name="arcAutoProvisioning")
       private final @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
-    public Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> getArcAutoProvisioning() {
+    public Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning() {
         return this.arcAutoProvisioning == null ? Codegen.empty() : this.arcAutoProvisioning;
     }
 
@@ -39,7 +39,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
     @Import(name="defenderForServers")
       private final @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
-    public Output<DefenderForServersAwsOfferingDefenderForServersArgs> getDefenderForServers() {
+    public Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers() {
         return this.defenderForServers == null ? Codegen.empty() : this.defenderForServers;
     }
 
@@ -51,7 +51,7 @@ public final class DefenderForServersAwsOfferingArgs extends com.pulumi.resource
     @Import(name="offeringType", required=true)
       private final Output<String> offeringType;
 
-    public Output<String> getOfferingType() {
+    public Output<String> offeringType() {
         return this.offeringType;
     }
 

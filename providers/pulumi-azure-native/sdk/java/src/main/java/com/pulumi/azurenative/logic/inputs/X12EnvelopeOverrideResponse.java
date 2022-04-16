@@ -25,7 +25,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="dateFormat", required=true)
       private final String dateFormat;
 
-    public String getDateFormat() {
+    public String dateFormat() {
         return this.dateFormat;
     }
 
@@ -36,7 +36,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="functionalIdentifierCode")
       private final @Nullable String functionalIdentifierCode;
 
-    public Optional<String> getFunctionalIdentifierCode() {
+    public Optional<String> functionalIdentifierCode() {
         return this.functionalIdentifierCode == null ? Optional.empty() : Optional.ofNullable(this.functionalIdentifierCode);
     }
 
@@ -47,7 +47,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="headerVersion", required=true)
       private final String headerVersion;
 
-    public String getHeaderVersion() {
+    public String headerVersion() {
         return this.headerVersion;
     }
 
@@ -58,7 +58,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="messageId", required=true)
       private final String messageId;
 
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 
@@ -69,7 +69,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="protocolVersion", required=true)
       private final String protocolVersion;
 
-    public String getProtocolVersion() {
+    public String protocolVersion() {
         return this.protocolVersion;
     }
 
@@ -80,7 +80,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="receiverApplicationId", required=true)
       private final String receiverApplicationId;
 
-    public String getReceiverApplicationId() {
+    public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
 
@@ -91,7 +91,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="responsibleAgencyCode", required=true)
       private final String responsibleAgencyCode;
 
-    public String getResponsibleAgencyCode() {
+    public String responsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
 
@@ -102,7 +102,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="senderApplicationId", required=true)
       private final String senderApplicationId;
 
-    public String getSenderApplicationId() {
+    public String senderApplicationId() {
         return this.senderApplicationId;
     }
 
@@ -113,7 +113,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="targetNamespace", required=true)
       private final String targetNamespace;
 
-    public String getTargetNamespace() {
+    public String targetNamespace() {
         return this.targetNamespace;
     }
 
@@ -124,7 +124,7 @@ public final class X12EnvelopeOverrideResponse extends com.pulumi.resources.Invo
     @Import(name="timeFormat", required=true)
       private final String timeFormat;
 
-    public String getTimeFormat() {
+    public String timeFormat() {
         return this.timeFormat;
     }
 

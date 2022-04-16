@@ -33,7 +33,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> getAction() {
+    public Output<Either<String,ActionType>> action() {
         return this.action;
     }
 
@@ -44,7 +44,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
-    public Output<Either<String,CustomRuleEnabledState>> getEnabledState() {
+    public Output<Either<String,CustomRuleEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -55,7 +55,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="matchConditions", required=true)
       private final Output<List<FrontDoorMatchConditionArgs>> matchConditions;
 
-    public Output<List<FrontDoorMatchConditionArgs>> getMatchConditions() {
+    public Output<List<FrontDoorMatchConditionArgs>> matchConditions() {
         return this.matchConditions;
     }
 
@@ -66,7 +66,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -88,7 +88,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rateLimitDurationInMinutes")
       private final @Nullable Output<Integer> rateLimitDurationInMinutes;
 
-    public Output<Integer> getRateLimitDurationInMinutes() {
+    public Output<Integer> rateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes == null ? Codegen.empty() : this.rateLimitDurationInMinutes;
     }
 
@@ -99,7 +99,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rateLimitThreshold")
       private final @Nullable Output<Integer> rateLimitThreshold;
 
-    public Output<Integer> getRateLimitThreshold() {
+    public Output<Integer> rateLimitThreshold() {
         return this.rateLimitThreshold == null ? Codegen.empty() : this.rateLimitThreshold;
     }
 
@@ -110,7 +110,7 @@ public final class CustomRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleType", required=true)
       private final Output<Either<String,RuleType>> ruleType;
 
-    public Output<Either<String,RuleType>> getRuleType() {
+    public Output<Either<String,RuleType>> ruleType() {
         return this.ruleType;
     }
 

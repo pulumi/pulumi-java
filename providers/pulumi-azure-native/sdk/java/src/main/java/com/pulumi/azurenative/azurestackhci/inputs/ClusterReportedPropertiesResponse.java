@@ -25,7 +25,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 
@@ -36,7 +36,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
     @Import(name="clusterVersion", required=true)
       private final String clusterVersion;
 
-    public String getClusterVersion() {
+    public String clusterVersion() {
         return this.clusterVersion;
     }
 
@@ -58,7 +58,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
     @Import(name="lastUpdated", required=true)
       private final String lastUpdated;
 
-    public String getLastUpdated() {
+    public String lastUpdated() {
         return this.lastUpdated;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterReportedPropertiesResponse extends com.pulumi.resource
     @Import(name="nodes", required=true)
       private final List<ClusterNodeResponse> nodes;
 
-    public List<ClusterNodeResponse> getNodes() {
+    public List<ClusterNodeResponse> nodes() {
         return this.nodes;
     }
 

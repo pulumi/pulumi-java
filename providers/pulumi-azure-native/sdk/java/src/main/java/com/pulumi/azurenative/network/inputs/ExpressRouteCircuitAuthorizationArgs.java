@@ -28,7 +28,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
+    public Output<String> authorizationKey() {
         return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
@@ -39,7 +39,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="authorizationUseStatus")
       private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
-    public Output<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
+    public Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus() {
         return this.authorizationUseStatus == null ? Codegen.empty() : this.authorizationUseStatus;
     }
 
@@ -50,7 +50,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -61,7 +61,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

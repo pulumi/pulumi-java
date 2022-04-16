@@ -30,16 +30,16 @@ public final class EnergyServicePropertiesResponse {
         this.provisioningState = provisioningState;
     }
 
-    public Optional<String> getAuthAppId() {
+    public Optional<String> authAppId() {
         return Optional.ofNullable(this.authAppId);
     }
-    public List<DataPartitionNamesResponse> getDataPartitionNames() {
+    public List<DataPartitionNamesResponse> dataPartitionNames() {
         return this.dataPartitionNames == null ? List.of() : this.dataPartitionNames;
     }
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

@@ -25,7 +25,7 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="actionType")
       private final @Nullable Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType == null ? Codegen.empty() : this.actionType;
     }
 
@@ -36,7 +36,7 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="display", required=true)
       private final Output<OperationsDefinitionDisplayArgs> display;
 
-    public Output<OperationsDefinitionDisplayArgs> getDisplay() {
+    public Output<OperationsDefinitionDisplayArgs> display() {
         return this.display;
     }
 
@@ -47,7 +47,7 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="isDataAction")
       private final @Nullable Output<Boolean> isDataAction;
 
-    public Output<Boolean> getIsDataAction() {
+    public Output<Boolean> isDataAction() {
         return this.isDataAction == null ? Codegen.empty() : this.isDataAction;
     }
 
@@ -58,21 +58,21 @@ public final class OperationsDefinitionArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="origin")
       private final @Nullable Output<String> origin;
 
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

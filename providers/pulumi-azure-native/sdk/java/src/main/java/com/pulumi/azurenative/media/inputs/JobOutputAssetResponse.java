@@ -27,7 +27,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="assetName", required=true)
       private final String assetName;
 
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
 
@@ -38,7 +38,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -49,7 +49,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="error", required=true)
       private final JobErrorResponse error;
 
-    public JobErrorResponse getError() {
+    public JobErrorResponse error() {
         return this.error;
     }
 
@@ -60,7 +60,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -72,7 +72,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -83,7 +83,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="progress", required=true)
       private final Integer progress;
 
-    public Integer getProgress() {
+    public Integer progress() {
         return this.progress;
     }
 
@@ -94,7 +94,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -105,7 +105,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

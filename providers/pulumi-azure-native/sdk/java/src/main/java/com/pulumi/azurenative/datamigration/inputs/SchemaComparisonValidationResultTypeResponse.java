@@ -23,7 +23,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
     @Import(name="objectName", required=true)
       private final String objectName;
 
-    public String getObjectName() {
+    public String objectName() {
         return this.objectName;
     }
 
@@ -34,7 +34,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 
@@ -45,7 +45,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends com.pulu
     @Import(name="updateAction", required=true)
       private final String updateAction;
 
-    public String getUpdateAction() {
+    public String updateAction() {
         return this.updateAction;
     }
 

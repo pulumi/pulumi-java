@@ -60,17 +60,17 @@ public final class DataDiskResponse {
      *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
      * 
     */
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
-    public Integer getDiskSizeGB() {
+    public Integer diskSizeGB() {
         return this.diskSizeGB;
     }
     /**
      * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
      * 
     */
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
     /**
@@ -80,7 +80,7 @@ public final class DataDiskResponse {
      *  Premium_LRS - The data disk should use premium locally redundant storage.
      * 
     */
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
 

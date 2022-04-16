@@ -25,7 +25,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessKey1", required=true)
       private final String accessKey1;
 
-    public String getAccessKey1() {
+    public String accessKey1() {
         return this.accessKey1;
     }
 
@@ -36,7 +36,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessKey2")
       private final @Nullable String accessKey2;
 
-    public Optional<String> getAccessKey2() {
+    public Optional<String> accessKey2() {
         return this.accessKey2 == null ? Optional.empty() : Optional.ofNullable(this.accessKey2);
     }
 
@@ -47,7 +47,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -58,7 +58,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -69,7 +69,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable String deadLetterSecret;
 
-    public Optional<String> getDeadLetterSecret() {
+    public Optional<String> deadLetterSecret() {
         return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
     }
 
@@ -80,7 +80,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterUri")
       private final @Nullable String deadLetterUri;
 
-    public Optional<String> getDeadLetterUri() {
+    public Optional<String> deadLetterUri() {
         return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
     }
 
@@ -92,7 +92,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointType", required=true)
       private final String endpointType;
 
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
 
@@ -103,7 +103,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -114,7 +114,7 @@ public final class EventGridResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="topicEndpoint", required=true)
       private final String topicEndpoint;
 
-    public String getTopicEndpoint() {
+    public String topicEndpoint() {
         return this.topicEndpoint;
     }
 

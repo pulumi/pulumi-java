@@ -25,7 +25,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
     @Import(name="base64Key")
       private final @Nullable String base64Key;
 
-    public Optional<String> getBase64Key() {
+    public Optional<String> base64Key() {
         return this.base64Key == null ? Optional.empty() : Optional.ofNullable(this.base64Key);
     }
 
@@ -36,7 +36,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
     @Import(name="expiration")
       private final @Nullable String expiration;
 
-    public Optional<String> getExpiration() {
+    public Optional<String> expiration() {
         return this.expiration == null ? Optional.empty() : Optional.ofNullable(this.expiration);
     }
 
@@ -47,7 +47,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
     @Import(name="identifier")
       private final @Nullable String identifier;
 
-    public Optional<String> getIdentifier() {
+    public Optional<String> identifier() {
         return this.identifier == null ? Optional.empty() : Optional.ofNullable(this.identifier);
     }
 

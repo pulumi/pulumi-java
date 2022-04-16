@@ -27,7 +27,7 @@ public final class UrlFileExtensionMatchConditionParametersResponse extends com.
     @Import(name="matchValues")
       private final @Nullable List<String> matchValues;
 
-    public List<String> getMatchValues() {
+    public List<String> matchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
 
@@ -38,14 +38,14 @@ public final class UrlFileExtensionMatchConditionParametersResponse extends com.
     @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -56,7 +56,7 @@ public final class UrlFileExtensionMatchConditionParametersResponse extends com.
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -67,7 +67,7 @@ public final class UrlFileExtensionMatchConditionParametersResponse extends com.
     @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

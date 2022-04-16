@@ -33,14 +33,14 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse {
      * Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Private Endpoint Connection Response Properties.
      * 
     */
-    public VaultPrivateEndpointConnectionResponse getProperties() {
+    public VaultPrivateEndpointConnectionResponse properties() {
         return this.properties;
     }
 

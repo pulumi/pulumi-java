@@ -25,7 +25,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customFragment")
       private final @Nullable String customFragment;
 
-    public Optional<String> getCustomFragment() {
+    public Optional<String> customFragment() {
         return this.customFragment == null ? Optional.empty() : Optional.ofNullable(this.customFragment);
     }
 
@@ -36,7 +36,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customHost")
       private final @Nullable String customHost;
 
-    public Optional<String> getCustomHost() {
+    public Optional<String> customHost() {
         return this.customHost == null ? Optional.empty() : Optional.ofNullable(this.customHost);
     }
 
@@ -47,7 +47,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customPath")
       private final @Nullable String customPath;
 
-    public Optional<String> getCustomPath() {
+    public Optional<String> customPath() {
         return this.customPath == null ? Optional.empty() : Optional.ofNullable(this.customPath);
     }
 
@@ -58,7 +58,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="customQueryString")
       private final @Nullable String customQueryString;
 
-    public Optional<String> getCustomQueryString() {
+    public Optional<String> customQueryString() {
         return this.customQueryString == null ? Optional.empty() : Optional.ofNullable(this.customQueryString);
     }
 
@@ -69,7 +69,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -80,7 +80,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="redirectProtocol")
       private final @Nullable String redirectProtocol;
 
-    public Optional<String> getRedirectProtocol() {
+    public Optional<String> redirectProtocol() {
         return this.redirectProtocol == null ? Optional.empty() : Optional.ofNullable(this.redirectProtocol);
     }
 
@@ -91,7 +91,7 @@ public final class RedirectConfigurationResponse extends com.pulumi.resources.In
     @Import(name="redirectType")
       private final @Nullable String redirectType;
 
-    public Optional<String> getRedirectType() {
+    public Optional<String> redirectType() {
         return this.redirectType == null ? Optional.empty() : Optional.ofNullable(this.redirectType);
     }
 

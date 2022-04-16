@@ -26,7 +26,7 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endIP")
       private final @Nullable Output<String> endIP;
 
-    public Output<String> getEndIP() {
+    public Output<String> endIP() {
         return this.endIP == null ? Codegen.empty() : this.endIP;
     }
 
@@ -37,7 +37,7 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startIP")
       private final @Nullable Output<String> startIP;
 
-    public Output<String> getStartIP() {
+    public Output<String> startIP() {
         return this.startIP == null ? Codegen.empty() : this.startIP;
     }
 

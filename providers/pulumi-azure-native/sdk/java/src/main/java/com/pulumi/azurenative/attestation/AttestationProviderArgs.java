@@ -24,7 +24,7 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="properties", required=true)
       private final Output<AttestationServiceCreationSpecificParamsArgs> properties;
 
-    public Output<AttestationServiceCreationSpecificParamsArgs> getProperties() {
+    public Output<AttestationServiceCreationSpecificParamsArgs> properties() {
         return this.properties;
     }
 
@@ -46,7 +46,7 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -57,7 +57,7 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class AttestationProviderArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

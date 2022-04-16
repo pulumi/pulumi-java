@@ -23,7 +23,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fullName", required=true)
       private final String fullName;
 
-    public String getFullName() {
+    public String fullName() {
         return this.fullName;
     }
 
@@ -34,7 +34,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -56,7 +56,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -67,7 +67,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="privateCloudId", required=true)
       private final String privateCloudId;
 
-    public String getPrivateCloudId() {
+    public String privateCloudId() {
         return this.privateCloudId;
     }
 
@@ -78,7 +78,7 @@ public final class ResourcePoolResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -113,91 +113,91 @@ public final class ExportExecutionResponse {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * The details of any error.
      * 
     */
-    public Optional<ErrorDetailsResponse> getError() {
+    public Optional<ErrorDetailsResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The type of the export execution.
      * 
     */
-    public Optional<String> getExecutionType() {
+    public Optional<String> executionType() {
         return Optional.ofNullable(this.executionType);
     }
     /**
      * The name of the exported file.
      * 
     */
-    public Optional<String> getFileName() {
+    public Optional<String> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The time when the export execution finished.
      * 
     */
-    public Optional<String> getProcessingEndTime() {
+    public Optional<String> processingEndTime() {
         return Optional.ofNullable(this.processingEndTime);
     }
     /**
      * The time when export was picked up to be executed.
      * 
     */
-    public Optional<String> getProcessingStartTime() {
+    public Optional<String> processingStartTime() {
         return Optional.ofNullable(this.processingStartTime);
     }
     /**
      * The export settings that were in effect for this execution.
      * 
     */
-    public Optional<CommonExportPropertiesResponse> getRunSettings() {
+    public Optional<CommonExportPropertiesResponse> runSettings() {
         return Optional.ofNullable(this.runSettings);
     }
     /**
      * The last known status of the export execution.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
      * 
     */
-    public Optional<String> getSubmittedBy() {
+    public Optional<String> submittedBy() {
         return Optional.ofNullable(this.submittedBy);
     }
     /**
      * The time when export was queued to be executed.
      * 
     */
-    public Optional<String> getSubmittedTime() {
+    public Optional<String> submittedTime() {
         return Optional.ofNullable(this.submittedTime);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

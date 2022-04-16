@@ -30,7 +30,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
-    public Output<String> getComputeType() {
+    public Output<String> computeType() {
         return this.computeType;
     }
 
@@ -41,7 +41,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
+    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
         return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
     }
 
@@ -63,7 +63,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
@@ -74,7 +74,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> getKeys() {
+    public Output<CreateServiceRequestKeysArgs> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -85,7 +85,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> getKvTags() {
+    public Output<Map<String,String>> kvTags() {
         return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
@@ -96,7 +96,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -107,7 +107,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -118,7 +118,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -129,7 +129,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -140,7 +140,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
 
-    public Output<Double> getTrafficPercentile() {
+    public Output<Double> trafficPercentile() {
         return this.trafficPercentile == null ? Codegen.empty() : this.trafficPercentile;
     }
 
@@ -151,7 +151,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
 
-    public Output<Either<String,VariantType>> getType() {
+    public Output<Either<String,VariantType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -162,7 +162,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -29,7 +29,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="addressSpace")
       private final @Nullable Output<List<String>> addressSpace;
 
-    public Output<List<String>> getAddressSpace() {
+    public Output<List<String>> addressSpace() {
         return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -53,7 +53,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="enableDdosProtection")
       private final @Nullable Output<Boolean> enableDdosProtection;
 
-    public Output<Boolean> getEnableDdosProtection() {
+    public Output<Boolean> enableDdosProtection() {
         return this.enableDdosProtection == null ? Codegen.empty() : this.enableDdosProtection;
     }
 
@@ -65,7 +65,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -76,7 +76,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="subnets")
       private final @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
 
-    public Output<List<SubnetResourceSettingsArgs>> getSubnets() {
+    public Output<List<SubnetResourceSettingsArgs>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -87,7 +87,7 @@ public final class VirtualNetworkResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 

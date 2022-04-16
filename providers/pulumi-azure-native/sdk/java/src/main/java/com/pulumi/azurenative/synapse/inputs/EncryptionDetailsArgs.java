@@ -26,7 +26,7 @@ public final class EncryptionDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cmk")
       private final @Nullable Output<CustomerManagedKeyDetailsArgs> cmk;
 
-    public Output<CustomerManagedKeyDetailsArgs> getCmk() {
+    public Output<CustomerManagedKeyDetailsArgs> cmk() {
         return this.cmk == null ? Codegen.empty() : this.cmk;
     }
 

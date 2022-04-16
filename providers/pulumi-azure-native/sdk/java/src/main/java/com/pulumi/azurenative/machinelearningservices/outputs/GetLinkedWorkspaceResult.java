@@ -47,28 +47,28 @@ public final class GetLinkedWorkspaceResult {
      * ResourceId of the link of the linked workspace.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Friendly name of the linked workspace.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * LinkedWorkspace specific properties.
      * 
     */
-    public LinkedWorkspacePropsResponse getProperties() {
+    public LinkedWorkspacePropsResponse properties() {
         return this.properties;
     }
     /**
      * Resource type of linked workspace.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

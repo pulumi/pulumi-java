@@ -30,7 +30,7 @@ public final class SourceRegistryCredentialsResponse {
      * the source registry during the run.
      * 
     */
-    public Optional<String> getLoginMode() {
+    public Optional<String> loginMode() {
         return Optional.ofNullable(this.loginMode);
     }
 

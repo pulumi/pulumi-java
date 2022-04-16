@@ -26,7 +26,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advancedSchedule")
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
-    public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
+    public Output<AdvancedScheduleArgs> advancedSchedule() {
         return this.advancedSchedule == null ? Codegen.empty() : this.advancedSchedule;
     }
 
@@ -37,7 +37,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -48,7 +48,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
-    public Output<String> getExpiryTime() {
+    public Output<String> expiryTime() {
         return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
     }
 
@@ -70,7 +70,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequency", required=true)
       private final Output<Either<String,ScheduleFrequency>> frequency;
 
-    public Output<Either<String,ScheduleFrequency>> getFrequency() {
+    public Output<Either<String,ScheduleFrequency>> frequency() {
         return this.frequency;
     }
 
@@ -81,7 +81,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interval")
       private final @Nullable Output<Object> interval;
 
-    public Output<Object> getInterval() {
+    public Output<Object> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -92,7 +92,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -103,7 +103,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleName")
       private final @Nullable Output<String> scheduleName;
 
-    public Output<String> getScheduleName() {
+    public Output<String> scheduleName() {
         return this.scheduleName == null ? Codegen.empty() : this.scheduleName;
     }
 
@@ -125,7 +125,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -136,7 +136,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

@@ -113,84 +113,84 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
      * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. <br><br>Minimum api-version: 2020-06-01.
      * 
     */
-    public String getAssignedHost() {
+    public String assignedHost() {
         return this.assignedHost;
     }
     /**
      * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
     */
-    public Optional<BootDiagnosticsInstanceViewResponse> getBootDiagnostics() {
+    public Optional<BootDiagnosticsInstanceViewResponse> bootDiagnostics() {
         return Optional.ofNullable(this.bootDiagnostics);
     }
     /**
      * The disks information.
      * 
     */
-    public List<DiskInstanceViewResponse> getDisks() {
+    public List<DiskInstanceViewResponse> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * The extensions information.
      * 
     */
-    public List<VirtualMachineExtensionInstanceViewResponse> getExtensions() {
+    public List<VirtualMachineExtensionInstanceViewResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
      * The Maintenance Operation status on the virtual machine.
      * 
     */
-    public Optional<MaintenanceRedeployStatusResponse> getMaintenanceRedeployStatus() {
+    public Optional<MaintenanceRedeployStatusResponse> maintenanceRedeployStatus() {
         return Optional.ofNullable(this.maintenanceRedeployStatus);
     }
     /**
      * The placement group in which the VM is running. If the VM is deallocated it will not have a placementGroupId.
      * 
     */
-    public Optional<String> getPlacementGroupId() {
+    public Optional<String> placementGroupId() {
         return Optional.ofNullable(this.placementGroupId);
     }
     /**
      * The Fault Domain count.
      * 
     */
-    public Optional<Integer> getPlatformFaultDomain() {
+    public Optional<Integer> platformFaultDomain() {
         return Optional.ofNullable(this.platformFaultDomain);
     }
     /**
      * The Update Domain count.
      * 
     */
-    public Optional<Integer> getPlatformUpdateDomain() {
+    public Optional<Integer> platformUpdateDomain() {
         return Optional.ofNullable(this.platformUpdateDomain);
     }
     /**
      * The Remote desktop certificate thumbprint.
      * 
     */
-    public Optional<String> getRdpThumbPrint() {
+    public Optional<String> rdpThumbPrint() {
         return Optional.ofNullable(this.rdpThumbPrint);
     }
     /**
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * The VM Agent running on the virtual machine.
      * 
     */
-    public Optional<VirtualMachineAgentInstanceViewResponse> getVmAgent() {
+    public Optional<VirtualMachineAgentInstanceViewResponse> vmAgent() {
         return Optional.ofNullable(this.vmAgent);
     }
     /**
      * The health status for the VM.
      * 
     */
-    public VirtualMachineHealthStatusResponse getVmHealth() {
+    public VirtualMachineHealthStatusResponse vmHealth() {
         return this.vmHealth;
     }
 

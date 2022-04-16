@@ -64,42 +64,42 @@ public final class GetDatastoreResult {
      * An iSCSI volume
      * 
     */
-    public Optional<DiskPoolVolumeResponse> getDiskPoolVolume() {
+    public Optional<DiskPoolVolumeResponse> diskPoolVolume() {
         return Optional.ofNullable(this.diskPoolVolume);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * An Azure NetApp Files volume
      * 
     */
-    public Optional<NetAppVolumeResponse> getNetAppVolume() {
+    public Optional<NetAppVolumeResponse> netAppVolume() {
         return Optional.ofNullable(this.netAppVolume);
     }
     /**
      * The state of the datastore provisioning
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

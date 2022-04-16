@@ -34,14 +34,14 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="caching")
       private final @Nullable Output<CachingType> caching;
 
-    public Output<CachingType> getCaching() {
+    public Output<CachingType> caching() {
         return this.caching == null ? Codegen.empty() : this.caching;
     }
 
     @Import(name="diskSizeGB", required=true)
       private final Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB;
     }
 
@@ -52,7 +52,7 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -66,7 +66,7 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountType")
       private final @Nullable Output<StorageAccountType> storageAccountType;
 
-    public Output<StorageAccountType> getStorageAccountType() {
+    public Output<StorageAccountType> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 

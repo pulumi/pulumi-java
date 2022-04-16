@@ -19,14 +19,14 @@ public final class DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs extends
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
-    public Output<String> getWaitDuration() {
+    public Output<String> waitDuration() {
         return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
     }
 

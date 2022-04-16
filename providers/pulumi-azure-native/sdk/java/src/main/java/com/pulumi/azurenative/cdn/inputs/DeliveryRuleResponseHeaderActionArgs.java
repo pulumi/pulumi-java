@@ -27,7 +27,7 @@ public final class DeliveryRuleResponseHeaderActionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleResponseHeaderActionArgs extends com.pulumi.resou
     @Import(name="parameters", required=true)
       private final Output<HeaderActionParametersArgs> parameters;
 
-    public Output<HeaderActionParametersArgs> getParameters() {
+    public Output<HeaderActionParametersArgs> parameters() {
         return this.parameters;
     }
 

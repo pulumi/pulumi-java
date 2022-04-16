@@ -44,7 +44,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The ETag of the zone.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return Private zone internal Id
      * 
      */
-    public Output<String> getInternalId() {
+    public Output<String> internalId() {
         return this.internalId;
     }
     /**
@@ -72,7 +72,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -86,7 +86,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getMaxNumberOfRecordSets() {
+    public Output<Double> maxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
@@ -100,7 +100,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getMaxNumberOfVirtualNetworkLinks() {
+    public Output<Double> maxNumberOfVirtualNetworkLinks() {
         return this.maxNumberOfVirtualNetworkLinks;
     }
     /**
@@ -114,7 +114,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getMaxNumberOfVirtualNetworkLinksWithRegistration() {
+    public Output<Double> maxNumberOfVirtualNetworkLinksWithRegistration() {
         return this.maxNumberOfVirtualNetworkLinksWithRegistration;
     }
     /**
@@ -128,7 +128,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +142,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getNumberOfRecordSets() {
+    public Output<Double> numberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
@@ -156,7 +156,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getNumberOfVirtualNetworkLinks() {
+    public Output<Double> numberOfVirtualNetworkLinks() {
         return this.numberOfVirtualNetworkLinks;
     }
     /**
@@ -170,7 +170,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<Double> getNumberOfVirtualNetworkLinksWithRegistration() {
+    public Output<Double> numberOfVirtualNetworkLinksWithRegistration() {
         return this.numberOfVirtualNetworkLinksWithRegistration;
     }
     /**
@@ -184,7 +184,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -198,7 +198,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -212,7 +212,7 @@ public class PrivateZone extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

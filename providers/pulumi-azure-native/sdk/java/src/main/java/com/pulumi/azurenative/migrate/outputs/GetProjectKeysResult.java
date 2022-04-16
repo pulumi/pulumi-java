@@ -32,14 +32,14 @@ public final class GetProjectKeysResult {
      * ID of Migration Project.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
     /**
      * Key of Migration Project.
      * 
     */
-    public String getWorkspaceKey() {
+    public String workspaceKey() {
         return this.workspaceKey;
     }
 

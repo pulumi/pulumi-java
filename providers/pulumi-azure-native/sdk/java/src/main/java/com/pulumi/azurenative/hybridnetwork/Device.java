@@ -44,7 +44,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The type of the device.
      * 
      */
-    public Output<String> getDeviceType() {
+    public Output<String> deviceType() {
         return this.deviceType;
     }
     /**
@@ -58,7 +58,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The list of network functions deployed on the device.
      * 
      */
-    public Output<List<SubResourceResponse>> getNetworkFunctions() {
+    public Output<List<SubResourceResponse>> networkFunctions() {
         return this.networkFunctions;
     }
     /**
@@ -100,7 +100,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the device resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +114,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The current device status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -128,7 +128,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class Device extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

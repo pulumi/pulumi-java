@@ -26,7 +26,7 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -37,7 +37,7 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
     @Import(name="stateDetails", required=true)
       private final EnvironmentStateDetailsResponse stateDetails;
 
-    public EnvironmentStateDetailsResponse getStateDetails() {
+    public EnvironmentStateDetailsResponse stateDetails() {
         return this.stateDetails;
     }
 

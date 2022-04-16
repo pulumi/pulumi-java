@@ -38,14 +38,14 @@ public final class ListActiveSecurityAdminRuleResult {
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
     */
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
      * Gets a page of active security admin rules.
      * 
     */
-    public List<Either<ActiveDefaultSecurityAdminRuleResponse,ActiveSecurityAdminRuleResponse>> getValue() {
+    public List<Either<ActiveDefaultSecurityAdminRuleResponse,ActiveSecurityAdminRuleResponse>> value() {
         return this.value == null ? List.of() : this.value;
     }
 

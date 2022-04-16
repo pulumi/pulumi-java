@@ -22,7 +22,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="certificateExpirationDate")
       private final @Nullable Output<String> certificateExpirationDate;
 
-    public Output<String> getCertificateExpirationDate() {
+    public Output<String> certificateExpirationDate() {
         return this.certificateExpirationDate == null ? Codegen.empty() : this.certificateExpirationDate;
     }
 
@@ -33,7 +33,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="certificateSubjectName")
       private final @Nullable Output<String> certificateSubjectName;
 
-    public Output<String> getCertificateSubjectName() {
+    public Output<String> certificateSubjectName() {
         return this.certificateSubjectName == null ? Codegen.empty() : this.certificateSubjectName;
     }
 
@@ -44,7 +44,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="certificateThumbprint")
       private final @Nullable Output<String> certificateThumbprint;
 
-    public Output<String> getCertificateThumbprint() {
+    public Output<String> certificateThumbprint() {
         return this.certificateThumbprint == null ? Codegen.empty() : this.certificateThumbprint;
     }
 
@@ -55,7 +55,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -66,7 +66,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="pfx")
       private final @Nullable Output<String> pfx;
 
-    public Output<String> getPfx() {
+    public Output<String> pfx() {
         return this.pfx == null ? Codegen.empty() : this.pfx;
     }
 
@@ -78,7 +78,7 @@ public final class ClientCertAuthenticationArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -71,21 +71,21 @@ public final class WebHookEventSubscriptionDestinationResponse {
      * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
      * 
     */
-    public Optional<String> getAzureActiveDirectoryApplicationIdOrUri() {
+    public Optional<String> azureActiveDirectoryApplicationIdOrUri() {
         return Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
     /**
      * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
      * 
     */
-    public Optional<String> getAzureActiveDirectoryTenantId() {
+    public Optional<String> azureActiveDirectoryTenantId() {
         return Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
     /**
      * The base URL that represents the endpoint of the destination of an event subscription.
      * 
     */
-    public String getEndpointBaseUrl() {
+    public String endpointBaseUrl() {
         return this.endpointBaseUrl;
     }
     /**
@@ -93,28 +93,28 @@ public final class WebHookEventSubscriptionDestinationResponse {
      * Expected value is 'WebHook'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
      * 
     */
-    public Optional<String> getEndpointUrl() {
+    public Optional<String> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
     /**
      * Maximum number of events per batch.
      * 
     */
-    public Optional<Integer> getMaxEventsPerBatch() {
+    public Optional<Integer> maxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
     /**
      * Preferred batch size in Kilobytes.
      * 
     */
-    public Optional<Integer> getPreferredBatchSizeInKilobytes() {
+    public Optional<Integer> preferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
 

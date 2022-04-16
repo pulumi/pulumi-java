@@ -24,7 +24,7 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryCount")
       private final @Nullable Output<Integer> retryCount;
 
-    public Output<Integer> getRetryCount() {
+    public Output<Integer> retryCount() {
         return this.retryCount == null ? Codegen.empty() : this.retryCount;
     }
 
@@ -35,7 +35,7 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryInterval")
       private final @Nullable Output<String> retryInterval;
 
-    public Output<String> getRetryInterval() {
+    public Output<String> retryInterval() {
         return this.retryInterval == null ? Codegen.empty() : this.retryInterval;
     }
 
@@ -46,7 +46,7 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryType")
       private final @Nullable Output<RetryType> retryType;
 
-    public Output<RetryType> getRetryType() {
+    public Output<RetryType> retryType() {
         return this.retryType == null ? Codegen.empty() : this.retryType;
     }
 

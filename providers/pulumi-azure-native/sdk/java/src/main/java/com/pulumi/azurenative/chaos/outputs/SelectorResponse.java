@@ -41,21 +41,21 @@ public final class SelectorResponse {
      * String of the selector ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of Target references.
      * 
     */
-    public List<TargetReferenceResponse> getTargets() {
+    public List<TargetReferenceResponse> targets() {
         return this.targets;
     }
     /**
      * Enum of the selector type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

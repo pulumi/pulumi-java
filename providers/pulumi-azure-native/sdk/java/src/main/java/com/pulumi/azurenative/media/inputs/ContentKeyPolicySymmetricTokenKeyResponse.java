@@ -23,7 +23,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
     @Import(name="keyValue", required=true)
       private final String keyValue;
 
-    public String getKeyValue() {
+    public String keyValue() {
         return this.keyValue;
     }
 
@@ -35,7 +35,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

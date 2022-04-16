@@ -52,21 +52,21 @@ public final class EncoderProcessorResponse {
      * An array of upstream node references within the topology to be used as inputs for this node.
      * 
     */
-    public List<NodeInputResponse> getInputs() {
+    public List<NodeInputResponse> inputs() {
         return this.inputs;
     }
     /**
      * Node name. Must be unique within the topology.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
      * 
     */
-    public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> getPreset() {
+    public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset() {
         return this.preset;
     }
     /**
@@ -74,7 +74,7 @@ public final class EncoderProcessorResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,14 +34,14 @@ public final class ACIServiceResponseResponseDataCollection {
      * Option for enabling/disabling Event Hub.
      * 
     */
-    public Optional<Boolean> getEventHubEnabled() {
+    public Optional<Boolean> eventHubEnabled() {
         return Optional.ofNullable(this.eventHubEnabled);
     }
     /**
      * Option for enabling/disabling storage.
      * 
     */
-    public Optional<Boolean> getStorageEnabled() {
+    public Optional<Boolean> storageEnabled() {
         return Optional.ofNullable(this.storageEnabled);
     }
 

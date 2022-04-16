@@ -23,7 +23,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
     @Import(name="ports", required=true)
       private final List<JitNetworkAccessPortRuleResponse> ports;
 
-    public List<JitNetworkAccessPortRuleResponse> getPorts() {
+    public List<JitNetworkAccessPortRuleResponse> ports() {
         return this.ports;
     }
 
@@ -45,7 +45,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
     @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;
 
-    public Optional<String> getPublicIpAddress() {
+    public Optional<String> publicIpAddress() {
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
     }
 

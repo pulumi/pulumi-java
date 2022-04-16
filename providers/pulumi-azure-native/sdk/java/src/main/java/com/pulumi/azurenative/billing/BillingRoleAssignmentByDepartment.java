@@ -42,7 +42,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The principal Id of the user who created the role assignment.
      * 
      */
-    public Output<String> getCreatedByPrincipalId() {
+    public Output<String> createdByPrincipalId() {
         return this.createdByPrincipalId;
     }
     /**
@@ -56,7 +56,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The tenant Id of the user who created the role assignment.
      * 
      */
-    public Output<String> getCreatedByPrincipalTenantId() {
+    public Output<String> createdByPrincipalTenantId() {
         return this.createdByPrincipalTenantId;
     }
     /**
@@ -70,7 +70,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    public Output<String> getCreatedByUserEmailAddress() {
+    public Output<String> createdByUserEmailAddress() {
         return this.createdByUserEmailAddress;
     }
     /**
@@ -84,7 +84,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The date the role assignment was created.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -98,7 +98,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The principal id of the user to whom the role was assigned.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalId() {
+    public Output</* @Nullable */ String> principalId() {
         return this.principalId;
     }
     /**
@@ -126,7 +126,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The principal tenant id of the user to whom the role was assigned.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalTenantId() {
+    public Output</* @Nullable */ String> principalTenantId() {
         return this.principalTenantId;
     }
     /**
@@ -140,7 +140,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The ID of the role definition.
      * 
      */
-    public Output</* @Nullable */ String> getRoleDefinitionId() {
+    public Output</* @Nullable */ String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -154,7 +154,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The scope at which the role was assigned.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -168,7 +168,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -182,7 +182,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    public Output</* @Nullable */ String> getUserAuthenticationType() {
+    public Output</* @Nullable */ String> userAuthenticationType() {
         return this.userAuthenticationType;
     }
     /**
@@ -196,7 +196,7 @@ public class BillingRoleAssignmentByDepartment extends com.pulumi.resources.Cust
      * @return The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    public Output</* @Nullable */ String> getUserEmailAddress() {
+    public Output</* @Nullable */ String> userEmailAddress() {
         return this.userEmailAddress;
     }
 

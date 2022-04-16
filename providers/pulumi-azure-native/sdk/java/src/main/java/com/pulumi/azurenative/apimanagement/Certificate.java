@@ -43,7 +43,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -57,7 +57,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return KeyVault location details of the certificate.
      * 
      */
-    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> getKeyVault() {
+    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault() {
         return this.keyVault;
     }
     /**
@@ -71,7 +71,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Subject attribute of the certificate.
      * 
      */
-    public Output<String> getSubject() {
+    public Output<String> subject() {
         return this.subject;
     }
     /**
@@ -99,7 +99,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Thumbprint of the certificate.
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -113,7 +113,7 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

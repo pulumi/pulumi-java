@@ -25,7 +25,7 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile extends com
     @Import(name="customData")
       private final @Nullable String customData;
 
-    public Optional<String> getCustomData() {
+    public Optional<String> customData() {
         return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
     }
 

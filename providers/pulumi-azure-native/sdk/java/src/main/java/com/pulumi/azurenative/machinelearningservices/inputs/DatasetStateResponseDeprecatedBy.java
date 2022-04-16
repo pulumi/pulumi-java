@@ -25,7 +25,7 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
@@ -36,7 +36,7 @@ public final class DatasetStateResponseDeprecatedBy extends com.pulumi.resources
     @Import(name="definitionVersion")
       private final @Nullable String definitionVersion;
 
-    public Optional<String> getDefinitionVersion() {
+    public Optional<String> definitionVersion() {
         return this.definitionVersion == null ? Optional.empty() : Optional.ofNullable(this.definitionVersion);
     }
 

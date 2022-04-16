@@ -25,7 +25,7 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -36,7 +36,7 @@ public final class DefaultKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="policyName")
       private final @Nullable String policyName;
 
-    public Optional<String> getPolicyName() {
+    public Optional<String> policyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 

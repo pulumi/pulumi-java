@@ -26,7 +26,7 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expiresIn")
       private final @Nullable Integer expiresIn;
 
-    public Optional<Integer> getExpiresIn() {
+    public Optional<Integer> expiresIn() {
         return this.expiresIn == null ? Optional.empty() : Optional.ofNullable(this.expiresIn);
     }
 
@@ -37,7 +37,7 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="refreshToken")
       private final @Nullable String refreshToken;
 
-    public Optional<String> getRefreshToken() {
+    public Optional<String> refreshToken() {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
     }
 
@@ -48,7 +48,7 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope")
       private final @Nullable String scope;
 
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
@@ -59,7 +59,7 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="token", required=true)
       private final String token;
 
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 
@@ -70,7 +70,7 @@ public final class AuthInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tokenType", required=true)
       private final String tokenType;
 
-    public String getTokenType() {
+    public String tokenType() {
         return this.tokenType;
     }
 

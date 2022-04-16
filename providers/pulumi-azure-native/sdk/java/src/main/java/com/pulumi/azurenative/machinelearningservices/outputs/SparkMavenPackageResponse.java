@@ -25,13 +25,13 @@ public final class SparkMavenPackageResponse {
         this.version = version;
     }
 
-    public Optional<String> getArtifact() {
+    public Optional<String> artifact() {
         return Optional.ofNullable(this.artifact);
     }
-    public Optional<String> getGroup() {
+    public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

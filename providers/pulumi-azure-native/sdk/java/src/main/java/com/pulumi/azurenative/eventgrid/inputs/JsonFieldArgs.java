@@ -26,7 +26,7 @@ public final class JsonFieldArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceField")
       private final @Nullable Output<String> sourceField;
 
-    public Output<String> getSourceField() {
+    public Output<String> sourceField() {
         return this.sourceField == null ? Codegen.empty() : this.sourceField;
     }
 

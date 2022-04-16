@@ -24,7 +24,7 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,AzureSkuName>> name;
 
-    public Output<Either<String,AzureSkuName>> getName() {
+    public Output<Either<String,AzureSkuName>> name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier", required=true)
       private final Output<Either<String,AzureSkuTier>> tier;
 
-    public Output<Either<String,AzureSkuTier>> getTier() {
+    public Output<Either<String,AzureSkuTier>> tier() {
         return this.tier;
     }
 

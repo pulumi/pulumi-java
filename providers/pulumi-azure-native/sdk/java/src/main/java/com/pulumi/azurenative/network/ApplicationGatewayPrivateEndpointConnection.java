@@ -44,7 +44,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return The consumer link id.
      * 
      */
-    public Output<String> getLinkIdentifier() {
+    public Output<String> linkIdentifier() {
         return this.linkIdentifier;
     }
     /**
@@ -72,7 +72,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return Name of the private endpoint connection on an application gateway.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return The resource of private end point.
      * 
      */
-    public Output<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -100,7 +100,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -114,7 +114,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return The provisioning state of the application gateway private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +128,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends com.pulumi.reso
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

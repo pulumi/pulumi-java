@@ -28,7 +28,7 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -39,7 +39,7 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -50,7 +50,7 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<Either<String,JitApproverType>> type;
 
-    public Output<Either<String,JitApproverType>> getType() {
+    public Output<Either<String,JitApproverType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

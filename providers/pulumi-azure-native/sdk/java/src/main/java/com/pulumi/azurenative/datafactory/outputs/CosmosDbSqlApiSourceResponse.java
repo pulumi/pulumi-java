@@ -92,63 +92,63 @@ public final class CosmosDbSqlApiSourceResponse {
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
     */
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDetectDatetime() {
+    public Optional<Object> detectDatetime() {
         return Optional.ofNullable(this.detectDatetime);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Page size of the result. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getPageSize() {
+    public Optional<Object> pageSize() {
         return Optional.ofNullable(this.pageSize);
     }
     /**
      * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
      * 
     */
-    public Optional<Object> getPreferredRegions() {
+    public Optional<Object> preferredRegions() {
         return Optional.ofNullable(this.preferredRegions);
     }
     /**
      * SQL API query. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getQuery() {
+    public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
@@ -156,7 +156,7 @@ public final class CosmosDbSqlApiSourceResponse {
      * Expected value is 'CosmosDbSqlApiSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

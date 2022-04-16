@@ -28,7 +28,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backendId")
       private final @Nullable Output<String> backendId;
 
-    public Output<String> getBackendId() {
+    public Output<String> backendId() {
         return this.backendId == null ? Codegen.empty() : this.backendId;
     }
 
@@ -39,7 +39,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<BackendCredentialsContractArgs> credentials;
 
-    public Output<BackendCredentialsContractArgs> getCredentials() {
+    public Output<BackendCredentialsContractArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -50,7 +50,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<BackendPropertiesArgs> properties;
 
-    public Output<BackendPropertiesArgs> getProperties() {
+    public Output<BackendPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -72,7 +72,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<Either<String,BackendProtocol>> protocol;
 
-    public Output<Either<String,BackendProtocol>> getProtocol() {
+    public Output<Either<String,BackendProtocol>> protocol() {
         return this.protocol;
     }
 
@@ -83,7 +83,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="proxy")
       private final @Nullable Output<BackendProxyContractArgs> proxy;
 
-    public Output<BackendProxyContractArgs> getProxy() {
+    public Output<BackendProxyContractArgs> proxy() {
         return this.proxy == null ? Codegen.empty() : this.proxy;
     }
 
@@ -94,7 +94,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -116,7 +116,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -127,7 +127,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -138,7 +138,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tls")
       private final @Nullable Output<BackendTlsPropertiesArgs> tls;
 
-    public Output<BackendTlsPropertiesArgs> getTls() {
+    public Output<BackendTlsPropertiesArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 
@@ -149,7 +149,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

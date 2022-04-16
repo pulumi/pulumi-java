@@ -25,7 +25,7 @@ public final class DiskSecurityProfileResponse extends com.pulumi.resources.Invo
     @Import(name="securityType")
       private final @Nullable String securityType;
 
-    public Optional<String> getSecurityType() {
+    public Optional<String> securityType() {
         return this.securityType == null ? Optional.empty() : Optional.ofNullable(this.securityType);
     }
 

@@ -29,7 +29,7 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="credentials")
       private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
-    public Output<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
+    public Output<MediaGraphUsernamePasswordCredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -41,7 +41,7 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -52,7 +52,7 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="trustedCertificates")
       private final @Nullable Output<MediaGraphPemCertificateListArgs> trustedCertificates;
 
-    public Output<MediaGraphPemCertificateListArgs> getTrustedCertificates() {
+    public Output<MediaGraphPemCertificateListArgs> trustedCertificates() {
         return this.trustedCertificates == null ? Codegen.empty() : this.trustedCertificates;
     }
 
@@ -63,7 +63,7 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -74,7 +74,7 @@ public final class MediaGraphTlsEndpointArgs extends com.pulumi.resources.Resour
     @Import(name="validationOptions")
       private final @Nullable Output<MediaGraphTlsValidationOptionsArgs> validationOptions;
 
-    public Output<MediaGraphTlsValidationOptionsArgs> getValidationOptions() {
+    public Output<MediaGraphTlsValidationOptionsArgs> validationOptions() {
         return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 

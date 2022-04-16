@@ -60,42 +60,42 @@ public final class SystemDataResponse {
      * The timestamp of resource creation (UTC)
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * A string identifier for the identity that created the resource
      * 
     */
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource: user, application, managedIdentity
      * 
     */
-    public String getCreatedByType() {
+    public String createdByType() {
         return this.createdByType;
     }
     /**
      * The timestamp of resource last modification (UTC)
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * A string identifier for the identity that last modified the resource
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource: user, application, managedIdentity
      * 
     */
-    public String getLastModifiedByType() {
+    public String lastModifiedByType() {
         return this.lastModifiedByType;
     }
 

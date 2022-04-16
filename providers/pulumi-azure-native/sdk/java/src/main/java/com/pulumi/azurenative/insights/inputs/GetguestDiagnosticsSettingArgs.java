@@ -19,7 +19,7 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
     @Import(name="diagnosticSettingsName", required=true)
       private final String diagnosticSettingsName;
 
-    public String getDiagnosticSettingsName() {
+    public String diagnosticSettingsName() {
         return this.diagnosticSettingsName;
     }
 
@@ -30,7 +30,7 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -25,7 +25,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -36,7 +36,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="entityId", required=true)
       private final String entityId;
 
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
 
@@ -47,7 +47,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="kinds")
       private final @Nullable List<Either<String,EntityTimelineKind>> kinds;
 
-    public List<Either<String,EntityTimelineKind>> getKinds() {
+    public List<Either<String,EntityTimelineKind>> kinds() {
         return this.kinds == null ? List.of() : this.kinds;
     }
 
@@ -58,7 +58,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="numberOfBucket")
       private final @Nullable Integer numberOfBucket;
 
-    public Optional<Integer> getNumberOfBucket() {
+    public Optional<Integer> numberOfBucket() {
         return this.numberOfBucket == null ? Optional.empty() : Optional.ofNullable(this.numberOfBucket);
     }
 
@@ -69,7 +69,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
 
-    public String getOperationalInsightsResourceProvider() {
+    public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -80,7 +80,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -102,7 +102,7 @@ public final class GetEntitiesGetTimelineArgs extends com.pulumi.resources.Invok
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

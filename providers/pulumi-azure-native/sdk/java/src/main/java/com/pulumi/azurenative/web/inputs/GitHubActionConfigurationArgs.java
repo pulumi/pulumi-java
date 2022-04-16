@@ -28,7 +28,7 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="codeConfiguration")
       private final @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
-    public Output<GitHubActionCodeConfigurationArgs> getCodeConfiguration() {
+    public Output<GitHubActionCodeConfigurationArgs> codeConfiguration() {
         return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
@@ -39,7 +39,7 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="containerConfiguration")
       private final @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
-    public Output<GitHubActionContainerConfigurationArgs> getContainerConfiguration() {
+    public Output<GitHubActionContainerConfigurationArgs> containerConfiguration() {
         return this.containerConfiguration == null ? Codegen.empty() : this.containerConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="generateWorkflowFile")
       private final @Nullable Output<Boolean> generateWorkflowFile;
 
-    public Output<Boolean> getGenerateWorkflowFile() {
+    public Output<Boolean> generateWorkflowFile() {
         return this.generateWorkflowFile == null ? Codegen.empty() : this.generateWorkflowFile;
     }
 
@@ -61,7 +61,7 @@ public final class GitHubActionConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="isLinux")
       private final @Nullable Output<Boolean> isLinux;
 
-    public Output<Boolean> getIsLinux() {
+    public Output<Boolean> isLinux() {
         return this.isLinux == null ? Codegen.empty() : this.isLinux;
     }
 

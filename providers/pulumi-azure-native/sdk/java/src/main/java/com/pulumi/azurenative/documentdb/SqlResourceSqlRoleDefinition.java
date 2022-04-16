@@ -43,7 +43,7 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssignableScopes() {
+    public Output</* @Nullable */ List<String>> assignableScopes() {
         return this.assignableScopes;
     }
     /**
@@ -57,7 +57,7 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return The name of the database account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return The set of operations allowed through this Role Definition.
      * 
      */
-    public Output</* @Nullable */ List<PermissionResponse>> getPermissions() {
+    public Output</* @Nullable */ List<PermissionResponse>> permissions() {
         return this.permissions;
     }
     /**
@@ -85,7 +85,7 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    public Output</* @Nullable */ String> getRoleName() {
+    public Output</* @Nullable */ String> roleName() {
         return this.roleName;
     }
     /**
@@ -99,7 +99,7 @@ public class SqlResourceSqlRoleDefinition extends com.pulumi.resources.CustomRes
      * @return The type of Azure resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

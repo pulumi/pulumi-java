@@ -19,7 +19,7 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="webTestName", required=true)
       private final String webTestName;
 
-    public String getWebTestName() {
+    public String webTestName() {
         return this.webTestName;
     }
 

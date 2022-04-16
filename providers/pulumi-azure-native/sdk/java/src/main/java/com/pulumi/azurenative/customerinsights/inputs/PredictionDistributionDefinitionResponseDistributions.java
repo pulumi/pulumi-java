@@ -26,7 +26,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="negatives")
       private final @Nullable Double negatives;
 
-    public Optional<Double> getNegatives() {
+    public Optional<Double> negatives() {
         return this.negatives == null ? Optional.empty() : Optional.ofNullable(this.negatives);
     }
 
@@ -37,7 +37,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="negativesAboveThreshold")
       private final @Nullable Double negativesAboveThreshold;
 
-    public Optional<Double> getNegativesAboveThreshold() {
+    public Optional<Double> negativesAboveThreshold() {
         return this.negativesAboveThreshold == null ? Optional.empty() : Optional.ofNullable(this.negativesAboveThreshold);
     }
 
@@ -48,7 +48,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="positives")
       private final @Nullable Double positives;
 
-    public Optional<Double> getPositives() {
+    public Optional<Double> positives() {
         return this.positives == null ? Optional.empty() : Optional.ofNullable(this.positives);
     }
 
@@ -59,7 +59,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="positivesAboveThreshold")
       private final @Nullable Double positivesAboveThreshold;
 
-    public Optional<Double> getPositivesAboveThreshold() {
+    public Optional<Double> positivesAboveThreshold() {
         return this.positivesAboveThreshold == null ? Optional.empty() : Optional.ofNullable(this.positivesAboveThreshold);
     }
 
@@ -70,7 +70,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
     @Import(name="scoreThreshold")
       private final @Nullable Integer scoreThreshold;
 
-    public Optional<Integer> getScoreThreshold() {
+    public Optional<Integer> scoreThreshold() {
         return this.scoreThreshold == null ? Optional.empty() : Optional.ofNullable(this.scoreThreshold);
     }
 

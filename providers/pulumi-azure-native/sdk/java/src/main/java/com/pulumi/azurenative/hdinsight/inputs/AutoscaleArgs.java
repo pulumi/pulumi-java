@@ -27,7 +27,7 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<AutoscaleCapacityArgs> capacity;
 
-    public Output<AutoscaleCapacityArgs> getCapacity() {
+    public Output<AutoscaleCapacityArgs> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recurrence")
       private final @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
 
-    public Output<AutoscaleRecurrenceArgs> getRecurrence() {
+    public Output<AutoscaleRecurrenceArgs> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 

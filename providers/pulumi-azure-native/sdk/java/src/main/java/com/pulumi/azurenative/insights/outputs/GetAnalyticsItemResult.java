@@ -84,63 +84,63 @@ public final class GetAnalyticsItemResult {
      * The content of this item
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * Internally assigned unique id of the item definition.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The user-defined name of the item.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
      * 
     */
-    public ApplicationInsightsComponentAnalyticsItemPropertiesResponse getProperties() {
+    public ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Date and time in UTC when this item was created.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
     /**
      * Date and time in UTC of the last modification that was made to this item.
      * 
     */
-    public String getTimeModified() {
+    public String timeModified() {
         return this.timeModified;
     }
     /**
      * Enum indicating the type of the Analytics item.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * This instance's version of the data model. This can change as new features are added.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

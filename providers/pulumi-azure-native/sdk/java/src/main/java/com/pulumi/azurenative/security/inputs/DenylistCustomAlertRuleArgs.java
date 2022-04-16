@@ -27,7 +27,7 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
     @Import(name="denylistValues", required=true)
       private final Output<List<String>> denylistValues;
 
-    public Output<List<String>> getDenylistValues() {
+    public Output<List<String>> denylistValues() {
         return this.denylistValues;
     }
 
@@ -38,7 +38,7 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 

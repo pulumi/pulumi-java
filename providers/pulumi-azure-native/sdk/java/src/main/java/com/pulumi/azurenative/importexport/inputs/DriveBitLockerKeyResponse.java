@@ -25,7 +25,7 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="bitLockerKey")
       private final @Nullable String bitLockerKey;
 
-    public Optional<String> getBitLockerKey() {
+    public Optional<String> bitLockerKey() {
         return this.bitLockerKey == null ? Optional.empty() : Optional.ofNullable(this.bitLockerKey);
     }
 
@@ -36,7 +36,7 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="driveId")
       private final @Nullable String driveId;
 
-    public Optional<String> getDriveId() {
+    public Optional<String> driveId() {
         return this.driveId == null ? Optional.empty() : Optional.ofNullable(this.driveId);
     }
 

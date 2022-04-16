@@ -25,7 +25,7 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends c
     @Import(name="minimalSeverity")
       private final @Nullable String minimalSeverity;
 
-    public Optional<String> getMinimalSeverity() {
+    public Optional<String> minimalSeverity() {
         return this.minimalSeverity == null ? Optional.empty() : Optional.ofNullable(this.minimalSeverity);
     }
 
@@ -36,7 +36,7 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends c
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

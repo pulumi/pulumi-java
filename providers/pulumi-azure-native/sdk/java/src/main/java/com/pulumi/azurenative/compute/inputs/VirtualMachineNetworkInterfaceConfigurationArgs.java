@@ -33,7 +33,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
-    public Output<Either<String,DeleteOptions>> getDeleteOption() {
+    public Output<Either<String,DeleteOptions>> deleteOption() {
         return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
@@ -44,14 +44,14 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings;
 
-    public Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> getDnsSettings() {
+    public Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings() {
         return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
     @Import(name="dscpConfiguration")
       private final @Nullable Output<SubResourceArgs> dscpConfiguration;
 
-    public Output<SubResourceArgs> getDscpConfiguration() {
+    public Output<SubResourceArgs> dscpConfiguration() {
         return this.dscpConfiguration == null ? Codegen.empty() : this.dscpConfiguration;
     }
 
@@ -62,7 +62,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Output<Boolean> getEnableAcceleratedNetworking() {
+    public Output<Boolean> enableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Codegen.empty() : this.enableAcceleratedNetworking;
     }
 
@@ -73,7 +73,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="enableFpga")
       private final @Nullable Output<Boolean> enableFpga;
 
-    public Output<Boolean> getEnableFpga() {
+    public Output<Boolean> enableFpga() {
         return this.enableFpga == null ? Codegen.empty() : this.enableFpga;
     }
 
@@ -84,7 +84,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="enableIPForwarding")
       private final @Nullable Output<Boolean> enableIPForwarding;
 
-    public Output<Boolean> getEnableIPForwarding() {
+    public Output<Boolean> enableIPForwarding() {
         return this.enableIPForwarding == null ? Codegen.empty() : this.enableIPForwarding;
     }
 
@@ -95,7 +95,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="ipConfigurations", required=true)
       private final Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
+    public Output<List<VirtualMachineNetworkInterfaceIPConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations;
     }
 
@@ -106,7 +106,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -117,7 +117,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<SubResourceArgs> networkSecurityGroup;
 
-    public Output<SubResourceArgs> getNetworkSecurityGroup() {
+    public Output<SubResourceArgs> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
     }
 
@@ -128,7 +128,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 

@@ -26,7 +26,7 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -37,7 +37,7 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -48,7 +48,7 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="fulfilledDateTime")
       private final @Nullable Output<String> fulfilledDateTime;
 
-    public Output<String> getFulfilledDateTime() {
+    public Output<String> fulfilledDateTime() {
         return this.fulfilledDateTime == null ? Codegen.empty() : this.fulfilledDateTime;
     }
 
@@ -59,7 +59,7 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="reviewHistoryPeriodEndDateTime")
       private final @Nullable Output<String> reviewHistoryPeriodEndDateTime;
 
-    public Output<String> getReviewHistoryPeriodEndDateTime() {
+    public Output<String> reviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime == null ? Codegen.empty() : this.reviewHistoryPeriodEndDateTime;
     }
 
@@ -70,7 +70,7 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="reviewHistoryPeriodStartDateTime")
       private final @Nullable Output<String> reviewHistoryPeriodStartDateTime;
 
-    public Output<String> getReviewHistoryPeriodStartDateTime() {
+    public Output<String> reviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime == null ? Codegen.empty() : this.reviewHistoryPeriodStartDateTime;
     }
 
@@ -81,7 +81,7 @@ public final class AccessReviewHistoryInstanceArgs extends com.pulumi.resources.
     @Import(name="runDateTime")
       private final @Nullable Output<String> runDateTime;
 
-    public Output<String> getRunDateTime() {
+    public Output<String> runDateTime() {
         return this.runDateTime == null ? Codegen.empty() : this.runDateTime;
     }
 

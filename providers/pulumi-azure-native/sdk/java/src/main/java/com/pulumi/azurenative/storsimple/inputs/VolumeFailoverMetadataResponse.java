@@ -26,7 +26,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupCreatedDate")
       private final @Nullable String backupCreatedDate;
 
-    public Optional<String> getBackupCreatedDate() {
+    public Optional<String> backupCreatedDate() {
         return this.backupCreatedDate == null ? Optional.empty() : Optional.ofNullable(this.backupCreatedDate);
     }
 
@@ -37,7 +37,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupElementId")
       private final @Nullable String backupElementId;
 
-    public Optional<String> getBackupElementId() {
+    public Optional<String> backupElementId() {
         return this.backupElementId == null ? Optional.empty() : Optional.ofNullable(this.backupElementId);
     }
 
@@ -48,7 +48,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupId")
       private final @Nullable String backupId;
 
-    public Optional<String> getBackupId() {
+    public Optional<String> backupId() {
         return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
     }
 
@@ -59,7 +59,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="backupPolicyId")
       private final @Nullable String backupPolicyId;
 
-    public Optional<String> getBackupPolicyId() {
+    public Optional<String> backupPolicyId() {
         return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
     }
 
@@ -70,7 +70,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="sizeInBytes")
       private final @Nullable Double sizeInBytes;
 
-    public Optional<Double> getSizeInBytes() {
+    public Optional<Double> sizeInBytes() {
         return this.sizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeInBytes);
     }
 
@@ -81,7 +81,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="volumeId")
       private final @Nullable String volumeId;
 
-    public Optional<String> getVolumeId() {
+    public Optional<String> volumeId() {
         return this.volumeId == null ? Optional.empty() : Optional.ofNullable(this.volumeId);
     }
 
@@ -92,7 +92,7 @@ public final class VolumeFailoverMetadataResponse extends com.pulumi.resources.I
     @Import(name="volumeType")
       private final @Nullable String volumeType;
 
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return this.volumeType == null ? Optional.empty() : Optional.ofNullable(this.volumeType);
     }
 

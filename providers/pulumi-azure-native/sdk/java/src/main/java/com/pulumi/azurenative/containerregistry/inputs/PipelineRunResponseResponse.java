@@ -30,7 +30,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="catalogDigest")
       private final @Nullable String catalogDigest;
 
-    public Optional<String> getCatalogDigest() {
+    public Optional<String> catalogDigest() {
         return this.catalogDigest == null ? Optional.empty() : Optional.ofNullable(this.catalogDigest);
     }
 
@@ -41,7 +41,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="finishTime")
       private final @Nullable String finishTime;
 
-    public Optional<String> getFinishTime() {
+    public Optional<String> finishTime() {
         return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
     }
 
@@ -52,7 +52,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="importedArtifacts")
       private final @Nullable List<String> importedArtifacts;
 
-    public List<String> getImportedArtifacts() {
+    public List<String> importedArtifacts() {
         return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
     }
 
@@ -63,7 +63,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="pipelineRunErrorMessage")
       private final @Nullable String pipelineRunErrorMessage;
 
-    public Optional<String> getPipelineRunErrorMessage() {
+    public Optional<String> pipelineRunErrorMessage() {
         return this.pipelineRunErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.pipelineRunErrorMessage);
     }
 
@@ -74,7 +74,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="progress")
       private final @Nullable ProgressPropertiesResponse progress;
 
-    public Optional<ProgressPropertiesResponse> getProgress() {
+    public Optional<ProgressPropertiesResponse> progress() {
         return this.progress == null ? Optional.empty() : Optional.ofNullable(this.progress);
     }
 
@@ -85,7 +85,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="source")
       private final @Nullable ImportPipelineSourcePropertiesResponse source;
 
-    public Optional<ImportPipelineSourcePropertiesResponse> getSource() {
+    public Optional<ImportPipelineSourcePropertiesResponse> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
@@ -96,7 +96,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -107,7 +107,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -118,7 +118,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="target")
       private final @Nullable ExportPipelineTargetPropertiesResponse target;
 
-    public Optional<ExportPipelineTargetPropertiesResponse> getTarget() {
+    public Optional<ExportPipelineTargetPropertiesResponse> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -129,7 +129,7 @@ public final class PipelineRunResponseResponse extends com.pulumi.resources.Invo
     @Import(name="trigger")
       private final @Nullable PipelineTriggerDescriptorResponse trigger;
 
-    public Optional<PipelineTriggerDescriptorResponse> getTrigger() {
+    public Optional<PipelineTriggerDescriptorResponse> trigger() {
         return this.trigger == null ? Optional.empty() : Optional.ofNullable(this.trigger);
     }
 

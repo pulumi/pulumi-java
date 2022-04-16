@@ -110,87 +110,87 @@ public final class EntityInfoResponse {
      * The friendly name of the management group.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The users specific permissions to this item.
      * 
     */
-    public Optional<String> getInheritedPermissions() {
+    public Optional<String> inheritedPermissions() {
         return Optional.ofNullable(this.inheritedPermissions);
     }
     /**
      * The name of the entity. For example, 00000000-0000-0000-0000-000000000000
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Number of children is the number of Groups that are exactly one level underneath the current Group.
      * 
     */
-    public Optional<Integer> getNumberOfChildGroups() {
+    public Optional<Integer> numberOfChildGroups() {
         return Optional.ofNullable(this.numberOfChildGroups);
     }
     /**
      * Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
      * 
     */
-    public Optional<Integer> getNumberOfChildren() {
+    public Optional<Integer> numberOfChildren() {
         return Optional.ofNullable(this.numberOfChildren);
     }
-    public Optional<Integer> getNumberOfDescendants() {
+    public Optional<Integer> numberOfDescendants() {
         return Optional.ofNullable(this.numberOfDescendants);
     }
     /**
      * (Optional) The ID of the parent management group.
      * 
     */
-    public Optional<EntityParentGroupInfoResponse> getParent() {
+    public Optional<EntityParentGroupInfoResponse> parent() {
         return Optional.ofNullable(this.parent);
     }
     /**
      * The parent display name chain from the root group to the immediate parent
      * 
     */
-    public List<String> getParentDisplayNameChain() {
+    public List<String> parentDisplayNameChain() {
         return this.parentDisplayNameChain == null ? List.of() : this.parentDisplayNameChain;
     }
     /**
      * The parent name chain from the root group to the immediate parent
      * 
     */
-    public List<String> getParentNameChain() {
+    public List<String> parentNameChain() {
         return this.parentNameChain == null ? List.of() : this.parentNameChain;
     }
     /**
      * The users specific permissions to this item.
      * 
     */
-    public Optional<String> getPermissions() {
+    public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }
     /**
      * The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the resource. For example, Microsoft.Management/managementGroups
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

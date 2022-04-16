@@ -51,7 +51,7 @@ public final class CustomRegistryCredentialsResponse {
      * source of authentication used for accessing the registry.
      * 
     */
-    public Optional<String> getIdentity() {
+    public Optional<String> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
@@ -59,14 +59,14 @@ public final class CustomRegistryCredentialsResponse {
      * object that allows multiple ways of providing the value for it.
      * 
     */
-    public Optional<SecretObjectResponse> getPassword() {
+    public Optional<SecretObjectResponse> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The username for logging into the custom registry.
      * 
     */
-    public Optional<SecretObjectResponse> getUserName() {
+    public Optional<SecretObjectResponse> userName() {
         return Optional.ofNullable(this.userName);
     }
 

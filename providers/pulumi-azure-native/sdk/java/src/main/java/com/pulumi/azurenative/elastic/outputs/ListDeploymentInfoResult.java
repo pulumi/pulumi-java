@@ -46,28 +46,28 @@ public final class ListDeploymentInfoResult {
      * Disk capacity of the elasticsearch in Elastic cloud deployment.
      * 
     */
-    public String getDiskCapacity() {
+    public String diskCapacity() {
         return this.diskCapacity;
     }
     /**
      * RAM capacity of the elasticsearch in Elastic cloud deployment.
      * 
     */
-    public String getMemoryCapacity() {
+    public String memoryCapacity() {
         return this.memoryCapacity;
     }
     /**
      * The Elastic deployment status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Version of the elasticsearch in Elastic cloud deployment.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

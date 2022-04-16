@@ -46,7 +46,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Username / Password Credentials to provision guest agent.
      * 
      */
-    public Output</* @Nullable */ GuestCredentialResponse> getCredentials() {
+    public Output</* @Nullable */ GuestCredentialResponse> credentials() {
         return this.credentials;
     }
     /**
@@ -60,7 +60,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    public Output<String> getCustomResourceName() {
+    public Output<String> customResourceName() {
         return this.customResourceName;
     }
     /**
@@ -74,7 +74,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return HTTP Proxy configuration for the VM.
      * 
      */
-    public Output</* @Nullable */ HttpProxyConfigurationResponse> getHttpProxyConfig() {
+    public Output</* @Nullable */ HttpProxyConfigurationResponse> httpProxyConfig() {
         return this.httpProxyConfig;
     }
     /**
@@ -88,7 +88,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the guest agent provisioning action.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningAction() {
+    public Output</* @Nullable */ String> provisioningAction() {
         return this.provisioningAction;
     }
     /**
@@ -116,7 +116,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the guest agent status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -144,7 +144,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return The resource status information.
      * 
      */
-    public Output<List<ResourceStatusResponse>> getStatuses() {
+    public Output<List<ResourceStatusResponse>> statuses() {
         return this.statuses;
     }
     /**
@@ -158,7 +158,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -172,7 +172,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -186,7 +186,7 @@ public class GuestAgent extends com.pulumi.resources.CustomResource {
      * @return Gets or sets a unique identifier for this resource.
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
 

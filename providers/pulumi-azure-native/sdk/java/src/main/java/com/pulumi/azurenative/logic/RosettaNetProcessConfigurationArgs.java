@@ -25,7 +25,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="activitySettings", required=true)
       private final Output<RosettaNetPipActivitySettingsArgs> activitySettings;
 
-    public Output<RosettaNetPipActivitySettingsArgs> getActivitySettings() {
+    public Output<RosettaNetPipActivitySettingsArgs> activitySettings() {
         return this.activitySettings;
     }
 
@@ -36,7 +36,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="initiatorRoleSettings", required=true)
       private final Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
 
-    public Output<RosettaNetPipRoleSettingsArgs> getInitiatorRoleSettings() {
+    public Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
 
@@ -58,7 +58,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -69,7 +69,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -91,7 +91,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="processCode", required=true)
       private final Output<String> processCode;
 
-    public Output<String> getProcessCode() {
+    public Output<String> processCode() {
         return this.processCode;
     }
 
@@ -102,7 +102,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="processName", required=true)
       private final Output<String> processName;
 
-    public Output<String> getProcessName() {
+    public Output<String> processName() {
         return this.processName;
     }
 
@@ -113,7 +113,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="processVersion", required=true)
       private final Output<String> processVersion;
 
-    public Output<String> getProcessVersion() {
+    public Output<String> processVersion() {
         return this.processVersion;
     }
 
@@ -124,7 +124,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -135,7 +135,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="responderRoleSettings", required=true)
       private final Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
 
-    public Output<RosettaNetPipRoleSettingsArgs> getResponderRoleSettings() {
+    public Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings() {
         return this.responderRoleSettings;
     }
 
@@ -146,7 +146,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="rosettaNetProcessConfigurationName")
       private final @Nullable Output<String> rosettaNetProcessConfigurationName;
 
-    public Output<String> getRosettaNetProcessConfigurationName() {
+    public Output<String> rosettaNetProcessConfigurationName() {
         return this.rosettaNetProcessConfigurationName == null ? Codegen.empty() : this.rosettaNetProcessConfigurationName;
     }
 
@@ -157,7 +157,7 @@ public final class RosettaNetProcessConfigurationArgs extends com.pulumi.resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

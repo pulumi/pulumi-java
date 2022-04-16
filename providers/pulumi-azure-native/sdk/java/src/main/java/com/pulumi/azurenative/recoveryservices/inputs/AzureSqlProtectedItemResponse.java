@@ -27,7 +27,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -38,7 +38,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="backupSetName")
       private final @Nullable String backupSetName;
 
-    public Optional<String> getBackupSetName() {
+    public Optional<String> backupSetName() {
         return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
     }
 
@@ -49,7 +49,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -60,7 +60,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="createMode")
       private final @Nullable String createMode;
 
-    public Optional<String> getCreateMode() {
+    public Optional<String> createMode() {
         return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
     }
 
@@ -71,7 +71,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
 
-    public Optional<String> getDeferredDeleteTimeInUTC() {
+    public Optional<String> deferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
@@ -82,7 +82,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
 
-    public Optional<String> getDeferredDeleteTimeRemaining() {
+    public Optional<String> deferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
@@ -93,7 +93,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="extendedInfo")
       private final @Nullable AzureSqlProtectedItemExtendedInfoResponse extendedInfo;
 
-    public Optional<AzureSqlProtectedItemExtendedInfoResponse> getExtendedInfo() {
+    public Optional<AzureSqlProtectedItemExtendedInfoResponse> extendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
@@ -104,7 +104,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
-    public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
@@ -115,7 +115,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
 
-    public Optional<Boolean> getIsRehydrate() {
+    public Optional<Boolean> isRehydrate() {
         return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
     }
 
@@ -126,7 +126,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
 
-    public Optional<Boolean> getIsScheduledForDeferredDelete() {
+    public Optional<Boolean> isScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
@@ -137,7 +137,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
 
-    public Optional<String> getLastRecoveryPoint() {
+    public Optional<String> lastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
     }
 
@@ -148,7 +148,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -159,7 +159,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="protectedItemDataId")
       private final @Nullable String protectedItemDataId;
 
-    public Optional<String> getProtectedItemDataId() {
+    public Optional<String> protectedItemDataId() {
         return this.protectedItemDataId == null ? Optional.empty() : Optional.ofNullable(this.protectedItemDataId);
     }
 
@@ -171,7 +171,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
 
-    public String getProtectedItemType() {
+    public String protectedItemType() {
         return this.protectedItemType;
     }
 
@@ -182,7 +182,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="protectionState")
       private final @Nullable String protectionState;
 
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
@@ -193,7 +193,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
@@ -204,7 +204,7 @@ public final class AzureSqlProtectedItemResponse extends com.pulumi.resources.In
     @Import(name="workloadType")
       private final @Nullable String workloadType;
 
-    public Optional<String> getWorkloadType() {
+    public Optional<String> workloadType() {
         return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
     }
 

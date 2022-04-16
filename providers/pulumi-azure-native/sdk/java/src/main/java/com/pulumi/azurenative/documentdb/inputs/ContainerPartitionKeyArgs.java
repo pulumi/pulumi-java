@@ -30,7 +30,7 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
     @Import(name="kind")
       private final @Nullable Output<Either<String,PartitionKind>> kind;
 
-    public Output<Either<String,PartitionKind>> getKind() {
+    public Output<Either<String,PartitionKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -41,7 +41,7 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
+    public Output<List<String>> paths() {
         return this.paths == null ? Codegen.empty() : this.paths;
     }
 
@@ -52,7 +52,7 @@ public final class ContainerPartitionKeyArgs extends com.pulumi.resources.Resour
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -58,35 +58,35 @@ public final class MLAssistConfigurationResponse {
      * The compute designated for inferencing.
      * 
     */
-    public ComputeBindingResponse getInferencingComputeBinding() {
+    public ComputeBindingResponse inferencingComputeBinding() {
         return this.inferencingComputeBinding;
     }
     /**
      * Indicates whether MLAssist feature is enabled.
      * 
     */
-    public Optional<Boolean> getMlAssistEnabled() {
+    public Optional<Boolean> mlAssistEnabled() {
         return Optional.ofNullable(this.mlAssistEnabled);
     }
     /**
      * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
      * 
     */
-    public String getModelNamePrefix() {
+    public String modelNamePrefix() {
         return this.modelNamePrefix;
     }
     /**
      * Prelabel accuracy threshold used in MLAssist feature.
      * 
     */
-    public Optional<Double> getPrelabelAccuracyThreshold() {
+    public Optional<Double> prelabelAccuracyThreshold() {
         return Optional.ofNullable(this.prelabelAccuracyThreshold);
     }
     /**
      * The compute designated for training.
      * 
     */
-    public ComputeBindingResponse getTrainingComputeBinding() {
+    public ComputeBindingResponse trainingComputeBinding() {
         return this.trainingComputeBinding;
     }
 

@@ -25,7 +25,7 @@ public final class TrustedExternalTenantResponse extends com.pulumi.resources.In
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

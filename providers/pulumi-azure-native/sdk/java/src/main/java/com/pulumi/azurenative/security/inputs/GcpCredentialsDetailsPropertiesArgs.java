@@ -25,7 +25,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="authProviderX509CertUrl", required=true)
       private final Output<String> authProviderX509CertUrl;
 
-    public Output<String> getAuthProviderX509CertUrl() {
+    public Output<String> authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
 
@@ -36,7 +36,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="authUri", required=true)
       private final Output<String> authUri;
 
-    public Output<String> getAuthUri() {
+    public Output<String> authUri() {
         return this.authUri;
     }
 
@@ -48,7 +48,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -59,7 +59,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="clientEmail", required=true)
       private final Output<String> clientEmail;
 
-    public Output<String> getClientEmail() {
+    public Output<String> clientEmail() {
         return this.clientEmail;
     }
 
@@ -70,7 +70,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -81,7 +81,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="clientX509CertUrl", required=true)
       private final Output<String> clientX509CertUrl;
 
-    public Output<String> getClientX509CertUrl() {
+    public Output<String> clientX509CertUrl() {
         return this.clientX509CertUrl;
     }
 
@@ -92,7 +92,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -103,7 +103,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 
@@ -114,7 +114,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="privateKeyId", required=true)
       private final Output<String> privateKeyId;
 
-    public Output<String> getPrivateKeyId() {
+    public Output<String> privateKeyId() {
         return this.privateKeyId;
     }
 
@@ -125,7 +125,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -136,7 +136,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="tokenUri", required=true)
       private final Output<String> tokenUri;
 
-    public Output<String> getTokenUri() {
+    public Output<String> tokenUri() {
         return this.tokenUri;
     }
 
@@ -147,7 +147,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

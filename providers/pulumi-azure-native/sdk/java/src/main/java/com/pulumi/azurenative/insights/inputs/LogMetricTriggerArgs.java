@@ -30,7 +30,7 @@ public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricColumn")
       private final @Nullable Output<String> metricColumn;
 
-    public Output<String> getMetricColumn() {
+    public Output<String> metricColumn() {
         return this.metricColumn == null ? Codegen.empty() : this.metricColumn;
     }
 
@@ -41,7 +41,7 @@ public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="metricTriggerType")
       private final @Nullable Output<Either<String,MetricTriggerType>> metricTriggerType;
 
-    public Output<Either<String,MetricTriggerType>> getMetricTriggerType() {
+    public Output<Either<String,MetricTriggerType>> metricTriggerType() {
         return this.metricTriggerType == null ? Codegen.empty() : this.metricTriggerType;
     }
 
@@ -52,7 +52,7 @@ public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
@@ -63,7 +63,7 @@ public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="thresholdOperator")
       private final @Nullable Output<Either<String,ConditionalOperator>> thresholdOperator;
 
-    public Output<Either<String,ConditionalOperator>> getThresholdOperator() {
+    public Output<Either<String,ConditionalOperator>> thresholdOperator() {
         return this.thresholdOperator == null ? Codegen.empty() : this.thresholdOperator;
     }
 

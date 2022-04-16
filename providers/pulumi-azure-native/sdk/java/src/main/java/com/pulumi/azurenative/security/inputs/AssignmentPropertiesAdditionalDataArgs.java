@@ -26,7 +26,7 @@ public final class AssignmentPropertiesAdditionalDataArgs extends com.pulumi.res
     @Import(name="exemptionCategory")
       private final @Nullable Output<String> exemptionCategory;
 
-    public Output<String> getExemptionCategory() {
+    public Output<String> exemptionCategory() {
         return this.exemptionCategory == null ? Codegen.empty() : this.exemptionCategory;
     }
 

@@ -23,7 +23,7 @@ public final class MigrationReportResultResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class MigrationReportResultResponse extends com.pulumi.resources.In
     @Import(name="reportUrl", required=true)
       private final String reportUrl;
 
-    public String getReportUrl() {
+    public String reportUrl() {
         return this.reportUrl;
     }
 

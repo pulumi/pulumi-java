@@ -26,7 +26,7 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
     @Import(name="activeDirectoryProperties")
       private final @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
 
-    public Optional<ActiveDirectoryPropertiesResponse> getActiveDirectoryProperties() {
+    public Optional<ActiveDirectoryPropertiesResponse> activeDirectoryProperties() {
         return this.activeDirectoryProperties == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryProperties);
     }
 
@@ -37,7 +37,7 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends com.pul
     @Import(name="directoryServiceOptions", required=true)
       private final String directoryServiceOptions;
 
-    public String getDirectoryServiceOptions() {
+    public String directoryServiceOptions() {
         return this.directoryServiceOptions;
     }
 

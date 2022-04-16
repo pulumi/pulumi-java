@@ -100,79 +100,79 @@ public final class GetCertificateResult {
      * This is only returned when the certificate provisioningState is 'Failed'.
      * 
     */
-    public DeleteCertificateErrorResponse getDeleteCertificateError() {
+    public DeleteCertificateErrorResponse deleteCertificateError() {
         return this.deleteCertificateError;
     }
     /**
      * The ETag of the resource, used for concurrency statements.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The previous provisioned state of the resource
      * 
     */
-    public String getPreviousProvisioningState() {
+    public String previousProvisioningState() {
         return this.previousProvisioningState;
     }
-    public String getPreviousProvisioningStateTransitionTime() {
+    public String previousProvisioningStateTransitionTime() {
         return this.previousProvisioningStateTransitionTime;
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
-    public String getProvisioningStateTransitionTime() {
+    public String provisioningStateTransitionTime() {
         return this.provisioningStateTransitionTime;
     }
     /**
      * The public key of the certificate.
      * 
     */
-    public String getPublicData() {
+    public String publicData() {
         return this.publicData;
     }
     /**
      * This must match the thumbprint from the name.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
      * 
     */
-    public Optional<String> getThumbprintAlgorithm() {
+    public Optional<String> thumbprintAlgorithm() {
         return Optional.ofNullable(this.thumbprintAlgorithm);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

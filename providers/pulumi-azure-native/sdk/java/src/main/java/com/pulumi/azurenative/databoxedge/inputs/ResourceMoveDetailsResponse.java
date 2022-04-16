@@ -25,7 +25,7 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="operationInProgress")
       private final @Nullable String operationInProgress;
 
-    public Optional<String> getOperationInProgress() {
+    public Optional<String> operationInProgress() {
         return this.operationInProgress == null ? Optional.empty() : Optional.ofNullable(this.operationInProgress);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="operationInProgressLockTimeoutInUTC")
       private final @Nullable String operationInProgressLockTimeoutInUTC;
 
-    public Optional<String> getOperationInProgressLockTimeoutInUTC() {
+    public Optional<String> operationInProgressLockTimeoutInUTC() {
         return this.operationInProgressLockTimeoutInUTC == null ? Optional.empty() : Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
     }
 

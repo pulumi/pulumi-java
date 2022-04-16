@@ -54,35 +54,35 @@ public final class JobStagesResponse {
      * Display name of the job stage.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Job Stage Details
      * 
     */
-    public Object getJobStageDetails() {
+    public Object jobStageDetails() {
         return this.jobStageDetails;
     }
     /**
      * Name of the job stage.
      * 
     */
-    public String getStageName() {
+    public String stageName() {
         return this.stageName;
     }
     /**
      * Status of the job stage.
      * 
     */
-    public String getStageStatus() {
+    public String stageStatus() {
         return this.stageStatus;
     }
     /**
      * Time for the job stage in UTC ISO 8601 format.
      * 
     */
-    public String getStageTime() {
+    public String stageTime() {
         return this.stageTime;
     }
 

@@ -39,21 +39,21 @@ public final class PerNodeExtensionStateResponse {
      * Fully qualified resource ID for the particular Arc Extension on this node.
      * 
     */
-    public String getExtension() {
+    public String extension() {
         return this.extension;
     }
     /**
      * Name of the node in HCI Cluster.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of Arc Extension in this node.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

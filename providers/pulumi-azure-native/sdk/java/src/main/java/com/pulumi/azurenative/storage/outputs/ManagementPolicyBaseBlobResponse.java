@@ -49,28 +49,28 @@ public final class ManagementPolicyBaseBlobResponse {
      * The function to delete the blob
      * 
     */
-    public Optional<DateAfterModificationResponse> getDelete() {
+    public Optional<DateAfterModificationResponse> delete() {
         return Optional.ofNullable(this.delete);
     }
     /**
      * This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
      * 
     */
-    public Optional<Boolean> getEnableAutoTierToHotFromCool() {
+    public Optional<Boolean> enableAutoTierToHotFromCool() {
         return Optional.ofNullable(this.enableAutoTierToHotFromCool);
     }
     /**
      * The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
      * 
     */
-    public Optional<DateAfterModificationResponse> getTierToArchive() {
+    public Optional<DateAfterModificationResponse> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
     /**
      * The function to tier blobs to cool storage. Support blobs currently at Hot tier
      * 
     */
-    public Optional<DateAfterModificationResponse> getTierToCool() {
+    public Optional<DateAfterModificationResponse> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }
 

@@ -44,7 +44,7 @@ public final class NumberInRangeAdvancedFilterResponse {
      * The field/property in the event based on which you want to filter.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
@@ -52,14 +52,14 @@ public final class NumberInRangeAdvancedFilterResponse {
      * Expected value is 'NumberInRange'.
      * 
     */
-    public String getOperatorType() {
+    public String operatorType() {
         return this.operatorType;
     }
     /**
      * The set of filter values.
      * 
     */
-    public List<List<Double>> getValues() {
+    public List<List<Double>> values() {
         return this.values == null ? List.of() : this.values;
     }
 

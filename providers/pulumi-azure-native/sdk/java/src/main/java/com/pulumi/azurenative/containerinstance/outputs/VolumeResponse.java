@@ -59,35 +59,35 @@ public final class VolumeResponse {
      * The Azure File volume.
      * 
     */
-    public Optional<AzureFileVolumeResponse> getAzureFile() {
+    public Optional<AzureFileVolumeResponse> azureFile() {
         return Optional.ofNullable(this.azureFile);
     }
     /**
      * The empty directory volume.
      * 
     */
-    public Optional<Object> getEmptyDir() {
+    public Optional<Object> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
     /**
      * The git repo volume.
      * 
     */
-    public Optional<GitRepoVolumeResponse> getGitRepo() {
+    public Optional<GitRepoVolumeResponse> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
     /**
      * The name of the volume.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The secret volume.
      * 
     */
-    public Map<String,String> getSecret() {
+    public Map<String,String> secret() {
         return this.secret == null ? Map.of() : this.secret;
     }
 

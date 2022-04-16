@@ -26,7 +26,7 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
     @Import(name="errorDetail")
       private final @Nullable ErrorDetailResponse errorDetail;
 
-    public Optional<ErrorDetailResponse> getErrorDetail() {
+    public Optional<ErrorDetailResponse> errorDetail() {
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
     }
 
@@ -37,7 +37,7 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
     @Import(name="nodeName")
       private final @Nullable String nodeName;
 
-    public Optional<String> getNodeName() {
+    public Optional<String> nodeName() {
         return this.nodeName == null ? Optional.empty() : Optional.ofNullable(this.nodeName);
     }
 
@@ -49,7 +49,7 @@ public final class DistributedNodesInfoResponse extends com.pulumi.resources.Inv
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

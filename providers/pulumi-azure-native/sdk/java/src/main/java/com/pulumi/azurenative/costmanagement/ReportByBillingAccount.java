@@ -36,7 +36,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Has definition for the report.
      * 
      */
-    public Output<ReportDefinitionResponse> getDefinition() {
+    public Output<ReportDefinitionResponse> definition() {
         return this.definition;
     }
     /**
@@ -50,7 +50,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Has delivery information for the report.
      * 
      */
-    public Output<ReportDeliveryInfoResponse> getDeliveryInfo() {
+    public Output<ReportDeliveryInfoResponse> deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
@@ -64,7 +64,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return The format of the report being delivered.
      * 
      */
-    public Output</* @Nullable */ String> getFormat() {
+    public Output</* @Nullable */ String> format() {
         return this.format;
     }
     /**
@@ -78,7 +78,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -92,7 +92,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Has schedule information for the report.
      * 
      */
-    public Output</* @Nullable */ ReportScheduleResponse> getSchedule() {
+    public Output</* @Nullable */ ReportScheduleResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -106,7 +106,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Resource tags.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -120,7 +120,7 @@ public class ReportByBillingAccount extends com.pulumi.resources.CustomResource 
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

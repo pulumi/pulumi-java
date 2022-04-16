@@ -30,7 +30,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="adminPassword")
       private final @Nullable String adminPassword;
 
-    public Optional<String> getAdminPassword() {
+    public Optional<String> adminPassword() {
         return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
     }
 
@@ -41,7 +41,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="adminUsername")
       private final @Nullable String adminUsername;
 
-    public Optional<String> getAdminUsername() {
+    public Optional<String> adminUsername() {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
     }
 
@@ -52,7 +52,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowExtensionOperations")
       private final @Nullable Boolean allowExtensionOperations;
 
-    public Optional<Boolean> getAllowExtensionOperations() {
+    public Optional<Boolean> allowExtensionOperations() {
         return this.allowExtensionOperations == null ? Optional.empty() : Optional.ofNullable(this.allowExtensionOperations);
     }
 
@@ -63,7 +63,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computerName")
       private final @Nullable String computerName;
 
-    public Optional<String> getComputerName() {
+    public Optional<String> computerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
     }
 
@@ -74,7 +74,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customData")
       private final @Nullable String customData;
 
-    public Optional<String> getCustomData() {
+    public Optional<String> customData() {
         return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
     }
 
@@ -85,7 +85,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxConfiguration")
       private final @Nullable LinuxConfigurationResponse linuxConfiguration;
 
-    public Optional<LinuxConfigurationResponse> getLinuxConfiguration() {
+    public Optional<LinuxConfigurationResponse> linuxConfiguration() {
         return this.linuxConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxConfiguration);
     }
 
@@ -96,7 +96,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requireGuestProvisionSignal")
       private final @Nullable Boolean requireGuestProvisionSignal;
 
-    public Optional<Boolean> getRequireGuestProvisionSignal() {
+    public Optional<Boolean> requireGuestProvisionSignal() {
         return this.requireGuestProvisionSignal == null ? Optional.empty() : Optional.ofNullable(this.requireGuestProvisionSignal);
     }
 
@@ -107,7 +107,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secrets")
       private final @Nullable List<VaultSecretGroupResponse> secrets;
 
-    public List<VaultSecretGroupResponse> getSecrets() {
+    public List<VaultSecretGroupResponse> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
 
@@ -118,7 +118,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="windowsConfiguration")
       private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    public Optional<WindowsConfigurationResponse> getWindowsConfiguration() {
+    public Optional<WindowsConfigurationResponse> windowsConfiguration() {
         return this.windowsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsConfiguration);
     }
 

@@ -19,14 +19,14 @@ public final class NotificationEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="notificationDestination")
       private final @Nullable Output<String> notificationDestination;
 
-    public Output<String> getNotificationDestination() {
+    public Output<String> notificationDestination() {
         return this.notificationDestination == null ? Codegen.empty() : this.notificationDestination;
     }
 

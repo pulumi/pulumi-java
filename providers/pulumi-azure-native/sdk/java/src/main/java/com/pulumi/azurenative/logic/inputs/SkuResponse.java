@@ -26,7 +26,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="plan")
       private final @Nullable ResourceReferenceResponse plan;
 
-    public Optional<ResourceReferenceResponse> getPlan() {
+    public Optional<ResourceReferenceResponse> plan() {
         return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
     }
 

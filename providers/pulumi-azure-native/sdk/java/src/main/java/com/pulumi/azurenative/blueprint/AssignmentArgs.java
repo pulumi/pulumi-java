@@ -27,7 +27,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assignmentName")
       private final @Nullable Output<String> assignmentName;
 
-    public Output<String> getAssignmentName() {
+    public Output<String> assignmentName() {
         return this.assignmentName == null ? Codegen.empty() : this.assignmentName;
     }
 
@@ -38,7 +38,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blueprintId")
       private final @Nullable Output<String> blueprintId;
 
-    public Output<String> getBlueprintId() {
+    public Output<String> blueprintId() {
         return this.blueprintId == null ? Codegen.empty() : this.blueprintId;
     }
 
@@ -49,7 +49,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -71,7 +71,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity", required=true)
       private final Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity;
     }
 
@@ -82,7 +82,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locks")
       private final @Nullable Output<AssignmentLockSettingsArgs> locks;
 
-    public Output<AssignmentLockSettingsArgs> getLocks() {
+    public Output<AssignmentLockSettingsArgs> locks() {
         return this.locks == null ? Codegen.empty() : this.locks;
     }
 
@@ -104,7 +104,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
 
-    public Output<Map<String,ParameterValueArgs>> getParameters() {
+    public Output<Map<String,ParameterValueArgs>> parameters() {
         return this.parameters;
     }
 
@@ -115,7 +115,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroups", required=true)
       private final Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
-    public Output<Map<String,ResourceGroupValueArgs>> getResourceGroups() {
+    public Output<Map<String,ResourceGroupValueArgs>> resourceGroups() {
         return this.resourceGroups;
     }
 
@@ -126,7 +126,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
-    public Output<String> getResourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
@@ -137,7 +137,7 @@ public final class AssignmentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

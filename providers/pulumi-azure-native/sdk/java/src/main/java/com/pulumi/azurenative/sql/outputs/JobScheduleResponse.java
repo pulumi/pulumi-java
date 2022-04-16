@@ -56,35 +56,35 @@ public final class JobScheduleResponse {
      * Whether or not the schedule is enabled.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Schedule end time.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
      * 
     */
-    public Optional<String> getInterval() {
+    public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Schedule start time.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Schedule interval type
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -32,14 +32,14 @@ public final class SkuResponse {
      * The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The SKU tier. This is based on the SKU name.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

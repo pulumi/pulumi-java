@@ -24,7 +24,7 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sku", required=true)
       private final String sku;
 
-    public String getSku() {
+    public String sku() {
         return this.sku;
     }
 

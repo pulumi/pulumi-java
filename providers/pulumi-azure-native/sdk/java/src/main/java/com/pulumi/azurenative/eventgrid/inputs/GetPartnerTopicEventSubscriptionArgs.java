@@ -19,7 +19,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends com.pulumi.resou
     @Import(name="eventSubscriptionName", required=true)
       private final String eventSubscriptionName;
 
-    public String getEventSubscriptionName() {
+    public String eventSubscriptionName() {
         return this.eventSubscriptionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends com.pulumi.resou
     @Import(name="partnerTopicName", required=true)
       private final String partnerTopicName;
 
-    public String getPartnerTopicName() {
+    public String partnerTopicName() {
         return this.partnerTopicName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

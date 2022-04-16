@@ -107,84 +107,84 @@ public final class GetLocalNetworkGatewayResult {
      * Local network gateway's BGP speaker settings.
      * 
     */
-    public Optional<BgpSettingsResponse> getBgpSettings() {
+    public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * FQDN of local network gateway.
      * 
     */
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * IP address of local network gateway.
      * 
     */
-    public Optional<String> getGatewayIpAddress() {
+    public Optional<String> gatewayIpAddress() {
         return Optional.ofNullable(this.gatewayIpAddress);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Local network site address space.
      * 
     */
-    public Optional<AddressSpaceResponse> getLocalNetworkAddressSpace() {
+    public Optional<AddressSpaceResponse> localNetworkAddressSpace() {
         return Optional.ofNullable(this.localNetworkAddressSpace);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the local network gateway resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the local network gateway resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

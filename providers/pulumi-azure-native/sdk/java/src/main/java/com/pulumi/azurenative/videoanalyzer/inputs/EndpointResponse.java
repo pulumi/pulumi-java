@@ -25,7 +25,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointUrl")
       private final @Nullable String endpointUrl;
 
-    public Optional<String> getEndpointUrl() {
+    public Optional<String> endpointUrl() {
         return this.endpointUrl == null ? Optional.empty() : Optional.ofNullable(this.endpointUrl);
     }
 
@@ -36,7 +36,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

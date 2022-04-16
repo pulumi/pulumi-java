@@ -20,84 +20,84 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accessRecheckOfflineTimeout")
       private final @Nullable Output<String> accessRecheckOfflineTimeout;
 
-    public Output<String> getAccessRecheckOfflineTimeout() {
+    public Output<String> accessRecheckOfflineTimeout() {
         return this.accessRecheckOfflineTimeout == null ? Codegen.empty() : this.accessRecheckOfflineTimeout;
     }
 
     @Import(name="accessRecheckOnlineTimeout")
       private final @Nullable Output<String> accessRecheckOnlineTimeout;
 
-    public Output<String> getAccessRecheckOnlineTimeout() {
+    public Output<String> accessRecheckOnlineTimeout() {
         return this.accessRecheckOnlineTimeout == null ? Codegen.empty() : this.accessRecheckOnlineTimeout;
     }
 
     @Import(name="appSharingFromLevel")
       private final @Nullable Output<String> appSharingFromLevel;
 
-    public Output<String> getAppSharingFromLevel() {
+    public Output<String> appSharingFromLevel() {
         return this.appSharingFromLevel == null ? Codegen.empty() : this.appSharingFromLevel;
     }
 
     @Import(name="appSharingToLevel")
       private final @Nullable Output<String> appSharingToLevel;
 
-    public Output<String> getAppSharingToLevel() {
+    public Output<String> appSharingToLevel() {
         return this.appSharingToLevel == null ? Codegen.empty() : this.appSharingToLevel;
     }
 
     @Import(name="authentication")
       private final @Nullable Output<String> authentication;
 
-    public Output<String> getAuthentication() {
+    public Output<String> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     @Import(name="clipboardSharingLevel")
       private final @Nullable Output<String> clipboardSharingLevel;
 
-    public Output<String> getClipboardSharingLevel() {
+    public Output<String> clipboardSharingLevel() {
         return this.clipboardSharingLevel == null ? Codegen.empty() : this.clipboardSharingLevel;
     }
 
     @Import(name="dataBackup")
       private final @Nullable Output<String> dataBackup;
 
-    public Output<String> getDataBackup() {
+    public Output<String> dataBackup() {
         return this.dataBackup == null ? Codegen.empty() : this.dataBackup;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="deviceCompliance")
       private final @Nullable Output<String> deviceCompliance;
 
-    public Output<String> getDeviceCompliance() {
+    public Output<String> deviceCompliance() {
         return this.deviceCompliance == null ? Codegen.empty() : this.deviceCompliance;
     }
 
     @Import(name="fileEncryptionLevel")
       private final @Nullable Output<String> fileEncryptionLevel;
 
-    public Output<String> getFileEncryptionLevel() {
+    public Output<String> fileEncryptionLevel() {
         return this.fileEncryptionLevel == null ? Codegen.empty() : this.fileEncryptionLevel;
     }
 
     @Import(name="fileSharingSaveAs")
       private final @Nullable Output<String> fileSharingSaveAs;
 
-    public Output<String> getFileSharingSaveAs() {
+    public Output<String> fileSharingSaveAs() {
         return this.fileSharingSaveAs == null ? Codegen.empty() : this.fileSharingSaveAs;
     }
 
     @Import(name="friendlyName", required=true)
       private final Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
 
@@ -108,7 +108,7 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -119,35 +119,35 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="managedBrowser")
       private final @Nullable Output<String> managedBrowser;
 
-    public Output<String> getManagedBrowser() {
+    public Output<String> managedBrowser() {
         return this.managedBrowser == null ? Codegen.empty() : this.managedBrowser;
     }
 
     @Import(name="offlineWipeTimeout")
       private final @Nullable Output<String> offlineWipeTimeout;
 
-    public Output<String> getOfflineWipeTimeout() {
+    public Output<String> offlineWipeTimeout() {
         return this.offlineWipeTimeout == null ? Codegen.empty() : this.offlineWipeTimeout;
     }
 
     @Import(name="pin")
       private final @Nullable Output<String> pin;
 
-    public Output<String> getPin() {
+    public Output<String> pin() {
         return this.pin == null ? Codegen.empty() : this.pin;
     }
 
     @Import(name="pinNumRetry")
       private final @Nullable Output<Integer> pinNumRetry;
 
-    public Output<Integer> getPinNumRetry() {
+    public Output<Integer> pinNumRetry() {
         return this.pinNumRetry == null ? Codegen.empty() : this.pinNumRetry;
     }
 
@@ -158,7 +158,7 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -169,14 +169,14 @@ public final class IoMAMPolicyByNameArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="touchId")
       private final @Nullable Output<String> touchId;
 
-    public Output<String> getTouchId() {
+    public Output<String> touchId() {
         return this.touchId == null ? Codegen.empty() : this.touchId;
     }
 

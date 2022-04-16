@@ -25,7 +25,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
     @Import(name="interactionPropertyName", required=true)
       private final Output<String> interactionPropertyName;
 
-    public Output<String> getInteractionPropertyName() {
+    public Output<String> interactionPropertyName() {
         return this.interactionPropertyName;
     }
 
@@ -36,7 +36,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
     @Import(name="profilePropertyName", required=true)
       private final Output<String> profilePropertyName;
 
-    public Output<String> getProfilePropertyName() {
+    public Output<String> profilePropertyName() {
         return this.profilePropertyName;
     }
 

@@ -83,63 +83,63 @@ public final class AzureVmDiskDetailsResponse {
      * The DiskEncryptionSet ARM ID.
      * 
     */
-    public Optional<String> getDiskEncryptionSetId() {
+    public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
      * The disk resource id.
      * 
     */
-    public Optional<String> getDiskId() {
+    public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
      * Ordinal\LunId of the disk for the Azure VM.
      * 
     */
-    public Optional<String> getLunId() {
+    public Optional<String> lunId() {
         return Optional.ofNullable(this.lunId);
     }
     /**
      * Max side in MB.
      * 
     */
-    public Optional<String> getMaxSizeMB() {
+    public Optional<String> maxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
     /**
      * Blob uri of the Azure disk.
      * 
     */
-    public Optional<String> getTargetDiskLocation() {
+    public Optional<String> targetDiskLocation() {
         return Optional.ofNullable(this.targetDiskLocation);
     }
     /**
      * The target Azure disk name.
      * 
     */
-    public Optional<String> getTargetDiskName() {
+    public Optional<String> targetDiskName() {
         return Optional.ofNullable(this.targetDiskName);
     }
     /**
      * The VHD id.
      * 
     */
-    public Optional<String> getVhdId() {
+    public Optional<String> vhdId() {
         return Optional.ofNullable(this.vhdId);
     }
     /**
      * VHD name.
      * 
     */
-    public Optional<String> getVhdName() {
+    public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
     /**
      * VHD type.
      * 
     */
-    public Optional<String> getVhdType() {
+    public Optional<String> vhdType() {
         return Optional.ofNullable(this.vhdType);
     }
 

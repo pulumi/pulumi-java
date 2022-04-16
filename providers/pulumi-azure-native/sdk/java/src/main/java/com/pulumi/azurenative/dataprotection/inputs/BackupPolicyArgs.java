@@ -29,7 +29,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasourceTypes", required=true)
       private final Output<List<String>> datasourceTypes;
 
-    public Output<List<String>> getDatasourceTypes() {
+    public Output<List<String>> datasourceTypes() {
         return this.datasourceTypes;
     }
 
@@ -40,7 +40,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -51,7 +51,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyRules", required=true)
       private final Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules;
 
-    public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> getPolicyRules() {
+    public Output<List<Either<AzureBackupRuleArgs,AzureRetentionRuleArgs>>> policyRules() {
         return this.policyRules;
     }
 

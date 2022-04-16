@@ -25,7 +25,7 @@ public final class NodeInputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeName", required=true)
       private final Output<String> nodeName;
 
-    public Output<String> getNodeName() {
+    public Output<String> nodeName() {
         return this.nodeName;
     }
 

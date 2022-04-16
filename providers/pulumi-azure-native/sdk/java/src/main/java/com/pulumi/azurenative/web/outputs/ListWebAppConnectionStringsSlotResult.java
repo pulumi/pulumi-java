@@ -57,35 +57,35 @@ public final class ListWebAppConnectionStringsSlotResult {
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Connection strings.
      * 
     */
-    public Map<String,ConnStringValueTypePairResponse> getProperties() {
+    public Map<String,ConnStringValueTypePairResponse> properties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

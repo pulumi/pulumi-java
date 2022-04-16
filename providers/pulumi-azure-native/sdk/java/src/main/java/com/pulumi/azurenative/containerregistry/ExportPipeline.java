@@ -45,7 +45,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The identity of the export pipeline.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -59,7 +59,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The location of the export pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The list of all options configured for the pipeline.
      * 
      */
-    public Output</* @Nullable */ List<String>> getOptions() {
+    public Output</* @Nullable */ List<String>> options() {
         return this.options;
     }
     /**
@@ -101,7 +101,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the pipeline at the time the operation was called.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +129,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The target properties of the export pipeline.
      * 
      */
-    public Output<ExportPipelineTargetPropertiesResponse> getTarget() {
+    public Output<ExportPipelineTargetPropertiesResponse> target() {
         return this.target;
     }
     /**
@@ -143,7 +143,7 @@ public class ExportPipeline extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

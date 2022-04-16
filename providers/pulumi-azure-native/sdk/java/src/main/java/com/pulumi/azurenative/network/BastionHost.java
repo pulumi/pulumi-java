@@ -44,7 +44,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return FQDN for the endpoint on which bastion host is accessible.
      * 
      */
-    public Output</* @Nullable */ String> getDnsName() {
+    public Output</* @Nullable */ String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -58,7 +58,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +72,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return IP configuration of the Bastion Host resource.
      * 
      */
-    public Output</* @Nullable */ List<BastionHostIPConfigurationResponse>> getIpConfigurations() {
+    public Output</* @Nullable */ List<BastionHostIPConfigurationResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -86,7 +86,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +100,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the bastion host resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +128,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

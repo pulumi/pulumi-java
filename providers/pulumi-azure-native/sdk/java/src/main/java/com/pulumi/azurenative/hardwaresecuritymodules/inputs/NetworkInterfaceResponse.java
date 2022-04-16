@@ -25,7 +25,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 

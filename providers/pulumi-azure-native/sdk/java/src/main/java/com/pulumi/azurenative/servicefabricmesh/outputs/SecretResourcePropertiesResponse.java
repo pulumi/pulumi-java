@@ -63,14 +63,14 @@ public final class SecretResourcePropertiesResponse {
      * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * User readable description of the secret.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -78,28 +78,28 @@ public final class SecretResourcePropertiesResponse {
      * Expected value is 'SecretResourceProperties'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * State of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the resource.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the secret.
      * 
     */
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
 

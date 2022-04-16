@@ -91,70 +91,70 @@ public final class GetNotebookProxyResult {
      * The friendly string identifier of the creator of the NotebookProxy resource.
      * 
     */
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The public DNS name
      * 
     */
-    public Optional<String> getPublicDns() {
+    public Optional<String> publicDns() {
         return Optional.ofNullable(this.publicDns);
     }
     /**
      * Allow public network access on a V-Net locked notebook resource
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The region of the NotebookProxy resource.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The unique identifier (a GUID) generated for every resource.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * The alternate application ID used for auth token request in the data plane
      * 
     */
-    public Optional<String> getSecondaryAppId() {
+    public Optional<String> secondaryAppId() {
         return Optional.ofNullable(this.secondaryAppId);
     }
     /**
      * System data for notebook resource
      * 
     */
-    public Optional<NotebookResourceSystemDataResponse> getSystemData() {
+    public Optional<NotebookResourceSystemDataResponse> systemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
      * The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

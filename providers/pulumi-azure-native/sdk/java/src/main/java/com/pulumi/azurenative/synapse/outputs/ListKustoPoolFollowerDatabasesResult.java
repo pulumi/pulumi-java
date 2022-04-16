@@ -26,7 +26,7 @@ public final class ListKustoPoolFollowerDatabasesResult {
      * The list of follower database result.
      * 
     */
-    public List<FollowerDatabaseDefinitionResponse> getValue() {
+    public List<FollowerDatabaseDefinitionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

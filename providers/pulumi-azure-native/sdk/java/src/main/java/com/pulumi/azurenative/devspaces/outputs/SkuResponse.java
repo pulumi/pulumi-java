@@ -34,14 +34,14 @@ public final class SkuResponse {
      * The name of the SKU for Azure Dev Spaces Controller.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The tier of the SKU for Azure Dev Spaces Controller.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

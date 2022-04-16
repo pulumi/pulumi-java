@@ -28,7 +28,7 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
     @Import(name="adminPublicKey")
       private final @Nullable Output<String> adminPublicKey;
 
-    public Output<String> getAdminPublicKey() {
+    public Output<String> adminPublicKey() {
         return this.adminPublicKey == null ? Codegen.empty() : this.adminPublicKey;
     }
 
@@ -39,7 +39,7 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
     @Import(name="sshPublicAccess")
       private final @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
-    public Output<Either<String,SshPublicAccess>> getSshPublicAccess() {
+    public Output<Either<String,SshPublicAccess>> sshPublicAccess() {
         return this.sshPublicAccess == null ? Codegen.empty() : this.sshPublicAccess;
     }
 

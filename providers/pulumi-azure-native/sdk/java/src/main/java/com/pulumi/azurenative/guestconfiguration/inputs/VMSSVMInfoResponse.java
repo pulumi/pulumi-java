@@ -23,7 +23,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
 
-    public String getComplianceStatus() {
+    public String complianceStatus() {
         return this.complianceStatus;
     }
 
@@ -34,7 +34,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastComplianceChecked", required=true)
       private final String lastComplianceChecked;
 
-    public String getLastComplianceChecked() {
+    public String lastComplianceChecked() {
         return this.lastComplianceChecked;
     }
 
@@ -45,7 +45,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="latestReportId", required=true)
       private final String latestReportId;
 
-    public String getLatestReportId() {
+    public String latestReportId() {
         return this.latestReportId;
     }
 
@@ -56,7 +56,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmId", required=true)
       private final String vmId;
 
-    public String getVmId() {
+    public String vmId() {
         return this.vmId;
     }
 
@@ -67,7 +67,7 @@ public final class VMSSVMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId", required=true)
       private final String vmResourceId;
 
-    public String getVmResourceId() {
+    public String vmResourceId() {
         return this.vmResourceId;
     }
 

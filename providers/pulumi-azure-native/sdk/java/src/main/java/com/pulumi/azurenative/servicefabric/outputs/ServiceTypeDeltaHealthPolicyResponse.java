@@ -30,7 +30,7 @@ public final class ServiceTypeDeltaHealthPolicyResponse {
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
      * 
     */
-    public Optional<Integer> getMaxPercentDeltaUnhealthyServices() {
+    public Optional<Integer> maxPercentDeltaUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);
     }
 

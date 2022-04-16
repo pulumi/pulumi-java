@@ -42,21 +42,21 @@ public final class ScheduleRecurrenceResponse {
      * The recurrence type.
      * 
     */
-    public String getRecurrenceType() {
+    public String recurrenceType() {
         return this.recurrenceType;
     }
     /**
      * The recurrence value.
      * 
     */
-    public Integer getRecurrenceValue() {
+    public Integer recurrenceValue() {
         return this.recurrenceValue;
     }
     /**
      * The week days list. Applicable only for schedules of recurrence type 'weekly'.
      * 
     */
-    public List<String> getWeeklyDaysList() {
+    public List<String> weeklyDaysList() {
         return this.weeklyDaysList == null ? List.of() : this.weeklyDaysList;
     }
 

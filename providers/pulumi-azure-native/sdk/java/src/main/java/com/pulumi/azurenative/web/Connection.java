@@ -44,7 +44,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Resource ETag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,13 +72,13 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="properties", type=ApiConnectionDefinitionResponseProperties.class, parameters={})
     private Output<ApiConnectionDefinitionResponseProperties> properties;
 
-    public Output<ApiConnectionDefinitionResponseProperties> getProperties() {
+    public Output<ApiConnectionDefinitionResponseProperties> properties() {
         return this.properties;
     }
     /**
@@ -92,7 +92,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -106,7 +106,7 @@ public class Connection extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

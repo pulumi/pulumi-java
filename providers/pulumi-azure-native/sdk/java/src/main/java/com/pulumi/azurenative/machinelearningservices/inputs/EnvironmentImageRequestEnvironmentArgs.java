@@ -31,7 +31,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="docker")
       private final @Nullable Output<ModelEnvironmentDefinitionDockerArgs> docker;
 
-    public Output<ModelEnvironmentDefinitionDockerArgs> getDocker() {
+    public Output<ModelEnvironmentDefinitionDockerArgs> docker() {
         return this.docker == null ? Codegen.empty() : this.docker;
     }
 
@@ -42,7 +42,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -53,7 +53,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="inferencingStackVersion")
       private final @Nullable Output<String> inferencingStackVersion;
 
-    public Output<String> getInferencingStackVersion() {
+    public Output<String> inferencingStackVersion() {
         return this.inferencingStackVersion == null ? Codegen.empty() : this.inferencingStackVersion;
     }
 
@@ -64,7 +64,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -75,7 +75,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="python")
       private final @Nullable Output<ModelEnvironmentDefinitionPythonArgs> python;
 
-    public Output<ModelEnvironmentDefinitionPythonArgs> getPython() {
+    public Output<ModelEnvironmentDefinitionPythonArgs> python() {
         return this.python == null ? Codegen.empty() : this.python;
     }
 
@@ -86,7 +86,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="r")
       private final @Nullable Output<ModelEnvironmentDefinitionRArgs> r;
 
-    public Output<ModelEnvironmentDefinitionRArgs> getR() {
+    public Output<ModelEnvironmentDefinitionRArgs> r() {
         return this.r == null ? Codegen.empty() : this.r;
     }
 
@@ -97,7 +97,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="spark")
       private final @Nullable Output<ModelEnvironmentDefinitionSparkArgs> spark;
 
-    public Output<ModelEnvironmentDefinitionSparkArgs> getSpark() {
+    public Output<ModelEnvironmentDefinitionSparkArgs> spark() {
         return this.spark == null ? Codegen.empty() : this.spark;
     }
 
@@ -108,7 +108,7 @@ public final class EnvironmentImageRequestEnvironmentArgs extends com.pulumi.res
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

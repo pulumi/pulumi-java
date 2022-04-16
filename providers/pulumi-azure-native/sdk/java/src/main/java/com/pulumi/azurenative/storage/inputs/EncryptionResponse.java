@@ -29,7 +29,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionIdentity")
       private final @Nullable EncryptionIdentityResponse encryptionIdentity;
 
-    public Optional<EncryptionIdentityResponse> getEncryptionIdentity() {
+    public Optional<EncryptionIdentityResponse> encryptionIdentity() {
         return this.encryptionIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionIdentity);
     }
 
@@ -40,7 +40,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keySource", required=true)
       private final String keySource;
 
-    public String getKeySource() {
+    public String keySource() {
         return this.keySource;
     }
 
@@ -51,7 +51,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
     }
 
@@ -62,7 +62,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Boolean requireInfrastructureEncryption;
 
-    public Optional<Boolean> getRequireInfrastructureEncryption() {
+    public Optional<Boolean> requireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.requireInfrastructureEncryption);
     }
 
@@ -73,7 +73,7 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="services")
       private final @Nullable EncryptionServicesResponse services;
 
-    public Optional<EncryptionServicesResponse> getServices() {
+    public Optional<EncryptionServicesResponse> services() {
         return this.services == null ? Optional.empty() : Optional.ofNullable(this.services);
     }
 

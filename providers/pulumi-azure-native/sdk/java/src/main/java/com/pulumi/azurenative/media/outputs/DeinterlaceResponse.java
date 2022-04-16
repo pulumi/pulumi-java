@@ -34,14 +34,14 @@ public final class DeinterlaceResponse {
      * The deinterlacing mode. Defaults to AutoPixelAdaptive.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The field parity for de-interlacing, defaults to Auto.
      * 
     */
-    public Optional<String> getParity() {
+    public Optional<String> parity() {
         return Optional.ofNullable(this.parity);
     }
 

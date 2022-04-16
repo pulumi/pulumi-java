@@ -24,7 +24,7 @@ public final class TransportPreferencesResponse {
      * Indicates Shipment Logistics type that the customer preferred.
      * 
     */
-    public String getPreferredShipmentType() {
+    public String preferredShipmentType() {
         return this.preferredShipmentType;
     }
 

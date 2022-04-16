@@ -27,7 +27,7 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
     @Import(name="osDiskSizeGB")
       private final @Nullable Integer osDiskSizeGB;
 
-    public Optional<Integer> getOsDiskSizeGB() {
+    public Optional<Integer> osDiskSizeGB() {
         return this.osDiskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.osDiskSizeGB);
     }
 
@@ -38,7 +38,7 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
     @Import(name="vmSize")
       private final @Nullable String vmSize;
 
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
     }
 
@@ -49,7 +49,7 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
     @Import(name="vnetConfig")
       private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
-    public Optional<VirtualNetworkConfigResponse> getVnetConfig() {
+    public Optional<VirtualNetworkConfigResponse> vnetConfig() {
         return this.vnetConfig == null ? Optional.empty() : Optional.ofNullable(this.vnetConfig);
     }
 

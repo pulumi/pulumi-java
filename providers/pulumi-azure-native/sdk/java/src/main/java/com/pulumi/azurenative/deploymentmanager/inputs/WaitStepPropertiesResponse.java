@@ -24,7 +24,7 @@ public final class WaitStepPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="attributes", required=true)
       private final WaitStepAttributesResponse attributes;
 
-    public WaitStepAttributesResponse getAttributes() {
+    public WaitStepAttributesResponse attributes() {
         return this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class WaitStepPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="stepType", required=true)
       private final String stepType;
 
-    public String getStepType() {
+    public String stepType() {
         return this.stepType;
     }
 

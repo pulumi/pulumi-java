@@ -18,7 +18,7 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
         this.resourceCreationBegin = resourceCreationBegin;
     }
 
-    public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> getResourceCreationBegin() {
+    public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> resourceCreationBegin() {
         return Optional.ofNullable(this.resourceCreationBegin);
     }
 

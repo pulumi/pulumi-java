@@ -50,28 +50,28 @@ public final class UserSourceInfoResponse {
      * the relative path to the target module/project.
      * 
     */
-    public Optional<String> getArtifactSelector() {
+    public Optional<String> artifactSelector() {
         return Optional.ofNullable(this.artifactSelector);
     }
     /**
      * Relative path of the storage which stores the source
      * 
     */
-    public Optional<String> getRelativePath() {
+    public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * Type of the source uploaded
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Version of the source
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -46,7 +46,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
      * 
      */
-    public Output</* @Nullable */ String> getAccessTier() {
+    public Output</* @Nullable */ String> accessTier() {
         return this.accessTier;
     }
     /**
@@ -60,7 +60,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Indicates the last modification time for share access tier.
      * 
      */
-    public Output<String> getAccessTierChangeTime() {
+    public Output<String> accessTierChangeTime() {
         return this.accessTierChangeTime;
     }
     /**
@@ -74,7 +74,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Indicates if there is a pending transition for access tier.
      * 
      */
-    public Output<String> getAccessTierStatus() {
+    public Output<String> accessTierStatus() {
         return this.accessTierStatus;
     }
     /**
@@ -88,7 +88,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the share was deleted.
      * 
      */
-    public Output<Boolean> getDeleted() {
+    public Output<Boolean> deleted() {
         return this.deleted;
     }
     /**
@@ -102,7 +102,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The deleted time if the share was deleted.
      * 
      */
-    public Output<String> getDeletedTime() {
+    public Output<String> deletedTime() {
         return this.deletedTime;
     }
     /**
@@ -116,7 +116,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
      * 
      */
-    public Output</* @Nullable */ String> getEnabledProtocols() {
+    public Output</* @Nullable */ String> enabledProtocols() {
         return this.enabledProtocols;
     }
     /**
@@ -130,7 +130,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Resource Etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -144,7 +144,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Returns the date and time the share was last modified.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -158,7 +158,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return A name-value pair to associate with the share as metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -172,7 +172,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -186,7 +186,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Remaining retention days for share that was soft deleted.
      * 
      */
-    public Output<Integer> getRemainingRetentionDays() {
+    public Output<Integer> remainingRetentionDays() {
         return this.remainingRetentionDays;
     }
     /**
@@ -200,7 +200,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The property is for NFS share only. The default is NoRootSquash.
      * 
      */
-    public Output</* @Nullable */ String> getRootSquash() {
+    public Output</* @Nullable */ String> rootSquash() {
         return this.rootSquash;
     }
     /**
@@ -214,7 +214,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
      * 
      */
-    public Output</* @Nullable */ Integer> getShareQuota() {
+    public Output</* @Nullable */ Integer> shareQuota() {
         return this.shareQuota;
     }
     /**
@@ -228,7 +228,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
      * 
      */
-    public Output<Double> getShareUsageBytes() {
+    public Output<Double> shareUsageBytes() {
         return this.shareUsageBytes;
     }
     /**
@@ -242,7 +242,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
      * 
      */
-    public Output<String> getSnapshotTime() {
+    public Output<String> snapshotTime() {
         return this.snapshotTime;
     }
     /**
@@ -256,7 +256,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -270,7 +270,7 @@ public class FileShare extends com.pulumi.resources.CustomResource {
      * @return The version of the share.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

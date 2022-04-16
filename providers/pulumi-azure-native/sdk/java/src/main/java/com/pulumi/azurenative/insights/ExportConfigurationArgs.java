@@ -22,7 +22,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationAccountId")
       private final @Nullable Output<String> destinationAccountId;
 
-    public Output<String> getDestinationAccountId() {
+    public Output<String> destinationAccountId() {
         return this.destinationAccountId == null ? Codegen.empty() : this.destinationAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationAddress")
       private final @Nullable Output<String> destinationAddress;
 
-    public Output<String> getDestinationAddress() {
+    public Output<String> destinationAddress() {
         return this.destinationAddress == null ? Codegen.empty() : this.destinationAddress;
     }
 
@@ -44,7 +44,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationStorageLocationId")
       private final @Nullable Output<String> destinationStorageLocationId;
 
-    public Output<String> getDestinationStorageLocationId() {
+    public Output<String> destinationStorageLocationId() {
         return this.destinationStorageLocationId == null ? Codegen.empty() : this.destinationStorageLocationId;
     }
 
@@ -55,7 +55,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationStorageSubscriptionId")
       private final @Nullable Output<String> destinationStorageSubscriptionId;
 
-    public Output<String> getDestinationStorageSubscriptionId() {
+    public Output<String> destinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId == null ? Codegen.empty() : this.destinationStorageSubscriptionId;
     }
 
@@ -66,7 +66,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
+    public Output<String> destinationType() {
         return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
@@ -77,7 +77,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="exportId")
       private final @Nullable Output<String> exportId;
 
-    public Output<String> getExportId() {
+    public Output<String> exportId() {
         return this.exportId == null ? Codegen.empty() : this.exportId;
     }
 
@@ -88,7 +88,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="isEnabled")
       private final @Nullable Output<String> isEnabled;
 
-    public Output<String> getIsEnabled() {
+    public Output<String> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -99,7 +99,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="notificationQueueEnabled")
       private final @Nullable Output<String> notificationQueueEnabled;
 
-    public Output<String> getNotificationQueueEnabled() {
+    public Output<String> notificationQueueEnabled() {
         return this.notificationQueueEnabled == null ? Codegen.empty() : this.notificationQueueEnabled;
     }
 
@@ -110,7 +110,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="notificationQueueUri")
       private final @Nullable Output<String> notificationQueueUri;
 
-    public Output<String> getNotificationQueueUri() {
+    public Output<String> notificationQueueUri() {
         return this.notificationQueueUri == null ? Codegen.empty() : this.notificationQueueUri;
     }
 
@@ -121,7 +121,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="recordTypes")
       private final @Nullable Output<String> recordTypes;
 
-    public Output<String> getRecordTypes() {
+    public Output<String> recordTypes() {
         return this.recordTypes == null ? Codegen.empty() : this.recordTypes;
     }
 
@@ -132,7 +132,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -143,7 +143,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

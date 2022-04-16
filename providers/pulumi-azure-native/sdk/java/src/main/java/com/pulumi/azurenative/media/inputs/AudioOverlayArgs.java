@@ -27,7 +27,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="audioGainLevel")
       private final @Nullable Output<Double> audioGainLevel;
 
-    public Output<Double> getAudioGainLevel() {
+    public Output<Double> audioGainLevel() {
         return this.audioGainLevel == null ? Codegen.empty() : this.audioGainLevel;
     }
 
@@ -38,7 +38,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -49,7 +49,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fadeInDuration")
       private final @Nullable Output<String> fadeInDuration;
 
-    public Output<String> getFadeInDuration() {
+    public Output<String> fadeInDuration() {
         return this.fadeInDuration == null ? Codegen.empty() : this.fadeInDuration;
     }
 
@@ -60,7 +60,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fadeOutDuration")
       private final @Nullable Output<String> fadeOutDuration;
 
-    public Output<String> getFadeOutDuration() {
+    public Output<String> fadeOutDuration() {
         return this.fadeOutDuration == null ? Codegen.empty() : this.fadeOutDuration;
     }
 
@@ -71,7 +71,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputLabel", required=true)
       private final Output<String> inputLabel;
 
-    public Output<String> getInputLabel() {
+    public Output<String> inputLabel() {
         return this.inputLabel;
     }
 
@@ -83,7 +83,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -94,7 +94,7 @@ public final class AudioOverlayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

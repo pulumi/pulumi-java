@@ -32,7 +32,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -43,7 +43,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computePolicies")
       private final @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
-    public Output<List<CreateComputePolicyWithAccountParametersArgs>> getComputePolicies() {
+    public Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies() {
         return this.computePolicies == null ? Codegen.empty() : this.computePolicies;
     }
 
@@ -54,7 +54,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataLakeStoreAccounts", required=true)
       private final Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
 
-    public Output<List<AddDataLakeStoreWithAccountParametersArgs>> getDataLakeStoreAccounts() {
+    public Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
 
@@ -65,7 +65,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultDataLakeStoreAccount", required=true)
       private final Output<String> defaultDataLakeStoreAccount;
 
-    public Output<String> getDefaultDataLakeStoreAccount() {
+    public Output<String> defaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
 
@@ -76,7 +76,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
-    public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
+    public Output<FirewallAllowAzureIpsState> firewallAllowAzureIps() {
         return this.firewallAllowAzureIps == null ? Codegen.empty() : this.firewallAllowAzureIps;
     }
 
@@ -87,7 +87,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
-    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
+    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules() {
         return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
@@ -98,7 +98,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
 
-    public Output<FirewallState> getFirewallState() {
+    public Output<FirewallState> firewallState() {
         return this.firewallState == null ? Codegen.empty() : this.firewallState;
     }
 
@@ -109,7 +109,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -120,7 +120,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDegreeOfParallelism")
       private final @Nullable Output<Integer> maxDegreeOfParallelism;
 
-    public Output<Integer> getMaxDegreeOfParallelism() {
+    public Output<Integer> maxDegreeOfParallelism() {
         return this.maxDegreeOfParallelism == null ? Codegen.empty() : this.maxDegreeOfParallelism;
     }
 
@@ -131,7 +131,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Output<Integer> getMaxDegreeOfParallelismPerJob() {
+    public Output<Integer> maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
@@ -142,7 +142,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxJobCount")
       private final @Nullable Output<Integer> maxJobCount;
 
-    public Output<Integer> getMaxJobCount() {
+    public Output<Integer> maxJobCount() {
         return this.maxJobCount == null ? Codegen.empty() : this.maxJobCount;
     }
 
@@ -153,7 +153,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
 
-    public Output<Integer> getMinPriorityPerJob() {
+    public Output<Integer> minPriorityPerJob() {
         return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
     }
 
@@ -164,7 +164,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
 
-    public Output<TierType> getNewTier() {
+    public Output<TierType> newTier() {
         return this.newTier == null ? Codegen.empty() : this.newTier;
     }
 
@@ -175,7 +175,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStoreRetention")
       private final @Nullable Output<Integer> queryStoreRetention;
 
-    public Output<Integer> getQueryStoreRetention() {
+    public Output<Integer> queryStoreRetention() {
         return this.queryStoreRetention == null ? Codegen.empty() : this.queryStoreRetention;
     }
 
@@ -186,7 +186,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -197,7 +197,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccounts")
       private final @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
-    public Output<List<AddStorageAccountWithAccountParametersArgs>> getStorageAccounts() {
+    public Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts() {
         return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
     }
 
@@ -208,7 +208,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

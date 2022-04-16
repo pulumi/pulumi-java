@@ -24,7 +24,7 @@ public final class ServiceRegistryResourceRequestsResponse extends com.pulumi.re
     @Import(name="cpu", required=true)
       private final String cpu;
 
-    public String getCpu() {
+    public String cpu() {
         return this.cpu;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceRegistryResourceRequestsResponse extends com.pulumi.re
     @Import(name="instanceCount", required=true)
       private final Integer instanceCount;
 
-    public Integer getInstanceCount() {
+    public Integer instanceCount() {
         return this.instanceCount;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceRegistryResourceRequestsResponse extends com.pulumi.re
     @Import(name="memory", required=true)
       private final String memory;
 
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

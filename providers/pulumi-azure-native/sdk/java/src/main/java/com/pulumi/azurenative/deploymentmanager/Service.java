@@ -43,7 +43,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -85,7 +85,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The Azure location to which the resources in the service belong to or should be deployed to.
      * 
      */
-    public Output<String> getTargetLocation() {
+    public Output<String> targetLocation() {
         return this.targetLocation;
     }
     /**
@@ -99,7 +99,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The subscription to which the resources in the service belong to or should be deployed to.
      * 
      */
-    public Output<String> getTargetSubscriptionId() {
+    public Output<String> targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
     /**
@@ -113,7 +113,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

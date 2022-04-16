@@ -26,7 +26,7 @@ public final class LineChannelPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="lineRegistrations", required=true)
       private final Output<List<LineRegistrationArgs>> lineRegistrations;
 
-    public Output<List<LineRegistrationArgs>> getLineRegistrations() {
+    public Output<List<LineRegistrationArgs>> lineRegistrations() {
         return this.lineRegistrations;
     }
 

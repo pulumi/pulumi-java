@@ -97,70 +97,70 @@ public final class GetVideoAnalyzerResult {
      * The account encryption properties.
      * 
     */
-    public AccountEncryptionResponse getEncryption() {
+    public AccountEncryptionResponse encryption() {
         return this.encryption;
     }
     /**
      * The list of endpoints associated with this resource.
      * 
     */
-    public List<EndpointResponse> getEndpoints() {
+    public List<EndpointResponse> endpoints() {
         return this.endpoints;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The set of managed identities associated with the Video Analyzer resource.
      * 
     */
-    public Optional<VideoAnalyzerIdentityResponse> getIdentity() {
+    public Optional<VideoAnalyzerIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The storage accounts for this resource.
      * 
     */
-    public List<StorageAccountResponse> getStorageAccounts() {
+    public List<StorageAccountResponse> storageAccounts() {
         return this.storageAccounts;
     }
     /**
      * The system data of the Video Analyzer account.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

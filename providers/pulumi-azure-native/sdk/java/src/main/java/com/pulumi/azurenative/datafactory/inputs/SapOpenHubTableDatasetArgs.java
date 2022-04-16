@@ -32,7 +32,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -43,7 +43,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="baseRequestId")
       private final @Nullable Output<Object> baseRequestId;
 
-    public Output<Object> getBaseRequestId() {
+    public Output<Object> baseRequestId() {
         return this.baseRequestId == null ? Codegen.empty() : this.baseRequestId;
     }
 
@@ -54,7 +54,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -65,7 +65,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="excludeLastRequest")
       private final @Nullable Output<Object> excludeLastRequest;
 
-    public Output<Object> getExcludeLastRequest() {
+    public Output<Object> excludeLastRequest() {
         return this.excludeLastRequest == null ? Codegen.empty() : this.excludeLastRequest;
     }
 
@@ -76,7 +76,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
+    public Output<DatasetFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -87,7 +87,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -98,7 +98,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="openHubDestinationName", required=true)
       private final Output<Object> openHubDestinationName;
 
-    public Output<Object> getOpenHubDestinationName() {
+    public Output<Object> openHubDestinationName() {
         return this.openHubDestinationName;
     }
 
@@ -109,7 +109,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -120,7 +120,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
+    public Output<Object> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -131,7 +131,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
+    public Output<Object> structure() {
         return this.structure == null ? Codegen.empty() : this.structure;
     }
 
@@ -143,7 +143,7 @@ public final class SapOpenHubTableDatasetArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterResourceName", required=true)
       private final String clusterResourceName;
 
-    public String getClusterResourceName() {
+    public String clusterResourceName() {
         return this.clusterResourceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterRp", required=true)
       private final String clusterRp;
 
-    public String getClusterRp() {
+    public String clusterRp() {
         return this.clusterRp;
     }
 
@@ -52,7 +52,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="extensionInstanceName", required=true)
       private final String extensionInstanceName;
 
-    public String getExtensionInstanceName() {
+    public String extensionInstanceName() {
         return this.extensionInstanceName;
     }
 
@@ -63,7 +63,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

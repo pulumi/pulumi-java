@@ -70,49 +70,49 @@ public final class GetWebAppSlotConfigurationNamesResult {
      * List of application settings names.
      * 
     */
-    public List<String> getAppSettingNames() {
+    public List<String> appSettingNames() {
         return this.appSettingNames == null ? List.of() : this.appSettingNames;
     }
     /**
      * List of external Azure storage account identifiers.
      * 
     */
-    public List<String> getAzureStorageConfigNames() {
+    public List<String> azureStorageConfigNames() {
         return this.azureStorageConfigNames == null ? List.of() : this.azureStorageConfigNames;
     }
     /**
      * List of connection string names.
      * 
     */
-    public List<String> getConnectionStringNames() {
+    public List<String> connectionStringNames() {
         return this.connectionStringNames == null ? List.of() : this.connectionStringNames;
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

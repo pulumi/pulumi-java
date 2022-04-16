@@ -21,7 +21,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="peConnectionName", required=true)
       private final String peConnectionName;
 
-    public String getPeConnectionName() {
+    public String peConnectionName() {
         return this.peConnectionName;
     }
 
@@ -43,7 +43,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +54,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends co
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

@@ -28,7 +28,7 @@ public final class DiagnosticsRefArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class DiagnosticsRefArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sinkRefs")
       private final @Nullable Output<List<String>> sinkRefs;
 
-    public Output<List<String>> getSinkRefs() {
+    public Output<List<String>> sinkRefs() {
         return this.sinkRefs == null ? Codegen.empty() : this.sinkRefs;
     }
 

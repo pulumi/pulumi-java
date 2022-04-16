@@ -30,7 +30,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
     @Import(name="roles")
       private final @Nullable Output<List<Either<String,Roles>>> roles;
 
-    public Output<List<Either<String,Roles>>> getRoles() {
+    public Output<List<Either<String,Roles>>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 
@@ -41,7 +41,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
+    public Output<Either<String,State>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

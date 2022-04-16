@@ -46,7 +46,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The specification of data flows.
      * 
      */
-    public Output</* @Nullable */ List<DataFlowResponse>> getDataFlows() {
+    public Output</* @Nullable */ List<DataFlowResponse>> dataFlows() {
         return this.dataFlows;
     }
     /**
@@ -62,7 +62,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
      * 
      */
-    public Output</* @Nullable */ DataCollectionRuleResponseDataSources> getDataSources() {
+    public Output</* @Nullable */ DataCollectionRuleResponseDataSources> dataSources() {
         return this.dataSources;
     }
     /**
@@ -76,7 +76,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return Description of the data collection rule.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -90,7 +90,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The specification of destinations.
      * 
      */
-    public Output</* @Nullable */ DataCollectionRuleResponseDestinations> getDestinations() {
+    public Output</* @Nullable */ DataCollectionRuleResponseDestinations> destinations() {
         return this.destinations;
     }
     /**
@@ -104,7 +104,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return Resource entity tag (ETag).
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -118,7 +118,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The immutable ID of this data collection rule. This property is READ-ONLY.
      * 
      */
-    public Output<String> getImmutableId() {
+    public Output<String> immutableId() {
         return this.immutableId;
     }
     /**
@@ -132,7 +132,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -146,7 +146,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -160,7 +160,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -174,7 +174,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The resource provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -188,7 +188,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -202,7 +202,7 @@ public class DataCollectionRule extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

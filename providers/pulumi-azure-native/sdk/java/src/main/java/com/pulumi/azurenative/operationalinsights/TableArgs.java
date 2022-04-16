@@ -28,7 +28,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plan")
       private final @Nullable Output<Either<String,TablePlanEnum>> plan;
 
-    public Output<Either<String,TablePlanEnum>> getPlan() {
+    public Output<Either<String,TablePlanEnum>> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -39,7 +39,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -50,7 +50,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restoredLogs")
       private final @Nullable Output<RestoredLogsArgs> restoredLogs;
 
-    public Output<RestoredLogsArgs> getRestoredLogs() {
+    public Output<RestoredLogsArgs> restoredLogs() {
         return this.restoredLogs == null ? Codegen.empty() : this.restoredLogs;
     }
 
@@ -61,7 +61,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
+    public Output<Integer> retentionInDays() {
         return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
@@ -72,7 +72,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<SchemaArgs> schema;
 
-    public Output<SchemaArgs> getSchema() {
+    public Output<SchemaArgs> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -83,7 +83,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchResults")
       private final @Nullable Output<SearchResultsArgs> searchResults;
 
-    public Output<SearchResultsArgs> getSearchResults() {
+    public Output<SearchResultsArgs> searchResults() {
         return this.searchResults == null ? Codegen.empty() : this.searchResults;
     }
 
@@ -94,7 +94,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
@@ -105,7 +105,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="totalRetentionInDays")
       private final @Nullable Output<Integer> totalRetentionInDays;
 
-    public Output<Integer> getTotalRetentionInDays() {
+    public Output<Integer> totalRetentionInDays() {
         return this.totalRetentionInDays == null ? Codegen.empty() : this.totalRetentionInDays;
     }
 
@@ -116,7 +116,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

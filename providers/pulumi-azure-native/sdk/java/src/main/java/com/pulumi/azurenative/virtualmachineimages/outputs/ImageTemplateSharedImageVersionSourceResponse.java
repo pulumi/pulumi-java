@@ -33,7 +33,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
      * ARM resource id of the image version in the shared image gallery
      * 
     */
-    public String getImageVersionId() {
+    public String imageVersionId() {
         return this.imageVersionId;
     }
     /**
@@ -41,7 +41,7 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
      * Expected value is 'SharedImageVersion'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

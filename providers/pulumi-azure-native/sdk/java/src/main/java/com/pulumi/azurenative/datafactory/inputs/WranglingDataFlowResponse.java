@@ -29,7 +29,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -40,7 +40,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -51,7 +51,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="documentLocale")
       private final @Nullable String documentLocale;
 
-    public Optional<String> getDocumentLocale() {
+    public Optional<String> documentLocale() {
         return this.documentLocale == null ? Optional.empty() : Optional.ofNullable(this.documentLocale);
     }
 
@@ -62,7 +62,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="folder")
       private final @Nullable DataFlowResponseFolder folder;
 
-    public Optional<DataFlowResponseFolder> getFolder() {
+    public Optional<DataFlowResponseFolder> folder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
@@ -73,7 +73,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="script")
       private final @Nullable String script;
 
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 
@@ -84,7 +84,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="sources")
       private final @Nullable List<PowerQuerySourceResponse> sources;
 
-    public List<PowerQuerySourceResponse> getSources() {
+    public List<PowerQuerySourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
 
@@ -96,7 +96,7 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="count")
       private final @Nullable Integer count;
 
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -37,7 +37,7 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="firstTimestamp")
       private final @Nullable String firstTimestamp;
 
-    public Optional<String> getFirstTimestamp() {
+    public Optional<String> firstTimestamp() {
         return this.firstTimestamp == null ? Optional.empty() : Optional.ofNullable(this.firstTimestamp);
     }
 
@@ -48,7 +48,7 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastTimestamp")
       private final @Nullable String lastTimestamp;
 
-    public Optional<String> getLastTimestamp() {
+    public Optional<String> lastTimestamp() {
         return this.lastTimestamp == null ? Optional.empty() : Optional.ofNullable(this.lastTimestamp);
     }
 
@@ -59,7 +59,7 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -70,7 +70,7 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -81,7 +81,7 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

@@ -26,7 +26,7 @@ public final class MongoIndexKeysResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keys")
       private final @Nullable List<String> keys;
 
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 

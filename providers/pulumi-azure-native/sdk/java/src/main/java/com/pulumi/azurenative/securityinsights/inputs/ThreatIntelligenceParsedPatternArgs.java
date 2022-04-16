@@ -28,7 +28,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends com.pulumi.resour
     @Import(name="patternTypeKey")
       private final @Nullable Output<String> patternTypeKey;
 
-    public Output<String> getPatternTypeKey() {
+    public Output<String> patternTypeKey() {
         return this.patternTypeKey == null ? Codegen.empty() : this.patternTypeKey;
     }
 
@@ -39,7 +39,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends com.pulumi.resour
     @Import(name="patternTypeValues")
       private final @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
-    public Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> getPatternTypeValues() {
+    public Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues() {
         return this.patternTypeValues == null ? Codegen.empty() : this.patternTypeValues;
     }
 

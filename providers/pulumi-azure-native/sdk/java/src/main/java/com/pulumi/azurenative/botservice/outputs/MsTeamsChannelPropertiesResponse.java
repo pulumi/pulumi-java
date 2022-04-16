@@ -63,42 +63,42 @@ public final class MsTeamsChannelPropertiesResponse {
      * Whether this channel accepted terms
      * 
     */
-    public Optional<Boolean> getAcceptedTerms() {
+    public Optional<Boolean> acceptedTerms() {
         return Optional.ofNullable(this.acceptedTerms);
     }
     /**
      * Webhook for Microsoft Teams channel calls
      * 
     */
-    public Optional<String> getCallingWebHook() {
+    public Optional<String> callingWebHook() {
         return Optional.ofNullable(this.callingWebHook);
     }
     /**
      * Deployment environment for Microsoft Teams channel calls
      * 
     */
-    public Optional<String> getDeploymentEnvironment() {
+    public Optional<String> deploymentEnvironment() {
         return Optional.ofNullable(this.deploymentEnvironment);
     }
     /**
      * Enable calling for Microsoft Teams channel
      * 
     */
-    public Optional<Boolean> getEnableCalling() {
+    public Optional<Boolean> enableCalling() {
         return Optional.ofNullable(this.enableCalling);
     }
     /**
      * Webhook for Microsoft Teams channel calls
      * 
     */
-    public Optional<String> getIncomingCallRoute() {
+    public Optional<String> incomingCallRoute() {
         return Optional.ofNullable(this.incomingCallRoute);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 

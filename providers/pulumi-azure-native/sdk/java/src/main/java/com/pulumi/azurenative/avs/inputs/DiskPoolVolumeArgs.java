@@ -27,7 +27,7 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endpoints")
       private final @Nullable Output<List<String>> endpoints;
 
-    public Output<List<String>> getEndpoints() {
+    public Output<List<String>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -38,7 +38,7 @@ public final class DiskPoolVolumeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="lunName")
       private final @Nullable Output<String> lunName;
 
-    public Output<String> getLunName() {
+    public Output<String> lunName() {
         return this.lunName == null ? Codegen.empty() : this.lunName;
     }
 

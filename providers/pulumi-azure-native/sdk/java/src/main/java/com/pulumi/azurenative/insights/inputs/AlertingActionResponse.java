@@ -28,7 +28,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="aznsAction")
       private final @Nullable AzNsActionGroupResponse aznsAction;
 
-    public Optional<AzNsActionGroupResponse> getAznsAction() {
+    public Optional<AzNsActionGroupResponse> aznsAction() {
         return this.aznsAction == null ? Optional.empty() : Optional.ofNullable(this.aznsAction);
     }
 
@@ -40,7 +40,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -51,7 +51,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -62,7 +62,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="throttlingInMin")
       private final @Nullable Integer throttlingInMin;
 
-    public Optional<Integer> getThrottlingInMin() {
+    public Optional<Integer> throttlingInMin() {
         return this.throttlingInMin == null ? Optional.empty() : Optional.ofNullable(this.throttlingInMin);
     }
 
@@ -73,7 +73,7 @@ public final class AlertingActionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="trigger", required=true)
       private final TriggerConditionResponse trigger;
 
-    public TriggerConditionResponse getTrigger() {
+    public TriggerConditionResponse trigger() {
         return this.trigger;
     }
 

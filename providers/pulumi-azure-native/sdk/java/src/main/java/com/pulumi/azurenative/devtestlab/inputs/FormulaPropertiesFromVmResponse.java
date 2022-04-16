@@ -25,7 +25,7 @@ public final class FormulaPropertiesFromVmResponse extends com.pulumi.resources.
     @Import(name="labVmId")
       private final @Nullable String labVmId;
 
-    public Optional<String> getLabVmId() {
+    public Optional<String> labVmId() {
         return this.labVmId == null ? Optional.empty() : Optional.ofNullable(this.labVmId);
     }
 

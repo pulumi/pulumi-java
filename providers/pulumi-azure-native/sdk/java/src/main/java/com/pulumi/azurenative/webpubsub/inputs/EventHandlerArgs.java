@@ -28,7 +28,7 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auth")
       private final @Nullable Output<UpstreamAuthSettingsArgs> auth;
 
-    public Output<UpstreamAuthSettingsArgs> getAuth() {
+    public Output<UpstreamAuthSettingsArgs> auth() {
         return this.auth == null ? Codegen.empty() : this.auth;
     }
 
@@ -39,7 +39,7 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="systemEvents")
       private final @Nullable Output<List<String>> systemEvents;
 
-    public Output<List<String>> getSystemEvents() {
+    public Output<List<String>> systemEvents() {
         return this.systemEvents == null ? Codegen.empty() : this.systemEvents;
     }
 
@@ -51,7 +51,7 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
@@ -66,7 +66,7 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userEventPattern")
       private final @Nullable Output<String> userEventPattern;
 
-    public Output<String> getUserEventPattern() {
+    public Output<String> userEventPattern() {
         return this.userEventPattern == null ? Codegen.empty() : this.userEventPattern;
     }
 

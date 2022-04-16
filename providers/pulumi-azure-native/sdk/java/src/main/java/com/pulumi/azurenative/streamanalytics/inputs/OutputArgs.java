@@ -39,7 +39,7 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
 
-    public Output<Object> getDatasource() {
+    public Output<Object> datasource() {
         return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
@@ -50,7 +50,7 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
-    public Output<Object> getSerialization() {
+    public Output<Object> serialization() {
         return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 

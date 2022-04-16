@@ -26,7 +26,7 @@ public final class Ipv6CircuitConnectionConfigArgs extends com.pulumi.resources.
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 

@@ -24,7 +24,7 @@ public final class ServiceResponseBaseResponseError {
      * The error response.
      * 
     */
-    public ErrorResponseResponse getError() {
+    public ErrorResponseResponse error() {
         return this.error;
     }
 

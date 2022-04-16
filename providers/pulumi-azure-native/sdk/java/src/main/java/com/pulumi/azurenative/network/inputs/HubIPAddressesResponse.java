@@ -26,7 +26,7 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -37,7 +37,7 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="publicIPs")
       private final @Nullable HubPublicIPAddressesResponse publicIPs;
 
-    public Optional<HubPublicIPAddressesResponse> getPublicIPs() {
+    public Optional<HubPublicIPAddressesResponse> publicIPs() {
         return this.publicIPs == null ? Optional.empty() : Optional.ofNullable(this.publicIPs);
     }
 

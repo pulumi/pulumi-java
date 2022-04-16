@@ -26,7 +26,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
     @Import(name="backupFileShare", required=true)
       private final FileShareResponse backupFileShare;
 
-    public FileShareResponse getBackupFileShare() {
+    public FileShareResponse backupFileShare() {
         return this.backupFileShare;
     }
 
@@ -37,7 +37,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
     @Import(name="connectionInfo", required=true)
       private final SqlConnectionInfoResponse connectionInfo;
 
-    public SqlConnectionInfoResponse getConnectionInfo() {
+    public SqlConnectionInfoResponse connectionInfo() {
         return this.connectionInfo;
     }
 
@@ -48,7 +48,7 @@ public final class GetTdeCertificatesSqlTaskInputResponse extends com.pulumi.res
     @Import(name="selectedCertificates", required=true)
       private final List<SelectedCertificateInputResponse> selectedCertificates;
 
-    public List<SelectedCertificateInputResponse> getSelectedCertificates() {
+    public List<SelectedCertificateInputResponse> selectedCertificates() {
         return this.selectedCertificates;
     }
 

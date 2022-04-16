@@ -135,112 +135,112 @@ public final class WorkspaceCustomParametersResponse {
      * The ID of a Azure Machine Learning workspace to link with Databricks workspace
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getAmlWorkspaceId() {
+    public Optional<WorkspaceCustomStringParameterResponse> amlWorkspaceId() {
         return Optional.ofNullable(this.amlWorkspaceId);
     }
     /**
      * The name of the Private Subnet within the Virtual Network
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getCustomPrivateSubnetName() {
+    public Optional<WorkspaceCustomStringParameterResponse> customPrivateSubnetName() {
         return Optional.ofNullable(this.customPrivateSubnetName);
     }
     /**
      * The name of a Public Subnet within the Virtual Network
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getCustomPublicSubnetName() {
+    public Optional<WorkspaceCustomStringParameterResponse> customPublicSubnetName() {
         return Optional.ofNullable(this.customPublicSubnetName);
     }
     /**
      * The ID of a Virtual Network where this Databricks Cluster should be created
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getCustomVirtualNetworkId() {
+    public Optional<WorkspaceCustomStringParameterResponse> customVirtualNetworkId() {
         return Optional.ofNullable(this.customVirtualNetworkId);
     }
     /**
      * Should the Public IP be Disabled?
      * 
     */
-    public Optional<WorkspaceCustomBooleanParameterResponse> getEnableNoPublicIp() {
+    public Optional<WorkspaceCustomBooleanParameterResponse> enableNoPublicIp() {
         return Optional.ofNullable(this.enableNoPublicIp);
     }
     /**
      * Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.
      * 
     */
-    public Optional<WorkspaceEncryptionParameterResponse> getEncryption() {
+    public Optional<WorkspaceEncryptionParameterResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getLoadBalancerBackendPoolName() {
+    public Optional<WorkspaceCustomStringParameterResponse> loadBalancerBackendPoolName() {
         return Optional.ofNullable(this.loadBalancerBackendPoolName);
     }
     /**
      * Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getLoadBalancerId() {
+    public Optional<WorkspaceCustomStringParameterResponse> loadBalancerId() {
         return Optional.ofNullable(this.loadBalancerId);
     }
     /**
      * Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getNatGatewayName() {
+    public Optional<WorkspaceCustomStringParameterResponse> natGatewayName() {
         return Optional.ofNullable(this.natGatewayName);
     }
     /**
      * Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.
      * 
     */
-    public Optional<WorkspaceCustomBooleanParameterResponse> getPrepareEncryption() {
+    public Optional<WorkspaceCustomBooleanParameterResponse> prepareEncryption() {
         return Optional.ofNullable(this.prepareEncryption);
     }
     /**
      * Name of the Public IP for No Public IP workspace with managed vNet.
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getPublicIpName() {
+    public Optional<WorkspaceCustomStringParameterResponse> publicIpName() {
         return Optional.ofNullable(this.publicIpName);
     }
     /**
      * A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.
      * 
     */
-    public Optional<WorkspaceCustomBooleanParameterResponse> getRequireInfrastructureEncryption() {
+    public Optional<WorkspaceCustomBooleanParameterResponse> requireInfrastructureEncryption() {
         return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
     /**
      * Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.
      * 
     */
-    public WorkspaceCustomObjectParameterResponse getResourceTags() {
+    public WorkspaceCustomObjectParameterResponse resourceTags() {
         return this.resourceTags;
     }
     /**
      * Default DBFS storage account name.
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getStorageAccountName() {
+    public Optional<WorkspaceCustomStringParameterResponse> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
     /**
      * Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getStorageAccountSkuName() {
+    public Optional<WorkspaceCustomStringParameterResponse> storageAccountSkuName() {
         return Optional.ofNullable(this.storageAccountSkuName);
     }
     /**
      * Address prefix for Managed virtual network. Default value for this input is 10.139.
      * 
     */
-    public Optional<WorkspaceCustomStringParameterResponse> getVnetAddressPrefix() {
+    public Optional<WorkspaceCustomStringParameterResponse> vnetAddressPrefix() {
         return Optional.ofNullable(this.vnetAddressPrefix);
     }
 

@@ -22,7 +22,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -33,7 +33,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="hybridRunbookWorkerGroupName", required=true)
       private final Output<String> hybridRunbookWorkerGroupName;
 
-    public Output<String> getHybridRunbookWorkerGroupName() {
+    public Output<String> hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="hybridRunbookWorkerId")
       private final @Nullable Output<String> hybridRunbookWorkerId;
 
-    public Output<String> getHybridRunbookWorkerId() {
+    public Output<String> hybridRunbookWorkerId() {
         return this.hybridRunbookWorkerId == null ? Codegen.empty() : this.hybridRunbookWorkerId;
     }
 
@@ -55,7 +55,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="vmResourceId")
       private final @Nullable Output<String> vmResourceId;
 
-    public Output<String> getVmResourceId() {
+    public Output<String> vmResourceId() {
         return this.vmResourceId == null ? Codegen.empty() : this.vmResourceId;
     }
 

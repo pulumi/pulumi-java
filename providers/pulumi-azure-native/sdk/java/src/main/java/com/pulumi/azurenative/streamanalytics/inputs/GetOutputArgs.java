@@ -19,7 +19,7 @@ public final class GetOutputArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobName", required=true)
       private final String jobName;
 
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
 
@@ -30,7 +30,7 @@ public final class GetOutputArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputName", required=true)
       private final String outputName;
 
-    public String getOutputName() {
+    public String outputName() {
         return this.outputName;
     }
 
@@ -41,7 +41,7 @@ public final class GetOutputArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

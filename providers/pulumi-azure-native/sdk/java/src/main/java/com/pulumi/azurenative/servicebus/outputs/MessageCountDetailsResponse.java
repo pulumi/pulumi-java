@@ -53,35 +53,35 @@ public final class MessageCountDetailsResponse {
      * Number of active messages in the queue, topic, or subscription.
      * 
     */
-    public Double getActiveMessageCount() {
+    public Double activeMessageCount() {
         return this.activeMessageCount;
     }
     /**
      * Number of messages that are dead lettered.
      * 
     */
-    public Double getDeadLetterMessageCount() {
+    public Double deadLetterMessageCount() {
         return this.deadLetterMessageCount;
     }
     /**
      * Number of scheduled messages.
      * 
     */
-    public Double getScheduledMessageCount() {
+    public Double scheduledMessageCount() {
         return this.scheduledMessageCount;
     }
     /**
      * Number of messages transferred into dead letters.
      * 
     */
-    public Double getTransferDeadLetterMessageCount() {
+    public Double transferDeadLetterMessageCount() {
         return this.transferDeadLetterMessageCount;
     }
     /**
      * Number of messages transferred to another queue, topic, or subscription.
      * 
     */
-    public Double getTransferMessageCount() {
+    public Double transferMessageCount() {
         return this.transferMessageCount;
     }
 

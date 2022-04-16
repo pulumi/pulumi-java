@@ -23,7 +23,7 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
     @Import(name="errorCode", required=true)
       private final String errorCode;
 
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
 
@@ -34,7 +34,7 @@ public final class RecommendedActionErrorInfoResponse extends com.pulumi.resourc
     @Import(name="isRetryable", required=true)
       private final String isRetryable;
 
-    public String getIsRetryable() {
+    public String isRetryable() {
         return this.isRetryable;
     }
 

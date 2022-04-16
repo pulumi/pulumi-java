@@ -32,7 +32,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="customErrorConfigurations")
       private final @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
 
-    public Output<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
+    public Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations() {
         return this.customErrorConfigurations == null ? Codegen.empty() : this.customErrorConfigurations;
     }
 
@@ -43,7 +43,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="firewallPolicy")
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Output<SubResourceArgs> getFirewallPolicy() {
+    public Output<SubResourceArgs> firewallPolicy() {
         return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
@@ -54,7 +54,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Output<SubResourceArgs> getFrontendIPConfiguration() {
+    public Output<SubResourceArgs> frontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Codegen.empty() : this.frontendIPConfiguration;
     }
 
@@ -65,7 +65,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="frontendPort")
       private final @Nullable Output<SubResourceArgs> frontendPort;
 
-    public Output<SubResourceArgs> getFrontendPort() {
+    public Output<SubResourceArgs> frontendPort() {
         return this.frontendPort == null ? Codegen.empty() : this.frontendPort;
     }
 
@@ -76,7 +76,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -87,7 +87,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="hostNames")
       private final @Nullable Output<List<String>> hostNames;
 
-    public Output<List<String>> getHostNames() {
+    public Output<List<String>> hostNames() {
         return this.hostNames == null ? Codegen.empty() : this.hostNames;
     }
 
@@ -98,7 +98,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -109,7 +109,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -120,7 +120,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
-    public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
+    public Output<Either<String,ApplicationGatewayProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -131,7 +131,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="requireServerNameIndication")
       private final @Nullable Output<Boolean> requireServerNameIndication;
 
-    public Output<Boolean> getRequireServerNameIndication() {
+    public Output<Boolean> requireServerNameIndication() {
         return this.requireServerNameIndication == null ? Codegen.empty() : this.requireServerNameIndication;
     }
 
@@ -142,7 +142,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="sslCertificate")
       private final @Nullable Output<SubResourceArgs> sslCertificate;
 
-    public Output<SubResourceArgs> getSslCertificate() {
+    public Output<SubResourceArgs> sslCertificate() {
         return this.sslCertificate == null ? Codegen.empty() : this.sslCertificate;
     }
 
@@ -153,7 +153,7 @@ public final class ApplicationGatewayHttpListenerArgs extends com.pulumi.resourc
     @Import(name="sslProfile")
       private final @Nullable Output<SubResourceArgs> sslProfile;
 
-    public Output<SubResourceArgs> getSslProfile() {
+    public Output<SubResourceArgs> sslProfile() {
         return this.sslProfile == null ? Codegen.empty() : this.sslProfile;
     }
 

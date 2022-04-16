@@ -25,7 +25,7 @@ public final class MetricCounterSetResponse {
      * The counters that should be collected in this set.
      * 
     */
-    public List<MetricCounterResponse> getCounters() {
+    public List<MetricCounterResponse> counters() {
         return this.counters;
     }
 

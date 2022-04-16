@@ -26,7 +26,7 @@ public final class LinuxOsInfoResponse {
      * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
      * 
     */
-    public Optional<String> getLinuxOsState() {
+    public Optional<String> linuxOsState() {
         return Optional.ofNullable(this.linuxOsState);
     }
 

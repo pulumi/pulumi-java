@@ -28,7 +28,7 @@ public final class LiveEventTranscriptionResponse extends com.pulumi.resources.I
     @Import(name="inputTrackSelection")
       private final @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
 
-    public List<LiveEventInputTrackSelectionResponse> getInputTrackSelection() {
+    public List<LiveEventInputTrackSelectionResponse> inputTrackSelection() {
         return this.inputTrackSelection == null ? List.of() : this.inputTrackSelection;
     }
 
@@ -39,7 +39,7 @@ public final class LiveEventTranscriptionResponse extends com.pulumi.resources.I
     @Import(name="language")
       private final @Nullable String language;
 
-    public Optional<String> getLanguage() {
+    public Optional<String> language() {
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
     }
 
@@ -50,7 +50,7 @@ public final class LiveEventTranscriptionResponse extends com.pulumi.resources.I
     @Import(name="outputTranscriptionTrack")
       private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 
-    public Optional<LiveEventOutputTranscriptionTrackResponse> getOutputTranscriptionTrack() {
+    public Optional<LiveEventOutputTranscriptionTrackResponse> outputTranscriptionTrack() {
         return this.outputTranscriptionTrack == null ? Optional.empty() : Optional.ofNullable(this.outputTranscriptionTrack);
     }
 

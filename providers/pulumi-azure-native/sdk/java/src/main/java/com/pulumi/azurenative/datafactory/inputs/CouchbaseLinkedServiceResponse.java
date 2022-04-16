@@ -31,7 +31,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -42,7 +42,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -53,7 +53,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
-    public Optional<Object> getConnectionString() {
+    public Optional<Object> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -64,7 +64,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="credString")
       private final @Nullable AzureKeyVaultSecretReferenceResponse credString;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getCredString() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> credString() {
         return this.credString == null ? Optional.empty() : Optional.ofNullable(this.credString);
     }
 
@@ -75,7 +75,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -86,7 +86,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -97,7 +97,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -109,7 +109,7 @@ public final class CouchbaseLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

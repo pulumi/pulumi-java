@@ -25,7 +25,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
     @Import(name="databases", required=true)
       private final List<String> databases;
 
-    public List<String> getDatabases() {
+    public List<String> databases() {
         return this.databases;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

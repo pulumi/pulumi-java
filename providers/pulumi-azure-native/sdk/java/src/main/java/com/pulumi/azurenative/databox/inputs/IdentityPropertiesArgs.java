@@ -27,7 +27,7 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -38,7 +38,7 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="userAssigned")
       private final @Nullable Output<UserAssignedPropertiesArgs> userAssigned;
 
-    public Output<UserAssignedPropertiesArgs> getUserAssigned() {
+    public Output<UserAssignedPropertiesArgs> userAssigned() {
         return this.userAssigned == null ? Codegen.empty() : this.userAssigned;
     }
 

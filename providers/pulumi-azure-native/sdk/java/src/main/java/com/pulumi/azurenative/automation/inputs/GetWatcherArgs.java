@@ -19,7 +19,7 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWatcherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="watcherName", required=true)
       private final String watcherName;
 
-    public String getWatcherName() {
+    public String watcherName() {
         return this.watcherName;
     }
 

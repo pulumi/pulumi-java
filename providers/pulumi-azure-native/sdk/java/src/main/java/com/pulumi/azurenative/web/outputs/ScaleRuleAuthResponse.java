@@ -34,14 +34,14 @@ public final class ScaleRuleAuthResponse {
      * Name of the Container App secret from which to pull the auth params.
      * 
     */
-    public Optional<String> getSecretRef() {
+    public Optional<String> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
      * Trigger Parameter that uses the secret
      * 
     */
-    public Optional<String> getTriggerParameter() {
+    public Optional<String> triggerParameter() {
         return Optional.ofNullable(this.triggerParameter);
     }
 

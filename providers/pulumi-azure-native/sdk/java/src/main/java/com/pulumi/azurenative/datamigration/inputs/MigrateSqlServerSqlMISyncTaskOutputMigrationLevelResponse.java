@@ -20,7 +20,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="databaseCount", required=true)
       private final Integer databaseCount;
 
-    public Integer getDatabaseCount() {
+    public Integer databaseCount() {
         return this.databaseCount;
     }
 
@@ -31,7 +31,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="databaseErrorCount", required=true)
       private final Integer databaseErrorCount;
 
-    public Integer getDatabaseErrorCount() {
+    public Integer databaseErrorCount() {
         return this.databaseErrorCount;
     }
 
@@ -42,7 +42,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -53,7 +53,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
 
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
 
@@ -87,7 +87,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerName", required=true)
       private final String sourceServerName;
 
-    public String getSourceServerName() {
+    public String sourceServerName() {
         return this.sourceServerName;
     }
 
@@ -98,7 +98,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
 
@@ -109,7 +109,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -120,7 +120,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -131,7 +131,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
 
@@ -142,7 +142,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerName", required=true)
       private final String targetServerName;
 
-    public String getTargetServerName() {
+    public String targetServerName() {
         return this.targetServerName;
     }
 
@@ -153,7 +153,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

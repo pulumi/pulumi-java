@@ -27,7 +27,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends com.pulumi.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends com.pulumi.
     @Import(name="parameters", required=true)
       private final Output<CacheKeyQueryStringActionParametersArgs> parameters;
 
-    public Output<CacheKeyQueryStringActionParametersArgs> getParameters() {
+    public Output<CacheKeyQueryStringActionParametersArgs> parameters() {
         return this.parameters;
     }
 

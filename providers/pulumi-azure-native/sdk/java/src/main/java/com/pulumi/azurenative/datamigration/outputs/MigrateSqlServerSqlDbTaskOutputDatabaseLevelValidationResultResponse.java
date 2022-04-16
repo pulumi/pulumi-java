@@ -99,35 +99,35 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * Provides data integrity validation result between the source and target tables that are migrated.
      * 
     */
-    public DataIntegrityValidationResultResponse getDataIntegrityValidationResult() {
+    public DataIntegrityValidationResultResponse dataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
     }
     /**
      * Validation end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Migration Identifier
      * 
     */
-    public String getMigrationId() {
+    public String migrationId() {
         return this.migrationId;
     }
     /**
      * Results of some of the query execution result between source and target database
      * 
     */
-    public QueryAnalysisValidationResultResponse getQueryAnalysisValidationResult() {
+    public QueryAnalysisValidationResultResponse queryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
     }
     /**
@@ -135,42 +135,42 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * Expected value is 'MigrationDatabaseLevelValidationOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Provides schema comparison result between source and target database
      * 
     */
-    public SchemaComparisonValidationResultResponse getSchemaValidationResult() {
+    public SchemaComparisonValidationResultResponse schemaValidationResult() {
         return this.schemaValidationResult;
     }
     /**
      * Name of the source database
      * 
     */
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
     /**
      * Validation start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current status of validation at the database level
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Name of the target database
      * 
     */
-    public String getTargetDatabaseName() {
+    public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
 

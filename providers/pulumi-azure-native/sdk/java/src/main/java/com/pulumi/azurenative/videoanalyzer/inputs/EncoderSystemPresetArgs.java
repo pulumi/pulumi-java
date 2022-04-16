@@ -27,7 +27,7 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<Either<String,EncoderSystemPresetType>> name;
 
-    public Output<Either<String,EncoderSystemPresetType>> getName() {
+    public Output<Either<String,EncoderSystemPresetType>> name() {
         return this.name;
     }
 
@@ -39,7 +39,7 @@ public final class EncoderSystemPresetArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

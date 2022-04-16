@@ -25,13 +25,13 @@ public final class ResourceProviderAuthorizationResponse {
         this.roleDefinitionId = roleDefinitionId;
     }
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
-    public Optional<String> getManagedByRoleDefinitionId() {
+    public Optional<String> managedByRoleDefinitionId() {
         return Optional.ofNullable(this.managedByRoleDefinitionId);
     }
-    public Optional<String> getRoleDefinitionId() {
+    public Optional<String> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
 

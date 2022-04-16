@@ -26,7 +26,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="createdDate", required=true)
       private final String createdDate;
 
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
 
@@ -37,7 +37,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -48,7 +48,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="details", required=true)
       private final CostAllocationRuleDetailsResponse details;
 
-    public CostAllocationRuleDetailsResponse getDetails() {
+    public CostAllocationRuleDetailsResponse details() {
         return this.details;
     }
 
@@ -59,7 +59,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -70,7 +70,7 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="updatedDate", required=true)
       private final String updatedDate;
 
-    public String getUpdatedDate() {
+    public String updatedDate() {
         return this.updatedDate;
     }
 

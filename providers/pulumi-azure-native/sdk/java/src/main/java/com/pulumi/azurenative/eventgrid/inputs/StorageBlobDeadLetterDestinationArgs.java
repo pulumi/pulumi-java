@@ -26,7 +26,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
     @Import(name="blobContainerName")
       private final @Nullable Output<String> blobContainerName;
 
-    public Output<String> getBlobContainerName() {
+    public Output<String> blobContainerName() {
         return this.blobContainerName == null ? Codegen.empty() : this.blobContainerName;
     }
 
@@ -38,7 +38,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -49,7 +49,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

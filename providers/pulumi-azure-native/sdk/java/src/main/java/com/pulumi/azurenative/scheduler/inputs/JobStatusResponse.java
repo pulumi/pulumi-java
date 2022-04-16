@@ -20,7 +20,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="executionCount", required=true)
       private final Integer executionCount;
 
-    public Integer getExecutionCount() {
+    public Integer executionCount() {
         return this.executionCount;
     }
 
@@ -31,7 +31,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="failureCount", required=true)
       private final Integer failureCount;
 
-    public Integer getFailureCount() {
+    public Integer failureCount() {
         return this.failureCount;
     }
 
@@ -42,7 +42,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="faultedCount", required=true)
       private final Integer faultedCount;
 
-    public Integer getFaultedCount() {
+    public Integer faultedCount() {
         return this.faultedCount;
     }
 
@@ -53,7 +53,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastExecutionTime", required=true)
       private final String lastExecutionTime;
 
-    public String getLastExecutionTime() {
+    public String lastExecutionTime() {
         return this.lastExecutionTime;
     }
 
@@ -64,7 +64,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextExecutionTime", required=true)
       private final String nextExecutionTime;
 
-    public String getNextExecutionTime() {
+    public String nextExecutionTime() {
         return this.nextExecutionTime;
     }
 

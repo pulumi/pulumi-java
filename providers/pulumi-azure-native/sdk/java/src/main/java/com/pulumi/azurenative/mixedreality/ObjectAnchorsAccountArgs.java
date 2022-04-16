@@ -26,14 +26,14 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     @Import(name="identity")
       private final @Nullable Output<ObjectAnchorsAccountIdentityArgs> identity;
 
-    public Output<ObjectAnchorsAccountIdentityArgs> getIdentity() {
+    public Output<ObjectAnchorsAccountIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -44,7 +44,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="kind")
       private final @Nullable Output<SkuArgs> kind;
 
-    public Output<SkuArgs> getKind() {
+    public Output<SkuArgs> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -55,7 +55,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -66,7 +66,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="plan")
       private final @Nullable Output<IdentityArgs> plan;
 
-    public Output<IdentityArgs> getPlan() {
+    public Output<IdentityArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -77,7 +77,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +88,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -99,7 +99,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
@@ -110,7 +110,7 @@ public final class ObjectAnchorsAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

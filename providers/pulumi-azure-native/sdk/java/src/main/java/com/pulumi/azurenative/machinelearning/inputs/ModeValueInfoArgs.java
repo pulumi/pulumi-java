@@ -28,7 +28,7 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="interfaceString")
       private final @Nullable Output<String> interfaceString;
 
-    public Output<String> getInterfaceString() {
+    public Output<String> interfaceString() {
         return this.interfaceString == null ? Codegen.empty() : this.interfaceString;
     }
 
@@ -39,7 +39,7 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
-    public Output<List<ModuleAssetParameterArgs>> getParameters() {
+    public Output<List<ModuleAssetParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

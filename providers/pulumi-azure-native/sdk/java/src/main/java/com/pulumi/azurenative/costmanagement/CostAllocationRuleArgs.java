@@ -23,7 +23,7 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -34,7 +34,7 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties")
       private final @Nullable Output<CostAllocationRulePropertiesArgs> properties;
 
-    public Output<CostAllocationRulePropertiesArgs> getProperties() {
+    public Output<CostAllocationRulePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class CostAllocationRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 

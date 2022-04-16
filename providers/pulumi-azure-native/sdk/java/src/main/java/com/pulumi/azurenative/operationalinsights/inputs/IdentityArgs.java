@@ -29,7 +29,7 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<IdentityType> type;
 
-    public Output<IdentityType> getType() {
+    public Output<IdentityType> type() {
         return this.type;
     }
 
@@ -40,7 +40,7 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

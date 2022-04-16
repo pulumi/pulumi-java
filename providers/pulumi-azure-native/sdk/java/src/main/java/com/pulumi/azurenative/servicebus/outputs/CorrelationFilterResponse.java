@@ -92,70 +92,70 @@ public final class CorrelationFilterResponse {
      * Content type of the message.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * Identifier of the correlation.
      * 
     */
-    public Optional<String> getCorrelationId() {
+    public Optional<String> correlationId() {
         return Optional.ofNullable(this.correlationId);
     }
     /**
      * Application specific label.
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Identifier of the message.
      * 
     */
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * dictionary object for custom filters
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Address of the queue to reply to.
      * 
     */
-    public Optional<String> getReplyTo() {
+    public Optional<String> replyTo() {
         return Optional.ofNullable(this.replyTo);
     }
     /**
      * Session identifier to reply to.
      * 
     */
-    public Optional<String> getReplyToSessionId() {
+    public Optional<String> replyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
     /**
      * Value that indicates whether the rule action requires preprocessing.
      * 
     */
-    public Optional<Boolean> getRequiresPreprocessing() {
+    public Optional<Boolean> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
     /**
      * Session identifier.
      * 
     */
-    public Optional<String> getSessionId() {
+    public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
     /**
      * Address to send to.
      * 
     */
-    public Optional<String> getTo() {
+    public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }
 

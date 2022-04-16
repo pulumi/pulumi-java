@@ -41,21 +41,21 @@ public final class LoadBalancingSettingsParametersResponse {
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
     */
-    public Optional<Integer> getAdditionalLatencyInMilliseconds() {
+    public Optional<Integer> additionalLatencyInMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyInMilliseconds);
     }
     /**
      * The number of samples to consider for load balancing decisions
      * 
     */
-    public Optional<Integer> getSampleSize() {
+    public Optional<Integer> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
     /**
      * The number of samples within the sample period that must succeed
      * 
     */
-    public Optional<Integer> getSuccessfulSamplesRequired() {
+    public Optional<Integer> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
 

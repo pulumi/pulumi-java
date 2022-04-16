@@ -72,49 +72,49 @@ public final class P2SConnectionConfigurationResponse {
      * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
      * 
     */
-    public Optional<Boolean> getEnableInternetSecurity() {
+    public Optional<Boolean> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the P2SConnectionConfiguration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
     */
-    public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
     /**
      * The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
     */
-    public Optional<AddressSpaceResponse> getVpnClientAddressPool() {
+    public Optional<AddressSpaceResponse> vpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
 

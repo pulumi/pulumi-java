@@ -63,42 +63,42 @@ public final class FrontDoorPolicySettingsResponse {
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
      * 
     */
-    public Optional<String> getCustomBlockResponseBody() {
+    public Optional<String> customBlockResponseBody() {
         return Optional.ofNullable(this.customBlockResponseBody);
     }
     /**
      * If the action type is block, customer can override the response status code.
      * 
     */
-    public Optional<Integer> getCustomBlockResponseStatusCode() {
+    public Optional<Integer> customBlockResponseStatusCode() {
         return Optional.ofNullable(this.customBlockResponseStatusCode);
     }
     /**
      * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Describes if it is in detection mode or prevention mode at policy level.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * If action type is redirect, this field represents redirect URL for the client.
      * 
     */
-    public Optional<String> getRedirectUrl() {
+    public Optional<String> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
     /**
      * Describes if policy managed rules will inspect the request body content.
      * 
     */
-    public Optional<String> getRequestBodyCheck() {
+    public Optional<String> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
 

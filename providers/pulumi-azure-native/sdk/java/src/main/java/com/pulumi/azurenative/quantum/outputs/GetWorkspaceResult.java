@@ -109,84 +109,84 @@ public final class GetWorkspaceResult {
      * The URI of the workspace endpoint.
      * 
     */
-    public String getEndpointUri() {
+    public String endpointUri() {
         return this.endpointUri;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Managed Identity information.
      * 
     */
-    public Optional<QuantumWorkspaceResponseIdentity> getIdentity() {
+    public Optional<QuantumWorkspaceResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of Providers selected for this Workspace
      * 
     */
-    public List<ProviderResponse> getProviders() {
+    public List<ProviderResponse> providers() {
         return this.providers == null ? List.of() : this.providers;
     }
     /**
      * Provisioning status field
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * ARM Resource Id of the storage account associated with this workspace.
      * 
     */
-    public Optional<String> getStorageAccount() {
+    public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
      * System metadata
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Whether the current workspace is ready to accept Jobs.
      * 
     */
-    public String getUsable() {
+    public String usable() {
         return this.usable;
     }
 

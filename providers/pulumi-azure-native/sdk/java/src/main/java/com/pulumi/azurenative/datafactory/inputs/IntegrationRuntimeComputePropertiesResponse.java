@@ -28,7 +28,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
     @Import(name="dataFlowProperties")
       private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
 
-    public Optional<IntegrationRuntimeDataFlowPropertiesResponse> getDataFlowProperties() {
+    public Optional<IntegrationRuntimeDataFlowPropertiesResponse> dataFlowProperties() {
         return this.dataFlowProperties == null ? Optional.empty() : Optional.ofNullable(this.dataFlowProperties);
     }
 
@@ -39,7 +39,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -50,7 +50,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
     @Import(name="maxParallelExecutionsPerNode")
       private final @Nullable Integer maxParallelExecutionsPerNode;
 
-    public Optional<Integer> getMaxParallelExecutionsPerNode() {
+    public Optional<Integer> maxParallelExecutionsPerNode() {
         return this.maxParallelExecutionsPerNode == null ? Optional.empty() : Optional.ofNullable(this.maxParallelExecutionsPerNode);
     }
 
@@ -61,7 +61,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
     @Import(name="nodeSize")
       private final @Nullable String nodeSize;
 
-    public Optional<String> getNodeSize() {
+    public Optional<String> nodeSize() {
         return this.nodeSize == null ? Optional.empty() : Optional.ofNullable(this.nodeSize);
     }
 
@@ -72,7 +72,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
     @Import(name="numberOfNodes")
       private final @Nullable Integer numberOfNodes;
 
-    public Optional<Integer> getNumberOfNodes() {
+    public Optional<Integer> numberOfNodes() {
         return this.numberOfNodes == null ? Optional.empty() : Optional.ofNullable(this.numberOfNodes);
     }
 
@@ -83,7 +83,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
     @Import(name="vNetProperties")
       private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
-    public Optional<IntegrationRuntimeVNetPropertiesResponse> getVNetProperties() {
+    public Optional<IntegrationRuntimeVNetPropertiesResponse> vNetProperties() {
         return this.vNetProperties == null ? Optional.empty() : Optional.ofNullable(this.vNetProperties);
     }
 

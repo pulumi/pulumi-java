@@ -43,7 +43,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Identifier of Certificate entity that will be used for TLS connection establishment
      * 
      */
-    public Output</* @Nullable */ String> getCertificateId() {
+    public Output</* @Nullable */ String> certificateId() {
         return this.certificateId;
     }
     /**
@@ -57,7 +57,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Hostname value. Supports valid domain name, partial or full wildcard
      * 
      */
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -71,7 +71,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Specifies if HTTP/2.0 is supported
      * 
      */
-    public Output</* @Nullable */ Boolean> getHttp2Enabled() {
+    public Output</* @Nullable */ Boolean> http2Enabled() {
         return this.http2Enabled;
     }
     /**
@@ -85,7 +85,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Determines whether gateway requests client certificate
      * 
      */
-    public Output</* @Nullable */ Boolean> getNegotiateClientCertificate() {
+    public Output</* @Nullable */ Boolean> negotiateClientCertificate() {
         return this.negotiateClientCertificate;
     }
     /**
@@ -113,7 +113,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Specifies if TLS 1.0 is supported
      * 
      */
-    public Output</* @Nullable */ Boolean> getTls10Enabled() {
+    public Output</* @Nullable */ Boolean> tls10Enabled() {
         return this.tls10Enabled;
     }
     /**
@@ -127,7 +127,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Specifies if TLS 1.1 is supported
      * 
      */
-    public Output</* @Nullable */ Boolean> getTls11Enabled() {
+    public Output</* @Nullable */ Boolean> tls11Enabled() {
         return this.tls11Enabled;
     }
     /**
@@ -141,7 +141,7 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

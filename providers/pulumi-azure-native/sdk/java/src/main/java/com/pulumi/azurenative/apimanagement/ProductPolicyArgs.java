@@ -24,7 +24,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,PolicyContentFormat>> format;
 
-    public Output<Either<String,PolicyContentFormat>> getFormat() {
+    public Output<Either<String,PolicyContentFormat>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -35,7 +35,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -46,7 +46,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
@@ -57,7 +57,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -79,7 +79,7 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

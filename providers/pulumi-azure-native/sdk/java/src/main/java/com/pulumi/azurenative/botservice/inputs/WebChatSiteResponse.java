@@ -24,7 +24,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -35,7 +35,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
       private final Boolean isWebchatPreviewEnabled;
 
-    public Boolean getIsWebchatPreviewEnabled() {
+    public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
 
@@ -46,7 +46,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -57,7 +57,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key2", required=true)
       private final String key2;
 
-    public String getKey2() {
+    public String key2() {
         return this.key2;
     }
 
@@ -68,7 +68,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteId", required=true)
       private final String siteId;
 
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 
@@ -79,7 +79,7 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteName", required=true)
       private final String siteName;
 
-    public String getSiteName() {
+    public String siteName() {
         return this.siteName;
     }
 

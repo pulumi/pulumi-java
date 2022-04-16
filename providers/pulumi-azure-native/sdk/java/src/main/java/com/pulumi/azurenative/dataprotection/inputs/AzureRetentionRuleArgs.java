@@ -25,21 +25,21 @@ public final class AzureRetentionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
     @Import(name="lifecycles", required=true)
       private final Output<List<SourceLifeCycleArgs>> lifecycles;
 
-    public Output<List<SourceLifeCycleArgs>> getLifecycles() {
+    public Output<List<SourceLifeCycleArgs>> lifecycles() {
         return this.lifecycles;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class AzureRetentionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 

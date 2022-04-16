@@ -25,7 +25,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="data")
       private final @Nullable String data;
 
-    public Optional<String> getData() {
+    public Optional<String> data() {
         return this.data == null ? Optional.empty() : Optional.ofNullable(this.data);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -58,7 +58,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="keyVaultSecretId")
       private final @Nullable String keyVaultSecretId;
 
-    public Optional<String> getKeyVaultSecretId() {
+    public Optional<String> keyVaultSecretId() {
         return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
     }
 
@@ -69,7 +69,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -80,7 +80,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -91,7 +91,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -102,7 +102,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="publicCertData", required=true)
       private final String publicCertData;
 
-    public String getPublicCertData() {
+    public String publicCertData() {
         return this.publicCertData;
     }
 
@@ -113,7 +113,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

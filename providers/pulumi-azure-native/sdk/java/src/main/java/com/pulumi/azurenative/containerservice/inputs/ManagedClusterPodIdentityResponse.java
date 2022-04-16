@@ -23,7 +23,7 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="bindingSelector")
       private final @Nullable String bindingSelector;
 
-    public Optional<String> getBindingSelector() {
+    public Optional<String> bindingSelector() {
         return this.bindingSelector == null ? Optional.empty() : Optional.ofNullable(this.bindingSelector);
     }
 
@@ -34,7 +34,7 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="identity", required=true)
       private final UserAssignedIdentityResponse identity;
 
-    public UserAssignedIdentityResponse getIdentity() {
+    public UserAssignedIdentityResponse identity() {
         return this.identity;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -56,14 +56,14 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
     @Import(name="provisioningInfo", required=true)
       private final ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
 
-    public ManagedClusterPodIdentityResponseProvisioningInfo getProvisioningInfo() {
+    public ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo() {
         return this.provisioningInfo;
     }
 
@@ -74,7 +74,7 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

@@ -99,77 +99,77 @@ public final class GetManagedNetworkGroupResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Responsibility role under which this Managed Network Group will be created
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The collection of management groups covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getManagementGroups() {
+    public List<ResourceIdResponse> managementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the ManagedNetwork resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The collection of  subnets covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getSubnets() {
+    public List<ResourceIdResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * The collection of subscriptions covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getSubscriptions() {
+    public List<ResourceIdResponse> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The collection of virtual nets covered by the Managed Network
      * 
     */
-    public List<ResourceIdResponse> getVirtualNetworks() {
+    public List<ResourceIdResponse> virtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }
 

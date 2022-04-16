@@ -56,35 +56,35 @@ public final class LogAnalyticsResponse {
      * The log type to be used.
      * 
     */
-    public Optional<String> getLogType() {
+    public Optional<String> logType() {
         return Optional.ofNullable(this.logType);
     }
     /**
      * Metadata for log analytics.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The workspace id for log analytics
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
     /**
      * The workspace key for log analytics
      * 
     */
-    public String getWorkspaceKey() {
+    public String workspaceKey() {
         return this.workspaceKey;
     }
     /**
      * The workspace resource id for log analytics
      * 
     */
-    public Map<String,String> getWorkspaceResourceId() {
+    public Map<String,String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;
     }
 

@@ -25,7 +25,7 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<Either<String,ManagedClusterSKUName>> name;
 
-    public Output<Either<String,ManagedClusterSKUName>> getName() {
+    public Output<Either<String,ManagedClusterSKUName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -36,7 +36,7 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
       private final @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
 
-    public Output<Either<String,ManagedClusterSKUTier>> getTier() {
+    public Output<Either<String,ManagedClusterSKUTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

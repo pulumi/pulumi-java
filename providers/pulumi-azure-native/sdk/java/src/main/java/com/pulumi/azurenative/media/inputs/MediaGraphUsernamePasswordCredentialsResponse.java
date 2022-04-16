@@ -24,7 +24,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -35,7 +35,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -46,7 +46,7 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

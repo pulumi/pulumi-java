@@ -70,42 +70,42 @@ public final class DocumentDbOutputDataSourceResponse {
      * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
      * The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getCollectionNamePattern() {
+    public Optional<String> collectionNamePattern() {
         return Optional.ofNullable(this.collectionNamePattern);
     }
     /**
      * The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getDatabase() {
+    public Optional<String> database() {
         return Optional.ofNullable(this.database);
     }
     /**
      * The name of the field in output events used to specify the primary key which insert or update operations are based on.
      * 
     */
-    public Optional<String> getDocumentId() {
+    public Optional<String> documentId() {
         return Optional.ofNullable(this.documentId);
     }
     /**
      * The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
      * 
     */
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
@@ -113,7 +113,7 @@ public final class DocumentDbOutputDataSourceResponse {
      * Expected value is 'Microsoft.Storage/DocumentDB'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

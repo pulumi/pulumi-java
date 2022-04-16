@@ -25,7 +25,7 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
     @Import(name="chartValues")
       private final @Nullable String chartValues;
 
-    public Optional<String> getChartValues() {
+    public Optional<String> chartValues() {
         return this.chartValues == null ? Optional.empty() : Optional.ofNullable(this.chartValues);
     }
 
@@ -36,7 +36,7 @@ public final class HelmOperatorPropertiesResponse extends com.pulumi.resources.I
     @Import(name="chartVersion")
       private final @Nullable String chartVersion;
 
-    public Optional<String> getChartVersion() {
+    public Optional<String> chartVersion() {
         return this.chartVersion == null ? Optional.empty() : Optional.ofNullable(this.chartVersion);
     }
 

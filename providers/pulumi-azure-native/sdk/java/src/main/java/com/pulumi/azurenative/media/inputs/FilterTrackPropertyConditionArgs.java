@@ -28,7 +28,7 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
     @Import(name="operation", required=true)
       private final Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
-    public Output<Either<String,FilterTrackPropertyCompareOperation>> getOperation() {
+    public Output<Either<String,FilterTrackPropertyCompareOperation>> operation() {
         return this.operation;
     }
 
@@ -39,7 +39,7 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
     @Import(name="property", required=true)
       private final Output<Either<String,FilterTrackPropertyType>> property;
 
-    public Output<Either<String,FilterTrackPropertyType>> getProperty() {
+    public Output<Either<String,FilterTrackPropertyType>> property() {
         return this.property;
     }
 
@@ -50,7 +50,7 @@ public final class FilterTrackPropertyConditionArgs extends com.pulumi.resources
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

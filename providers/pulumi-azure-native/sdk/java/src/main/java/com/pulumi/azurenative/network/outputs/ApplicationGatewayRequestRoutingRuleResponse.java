@@ -113,91 +113,91 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
      * Backend address pool resource of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getBackendAddressPool() {
+    public Optional<SubResourceResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
      * Backend http settings resource of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getBackendHttpSettings() {
+    public Optional<SubResourceResponse> backendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Http listener resource of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getHttpListener() {
+    public Optional<SubResourceResponse> httpListener() {
         return Optional.ofNullable(this.httpListener);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the request routing rule that is unique within an Application Gateway.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the request routing rule.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The provisioning state of the request routing rule resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Redirect configuration resource of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getRedirectConfiguration() {
+    public Optional<SubResourceResponse> redirectConfiguration() {
         return Optional.ofNullable(this.redirectConfiguration);
     }
     /**
      * Rewrite Rule Set resource in Basic rule of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getRewriteRuleSet() {
+    public Optional<SubResourceResponse> rewriteRuleSet() {
         return Optional.ofNullable(this.rewriteRuleSet);
     }
     /**
      * Rule type.
      * 
     */
-    public Optional<String> getRuleType() {
+    public Optional<String> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * URL path map resource of the application gateway.
      * 
     */
-    public Optional<SubResourceResponse> getUrlPathMap() {
+    public Optional<SubResourceResponse> urlPathMap() {
         return Optional.ofNullable(this.urlPathMap);
     }
 

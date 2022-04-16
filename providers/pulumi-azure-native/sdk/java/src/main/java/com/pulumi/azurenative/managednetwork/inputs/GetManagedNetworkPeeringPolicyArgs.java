@@ -19,7 +19,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
     @Import(name="managedNetworkName", required=true)
       private final String managedNetworkName;
 
-    public String getManagedNetworkName() {
+    public String managedNetworkName() {
         return this.managedNetworkName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
     @Import(name="managedNetworkPeeringPolicyName", required=true)
       private final String managedNetworkPeeringPolicyName;
 
-    public String getManagedNetworkPeeringPolicyName() {
+    public String managedNetworkPeeringPolicyName() {
         return this.managedNetworkPeeringPolicyName;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

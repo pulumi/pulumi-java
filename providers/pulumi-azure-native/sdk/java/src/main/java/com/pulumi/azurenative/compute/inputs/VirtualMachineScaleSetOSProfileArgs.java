@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
-    public Output<String> getAdminPassword() {
+    public Output<String> adminPassword() {
         return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="computerNamePrefix")
       private final @Nullable Output<String> computerNamePrefix;
 
-    public Output<String> getComputerNamePrefix() {
+    public Output<String> computerNamePrefix() {
         return this.computerNamePrefix == null ? Codegen.empty() : this.computerNamePrefix;
     }
 
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
+    public Output<String> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="linuxConfiguration")
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
+    public Output<LinuxConfigurationArgs> linuxConfiguration() {
         return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
     }
 
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="secrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
-    public Output<List<VaultSecretGroupArgs>> getSecrets() {
+    public Output<List<VaultSecretGroupArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
     @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
+    public Output<WindowsConfigurationArgs> windowsConfiguration() {
         return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
     }
 

@@ -19,7 +19,7 @@ public final class ListBlockchainMemberApiKeysArgs extends com.pulumi.resources.
     @Import(name="blockchainMemberName", required=true)
       private final String blockchainMemberName;
 
-    public String getBlockchainMemberName() {
+    public String blockchainMemberName() {
         return this.blockchainMemberName;
     }
 
@@ -30,7 +30,7 @@ public final class ListBlockchainMemberApiKeysArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

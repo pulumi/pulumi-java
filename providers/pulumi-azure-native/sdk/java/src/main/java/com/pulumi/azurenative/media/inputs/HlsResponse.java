@@ -25,7 +25,7 @@ public final class HlsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fragmentsPerTsSegment")
       private final @Nullable Integer fragmentsPerTsSegment;
 
-    public Optional<Integer> getFragmentsPerTsSegment() {
+    public Optional<Integer> fragmentsPerTsSegment() {
         return this.fragmentsPerTsSegment == null ? Optional.empty() : Optional.ofNullable(this.fragmentsPerTsSegment);
     }
 

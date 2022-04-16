@@ -23,7 +23,7 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configStoreName", required=true)
       private final Output<String> configStoreName;
 
-    public Output<String> getConfigStoreName() {
+    public Output<String> configStoreName() {
         return this.configStoreName;
     }
 
@@ -35,7 +35,7 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -46,7 +46,7 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyValueName")
       private final @Nullable Output<String> keyValueName;
 
-    public Output<String> getKeyValueName() {
+    public Output<String> keyValueName() {
         return this.keyValueName == null ? Codegen.empty() : this.keyValueName;
     }
 
@@ -57,7 +57,7 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class KeyValueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

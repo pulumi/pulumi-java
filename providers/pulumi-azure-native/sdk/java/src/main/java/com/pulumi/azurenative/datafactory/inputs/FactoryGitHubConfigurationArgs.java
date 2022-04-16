@@ -27,7 +27,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -49,7 +49,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clientSecret")
       private final @Nullable Output<GitHubClientSecretArgs> clientSecret;
 
-    public Output<GitHubClientSecretArgs> getClientSecret() {
+    public Output<GitHubClientSecretArgs> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -60,7 +60,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="collaborationBranch", required=true)
       private final Output<String> collaborationBranch;
 
-    public Output<String> getCollaborationBranch() {
+    public Output<String> collaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -71,7 +71,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -82,7 +82,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
 
-    public Output<String> getLastCommitId() {
+    public Output<String> lastCommitId() {
         return this.lastCommitId == null ? Codegen.empty() : this.lastCommitId;
     }
 
@@ -93,7 +93,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -104,7 +104,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="rootFolder", required=true)
       private final Output<String> rootFolder;
 
-    public Output<String> getRootFolder() {
+    public Output<String> rootFolder() {
         return this.rootFolder;
     }
 
@@ -116,7 +116,7 @@ public final class FactoryGitHubConfigurationArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

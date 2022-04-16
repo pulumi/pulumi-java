@@ -35,14 +35,14 @@ public final class BootDiagnosticsResponse {
      * Whether boot diagnostics should be enabled on the Virtual Machine.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Uri of the storage account to use for placing the console output and screenshot. <br><br>If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
      * 
     */
-    public Optional<String> getStorageUri() {
+    public Optional<String> storageUri() {
         return Optional.ofNullable(this.storageUri);
     }
 

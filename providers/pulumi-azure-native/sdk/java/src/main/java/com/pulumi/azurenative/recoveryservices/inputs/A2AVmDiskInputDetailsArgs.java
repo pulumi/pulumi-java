@@ -26,7 +26,7 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="diskUri")
       private final @Nullable Output<String> diskUri;
 
-    public Output<String> getDiskUri() {
+    public Output<String> diskUri() {
         return this.diskUri == null ? Codegen.empty() : this.diskUri;
     }
 
@@ -37,7 +37,7 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="primaryStagingAzureStorageAccountId")
       private final @Nullable Output<String> primaryStagingAzureStorageAccountId;
 
-    public Output<String> getPrimaryStagingAzureStorageAccountId() {
+    public Output<String> primaryStagingAzureStorageAccountId() {
         return this.primaryStagingAzureStorageAccountId == null ? Codegen.empty() : this.primaryStagingAzureStorageAccountId;
     }
 
@@ -48,7 +48,7 @@ public final class A2AVmDiskInputDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="recoveryAzureStorageAccountId")
       private final @Nullable Output<String> recoveryAzureStorageAccountId;
 
-    public Output<String> getRecoveryAzureStorageAccountId() {
+    public Output<String> recoveryAzureStorageAccountId() {
         return this.recoveryAzureStorageAccountId == null ? Codegen.empty() : this.recoveryAzureStorageAccountId;
     }
 

@@ -19,7 +19,7 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
     @Import(name="connectionName", required=true)
       private final String connectionName;
 
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
     @Import(name="expressRouteGatewayName", required=true)
       private final String expressRouteGatewayName;
 
-    public String getExpressRouteGatewayName() {
+    public String expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExpressRouteConnectionArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

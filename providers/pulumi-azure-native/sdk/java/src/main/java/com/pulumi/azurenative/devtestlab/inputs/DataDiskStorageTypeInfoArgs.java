@@ -28,7 +28,7 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
     @Import(name="lun")
       private final @Nullable Output<String> lun;
 
-    public Output<String> getLun() {
+    public Output<String> lun() {
         return this.lun == null ? Codegen.empty() : this.lun;
     }
 
@@ -39,7 +39,7 @@ public final class DataDiskStorageTypeInfoArgs extends com.pulumi.resources.Reso
     @Import(name="storageType")
       private final @Nullable Output<Either<String,StorageType>> storageType;
 
-    public Output<Either<String,StorageType>> getStorageType() {
+    public Output<Either<String,StorageType>> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 

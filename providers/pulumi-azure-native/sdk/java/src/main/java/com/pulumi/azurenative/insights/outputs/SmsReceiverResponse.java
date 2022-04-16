@@ -46,28 +46,28 @@ public final class SmsReceiverResponse {
      * The country code of the SMS receiver.
      * 
     */
-    public String getCountryCode() {
+    public String countryCode() {
         return this.countryCode;
     }
     /**
      * The name of the SMS receiver. Names must be unique across all receivers within an action group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The phone number of the SMS receiver.
      * 
     */
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
     /**
      * The status of the receiver.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

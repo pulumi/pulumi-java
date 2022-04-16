@@ -19,7 +19,7 @@ public final class ListMonitorLinkedResourcesArgs extends com.pulumi.resources.I
     @Import(name="monitorName", required=true)
       private final String monitorName;
 
-    public String getMonitorName() {
+    public String monitorName() {
         return this.monitorName;
     }
 
@@ -30,7 +30,7 @@ public final class ListMonitorLinkedResourcesArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

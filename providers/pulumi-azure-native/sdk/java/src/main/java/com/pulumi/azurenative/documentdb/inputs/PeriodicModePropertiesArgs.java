@@ -26,7 +26,7 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="backupIntervalInMinutes")
       private final @Nullable Output<Integer> backupIntervalInMinutes;
 
-    public Output<Integer> getBackupIntervalInMinutes() {
+    public Output<Integer> backupIntervalInMinutes() {
         return this.backupIntervalInMinutes == null ? Codegen.empty() : this.backupIntervalInMinutes;
     }
 
@@ -37,7 +37,7 @@ public final class PeriodicModePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="backupRetentionIntervalInHours")
       private final @Nullable Output<Integer> backupRetentionIntervalInHours;
 
-    public Output<Integer> getBackupRetentionIntervalInHours() {
+    public Output<Integer> backupRetentionIntervalInHours() {
         return this.backupRetentionIntervalInHours == null ? Codegen.empty() : this.backupRetentionIntervalInHours;
     }
 

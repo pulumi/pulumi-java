@@ -35,14 +35,14 @@ public final class AdditionalErrorInfoResponse {
      * Additional error info.
      * 
     */
-    public Optional<Object> getInfo() {
+    public Optional<Object> info() {
         return Optional.ofNullable(this.info);
     }
     /**
      * Additional error type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

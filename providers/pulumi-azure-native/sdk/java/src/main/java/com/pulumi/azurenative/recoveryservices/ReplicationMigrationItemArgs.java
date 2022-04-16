@@ -23,7 +23,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
     @Import(name="migrationItemName")
       private final @Nullable Output<String> migrationItemName;
 
-    public Output<String> getMigrationItemName() {
+    public Output<String> migrationItemName() {
         return this.migrationItemName == null ? Codegen.empty() : this.migrationItemName;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
     @Import(name="properties", required=true)
       private final Output<EnableMigrationInputPropertiesArgs> properties;
 
-    public Output<EnableMigrationInputPropertiesArgs> getProperties() {
+    public Output<EnableMigrationInputPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
 
-    public Output<String> getProtectionContainerName() {
+    public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ReplicationMigrationItemArgs extends com.pulumi.resources.Res
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

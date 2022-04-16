@@ -32,7 +32,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="command", required=true)
       private final Output<Object> command;
 
-    public Output<Object> getCommand() {
+    public Output<Object> command() {
         return this.command;
     }
 
@@ -43,7 +43,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="commandTimeout")
       private final @Nullable Output<Object> commandTimeout;
 
-    public Output<Object> getCommandTimeout() {
+    public Output<Object> commandTimeout() {
         return this.commandTimeout == null ? Codegen.empty() : this.commandTimeout;
     }
 
@@ -54,7 +54,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -65,7 +65,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -87,7 +87,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -98,7 +98,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -110,7 +110,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -121,7 +121,7 @@ public final class AzureDataExplorerCommandActivityArgs extends com.pulumi.resou
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

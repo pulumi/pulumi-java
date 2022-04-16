@@ -35,7 +35,7 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
     @Import(name="configuration", required=true)
       private final Output<Object> configuration;
 
-    public Output<Object> getConfiguration() {
+    public Output<Object> configuration() {
         return this.configuration;
     }
 
@@ -46,7 +46,7 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class ContentKeyPolicyOptionArgs extends com.pulumi.resources.Resou
     @Import(name="restriction", required=true)
       private final Output<Object> restriction;
 
-    public Output<Object> getRestriction() {
+    public Output<Object> restriction() {
         return this.restriction;
     }
 

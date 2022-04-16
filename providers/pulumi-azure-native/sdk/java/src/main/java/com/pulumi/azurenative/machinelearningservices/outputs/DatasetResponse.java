@@ -108,84 +108,84 @@ public final class DatasetResponse {
      * The dataset creation time (UTC).
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Unique Dataset identifier.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * Dataset state
      * 
     */
-    public Optional<DatasetStateResponse> getDatasetState() {
+    public Optional<DatasetStateResponse> datasetState() {
         return Optional.ofNullable(this.datasetState);
     }
     /**
      * Dataset Type.
      * 
     */
-    public String getDatasetType() {
+    public String datasetType() {
         return this.datasetType;
     }
     /**
      * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
      * 
     */
-    public String getDefaultCompute() {
+    public String defaultCompute() {
         return this.defaultCompute;
     }
     /**
      * Description about this dataset version.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * eTag description
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Flag to hide Dataset in UI
      * 
     */
-    public Boolean getIsVisible() {
+    public Boolean isVisible() {
         return this.isVisible;
     }
     /**
      * Last created Dataset definition.
      * 
     */
-    public Optional<DatasetResponseLatest> getLatest() {
+    public Optional<DatasetResponseLatest> latest() {
         return Optional.ofNullable(this.latest);
     }
     /**
      * The dataset last modified time (UTC).
      * 
     */
-    public String getModifiedTime() {
+    public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
      * Unique dataset name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Tags for this dataset version.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

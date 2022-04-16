@@ -234,203 +234,203 @@ public final class GetVirtualNetworkGatewayConnectionResult {
      * The authorizationKey.
      * 
     */
-    public Optional<String> getAuthorizationKey() {
+    public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * The connection mode for this connection.
      * 
     */
-    public Optional<String> getConnectionMode() {
+    public Optional<String> connectionMode() {
         return Optional.ofNullable(this.connectionMode);
     }
     /**
      * Connection protocol used for this connection.
      * 
     */
-    public Optional<String> getConnectionProtocol() {
+    public Optional<String> connectionProtocol() {
         return Optional.ofNullable(this.connectionProtocol);
     }
     /**
      * Virtual Network Gateway connection status.
      * 
     */
-    public String getConnectionStatus() {
+    public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
      * Gateway connection type.
      * 
     */
-    public String getConnectionType() {
+    public String connectionType() {
         return this.connectionType;
     }
     /**
      * The dead peer detection timeout of this connection in seconds.
      * 
     */
-    public Optional<Integer> getDpdTimeoutSeconds() {
+    public Optional<Integer> dpdTimeoutSeconds() {
         return Optional.ofNullable(this.dpdTimeoutSeconds);
     }
     /**
      * The egress bytes transferred in this connection.
      * 
     */
-    public Double getEgressBytesTransferred() {
+    public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * EnableBgp flag.
      * 
     */
-    public Optional<Boolean> getEnableBgp() {
+    public Optional<Boolean> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Bypass ExpressRoute Gateway for data forwarding.
      * 
     */
-    public Optional<Boolean> getExpressRouteGatewayBypass() {
+    public Optional<Boolean> expressRouteGatewayBypass() {
         return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The ingress bytes transferred in this connection.
      * 
     */
-    public Double getIngressBytesTransferred() {
+    public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The IPSec Policies to be considered by this connection.
      * 
     */
-    public List<IpsecPolicyResponse> getIpsecPolicies() {
+    public List<IpsecPolicyResponse> ipsecPolicies() {
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
     }
     /**
      * The reference to local network gateway resource.
      * 
     */
-    public Optional<LocalNetworkGatewayResponse> getLocalNetworkGateway2() {
+    public Optional<LocalNetworkGatewayResponse> localNetworkGateway2() {
         return Optional.ofNullable(this.localNetworkGateway2);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The reference to peerings resource.
      * 
     */
-    public Optional<SubResourceResponse> getPeer() {
+    public Optional<SubResourceResponse> peer() {
         return Optional.ofNullable(this.peer);
     }
     /**
      * The provisioning state of the virtual network gateway connection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the virtual network gateway connection resource.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The routing weight.
      * 
     */
-    public Optional<Integer> getRoutingWeight() {
+    public Optional<Integer> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
     /**
      * The IPSec shared key.
      * 
     */
-    public Optional<String> getSharedKey() {
+    public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The Traffic Selector Policies to be considered by this connection.
      * 
     */
-    public List<TrafficSelectorPolicyResponse> getTrafficSelectorPolicies() {
+    public List<TrafficSelectorPolicyResponse> trafficSelectorPolicies() {
         return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
     }
     /**
      * Collection of all tunnels' connection health status.
      * 
     */
-    public List<TunnelConnectionHealthResponse> getTunnelConnectionStatus() {
+    public List<TunnelConnectionHealthResponse> tunnelConnectionStatus() {
         return this.tunnelConnectionStatus;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Use private local Azure IP for the connection.
      * 
     */
-    public Optional<Boolean> getUseLocalAzureIpAddress() {
+    public Optional<Boolean> useLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
     /**
      * Enable policy-based traffic selectors.
      * 
     */
-    public Optional<Boolean> getUsePolicyBasedTrafficSelectors() {
+    public Optional<Boolean> usePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
     /**
      * The reference to virtual network gateway resource.
      * 
     */
-    public VirtualNetworkGatewayResponse getVirtualNetworkGateway1() {
+    public VirtualNetworkGatewayResponse virtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
     }
     /**
      * The reference to virtual network gateway resource.
      * 
     */
-    public Optional<VirtualNetworkGatewayResponse> getVirtualNetworkGateway2() {
+    public Optional<VirtualNetworkGatewayResponse> virtualNetworkGateway2() {
         return Optional.ofNullable(this.virtualNetworkGateway2);
     }
 

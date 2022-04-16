@@ -19,7 +19,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
     @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
 
-    public String getAttachedDatabaseConfigurationName() {
+    public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

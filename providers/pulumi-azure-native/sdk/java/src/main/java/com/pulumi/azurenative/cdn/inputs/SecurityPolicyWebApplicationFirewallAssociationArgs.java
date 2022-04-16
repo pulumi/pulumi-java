@@ -28,7 +28,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
     @Import(name="domains")
       private final @Nullable Output<List<ResourceReferenceArgs>> domains;
 
-    public Output<List<ResourceReferenceArgs>> getDomains() {
+    public Output<List<ResourceReferenceArgs>> domains() {
         return this.domains == null ? Codegen.empty() : this.domains;
     }
 
@@ -39,7 +39,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends c
     @Import(name="patternsToMatch")
       private final @Nullable Output<List<String>> patternsToMatch;
 
-    public Output<List<String>> getPatternsToMatch() {
+    public Output<List<String>> patternsToMatch() {
         return this.patternsToMatch == null ? Codegen.empty() : this.patternsToMatch;
     }
 

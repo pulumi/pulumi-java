@@ -43,21 +43,21 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
      * Resource ID of the virtual machine that is linked to this policy
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Port configurations for the virtual machine
      * 
     */
-    public List<JitNetworkAccessPortRuleResponse> getPorts() {
+    public List<JitNetworkAccessPortRuleResponse> ports() {
         return this.ports;
     }
     /**
      * Public IP address of the Azure Firewall that is linked to this policy, if applicable
      * 
     */
-    public Optional<String> getPublicIpAddress() {
+    public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
 

@@ -26,7 +26,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deserializer")
       private final @Nullable Object deserializer;
 
-    public Optional<Object> getDeserializer() {
+    public Optional<Object> deserializer() {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
     }
 
@@ -37,7 +37,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encodingName")
       private final @Nullable Object encodingName;
 
-    public Optional<Object> getEncodingName() {
+    public Optional<Object> encodingName() {
         return this.encodingName == null ? Optional.empty() : Optional.ofNullable(this.encodingName);
     }
 
@@ -48,7 +48,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filePattern")
       private final @Nullable Object filePattern;
 
-    public Optional<Object> getFilePattern() {
+    public Optional<Object> filePattern() {
         return this.filePattern == null ? Optional.empty() : Optional.ofNullable(this.filePattern);
     }
 
@@ -59,7 +59,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jsonNodeReference")
       private final @Nullable Object jsonNodeReference;
 
-    public Optional<Object> getJsonNodeReference() {
+    public Optional<Object> jsonNodeReference() {
         return this.jsonNodeReference == null ? Optional.empty() : Optional.ofNullable(this.jsonNodeReference);
     }
 
@@ -70,7 +70,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jsonPathDefinition")
       private final @Nullable Object jsonPathDefinition;
 
-    public Optional<Object> getJsonPathDefinition() {
+    public Optional<Object> jsonPathDefinition() {
         return this.jsonPathDefinition == null ? Optional.empty() : Optional.ofNullable(this.jsonPathDefinition);
     }
 
@@ -81,7 +81,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nestingSeparator")
       private final @Nullable Object nestingSeparator;
 
-    public Optional<Object> getNestingSeparator() {
+    public Optional<Object> nestingSeparator() {
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
     }
 
@@ -92,7 +92,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serializer")
       private final @Nullable Object serializer;
 
-    public Optional<Object> getSerializer() {
+    public Optional<Object> serializer() {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
     }
 
@@ -104,7 +104,7 @@ public final class JsonFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

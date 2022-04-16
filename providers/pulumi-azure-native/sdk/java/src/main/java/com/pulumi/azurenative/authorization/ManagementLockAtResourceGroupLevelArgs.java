@@ -26,7 +26,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="level", required=true)
       private final Output<Either<String,LockLevel>> level;
 
-    public Output<Either<String,LockLevel>> getLevel() {
+    public Output<Either<String,LockLevel>> level() {
         return this.level;
     }
 
@@ -37,7 +37,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="lockName")
       private final @Nullable Output<String> lockName;
 
-    public Output<String> getLockName() {
+    public Output<String> lockName() {
         return this.lockName == null ? Codegen.empty() : this.lockName;
     }
 
@@ -48,7 +48,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
+    public Output<String> notes() {
         return this.notes == null ? Codegen.empty() : this.notes;
     }
 
@@ -59,7 +59,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="owners")
       private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
-    public Output<List<ManagementLockOwnerArgs>> getOwners() {
+    public Output<List<ManagementLockOwnerArgs>> owners() {
         return this.owners == null ? Codegen.empty() : this.owners;
     }
 
@@ -70,7 +70,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

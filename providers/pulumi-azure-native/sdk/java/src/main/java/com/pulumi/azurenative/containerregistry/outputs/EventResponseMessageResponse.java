@@ -56,35 +56,35 @@ public final class EventResponseMessageResponse {
      * The content of the event response message.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The headers of the event response message.
      * 
     */
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * The reason phrase of the event response message.
      * 
     */
-    public Optional<String> getReasonPhrase() {
+    public Optional<String> reasonPhrase() {
         return Optional.ofNullable(this.reasonPhrase);
     }
     /**
      * The status code of the event response message.
      * 
     */
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
     /**
      * The HTTP message version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

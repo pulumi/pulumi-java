@@ -25,7 +25,7 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
     @Import(name="actions")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse actions;
 
-    public Optional<FlowAccessControlConfigurationPolicyResponse> getActions() {
+    public Optional<FlowAccessControlConfigurationPolicyResponse> actions() {
         return this.actions == null ? Optional.empty() : Optional.ofNullable(this.actions);
     }
 
@@ -36,7 +36,7 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
     @Import(name="contents")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse contents;
 
-    public Optional<FlowAccessControlConfigurationPolicyResponse> getContents() {
+    public Optional<FlowAccessControlConfigurationPolicyResponse> contents() {
         return this.contents == null ? Optional.empty() : Optional.ofNullable(this.contents);
     }
 
@@ -47,7 +47,7 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
     @Import(name="triggers")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse triggers;
 
-    public Optional<FlowAccessControlConfigurationPolicyResponse> getTriggers() {
+    public Optional<FlowAccessControlConfigurationPolicyResponse> triggers() {
         return this.triggers == null ? Optional.empty() : Optional.ofNullable(this.triggers);
     }
 
@@ -58,7 +58,7 @@ public final class FlowAccessControlConfigurationResponse extends com.pulumi.res
     @Import(name="workflowManagement")
       private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
-    public Optional<FlowAccessControlConfigurationPolicyResponse> getWorkflowManagement() {
+    public Optional<FlowAccessControlConfigurationPolicyResponse> workflowManagement() {
         return this.workflowManagement == null ? Optional.empty() : Optional.ofNullable(this.workflowManagement);
     }
 

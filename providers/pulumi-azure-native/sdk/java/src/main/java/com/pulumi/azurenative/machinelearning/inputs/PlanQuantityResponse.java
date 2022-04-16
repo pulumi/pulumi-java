@@ -24,7 +24,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="allowance", required=true)
       private final Double allowance;
 
-    public Double getAllowance() {
+    public Double allowance() {
         return this.allowance;
     }
 
@@ -35,7 +35,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="amount", required=true)
       private final Double amount;
 
-    public Double getAmount() {
+    public Double amount() {
         return this.amount;
     }
 
@@ -46,7 +46,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="includedQuantityMeter", required=true)
       private final String includedQuantityMeter;
 
-    public String getIncludedQuantityMeter() {
+    public String includedQuantityMeter() {
         return this.includedQuantityMeter;
     }
 
@@ -57,7 +57,7 @@ public final class PlanQuantityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="overageMeter", required=true)
       private final String overageMeter;
 
-    public String getOverageMeter() {
+    public String overageMeter() {
         return this.overageMeter;
     }
 

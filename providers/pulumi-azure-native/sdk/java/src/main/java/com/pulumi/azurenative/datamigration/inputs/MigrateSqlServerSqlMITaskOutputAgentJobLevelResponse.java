@@ -22,7 +22,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -33,7 +33,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
 
@@ -44,7 +44,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -55,7 +55,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -66,7 +66,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -77,7 +77,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -100,7 +100,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -111,7 +111,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

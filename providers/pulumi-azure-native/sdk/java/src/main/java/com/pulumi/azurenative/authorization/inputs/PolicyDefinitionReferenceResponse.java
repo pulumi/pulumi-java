@@ -28,7 +28,7 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="groupNames")
       private final @Nullable List<String> groupNames;
 
-    public List<String> getGroupNames() {
+    public List<String> groupNames() {
         return this.groupNames == null ? List.of() : this.groupNames;
     }
 
@@ -39,7 +39,7 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterValuesValueResponse> parameters;
 
-    public Map<String,ParameterValuesValueResponse> getParameters() {
+    public Map<String,ParameterValuesValueResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="policyDefinitionId", required=true)
       private final String policyDefinitionId;
 
-    public String getPolicyDefinitionId() {
+    public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
 
@@ -61,7 +61,7 @@ public final class PolicyDefinitionReferenceResponse extends com.pulumi.resource
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable String policyDefinitionReferenceId;
 
-    public Optional<String> getPolicyDefinitionReferenceId() {
+    public Optional<String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 

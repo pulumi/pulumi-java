@@ -118,21 +118,21 @@ public final class GcpCredentialsDetailsPropertiesResponse {
      * Auth provider x509 certificate URL field of the API key (write only)
      * 
     */
-    public String getAuthProviderX509CertUrl() {
+    public String authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
     /**
      * Auth URI field of the API key (write only)
      * 
     */
-    public String getAuthUri() {
+    public String authUri() {
         return this.authUri;
     }
     /**
      * State of the multi-cloud connector
      * 
     */
-    public String getAuthenticationProvisioningState() {
+    public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
     /**
@@ -140,77 +140,77 @@ public final class GcpCredentialsDetailsPropertiesResponse {
      * Expected value is 'gcpCredentials'.
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * Client email field of the API key (write only)
      * 
     */
-    public String getClientEmail() {
+    public String clientEmail() {
         return this.clientEmail;
     }
     /**
      * Client ID field of the API key (write only)
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * Client x509 certificate URL field of the API key (write only)
      * 
     */
-    public String getClientX509CertUrl() {
+    public String clientX509CertUrl() {
         return this.clientX509CertUrl;
     }
     /**
      * The permissions detected in the cloud account.
      * 
     */
-    public List<String> getGrantedPermissions() {
+    public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
     /**
      * The organization ID of the GCP cloud account
      * 
     */
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
     /**
      * Private key field of the API key (write only)
      * 
     */
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
     /**
      * Private key ID field of the API key (write only)
      * 
     */
-    public String getPrivateKeyId() {
+    public String privateKeyId() {
         return this.privateKeyId;
     }
     /**
      * Project ID field of the API key (write only)
      * 
     */
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
     /**
      * Token URI field of the API key (write only)
      * 
     */
-    public String getTokenUri() {
+    public String tokenUri() {
         return this.tokenUri;
     }
     /**
      * Type field of the API key (write only)
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

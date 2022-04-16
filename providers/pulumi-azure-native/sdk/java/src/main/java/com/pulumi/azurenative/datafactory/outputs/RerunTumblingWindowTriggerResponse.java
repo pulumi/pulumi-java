@@ -80,49 +80,49 @@ public final class RerunTumblingWindowTriggerResponse {
      * List of tags that can be used for describing the trigger.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Trigger description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The parent trigger reference.
      * 
     */
-    public Object getParentTrigger() {
+    public Object parentTrigger() {
         return this.parentTrigger;
     }
     /**
      * The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
      * 
     */
-    public String getRequestedEndTime() {
+    public String requestedEndTime() {
         return this.requestedEndTime;
     }
     /**
      * The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
      * 
     */
-    public String getRequestedStartTime() {
+    public String requestedStartTime() {
         return this.requestedStartTime;
     }
     /**
      * The max number of parallel time windows (ready for execution) for which a rerun is triggered.
      * 
     */
-    public Integer getRerunConcurrency() {
+    public Integer rerunConcurrency() {
         return this.rerunConcurrency;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
     */
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
     /**
@@ -130,7 +130,7 @@ public final class RerunTumblingWindowTriggerResponse {
      * Expected value is 'RerunTumblingWindowTrigger'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

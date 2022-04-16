@@ -25,7 +25,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="formulaContent")
       private final @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
 
-    public Output<LabVirtualMachineCreationParameterArgs> getFormulaContent() {
+    public Output<LabVirtualMachineCreationParameterArgs> formulaContent() {
         return this.formulaContent == null ? Codegen.empty() : this.formulaContent;
     }
 
@@ -47,7 +47,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -58,7 +58,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<String> osType;
 
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -91,7 +91,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class FormulaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vm")
       private final @Nullable Output<FormulaPropertiesFromVmArgs> vm;
 
-    public Output<FormulaPropertiesFromVmArgs> getVm() {
+    public Output<FormulaPropertiesFromVmArgs> vm() {
         return this.vm == null ? Codegen.empty() : this.vm;
     }
 

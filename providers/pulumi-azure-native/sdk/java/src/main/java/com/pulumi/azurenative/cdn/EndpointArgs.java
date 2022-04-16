@@ -35,7 +35,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentTypesToCompress")
       private final @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Output<List<String>> getContentTypesToCompress() {
+    public Output<List<String>> contentTypesToCompress() {
         return this.contentTypesToCompress == null ? Codegen.empty() : this.contentTypesToCompress;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultOriginGroup")
       private final @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
 
-    public Output<ResourceReferenceArgs> getDefaultOriginGroup() {
+    public Output<ResourceReferenceArgs> defaultOriginGroup() {
         return this.defaultOriginGroup == null ? Codegen.empty() : this.defaultOriginGroup;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deliveryPolicy")
       private final @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
 
-    public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> getDeliveryPolicy() {
+    public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy() {
         return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="geoFilters")
       private final @Nullable Output<List<GeoFilterArgs>> geoFilters;
 
-    public Output<List<GeoFilterArgs>> getGeoFilters() {
+    public Output<List<GeoFilterArgs>> geoFilters() {
         return this.geoFilters == null ? Codegen.empty() : this.geoFilters;
     }
 
@@ -90,7 +90,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isCompressionEnabled")
       private final @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Output<Boolean> getIsCompressionEnabled() {
+    public Output<Boolean> isCompressionEnabled() {
         return this.isCompressionEnabled == null ? Codegen.empty() : this.isCompressionEnabled;
     }
 
@@ -101,7 +101,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isHttpAllowed")
       private final @Nullable Output<Boolean> isHttpAllowed;
 
-    public Output<Boolean> getIsHttpAllowed() {
+    public Output<Boolean> isHttpAllowed() {
         return this.isHttpAllowed == null ? Codegen.empty() : this.isHttpAllowed;
     }
 
@@ -112,7 +112,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isHttpsAllowed")
       private final @Nullable Output<Boolean> isHttpsAllowed;
 
-    public Output<Boolean> getIsHttpsAllowed() {
+    public Output<Boolean> isHttpsAllowed() {
         return this.isHttpsAllowed == null ? Codegen.empty() : this.isHttpsAllowed;
     }
 
@@ -123,7 +123,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -134,7 +134,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="optimizationType")
       private final @Nullable Output<Either<String,OptimizationType>> optimizationType;
 
-    public Output<Either<String,OptimizationType>> getOptimizationType() {
+    public Output<Either<String,OptimizationType>> optimizationType() {
         return this.optimizationType == null ? Codegen.empty() : this.optimizationType;
     }
 
@@ -145,7 +145,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originGroups")
       private final @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
 
-    public Output<List<DeepCreatedOriginGroupArgs>> getOriginGroups() {
+    public Output<List<DeepCreatedOriginGroupArgs>> originGroups() {
         return this.originGroups == null ? Codegen.empty() : this.originGroups;
     }
 
@@ -156,7 +156,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
-    public Output<String> getOriginHostHeader() {
+    public Output<String> originHostHeader() {
         return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
     }
 
@@ -167,7 +167,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
-    public Output<String> getOriginPath() {
+    public Output<String> originPath() {
         return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
@@ -178,7 +178,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="origins", required=true)
       private final Output<List<DeepCreatedOriginArgs>> origins;
 
-    public Output<List<DeepCreatedOriginArgs>> getOrigins() {
+    public Output<List<DeepCreatedOriginArgs>> origins() {
         return this.origins;
     }
 
@@ -189,7 +189,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="probePath")
       private final @Nullable Output<String> probePath;
 
-    public Output<String> getProbePath() {
+    public Output<String> probePath() {
         return this.probePath == null ? Codegen.empty() : this.probePath;
     }
 
@@ -200,7 +200,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -211,7 +211,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryStringCachingBehavior")
       private final @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
 
-    public Output<QueryStringCachingBehavior> getQueryStringCachingBehavior() {
+    public Output<QueryStringCachingBehavior> queryStringCachingBehavior() {
         return this.queryStringCachingBehavior == null ? Codegen.empty() : this.queryStringCachingBehavior;
     }
 
@@ -222,7 +222,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -233,7 +233,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -244,7 +244,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlSigningKeys")
       private final @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
 
-    public Output<List<UrlSigningKeyArgs>> getUrlSigningKeys() {
+    public Output<List<UrlSigningKeyArgs>> urlSigningKeys() {
         return this.urlSigningKeys == null ? Codegen.empty() : this.urlSigningKeys;
     }
 
@@ -255,7 +255,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
+    public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Codegen.empty() : this.webApplicationFirewallPolicyLink;
     }
 

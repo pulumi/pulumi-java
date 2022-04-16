@@ -23,7 +23,7 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelingJobId")
       private final @Nullable Output<String> labelingJobId;
 
-    public Output<String> getLabelingJobId() {
+    public Output<String> labelingJobId() {
         return this.labelingJobId == null ? Codegen.empty() : this.labelingJobId;
     }
 
@@ -34,7 +34,7 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<LabelingJobPropertiesArgs> properties;
 
-    public Output<LabelingJobPropertiesArgs> getProperties() {
+    public Output<LabelingJobPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

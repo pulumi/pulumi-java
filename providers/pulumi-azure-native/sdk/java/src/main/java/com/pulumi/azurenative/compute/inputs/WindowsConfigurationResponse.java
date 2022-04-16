@@ -30,7 +30,7 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="additionalUnattendContent")
       private final @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent;
 
-    public List<AdditionalUnattendContentResponse> getAdditionalUnattendContent() {
+    public List<AdditionalUnattendContentResponse> additionalUnattendContent() {
         return this.additionalUnattendContent == null ? List.of() : this.additionalUnattendContent;
     }
 
@@ -41,7 +41,7 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="enableAutomaticUpdates")
       private final @Nullable Boolean enableAutomaticUpdates;
 
-    public Optional<Boolean> getEnableAutomaticUpdates() {
+    public Optional<Boolean> enableAutomaticUpdates() {
         return this.enableAutomaticUpdates == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpdates);
     }
 
@@ -52,7 +52,7 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="patchSettings")
       private final @Nullable PatchSettingsResponse patchSettings;
 
-    public Optional<PatchSettingsResponse> getPatchSettings() {
+    public Optional<PatchSettingsResponse> patchSettings() {
         return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
     }
 
@@ -63,7 +63,7 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="provisionVMAgent")
       private final @Nullable Boolean provisionVMAgent;
 
-    public Optional<Boolean> getProvisionVMAgent() {
+    public Optional<Boolean> provisionVMAgent() {
         return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
     }
 
@@ -74,7 +74,7 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 
@@ -85,7 +85,7 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="winRM")
       private final @Nullable WinRMConfigurationResponse winRM;
 
-    public Optional<WinRMConfigurationResponse> getWinRM() {
+    public Optional<WinRMConfigurationResponse> winRM() {
         return this.winRM == null ? Optional.empty() : Optional.ofNullable(this.winRM);
     }
 

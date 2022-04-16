@@ -25,7 +25,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxDatabaseName", required=true)
       private final String adxDatabaseName;
 
-    public String getAdxDatabaseName() {
+    public String adxDatabaseName() {
         return this.adxDatabaseName;
     }
 
@@ -36,7 +36,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxEndpointUri", required=true)
       private final String adxEndpointUri;
 
-    public String getAdxEndpointUri() {
+    public String adxEndpointUri() {
         return this.adxEndpointUri;
     }
 
@@ -47,7 +47,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxResourceId", required=true)
       private final String adxResourceId;
 
-    public String getAdxResourceId() {
+    public String adxResourceId() {
         return this.adxResourceId;
     }
 
@@ -58,7 +58,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxTableName")
       private final @Nullable String adxTableName;
 
-    public Optional<String> getAdxTableName() {
+    public Optional<String> adxTableName() {
         return this.adxTableName == null ? Optional.empty() : Optional.ofNullable(this.adxTableName);
     }
 
@@ -70,7 +70,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="connectionType", required=true)
       private final String connectionType;
 
-    public String getConnectionType() {
+    public String connectionType() {
         return this.connectionType;
     }
 
@@ -81,7 +81,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubConsumerGroup")
       private final @Nullable String eventHubConsumerGroup;
 
-    public Optional<String> getEventHubConsumerGroup() {
+    public Optional<String> eventHubConsumerGroup() {
         return this.eventHubConsumerGroup == null ? Optional.empty() : Optional.ofNullable(this.eventHubConsumerGroup);
     }
 
@@ -92,7 +92,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubEndpointUri", required=true)
       private final String eventHubEndpointUri;
 
-    public String getEventHubEndpointUri() {
+    public String eventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
 
@@ -103,7 +103,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubEntityPath", required=true)
       private final String eventHubEntityPath;
 
-    public String getEventHubEntityPath() {
+    public String eventHubEntityPath() {
         return this.eventHubEntityPath;
     }
 
@@ -114,7 +114,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubNamespaceResourceId", required=true)
       private final String eventHubNamespaceResourceId;
 
-    public String getEventHubNamespaceResourceId() {
+    public String eventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
 
@@ -125,7 +125,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

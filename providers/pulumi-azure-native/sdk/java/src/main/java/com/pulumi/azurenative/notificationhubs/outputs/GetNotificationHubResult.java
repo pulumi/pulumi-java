@@ -128,98 +128,98 @@ public final class GetNotificationHubResult {
      * The AdmCredential of the created NotificationHub
      * 
     */
-    public Optional<AdmCredentialResponse> getAdmCredential() {
+    public Optional<AdmCredentialResponse> admCredential() {
         return Optional.ofNullable(this.admCredential);
     }
     /**
      * The ApnsCredential of the created NotificationHub
      * 
     */
-    public Optional<ApnsCredentialResponse> getApnsCredential() {
+    public Optional<ApnsCredentialResponse> apnsCredential() {
         return Optional.ofNullable(this.apnsCredential);
     }
     /**
      * The AuthorizationRules of the created NotificationHub
      * 
     */
-    public List<SharedAccessAuthorizationRulePropertiesResponse> getAuthorizationRules() {
+    public List<SharedAccessAuthorizationRulePropertiesResponse> authorizationRules() {
         return this.authorizationRules == null ? List.of() : this.authorizationRules;
     }
     /**
      * The BaiduCredential of the created NotificationHub
      * 
     */
-    public Optional<BaiduCredentialResponse> getBaiduCredential() {
+    public Optional<BaiduCredentialResponse> baiduCredential() {
         return Optional.ofNullable(this.baiduCredential);
     }
     /**
      * The GcmCredential of the created NotificationHub
      * 
     */
-    public Optional<GcmCredentialResponse> getGcmCredential() {
+    public Optional<GcmCredentialResponse> gcmCredential() {
         return Optional.ofNullable(this.gcmCredential);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The MpnsCredential of the created NotificationHub
      * 
     */
-    public Optional<MpnsCredentialResponse> getMpnsCredential() {
+    public Optional<MpnsCredentialResponse> mpnsCredential() {
         return Optional.ofNullable(this.mpnsCredential);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The RegistrationTtl of the created NotificationHub
      * 
     */
-    public Optional<String> getRegistrationTtl() {
+    public Optional<String> registrationTtl() {
         return Optional.ofNullable(this.registrationTtl);
     }
     /**
      * The sku of the created namespace
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The WnsCredential of the created NotificationHub
      * 
     */
-    public Optional<WnsCredentialResponse> getWnsCredential() {
+    public Optional<WnsCredentialResponse> wnsCredential() {
         return Optional.ofNullable(this.wnsCredential);
     }
 

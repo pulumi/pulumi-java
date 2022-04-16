@@ -19,7 +19,7 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobScheduleId", required=true)
       private final String jobScheduleId;
 
-    public String getJobScheduleId() {
+    public String jobScheduleId() {
         return this.jobScheduleId;
     }
 
@@ -41,7 +41,7 @@ public final class GetJobScheduleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

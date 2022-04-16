@@ -26,7 +26,7 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -37,7 +37,7 @@ public final class BuildpackBindingLaunchPropertiesResponse extends com.pulumi.r
     @Import(name="secrets")
       private final @Nullable Map<String,String> secrets;
 
-    public Map<String,String> getSecrets() {
+    public Map<String,String> secrets() {
         return this.secrets == null ? Map.of() : this.secrets;
     }
 

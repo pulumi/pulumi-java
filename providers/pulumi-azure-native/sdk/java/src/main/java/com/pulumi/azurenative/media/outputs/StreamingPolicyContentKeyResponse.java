@@ -43,21 +43,21 @@ public final class StreamingPolicyContentKeyResponse {
      * Label can be used to specify Content Key when creating a Streaming Locator
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Policy used by Content Key
      * 
     */
-    public Optional<String> getPolicyName() {
+    public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
     /**
      * Tracks which use this content key
      * 
     */
-    public List<TrackSelectionResponse> getTracks() {
+    public List<TrackSelectionResponse> tracks() {
         return this.tracks == null ? List.of() : this.tracks;
     }
 

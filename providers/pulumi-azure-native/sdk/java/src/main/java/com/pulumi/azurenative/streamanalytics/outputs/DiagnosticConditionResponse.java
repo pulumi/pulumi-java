@@ -39,21 +39,21 @@ public final class DiagnosticConditionResponse {
      * The opaque diagnostic code.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
      * 
     */
-    public String getSince() {
+    public String since() {
         return this.since;
     }
 

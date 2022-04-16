@@ -27,7 +27,7 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     @Import(name="agreedAt")
       private final @Nullable Output<String> agreedAt;
 
-    public Output<String> getAgreedAt() {
+    public Output<String> agreedAt() {
         return this.agreedAt == null ? Codegen.empty() : this.agreedAt;
     }
 
@@ -38,7 +38,7 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     @Import(name="agreedBy")
       private final @Nullable Output<String> agreedBy;
 
-    public Output<String> getAgreedBy() {
+    public Output<String> agreedBy() {
         return this.agreedBy == null ? Codegen.empty() : this.agreedBy;
     }
 
@@ -49,7 +49,7 @@ public final class DomainPurchaseConsentArgs extends com.pulumi.resources.Resour
     @Import(name="agreementKeys")
       private final @Nullable Output<List<String>> agreementKeys;
 
-    public Output<List<String>> getAgreementKeys() {
+    public Output<List<String>> agreementKeys() {
         return this.agreementKeys == null ? Codegen.empty() : this.agreementKeys;
     }
 

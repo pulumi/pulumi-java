@@ -83,63 +83,63 @@ public final class ShippingInformationResponse {
      * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
      * 
     */
-    public String getAdditionalInformation() {
+    public String additionalInformation() {
         return this.additionalInformation;
     }
     /**
      * The city name to use when returning the drives.
      * 
     */
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country or region to use when returning the drives.
      * 
     */
-    public Optional<String> getCountryOrRegion() {
+    public Optional<String> countryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
     /**
      * Phone number of the recipient of the returned drives.
      * 
     */
-    public Optional<String> getPhone() {
+    public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * The postal code to use when returning the drives.
      * 
     */
-    public Optional<String> getPostalCode() {
+    public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The name of the recipient who will receive the hard drives when they are returned.
      * 
     */
-    public Optional<String> getRecipientName() {
+    public Optional<String> recipientName() {
         return Optional.ofNullable(this.recipientName);
     }
     /**
      * The state or province to use when returning the drives.
      * 
     */
-    public Optional<String> getStateOrProvince() {
+    public Optional<String> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
      * The first line of the street address to use when returning the drives.
      * 
     */
-    public Optional<String> getStreetAddress1() {
+    public Optional<String> streetAddress1() {
         return Optional.ofNullable(this.streetAddress1);
     }
     /**
      * The second line of the street address to use when returning the drives.
      * 
     */
-    public Optional<String> getStreetAddress2() {
+    public Optional<String> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
 

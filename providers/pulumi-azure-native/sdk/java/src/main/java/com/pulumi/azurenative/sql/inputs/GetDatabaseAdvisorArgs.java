@@ -19,7 +19,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="advisorName", required=true)
       private final String advisorName;
 
-    public String getAdvisorName() {
+    public String advisorName() {
         return this.advisorName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetDatabaseAdvisorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

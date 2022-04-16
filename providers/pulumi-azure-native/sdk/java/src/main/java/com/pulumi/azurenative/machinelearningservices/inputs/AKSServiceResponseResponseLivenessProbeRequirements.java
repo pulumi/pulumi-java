@@ -25,7 +25,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
 
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
     }
 
@@ -36,7 +36,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="initialDelaySeconds")
       private final @Nullable Integer initialDelaySeconds;
 
-    public Optional<Integer> getInitialDelaySeconds() {
+    public Optional<Integer> initialDelaySeconds() {
         return this.initialDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.initialDelaySeconds);
     }
 
@@ -47,7 +47,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="periodSeconds")
       private final @Nullable Integer periodSeconds;
 
-    public Optional<Integer> getPeriodSeconds() {
+    public Optional<Integer> periodSeconds() {
         return this.periodSeconds == null ? Optional.empty() : Optional.ofNullable(this.periodSeconds);
     }
 
@@ -58,7 +58,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
 
-    public Optional<Integer> getSuccessThreshold() {
+    public Optional<Integer> successThreshold() {
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
     }
 
@@ -69,7 +69,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
     }
 

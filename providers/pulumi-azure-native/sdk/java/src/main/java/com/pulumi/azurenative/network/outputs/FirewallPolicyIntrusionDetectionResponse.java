@@ -35,14 +35,14 @@ public final class FirewallPolicyIntrusionDetectionResponse {
      * Intrusion detection configuration properties.
      * 
     */
-    public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> getConfiguration() {
+    public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Intrusion detection general state.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
 

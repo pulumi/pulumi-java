@@ -26,7 +26,7 @@ public final class WindowsOsInfoResponse {
      * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
      * 
     */
-    public Optional<String> getWindowsOsState() {
+    public Optional<String> windowsOsState() {
         return Optional.ofNullable(this.windowsOsState);
     }
 

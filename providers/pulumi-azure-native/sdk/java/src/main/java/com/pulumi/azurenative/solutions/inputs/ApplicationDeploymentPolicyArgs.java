@@ -27,7 +27,7 @@ public final class ApplicationDeploymentPolicyArgs extends com.pulumi.resources.
     @Import(name="deploymentMode", required=true)
       private final Output<Either<String,DeploymentMode>> deploymentMode;
 
-    public Output<Either<String,DeploymentMode>> getDeploymentMode() {
+    public Output<Either<String,DeploymentMode>> deploymentMode() {
         return this.deploymentMode;
     }
 

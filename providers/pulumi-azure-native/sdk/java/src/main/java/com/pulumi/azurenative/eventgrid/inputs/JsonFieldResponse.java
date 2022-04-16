@@ -25,7 +25,7 @@ public final class JsonFieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceField")
       private final @Nullable String sourceField;
 
-    public Optional<String> getSourceField() {
+    public Optional<String> sourceField() {
         return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
     }
 

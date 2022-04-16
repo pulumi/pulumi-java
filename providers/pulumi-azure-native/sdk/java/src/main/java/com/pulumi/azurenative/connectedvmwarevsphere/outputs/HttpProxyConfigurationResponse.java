@@ -26,7 +26,7 @@ public final class HttpProxyConfigurationResponse {
      * Gets or sets httpsProxy url.
      * 
     */
-    public Optional<String> getHttpsProxy() {
+    public Optional<String> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
 

@@ -63,42 +63,42 @@ public final class ReportableExceptionResponse {
      * Actionable steps for this exception
      * 
     */
-    public Optional<String> getActionableMessage() {
+    public Optional<String> actionableMessage() {
         return Optional.ofNullable(this.actionableMessage);
     }
     /**
      * The path to the file where exception occurred
      * 
     */
-    public String getFilePath() {
+    public String filePath() {
         return this.filePath;
     }
     /**
      * Coded numerical value that is assigned to a specific exception
      * 
     */
-    public Integer getHResult() {
+    public Integer hResult() {
         return this.hResult;
     }
     /**
      * The line number where exception occurred
      * 
     */
-    public String getLineNumber() {
+    public String lineNumber() {
         return this.lineNumber;
     }
     /**
      * Error message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Stack trace
      * 
     */
-    public String getStackTrace() {
+    public String stackTrace() {
         return this.stackTrace;
     }
 

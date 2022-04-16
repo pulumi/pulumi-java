@@ -26,7 +26,7 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 

@@ -95,70 +95,70 @@ public final class GetAutoscaleSettingResult {
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * the collection of notifications.
      * 
     */
-    public List<AutoscaleNotificationResponse> getNotifications() {
+    public List<AutoscaleNotificationResponse> notifications() {
         return this.notifications == null ? List.of() : this.notifications;
     }
     /**
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
      * 
     */
-    public List<AutoscaleProfileResponse> getProfiles() {
+    public List<AutoscaleProfileResponse> profiles() {
         return this.profiles;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * the location of the resource that the autoscale setting should be added to.
      * 
     */
-    public Optional<String> getTargetResourceLocation() {
+    public Optional<String> targetResourceLocation() {
         return Optional.ofNullable(this.targetResourceLocation);
     }
     /**
      * the resource identifier of the resource that the autoscale setting should be added to.
      * 
     */
-    public Optional<String> getTargetResourceUri() {
+    public Optional<String> targetResourceUri() {
         return Optional.ofNullable(this.targetResourceUri);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -51,7 +51,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Customer provided key, value pairs that will be returned in Job and JobOutput state events.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getCorrelationData() {
+    public Output</* @Nullable */ Map<String,String>> correlationData() {
         return this.correlationData;
     }
     /**
@@ -65,7 +65,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -79,7 +79,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Optional customer supplied description of the Job.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -93,7 +93,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The UTC date and time at which this Job finished processing.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -107,7 +107,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The inputs for the Job.
      * 
      */
-    public Output<Object> getInput() {
+    public Output<Object> input() {
         return this.input;
     }
     /**
@@ -121,7 +121,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -135,7 +135,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +149,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The outputs for the Job.
      * 
      */
-    public Output<List<JobOutputAssetResponse>> getOutputs() {
+    public Output<List<JobOutputAssetResponse>> outputs() {
         return this.outputs;
     }
     /**
@@ -163,7 +163,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
      * 
      */
-    public Output</* @Nullable */ String> getPriority() {
+    public Output</* @Nullable */ String> priority() {
         return this.priority;
     }
     /**
@@ -177,7 +177,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The UTC date and time at which this Job began processing.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -191,7 +191,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The current state of the job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -205,7 +205,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -219,7 +219,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

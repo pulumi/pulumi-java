@@ -26,7 +26,7 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="commonName")
       private final @Nullable String commonName;
 
-    public Optional<String> getCommonName() {
+    public Optional<String> commonName() {
         return this.commonName == null ? Optional.empty() : Optional.ofNullable(this.commonName);
     }
 
@@ -37,7 +37,7 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="isAdmin", required=true)
       private final Boolean isAdmin;
 
-    public Boolean getIsAdmin() {
+    public Boolean isAdmin() {
         return this.isAdmin;
     }
 
@@ -48,7 +48,7 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="issuerThumbprint")
       private final @Nullable String issuerThumbprint;
 
-    public Optional<String> getIssuerThumbprint() {
+    public Optional<String> issuerThumbprint() {
         return this.issuerThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerThumbprint);
     }
 
@@ -59,7 +59,7 @@ public final class ClientCertificateResponse extends com.pulumi.resources.Invoke
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 

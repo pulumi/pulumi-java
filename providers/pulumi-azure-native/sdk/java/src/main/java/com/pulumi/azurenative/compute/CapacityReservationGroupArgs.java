@@ -24,7 +24,7 @@ public final class CapacityReservationGroupArgs extends com.pulumi.resources.Res
     @Import(name="capacityReservationGroupName")
       private final @Nullable Output<String> capacityReservationGroupName;
 
-    public Output<String> getCapacityReservationGroupName() {
+    public Output<String> capacityReservationGroupName() {
         return this.capacityReservationGroupName == null ? Codegen.empty() : this.capacityReservationGroupName;
     }
 
@@ -35,7 +35,7 @@ public final class CapacityReservationGroupArgs extends com.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class CapacityReservationGroupArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class CapacityReservationGroupArgs extends com.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class CapacityReservationGroupArgs extends com.pulumi.resources.Res
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

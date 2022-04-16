@@ -26,7 +26,7 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="enforceCertificateNameCheck")
       private final @Nullable String enforceCertificateNameCheck;
 
-    public Optional<String> getEnforceCertificateNameCheck() {
+    public Optional<String> enforceCertificateNameCheck() {
         return this.enforceCertificateNameCheck == null ? Optional.empty() : Optional.ofNullable(this.enforceCertificateNameCheck);
     }
 
@@ -37,7 +37,7 @@ public final class BackendPoolsSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="sendRecvTimeoutSeconds")
       private final @Nullable Integer sendRecvTimeoutSeconds;
 
-    public Optional<Integer> getSendRecvTimeoutSeconds() {
+    public Optional<Integer> sendRecvTimeoutSeconds() {
         return this.sendRecvTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.sendRecvTimeoutSeconds);
     }
 

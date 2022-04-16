@@ -24,7 +24,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -35,7 +35,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="executionFrequencyInSeconds")
       private final @Nullable Output<Double> executionFrequencyInSeconds;
 
-    public Output<Double> getExecutionFrequencyInSeconds() {
+    public Output<Double> executionFrequencyInSeconds() {
         return this.executionFrequencyInSeconds == null ? Codegen.empty() : this.executionFrequencyInSeconds;
     }
 
@@ -57,7 +57,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -68,7 +68,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
-    public Output<String> getScriptName() {
+    public Output<String> scriptName() {
         return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
@@ -90,7 +90,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptParameters")
       private final @Nullable Output<Map<String,String>> scriptParameters;
 
-    public Output<Map<String,String>> getScriptParameters() {
+    public Output<Map<String,String>> scriptParameters() {
         return this.scriptParameters == null ? Codegen.empty() : this.scriptParameters;
     }
 
@@ -101,7 +101,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scriptRunOn")
       private final @Nullable Output<String> scriptRunOn;
 
-    public Output<String> getScriptRunOn() {
+    public Output<String> scriptRunOn() {
         return this.scriptRunOn == null ? Codegen.empty() : this.scriptRunOn;
     }
 
@@ -112,7 +112,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -123,7 +123,7 @@ public final class WatcherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="watcherName")
       private final @Nullable Output<String> watcherName;
 
-    public Output<String> getWatcherName() {
+    public Output<String> watcherName() {
         return this.watcherName == null ? Codegen.empty() : this.watcherName;
     }
 

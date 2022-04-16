@@ -28,7 +28,7 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -39,7 +39,7 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,PropertyType>> type;
 
-    public Output<Either<String,PropertyType>> getType() {
+    public Output<Either<String,PropertyType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

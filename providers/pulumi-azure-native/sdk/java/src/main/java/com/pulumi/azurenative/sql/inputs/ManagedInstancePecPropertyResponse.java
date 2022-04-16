@@ -24,7 +24,7 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedInstancePecPropertyResponse extends com.pulumi.resourc
     @Import(name="properties", required=true)
       private final ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
 
-    public ManagedInstancePrivateEndpointConnectionPropertiesResponse getProperties() {
+    public ManagedInstancePrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
 

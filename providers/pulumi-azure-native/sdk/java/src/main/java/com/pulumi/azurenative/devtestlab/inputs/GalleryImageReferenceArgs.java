@@ -26,7 +26,7 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="offer")
       private final @Nullable Output<String> offer;
 
-    public Output<String> getOffer() {
+    public Output<String> offer() {
         return this.offer == null ? Codegen.empty() : this.offer;
     }
 
@@ -37,7 +37,7 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="osType")
       private final @Nullable Output<String> osType;
 
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -48,7 +48,7 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -59,7 +59,7 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -70,7 +70,7 @@ public final class GalleryImageReferenceArgs extends com.pulumi.resources.Resour
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

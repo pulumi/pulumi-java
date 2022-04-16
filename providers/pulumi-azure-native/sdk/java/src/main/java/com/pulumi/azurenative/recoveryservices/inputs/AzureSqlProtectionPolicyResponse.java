@@ -30,7 +30,7 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
 
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -41,7 +41,7 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
 
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
@@ -52,7 +52,7 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
+    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 

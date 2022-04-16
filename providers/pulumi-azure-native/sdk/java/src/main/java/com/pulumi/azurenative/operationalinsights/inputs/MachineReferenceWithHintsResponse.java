@@ -23,7 +23,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="displayNameHint", required=true)
       private final String displayNameHint;
 
-    public String getDisplayNameHint() {
+    public String displayNameHint() {
         return this.displayNameHint;
     }
 
@@ -34,7 +34,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -68,7 +68,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="osFamilyHint", required=true)
       private final String osFamilyHint;
 
-    public String getOsFamilyHint() {
+    public String osFamilyHint() {
         return this.osFamilyHint;
     }
 
@@ -79,7 +79,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

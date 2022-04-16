@@ -43,21 +43,21 @@ public final class GitHubResponse {
      * <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the login flow.
      * 
     */
-    public Optional<LoginScopesResponse> getLogin() {
+    public Optional<LoginScopesResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the GitHub provider.
      * 
     */
-    public Optional<ClientRegistrationResponse> getRegistration() {
+    public Optional<ClientRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }
 

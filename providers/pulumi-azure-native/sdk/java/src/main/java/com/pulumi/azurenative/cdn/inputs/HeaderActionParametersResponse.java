@@ -25,7 +25,7 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
     @Import(name="headerAction", required=true)
       private final String headerAction;
 
-    public String getHeaderAction() {
+    public String headerAction() {
         return this.headerAction;
     }
 
@@ -36,14 +36,14 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -54,7 +54,7 @@ public final class HeaderActionParametersResponse extends com.pulumi.resources.I
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

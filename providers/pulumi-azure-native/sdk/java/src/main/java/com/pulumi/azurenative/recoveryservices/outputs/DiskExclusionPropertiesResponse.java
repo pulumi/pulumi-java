@@ -36,14 +36,14 @@ public final class DiskExclusionPropertiesResponse {
      * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
      * 
     */
-    public List<Integer> getDiskLunList() {
+    public List<Integer> diskLunList() {
         return this.diskLunList == null ? List.of() : this.diskLunList;
     }
     /**
      * Flag to indicate whether DiskLunList is to be included/ excluded from backup.
      * 
     */
-    public Optional<Boolean> getIsInclusionList() {
+    public Optional<Boolean> isInclusionList() {
         return Optional.ofNullable(this.isInclusionList);
     }
 

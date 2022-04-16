@@ -34,14 +34,14 @@ public final class EntityReferenceResponse {
      * The name of this referenced entity.
      * 
     */
-    public Optional<String> getReferenceName() {
+    public Optional<String> referenceName() {
         return Optional.ofNullable(this.referenceName);
     }
     /**
      * The type of this referenced entity.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

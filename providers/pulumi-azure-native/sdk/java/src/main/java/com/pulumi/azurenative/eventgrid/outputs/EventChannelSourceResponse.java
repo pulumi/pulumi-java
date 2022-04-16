@@ -28,7 +28,7 @@ public final class EventChannelSourceResponse {
      * This represents a unique resource in the partner's resource model.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 

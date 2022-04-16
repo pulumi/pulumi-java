@@ -29,7 +29,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
-    public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
+    public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
 
@@ -40,7 +40,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="error", required=true)
       private final CloudErrorResponse error;
 
-    public CloudErrorResponse getError() {
+    public CloudErrorResponse error() {
         return this.error;
     }
 
@@ -52,7 +52,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
 
-    public String getJobSecretsType() {
+    public String jobSecretsType() {
         return this.jobSecretsType;
     }
 
@@ -63,7 +63,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
     @Import(name="podSecrets")
       private final @Nullable List<DataBoxSecretResponse> podSecrets;
 
-    public List<DataBoxSecretResponse> getPodSecrets() {
+    public List<DataBoxSecretResponse> podSecrets() {
         return this.podSecrets == null ? List.of() : this.podSecrets;
     }
 

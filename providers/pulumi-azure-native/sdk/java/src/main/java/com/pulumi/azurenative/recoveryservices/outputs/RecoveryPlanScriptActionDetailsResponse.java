@@ -49,7 +49,7 @@ public final class RecoveryPlanScriptActionDetailsResponse {
      * The fabric location.
      * 
     */
-    public String getFabricLocation() {
+    public String fabricLocation() {
         return this.fabricLocation;
     }
     /**
@@ -57,21 +57,21 @@ public final class RecoveryPlanScriptActionDetailsResponse {
      * Expected value is 'ScriptActionDetails'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The script path.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The script timeout.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

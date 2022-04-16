@@ -25,7 +25,7 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="referenceName", required=true)
       private final String referenceName;
 
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
 
@@ -47,7 +47,7 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

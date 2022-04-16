@@ -26,7 +26,7 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="delegatedRoleDefinitionIds")
       private final @Nullable List<String> delegatedRoleDefinitionIds;
 
-    public List<String> getDelegatedRoleDefinitionIds() {
+    public List<String> delegatedRoleDefinitionIds() {
         return this.delegatedRoleDefinitionIds == null ? List.of() : this.delegatedRoleDefinitionIds;
     }
 
@@ -37,7 +37,7 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -48,7 +48,7 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="principalIdDisplayName")
       private final @Nullable String principalIdDisplayName;
 
-    public Optional<String> getPrincipalIdDisplayName() {
+    public Optional<String> principalIdDisplayName() {
         return this.principalIdDisplayName == null ? Optional.empty() : Optional.ofNullable(this.principalIdDisplayName);
     }
 
@@ -59,7 +59,7 @@ public final class AuthorizationResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

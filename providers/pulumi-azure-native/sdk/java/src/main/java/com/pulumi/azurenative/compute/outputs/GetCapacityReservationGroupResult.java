@@ -86,63 +86,63 @@ public final class GetCapacityReservationGroupResult {
      * A list of all capacity reservation resource ids that belong to capacity reservation group.
      * 
     */
-    public List<SubResourceReadOnlyResponse> getCapacityReservations() {
+    public List<SubResourceReadOnlyResponse> capacityReservations() {
         return this.capacityReservations;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
      * 
     */
-    public CapacityReservationGroupInstanceViewResponse getInstanceView() {
+    public CapacityReservationGroupInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of references to all virtual machines associated to the capacity reservation group.
      * 
     */
-    public List<SubResourceReadOnlyResponse> getVirtualMachinesAssociated() {
+    public List<SubResourceReadOnlyResponse> virtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
      * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

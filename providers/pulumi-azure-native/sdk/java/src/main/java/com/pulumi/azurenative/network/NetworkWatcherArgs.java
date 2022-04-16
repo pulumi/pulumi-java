@@ -23,7 +23,7 @@ public final class NetworkWatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkWatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkWatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkWatcherName")
       private final @Nullable Output<String> networkWatcherName;
 
-    public Output<String> getNetworkWatcherName() {
+    public Output<String> networkWatcherName() {
         return this.networkWatcherName == null ? Codegen.empty() : this.networkWatcherName;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkWatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class NetworkWatcherArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

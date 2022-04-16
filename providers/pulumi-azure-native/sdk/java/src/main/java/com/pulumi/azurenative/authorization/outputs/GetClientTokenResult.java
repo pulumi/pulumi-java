@@ -24,7 +24,7 @@ public final class GetClientTokenResult {
      * OAuth token for Azure Management API and SDK authentication.
      * 
     */
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

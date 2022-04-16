@@ -23,7 +23,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -34,7 +34,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="properties")
       private final @Nullable Output<StorageMappingInputPropertiesArgs> properties;
 
-    public Output<StorageMappingInputPropertiesArgs> getProperties() {
+    public Output<StorageMappingInputPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -67,7 +67,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="storageClassificationMappingName")
       private final @Nullable Output<String> storageClassificationMappingName;
 
-    public Output<String> getStorageClassificationMappingName() {
+    public Output<String> storageClassificationMappingName() {
         return this.storageClassificationMappingName == null ? Codegen.empty() : this.storageClassificationMappingName;
     }
 
@@ -78,7 +78,7 @@ public final class ReplicationStorageClassificationMappingArgs extends com.pulum
     @Import(name="storageClassificationName", required=true)
       private final Output<String> storageClassificationName;
 
-    public Output<String> getStorageClassificationName() {
+    public Output<String> storageClassificationName() {
         return this.storageClassificationName;
     }
 

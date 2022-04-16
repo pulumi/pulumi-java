@@ -25,7 +25,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediaGraphName")
       private final @Nullable Output<String> mediaGraphName;
 
-    public Output<String> getMediaGraphName() {
+    public Output<String> mediaGraphName() {
         return this.mediaGraphName == null ? Codegen.empty() : this.mediaGraphName;
     }
 
@@ -58,7 +58,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sinks", required=true)
       private final Output<List<MediaGraphAssetSinkArgs>> sinks;
 
-    public Output<List<MediaGraphAssetSinkArgs>> getSinks() {
+    public Output<List<MediaGraphAssetSinkArgs>> sinks() {
         return this.sinks;
     }
 
@@ -80,7 +80,7 @@ public final class MediaGraphArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sources", required=true)
       private final Output<List<MediaGraphRtspSourceArgs>> sources;
 
-    public Output<List<MediaGraphRtspSourceArgs>> getSources() {
+    public Output<List<MediaGraphRtspSourceArgs>> sources() {
         return this.sources;
     }
 

@@ -44,7 +44,7 @@ public class DiskAccessAPrivateEndpointConnection extends com.pulumi.resources.C
      * @return private endpoint connection name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class DiskAccessAPrivateEndpointConnection extends com.pulumi.resources.C
      * @return The resource of private end point.
      * 
      */
-    public Output<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -72,7 +72,7 @@ public class DiskAccessAPrivateEndpointConnection extends com.pulumi.resources.C
      * @return A collection of information about the state of the connection between DiskAccess and Virtual Network.
      * 
      */
-    public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -86,7 +86,7 @@ public class DiskAccessAPrivateEndpointConnection extends com.pulumi.resources.C
      * @return The provisioning state of the private endpoint connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class DiskAccessAPrivateEndpointConnection extends com.pulumi.resources.C
      * @return private endpoint connection type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

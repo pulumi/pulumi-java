@@ -45,7 +45,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
      * 
      */
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType;
     }
     /**
@@ -59,7 +59,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return The name and tier of the SKU.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +101,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return Resource ID of the subnet to place this instance pool in.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -115,7 +115,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -143,7 +143,7 @@ public class InstancePool extends com.pulumi.resources.CustomResource {
      * @return Count of vCores belonging to this instance pool.
      * 
      */
-    public Output<Integer> getVCores() {
+    public Output<Integer> vCores() {
         return this.vCores;
     }
 

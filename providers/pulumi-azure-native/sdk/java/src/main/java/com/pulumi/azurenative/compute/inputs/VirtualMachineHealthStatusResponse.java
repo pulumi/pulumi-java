@@ -23,7 +23,7 @@ public final class VirtualMachineHealthStatusResponse extends com.pulumi.resourc
     @Import(name="status", required=true)
       private final InstanceViewStatusResponse status;
 
-    public InstanceViewStatusResponse getStatus() {
+    public InstanceViewStatusResponse status() {
         return this.status;
     }
 

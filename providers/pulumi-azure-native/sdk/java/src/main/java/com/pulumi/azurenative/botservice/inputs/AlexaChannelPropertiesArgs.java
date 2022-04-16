@@ -26,7 +26,7 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="alexaSkillId", required=true)
       private final Output<String> alexaSkillId;
 
-    public Output<String> getAlexaSkillId() {
+    public Output<String> alexaSkillId() {
         return this.alexaSkillId;
     }
 
@@ -37,7 +37,7 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 

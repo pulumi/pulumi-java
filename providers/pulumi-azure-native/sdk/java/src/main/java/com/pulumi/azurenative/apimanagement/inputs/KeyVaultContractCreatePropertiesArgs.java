@@ -26,7 +26,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
     @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
-    public Output<String> getIdentityClientId() {
+    public Output<String> identityClientId() {
         return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends com.pulumi.resou
     @Import(name="secretIdentifier")
       private final @Nullable Output<String> secretIdentifier;
 
-    public Output<String> getSecretIdentifier() {
+    public Output<String> secretIdentifier() {
         return this.secretIdentifier == null ? Codegen.empty() : this.secretIdentifier;
     }
 

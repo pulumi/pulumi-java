@@ -19,7 +19,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="consumerGroupName", required=true)
       private final String consumerGroupName;
 
-    public String getConsumerGroupName() {
+    public String consumerGroupName() {
         return this.consumerGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="eventHubName", required=true)
       private final String eventHubName;
 
-    public String getEventHubName() {
+    public String eventHubName() {
         return this.eventHubName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

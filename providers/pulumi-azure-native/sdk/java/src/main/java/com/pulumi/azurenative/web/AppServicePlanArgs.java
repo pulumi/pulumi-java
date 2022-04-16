@@ -28,7 +28,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="freeOfferExpirationTime")
       private final @Nullable Output<String> freeOfferExpirationTime;
 
-    public Output<String> getFreeOfferExpirationTime() {
+    public Output<String> freeOfferExpirationTime() {
         return this.freeOfferExpirationTime == null ? Codegen.empty() : this.freeOfferExpirationTime;
     }
 
@@ -39,7 +39,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
+    public Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile == null ? Codegen.empty() : this.hostingEnvironmentProfile;
     }
 
@@ -50,7 +50,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
 
-    public Output<Boolean> getHyperV() {
+    public Output<Boolean> hyperV() {
         return this.hyperV == null ? Codegen.empty() : this.hyperV;
     }
 
@@ -61,7 +61,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isSpot")
       private final @Nullable Output<Boolean> isSpot;
 
-    public Output<Boolean> getIsSpot() {
+    public Output<Boolean> isSpot() {
         return this.isSpot == null ? Codegen.empty() : this.isSpot;
     }
 
@@ -72,7 +72,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
 
-    public Output<Boolean> getIsXenon() {
+    public Output<Boolean> isXenon() {
         return this.isXenon == null ? Codegen.empty() : this.isXenon;
     }
 
@@ -83,7 +83,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -94,7 +94,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubeEnvironmentProfile")
       private final @Nullable Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile;
 
-    public Output<KubeEnvironmentProfileArgs> getKubeEnvironmentProfile() {
+    public Output<KubeEnvironmentProfileArgs> kubeEnvironmentProfile() {
         return this.kubeEnvironmentProfile == null ? Codegen.empty() : this.kubeEnvironmentProfile;
     }
 
@@ -105,7 +105,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -116,7 +116,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maximumElasticWorkerCount")
       private final @Nullable Output<Integer> maximumElasticWorkerCount;
 
-    public Output<Integer> getMaximumElasticWorkerCount() {
+    public Output<Integer> maximumElasticWorkerCount() {
         return this.maximumElasticWorkerCount == null ? Codegen.empty() : this.maximumElasticWorkerCount;
     }
 
@@ -127,7 +127,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -139,7 +139,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="perSiteScaling")
       private final @Nullable Output<Boolean> perSiteScaling;
 
-    public Output<Boolean> getPerSiteScaling() {
+    public Output<Boolean> perSiteScaling() {
         return this.perSiteScaling == null ? Codegen.empty() : this.perSiteScaling;
     }
 
@@ -150,7 +150,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
+    public Output<Boolean> reserved() {
         return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
@@ -161,7 +161,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -172,7 +172,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
       private final @Nullable Output<SkuDescriptionArgs> sku;
 
-    public Output<SkuDescriptionArgs> getSku() {
+    public Output<SkuDescriptionArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -183,7 +183,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="spotExpirationTime")
       private final @Nullable Output<String> spotExpirationTime;
 
-    public Output<String> getSpotExpirationTime() {
+    public Output<String> spotExpirationTime() {
         return this.spotExpirationTime == null ? Codegen.empty() : this.spotExpirationTime;
     }
 
@@ -194,7 +194,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -205,7 +205,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetWorkerCount")
       private final @Nullable Output<Integer> targetWorkerCount;
 
-    public Output<Integer> getTargetWorkerCount() {
+    public Output<Integer> targetWorkerCount() {
         return this.targetWorkerCount == null ? Codegen.empty() : this.targetWorkerCount;
     }
 
@@ -216,7 +216,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetWorkerSizeId")
       private final @Nullable Output<Integer> targetWorkerSizeId;
 
-    public Output<Integer> getTargetWorkerSizeId() {
+    public Output<Integer> targetWorkerSizeId() {
         return this.targetWorkerSizeId == null ? Codegen.empty() : this.targetWorkerSizeId;
     }
 
@@ -227,7 +227,7 @@ public final class AppServicePlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workerTierName")
       private final @Nullable Output<String> workerTierName;
 
-    public Output<String> getWorkerTierName() {
+    public Output<String> workerTierName() {
         return this.workerTierName == null ? Codegen.empty() : this.workerTierName;
     }
 

@@ -26,7 +26,7 @@ public final class PrivateEndpointResponse {
      * The ARM identifier for Private Endpoint.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

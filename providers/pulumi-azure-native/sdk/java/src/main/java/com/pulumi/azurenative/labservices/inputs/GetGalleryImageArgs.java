@@ -21,7 +21,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
 
-    public String getGalleryImageName() {
+    public String galleryImageName() {
         return this.galleryImageName;
     }
 
@@ -43,7 +43,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
 
-    public String getLabAccountName() {
+    public String labAccountName() {
         return this.labAccountName;
     }
 
@@ -54,7 +54,7 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

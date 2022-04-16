@@ -50,28 +50,28 @@ public final class GitHubActionConfigurationResponse {
      * GitHub Action code configuration.
      * 
     */
-    public Optional<GitHubActionCodeConfigurationResponse> getCodeConfiguration() {
+    public Optional<GitHubActionCodeConfigurationResponse> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * GitHub Action container configuration.
      * 
     */
-    public Optional<GitHubActionContainerConfigurationResponse> getContainerConfiguration() {
+    public Optional<GitHubActionContainerConfigurationResponse> containerConfiguration() {
         return Optional.ofNullable(this.containerConfiguration);
     }
     /**
      * Workflow option to determine whether the workflow file should be generated and written to the repository.
      * 
     */
-    public Optional<Boolean> getGenerateWorkflowFile() {
+    public Optional<Boolean> generateWorkflowFile() {
         return Optional.ofNullable(this.generateWorkflowFile);
     }
     /**
      * This will help determine the workflow configuration to select.
      * 
     */
-    public Optional<Boolean> getIsLinux() {
+    public Optional<Boolean> isLinux() {
         return Optional.ofNullable(this.isLinux);
     }
 

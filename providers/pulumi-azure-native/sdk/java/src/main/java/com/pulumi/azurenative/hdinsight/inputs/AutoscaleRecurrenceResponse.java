@@ -27,7 +27,7 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="schedule")
       private final @Nullable List<AutoscaleScheduleResponse> schedule;
 
-    public List<AutoscaleScheduleResponse> getSchedule() {
+    public List<AutoscaleScheduleResponse> schedule() {
         return this.schedule == null ? List.of() : this.schedule;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscaleRecurrenceResponse extends com.pulumi.resources.Invo
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

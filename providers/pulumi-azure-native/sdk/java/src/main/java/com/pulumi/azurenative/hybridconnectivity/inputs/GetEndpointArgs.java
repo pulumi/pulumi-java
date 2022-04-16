@@ -19,7 +19,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointName", required=true)
       private final String endpointName;
 
-    public String getEndpointName() {
+    public String endpointName() {
         return this.endpointName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

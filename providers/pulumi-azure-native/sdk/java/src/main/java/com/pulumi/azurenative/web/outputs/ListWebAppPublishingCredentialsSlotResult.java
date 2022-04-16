@@ -83,63 +83,63 @@ public final class ListWebAppPublishingCredentialsSlotResult {
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Password used for publishing.
      * 
     */
-    public Optional<String> getPublishingPassword() {
+    public Optional<String> publishingPassword() {
         return Optional.ofNullable(this.publishingPassword);
     }
     /**
      * Password hash used for publishing.
      * 
     */
-    public Optional<String> getPublishingPasswordHash() {
+    public Optional<String> publishingPasswordHash() {
         return Optional.ofNullable(this.publishingPasswordHash);
     }
     /**
      * Password hash salt used for publishing.
      * 
     */
-    public Optional<String> getPublishingPasswordHashSalt() {
+    public Optional<String> publishingPasswordHashSalt() {
         return Optional.ofNullable(this.publishingPasswordHashSalt);
     }
     /**
      * Username used for publishing.
      * 
     */
-    public String getPublishingUserName() {
+    public String publishingUserName() {
         return this.publishingUserName;
     }
     /**
      * Url of SCM site.
      * 
     */
-    public Optional<String> getScmUri() {
+    public Optional<String> scmUri() {
         return Optional.ofNullable(this.scmUri);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

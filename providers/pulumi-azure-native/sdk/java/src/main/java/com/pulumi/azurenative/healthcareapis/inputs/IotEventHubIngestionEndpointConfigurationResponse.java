@@ -25,7 +25,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
     @Import(name="consumerGroup")
       private final @Nullable String consumerGroup;
 
-    public Optional<String> getConsumerGroup() {
+    public Optional<String> consumerGroup() {
         return this.consumerGroup == null ? Optional.empty() : Optional.ofNullable(this.consumerGroup);
     }
 
@@ -36,7 +36,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
     @Import(name="eventHubName")
       private final @Nullable String eventHubName;
 
-    public Optional<String> getEventHubName() {
+    public Optional<String> eventHubName() {
         return this.eventHubName == null ? Optional.empty() : Optional.ofNullable(this.eventHubName);
     }
 
@@ -47,7 +47,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends com
     @Import(name="fullyQualifiedEventHubNamespace")
       private final @Nullable String fullyQualifiedEventHubNamespace;
 
-    public Optional<String> getFullyQualifiedEventHubNamespace() {
+    public Optional<String> fullyQualifiedEventHubNamespace() {
         return this.fullyQualifiedEventHubNamespace == null ? Optional.empty() : Optional.ofNullable(this.fullyQualifiedEventHubNamespace);
     }
 

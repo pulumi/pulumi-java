@@ -27,7 +27,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="authMode", required=true)
       private final String authMode;
 
-    public String getAuthMode() {
+    public String authMode() {
         return this.authMode;
     }
 
@@ -38,7 +38,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -60,7 +60,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -71,7 +71,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scoringUri", required=true)
       private final String scoringUri;
 
-    public String getScoringUri() {
+    public String scoringUri() {
         return this.scoringUri;
     }
 
@@ -82,7 +82,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
 
-    public String getSwaggerUri() {
+    public String swaggerUri() {
         return this.swaggerUri;
     }
 
@@ -94,7 +94,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -105,7 +105,7 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="traffic")
       private final @Nullable Map<String,Integer> traffic;
 
-    public Map<String,Integer> getTraffic() {
+    public Map<String,Integer> traffic() {
         return this.traffic == null ? Map.of() : this.traffic;
     }
 

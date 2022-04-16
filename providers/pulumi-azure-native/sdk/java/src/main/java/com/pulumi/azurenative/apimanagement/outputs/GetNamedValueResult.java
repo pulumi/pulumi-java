@@ -79,56 +79,56 @@ public final class GetNamedValueResult {
      * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * KeyVault location details of the namedValue.
      * 
     */
-    public Optional<KeyVaultContractPropertiesResponse> getKeyVault() {
+    public Optional<KeyVaultContractPropertiesResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
     */
-    public Optional<Boolean> getSecret() {
+    public Optional<Boolean> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * Optional tags that when provided can be used to filter the NamedValue list.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

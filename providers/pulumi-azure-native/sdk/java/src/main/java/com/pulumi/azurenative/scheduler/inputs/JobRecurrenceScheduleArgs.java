@@ -25,7 +25,7 @@ public final class JobRecurrenceScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="hours")
       private final @Nullable Output<List<Integer>> hours;
 
-    public Output<List<Integer>> getHours() {
+    public Output<List<Integer>> hours() {
         return this.hours == null ? Codegen.empty() : this.hours;
     }
 
@@ -36,7 +36,7 @@ public final class JobRecurrenceScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="minutes")
       private final @Nullable Output<List<Integer>> minutes;
 
-    public Output<List<Integer>> getMinutes() {
+    public Output<List<Integer>> minutes() {
         return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
@@ -47,7 +47,7 @@ public final class JobRecurrenceScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
 
-    public Output<List<Integer>> getMonthDays() {
+    public Output<List<Integer>> monthDays() {
         return this.monthDays == null ? Codegen.empty() : this.monthDays;
     }
 
@@ -58,7 +58,7 @@ public final class JobRecurrenceScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
-    public Output<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> getMonthlyOccurrences() {
+    public Output<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? Codegen.empty() : this.monthlyOccurrences;
     }
 
@@ -69,7 +69,7 @@ public final class JobRecurrenceScheduleArgs extends com.pulumi.resources.Resour
     @Import(name="weekDays")
       private final @Nullable Output<List<DayOfWeek>> weekDays;
 
-    public Output<List<DayOfWeek>> getWeekDays() {
+    public Output<List<DayOfWeek>> weekDays() {
         return this.weekDays == null ? Codegen.empty() : this.weekDays;
     }
 

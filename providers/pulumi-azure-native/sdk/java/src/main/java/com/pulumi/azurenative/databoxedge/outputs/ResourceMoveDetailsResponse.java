@@ -34,14 +34,14 @@ public final class ResourceMoveDetailsResponse {
      * Denotes whether move operation is in progress
      * 
     */
-    public Optional<String> getOperationInProgress() {
+    public Optional<String> operationInProgress() {
         return Optional.ofNullable(this.operationInProgress);
     }
     /**
      * Denotes the timeout of the operation to finish
      * 
     */
-    public Optional<String> getOperationInProgressLockTimeoutInUTC() {
+    public Optional<String> operationInProgressLockTimeoutInUTC() {
         return Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
     }
 

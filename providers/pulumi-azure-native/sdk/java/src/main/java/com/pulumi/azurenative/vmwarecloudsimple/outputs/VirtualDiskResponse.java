@@ -56,35 +56,35 @@ public final class VirtualDiskResponse {
      * Disk's Controller id
      * 
     */
-    public String getControllerId() {
+    public String controllerId() {
         return this.controllerId;
     }
     /**
      * Disk's independence mode type
      * 
     */
-    public String getIndependenceMode() {
+    public String independenceMode() {
         return this.independenceMode;
     }
     /**
      * Disk's total size
      * 
     */
-    public Integer getTotalSize() {
+    public Integer totalSize() {
         return this.totalSize;
     }
     /**
      * Disk's id
      * 
     */
-    public Optional<String> getVirtualDiskId() {
+    public Optional<String> virtualDiskId() {
         return Optional.ofNullable(this.virtualDiskId);
     }
     /**
      * Disk's display name
      * 
     */
-    public String getVirtualDiskName() {
+    public String virtualDiskName() {
         return this.virtualDiskName;
     }
 

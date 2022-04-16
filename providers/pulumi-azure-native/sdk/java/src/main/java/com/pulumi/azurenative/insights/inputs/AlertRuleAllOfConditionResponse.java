@@ -24,7 +24,7 @@ public final class AlertRuleAllOfConditionResponse extends com.pulumi.resources.
     @Import(name="allOf", required=true)
       private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
-    public List<AlertRuleAnyOfOrLeafConditionResponse> getAllOf() {
+    public List<AlertRuleAnyOfOrLeafConditionResponse> allOf() {
         return this.allOf;
     }
 

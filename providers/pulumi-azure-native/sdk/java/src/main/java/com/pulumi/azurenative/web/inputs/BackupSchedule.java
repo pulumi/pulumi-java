@@ -28,7 +28,7 @@ public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
     @Import(name="frequencyInterval", required=true)
       private final Integer frequencyInterval;
 
-    public Integer getFrequencyInterval() {
+    public Integer frequencyInterval() {
         return this.frequencyInterval;
     }
 
@@ -39,7 +39,7 @@ public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
     @Import(name="frequencyUnit", required=true)
       private final FrequencyUnit frequencyUnit;
 
-    public FrequencyUnit getFrequencyUnit() {
+    public FrequencyUnit frequencyUnit() {
         return this.frequencyUnit;
     }
 
@@ -50,7 +50,7 @@ public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
     @Import(name="keepAtLeastOneBackup", required=true)
       private final Boolean keepAtLeastOneBackup;
 
-    public Boolean getKeepAtLeastOneBackup() {
+    public Boolean keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
 
@@ -61,7 +61,7 @@ public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
     @Import(name="retentionPeriodInDays", required=true)
       private final Integer retentionPeriodInDays;
 
-    public Integer getRetentionPeriodInDays() {
+    public Integer retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
@@ -72,7 +72,7 @@ public final class BackupSchedule extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

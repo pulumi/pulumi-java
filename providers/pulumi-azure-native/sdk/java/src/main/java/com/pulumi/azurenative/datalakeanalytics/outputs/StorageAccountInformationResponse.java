@@ -46,28 +46,28 @@ public final class StorageAccountInformationResponse {
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The optional suffix for the storage account.
      * 
     */
-    public String getSuffix() {
+    public String suffix() {
         return this.suffix;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

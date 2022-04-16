@@ -33,7 +33,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> getCaching() {
+    public Output<CachingTypes> caching() {
         return this.caching == null ? Codegen.empty() : this.caching;
     }
 
@@ -44,7 +44,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOptionTypes>> createOption;
 
-    public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
+    public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
     }
 
@@ -55,7 +55,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="diskIOPSReadWrite")
       private final @Nullable Output<Double> diskIOPSReadWrite;
 
-    public Output<Double> getDiskIOPSReadWrite() {
+    public Output<Double> diskIOPSReadWrite() {
         return this.diskIOPSReadWrite == null ? Codegen.empty() : this.diskIOPSReadWrite;
     }
 
@@ -66,7 +66,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="diskMBpsReadWrite")
       private final @Nullable Output<Double> diskMBpsReadWrite;
 
-    public Output<Double> getDiskMBpsReadWrite() {
+    public Output<Double> diskMBpsReadWrite() {
         return this.diskMBpsReadWrite == null ? Codegen.empty() : this.diskMBpsReadWrite;
     }
 
@@ -77,7 +77,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -88,7 +88,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun;
     }
 
@@ -99,7 +99,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="managedDisk")
       private final @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
-    public Output<VirtualMachineScaleSetManagedDiskParametersArgs> getManagedDisk() {
+    public Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk() {
         return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
@@ -110,7 +110,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -121,7 +121,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends com.pulumi.resourc
     @Import(name="writeAcceleratorEnabled")
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
-    public Output<Boolean> getWriteAcceleratorEnabled() {
+    public Output<Boolean> writeAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
     }
 

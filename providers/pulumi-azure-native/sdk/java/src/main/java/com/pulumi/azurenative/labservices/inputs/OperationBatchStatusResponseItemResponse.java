@@ -23,7 +23,7 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
     @Import(name="operationUrl", required=true)
       private final String operationUrl;
 
-    public String getOperationUrl() {
+    public String operationUrl() {
         return this.operationUrl;
     }
 
@@ -34,7 +34,7 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

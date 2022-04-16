@@ -29,7 +29,7 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<ExportDatasetConfigurationArgs> configuration;
 
-    public Output<ExportDatasetConfigurationArgs> getConfiguration() {
+    public Output<ExportDatasetConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -40,7 +40,7 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="granularity")
       private final @Nullable Output<Either<String,GranularityType>> granularity;
 
-    public Output<Either<String,GranularityType>> getGranularity() {
+    public Output<Either<String,GranularityType>> granularity() {
         return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 

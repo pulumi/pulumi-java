@@ -25,7 +25,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -36,7 +36,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="placementPolicyName")
       private final @Nullable Output<String> placementPolicyName;
 
-    public Output<String> getPlacementPolicyName() {
+    public Output<String> placementPolicyName() {
         return this.placementPolicyName == null ? Codegen.empty() : this.placementPolicyName;
     }
 
@@ -47,7 +47,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -58,7 +58,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="properties")
       private final @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
-    public Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> getProperties() {
+    public Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -69,7 +69,7 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

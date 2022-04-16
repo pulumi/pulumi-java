@@ -22,7 +22,7 @@ public final class LoadBalancerConfigurationPropertiesArgs extends com.pulumi.re
     @Import(name="frontendIPConfigurations", required=true)
       private final Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
-    public Output<List<LoadBalancerFrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
+    public Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 

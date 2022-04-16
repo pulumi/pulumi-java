@@ -32,14 +32,14 @@ public final class AttributesResponse {
      * Indicates whether or not authentication is enabled on the ACL.
      * 
     */
-    public Boolean getAuthentication() {
+    public Boolean authentication() {
         return this.authentication;
     }
     /**
      * Indicates whether or not write protect is enabled on the LUNs.
      * 
     */
-    public Boolean getProdModeWriteProtect() {
+    public Boolean prodModeWriteProtect() {
         return this.prodModeWriteProtect;
     }
 

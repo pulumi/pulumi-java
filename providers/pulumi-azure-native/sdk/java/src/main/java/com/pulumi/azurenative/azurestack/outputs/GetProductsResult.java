@@ -36,14 +36,14 @@ public final class GetProductsResult {
      * URI to the next page.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of products.
      * 
     */
-    public List<ProductResponse> getValue() {
+    public List<ProductResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

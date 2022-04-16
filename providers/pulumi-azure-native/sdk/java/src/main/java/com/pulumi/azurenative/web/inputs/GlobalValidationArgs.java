@@ -29,7 +29,7 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="excludedPaths")
       private final @Nullable Output<List<String>> excludedPaths;
 
-    public Output<List<String>> getExcludedPaths() {
+    public Output<List<String>> excludedPaths() {
         return this.excludedPaths == null ? Codegen.empty() : this.excludedPaths;
     }
 
@@ -42,7 +42,7 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="redirectToProvider")
       private final @Nullable Output<String> redirectToProvider;
 
-    public Output<String> getRedirectToProvider() {
+    public Output<String> redirectToProvider() {
         return this.redirectToProvider == null ? Codegen.empty() : this.redirectToProvider;
     }
 
@@ -53,7 +53,7 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requireAuthentication")
       private final @Nullable Output<Boolean> requireAuthentication;
 
-    public Output<Boolean> getRequireAuthentication() {
+    public Output<Boolean> requireAuthentication() {
         return this.requireAuthentication == null ? Codegen.empty() : this.requireAuthentication;
     }
 
@@ -64,7 +64,7 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="unauthenticatedClientAction")
       private final @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
-    public Output<UnauthenticatedClientActionV2> getUnauthenticatedClientAction() {
+    public Output<UnauthenticatedClientActionV2> unauthenticatedClientAction() {
         return this.unauthenticatedClientAction == null ? Codegen.empty() : this.unauthenticatedClientAction;
     }
 

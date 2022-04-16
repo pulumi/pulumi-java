@@ -25,7 +25,7 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
     @Import(name="alerts")
       private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
-    public Optional<DataConnectorDataTypeCommonResponse> getAlerts() {
+    public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return this.alerts == null ? Optional.empty() : Optional.ofNullable(this.alerts);
     }
 
@@ -36,7 +36,7 @@ public final class MCASDataConnectorDataTypesResponse extends com.pulumi.resourc
     @Import(name="discoveryLogs")
       private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
-    public Optional<DataConnectorDataTypeCommonResponse> getDiscoveryLogs() {
+    public Optional<DataConnectorDataTypeCommonResponse> discoveryLogs() {
         return this.discoveryLogs == null ? Optional.empty() : Optional.ofNullable(this.discoveryLogs);
     }
 

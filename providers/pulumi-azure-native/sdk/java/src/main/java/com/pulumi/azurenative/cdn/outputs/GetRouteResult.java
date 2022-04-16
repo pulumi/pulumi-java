@@ -146,122 +146,122 @@ public final class GetRouteResult {
      * compression settings.
      * 
     */
-    public Optional<CompressionSettingsResponse> getCompressionSettings() {
+    public Optional<CompressionSettingsResponse> compressionSettings() {
         return Optional.ofNullable(this.compressionSettings);
     }
     /**
      * Domains referenced by this endpoint.
      * 
     */
-    public List<ResourceReferenceResponse> getCustomDomains() {
+    public List<ResourceReferenceResponse> customDomains() {
         return this.customDomains == null ? List.of() : this.customDomains;
     }
-    public String getDeploymentStatus() {
+    public String deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Protocol this rule will use when forwarding traffic to backends.
      * 
     */
-    public Optional<String> getForwardingProtocol() {
+    public Optional<String> forwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
     */
-    public Optional<String> getHttpsRedirect() {
+    public Optional<String> httpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * whether this route will be linked to the default endpoint domain.
      * 
     */
-    public Optional<String> getLinkToDefaultDomain() {
+    public Optional<String> linkToDefaultDomain() {
         return Optional.ofNullable(this.linkToDefaultDomain);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A reference to the origin group.
      * 
     */
-    public ResourceReferenceResponse getOriginGroup() {
+    public ResourceReferenceResponse originGroup() {
         return this.originGroup;
     }
     /**
      * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
     */
-    public Optional<String> getOriginPath() {
+    public Optional<String> originPath() {
         return Optional.ofNullable(this.originPath);
     }
     /**
      * The route patterns of the rule.
      * 
     */
-    public List<String> getPatternsToMatch() {
+    public List<String> patternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
     /**
      * Provisioning status
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
     */
-    public Optional<String> getQueryStringCachingBehavior() {
+    public Optional<String> queryStringCachingBehavior() {
         return Optional.ofNullable(this.queryStringCachingBehavior);
     }
     /**
      * rule sets referenced by this endpoint.
      * 
     */
-    public List<ResourceReferenceResponse> getRuleSets() {
+    public List<ResourceReferenceResponse> ruleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
     /**
      * List of supported protocols for this route.
      * 
     */
-    public List<String> getSupportedProtocols() {
+    public List<String> supportedProtocols() {
         return this.supportedProtocols == null ? List.of() : this.supportedProtocols;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

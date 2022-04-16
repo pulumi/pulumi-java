@@ -129,105 +129,105 @@ public final class GetWatchlistItemResult {
      * The time the watchlist item was created
      * 
     */
-    public Optional<String> getCreated() {
+    public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Describes a user that created the watchlist item
      * 
     */
-    public Optional<WatchlistUserInfoResponse> getCreatedBy() {
+    public Optional<WatchlistUserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * key-value pairs for a watchlist item entity mapping
      * 
     */
-    public Optional<Object> getEntityMapping() {
+    public Optional<Object> entityMapping() {
         return Optional.ofNullable(this.entityMapping);
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A flag that indicates if the watchlist item is deleted or not
      * 
     */
-    public Optional<Boolean> getIsDeleted() {
+    public Optional<Boolean> isDeleted() {
         return Optional.ofNullable(this.isDeleted);
     }
     /**
      * key-value pairs for a watchlist item
      * 
     */
-    public Object getItemsKeyValue() {
+    public Object itemsKeyValue() {
         return this.itemsKeyValue;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The tenantId to which the watchlist item belongs to
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The last time the watchlist item was updated
      * 
     */
-    public Optional<String> getUpdated() {
+    public Optional<String> updated() {
         return Optional.ofNullable(this.updated);
     }
     /**
      * Describes a user that updated the watchlist item
      * 
     */
-    public Optional<WatchlistUserInfoResponse> getUpdatedBy() {
+    public Optional<WatchlistUserInfoResponse> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
      * The id (a Guid) of the watchlist item
      * 
     */
-    public Optional<String> getWatchlistItemId() {
+    public Optional<String> watchlistItemId() {
         return Optional.ofNullable(this.watchlistItemId);
     }
     /**
      * The type of the watchlist item
      * 
     */
-    public Optional<String> getWatchlistItemType() {
+    public Optional<String> watchlistItemType() {
         return Optional.ofNullable(this.watchlistItemType);
     }
 

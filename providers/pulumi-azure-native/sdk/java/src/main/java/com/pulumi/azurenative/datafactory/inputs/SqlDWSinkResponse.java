@@ -29,7 +29,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowCopyCommand")
       private final @Nullable Object allowCopyCommand;
 
-    public Optional<Object> getAllowCopyCommand() {
+    public Optional<Object> allowCopyCommand() {
         return this.allowCopyCommand == null ? Optional.empty() : Optional.ofNullable(this.allowCopyCommand);
     }
 
@@ -40,7 +40,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowPolyBase")
       private final @Nullable Object allowPolyBase;
 
-    public Optional<Object> getAllowPolyBase() {
+    public Optional<Object> allowPolyBase() {
         return this.allowPolyBase == null ? Optional.empty() : Optional.ofNullable(this.allowPolyBase);
     }
 
@@ -51,7 +51,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="copyCommandSettings")
       private final @Nullable DWCopyCommandSettingsResponse copyCommandSettings;
 
-    public Optional<DWCopyCommandSettingsResponse> getCopyCommandSettings() {
+    public Optional<DWCopyCommandSettingsResponse> copyCommandSettings() {
         return this.copyCommandSettings == null ? Optional.empty() : Optional.ofNullable(this.copyCommandSettings);
     }
 
@@ -62,7 +62,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -73,7 +73,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -84,7 +84,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="polyBaseSettings")
       private final @Nullable PolybaseSettingsResponse polyBaseSettings;
 
-    public Optional<PolybaseSettingsResponse> getPolyBaseSettings() {
+    public Optional<PolybaseSettingsResponse> polyBaseSettings() {
         return this.polyBaseSettings == null ? Optional.empty() : Optional.ofNullable(this.polyBaseSettings);
     }
 
@@ -95,7 +95,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preCopyScript")
       private final @Nullable Object preCopyScript;
 
-    public Optional<Object> getPreCopyScript() {
+    public Optional<Object> preCopyScript() {
         return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
     }
 
@@ -106,7 +106,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -117,7 +117,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -128,7 +128,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sqlWriterUseTableLock")
       private final @Nullable Object sqlWriterUseTableLock;
 
-    public Optional<Object> getSqlWriterUseTableLock() {
+    public Optional<Object> sqlWriterUseTableLock() {
         return this.sqlWriterUseTableLock == null ? Optional.empty() : Optional.ofNullable(this.sqlWriterUseTableLock);
     }
 
@@ -139,7 +139,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableOption")
       private final @Nullable Object tableOption;
 
-    public Optional<Object> getTableOption() {
+    public Optional<Object> tableOption() {
         return this.tableOption == null ? Optional.empty() : Optional.ofNullable(this.tableOption);
     }
 
@@ -151,7 +151,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -162,7 +162,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="upsertSettings")
       private final @Nullable SqlDWUpsertSettingsResponse upsertSettings;
 
-    public Optional<SqlDWUpsertSettingsResponse> getUpsertSettings() {
+    public Optional<SqlDWUpsertSettingsResponse> upsertSettings() {
         return this.upsertSettings == null ? Optional.empty() : Optional.ofNullable(this.upsertSettings);
     }
 
@@ -173,7 +173,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -184,7 +184,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 
@@ -195,7 +195,7 @@ public final class SqlDWSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="writeBehavior")
       private final @Nullable Object writeBehavior;
 
-    public Optional<Object> getWriteBehavior() {
+    public Optional<Object> writeBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
     }
 

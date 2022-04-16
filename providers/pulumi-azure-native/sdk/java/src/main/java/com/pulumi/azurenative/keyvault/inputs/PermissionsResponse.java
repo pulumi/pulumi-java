@@ -26,7 +26,7 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificates")
       private final @Nullable List<String> certificates;
 
-    public List<String> getCertificates() {
+    public List<String> certificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
 
@@ -37,7 +37,7 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keys")
       private final @Nullable List<String> keys;
 
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 
@@ -48,7 +48,7 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secrets")
       private final @Nullable List<String> secrets;
 
-    public List<String> getSecrets() {
+    public List<String> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
 
@@ -59,7 +59,7 @@ public final class PermissionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storage")
       private final @Nullable List<String> storage;
 
-    public List<String> getStorage() {
+    public List<String> storage() {
         return this.storage == null ? List.of() : this.storage;
     }
 

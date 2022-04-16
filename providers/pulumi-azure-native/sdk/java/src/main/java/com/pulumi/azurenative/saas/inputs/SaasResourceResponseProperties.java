@@ -29,7 +29,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="autoRenew")
       private final @Nullable Boolean autoRenew;
 
-    public Optional<Boolean> getAutoRenew() {
+    public Optional<Boolean> autoRenew() {
         return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
     }
 
@@ -40,7 +40,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="created", required=true)
       private final String created;
 
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
 
@@ -51,7 +51,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="isFreeTrial")
       private final @Nullable Boolean isFreeTrial;
 
-    public Optional<Boolean> getIsFreeTrial() {
+    public Optional<Boolean> isFreeTrial() {
         return this.isFreeTrial == null ? Optional.empty() : Optional.ofNullable(this.isFreeTrial);
     }
 
@@ -62,7 +62,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="lastModified")
       private final @Nullable String lastModified;
 
-    public Optional<String> getLastModified() {
+    public Optional<String> lastModified() {
         return this.lastModified == null ? Optional.empty() : Optional.ofNullable(this.lastModified);
     }
 
@@ -73,7 +73,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="offerId")
       private final @Nullable String offerId;
 
-    public Optional<String> getOfferId() {
+    public Optional<String> offerId() {
         return this.offerId == null ? Optional.empty() : Optional.ofNullable(this.offerId);
     }
 
@@ -84,7 +84,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="paymentChannelMetadata")
       private final @Nullable Map<String,String> paymentChannelMetadata;
 
-    public Map<String,String> getPaymentChannelMetadata() {
+    public Map<String,String> paymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Map.of() : this.paymentChannelMetadata;
     }
 
@@ -95,7 +95,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="paymentChannelType")
       private final @Nullable String paymentChannelType;
 
-    public Optional<String> getPaymentChannelType() {
+    public Optional<String> paymentChannelType() {
         return this.paymentChannelType == null ? Optional.empty() : Optional.ofNullable(this.paymentChannelType);
     }
 
@@ -106,7 +106,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="publisherId")
       private final @Nullable String publisherId;
 
-    public Optional<String> getPublisherId() {
+    public Optional<String> publisherId() {
         return this.publisherId == null ? Optional.empty() : Optional.ofNullable(this.publisherId);
     }
 
@@ -117,7 +117,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="publisherTestEnvironment")
       private final @Nullable String publisherTestEnvironment;
 
-    public Optional<String> getPublisherTestEnvironment() {
+    public Optional<String> publisherTestEnvironment() {
         return this.publisherTestEnvironment == null ? Optional.empty() : Optional.ofNullable(this.publisherTestEnvironment);
     }
 
@@ -128,7 +128,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="quantity")
       private final @Nullable Double quantity;
 
-    public Optional<Double> getQuantity() {
+    public Optional<Double> quantity() {
         return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
     }
 
@@ -139,7 +139,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="saasResourceName")
       private final @Nullable String saasResourceName;
 
-    public Optional<String> getSaasResourceName() {
+    public Optional<String> saasResourceName() {
         return this.saasResourceName == null ? Optional.empty() : Optional.ofNullable(this.saasResourceName);
     }
 
@@ -150,7 +150,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="saasSessionId")
       private final @Nullable String saasSessionId;
 
-    public Optional<String> getSaasSessionId() {
+    public Optional<String> saasSessionId() {
         return this.saasSessionId == null ? Optional.empty() : Optional.ofNullable(this.saasSessionId);
     }
 
@@ -161,7 +161,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="saasSubscriptionId")
       private final @Nullable String saasSubscriptionId;
 
-    public Optional<String> getSaasSubscriptionId() {
+    public Optional<String> saasSubscriptionId() {
         return this.saasSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.saasSubscriptionId);
     }
 
@@ -172,7 +172,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="skuId")
       private final @Nullable String skuId;
 
-    public Optional<String> getSkuId() {
+    public Optional<String> skuId() {
         return this.skuId == null ? Optional.empty() : Optional.ofNullable(this.skuId);
     }
 
@@ -183,7 +183,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -194,7 +194,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="term")
       private final @Nullable SaasPropertiesResponseTerm term;
 
-    public Optional<SaasPropertiesResponseTerm> getTerm() {
+    public Optional<SaasPropertiesResponseTerm> term() {
         return this.term == null ? Optional.empty() : Optional.ofNullable(this.term);
     }
 
@@ -205,7 +205,7 @@ public final class SaasResourceResponseProperties extends com.pulumi.resources.I
     @Import(name="termId")
       private final @Nullable String termId;
 
-    public Optional<String> getTermId() {
+    public Optional<String> termId() {
         return this.termId == null ? Optional.empty() : Optional.ofNullable(this.termId);
     }
 

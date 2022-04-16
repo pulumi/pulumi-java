@@ -19,7 +19,7 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
     @Import(name="mongoUserDefinitionId", required=true)
       private final String mongoUserDefinitionId;
 
-    public String getMongoUserDefinitionId() {
+    public String mongoUserDefinitionId() {
         return this.mongoUserDefinitionId;
     }
 
@@ -41,7 +41,7 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

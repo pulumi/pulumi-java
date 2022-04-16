@@ -44,7 +44,7 @@ public class WebAppPrivateEndpointConnection extends com.pulumi.resources.Custom
      * @return Private IPAddresses mapped to the remote private endpoint
      * 
      */
-    public Output</* @Nullable */ List<String>> getIpAddresses() {
+    public Output</* @Nullable */ List<String>> ipAddresses() {
         return this.ipAddresses;
     }
     /**
@@ -58,7 +58,7 @@ public class WebAppPrivateEndpointConnection extends com.pulumi.resources.Custom
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +72,7 @@ public class WebAppPrivateEndpointConnection extends com.pulumi.resources.Custom
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class WebAppPrivateEndpointConnection extends com.pulumi.resources.Custom
      * @return PrivateEndpoint of a remote private endpoint connection
      * 
      */
-    public Output</* @Nullable */ ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -100,13 +100,13 @@ public class WebAppPrivateEndpointConnection extends com.pulumi.resources.Custom
      * @return The state of a private link connection
      * 
      */
-    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -120,7 +120,7 @@ public class WebAppPrivateEndpointConnection extends com.pulumi.resources.Custom
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

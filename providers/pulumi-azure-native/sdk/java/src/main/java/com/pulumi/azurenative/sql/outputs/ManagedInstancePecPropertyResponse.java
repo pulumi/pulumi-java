@@ -33,14 +33,14 @@ public final class ManagedInstancePecPropertyResponse {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Private endpoint connection properties
      * 
     */
-    public ManagedInstancePrivateEndpointConnectionPropertiesResponse getProperties() {
+    public ManagedInstancePrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
 

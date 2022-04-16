@@ -57,35 +57,35 @@ public final class IpAddressResponse {
      * The Dns name label for the IP.
      * 
     */
-    public Optional<String> getDnsNameLabel() {
+    public Optional<String> dnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
     /**
      * The FQDN for the IP.
      * 
     */
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
     /**
      * The IP exposed to the public internet.
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The list of ports exposed on the container group.
      * 
     */
-    public List<PortResponse> getPorts() {
+    public List<PortResponse> ports() {
         return this.ports;
     }
     /**
      * Specifies if the IP is exposed to the public internet or private VNET.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

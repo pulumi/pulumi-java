@@ -34,7 +34,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="accessCredential")
       private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
-    public Output<SSISAccessCredentialArgs> getAccessCredential() {
+    public Output<SSISAccessCredentialArgs> accessCredential() {
         return this.accessCredential == null ? Codegen.empty() : this.accessCredential;
     }
 
@@ -45,7 +45,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="childPackages")
       private final @Nullable Output<List<SSISChildPackageArgs>> childPackages;
 
-    public Output<List<SSISChildPackageArgs>> getChildPackages() {
+    public Output<List<SSISChildPackageArgs>> childPackages() {
         return this.childPackages == null ? Codegen.empty() : this.childPackages;
     }
 
@@ -56,7 +56,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="configurationAccessCredential")
       private final @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential;
 
-    public Output<SSISAccessCredentialArgs> getConfigurationAccessCredential() {
+    public Output<SSISAccessCredentialArgs> configurationAccessCredential() {
         return this.configurationAccessCredential == null ? Codegen.empty() : this.configurationAccessCredential;
     }
 
@@ -67,7 +67,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="configurationPath")
       private final @Nullable Output<Object> configurationPath;
 
-    public Output<Object> getConfigurationPath() {
+    public Output<Object> configurationPath() {
         return this.configurationPath == null ? Codegen.empty() : this.configurationPath;
     }
 
@@ -78,7 +78,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="packageContent")
       private final @Nullable Output<Object> packageContent;
 
-    public Output<Object> getPackageContent() {
+    public Output<Object> packageContent() {
         return this.packageContent == null ? Codegen.empty() : this.packageContent;
     }
 
@@ -89,7 +89,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="packageLastModifiedDate")
       private final @Nullable Output<String> packageLastModifiedDate;
 
-    public Output<String> getPackageLastModifiedDate() {
+    public Output<String> packageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Codegen.empty() : this.packageLastModifiedDate;
     }
 
@@ -100,7 +100,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
@@ -111,7 +111,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="packagePassword")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPackagePassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword() {
         return this.packagePassword == null ? Codegen.empty() : this.packagePassword;
     }
 
@@ -122,7 +122,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="packagePath")
       private final @Nullable Output<Object> packagePath;
 
-    public Output<Object> getPackagePath() {
+    public Output<Object> packagePath() {
         return this.packagePath == null ? Codegen.empty() : this.packagePath;
     }
 
@@ -133,7 +133,7 @@ public final class SSISPackageLocationArgs extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<Either<String,SsisPackageLocationType>> type;
 
-    public Output<Either<String,SsisPackageLocationType>> getType() {
+    public Output<Either<String,SsisPackageLocationType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

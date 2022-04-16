@@ -25,7 +25,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="captureDescription")
       private final @Nullable Output<CaptureDescriptionArgs> captureDescription;
 
-    public Output<CaptureDescriptionArgs> getCaptureDescription() {
+    public Output<CaptureDescriptionArgs> captureDescription() {
         return this.captureDescription == null ? Codegen.empty() : this.captureDescription;
     }
 
@@ -36,7 +36,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -47,7 +47,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionInDays")
       private final @Nullable Output<Double> messageRetentionInDays;
 
-    public Output<Double> getMessageRetentionInDays() {
+    public Output<Double> messageRetentionInDays() {
         return this.messageRetentionInDays == null ? Codegen.empty() : this.messageRetentionInDays;
     }
 
@@ -58,7 +58,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -69,7 +69,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionCount")
       private final @Nullable Output<Double> partitionCount;
 
-    public Output<Double> getPartitionCount() {
+    public Output<Double> partitionCount() {
         return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
@@ -80,7 +80,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<EntityStatus> status;
 
-    public Output<EntityStatus> getStatus() {
+    public Output<EntityStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

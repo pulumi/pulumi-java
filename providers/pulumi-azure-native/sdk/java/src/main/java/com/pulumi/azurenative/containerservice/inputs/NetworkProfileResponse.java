@@ -25,7 +25,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="peerVnetId")
       private final @Nullable String peerVnetId;
 
-    public Optional<String> getPeerVnetId() {
+    public Optional<String> peerVnetId() {
         return this.peerVnetId == null ? Optional.empty() : Optional.ofNullable(this.peerVnetId);
     }
 
@@ -36,7 +36,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="vnetCidr")
       private final @Nullable String vnetCidr;
 
-    public Optional<String> getVnetCidr() {
+    public Optional<String> vnetCidr() {
         return this.vnetCidr == null ? Optional.empty() : Optional.ofNullable(this.vnetCidr);
     }
 
@@ -47,7 +47,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="vnetId")
       private final @Nullable String vnetId;
 
-    public Optional<String> getVnetId() {
+    public Optional<String> vnetId() {
         return this.vnetId == null ? Optional.empty() : Optional.ofNullable(this.vnetId);
     }
 

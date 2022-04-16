@@ -25,7 +25,7 @@ public final class LocalTimestampResponseTimeZoneOffset extends com.pulumi.resou
     @Import(name="propertyName")
       private final @Nullable String propertyName;
 
-    public Optional<String> getPropertyName() {
+    public Optional<String> propertyName() {
         return this.propertyName == null ? Optional.empty() : Optional.ofNullable(this.propertyName);
     }
 

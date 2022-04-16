@@ -19,7 +19,7 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
     @Import(name="customAssessmentAutomationName", required=true)
       private final String customAssessmentAutomationName;
 
-    public String getCustomAssessmentAutomationName() {
+    public String customAssessmentAutomationName() {
         return this.customAssessmentAutomationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

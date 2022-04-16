@@ -57,35 +57,35 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * Fully qualified path of the registration definition.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the registration definition.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Plan details for the managed services.
      * 
     */
-    public Optional<PlanResponse> getPlan() {
+    public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Properties of registration definition inside registration assignment.
      * 
     */
-    public Optional<RegistrationAssignmentPropertiesResponseProperties> getProperties() {
+    public Optional<RegistrationAssignmentPropertiesResponseProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

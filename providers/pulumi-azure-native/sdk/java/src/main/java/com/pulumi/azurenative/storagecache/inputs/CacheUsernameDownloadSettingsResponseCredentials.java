@@ -25,7 +25,7 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
     @Import(name="bindDn")
       private final @Nullable String bindDn;
 
-    public Optional<String> getBindDn() {
+    public Optional<String> bindDn() {
         return this.bindDn == null ? Optional.empty() : Optional.ofNullable(this.bindDn);
     }
 
@@ -36,7 +36,7 @@ public final class CacheUsernameDownloadSettingsResponseCredentials extends com.
     @Import(name="bindPassword")
       private final @Nullable String bindPassword;
 
-    public Optional<String> getBindPassword() {
+    public Optional<String> bindPassword() {
         return this.bindPassword == null ? Optional.empty() : Optional.ofNullable(this.bindPassword);
     }
 

@@ -27,7 +27,7 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
@@ -38,7 +38,7 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="initialDelay")
       private final @Nullable Output<String> initialDelay;
 
-    public Output<String> getInitialDelay() {
+    public Output<String> initialDelay() {
         return this.initialDelay == null ? Codegen.empty() : this.initialDelay;
     }
 
@@ -49,7 +49,7 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 
@@ -60,7 +60,7 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> getSuccessThreshold() {
+    public Output<Integer> successThreshold() {
         return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
@@ -71,7 +71,7 @@ public final class ProbeSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

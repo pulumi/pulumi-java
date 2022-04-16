@@ -26,7 +26,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactSourceId")
       private final @Nullable Output<String> artifactSourceId;
 
-    public Output<String> getArtifactSourceId() {
+    public Output<String> artifactSourceId() {
         return this.artifactSourceId == null ? Codegen.empty() : this.artifactSourceId;
     }
 
@@ -37,7 +37,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="buildVersion", required=true)
       private final Output<String> buildVersion;
 
-    public Output<String> getBuildVersion() {
+    public Output<String> buildVersion() {
         return this.buildVersion;
     }
 
@@ -48,7 +48,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity", required=true)
       private final Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity;
     }
 
@@ -59,7 +59,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rolloutName")
       private final @Nullable Output<String> rolloutName;
 
-    public Output<String> getRolloutName() {
+    public Output<String> rolloutName() {
         return this.rolloutName == null ? Codegen.empty() : this.rolloutName;
     }
 
@@ -92,7 +92,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepGroups", required=true)
       private final Output<List<StepGroupArgs>> stepGroups;
 
-    public Output<List<StepGroupArgs>> getStepGroups() {
+    public Output<List<StepGroupArgs>> stepGroups() {
         return this.stepGroups;
     }
 
@@ -103,7 +103,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetServiceTopologyId", required=true)
       private final Output<String> targetServiceTopologyId;
 
-    public Output<String> getTargetServiceTopologyId() {
+    public Output<String> targetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
 

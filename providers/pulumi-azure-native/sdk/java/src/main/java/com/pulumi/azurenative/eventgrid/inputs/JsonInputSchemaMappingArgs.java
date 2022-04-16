@@ -28,7 +28,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="dataVersion")
       private final @Nullable Output<JsonFieldWithDefaultArgs> dataVersion;
 
-    public Output<JsonFieldWithDefaultArgs> getDataVersion() {
+    public Output<JsonFieldWithDefaultArgs> dataVersion() {
         return this.dataVersion == null ? Codegen.empty() : this.dataVersion;
     }
 
@@ -39,7 +39,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="eventTime")
       private final @Nullable Output<JsonFieldArgs> eventTime;
 
-    public Output<JsonFieldArgs> getEventTime() {
+    public Output<JsonFieldArgs> eventTime() {
         return this.eventTime == null ? Codegen.empty() : this.eventTime;
     }
 
@@ -50,7 +50,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="eventType")
       private final @Nullable Output<JsonFieldWithDefaultArgs> eventType;
 
-    public Output<JsonFieldWithDefaultArgs> getEventType() {
+    public Output<JsonFieldWithDefaultArgs> eventType() {
         return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 
@@ -61,7 +61,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<JsonFieldArgs> id;
 
-    public Output<JsonFieldArgs> getId() {
+    public Output<JsonFieldArgs> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -73,7 +73,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="inputSchemaMappingType", required=true)
       private final Output<String> inputSchemaMappingType;
 
-    public Output<String> getInputSchemaMappingType() {
+    public Output<String> inputSchemaMappingType() {
         return this.inputSchemaMappingType;
     }
 
@@ -84,7 +84,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="subject")
       private final @Nullable Output<JsonFieldWithDefaultArgs> subject;
 
-    public Output<JsonFieldWithDefaultArgs> getSubject() {
+    public Output<JsonFieldWithDefaultArgs> subject() {
         return this.subject == null ? Codegen.empty() : this.subject;
     }
 
@@ -95,7 +95,7 @@ public final class JsonInputSchemaMappingArgs extends com.pulumi.resources.Resou
     @Import(name="topic")
       private final @Nullable Output<JsonFieldArgs> topic;
 
-    public Output<JsonFieldArgs> getTopic() {
+    public Output<JsonFieldArgs> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

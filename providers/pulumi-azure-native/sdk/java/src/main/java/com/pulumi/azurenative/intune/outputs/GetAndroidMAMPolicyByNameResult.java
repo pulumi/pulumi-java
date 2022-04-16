@@ -113,99 +113,99 @@ public final class GetAndroidMAMPolicyByNameResult {
         this.type = type;
     }
 
-    public Optional<String> getAccessRecheckOfflineTimeout() {
+    public Optional<String> accessRecheckOfflineTimeout() {
         return Optional.ofNullable(this.accessRecheckOfflineTimeout);
     }
-    public Optional<String> getAccessRecheckOnlineTimeout() {
+    public Optional<String> accessRecheckOnlineTimeout() {
         return Optional.ofNullable(this.accessRecheckOnlineTimeout);
     }
-    public Optional<String> getAppSharingFromLevel() {
+    public Optional<String> appSharingFromLevel() {
         return Optional.ofNullable(this.appSharingFromLevel);
     }
-    public Optional<String> getAppSharingToLevel() {
+    public Optional<String> appSharingToLevel() {
         return Optional.ofNullable(this.appSharingToLevel);
     }
-    public Optional<String> getAuthentication() {
+    public Optional<String> authentication() {
         return Optional.ofNullable(this.authentication);
     }
-    public Optional<String> getClipboardSharingLevel() {
+    public Optional<String> clipboardSharingLevel() {
         return Optional.ofNullable(this.clipboardSharingLevel);
     }
-    public Optional<String> getDataBackup() {
+    public Optional<String> dataBackup() {
         return Optional.ofNullable(this.dataBackup);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getDeviceCompliance() {
+    public Optional<String> deviceCompliance() {
         return Optional.ofNullable(this.deviceCompliance);
     }
-    public Optional<String> getFileEncryption() {
+    public Optional<String> fileEncryption() {
         return Optional.ofNullable(this.fileEncryption);
     }
-    public Optional<String> getFileSharingSaveAs() {
+    public Optional<String> fileSharingSaveAs() {
         return Optional.ofNullable(this.fileSharingSaveAs);
     }
-    public String getFriendlyName() {
+    public String friendlyName() {
         return this.friendlyName;
     }
-    public String getGroupStatus() {
+    public String groupStatus() {
         return this.groupStatus;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * Resource Location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-    public Optional<String> getManagedBrowser() {
+    public Optional<String> managedBrowser() {
         return Optional.ofNullable(this.managedBrowser);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Integer getNumOfApps() {
+    public Integer numOfApps() {
         return this.numOfApps;
     }
-    public Optional<String> getOfflineWipeTimeout() {
+    public Optional<String> offlineWipeTimeout() {
         return Optional.ofNullable(this.offlineWipeTimeout);
     }
-    public Optional<String> getPin() {
+    public Optional<String> pin() {
         return Optional.ofNullable(this.pin);
     }
-    public Optional<Integer> getPinNumRetry() {
+    public Optional<Integer> pinNumRetry() {
         return Optional.ofNullable(this.pinNumRetry);
     }
-    public Optional<String> getScreenCapture() {
+    public Optional<String> screenCapture() {
         return Optional.ofNullable(this.screenCapture);
     }
     /**
      * Resource Tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

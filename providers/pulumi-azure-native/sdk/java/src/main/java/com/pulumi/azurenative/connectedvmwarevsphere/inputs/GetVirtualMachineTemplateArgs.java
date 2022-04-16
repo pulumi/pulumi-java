@@ -19,7 +19,7 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualMachineTemplateArgs extends com.pulumi.resources.In
     @Import(name="virtualMachineTemplateName", required=true)
       private final String virtualMachineTemplateName;
 
-    public String getVirtualMachineTemplateName() {
+    public String virtualMachineTemplateName() {
         return this.virtualMachineTemplateName;
     }
 

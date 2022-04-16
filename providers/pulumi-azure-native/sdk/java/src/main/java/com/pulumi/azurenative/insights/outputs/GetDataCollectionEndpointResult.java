@@ -123,98 +123,98 @@ public final class GetDataCollectionEndpointResult {
      * The endpoint used by agents to access their configuration.
      * 
     */
-    public Optional<DataCollectionEndpointResponseConfigurationAccess> getConfigurationAccess() {
+    public Optional<DataCollectionEndpointResponseConfigurationAccess> configurationAccess() {
         return Optional.ofNullable(this.configurationAccess);
     }
     /**
      * Description of the data collection endpoint.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource entity tag (ETag).
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
      * 
     */
-    public Optional<String> getImmutableId() {
+    public Optional<String> immutableId() {
         return Optional.ofNullable(this.immutableId);
     }
     /**
      * The kind of the resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The endpoint used by clients to ingest logs.
      * 
     */
-    public Optional<DataCollectionEndpointResponseLogsIngestion> getLogsIngestion() {
+    public Optional<DataCollectionEndpointResponseLogsIngestion> logsIngestion() {
         return Optional.ofNullable(this.logsIngestion);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Network access control rules for the endpoints.
      * 
     */
-    public Optional<DataCollectionEndpointResponseNetworkAcls> getNetworkAcls() {
+    public Optional<DataCollectionEndpointResponseNetworkAcls> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
     /**
      * The resource provisioning state. This property is READ-ONLY.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public DataCollectionEndpointResourceResponseSystemData getSystemData() {
+    public DataCollectionEndpointResourceResponseSystemData systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

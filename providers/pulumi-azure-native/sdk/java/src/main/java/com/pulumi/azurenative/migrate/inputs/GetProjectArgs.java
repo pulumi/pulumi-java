@@ -19,7 +19,7 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -30,7 +30,7 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

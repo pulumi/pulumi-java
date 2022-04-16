@@ -25,7 +25,7 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
     @Import(name="daysAfterLastAccessTimeGreaterThan")
       private final @Nullable Double daysAfterLastAccessTimeGreaterThan;
 
-    public Optional<Double> getDaysAfterLastAccessTimeGreaterThan() {
+    public Optional<Double> daysAfterLastAccessTimeGreaterThan() {
         return this.daysAfterLastAccessTimeGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
 
@@ -36,7 +36,7 @@ public final class DateAfterModificationResponse extends com.pulumi.resources.In
     @Import(name="daysAfterModificationGreaterThan")
       private final @Nullable Double daysAfterModificationGreaterThan;
 
-    public Optional<Double> getDaysAfterModificationGreaterThan() {
+    public Optional<Double> daysAfterModificationGreaterThan() {
         return this.daysAfterModificationGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }
 

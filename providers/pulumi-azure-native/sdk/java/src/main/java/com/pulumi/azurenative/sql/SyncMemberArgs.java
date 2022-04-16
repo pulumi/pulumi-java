@@ -26,7 +26,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -37,7 +37,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
 
-    public Output<Either<String,SyncMemberDbType>> getDatabaseType() {
+    public Output<Either<String,SyncMemberDbType>> databaseType() {
         return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
@@ -48,7 +48,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -59,7 +59,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -81,7 +81,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerDatabaseId")
       private final @Nullable Output<String> sqlServerDatabaseId;
 
-    public Output<String> getSqlServerDatabaseId() {
+    public Output<String> sqlServerDatabaseId() {
         return this.sqlServerDatabaseId == null ? Codegen.empty() : this.sqlServerDatabaseId;
     }
 
@@ -92,7 +92,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncAgentId")
       private final @Nullable Output<String> syncAgentId;
 
-    public Output<String> getSyncAgentId() {
+    public Output<String> syncAgentId() {
         return this.syncAgentId == null ? Codegen.empty() : this.syncAgentId;
     }
 
@@ -103,7 +103,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncDirection")
       private final @Nullable Output<Either<String,SyncDirection>> syncDirection;
 
-    public Output<Either<String,SyncDirection>> getSyncDirection() {
+    public Output<Either<String,SyncDirection>> syncDirection() {
         return this.syncDirection == null ? Codegen.empty() : this.syncDirection;
     }
 
@@ -114,7 +114,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;
 
-    public Output<String> getSyncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName;
     }
 
@@ -125,7 +125,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncMemberAzureDatabaseResourceId")
       private final @Nullable Output<String> syncMemberAzureDatabaseResourceId;
 
-    public Output<String> getSyncMemberAzureDatabaseResourceId() {
+    public Output<String> syncMemberAzureDatabaseResourceId() {
         return this.syncMemberAzureDatabaseResourceId == null ? Codegen.empty() : this.syncMemberAzureDatabaseResourceId;
     }
 
@@ -136,7 +136,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncMemberName")
       private final @Nullable Output<String> syncMemberName;
 
-    public Output<String> getSyncMemberName() {
+    public Output<String> syncMemberName() {
         return this.syncMemberName == null ? Codegen.empty() : this.syncMemberName;
     }
 
@@ -147,7 +147,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usePrivateLinkConnection")
       private final @Nullable Output<Boolean> usePrivateLinkConnection;
 
-    public Output<Boolean> getUsePrivateLinkConnection() {
+    public Output<Boolean> usePrivateLinkConnection() {
         return this.usePrivateLinkConnection == null ? Codegen.empty() : this.usePrivateLinkConnection;
     }
 
@@ -158,7 +158,7 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

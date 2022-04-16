@@ -26,7 +26,7 @@ public final class ContainerExecResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="command")
       private final @Nullable List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
 

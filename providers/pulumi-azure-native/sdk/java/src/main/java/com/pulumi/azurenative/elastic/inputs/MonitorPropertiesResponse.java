@@ -27,14 +27,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="elasticProperties")
       private final @Nullable ElasticPropertiesResponse elasticProperties;
 
-    public Optional<ElasticPropertiesResponse> getElasticProperties() {
+    public Optional<ElasticPropertiesResponse> elasticProperties() {
         return this.elasticProperties == null ? Optional.empty() : Optional.ofNullable(this.elasticProperties);
     }
 
     @Import(name="liftrResourceCategory", required=true)
       private final String liftrResourceCategory;
 
-    public String getLiftrResourceCategory() {
+    public String liftrResourceCategory() {
         return this.liftrResourceCategory;
     }
 
@@ -45,7 +45,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
 
-    public Integer getLiftrResourcePreference() {
+    public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
 
@@ -56,7 +56,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
 
-    public Optional<String> getMonitoringStatus() {
+    public Optional<String> monitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
@@ -67,7 +67,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 

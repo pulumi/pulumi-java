@@ -37,7 +37,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -48,7 +48,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
 
-    public Output<String> getBackupSetName() {
+    public Output<String> backupSetName() {
         return this.backupSetName == null ? Codegen.empty() : this.backupSetName;
     }
 
@@ -59,7 +59,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
@@ -70,7 +70,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Output<Either<String,CreateMode>> getCreateMode() {
+    public Output<Either<String,CreateMode>> createMode() {
         return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
@@ -81,7 +81,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
-    public Output<String> getDeferredDeleteTimeInUTC() {
+    public Output<String> deferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Codegen.empty() : this.deferredDeleteTimeInUTC;
     }
 
@@ -92,7 +92,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
-    public Output<String> getDeferredDeleteTimeRemaining() {
+    public Output<String> deferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Codegen.empty() : this.deferredDeleteTimeRemaining;
     }
 
@@ -103,7 +103,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="extendedInfo")
       private final @Nullable Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo;
 
-    public Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> getExtendedInfo() {
+    public Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo() {
         return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
@@ -114,7 +114,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -125,7 +125,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
-    public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Output<Boolean> isDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Codegen.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
@@ -136,7 +136,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
 
-    public Output<Boolean> getIsRehydrate() {
+    public Output<Boolean> isRehydrate() {
         return this.isRehydrate == null ? Codegen.empty() : this.isRehydrate;
     }
 
@@ -147,7 +147,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
-    public Output<Boolean> getIsScheduledForDeferredDelete() {
+    public Output<Boolean> isScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Codegen.empty() : this.isScheduledForDeferredDelete;
     }
 
@@ -158,7 +158,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="kpisHealths")
       private final @Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
-    public Output<Map<String,KPIResourceHealthDetailsArgs>> getKpisHealths() {
+    public Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths() {
         return this.kpisHealths == null ? Codegen.empty() : this.kpisHealths;
     }
 
@@ -169,7 +169,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="lastBackupStatus")
       private final @Nullable Output<Either<String,LastBackupStatus>> lastBackupStatus;
 
-    public Output<Either<String,LastBackupStatus>> getLastBackupStatus() {
+    public Output<Either<String,LastBackupStatus>> lastBackupStatus() {
         return this.lastBackupStatus == null ? Codegen.empty() : this.lastBackupStatus;
     }
 
@@ -180,7 +180,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="lastBackupTime")
       private final @Nullable Output<String> lastBackupTime;
 
-    public Output<String> getLastBackupTime() {
+    public Output<String> lastBackupTime() {
         return this.lastBackupTime == null ? Codegen.empty() : this.lastBackupTime;
     }
 
@@ -191,7 +191,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
 
-    public Output<String> getLastRecoveryPoint() {
+    public Output<String> lastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Codegen.empty() : this.lastRecoveryPoint;
     }
 
@@ -202,7 +202,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="parentName")
       private final @Nullable Output<String> parentName;
 
-    public Output<String> getParentName() {
+    public Output<String> parentName() {
         return this.parentName == null ? Codegen.empty() : this.parentName;
     }
 
@@ -213,7 +213,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="parentType")
       private final @Nullable Output<String> parentType;
 
-    public Output<String> getParentType() {
+    public Output<String> parentType() {
         return this.parentType == null ? Codegen.empty() : this.parentType;
     }
 
@@ -224,7 +224,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -235,7 +235,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="protectedItemDataSourceId")
       private final @Nullable Output<String> protectedItemDataSourceId;
 
-    public Output<String> getProtectedItemDataSourceId() {
+    public Output<String> protectedItemDataSourceId() {
         return this.protectedItemDataSourceId == null ? Codegen.empty() : this.protectedItemDataSourceId;
     }
 
@@ -246,7 +246,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="protectedItemHealthStatus")
       private final @Nullable Output<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus;
 
-    public Output<Either<String,ProtectedItemHealthStatus>> getProtectedItemHealthStatus() {
+    public Output<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus() {
         return this.protectedItemHealthStatus == null ? Codegen.empty() : this.protectedItemHealthStatus;
     }
 
@@ -258,7 +258,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
 
-    public Output<String> getProtectedItemType() {
+    public Output<String> protectedItemType() {
         return this.protectedItemType;
     }
 
@@ -269,7 +269,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
 
-    public Output<Either<String,ProtectionState>> getProtectionState() {
+    public Output<Either<String,ProtectionState>> protectionState() {
         return this.protectionState == null ? Codegen.empty() : this.protectionState;
     }
 
@@ -280,7 +280,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
 
-    public Output<String> getProtectionStatus() {
+    public Output<String> protectionStatus() {
         return this.protectionStatus == null ? Codegen.empty() : this.protectionStatus;
     }
 
@@ -291,7 +291,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
@@ -302,7 +302,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
@@ -313,7 +313,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
     @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
-    public Output<Either<String,DataSourceType>> getWorkloadType() {
+    public Output<Either<String,DataSourceType>> workloadType() {
         return this.workloadType == null ? Codegen.empty() : this.workloadType;
     }
 

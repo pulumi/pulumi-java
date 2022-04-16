@@ -48,28 +48,28 @@ public final class PlacementProfileResponse {
      * Gets or sets the ARM Id of the cluster resource on which this virtual machine will deploy.
      * 
     */
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * Gets or sets the ARM Id of the datastore resource on which the data for the virtual machine will be kept.
      * 
     */
-    public Optional<String> getDatastoreId() {
+    public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * Gets or sets the ARM Id of the host resource on which this virtual machine will deploy.
      * 
     */
-    public Optional<String> getHostId() {
+    public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
      * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will deploy.
      * 
     */
-    public Optional<String> getResourcePoolId() {
+    public Optional<String> resourcePoolId() {
         return Optional.ofNullable(this.resourcePoolId);
     }
 

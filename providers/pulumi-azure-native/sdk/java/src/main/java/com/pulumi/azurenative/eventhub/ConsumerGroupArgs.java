@@ -22,7 +22,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
 
-    public Output<String> getConsumerGroupName() {
+    public Output<String> consumerGroupName() {
         return this.consumerGroupName == null ? Codegen.empty() : this.consumerGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName", required=true)
       private final Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName;
     }
 
@@ -44,7 +44,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -55,7 +55,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class ConsumerGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;
 
-    public Output<String> getUserMetadata() {
+    public Output<String> userMetadata() {
         return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
     }
 

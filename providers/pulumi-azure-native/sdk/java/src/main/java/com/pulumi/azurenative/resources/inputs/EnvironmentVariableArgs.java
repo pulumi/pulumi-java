@@ -26,7 +26,7 @@ public final class EnvironmentVariableArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentVariableArgs extends com.pulumi.resources.Resource
     @Import(name="secureValue")
       private final @Nullable Output<String> secureValue;
 
-    public Output<String> getSecureValue() {
+    public Output<String> secureValue() {
         return this.secureValue == null ? Codegen.empty() : this.secureValue;
     }
 
@@ -48,7 +48,7 @@ public final class EnvironmentVariableArgs extends com.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -147,126 +147,126 @@ public final class ProcessServerDetailsResponse {
      * The available memory.
      * 
     */
-    public Double getAvailableMemoryInBytes() {
+    public Double availableMemoryInBytes() {
         return this.availableMemoryInBytes;
     }
     /**
      * The available disk space.
      * 
     */
-    public Double getAvailableSpaceInBytes() {
+    public Double availableSpaceInBytes() {
         return this.availableSpaceInBytes;
     }
     /**
      * The free disk space percentage.
      * 
     */
-    public Double getFreeSpacePercentage() {
+    public Double freeSpacePercentage() {
         return this.freeSpacePercentage;
     }
     /**
      * The health of the process server.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
      * The historic health of the process server based on the health in last 24 hours.
      * 
     */
-    public String getHistoricHealth() {
+    public String historicHealth() {
         return this.historicHealth;
     }
     /**
      * The process server Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last heartbeat received from the process server.
      * 
     */
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The memory usage percentage.
      * 
     */
-    public Double getMemoryUsagePercentage() {
+    public Double memoryUsagePercentage() {
         return this.memoryUsagePercentage;
     }
     /**
      * The process server name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The processor usage percentage.
      * 
     */
-    public Double getProcessorUsagePercentage() {
+    public Double processorUsagePercentage() {
         return this.processorUsagePercentage;
     }
     /**
      * The throughput in bytes.
      * 
     */
-    public Double getThroughputInBytes() {
+    public Double throughputInBytes() {
         return this.throughputInBytes;
     }
     /**
      * The uploading pending data in bytes.
      * 
     */
-    public Double getThroughputUploadPendingDataInBytes() {
+    public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
     /**
      * The total memory.
      * 
     */
-    public Double getTotalMemoryInBytes() {
+    public Double totalMemoryInBytes() {
         return this.totalMemoryInBytes;
     }
     /**
      * The total disk space.
      * 
     */
-    public Double getTotalSpaceInBytes() {
+    public Double totalSpaceInBytes() {
         return this.totalSpaceInBytes;
     }
     /**
      * The used memory.
      * 
     */
-    public Double getUsedMemoryInBytes() {
+    public Double usedMemoryInBytes() {
         return this.usedMemoryInBytes;
     }
     /**
      * The used disk space.
      * 
     */
-    public Double getUsedSpaceInBytes() {
+    public Double usedSpaceInBytes() {
         return this.usedSpaceInBytes;
     }
     /**
      * The process server version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

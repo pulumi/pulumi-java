@@ -24,7 +24,7 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
     @Import(name="supportedValues", required=true)
       private final List<String> supportedValues;
 
-    public List<String> getSupportedValues() {
+    public List<String> supportedValues() {
         return this.supportedValues;
     }
 
@@ -35,7 +35,7 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

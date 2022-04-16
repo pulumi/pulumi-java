@@ -42,7 +42,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return Name of the backup.
      * 
      */
-    public Output</* @Nullable */ String> getBackupName() {
+    public Output</* @Nullable */ String> backupName() {
         return this.backupName;
     }
     /**
@@ -56,7 +56,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return Schedule for the backup if it is executed periodically.
      * 
      */
-    public Output</* @Nullable */ BackupScheduleResponse> getBackupSchedule() {
+    public Output</* @Nullable */ BackupScheduleResponse> backupSchedule() {
         return this.backupSchedule;
     }
     /**
@@ -70,7 +70,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return Databases included in the backup.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseBackupSettingResponse>> getDatabases() {
+    public Output</* @Nullable */ List<DatabaseBackupSettingResponse>> databases() {
         return this.databases;
     }
     /**
@@ -84,7 +84,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -98,7 +98,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -112,7 +112,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return SAS URL to the container.
      * 
      */
-    public Output<String> getStorageAccountUrl() {
+    public Output<String> storageAccountUrl() {
         return this.storageAccountUrl;
     }
     /**
@@ -140,7 +140,7 @@ public class WebAppBackupConfigurationSlot extends com.pulumi.resources.CustomRe
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

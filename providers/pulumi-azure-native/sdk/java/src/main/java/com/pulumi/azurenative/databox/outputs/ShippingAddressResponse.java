@@ -90,70 +90,70 @@ public final class ShippingAddressResponse {
      * Type of address.
      * 
     */
-    public Optional<String> getAddressType() {
+    public Optional<String> addressType() {
         return Optional.ofNullable(this.addressType);
     }
     /**
      * Name of the City.
      * 
     */
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
      * Name of the company.
      * 
     */
-    public Optional<String> getCompanyName() {
+    public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
     /**
      * Name of the Country.
      * 
     */
-    public String getCountry() {
+    public String country() {
         return this.country;
     }
     /**
      * Postal code.
      * 
     */
-    public Optional<String> getPostalCode() {
+    public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * Name of the State or Province.
      * 
     */
-    public Optional<String> getStateOrProvince() {
+    public Optional<String> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
      * Street Address line 1.
      * 
     */
-    public String getStreetAddress1() {
+    public String streetAddress1() {
         return this.streetAddress1;
     }
     /**
      * Street Address line 2.
      * 
     */
-    public Optional<String> getStreetAddress2() {
+    public Optional<String> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
     /**
      * Street Address line 3.
      * 
     */
-    public Optional<String> getStreetAddress3() {
+    public Optional<String> streetAddress3() {
         return Optional.ofNullable(this.streetAddress3);
     }
     /**
      * Extended Zip Code.
      * 
     */
-    public Optional<String> getZipExtendedCode() {
+    public Optional<String> zipExtendedCode() {
         return Optional.ofNullable(this.zipExtendedCode);
     }
 

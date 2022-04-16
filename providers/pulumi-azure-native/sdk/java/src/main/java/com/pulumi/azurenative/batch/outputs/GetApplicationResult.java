@@ -70,49 +70,49 @@ public final class GetApplicationResult {
      * A value indicating whether packages within the application may be overwritten using the same version string.
      * 
     */
-    public Optional<Boolean> getAllowUpdates() {
+    public Optional<Boolean> allowUpdates() {
         return Optional.ofNullable(this.allowUpdates);
     }
     /**
      * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
      * 
     */
-    public Optional<String> getDefaultVersion() {
+    public Optional<String> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
     /**
      * The display name for the application.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ETag of the resource, used for concurrency statements.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

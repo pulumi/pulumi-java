@@ -29,7 +29,7 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="additionalOptions")
       private final @Nullable Output<Map<String,String>> additionalOptions;
 
-    public Output<Map<String,String>> getAdditionalOptions() {
+    public Output<Map<String,String>> additionalOptions() {
         return this.additionalOptions == null ? Codegen.empty() : this.additionalOptions;
     }
 
@@ -40,7 +40,7 @@ public final class DWCopyCommandSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="defaultValues")
       private final @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
-    public Output<List<DWCopyCommandDefaultValueArgs>> getDefaultValues() {
+    public Output<List<DWCopyCommandDefaultValueArgs>> defaultValues() {
         return this.defaultValues == null ? Codegen.empty() : this.defaultValues;
     }
 

@@ -26,7 +26,7 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

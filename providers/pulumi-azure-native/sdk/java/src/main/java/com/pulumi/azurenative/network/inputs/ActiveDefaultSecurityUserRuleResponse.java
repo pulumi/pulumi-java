@@ -29,7 +29,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="commitTime")
       private final @Nullable String commitTime;
 
-    public Optional<String> getCommitTime() {
+    public Optional<String> commitTime() {
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
@@ -40,7 +40,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="configurationDescription")
       private final @Nullable String configurationDescription;
 
-    public Optional<String> getConfigurationDescription() {
+    public Optional<String> configurationDescription() {
         return this.configurationDescription == null ? Optional.empty() : Optional.ofNullable(this.configurationDescription);
     }
 
@@ -51,7 +51,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="configurationDisplayName")
       private final @Nullable String configurationDisplayName;
 
-    public Optional<String> getConfigurationDisplayName() {
+    public Optional<String> configurationDisplayName() {
         return this.configurationDisplayName == null ? Optional.empty() : Optional.ofNullable(this.configurationDisplayName);
     }
 
@@ -62,7 +62,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -73,7 +73,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="destinationPortRanges", required=true)
       private final List<String> destinationPortRanges;
 
-    public List<String> getDestinationPortRanges() {
+    public List<String> destinationPortRanges() {
         return this.destinationPortRanges;
     }
 
@@ -84,7 +84,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="destinations", required=true)
       private final List<AddressPrefixItemResponse> destinations;
 
-    public List<AddressPrefixItemResponse> getDestinations() {
+    public List<AddressPrefixItemResponse> destinations() {
         return this.destinations;
     }
 
@@ -95,7 +95,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -106,7 +106,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -117,7 +117,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="flag")
       private final @Nullable String flag;
 
-    public Optional<String> getFlag() {
+    public Optional<String> flag() {
         return this.flag == null ? Optional.empty() : Optional.ofNullable(this.flag);
     }
 
@@ -128,7 +128,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -140,7 +140,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -151,7 +151,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -162,7 +162,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -173,7 +173,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -184,7 +184,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="ruleCollectionAppliesToGroups")
       private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
-    public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
+    public List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
 
@@ -195,7 +195,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="ruleCollectionDescription")
       private final @Nullable String ruleCollectionDescription;
 
-    public Optional<String> getRuleCollectionDescription() {
+    public Optional<String> ruleCollectionDescription() {
         return this.ruleCollectionDescription == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDescription);
     }
 
@@ -206,7 +206,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="ruleCollectionDisplayName")
       private final @Nullable String ruleCollectionDisplayName;
 
-    public Optional<String> getRuleCollectionDisplayName() {
+    public Optional<String> ruleCollectionDisplayName() {
         return this.ruleCollectionDisplayName == null ? Optional.empty() : Optional.ofNullable(this.ruleCollectionDisplayName);
     }
 
@@ -217,7 +217,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="ruleGroups")
       private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
-    public List<ConfigurationGroupResponse> getRuleGroups() {
+    public List<ConfigurationGroupResponse> ruleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
 
@@ -228,7 +228,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="sourcePortRanges", required=true)
       private final List<String> sourcePortRanges;
 
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges;
     }
 
@@ -239,7 +239,7 @@ public final class ActiveDefaultSecurityUserRuleResponse extends com.pulumi.reso
     @Import(name="sources", required=true)
       private final List<AddressPrefixItemResponse> sources;
 
-    public List<AddressPrefixItemResponse> getSources() {
+    public List<AddressPrefixItemResponse> sources() {
         return this.sources;
     }
 

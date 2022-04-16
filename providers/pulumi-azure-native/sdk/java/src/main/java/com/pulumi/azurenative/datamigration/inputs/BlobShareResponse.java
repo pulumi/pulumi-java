@@ -23,7 +23,7 @@ public final class BlobShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sasUri", required=true)
       private final String sasUri;
 
-    public String getSasUri() {
+    public String sasUri() {
         return this.sasUri;
     }
 

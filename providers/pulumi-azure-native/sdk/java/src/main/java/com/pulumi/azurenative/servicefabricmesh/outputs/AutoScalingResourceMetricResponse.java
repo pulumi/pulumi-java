@@ -34,14 +34,14 @@ public final class AutoScalingResourceMetricResponse {
      * Expected value is 'Resource'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

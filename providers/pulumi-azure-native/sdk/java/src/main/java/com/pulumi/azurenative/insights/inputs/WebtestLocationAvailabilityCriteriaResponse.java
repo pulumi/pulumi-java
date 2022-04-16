@@ -24,7 +24,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="componentId", required=true)
       private final String componentId;
 
-    public String getComponentId() {
+    public String componentId() {
         return this.componentId;
     }
 
@@ -35,7 +35,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="failedLocationCount", required=true)
       private final Double failedLocationCount;
 
-    public Double getFailedLocationCount() {
+    public Double failedLocationCount() {
         return this.failedLocationCount;
     }
 
@@ -47,7 +47,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -58,7 +58,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
     @Import(name="webTestId", required=true)
       private final String webTestId;
 
-    public String getWebTestId() {
+    public String webTestId() {
         return this.webTestId;
     }
 

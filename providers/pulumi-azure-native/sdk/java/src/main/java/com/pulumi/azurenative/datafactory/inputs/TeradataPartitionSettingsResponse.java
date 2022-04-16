@@ -25,7 +25,7 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionColumnName")
       private final @Nullable Object partitionColumnName;
 
-    public Optional<Object> getPartitionColumnName() {
+    public Optional<Object> partitionColumnName() {
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
     }
 
@@ -36,7 +36,7 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionLowerBound")
       private final @Nullable Object partitionLowerBound;
 
-    public Optional<Object> getPartitionLowerBound() {
+    public Optional<Object> partitionLowerBound() {
         return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
     }
 
@@ -47,7 +47,7 @@ public final class TeradataPartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionUpperBound")
       private final @Nullable Object partitionUpperBound;
 
-    public Optional<Object> getPartitionUpperBound() {
+    public Optional<Object> partitionUpperBound() {
         return this.partitionUpperBound == null ? Optional.empty() : Optional.ofNullable(this.partitionUpperBound);
     }
 

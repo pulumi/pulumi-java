@@ -29,7 +29,7 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<Either<String,LoadBalancerSkuName>> name;
 
-    public Output<Either<String,LoadBalancerSkuName>> getName() {
+    public Output<Either<String,LoadBalancerSkuName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -40,7 +40,7 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
 
-    public Output<Either<String,LoadBalancerSkuTier>> getTier() {
+    public Output<Either<String,LoadBalancerSkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

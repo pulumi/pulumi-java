@@ -28,7 +28,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computeLocation")
       private final @Nullable String computeLocation;
 
-    public Optional<String> getComputeLocation() {
+    public Optional<String> computeLocation() {
         return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
     }
 
@@ -40,7 +40,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computeType", required=true)
       private final String computeType;
 
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
 
@@ -51,7 +51,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -62,7 +62,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isAttachedCompute", required=true)
       private final Boolean isAttachedCompute;
 
-    public Boolean getIsAttachedCompute() {
+    public Boolean isAttachedCompute() {
         return this.isAttachedCompute;
     }
 
@@ -73,7 +73,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningErrors", required=true)
       private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
-    public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
+    public List<MachineLearningServiceErrorResponse> provisioningErrors() {
         return this.provisioningErrors;
     }
 
@@ -84,7 +84,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -95,7 +95,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

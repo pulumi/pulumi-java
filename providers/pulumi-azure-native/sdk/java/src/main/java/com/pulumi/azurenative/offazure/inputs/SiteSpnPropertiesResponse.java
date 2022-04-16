@@ -25,7 +25,7 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="aadAuthority")
       private final @Nullable String aadAuthority;
 
-    public Optional<String> getAadAuthority() {
+    public Optional<String> aadAuthority() {
         return this.aadAuthority == null ? Optional.empty() : Optional.ofNullable(this.aadAuthority);
     }
 
@@ -36,7 +36,7 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
@@ -47,7 +47,7 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="audience")
       private final @Nullable String audience;
 
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
@@ -58,7 +58,7 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="objectId")
       private final @Nullable String objectId;
 
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
@@ -69,7 +69,7 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="rawCertData")
       private final @Nullable String rawCertData;
 
-    public Optional<String> getRawCertData() {
+    public Optional<String> rawCertData() {
         return this.rawCertData == null ? Optional.empty() : Optional.ofNullable(this.rawCertData);
     }
 
@@ -80,7 +80,7 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

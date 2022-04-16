@@ -39,21 +39,21 @@ public final class RetentionTagResponse {
      * Retention Tag version.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
      * Retention Tag version.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Retention Tag Name to relate it to retention rule.
      * 
     */
-    public String getTagName() {
+    public String tagName() {
         return this.tagName;
     }
 

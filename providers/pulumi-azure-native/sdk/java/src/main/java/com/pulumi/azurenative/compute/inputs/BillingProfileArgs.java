@@ -26,7 +26,7 @@ public final class BillingProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxPrice")
       private final @Nullable Output<Double> maxPrice;
 
-    public Output<Double> getMaxPrice() {
+    public Output<Double> maxPrice() {
         return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 

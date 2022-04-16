@@ -36,14 +36,14 @@ public final class PeeringPropertiesExchangeResponse {
      * The set of connections that constitute an exchange peering.
      * 
     */
-    public List<ExchangeConnectionResponse> getConnections() {
+    public List<ExchangeConnectionResponse> connections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
      * The reference of the peer ASN.
      * 
     */
-    public Optional<SubResourceResponse> getPeerAsn() {
+    public Optional<SubResourceResponse> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
 

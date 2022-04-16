@@ -19,7 +19,7 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends com.pulu
     @Import(name="maxUnusedVersionsToKeep", required=true)
       private final Double maxUnusedVersionsToKeep;
 
-    public Double getMaxUnusedVersionsToKeep() {
+    public Double maxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
 

@@ -34,14 +34,14 @@ public final class ConnectivityCollectionResponse {
      * The collection of connectivity related Managed Network Groups within the Managed Network
      * 
     */
-    public List<ManagedNetworkGroupResponse> getGroups() {
+    public List<ManagedNetworkGroupResponse> groups() {
         return this.groups;
     }
     /**
      * The collection of Managed Network Peering Policies within the Managed Network
      * 
     */
-    public List<ManagedNetworkPeeringPolicyResponse> getPeerings() {
+    public List<ManagedNetworkPeeringPolicyResponse> peerings() {
         return this.peerings;
     }
 

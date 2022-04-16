@@ -31,7 +31,7 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="additionalUnattendContent")
       private final @Nullable Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent;
 
-    public Output<List<AdditionalUnattendContentArgs>> getAdditionalUnattendContent() {
+    public Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent() {
         return this.additionalUnattendContent == null ? Codegen.empty() : this.additionalUnattendContent;
     }
 
@@ -42,7 +42,7 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="enableAutomaticUpdates")
       private final @Nullable Output<Boolean> enableAutomaticUpdates;
 
-    public Output<Boolean> getEnableAutomaticUpdates() {
+    public Output<Boolean> enableAutomaticUpdates() {
         return this.enableAutomaticUpdates == null ? Codegen.empty() : this.enableAutomaticUpdates;
     }
 
@@ -53,7 +53,7 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="patchSettings")
       private final @Nullable Output<PatchSettingsArgs> patchSettings;
 
-    public Output<PatchSettingsArgs> getPatchSettings() {
+    public Output<PatchSettingsArgs> patchSettings() {
         return this.patchSettings == null ? Codegen.empty() : this.patchSettings;
     }
 
@@ -64,7 +64,7 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="provisionVMAgent")
       private final @Nullable Output<Boolean> provisionVMAgent;
 
-    public Output<Boolean> getProvisionVMAgent() {
+    public Output<Boolean> provisionVMAgent() {
         return this.provisionVMAgent == null ? Codegen.empty() : this.provisionVMAgent;
     }
 
@@ -75,7 +75,7 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
@@ -86,7 +86,7 @@ public final class WindowsConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="winRM")
       private final @Nullable Output<WinRMConfigurationArgs> winRM;
 
-    public Output<WinRMConfigurationArgs> getWinRM() {
+    public Output<WinRMConfigurationArgs> winRM() {
         return this.winRM == null ? Codegen.empty() : this.winRM;
     }
 

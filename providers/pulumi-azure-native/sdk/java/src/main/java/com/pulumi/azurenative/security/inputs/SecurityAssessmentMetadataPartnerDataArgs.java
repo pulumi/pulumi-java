@@ -26,7 +26,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
     @Import(name="partnerName", required=true)
       private final Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName;
     }
 
@@ -37,7 +37,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
     @Import(name="productName")
       private final @Nullable Output<String> productName;
 
-    public Output<String> getProductName() {
+    public Output<String> productName() {
         return this.productName == null ? Codegen.empty() : this.productName;
     }
 
@@ -48,7 +48,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 

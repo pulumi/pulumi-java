@@ -36,14 +36,14 @@ public final class ListShareSubscriptionSynchronizationsResult {
      * The Url of next result page.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Collection of items of type DataTransferObjects.
      * 
     */
-    public List<ShareSubscriptionSynchronizationResponse> getValue() {
+    public List<ShareSubscriptionSynchronizationResponse> value() {
         return this.value;
     }
 

@@ -155,126 +155,126 @@ public final class GetFrontDoorResult {
      * Backend pools available to routing rules.
      * 
     */
-    public List<BackendPoolResponse> getBackendPools() {
+    public List<BackendPoolResponse> backendPools() {
         return this.backendPools == null ? List.of() : this.backendPools;
     }
     /**
      * Settings for all backendPools
      * 
     */
-    public Optional<BackendPoolsSettingsResponse> getBackendPoolsSettings() {
+    public Optional<BackendPoolsSettingsResponse> backendPoolsSettings() {
         return Optional.ofNullable(this.backendPoolsSettings);
     }
     /**
      * The host that each frontendEndpoint must CNAME to.
      * 
     */
-    public String getCname() {
+    public String cname() {
         return this.cname;
     }
     /**
      * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * A friendly name for the frontDoor
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The Id of the frontdoor.
      * 
     */
-    public String getFrontdoorId() {
+    public String frontdoorId() {
         return this.frontdoorId;
     }
     /**
      * Frontend endpoints available to routing rules.
      * 
     */
-    public List<FrontendEndpointResponse> getFrontendEndpoints() {
+    public List<FrontendEndpointResponse> frontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
     /**
      * Health probe settings associated with this Front Door instance.
      * 
     */
-    public List<HealthProbeSettingsModelResponse> getHealthProbeSettings() {
+    public List<HealthProbeSettingsModelResponse> healthProbeSettings() {
         return this.healthProbeSettings == null ? List.of() : this.healthProbeSettings;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Load balancing settings associated with this Front Door instance.
      * 
     */
-    public List<LoadBalancingSettingsModelResponse> getLoadBalancingSettings() {
+    public List<LoadBalancingSettingsModelResponse> loadBalancingSettings() {
         return this.loadBalancingSettings == null ? List.of() : this.loadBalancingSettings;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the Front Door.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the Front Door.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Routing rules associated with this Front Door.
      * 
     */
-    public List<RoutingRuleResponse> getRoutingRules() {
+    public List<RoutingRuleResponse> routingRules() {
         return this.routingRules == null ? List.of() : this.routingRules;
     }
     /**
      * Rules Engine Configurations available to routing rules.
      * 
     */
-    public List<RulesEngineResponse> getRulesEngines() {
+    public List<RulesEngineResponse> rulesEngines() {
         return this.rulesEngines;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

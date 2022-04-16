@@ -43,7 +43,7 @@ public class FavoriteProcess extends com.pulumi.resources.CustomResource {
      * @return The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
      * 
      */
-    public Output<String> getActualProcessName() {
+    public Output<String> actualProcessName() {
         return this.actualProcessName;
     }
     /**
@@ -57,7 +57,7 @@ public class FavoriteProcess extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class FavoriteProcess extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -85,7 +85,7 @@ public class FavoriteProcess extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

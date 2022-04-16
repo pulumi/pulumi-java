@@ -24,7 +24,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="egressBytesTransferred", required=true)
       private final Double egressBytesTransferred;
 
-    public Double getEgressBytesTransferred() {
+    public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
 
@@ -35,7 +35,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="egressPacketsTransferred", required=true)
       private final Double egressPacketsTransferred;
 
-    public Double getEgressPacketsTransferred() {
+    public Double egressPacketsTransferred() {
         return this.egressPacketsTransferred;
     }
 
@@ -46,7 +46,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="ingressBytesTransferred", required=true)
       private final Double ingressBytesTransferred;
 
-    public Double getIngressBytesTransferred() {
+    public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
 
@@ -57,7 +57,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="ingressPacketsTransferred", required=true)
       private final Double ingressPacketsTransferred;
 
-    public Double getIngressPacketsTransferred() {
+    public Double ingressPacketsTransferred() {
         return this.ingressPacketsTransferred;
     }
 
@@ -68,7 +68,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="maxBandwidth", required=true)
       private final Double maxBandwidth;
 
-    public Double getMaxBandwidth() {
+    public Double maxBandwidth() {
         return this.maxBandwidth;
     }
 
@@ -79,7 +79,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="maxPacketsPerSecond", required=true)
       private final Double maxPacketsPerSecond;
 
-    public Double getMaxPacketsPerSecond() {
+    public Double maxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
     }
 
@@ -90,7 +90,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -101,7 +101,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 
@@ -112,7 +112,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnConnectionDuration", required=true)
       private final Double vpnConnectionDuration;
 
-    public Double getVpnConnectionDuration() {
+    public Double vpnConnectionDuration() {
         return this.vpnConnectionDuration;
     }
 
@@ -123,7 +123,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnConnectionId", required=true)
       private final String vpnConnectionId;
 
-    public String getVpnConnectionId() {
+    public String vpnConnectionId() {
         return this.vpnConnectionId;
     }
 
@@ -134,7 +134,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnConnectionTime", required=true)
       private final String vpnConnectionTime;
 
-    public String getVpnConnectionTime() {
+    public String vpnConnectionTime() {
         return this.vpnConnectionTime;
     }
 
@@ -145,7 +145,7 @@ public final class VpnClientConnectionHealthDetailResponse extends com.pulumi.re
     @Import(name="vpnUserName", required=true)
       private final String vpnUserName;
 
-    public String getVpnUserName() {
+    public String vpnUserName() {
         return this.vpnUserName;
     }
 

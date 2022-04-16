@@ -26,7 +26,7 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managementGroups")
       private final @Nullable List<ResourceIdResponse> managementGroups;
 
-    public List<ResourceIdResponse> getManagementGroups() {
+    public List<ResourceIdResponse> managementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
 
@@ -37,7 +37,7 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnets")
       private final @Nullable List<ResourceIdResponse> subnets;
 
-    public List<ResourceIdResponse> getSubnets() {
+    public List<ResourceIdResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
 
@@ -48,7 +48,7 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscriptions")
       private final @Nullable List<ResourceIdResponse> subscriptions;
 
-    public List<ResourceIdResponse> getSubscriptions() {
+    public List<ResourceIdResponse> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
 
@@ -59,7 +59,7 @@ public final class ScopeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualNetworks")
       private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    public List<ResourceIdResponse> getVirtualNetworks() {
+    public List<ResourceIdResponse> virtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }
 

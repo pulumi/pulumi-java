@@ -42,21 +42,21 @@ public final class ContentLinkResponse {
      * Gets or sets the hash.
      * 
     */
-    public Optional<ContentHashResponse> getContentHash() {
+    public Optional<ContentHashResponse> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
     /**
      * Gets or sets the uri of the runbook content.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
     /**
      * Gets or sets the version of the content.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

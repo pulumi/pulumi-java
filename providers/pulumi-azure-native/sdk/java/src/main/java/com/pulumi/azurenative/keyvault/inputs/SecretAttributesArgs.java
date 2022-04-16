@@ -27,7 +27,7 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expires")
       private final @Nullable Output<Integer> expires;
 
-    public Output<Integer> getExpires() {
+    public Output<Integer> expires() {
         return this.expires == null ? Codegen.empty() : this.expires;
     }
 
@@ -49,7 +49,7 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notBefore")
       private final @Nullable Output<Integer> notBefore;
 
-    public Output<Integer> getNotBefore() {
+    public Output<Integer> notBefore() {
         return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 

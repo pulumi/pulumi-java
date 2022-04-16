@@ -27,7 +27,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="autoKeyConfigUrl")
       private final @Nullable Output<String> autoKeyConfigUrl;
 
-    public Output<String> getAutoKeyConfigUrl() {
+    public Output<String> autoKeyConfigUrl() {
         return this.autoKeyConfigUrl == null ? Codegen.empty() : this.autoKeyConfigUrl;
     }
 
@@ -49,7 +49,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="fluentdConfigUrl")
       private final @Nullable Output<Object> fluentdConfigUrl;
 
-    public Output<Object> getFluentdConfigUrl() {
+    public Output<Object> fluentdConfigUrl() {
         return this.fluentdConfigUrl == null ? Codegen.empty() : this.fluentdConfigUrl;
     }
 
@@ -72,7 +72,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -83,7 +83,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="maConfigUrl")
       private final @Nullable Output<String> maConfigUrl;
 
-    public Output<String> getMaConfigUrl() {
+    public Output<String> maConfigUrl() {
         return this.maConfigUrl == null ? Codegen.empty() : this.maConfigUrl;
     }
 
@@ -94,7 +94,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -105,7 +105,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends co
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

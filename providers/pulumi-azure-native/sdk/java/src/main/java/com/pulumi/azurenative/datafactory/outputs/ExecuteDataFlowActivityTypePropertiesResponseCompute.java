@@ -34,14 +34,14 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
      * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getComputeType() {
+    public Optional<Object> computeType() {
         return Optional.ofNullable(this.computeType);
     }
     /**
      * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
      * 
     */
-    public Optional<Object> getCoreCount() {
+    public Optional<Object> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
 

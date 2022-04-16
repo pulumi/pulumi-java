@@ -45,7 +45,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return A collection of references to express route circuit ipv6 peerings.
      * 
      */
-    public Output<List<ExpressRouteCircuitPeeringResponse>> getIpv6Peerings() {
+    public Output<List<ExpressRouteCircuitPeeringResponse>> ipv6Peerings() {
         return this.ipv6Peerings;
     }
     /**
@@ -73,7 +73,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return A collection of references to express route circuit peerings.
      * 
      */
-    public Output<List<ExpressRouteCircuitPeeringResponse>> getPeerings() {
+    public Output<List<ExpressRouteCircuitPeeringResponse>> peerings() {
         return this.peerings;
     }
     /**
@@ -115,7 +115,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the route filter resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +129,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return Collection of RouteFilterRules contained within a route filter.
      * 
      */
-    public Output</* @Nullable */ List<RouteFilterRuleResponse>> getRules() {
+    public Output</* @Nullable */ List<RouteFilterRuleResponse>> rules() {
         return this.rules;
     }
     /**
@@ -143,7 +143,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class RouteFilter extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

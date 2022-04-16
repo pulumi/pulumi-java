@@ -20,7 +20,7 @@ public final class PoolEndpointConfigurationResponse extends com.pulumi.resource
     @Import(name="inboundNatPools", required=true)
       private final List<InboundNatPoolResponse> inboundNatPools;
 
-    public List<InboundNatPoolResponse> getInboundNatPools() {
+    public List<InboundNatPoolResponse> inboundNatPools() {
         return this.inboundNatPools;
     }
 

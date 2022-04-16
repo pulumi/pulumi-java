@@ -42,7 +42,7 @@ public class SupportPlanType extends com.pulumi.resources.CustomResource {
      * @return The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class SupportPlanType extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -70,7 +70,7 @@ public class SupportPlanType extends com.pulumi.resources.CustomResource {
      * @return Microsoft.Addons/supportProvider
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

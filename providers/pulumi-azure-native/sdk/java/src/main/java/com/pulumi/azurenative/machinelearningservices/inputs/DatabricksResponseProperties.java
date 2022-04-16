@@ -21,7 +21,7 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
     @Import(name="databricksAccessToken")
       private final @Nullable String databricksAccessToken;
 
-    public Optional<String> getDatabricksAccessToken() {
+    public Optional<String> databricksAccessToken() {
         return this.databricksAccessToken == null ? Optional.empty() : Optional.ofNullable(this.databricksAccessToken);
     }
 
@@ -32,7 +32,7 @@ public final class DatabricksResponseProperties extends com.pulumi.resources.Inv
     @Import(name="workspaceUrl")
       private final @Nullable String workspaceUrl;
 
-    public Optional<String> getWorkspaceUrl() {
+    public Optional<String> workspaceUrl() {
         return this.workspaceUrl == null ? Optional.empty() : Optional.ofNullable(this.workspaceUrl);
     }
 

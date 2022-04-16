@@ -29,7 +29,7 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
-    public Output<Double> getCapacity() {
+    public Output<Double> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,IotHubSku>> name;
 
-    public Output<Either<String,IotHubSku>> getName() {
+    public Output<Either<String,IotHubSku>> name() {
         return this.name;
     }
 

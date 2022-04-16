@@ -53,31 +53,31 @@ public final class RemoteAddressMatchConditionParametersResponse {
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
     */
-    public List<String> getMatchValues() {
+    public List<String> matchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
     /**
      * Describes if this is negate condition or not
      * 
     */
-    public Optional<Boolean> getNegateCondition() {
+    public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Describes operator to be matched
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * List of transforms
      * 
     */
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

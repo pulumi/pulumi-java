@@ -21,7 +21,7 @@ public final class ControllerConnectionDetailsResponse extends com.pulumi.resour
     @Import(name="orchestratorSpecificConnectionDetails")
       private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
-    public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {
+    public Optional<KubernetesConnectionDetailsResponse> orchestratorSpecificConnectionDetails() {
         return this.orchestratorSpecificConnectionDetails == null ? Optional.empty() : Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
     }
 

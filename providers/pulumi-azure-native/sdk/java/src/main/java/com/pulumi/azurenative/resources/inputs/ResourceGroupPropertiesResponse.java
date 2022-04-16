@@ -23,7 +23,7 @@ public final class ResourceGroupPropertiesResponse extends com.pulumi.resources.
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

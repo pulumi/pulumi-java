@@ -55,35 +55,35 @@ public final class GetAssociationResult {
      * The association id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The association name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the association.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The REST resource instance of the target resource for this association.
      * 
     */
-    public Optional<String> getTargetResourceId() {
+    public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The association type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

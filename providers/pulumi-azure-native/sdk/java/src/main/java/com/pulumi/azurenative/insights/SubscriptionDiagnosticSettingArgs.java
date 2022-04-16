@@ -24,7 +24,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="eventHubAuthorizationRuleId")
       private final @Nullable Output<String> eventHubAuthorizationRuleId;
 
-    public Output<String> getEventHubAuthorizationRuleId() {
+    public Output<String> eventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId == null ? Codegen.empty() : this.eventHubAuthorizationRuleId;
     }
 
@@ -35,7 +35,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
@@ -46,7 +46,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="logs")
       private final @Nullable Output<List<SubscriptionLogSettingsArgs>> logs;
 
-    public Output<List<SubscriptionLogSettingsArgs>> getLogs() {
+    public Output<List<SubscriptionLogSettingsArgs>> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -68,7 +68,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
 
-    public Output<String> getServiceBusRuleId() {
+    public Output<String> serviceBusRuleId() {
         return this.serviceBusRuleId == null ? Codegen.empty() : this.serviceBusRuleId;
     }
 
@@ -90,7 +90,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
@@ -101,7 +101,7 @@ public final class SubscriptionDiagnosticSettingArgs extends com.pulumi.resource
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 

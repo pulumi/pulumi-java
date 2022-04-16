@@ -29,7 +29,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends com.pulumi.resou
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -41,7 +41,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends com.pulumi.resou
     @Import(name="clientSecretCertificateIssuer")
       private final @Nullable Output<String> clientSecretCertificateIssuer;
 
-    public Output<String> getClientSecretCertificateIssuer() {
+    public Output<String> clientSecretCertificateIssuer() {
         return this.clientSecretCertificateIssuer == null ? Codegen.empty() : this.clientSecretCertificateIssuer;
     }
 
@@ -53,7 +53,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends com.pulumi.resou
     @Import(name="clientSecretCertificateSubjectAlternativeName")
       private final @Nullable Output<String> clientSecretCertificateSubjectAlternativeName;
 
-    public Output<String> getClientSecretCertificateSubjectAlternativeName() {
+    public Output<String> clientSecretCertificateSubjectAlternativeName() {
         return this.clientSecretCertificateSubjectAlternativeName == null ? Codegen.empty() : this.clientSecretCertificateSubjectAlternativeName;
     }
 
@@ -65,7 +65,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends com.pulumi.resou
     @Import(name="clientSecretCertificateThumbprint")
       private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
-    public Output<String> getClientSecretCertificateThumbprint() {
+    public Output<String> clientSecretCertificateThumbprint() {
         return this.clientSecretCertificateThumbprint == null ? Codegen.empty() : this.clientSecretCertificateThumbprint;
     }
 
@@ -76,7 +76,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends com.pulumi.resou
     @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
-    public Output<String> getClientSecretSettingName() {
+    public Output<String> clientSecretSettingName() {
         return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 
@@ -90,7 +90,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends com.pulumi.resou
     @Import(name="openIdIssuer")
       private final @Nullable Output<String> openIdIssuer;
 
-    public Output<String> getOpenIdIssuer() {
+    public Output<String> openIdIssuer() {
         return this.openIdIssuer == null ? Codegen.empty() : this.openIdIssuer;
     }
 

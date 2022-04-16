@@ -64,42 +64,42 @@ public final class GetJobResult {
      * User-defined description of the job.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Schedule properties of the job.
      * 
     */
-    public Optional<JobScheduleResponse> getSchedule() {
+    public Optional<JobScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The job version number.
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

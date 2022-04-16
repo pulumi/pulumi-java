@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> getCaching() {
+    public Output<CachingTypes> caching() {
         return this.caching == null ? Codegen.empty() : this.caching;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOptionTypes>> createOption;
 
-    public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
+    public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
     }
 
@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="diffDiskSettings")
       private final @Nullable Output<DiffDiskSettingsArgs> diffDiskSettings;
 
-    public Output<DiffDiskSettingsArgs> getDiffDiskSettings() {
+    public Output<DiffDiskSettingsArgs> diffDiskSettings() {
         return this.diffDiskSettings == null ? Codegen.empty() : this.diffDiskSettings;
     }
 
@@ -69,7 +69,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -80,7 +80,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="image")
       private final @Nullable Output<VirtualHardDiskArgs> image;
 
-    public Output<VirtualHardDiskArgs> getImage() {
+    public Output<VirtualHardDiskArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -91,7 +91,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="managedDisk")
       private final @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
-    public Output<VirtualMachineScaleSetManagedDiskParametersArgs> getManagedDisk() {
+    public Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk() {
         return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
@@ -102,7 +102,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -113,7 +113,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="osType")
       private final @Nullable Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> getOsType() {
+    public Output<OperatingSystemTypes> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -124,7 +124,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="vhdContainers")
       private final @Nullable Output<List<String>> vhdContainers;
 
-    public Output<List<String>> getVhdContainers() {
+    public Output<List<String>> vhdContainers() {
         return this.vhdContainers == null ? Codegen.empty() : this.vhdContainers;
     }
 
@@ -135,7 +135,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
     @Import(name="writeAcceleratorEnabled")
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
-    public Output<Boolean> getWriteAcceleratorEnabled() {
+    public Output<Boolean> writeAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
     }
 

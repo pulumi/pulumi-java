@@ -26,7 +26,7 @@ public final class InputPortResponse {
      * Port data type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

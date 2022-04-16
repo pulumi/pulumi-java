@@ -72,47 +72,47 @@ public final class GetMonitorResult {
      * ARM id of the monitor resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<IdentityPropertiesResponse> getIdentity() {
+    public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the monitor resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties specific to the monitor resource.
      * 
     */
-    public MonitorPropertiesResponse getProperties() {
+    public MonitorPropertiesResponse properties() {
         return this.properties;
     }
-    public Optional<ResourceSkuResponse> getSku() {
+    public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the monitor resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

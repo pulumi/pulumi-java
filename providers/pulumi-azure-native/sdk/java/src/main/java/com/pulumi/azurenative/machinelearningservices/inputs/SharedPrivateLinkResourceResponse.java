@@ -21,7 +21,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="groupId")
       private final @Nullable String groupId;
 
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
@@ -32,7 +32,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -43,7 +43,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
 
-    public Optional<String> getPrivateLinkResourceId() {
+    public Optional<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
     }
 
@@ -54,7 +54,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
     }
 
@@ -65,7 +65,7 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

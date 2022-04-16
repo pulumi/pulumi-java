@@ -74,42 +74,42 @@ public final class WranglingDataFlowResponse {
      * List of tags that can be used for describing the data flow.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The description of the data flow.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Locale of the Power query mashup document.
      * 
     */
-    public Optional<String> getDocumentLocale() {
+    public Optional<String> documentLocale() {
         return Optional.ofNullable(this.documentLocale);
     }
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
     */
-    public Optional<DataFlowResponseFolder> getFolder() {
+    public Optional<DataFlowResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Power query mashup script.
      * 
     */
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
      * List of sources in Power Query.
      * 
     */
-    public List<PowerQuerySourceResponse> getSources() {
+    public List<PowerQuerySourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
@@ -117,7 +117,7 @@ public final class WranglingDataFlowResponse {
      * Expected value is 'WranglingDataFlow'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

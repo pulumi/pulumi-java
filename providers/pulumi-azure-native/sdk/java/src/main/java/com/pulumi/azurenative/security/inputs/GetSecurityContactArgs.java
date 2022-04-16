@@ -19,7 +19,7 @@ public final class GetSecurityContactArgs extends com.pulumi.resources.InvokeArg
     @Import(name="securityContactName", required=true)
       private final String securityContactName;
 
-    public String getSecurityContactName() {
+    public String securityContactName() {
         return this.securityContactName;
     }
 

@@ -80,56 +80,56 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
      * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
      * 
     */
-    public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
+    public List<SubResourceResponse> applicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
     /**
      * Specifies an array of references to application security group.
      * 
     */
-    public List<SubResourceResponse> getApplicationSecurityGroups() {
+    public List<SubResourceResponse> applicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
     /**
      * Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
      * 
     */
-    public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
+    public List<SubResourceResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
     /**
      * The IP configuration name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
     */
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
      * 
     */
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
     /**
      * The publicIPAddressConfiguration.
      * 
     */
-    public Optional<VirtualMachinePublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
+    public Optional<VirtualMachinePublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
         return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
     /**
      * Specifies the identifier of the subnet.
      * 
     */
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

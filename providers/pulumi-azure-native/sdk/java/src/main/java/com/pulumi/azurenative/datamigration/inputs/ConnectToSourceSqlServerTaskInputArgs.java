@@ -30,7 +30,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="checkPermissionsGroup")
       private final @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
 
-    public Output<Either<String,ServerLevelPermissionsGroup>> getCheckPermissionsGroup() {
+    public Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup() {
         return this.checkPermissionsGroup == null ? Codegen.empty() : this.checkPermissionsGroup;
     }
 
@@ -41,7 +41,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="collectAgentJobs")
       private final @Nullable Output<Boolean> collectAgentJobs;
 
-    public Output<Boolean> getCollectAgentJobs() {
+    public Output<Boolean> collectAgentJobs() {
         return this.collectAgentJobs == null ? Codegen.empty() : this.collectAgentJobs;
     }
 
@@ -52,7 +52,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="collectLogins")
       private final @Nullable Output<Boolean> collectLogins;
 
-    public Output<Boolean> getCollectLogins() {
+    public Output<Boolean> collectLogins() {
         return this.collectLogins == null ? Codegen.empty() : this.collectLogins;
     }
 
@@ -63,7 +63,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends com.pulumi.reso
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 

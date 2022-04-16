@@ -42,7 +42,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return The workload classifier context.
      * 
      */
-    public Output</* @Nullable */ String> getContext() {
+    public Output</* @Nullable */ String> context() {
         return this.context;
     }
     /**
@@ -56,7 +56,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return The workload classifier end time for classification.
      * 
      */
-    public Output</* @Nullable */ String> getEndTime() {
+    public Output</* @Nullable */ String> endTime() {
         return this.endTime;
     }
     /**
@@ -70,7 +70,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return The workload classifier importance.
      * 
      */
-    public Output</* @Nullable */ String> getImportance() {
+    public Output</* @Nullable */ String> importance() {
         return this.importance;
     }
     /**
@@ -84,7 +84,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return The workload classifier label.
      * 
      */
-    public Output</* @Nullable */ String> getLabel() {
+    public Output</* @Nullable */ String> label() {
         return this.label;
     }
     /**
@@ -98,7 +98,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return The workload classifier member name.
      * 
      */
-    public Output<String> getMemberName() {
+    public Output<String> memberName() {
         return this.memberName;
     }
     /**
@@ -112,7 +112,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return The workload classifier start time for classification.
      * 
      */
-    public Output</* @Nullable */ String> getStartTime() {
+    public Output</* @Nullable */ String> startTime() {
         return this.startTime;
     }
     /**
@@ -140,7 +140,7 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

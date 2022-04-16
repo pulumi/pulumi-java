@@ -33,7 +33,7 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -44,7 +44,7 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
     @Import(name="protectableItemId")
       private final @Nullable Output<String> protectableItemId;
 
-    public Output<String> getProtectableItemId() {
+    public Output<String> protectableItemId() {
         return this.protectableItemId == null ? Codegen.empty() : this.protectableItemId;
     }
 
@@ -55,7 +55,7 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
     @Import(name="providerSpecificDetails")
       private final @Nullable Output<Object> providerSpecificDetails;
 
-    public Output<Object> getProviderSpecificDetails() {
+    public Output<Object> providerSpecificDetails() {
         return this.providerSpecificDetails == null ? Codegen.empty() : this.providerSpecificDetails;
     }
 

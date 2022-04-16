@@ -28,7 +28,7 @@ public final class PublicIPAddressConfigurationArgs extends com.pulumi.resources
     @Import(name="ipAddressIds")
       private final @Nullable Output<List<String>> ipAddressIds;
 
-    public Output<List<String>> getIpAddressIds() {
+    public Output<List<String>> ipAddressIds() {
         return this.ipAddressIds == null ? Codegen.empty() : this.ipAddressIds;
     }
 
@@ -39,7 +39,7 @@ public final class PublicIPAddressConfigurationArgs extends com.pulumi.resources
     @Import(name="provision")
       private final @Nullable Output<IPAddressProvisioningType> provision;
 
-    public Output<IPAddressProvisioningType> getProvision() {
+    public Output<IPAddressProvisioningType> provision() {
         return this.provision == null ? Codegen.empty() : this.provision;
     }
 

@@ -190,168 +190,168 @@ public final class X12EnvelopeSettingsResponse {
      * The controls standards id.
      * 
     */
-    public Integer getControlStandardsId() {
+    public Integer controlStandardsId() {
         return this.controlStandardsId;
     }
     /**
      * The control version number.
      * 
     */
-    public String getControlVersionNumber() {
+    public String controlVersionNumber() {
         return this.controlVersionNumber;
     }
     /**
      * The value indicating whether to enable default group headers.
      * 
     */
-    public Boolean getEnableDefaultGroupHeaders() {
+    public Boolean enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
     /**
      * The functional group id.
      * 
     */
-    public Optional<String> getFunctionalGroupId() {
+    public Optional<String> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
     /**
      * The group control number lower bound.
      * 
     */
-    public Integer getGroupControlNumberLowerBound() {
+    public Integer groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
     /**
      * The group control number upper bound.
      * 
     */
-    public Integer getGroupControlNumberUpperBound() {
+    public Integer groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
     /**
      * The group header agency code.
      * 
     */
-    public String getGroupHeaderAgencyCode() {
+    public String groupHeaderAgencyCode() {
         return this.groupHeaderAgencyCode;
     }
     /**
      * The group header date format.
      * 
     */
-    public String getGroupHeaderDateFormat() {
+    public String groupHeaderDateFormat() {
         return this.groupHeaderDateFormat;
     }
     /**
      * The group header time format.
      * 
     */
-    public String getGroupHeaderTimeFormat() {
+    public String groupHeaderTimeFormat() {
         return this.groupHeaderTimeFormat;
     }
     /**
      * The group header version.
      * 
     */
-    public String getGroupHeaderVersion() {
+    public String groupHeaderVersion() {
         return this.groupHeaderVersion;
     }
     /**
      * The interchange  control number lower bound.
      * 
     */
-    public Integer getInterchangeControlNumberLowerBound() {
+    public Integer interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
     /**
      * The interchange  control number upper bound.
      * 
     */
-    public Integer getInterchangeControlNumberUpperBound() {
+    public Integer interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
     /**
      * The value indicating whether to overwrite existing transaction set control number.
      * 
     */
-    public Boolean getOverwriteExistingTransactionSetControlNumber() {
+    public Boolean overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
     /**
      * The receiver application id.
      * 
     */
-    public String getReceiverApplicationId() {
+    public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
     /**
      * The value indicating whether to rollover group control number.
      * 
     */
-    public Boolean getRolloverGroupControlNumber() {
+    public Boolean rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
     /**
      * The value indicating whether to rollover interchange control number.
      * 
     */
-    public Boolean getRolloverInterchangeControlNumber() {
+    public Boolean rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
     /**
      * The value indicating whether to rollover transaction set control number.
      * 
     */
-    public Boolean getRolloverTransactionSetControlNumber() {
+    public Boolean rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
     /**
      * The sender application id.
      * 
     */
-    public String getSenderApplicationId() {
+    public String senderApplicationId() {
         return this.senderApplicationId;
     }
     /**
      * The transaction set control number lower bound.
      * 
     */
-    public Integer getTransactionSetControlNumberLowerBound() {
+    public Integer transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
     /**
      * The transaction set control number prefix.
      * 
     */
-    public Optional<String> getTransactionSetControlNumberPrefix() {
+    public Optional<String> transactionSetControlNumberPrefix() {
         return Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
     /**
      * The transaction set control number suffix.
      * 
     */
-    public Optional<String> getTransactionSetControlNumberSuffix() {
+    public Optional<String> transactionSetControlNumberSuffix() {
         return Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
     /**
      * The transaction set control number upper bound.
      * 
     */
-    public Integer getTransactionSetControlNumberUpperBound() {
+    public Integer transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
     /**
      * The usage indicator.
      * 
     */
-    public String getUsageIndicator() {
+    public String usageIndicator() {
         return this.usageIndicator;
     }
     /**
      * The value indicating whether to use control standards id as repetition character.
      * 
     */
-    public Boolean getUseControlStandardsIdAsRepetitionCharacter() {
+    public Boolean useControlStandardsIdAsRepetitionCharacter() {
         return this.useControlStandardsIdAsRepetitionCharacter;
     }
 

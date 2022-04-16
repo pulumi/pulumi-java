@@ -19,7 +19,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dashboardName", required=true)
       private final String dashboardName;
 
-    public String getDashboardName() {
+    public String dashboardName() {
         return this.dashboardName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

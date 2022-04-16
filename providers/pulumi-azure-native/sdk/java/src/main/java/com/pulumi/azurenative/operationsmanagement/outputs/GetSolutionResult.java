@@ -72,49 +72,49 @@ public final class GetSolutionResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Plan for solution object supported by the OperationsManagement resource provider.
      * 
     */
-    public Optional<SolutionPlanResponse> getPlan() {
+    public Optional<SolutionPlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Properties for solution object supported by the OperationsManagement resource provider.
      * 
     */
-    public SolutionPropertiesResponse getProperties() {
+    public SolutionPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

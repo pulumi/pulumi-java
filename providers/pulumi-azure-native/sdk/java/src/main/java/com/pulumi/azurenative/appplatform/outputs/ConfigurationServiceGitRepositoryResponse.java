@@ -99,77 +99,77 @@ public final class ConfigurationServiceGitRepositoryResponse {
      * Public sshKey of git repository.
      * 
     */
-    public Optional<String> getHostKey() {
+    public Optional<String> hostKey() {
         return Optional.ofNullable(this.hostKey);
     }
     /**
      * SshKey algorithm of git repository.
      * 
     */
-    public Optional<String> getHostKeyAlgorithm() {
+    public Optional<String> hostKeyAlgorithm() {
         return Optional.ofNullable(this.hostKeyAlgorithm);
     }
     /**
      * Label of the repository
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * Name of the repository
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Password of git repository basic auth.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Collection of patterns of the repository
      * 
     */
-    public List<String> getPatterns() {
+    public List<String> patterns() {
         return this.patterns;
     }
     /**
      * Private sshKey algorithm of git repository.
      * 
     */
-    public Optional<String> getPrivateKey() {
+    public Optional<String> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
     /**
      * Searching path of the repository
      * 
     */
-    public List<String> getSearchPaths() {
+    public List<String> searchPaths() {
         return this.searchPaths == null ? List.of() : this.searchPaths;
     }
     /**
      * Strict host key checking or not.
      * 
     */
-    public Optional<Boolean> getStrictHostKeyChecking() {
+    public Optional<Boolean> strictHostKeyChecking() {
         return Optional.ofNullable(this.strictHostKeyChecking);
     }
     /**
      * URI of the repository
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
     /**
      * Username of git repository basic auth.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

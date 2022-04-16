@@ -34,7 +34,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="additionalLocations")
       private final @Nullable Output<List<AdditionalLocationArgs>> additionalLocations;
 
-    public Output<List<AdditionalLocationArgs>> getAdditionalLocations() {
+    public Output<List<AdditionalLocationArgs>> additionalLocations() {
         return this.additionalLocations == null ? Codegen.empty() : this.additionalLocations;
     }
 
@@ -45,7 +45,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="apiVersionConstraint")
       private final @Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint;
 
-    public Output<ApiVersionConstraintArgs> getApiVersionConstraint() {
+    public Output<ApiVersionConstraintArgs> apiVersionConstraint() {
         return this.apiVersionConstraint == null ? Codegen.empty() : this.apiVersionConstraint;
     }
 
@@ -56,7 +56,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="certificates")
       private final @Nullable Output<List<CertificateConfigurationArgs>> certificates;
 
-    public Output<List<CertificateConfigurationArgs>> getCertificates() {
+    public Output<List<CertificateConfigurationArgs>> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
@@ -67,7 +67,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="customProperties")
       private final @Nullable Output<Map<String,String>> customProperties;
 
-    public Output<Map<String,String>> getCustomProperties() {
+    public Output<Map<String,String>> customProperties() {
         return this.customProperties == null ? Codegen.empty() : this.customProperties;
     }
 
@@ -78,7 +78,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="disableGateway")
       private final @Nullable Output<Boolean> disableGateway;
 
-    public Output<Boolean> getDisableGateway() {
+    public Output<Boolean> disableGateway() {
         return this.disableGateway == null ? Codegen.empty() : this.disableGateway;
     }
 
@@ -89,7 +89,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="enableClientCertificate")
       private final @Nullable Output<Boolean> enableClientCertificate;
 
-    public Output<Boolean> getEnableClientCertificate() {
+    public Output<Boolean> enableClientCertificate() {
         return this.enableClientCertificate == null ? Codegen.empty() : this.enableClientCertificate;
     }
 
@@ -100,7 +100,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="hostnameConfigurations")
       private final @Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations;
 
-    public Output<List<HostnameConfigurationArgs>> getHostnameConfigurations() {
+    public Output<List<HostnameConfigurationArgs>> hostnameConfigurations() {
         return this.hostnameConfigurations == null ? Codegen.empty() : this.hostnameConfigurations;
     }
 
@@ -111,7 +111,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="identity")
       private final @Nullable Output<ApiManagementServiceIdentityArgs> identity;
 
-    public Output<ApiManagementServiceIdentityArgs> getIdentity() {
+    public Output<ApiManagementServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -122,7 +122,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -133,7 +133,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="notificationSenderEmail")
       private final @Nullable Output<String> notificationSenderEmail;
 
-    public Output<String> getNotificationSenderEmail() {
+    public Output<String> notificationSenderEmail() {
         return this.notificationSenderEmail == null ? Codegen.empty() : this.notificationSenderEmail;
     }
 
@@ -144,7 +144,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="publisherEmail", required=true)
       private final Output<String> publisherEmail;
 
-    public Output<String> getPublisherEmail() {
+    public Output<String> publisherEmail() {
         return this.publisherEmail;
     }
 
@@ -155,7 +155,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="publisherName", required=true)
       private final Output<String> publisherName;
 
-    public Output<String> getPublisherName() {
+    public Output<String> publisherName() {
         return this.publisherName;
     }
 
@@ -166,7 +166,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -177,7 +177,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="restore")
       private final @Nullable Output<Boolean> restore;
 
-    public Output<Boolean> getRestore() {
+    public Output<Boolean> restore() {
         return this.restore == null ? Codegen.empty() : this.restore;
     }
 
@@ -188,7 +188,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -199,7 +199,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="sku", required=true)
       private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
 
-    public Output<ApiManagementServiceSkuPropertiesArgs> getSku() {
+    public Output<ApiManagementServiceSkuPropertiesArgs> sku() {
         return this.sku;
     }
 
@@ -210,7 +210,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -221,7 +221,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
+    public Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
     }
 
@@ -232,7 +232,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="virtualNetworkType")
       private final @Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType;
 
-    public Output<Either<String,VirtualNetworkType>> getVirtualNetworkType() {
+    public Output<Either<String,VirtualNetworkType>> virtualNetworkType() {
         return this.virtualNetworkType == null ? Codegen.empty() : this.virtualNetworkType;
     }
 
@@ -243,7 +243,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

@@ -19,7 +19,7 @@ public final class GetBlobServicePropertiesArgs extends com.pulumi.resources.Inv
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBlobServicePropertiesArgs extends com.pulumi.resources.Inv
     @Import(name="blobServicesName", required=true)
       private final String blobServicesName;
 
-    public String getBlobServicesName() {
+    public String blobServicesName() {
         return this.blobServicesName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBlobServicePropertiesArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

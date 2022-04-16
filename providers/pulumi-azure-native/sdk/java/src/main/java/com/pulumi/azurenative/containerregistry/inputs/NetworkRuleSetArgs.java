@@ -31,7 +31,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultAction", required=true)
       private final Output<Either<String,DefaultAction>> defaultAction;
 
-    public Output<Either<String,DefaultAction>> getDefaultAction() {
+    public Output<Either<String,DefaultAction>> defaultAction() {
         return this.defaultAction;
     }
 
@@ -42,7 +42,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipRules")
       private final @Nullable Output<List<IPRuleArgs>> ipRules;
 
-    public Output<List<IPRuleArgs>> getIpRules() {
+    public Output<List<IPRuleArgs>> ipRules() {
         return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
+    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 

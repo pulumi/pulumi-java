@@ -19,7 +19,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
-    public String getManagedInstanceName() {
+    public String managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
     @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
-    public String getPrivateEndpointConnectionName() {
+    public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagedInstancePrivateEndpointConnectionArgs extends com.p
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -28,7 +28,7 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="bindingParameters")
       private final @Nullable Output<Map<String,Object>> bindingParameters;
 
-    public Output<Map<String,Object>> getBindingParameters() {
+    public Output<Map<String,Object>> bindingParameters() {
         return this.bindingParameters == null ? Codegen.empty() : this.bindingParameters;
     }
 
@@ -39,7 +39,7 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -50,7 +50,7 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

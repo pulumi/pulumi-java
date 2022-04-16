@@ -87,63 +87,63 @@ public final class GetRestorePointCollectionResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the restore point collection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The unique id of the restore point collection.
      * 
     */
-    public String getRestorePointCollectionId() {
+    public String restorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
      * A list containing all restore points created under this restore point collection.
      * 
     */
-    public List<RestorePointResponse> getRestorePoints() {
+    public List<RestorePointResponse> restorePoints() {
         return this.restorePoints;
     }
     /**
      * The properties of the source resource that this restore point collection is created from.
      * 
     */
-    public Optional<RestorePointCollectionSourcePropertiesResponse> getSource() {
+    public Optional<RestorePointCollectionSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

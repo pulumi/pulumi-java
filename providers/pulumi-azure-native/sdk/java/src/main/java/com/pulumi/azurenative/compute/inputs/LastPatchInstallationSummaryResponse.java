@@ -26,7 +26,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="error", required=true)
       private final ApiErrorResponse error;
 
-    public ApiErrorResponse getError() {
+    public ApiErrorResponse error() {
         return this.error;
     }
 
@@ -37,7 +37,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="excludedPatchCount", required=true)
       private final Integer excludedPatchCount;
 
-    public Integer getExcludedPatchCount() {
+    public Integer excludedPatchCount() {
         return this.excludedPatchCount;
     }
 
@@ -48,7 +48,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="failedPatchCount", required=true)
       private final Integer failedPatchCount;
 
-    public Integer getFailedPatchCount() {
+    public Integer failedPatchCount() {
         return this.failedPatchCount;
     }
 
@@ -59,7 +59,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="installationActivityId", required=true)
       private final String installationActivityId;
 
-    public String getInstallationActivityId() {
+    public String installationActivityId() {
         return this.installationActivityId;
     }
 
@@ -70,7 +70,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="installedPatchCount", required=true)
       private final Integer installedPatchCount;
 
-    public Integer getInstalledPatchCount() {
+    public Integer installedPatchCount() {
         return this.installedPatchCount;
     }
 
@@ -81,7 +81,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
 
@@ -92,7 +92,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="maintenanceWindowExceeded", required=true)
       private final Boolean maintenanceWindowExceeded;
 
-    public Boolean getMaintenanceWindowExceeded() {
+    public Boolean maintenanceWindowExceeded() {
         return this.maintenanceWindowExceeded;
     }
 
@@ -103,7 +103,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="notSelectedPatchCount", required=true)
       private final Integer notSelectedPatchCount;
 
-    public Integer getNotSelectedPatchCount() {
+    public Integer notSelectedPatchCount() {
         return this.notSelectedPatchCount;
     }
 
@@ -114,7 +114,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="pendingPatchCount", required=true)
       private final Integer pendingPatchCount;
 
-    public Integer getPendingPatchCount() {
+    public Integer pendingPatchCount() {
         return this.pendingPatchCount;
     }
 
@@ -125,7 +125,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -136,7 +136,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

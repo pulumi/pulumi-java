@@ -46,7 +46,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The extended location of the Image.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -60,7 +60,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
      */
-    public Output</* @Nullable */ String> getHyperVGeneration() {
+    public Output</* @Nullable */ String> hyperVGeneration() {
         return this.hyperVGeneration;
     }
     /**
@@ -74,7 +74,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +116,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The source virtual machine from which Image is created.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getSourceVirtualMachine() {
+    public Output</* @Nullable */ SubResourceResponse> sourceVirtualMachine() {
         return this.sourceVirtualMachine;
     }
     /**
@@ -130,7 +130,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Specifies the storage settings for the virtual machine disks.
      * 
      */
-    public Output</* @Nullable */ ImageStorageProfileResponse> getStorageProfile() {
+    public Output</* @Nullable */ ImageStorageProfileResponse> storageProfile() {
         return this.storageProfile;
     }
     /**
@@ -144,7 +144,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

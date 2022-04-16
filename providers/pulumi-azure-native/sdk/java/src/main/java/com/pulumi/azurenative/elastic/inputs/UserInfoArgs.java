@@ -27,7 +27,7 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="companyInfo")
       private final @Nullable Output<CompanyInfoArgs> companyInfo;
 
-    public Output<CompanyInfoArgs> getCompanyInfo() {
+    public Output<CompanyInfoArgs> companyInfo() {
         return this.companyInfo == null ? Codegen.empty() : this.companyInfo;
     }
 
@@ -38,7 +38,7 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="companyName")
       private final @Nullable Output<String> companyName;
 
-    public Output<String> getCompanyName() {
+    public Output<String> companyName() {
         return this.companyName == null ? Codegen.empty() : this.companyName;
     }
 
@@ -49,7 +49,7 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
@@ -60,7 +60,7 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
@@ -71,7 +71,7 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 

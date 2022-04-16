@@ -42,21 +42,21 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse {
      * Gets the key name in the Key Vault.
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * The key vault reference.
      * 
     */
-    public Optional<ResourceReferenceResponse> getKeyVault() {
+    public Optional<ResourceReferenceResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * Gets the version of the key specified in the keyName property.
      * 
     */
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
 

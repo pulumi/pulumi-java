@@ -39,21 +39,21 @@ public final class AzureContainerInfoResponse {
      * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
      * 
     */
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
     /**
      * Storage format used for the file represented by the share.
      * 
     */
-    public String getDataFormat() {
+    public String dataFormat() {
         return this.dataFormat;
     }
     /**
      * ID of the storage account credential used to access storage.
      * 
     */
-    public String getStorageAccountCredentialId() {
+    public String storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 

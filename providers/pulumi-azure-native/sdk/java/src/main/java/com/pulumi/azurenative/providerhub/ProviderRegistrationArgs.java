@@ -19,7 +19,7 @@ public final class ProviderRegistrationArgs extends com.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Output<ProviderRegistrationPropertiesArgs> getProperties() {
+    public Output<ProviderRegistrationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -30,7 +30,7 @@ public final class ProviderRegistrationArgs extends com.pulumi.resources.Resourc
     @Import(name="providerNamespace")
       private final @Nullable Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace == null ? Codegen.empty() : this.providerNamespace;
     }
 

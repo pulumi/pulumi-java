@@ -49,28 +49,28 @@ public final class GetOnlineEndpointTokenResult {
      * Access token.
      * 
     */
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Access token expiry time (UTC).
      * 
     */
-    public Optional<Double> getExpiryTimeUtc() {
+    public Optional<Double> expiryTimeUtc() {
         return Optional.ofNullable(this.expiryTimeUtc);
     }
     /**
      * Refresh access token after time (UTC).
      * 
     */
-    public Optional<Double> getRefreshAfterTimeUtc() {
+    public Optional<Double> refreshAfterTimeUtc() {
         return Optional.ofNullable(this.refreshAfterTimeUtc);
     }
     /**
      * Access token type.
      * 
     */
-    public Optional<String> getTokenType() {
+    public Optional<String> tokenType() {
         return Optional.ofNullable(this.tokenType);
     }
 

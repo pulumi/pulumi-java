@@ -26,7 +26,7 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="scheduleFrequencyInMins")
       private final @Nullable Integer scheduleFrequencyInMins;
 
-    public Optional<Integer> getScheduleFrequencyInMins() {
+    public Optional<Integer> scheduleFrequencyInMins() {
         return this.scheduleFrequencyInMins == null ? Optional.empty() : Optional.ofNullable(this.scheduleFrequencyInMins);
     }
 
@@ -38,7 +38,7 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="schedulePolicyType", required=true)
       private final String schedulePolicyType;
 
-    public String getSchedulePolicyType() {
+    public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 

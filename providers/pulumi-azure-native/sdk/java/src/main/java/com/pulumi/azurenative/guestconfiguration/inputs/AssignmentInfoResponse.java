@@ -26,7 +26,7 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="configuration")
       private final @Nullable ConfigurationInfoResponse configuration;
 
-    public Optional<ConfigurationInfoResponse> getConfiguration() {
+    public Optional<ConfigurationInfoResponse> configuration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
@@ -37,7 +37,7 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

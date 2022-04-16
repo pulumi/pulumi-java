@@ -22,10 +22,10 @@ public final class SubscriptionRegisteredFeaturesResponse {
         this.state = state;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

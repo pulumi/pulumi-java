@@ -26,7 +26,7 @@ public final class IPAccessControlResponse extends com.pulumi.resources.InvokeAr
     @Import(name="allow")
       private final @Nullable List<IPRangeResponse> allow;
 
-    public List<IPRangeResponse> getAllow() {
+    public List<IPRangeResponse> allow() {
         return this.allow == null ? List.of() : this.allow;
     }
 

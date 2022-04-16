@@ -26,7 +26,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
     @Import(name="ignoreCase")
       private final @Nullable Boolean ignoreCase;
 
-    public Optional<Boolean> getIgnoreCase() {
+    public Optional<Boolean> ignoreCase() {
         return this.ignoreCase == null ? Optional.empty() : Optional.ofNullable(this.ignoreCase);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
     @Import(name="negate")
       private final @Nullable Boolean negate;
 
-    public Optional<Boolean> getNegate() {
+    public Optional<Boolean> negate() {
         return this.negate == null ? Optional.empty() : Optional.ofNullable(this.negate);
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
     @Import(name="pattern")
       private final @Nullable String pattern;
 
-    public Optional<String> getPattern() {
+    public Optional<String> pattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
     @Import(name="variable")
       private final @Nullable String variable;
 
-    public Optional<String> getVariable() {
+    public Optional<String> variable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
     }
 

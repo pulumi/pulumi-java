@@ -28,7 +28,7 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="creationParameters", required=true)
       private final Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
 
-    public Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> getCreationParameters() {
+    public Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters() {
         return this.creationParameters;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="destinationPath", required=true)
       private final Output<String> destinationPath;
 
-    public Output<String> getDestinationPath() {
+    public Output<String> destinationPath() {
         return this.destinationPath;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationScopedVolumeArgs extends com.pulumi.resources.Reso
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 

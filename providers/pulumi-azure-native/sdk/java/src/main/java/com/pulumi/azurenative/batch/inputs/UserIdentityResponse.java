@@ -26,7 +26,7 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="autoUser")
       private final @Nullable AutoUserSpecificationResponse autoUser;
 
-    public Optional<AutoUserSpecificationResponse> getAutoUser() {
+    public Optional<AutoUserSpecificationResponse> autoUser() {
         return this.autoUser == null ? Optional.empty() : Optional.ofNullable(this.autoUser);
     }
 
@@ -37,7 +37,7 @@ public final class UserIdentityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

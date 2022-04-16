@@ -35,14 +35,14 @@ public final class AdhocBasedTriggerContextResponse {
      * Expected value is 'AdhocBasedTriggerContext'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Tagging Criteria containing retention tag for adhoc backup.
      * 
     */
-    public AdhocBasedTaggingCriteriaResponse getTaggingCriteria() {
+    public AdhocBasedTaggingCriteriaResponse taggingCriteria() {
         return this.taggingCriteria;
     }
 

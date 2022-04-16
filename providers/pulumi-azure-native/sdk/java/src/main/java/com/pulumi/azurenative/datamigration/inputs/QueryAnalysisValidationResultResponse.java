@@ -24,7 +24,7 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
     @Import(name="queryResults", required=true)
       private final QueryExecutionResultResponse queryResults;
 
-    public QueryExecutionResultResponse getQueryResults() {
+    public QueryExecutionResultResponse queryResults() {
         return this.queryResults;
     }
 
@@ -35,7 +35,7 @@ public final class QueryAnalysisValidationResultResponse extends com.pulumi.reso
     @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;
 
-    public ValidationErrorResponse getValidationErrors() {
+    public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }
 

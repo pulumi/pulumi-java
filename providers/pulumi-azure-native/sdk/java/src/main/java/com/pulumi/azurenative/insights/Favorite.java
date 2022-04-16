@@ -43,7 +43,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Favorite category, as defined by the user at creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCategory() {
+    public Output</* @Nullable */ String> category() {
         return this.category;
     }
     /**
@@ -57,7 +57,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
      */
-    public Output</* @Nullable */ String> getConfig() {
+    public Output</* @Nullable */ String> config() {
         return this.config;
     }
     /**
@@ -71,7 +71,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Internally assigned unique id of the favorite definition.
      * 
      */
-    public Output<String> getFavoriteId() {
+    public Output<String> favoriteId() {
         return this.favoriteId;
     }
     /**
@@ -85,7 +85,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    public Output</* @Nullable */ String> getFavoriteType() {
+    public Output</* @Nullable */ String> favoriteType() {
         return this.favoriteType;
     }
     /**
@@ -99,7 +99,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Flag denoting wether or not this favorite was generated from a template.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsGeneratedFromTemplate() {
+    public Output</* @Nullable */ Boolean> isGeneratedFromTemplate() {
         return this.isGeneratedFromTemplate;
     }
     /**
@@ -113,7 +113,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return The user-defined name of the favorite.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return The source of the favorite definition.
      * 
      */
-    public Output</* @Nullable */ String> getSourceType() {
+    public Output</* @Nullable */ String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -141,7 +141,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return A list of 0 or more tags that are associated with this favorite definition
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +155,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Date and time in UTC of the last modification that was made to this favorite definition.
      * 
      */
-    public Output<String> getTimeModified() {
+    public Output<String> timeModified() {
         return this.timeModified;
     }
     /**
@@ -169,7 +169,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return Unique user id of the specific user that owns this favorite.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
     /**
@@ -183,7 +183,7 @@ public class Favorite extends com.pulumi.resources.CustomResource {
      * @return This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

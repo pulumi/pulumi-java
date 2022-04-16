@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse {
      * The access endpoint type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

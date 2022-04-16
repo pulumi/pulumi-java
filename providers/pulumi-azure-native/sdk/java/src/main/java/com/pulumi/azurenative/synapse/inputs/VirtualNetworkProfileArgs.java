@@ -26,7 +26,7 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
     @Import(name="computeSubnetId")
       private final @Nullable Output<String> computeSubnetId;
 
-    public Output<String> getComputeSubnetId() {
+    public Output<String> computeSubnetId() {
         return this.computeSubnetId == null ? Codegen.empty() : this.computeSubnetId;
     }
 

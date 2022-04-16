@@ -49,28 +49,28 @@ public final class SourceResponse {
      * List of  Resource referred into query
      * 
     */
-    public List<String> getAuthorizedResources() {
+    public List<String> authorizedResources() {
         return this.authorizedResources == null ? List.of() : this.authorizedResources;
     }
     /**
      * The resource uri over which log search query is to be run.
      * 
     */
-    public String getDataSourceId() {
+    public String dataSourceId() {
         return this.dataSourceId;
     }
     /**
      * Log search query. Required for action type - AlertingAction
      * 
     */
-    public Optional<String> getQuery() {
+    public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Set value to 'ResultCount' .
      * 
     */
-    public Optional<String> getQueryType() {
+    public Optional<String> queryType() {
         return Optional.ofNullable(this.queryType);
     }
 

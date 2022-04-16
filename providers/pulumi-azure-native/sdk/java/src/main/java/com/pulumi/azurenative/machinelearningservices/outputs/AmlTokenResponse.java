@@ -26,7 +26,7 @@ public final class AmlTokenResponse {
      * Expected value is 'AMLToken'.
      * 
     */
-    public String getIdentityType() {
+    public String identityType() {
         return this.identityType;
     }
 

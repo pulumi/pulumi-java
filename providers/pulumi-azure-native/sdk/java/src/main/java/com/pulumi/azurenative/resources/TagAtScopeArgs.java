@@ -22,7 +22,7 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<TagsArgs> properties;
 
-    public Output<TagsArgs> getProperties() {
+    public Output<TagsArgs> properties() {
         return this.properties;
     }
 
@@ -33,7 +33,7 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

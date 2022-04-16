@@ -30,7 +30,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="allocationPolicy")
       private final @Nullable String allocationPolicy;
 
-    public Optional<String> getAllocationPolicy() {
+    public Optional<String> allocationPolicy() {
         return this.allocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.allocationPolicy);
     }
 
@@ -41,7 +41,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="authorizationPolicies")
       private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
 
-    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> getAuthorizationPolicies() {
+    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
     }
 
@@ -52,7 +52,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="deviceProvisioningHostName", required=true)
       private final String deviceProvisioningHostName;
 
-    public String getDeviceProvisioningHostName() {
+    public String deviceProvisioningHostName() {
         return this.deviceProvisioningHostName;
     }
 
@@ -63,7 +63,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="idScope", required=true)
       private final String idScope;
 
-    public String getIdScope() {
+    public String idScope() {
         return this.idScope;
     }
 
@@ -74,7 +74,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="iotHubs")
       private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
 
-    public List<IotHubDefinitionDescriptionResponse> getIotHubs() {
+    public List<IotHubDefinitionDescriptionResponse> iotHubs() {
         return this.iotHubs == null ? List.of() : this.iotHubs;
     }
 
@@ -85,7 +85,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="ipFilterRules")
       private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
 
-    public List<TargetIpFilterRuleResponse> getIpFilterRules() {
+    public List<TargetIpFilterRuleResponse> ipFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
     }
 
@@ -96,7 +96,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 
@@ -107,7 +107,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -118,7 +118,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -129,7 +129,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="serviceOperationsHostName", required=true)
       private final String serviceOperationsHostName;
 
-    public String getServiceOperationsHostName() {
+    public String serviceOperationsHostName() {
         return this.serviceOperationsHostName;
     }
 
@@ -140,7 +140,7 @@ public final class IotDpsPropertiesDescriptionResponse extends com.pulumi.resour
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

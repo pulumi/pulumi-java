@@ -71,49 +71,49 @@ public final class GetSecurityContactResult {
      * Defines whether to send email notifications about new security alerts
      * 
     */
-    public Optional<SecurityContactPropertiesResponseAlertNotifications> getAlertNotifications() {
+    public Optional<SecurityContactPropertiesResponseAlertNotifications> alertNotifications() {
         return Optional.ofNullable(this.alertNotifications);
     }
     /**
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
     */
-    public Optional<String> getEmails() {
+    public Optional<String> emails() {
         return Optional.ofNullable(this.emails);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
     */
-    public Optional<SecurityContactPropertiesResponseNotificationsByRole> getNotificationsByRole() {
+    public Optional<SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole() {
         return Optional.ofNullable(this.notificationsByRole);
     }
     /**
      * The security contact's phone number
      * 
     */
-    public Optional<String> getPhone() {
+    public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

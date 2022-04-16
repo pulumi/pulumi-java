@@ -28,7 +28,7 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="computeProperties")
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
-    public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
+    public Output<IntegrationRuntimeComputePropertiesArgs> computeProperties() {
         return this.computeProperties == null ? Codegen.empty() : this.computeProperties;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="ssisProperties")
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
-    public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
+    public Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties() {
         return this.ssisProperties == null ? Codegen.empty() : this.ssisProperties;
     }
 
@@ -62,7 +62,7 @@ public final class ManagedIntegrationRuntimeArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

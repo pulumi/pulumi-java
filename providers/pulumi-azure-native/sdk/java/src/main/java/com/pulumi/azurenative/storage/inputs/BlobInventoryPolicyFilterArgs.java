@@ -28,7 +28,7 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="blobTypes", required=true)
       private final Output<List<String>> blobTypes;
 
-    public Output<List<String>> getBlobTypes() {
+    public Output<List<String>> blobTypes() {
         return this.blobTypes;
     }
 
@@ -39,7 +39,7 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="includeBlobVersions")
       private final @Nullable Output<Boolean> includeBlobVersions;
 
-    public Output<Boolean> getIncludeBlobVersions() {
+    public Output<Boolean> includeBlobVersions() {
         return this.includeBlobVersions == null ? Codegen.empty() : this.includeBlobVersions;
     }
 
@@ -50,7 +50,7 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="includeSnapshots")
       private final @Nullable Output<Boolean> includeSnapshots;
 
-    public Output<Boolean> getIncludeSnapshots() {
+    public Output<Boolean> includeSnapshots() {
         return this.includeSnapshots == null ? Codegen.empty() : this.includeSnapshots;
     }
 
@@ -61,7 +61,7 @@ public final class BlobInventoryPolicyFilterArgs extends com.pulumi.resources.Re
     @Import(name="prefixMatch")
       private final @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> getPrefixMatch() {
+    public Output<List<String>> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 

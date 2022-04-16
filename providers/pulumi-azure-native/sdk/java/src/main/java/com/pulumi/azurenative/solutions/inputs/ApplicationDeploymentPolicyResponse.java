@@ -23,7 +23,7 @@ public final class ApplicationDeploymentPolicyResponse extends com.pulumi.resour
     @Import(name="deploymentMode", required=true)
       private final String deploymentMode;
 
-    public String getDeploymentMode() {
+    public String deploymentMode() {
         return this.deploymentMode;
     }
 

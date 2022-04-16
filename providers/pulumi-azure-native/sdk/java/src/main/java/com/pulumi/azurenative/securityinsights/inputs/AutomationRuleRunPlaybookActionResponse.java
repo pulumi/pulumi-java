@@ -25,7 +25,7 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
     @Import(name="actionConfiguration", required=true)
       private final AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration;
 
-    public AutomationRuleRunPlaybookActionResponseActionConfiguration getActionConfiguration() {
+    public AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration() {
         return this.actionConfiguration;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
     @Import(name="actionType", required=true)
       private final String actionType;
 
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
 
@@ -48,7 +48,7 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
     @Import(name="order", required=true)
       private final Integer order;
 
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 

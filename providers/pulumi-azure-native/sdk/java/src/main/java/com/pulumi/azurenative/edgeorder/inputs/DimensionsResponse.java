@@ -24,7 +24,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="depth", required=true)
       private final Double depth;
 
-    public Double getDepth() {
+    public Double depth() {
         return this.depth;
     }
 
@@ -35,7 +35,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height", required=true)
       private final Double height;
 
-    public Double getHeight() {
+    public Double height() {
         return this.height;
     }
 
@@ -46,7 +46,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="length", required=true)
       private final Double length;
 
-    public Double getLength() {
+    public Double length() {
         return this.length;
     }
 
@@ -57,7 +57,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lengthHeightUnit", required=true)
       private final String lengthHeightUnit;
 
-    public String getLengthHeightUnit() {
+    public String lengthHeightUnit() {
         return this.lengthHeightUnit;
     }
 
@@ -68,7 +68,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight", required=true)
       private final Double weight;
 
-    public Double getWeight() {
+    public Double weight() {
         return this.weight;
     }
 
@@ -79,7 +79,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weightUnit", required=true)
       private final String weightUnit;
 
-    public String getWeightUnit() {
+    public String weightUnit() {
         return this.weightUnit;
     }
 
@@ -90,7 +90,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width", required=true)
       private final Double width;
 
-    public Double getWidth() {
+    public Double width() {
         return this.width;
     }
 

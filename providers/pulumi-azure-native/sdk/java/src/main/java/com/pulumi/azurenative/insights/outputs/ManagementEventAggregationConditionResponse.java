@@ -42,21 +42,21 @@ public final class ManagementEventAggregationConditionResponse {
      * the condition operator.
      * 
     */
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The threshold value that activates the alert.
      * 
     */
-    public Optional<Double> getThreshold() {
+    public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
     */
-    public Optional<String> getWindowSize() {
+    public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
 

@@ -42,21 +42,21 @@ public final class DataDisksGroupsResponse {
      * ReadOnly. The DiskSize in GB. Do not set this value.
      * 
     */
-    public Integer getDiskSizeGB() {
+    public Integer diskSizeGB() {
         return this.diskSizeGB;
     }
     /**
      * The number of disks per node.
      * 
     */
-    public Optional<Integer> getDisksPerNode() {
+    public Optional<Integer> disksPerNode() {
         return Optional.ofNullable(this.disksPerNode);
     }
     /**
      * ReadOnly. The storage account type. Do not set this value.
      * 
     */
-    public String getStorageAccountType() {
+    public String storageAccountType() {
         return this.storageAccountType;
     }
 

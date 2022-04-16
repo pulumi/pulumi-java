@@ -27,7 +27,7 @@ public final class ServerlessUpstreamSettingsArgs extends com.pulumi.resources.R
     @Import(name="templates")
       private final @Nullable Output<List<UpstreamTemplateArgs>> templates;
 
-    public Output<List<UpstreamTemplateArgs>> getTemplates() {
+    public Output<List<UpstreamTemplateArgs>> templates() {
         return this.templates == null ? Codegen.empty() : this.templates;
     }
 

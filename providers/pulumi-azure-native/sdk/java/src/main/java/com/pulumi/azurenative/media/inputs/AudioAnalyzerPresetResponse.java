@@ -26,7 +26,7 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
     @Import(name="audioLanguage")
       private final @Nullable String audioLanguage;
 
-    public Optional<String> getAudioLanguage() {
+    public Optional<String> audioLanguage() {
         return this.audioLanguage == null ? Optional.empty() : Optional.ofNullable(this.audioLanguage);
     }
 
@@ -37,7 +37,7 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
     @Import(name="experimentalOptions")
       private final @Nullable Map<String,String> experimentalOptions;
 
-    public Map<String,String> getExperimentalOptions() {
+    public Map<String,String> experimentalOptions() {
         return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
     }
 
@@ -48,7 +48,7 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -60,7 +60,7 @@ public final class AudioAnalyzerPresetResponse extends com.pulumi.resources.Invo
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

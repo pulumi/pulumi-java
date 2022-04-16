@@ -43,24 +43,24 @@ public final class GetSubscriptionFeatureRegistrationResult {
      * Azure resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Azure resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public SubscriptionFeatureRegistrationResponseProperties getProperties() {
+    public SubscriptionFeatureRegistrationResponseProperties properties() {
         return this.properties;
     }
     /**
      * Azure resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

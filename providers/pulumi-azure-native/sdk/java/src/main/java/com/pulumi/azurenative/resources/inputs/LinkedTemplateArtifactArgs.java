@@ -26,7 +26,7 @@ public final class LinkedTemplateArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -37,7 +37,7 @@ public final class LinkedTemplateArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="template", required=true)
       private final Output<Object> template;
 
-    public Output<Object> getTemplate() {
+    public Output<Object> template() {
         return this.template;
     }
 

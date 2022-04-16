@@ -24,7 +24,7 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="lastModified", required=true)
       private final String lastModified;
 
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
 
@@ -35,7 +35,7 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="managedResources", required=true)
       private final List<String> managedResources;
 
-    public List<String> getManagedResources() {
+    public List<String> managedResources() {
         return this.managedResources;
     }
 
@@ -46,7 +46,7 @@ public final class AssignmentStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="timeCreated", required=true)
       private final String timeCreated;
 
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
 

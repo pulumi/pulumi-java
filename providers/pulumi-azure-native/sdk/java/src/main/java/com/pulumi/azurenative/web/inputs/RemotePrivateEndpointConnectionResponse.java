@@ -28,7 +28,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -39,7 +39,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 
@@ -50,7 +50,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -61,7 +61,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="privateEndpoint")
       private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
-    public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
+    public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -83,14 +83,14 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
-    public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -101,7 +101,7 @@ public final class RemotePrivateEndpointConnectionResponse extends com.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

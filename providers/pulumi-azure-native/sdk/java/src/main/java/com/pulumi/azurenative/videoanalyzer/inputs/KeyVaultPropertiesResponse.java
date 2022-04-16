@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="currentKeyIdentifier", required=true)
       private final String currentKeyIdentifier;
 
-    public String getCurrentKeyIdentifier() {
+    public String currentKeyIdentifier() {
         return this.currentKeyIdentifier;
     }
 
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyIdentifier", required=true)
       private final String keyIdentifier;
 
-    public String getKeyIdentifier() {
+    public String keyIdentifier() {
         return this.keyIdentifier;
     }
 

@@ -26,7 +26,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capacityLimit")
       private final @Nullable Output<Integer> capacityLimit;
 
-    public Output<Integer> getCapacityLimit() {
+    public Output<Integer> capacityLimit() {
         return this.capacityLimit == null ? Codegen.empty() : this.capacityLimit;
     }
 
@@ -37,7 +37,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capacityObjectId")
       private final @Nullable Output<String> capacityObjectId;
 
-    public Output<String> getCapacityObjectId() {
+    public Output<String> capacityObjectId() {
         return this.capacityObjectId == null ? Codegen.empty() : this.capacityObjectId;
     }
 
@@ -48,7 +48,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
       private final Output<AutoScaleVCoreSkuArgs> sku;
 
-    public Output<AutoScaleVCoreSkuArgs> getSku() {
+    public Output<AutoScaleVCoreSkuArgs> sku() {
         return this.sku;
     }
 
@@ -81,7 +81,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="systemData")
       private final @Nullable Output<SystemDataArgs> systemData;
 
-    public Output<SystemDataArgs> getSystemData() {
+    public Output<SystemDataArgs> systemData() {
         return this.systemData == null ? Codegen.empty() : this.systemData;
     }
 
@@ -92,7 +92,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vcoreName")
       private final @Nullable Output<String> vcoreName;
 
-    public Output<String> getVcoreName() {
+    public Output<String> vcoreName() {
         return this.vcoreName == null ? Codegen.empty() : this.vcoreName;
     }
 

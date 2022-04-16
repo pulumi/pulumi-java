@@ -26,7 +26,7 @@ public final class AS2OneWayAgreementArgs extends com.pulumi.resources.ResourceA
     @Import(name="protocolSettings", required=true)
       private final Output<AS2ProtocolSettingsArgs> protocolSettings;
 
-    public Output<AS2ProtocolSettingsArgs> getProtocolSettings() {
+    public Output<AS2ProtocolSettingsArgs> protocolSettings() {
         return this.protocolSettings;
     }
 
@@ -37,7 +37,7 @@ public final class AS2OneWayAgreementArgs extends com.pulumi.resources.ResourceA
     @Import(name="receiverBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> receiverBusinessIdentity;
 
-    public Output<BusinessIdentityArgs> getReceiverBusinessIdentity() {
+    public Output<BusinessIdentityArgs> receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
 
@@ -48,7 +48,7 @@ public final class AS2OneWayAgreementArgs extends com.pulumi.resources.ResourceA
     @Import(name="senderBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> senderBusinessIdentity;
 
-    public Output<BusinessIdentityArgs> getSenderBusinessIdentity() {
+    public Output<BusinessIdentityArgs> senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 

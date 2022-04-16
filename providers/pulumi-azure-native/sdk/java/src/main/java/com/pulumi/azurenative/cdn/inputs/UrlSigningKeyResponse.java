@@ -24,7 +24,7 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 
@@ -35,7 +35,7 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="keySourceParameters", required=true)
       private final KeyVaultSigningKeyParametersResponse keySourceParameters;
 
-    public KeyVaultSigningKeyParametersResponse getKeySourceParameters() {
+    public KeyVaultSigningKeyParametersResponse keySourceParameters() {
         return this.keySourceParameters;
     }
 

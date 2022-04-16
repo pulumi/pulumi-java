@@ -27,7 +27,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn")
       private final @Nullable String fqdn;
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
@@ -38,7 +38,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 
@@ -49,7 +49,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -60,7 +60,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recordSetName")
       private final @Nullable String recordSetName;
 
-    public Optional<String> getRecordSetName() {
+    public Optional<String> recordSetName() {
         return this.recordSetName == null ? Optional.empty() : Optional.ofNullable(this.recordSetName);
     }
 
@@ -71,7 +71,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="recordType")
       private final @Nullable String recordType;
 
-    public Optional<String> getRecordType() {
+    public Optional<String> recordType() {
         return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
     }
 
@@ -82,7 +82,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ttl")
       private final @Nullable Integer ttl;
 
-    public Optional<Integer> getTtl() {
+    public Optional<Integer> ttl() {
         return this.ttl == null ? Optional.empty() : Optional.ofNullable(this.ttl);
     }
 

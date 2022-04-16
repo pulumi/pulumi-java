@@ -69,49 +69,49 @@ public final class GetExpressRouteCircuitAuthorizationResult {
      * The authorization key.
      * 
     */
-    public Optional<String> getAuthorizationKey() {
+    public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * The authorization use status.
      * 
     */
-    public Optional<String> getAuthorizationUseStatus() {
+    public Optional<String> authorizationUseStatus() {
         return Optional.ofNullable(this.authorizationUseStatus);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the authorization resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

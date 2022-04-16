@@ -19,7 +19,7 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
     @Import(name="configurationId", required=true)
       private final String configurationId;
 
-    public String getConfigurationId() {
+    public String configurationId() {
         return this.configurationId;
     }
 
@@ -30,7 +30,7 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetProactiveDetectionConfigurationArgs extends com.pulumi.res
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

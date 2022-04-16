@@ -34,14 +34,14 @@ public final class ListSourceControlRepositoriesResult {
      * URL to fetch the next set of repositories.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * Array of repositories.
      * 
     */
-    public List<RepoResponse> getValue() {
+    public List<RepoResponse> value() {
         return this.value;
     }
 

@@ -100,56 +100,56 @@ public final class SqlServerLinkedServiceResponse {
      * Sql always encrypted properties.
      * 
     */
-    public Optional<SqlAlwaysEncryptedPropertiesResponse> getAlwaysEncryptedSettings() {
+    public Optional<SqlAlwaysEncryptedPropertiesResponse> alwaysEncryptedSettings() {
         return Optional.ofNullable(this.alwaysEncryptedSettings);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Object getConnectionString() {
+    public Object connectionString() {
         return this.connectionString;
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The on-premises Windows authentication password.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
@@ -157,14 +157,14 @@ public final class SqlServerLinkedServiceResponse {
      * Expected value is 'SqlServer'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
 

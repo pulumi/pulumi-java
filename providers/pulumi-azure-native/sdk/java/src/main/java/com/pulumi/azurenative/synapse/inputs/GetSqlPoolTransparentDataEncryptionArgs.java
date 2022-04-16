@@ -19,7 +19,7 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
     @Import(name="sqlPoolName", required=true)
       private final String sqlPoolName;
 
-    public String getSqlPoolName() {
+    public String sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
     @Import(name="transparentDataEncryptionName", required=true)
       private final String transparentDataEncryptionName;
 
-    public String getTransparentDataEncryptionName() {
+    public String transparentDataEncryptionName() {
         return this.transparentDataEncryptionName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSqlPoolTransparentDataEncryptionArgs extends com.pulumi.re
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

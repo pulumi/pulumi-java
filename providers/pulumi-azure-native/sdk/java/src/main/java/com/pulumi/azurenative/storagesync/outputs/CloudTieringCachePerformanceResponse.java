@@ -48,28 +48,28 @@ public final class CloudTieringCachePerformanceResponse {
      * Count of bytes that were served from the local server
      * 
     */
-    public Double getCacheHitBytes() {
+    public Double cacheHitBytes() {
         return this.cacheHitBytes;
     }
     /**
      * Percentage of total bytes (hit + miss) that were served from the local server
      * 
     */
-    public Integer getCacheHitBytesPercent() {
+    public Integer cacheHitBytesPercent() {
         return this.cacheHitBytesPercent;
     }
     /**
      * Count of bytes that were served from the cloud
      * 
     */
-    public Double getCacheMissBytes() {
+    public Double cacheMissBytes() {
         return this.cacheMissBytes;
     }
     /**
      * Last updated timestamp
      * 
     */
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 

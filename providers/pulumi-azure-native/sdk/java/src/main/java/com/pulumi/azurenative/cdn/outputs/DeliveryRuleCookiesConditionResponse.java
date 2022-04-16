@@ -35,14 +35,14 @@ public final class DeliveryRuleCookiesConditionResponse {
      * Expected value is 'Cookies'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public CookiesMatchConditionParametersResponse getParameters() {
+    public CookiesMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

@@ -26,7 +26,7 @@ public final class IotMappingPropertiesResponse {
      * The mapping.
      * 
     */
-    public Optional<Object> getContent() {
+    public Optional<Object> content() {
         return Optional.ofNullable(this.content);
     }
 

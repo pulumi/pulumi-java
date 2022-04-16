@@ -34,14 +34,14 @@ public final class ListConnectedClusterUserCredentialsResult {
      * Contains the REP (rendezvous endpoint) and “Sender” access token.
      * 
     */
-    public HybridConnectionConfigResponse getHybridConnectionConfig() {
+    public HybridConnectionConfigResponse hybridConnectionConfig() {
         return this.hybridConnectionConfig;
     }
     /**
      * Base64-encoded Kubernetes configuration file.
      * 
     */
-    public List<CredentialResultResponse> getKubeconfigs() {
+    public List<CredentialResultResponse> kubeconfigs() {
         return this.kubeconfigs;
     }
 

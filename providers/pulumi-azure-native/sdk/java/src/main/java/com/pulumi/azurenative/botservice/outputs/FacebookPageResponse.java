@@ -34,14 +34,14 @@ public final class FacebookPageResponse {
      * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
     */
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Page id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

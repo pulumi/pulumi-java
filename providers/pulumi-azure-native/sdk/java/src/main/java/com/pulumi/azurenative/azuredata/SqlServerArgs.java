@@ -23,7 +23,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cores")
       private final @Nullable Output<Integer> cores;
 
-    public Output<Integer> getCores() {
+    public Output<Integer> cores() {
         return this.cores == null ? Codegen.empty() : this.cores;
     }
 
@@ -34,7 +34,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="edition")
       private final @Nullable Output<String> edition;
 
-    public Output<String> getEdition() {
+    public Output<String> edition() {
         return this.edition == null ? Codegen.empty() : this.edition;
     }
 
@@ -45,7 +45,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="propertyBag")
       private final @Nullable Output<String> propertyBag;
 
-    public Output<String> getPropertyBag() {
+    public Output<String> propertyBag() {
         return this.propertyBag == null ? Codegen.empty() : this.propertyBag;
     }
 
@@ -56,7 +56,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationID")
       private final @Nullable Output<String> registrationID;
 
-    public Output<String> getRegistrationID() {
+    public Output<String> registrationID() {
         return this.registrationID == null ? Codegen.empty() : this.registrationID;
     }
 
@@ -67,7 +67,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerName")
       private final @Nullable Output<String> sqlServerName;
 
-    public Output<String> getSqlServerName() {
+    public Output<String> sqlServerName() {
         return this.sqlServerName == null ? Codegen.empty() : this.sqlServerName;
     }
 
@@ -89,7 +89,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlServerRegistrationName", required=true)
       private final Output<String> sqlServerRegistrationName;
 
-    public Output<String> getSqlServerRegistrationName() {
+    public Output<String> sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
 
@@ -100,7 +100,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

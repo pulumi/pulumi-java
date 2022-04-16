@@ -65,42 +65,42 @@ public final class BackendServiceFabricClusterPropertiesResponse {
      * The client certificate id for the management endpoint.
      * 
     */
-    public Optional<String> getClientCertificateId() {
+    public Optional<String> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
     /**
      * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
      * 
     */
-    public Optional<String> getClientCertificatethumbprint() {
+    public Optional<String> clientCertificatethumbprint() {
         return Optional.ofNullable(this.clientCertificatethumbprint);
     }
     /**
      * The cluster management endpoint.
      * 
     */
-    public List<String> getManagementEndpoints() {
+    public List<String> managementEndpoints() {
         return this.managementEndpoints;
     }
     /**
      * Maximum number of retries while attempting resolve the partition.
      * 
     */
-    public Optional<Integer> getMaxPartitionResolutionRetries() {
+    public Optional<Integer> maxPartitionResolutionRetries() {
         return Optional.ofNullable(this.maxPartitionResolutionRetries);
     }
     /**
      * Thumbprints of certificates cluster management service uses for tls communication
      * 
     */
-    public List<String> getServerCertificateThumbprints() {
+    public List<String> serverCertificateThumbprints() {
         return this.serverCertificateThumbprints == null ? List.of() : this.serverCertificateThumbprints;
     }
     /**
      * Server X509 Certificate Names Collection
      * 
     */
-    public List<X509CertificateNameResponse> getServerX509Names() {
+    public List<X509CertificateNameResponse> serverX509Names() {
         return this.serverX509Names == null ? List.of() : this.serverX509Names;
     }
 

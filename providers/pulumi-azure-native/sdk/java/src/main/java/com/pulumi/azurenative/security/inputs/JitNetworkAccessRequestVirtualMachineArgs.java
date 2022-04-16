@@ -23,7 +23,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends com.pulumi.
     @Import(name="ports", required=true)
       private final Output<List<JitNetworkAccessRequestPortArgs>> ports;
 
-    public Output<List<JitNetworkAccessRequestPortArgs>> getPorts() {
+    public Output<List<JitNetworkAccessRequestPortArgs>> ports() {
         return this.ports;
     }
 

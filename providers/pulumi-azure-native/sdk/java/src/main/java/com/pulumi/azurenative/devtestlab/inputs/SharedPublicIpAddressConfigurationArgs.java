@@ -27,7 +27,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends com.pulumi.res
     @Import(name="inboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
-    public Output<List<InboundNatRuleArgs>> getInboundNatRules() {
+    public Output<List<InboundNatRuleArgs>> inboundNatRules() {
         return this.inboundNatRules == null ? Codegen.empty() : this.inboundNatRules;
     }
 

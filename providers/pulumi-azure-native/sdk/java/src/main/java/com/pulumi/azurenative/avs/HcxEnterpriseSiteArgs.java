@@ -22,7 +22,7 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="hcxEnterpriseSiteName")
       private final @Nullable Output<String> hcxEnterpriseSiteName;
 
-    public Output<String> getHcxEnterpriseSiteName() {
+    public Output<String> hcxEnterpriseSiteName() {
         return this.hcxEnterpriseSiteName == null ? Codegen.empty() : this.hcxEnterpriseSiteName;
     }
 
@@ -33,7 +33,7 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -44,7 +44,7 @@ public final class HcxEnterpriseSiteArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

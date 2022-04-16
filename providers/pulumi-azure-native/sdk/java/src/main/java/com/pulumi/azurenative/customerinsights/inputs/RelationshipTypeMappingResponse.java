@@ -24,7 +24,7 @@ public final class RelationshipTypeMappingResponse extends com.pulumi.resources.
     @Import(name="fieldMappings", required=true)
       private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
 
-    public List<RelationshipTypeFieldMappingResponse> getFieldMappings() {
+    public List<RelationshipTypeFieldMappingResponse> fieldMappings() {
         return this.fieldMappings;
     }
 

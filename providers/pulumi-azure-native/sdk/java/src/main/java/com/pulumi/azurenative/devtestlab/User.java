@@ -45,7 +45,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The creation date of the user profile.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -59,7 +59,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The identity of the user.
      * 
      */
-    public Output</* @Nullable */ UserIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ UserIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -73,7 +73,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The secret store of the user.
      * 
      */
-    public Output</* @Nullable */ UserSecretStoreResponse> getSecretStore() {
+    public Output</* @Nullable */ UserSecretStoreResponse> secretStore() {
         return this.secretStore;
     }
     /**
@@ -129,7 +129,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -157,7 +157,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

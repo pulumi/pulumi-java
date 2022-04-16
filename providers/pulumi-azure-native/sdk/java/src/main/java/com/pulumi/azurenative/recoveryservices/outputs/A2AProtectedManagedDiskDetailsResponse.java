@@ -206,182 +206,182 @@ public final class A2AProtectedManagedDiskDetailsResponse {
      * The disk level operations list.
      * 
     */
-    public List<String> getAllowedDiskLevelOperation() {
+    public List<String> allowedDiskLevelOperation() {
         return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
     }
     /**
      * The data pending at source virtual machine in MB.
      * 
     */
-    public Optional<Double> getDataPendingAtSourceAgentInMB() {
+    public Optional<Double> dataPendingAtSourceAgentInMB() {
         return Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
     /**
      * The data pending for replication in MB at staging account.
      * 
     */
-    public Optional<Double> getDataPendingInStagingStorageAccountInMB() {
+    public Optional<Double> dataPendingInStagingStorageAccountInMB() {
         return Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
     /**
      * The KeyVault resource id for secret (BEK).
      * 
     */
-    public Optional<String> getDekKeyVaultArmId() {
+    public Optional<String> dekKeyVaultArmId() {
         return Optional.ofNullable(this.dekKeyVaultArmId);
     }
     /**
      * The disk capacity in bytes.
      * 
     */
-    public Optional<Double> getDiskCapacityInBytes() {
+    public Optional<Double> diskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
     /**
      * The managed disk Arm id.
      * 
     */
-    public Optional<String> getDiskId() {
+    public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
      * The disk name.
      * 
     */
-    public Optional<String> getDiskName() {
+    public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
      * The disk state.
      * 
     */
-    public Optional<String> getDiskState() {
+    public Optional<String> diskState() {
         return Optional.ofNullable(this.diskState);
     }
     /**
      * The type of disk.
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * The failover name for the managed disk.
      * 
     */
-    public Optional<String> getFailoverDiskName() {
+    public Optional<String> failoverDiskName() {
         return Optional.ofNullable(this.failoverDiskName);
     }
     /**
      * A value indicating whether vm has encrypted os disk or not.
      * 
     */
-    public Optional<Boolean> getIsDiskEncrypted() {
+    public Optional<Boolean> isDiskEncrypted() {
         return Optional.ofNullable(this.isDiskEncrypted);
     }
     /**
      * A value indicating whether disk key got encrypted or not.
      * 
     */
-    public Optional<Boolean> getIsDiskKeyEncrypted() {
+    public Optional<Boolean> isDiskKeyEncrypted() {
         return Optional.ofNullable(this.isDiskKeyEncrypted);
     }
     /**
      * The KeyVault resource id for key (KEK).
      * 
     */
-    public Optional<String> getKekKeyVaultArmId() {
+    public Optional<String> kekKeyVaultArmId() {
         return Optional.ofNullable(this.kekKeyVaultArmId);
     }
     /**
      * The key URL / identifier (KEK).
      * 
     */
-    public Optional<String> getKeyIdentifier() {
+    public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
     /**
      * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
      * 
     */
-    public Optional<String> getMonitoringJobType() {
+    public Optional<String> monitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
     /**
      * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
      * 
     */
-    public Optional<Integer> getMonitoringPercentageCompletion() {
+    public Optional<Integer> monitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
     /**
      * The primary staging storage account.
      * 
     */
-    public Optional<String> getPrimaryStagingAzureStorageAccountId() {
+    public Optional<String> primaryStagingAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
     /**
      * The recovery disk encryption set Id.
      * 
     */
-    public Optional<String> getRecoveryDiskEncryptionSetId() {
+    public Optional<String> recoveryDiskEncryptionSetId() {
         return Optional.ofNullable(this.recoveryDiskEncryptionSetId);
     }
     /**
      * The replica disk type. Its an optional value and will be same as source disk type if not user provided.
      * 
     */
-    public Optional<String> getRecoveryReplicaDiskAccountType() {
+    public Optional<String> recoveryReplicaDiskAccountType() {
         return Optional.ofNullable(this.recoveryReplicaDiskAccountType);
     }
     /**
      * Recovery replica disk Arm Id.
      * 
     */
-    public Optional<String> getRecoveryReplicaDiskId() {
+    public Optional<String> recoveryReplicaDiskId() {
         return Optional.ofNullable(this.recoveryReplicaDiskId);
     }
     /**
      * The recovery disk resource group Arm Id.
      * 
     */
-    public Optional<String> getRecoveryResourceGroupId() {
+    public Optional<String> recoveryResourceGroupId() {
         return Optional.ofNullable(this.recoveryResourceGroupId);
     }
     /**
      * The target disk type after failover. Its an optional value and will be same as source disk type if not user provided.
      * 
     */
-    public Optional<String> getRecoveryTargetDiskAccountType() {
+    public Optional<String> recoveryTargetDiskAccountType() {
         return Optional.ofNullable(this.recoveryTargetDiskAccountType);
     }
     /**
      * Recovery target disk Arm Id.
      * 
     */
-    public Optional<String> getRecoveryTargetDiskId() {
+    public Optional<String> recoveryTargetDiskId() {
         return Optional.ofNullable(this.recoveryTargetDiskId);
     }
     /**
      * A value indicating whether resync is required for this disk.
      * 
     */
-    public Optional<Boolean> getResyncRequired() {
+    public Optional<Boolean> resyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
     /**
      * The secret URL / identifier (BEK).
      * 
     */
-    public Optional<String> getSecretIdentifier() {
+    public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
     /**
      * The test failover name for the managed disk.
      * 
     */
-    public Optional<String> getTfoDiskName() {
+    public Optional<String> tfoDiskName() {
         return Optional.ofNullable(this.tfoDiskName);
     }
 

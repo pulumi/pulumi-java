@@ -45,21 +45,21 @@ public final class GraphPackageResponse {
      * The list of edges making up the graph.
      * 
     */
-    public List<GraphEdgeResponse> getEdges() {
+    public List<GraphEdgeResponse> edges() {
         return this.edges == null ? List.of() : this.edges;
     }
     /**
      * The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
      * 
     */
-    public Map<String,GraphParameterResponse> getGraphParameters() {
+    public Map<String,GraphParameterResponse> graphParameters() {
         return this.graphParameters == null ? Map.of() : this.graphParameters;
     }
     /**
      * The set of nodes making up the graph, provided as a nodeId to GraphNode map
      * 
     */
-    public Map<String,GraphNodeResponse> getNodes() {
+    public Map<String,GraphNodeResponse> nodes() {
         return this.nodes == null ? Map.of() : this.nodes;
     }
 

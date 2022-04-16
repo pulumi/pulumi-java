@@ -35,7 +35,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -57,7 +57,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -68,7 +68,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="database", required=true)
       private final Output<Object> database;
 
-    public Output<Object> getDatabase() {
+    public Output<Object> database() {
         return this.database;
     }
 
@@ -79,7 +79,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -90,7 +90,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="endpoint", required=true)
       private final Output<Object> endpoint;
 
-    public Output<Object> getEndpoint() {
+    public Output<Object> endpoint() {
         return this.endpoint;
     }
 
@@ -101,7 +101,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -112,7 +112,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -123,7 +123,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
@@ -134,7 +134,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
@@ -146,7 +146,7 @@ public final class AzureDataExplorerLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

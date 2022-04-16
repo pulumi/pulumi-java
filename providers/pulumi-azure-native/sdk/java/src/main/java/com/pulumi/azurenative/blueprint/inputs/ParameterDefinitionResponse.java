@@ -27,7 +27,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="allowedValues")
       private final @Nullable List<Object> allowedValues;
 
-    public List<Object> getAllowedValues() {
+    public List<Object> allowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
 
@@ -38,7 +38,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -49,7 +49,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -60,7 +60,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -71,7 +71,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="strongType")
       private final @Nullable String strongType;
 
-    public Optional<String> getStrongType() {
+    public Optional<String> strongType() {
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
     }
 
@@ -82,7 +82,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

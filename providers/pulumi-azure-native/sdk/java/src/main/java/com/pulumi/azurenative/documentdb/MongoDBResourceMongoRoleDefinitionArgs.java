@@ -26,7 +26,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -48,7 +48,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="mongoRoleDefinitionId")
       private final @Nullable Output<String> mongoRoleDefinitionId;
 
-    public Output<String> getMongoRoleDefinitionId() {
+    public Output<String> mongoRoleDefinitionId() {
         return this.mongoRoleDefinitionId == null ? Codegen.empty() : this.mongoRoleDefinitionId;
     }
 
@@ -59,7 +59,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="privileges")
       private final @Nullable Output<List<PrivilegeArgs>> privileges;
 
-    public Output<List<PrivilegeArgs>> getPrivileges() {
+    public Output<List<PrivilegeArgs>> privileges() {
         return this.privileges == null ? Codegen.empty() : this.privileges;
     }
 
@@ -70,7 +70,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -92,7 +92,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> getRoles() {
+    public Output<List<RoleArgs>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 
@@ -103,7 +103,7 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="type")
       private final @Nullable Output<MongoRoleDefinitionType> type;
 
-    public Output<MongoRoleDefinitionType> getType() {
+    public Output<MongoRoleDefinitionType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

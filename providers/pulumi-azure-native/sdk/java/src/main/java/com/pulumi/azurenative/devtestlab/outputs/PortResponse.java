@@ -35,14 +35,14 @@ public final class PortResponse {
      * Backend port of the target virtual machine.
      * 
     */
-    public Optional<Integer> getBackendPort() {
+    public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
      * Protocol type of the port.
      * 
     */
-    public Optional<String> getTransportProtocol() {
+    public Optional<String> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
 

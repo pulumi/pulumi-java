@@ -136,112 +136,112 @@ public final class EndpointResponse {
      * List of custom headers.
      * 
     */
-    public List<EndpointPropertiesResponseCustomHeaders> getCustomHeaders() {
+    public List<EndpointPropertiesResponseCustomHeaders> customHeaders() {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
     /**
      * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
      * 
     */
-    public Optional<String> getEndpointLocation() {
+    public Optional<String> endpointLocation() {
         return Optional.ofNullable(this.endpointLocation);
     }
     /**
      * The monitoring status of the endpoint.
      * 
     */
-    public Optional<String> getEndpointMonitorStatus() {
+    public Optional<String> endpointMonitorStatus() {
         return Optional.ofNullable(this.endpointMonitorStatus);
     }
     /**
      * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
      * 
     */
-    public Optional<String> getEndpointStatus() {
+    public Optional<String> endpointStatus() {
         return Optional.ofNullable(this.endpointStatus);
     }
     /**
      * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
     */
-    public List<String> getGeoMapping() {
+    public List<String> geoMapping() {
         return this.geoMapping == null ? List.of() : this.geoMapping;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
     */
-    public Optional<Double> getMinChildEndpoints() {
+    public Optional<Double> minChildEndpoints() {
         return Optional.ofNullable(this.minChildEndpoints);
     }
     /**
      * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
     */
-    public Optional<Double> getMinChildEndpointsIPv4() {
+    public Optional<Double> minChildEndpointsIPv4() {
         return Optional.ofNullable(this.minChildEndpointsIPv4);
     }
     /**
      * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
     */
-    public Optional<Double> getMinChildEndpointsIPv6() {
+    public Optional<Double> minChildEndpointsIPv6() {
         return Optional.ofNullable(this.minChildEndpointsIPv6);
     }
     /**
      * The name of the resource
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
     */
-    public Optional<Double> getPriority() {
+    public Optional<Double> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
     */
-    public List<EndpointPropertiesResponseSubnets> getSubnets() {
+    public List<EndpointPropertiesResponseSubnets> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
      * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
      * 
     */
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
      * 
     */
-    public Optional<String> getTargetResourceId() {
+    public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
      * 
     */
-    public Optional<Double> getWeight() {
+    public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }
 

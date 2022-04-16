@@ -27,7 +27,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="analyticalStorageTtl")
       private final @Nullable Double analyticalStorageTtl;
 
-    public Optional<Double> getAnalyticalStorageTtl() {
+    public Optional<Double> analyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
     }
 
@@ -38,7 +38,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="conflictResolutionPolicy")
       private final @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
 
-    public Optional<ConflictResolutionPolicyResponse> getConflictResolutionPolicy() {
+    public Optional<ConflictResolutionPolicyResponse> conflictResolutionPolicy() {
         return this.conflictResolutionPolicy == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPolicy);
     }
 
@@ -49,7 +49,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="defaultTtl")
       private final @Nullable Integer defaultTtl;
 
-    public Optional<Integer> getDefaultTtl() {
+    public Optional<Integer> defaultTtl() {
         return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
     }
 
@@ -60,7 +60,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -71,7 +71,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -82,7 +82,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="indexingPolicy")
       private final @Nullable IndexingPolicyResponse indexingPolicy;
 
-    public Optional<IndexingPolicyResponse> getIndexingPolicy() {
+    public Optional<IndexingPolicyResponse> indexingPolicy() {
         return this.indexingPolicy == null ? Optional.empty() : Optional.ofNullable(this.indexingPolicy);
     }
 
@@ -93,7 +93,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="partitionKey")
       private final @Nullable ContainerPartitionKeyResponse partitionKey;
 
-    public Optional<ContainerPartitionKeyResponse> getPartitionKey() {
+    public Optional<ContainerPartitionKeyResponse> partitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
@@ -104,7 +104,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="rid", required=true)
       private final String rid;
 
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
 
@@ -115,7 +115,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="ts", required=true)
       private final Double ts;
 
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 
@@ -126,7 +126,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
     @Import(name="uniqueKeyPolicy")
       private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
-    public Optional<UniqueKeyPolicyResponse> getUniqueKeyPolicy() {
+    public Optional<UniqueKeyPolicyResponse> uniqueKeyPolicy() {
         return this.uniqueKeyPolicy == null ? Optional.empty() : Optional.ofNullable(this.uniqueKeyPolicy);
     }
 

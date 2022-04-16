@@ -32,7 +32,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Double> analyticalStorageTtl;
 
-    public Output<Double> getAnalyticalStorageTtl() {
+    public Output<Double> analyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
     }
 
@@ -43,7 +43,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
 
-    public Output<ConflictResolutionPolicyArgs> getConflictResolutionPolicy() {
+    public Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy() {
         return this.conflictResolutionPolicy == null ? Codegen.empty() : this.conflictResolutionPolicy;
     }
 
@@ -54,7 +54,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
+    public Output<Integer> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -65,7 +65,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -76,7 +76,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="indexingPolicy")
       private final @Nullable Output<IndexingPolicyArgs> indexingPolicy;
 
-    public Output<IndexingPolicyArgs> getIndexingPolicy() {
+    public Output<IndexingPolicyArgs> indexingPolicy() {
         return this.indexingPolicy == null ? Codegen.empty() : this.indexingPolicy;
     }
 
@@ -87,7 +87,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="partitionKey")
       private final @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
 
-    public Output<ContainerPartitionKeyArgs> getPartitionKey() {
+    public Output<ContainerPartitionKeyArgs> partitionKey() {
         return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
@@ -98,7 +98,7 @@ public final class SqlContainerResourceArgs extends com.pulumi.resources.Resourc
     @Import(name="uniqueKeyPolicy")
       private final @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;
 
-    public Output<UniqueKeyPolicyArgs> getUniqueKeyPolicy() {
+    public Output<UniqueKeyPolicyArgs> uniqueKeyPolicy() {
         return this.uniqueKeyPolicy == null ? Codegen.empty() : this.uniqueKeyPolicy;
     }
 

@@ -21,7 +21,7 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
     @Import(name="featureName")
       private final @Nullable String featureName;
 
-    public Optional<String> getFeatureName() {
+    public Optional<String> featureName() {
         return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
     }
 
@@ -32,7 +32,7 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
     @Import(name="featureType")
       private final @Nullable String featureType;
 
-    public Optional<String> getFeatureType() {
+    public Optional<String> featureType() {
         return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
     }
 
@@ -43,7 +43,7 @@ public final class GetExposureControlFeatureValueArgs extends com.pulumi.resourc
     @Import(name="locationId", required=true)
       private final String locationId;
 
-    public String getLocationId() {
+    public String locationId() {
         return this.locationId;
     }
 

@@ -28,7 +28,7 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
       private final Output<Either<String,ManagedHsmSkuFamily>> family;
 
-    public Output<Either<String,ManagedHsmSkuFamily>> getFamily() {
+    public Output<Either<String,ManagedHsmSkuFamily>> family() {
         return this.family;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedHsmSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<ManagedHsmSkuName> name;
 
-    public Output<ManagedHsmSkuName> getName() {
+    public Output<ManagedHsmSkuName> name() {
         return this.name;
     }
 

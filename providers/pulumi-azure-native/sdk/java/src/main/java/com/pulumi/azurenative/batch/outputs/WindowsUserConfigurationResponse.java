@@ -26,7 +26,7 @@ public final class WindowsUserConfigurationResponse {
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
      * 
     */
-    public Optional<String> getLoginMode() {
+    public Optional<String> loginMode() {
         return Optional.ofNullable(this.loginMode);
     }
 

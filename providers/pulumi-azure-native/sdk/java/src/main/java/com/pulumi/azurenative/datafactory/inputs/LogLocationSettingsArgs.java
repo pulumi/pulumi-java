@@ -27,7 +27,7 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -38,7 +38,7 @@ public final class LogLocationSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="path")
       private final @Nullable Output<Object> path;
 
-    public Output<Object> getPath() {
+    public Output<Object> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

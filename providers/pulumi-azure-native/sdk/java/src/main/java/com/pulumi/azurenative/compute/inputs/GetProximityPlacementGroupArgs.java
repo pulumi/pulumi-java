@@ -21,7 +21,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
     @Import(name="includeColocationStatus")
       private final @Nullable String includeColocationStatus;
 
-    public Optional<String> getIncludeColocationStatus() {
+    public Optional<String> includeColocationStatus() {
         return this.includeColocationStatus == null ? Optional.empty() : Optional.ofNullable(this.includeColocationStatus);
     }
 
@@ -32,7 +32,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
     @Import(name="proximityPlacementGroupName", required=true)
       private final String proximityPlacementGroupName;
 
-    public String getProximityPlacementGroupName() {
+    public String proximityPlacementGroupName() {
         return this.proximityPlacementGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetProximityPlacementGroupArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

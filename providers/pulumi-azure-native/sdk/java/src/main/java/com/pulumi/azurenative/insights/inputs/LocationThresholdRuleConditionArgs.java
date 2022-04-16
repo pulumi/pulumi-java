@@ -30,7 +30,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
     @Import(name="dataSource")
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
+    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -41,7 +41,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
     @Import(name="failedLocationCount", required=true)
       private final Output<Integer> failedLocationCount;
 
-    public Output<Integer> getFailedLocationCount() {
+    public Output<Integer> failedLocationCount() {
         return this.failedLocationCount;
     }
 
@@ -53,7 +53,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -64,7 +64,7 @@ public final class LocationThresholdRuleConditionArgs extends com.pulumi.resourc
     @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;
 
-    public Output<String> getWindowSize() {
+    public Output<String> windowSize() {
         return this.windowSize == null ? Codegen.empty() : this.windowSize;
     }
 

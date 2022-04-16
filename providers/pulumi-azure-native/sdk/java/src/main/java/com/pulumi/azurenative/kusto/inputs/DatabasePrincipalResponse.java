@@ -25,7 +25,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="appId")
       private final @Nullable String appId;
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
@@ -36,7 +36,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="email")
       private final @Nullable String email;
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
@@ -47,7 +47,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="fqn")
       private final @Nullable String fqn;
 
-    public Optional<String> getFqn() {
+    public Optional<String> fqn() {
         return this.fqn == null ? Optional.empty() : Optional.ofNullable(this.fqn);
     }
 
@@ -58,7 +58,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 
@@ -80,7 +80,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="tenantName", required=true)
       private final String tenantName;
 
-    public String getTenantName() {
+    public String tenantName() {
         return this.tenantName;
     }
 
@@ -91,7 +91,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

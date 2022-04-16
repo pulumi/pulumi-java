@@ -29,7 +29,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encryption")
       private final @Nullable Output<PropertiesEncryptionArgs> encryption;
 
-    public Output<PropertiesEncryptionArgs> getEncryption() {
+    public Output<PropertiesEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -40,7 +40,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enterprisePolicyName")
       private final @Nullable Output<String> enterprisePolicyName;
 
-    public Output<String> getEnterprisePolicyName() {
+    public Output<String> enterprisePolicyName() {
         return this.enterprisePolicyName == null ? Codegen.empty() : this.enterprisePolicyName;
     }
 
@@ -51,7 +51,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identity")
       private final @Nullable Output<EnterprisePolicyIdentityArgs> identity;
 
-    public Output<EnterprisePolicyIdentityArgs> getIdentity() {
+    public Output<EnterprisePolicyIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -62,7 +62,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<Either<String,EnterprisePolicyKind>> kind;
 
-    public Output<Either<String,EnterprisePolicyKind>> getKind() {
+    public Output<Either<String,EnterprisePolicyKind>> kind() {
         return this.kind;
     }
 
@@ -73,7 +73,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,7 +84,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="lockbox")
       private final @Nullable Output<PropertiesLockboxArgs> lockbox;
 
-    public Output<PropertiesLockboxArgs> getLockbox() {
+    public Output<PropertiesLockboxArgs> lockbox() {
         return this.lockbox == null ? Codegen.empty() : this.lockbox;
     }
 
@@ -95,7 +95,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkInjection")
       private final @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection;
 
-    public Output<PropertiesNetworkInjectionArgs> getNetworkInjection() {
+    public Output<PropertiesNetworkInjectionArgs> networkInjection() {
         return this.networkInjection == null ? Codegen.empty() : this.networkInjection;
     }
 
@@ -106,7 +106,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class EnterprisePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

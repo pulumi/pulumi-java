@@ -24,7 +24,7 @@ public final class PrivateEndpointResponse {
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

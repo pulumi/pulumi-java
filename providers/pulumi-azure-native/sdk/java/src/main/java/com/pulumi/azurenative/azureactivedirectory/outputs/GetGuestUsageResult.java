@@ -63,42 +63,42 @@ public final class GetGuestUsageResult {
      * An identifier that represents the Guest Usages resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the Guest Usages resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the Guest Usages resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * An identifier for the tenant for which the resource is being created
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the Guest Usages resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ListIntegrationAccountCallbackUrlResult {
      * The URL value.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

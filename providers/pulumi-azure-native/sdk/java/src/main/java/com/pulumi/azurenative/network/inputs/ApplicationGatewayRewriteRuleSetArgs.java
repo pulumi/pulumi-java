@@ -28,7 +28,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends com.pulumi.resou
     @Import(name="rewriteRules")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
-    public Output<List<ApplicationGatewayRewriteRuleArgs>> getRewriteRules() {
+    public Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules() {
         return this.rewriteRules == null ? Codegen.empty() : this.rewriteRules;
     }
 

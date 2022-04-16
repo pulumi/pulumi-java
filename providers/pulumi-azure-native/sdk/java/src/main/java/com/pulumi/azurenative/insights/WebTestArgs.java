@@ -29,7 +29,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<WebTestPropertiesConfigurationArgs> configuration;
 
-    public Output<WebTestPropertiesConfigurationArgs> getConfiguration() {
+    public Output<WebTestPropertiesConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -40,7 +40,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -62,7 +62,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequency")
       private final @Nullable Output<Integer> frequency;
 
-    public Output<Integer> getFrequency() {
+    public Output<Integer> frequency() {
         return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
@@ -73,7 +73,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<WebTestKind> kind;
 
-    public Output<WebTestKind> getKind() {
+    public Output<WebTestKind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -84,7 +84,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -95,7 +95,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
       private final Output<List<WebTestGeolocationArgs>> locations;
 
-    public Output<List<WebTestGeolocationArgs>> getLocations() {
+    public Output<List<WebTestGeolocationArgs>> locations() {
         return this.locations;
     }
 
@@ -106,7 +106,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryEnabled")
       private final @Nullable Output<Boolean> retryEnabled;
 
-    public Output<Boolean> getRetryEnabled() {
+    public Output<Boolean> retryEnabled() {
         return this.retryEnabled == null ? Codegen.empty() : this.retryEnabled;
     }
 
@@ -128,7 +128,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syntheticMonitorId", required=true)
       private final Output<String> syntheticMonitorId;
 
-    public Output<String> getSyntheticMonitorId() {
+    public Output<String> syntheticMonitorId() {
         return this.syntheticMonitorId;
     }
 
@@ -139,7 +139,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -150,7 +150,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -161,7 +161,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webTestKind", required=true)
       private final Output<WebTestKind> webTestKind;
 
-    public Output<WebTestKind> getWebTestKind() {
+    public Output<WebTestKind> webTestKind() {
         return this.webTestKind;
     }
 
@@ -172,7 +172,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webTestName")
       private final @Nullable Output<String> webTestName;
 
-    public Output<String> getWebTestName() {
+    public Output<String> webTestName() {
         return this.webTestName == null ? Codegen.empty() : this.webTestName;
     }
 

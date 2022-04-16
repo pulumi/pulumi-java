@@ -34,7 +34,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="affinityCookieName")
       private final @Nullable Output<String> affinityCookieName;
 
-    public Output<String> getAffinityCookieName() {
+    public Output<String> affinityCookieName() {
         return this.affinityCookieName == null ? Codegen.empty() : this.affinityCookieName;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="authenticationCertificates")
       private final @Nullable Output<List<SubResourceArgs>> authenticationCertificates;
 
-    public Output<List<SubResourceArgs>> getAuthenticationCertificates() {
+    public Output<List<SubResourceArgs>> authenticationCertificates() {
         return this.authenticationCertificates == null ? Codegen.empty() : this.authenticationCertificates;
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="connectionDraining")
       private final @Nullable Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining;
 
-    public Output<ApplicationGatewayConnectionDrainingArgs> getConnectionDraining() {
+    public Output<ApplicationGatewayConnectionDrainingArgs> connectionDraining() {
         return this.connectionDraining == null ? Codegen.empty() : this.connectionDraining;
     }
 
@@ -67,7 +67,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="cookieBasedAffinity")
       private final @Nullable Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity;
 
-    public Output<Either<String,ApplicationGatewayCookieBasedAffinity>> getCookieBasedAffinity() {
+    public Output<Either<String,ApplicationGatewayCookieBasedAffinity>> cookieBasedAffinity() {
         return this.cookieBasedAffinity == null ? Codegen.empty() : this.cookieBasedAffinity;
     }
 
@@ -78,7 +78,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -89,7 +89,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -100,7 +100,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -111,7 +111,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -122,7 +122,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="pickHostNameFromBackendAddress")
       private final @Nullable Output<Boolean> pickHostNameFromBackendAddress;
 
-    public Output<Boolean> getPickHostNameFromBackendAddress() {
+    public Output<Boolean> pickHostNameFromBackendAddress() {
         return this.pickHostNameFromBackendAddress == null ? Codegen.empty() : this.pickHostNameFromBackendAddress;
     }
 
@@ -133,7 +133,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -144,7 +144,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
 
-    public Output<SubResourceArgs> getProbe() {
+    public Output<SubResourceArgs> probe() {
         return this.probe == null ? Codegen.empty() : this.probe;
     }
 
@@ -155,7 +155,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="probeEnabled")
       private final @Nullable Output<Boolean> probeEnabled;
 
-    public Output<Boolean> getProbeEnabled() {
+    public Output<Boolean> probeEnabled() {
         return this.probeEnabled == null ? Codegen.empty() : this.probeEnabled;
     }
 
@@ -166,7 +166,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
-    public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
+    public Output<Either<String,ApplicationGatewayProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -177,7 +177,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="requestTimeout")
       private final @Nullable Output<Integer> requestTimeout;
 
-    public Output<Integer> getRequestTimeout() {
+    public Output<Integer> requestTimeout() {
         return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
     }
 
@@ -188,7 +188,7 @@ public final class ApplicationGatewayBackendHttpSettingsArgs extends com.pulumi.
     @Import(name="trustedRootCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedRootCertificates;
 
-    public Output<List<SubResourceArgs>> getTrustedRootCertificates() {
+    public Output<List<SubResourceArgs>> trustedRootCertificates() {
         return this.trustedRootCertificates == null ? Codegen.empty() : this.trustedRootCertificates;
     }
 

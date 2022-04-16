@@ -27,7 +27,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="autoRenew")
       private final @Nullable Boolean autoRenew;
 
-    public Optional<Boolean> getAutoRenew() {
+    public Optional<Boolean> autoRenew() {
         return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
     }
 
@@ -38,7 +38,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="current")
       private final @Nullable CommitmentPeriodResponse current;
 
-    public Optional<CommitmentPeriodResponse> getCurrent() {
+    public Optional<CommitmentPeriodResponse> current() {
         return this.current == null ? Optional.empty() : Optional.ofNullable(this.current);
     }
 
@@ -49,7 +49,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="hostingModel")
       private final @Nullable String hostingModel;
 
-    public Optional<String> getHostingModel() {
+    public Optional<String> hostingModel() {
         return this.hostingModel == null ? Optional.empty() : Optional.ofNullable(this.hostingModel);
     }
 
@@ -60,7 +60,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="last", required=true)
       private final CommitmentPeriodResponse last;
 
-    public CommitmentPeriodResponse getLast() {
+    public CommitmentPeriodResponse last() {
         return this.last;
     }
 
@@ -71,7 +71,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="next")
       private final @Nullable CommitmentPeriodResponse next;
 
-    public Optional<CommitmentPeriodResponse> getNext() {
+    public Optional<CommitmentPeriodResponse> next() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 
@@ -82,7 +82,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
     @Import(name="planType")
       private final @Nullable String planType;
 
-    public Optional<String> getPlanType() {
+    public Optional<String> planType() {
         return this.planType == null ? Optional.empty() : Optional.ofNullable(this.planType);
     }
 

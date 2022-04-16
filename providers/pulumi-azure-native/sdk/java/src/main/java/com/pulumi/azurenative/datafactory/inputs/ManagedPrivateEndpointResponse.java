@@ -28,7 +28,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="connectionState")
       private final @Nullable ConnectionStatePropertiesResponse connectionState;
 
-    public Optional<ConnectionStatePropertiesResponse> getConnectionState() {
+    public Optional<ConnectionStatePropertiesResponse> connectionState() {
         return this.connectionState == null ? Optional.empty() : Optional.ofNullable(this.connectionState);
     }
 
@@ -39,7 +39,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
 
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="groupId")
       private final @Nullable String groupId;
 
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
@@ -61,7 +61,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="isReserved", required=true)
       private final Boolean isReserved;
 
-    public Boolean getIsReserved() {
+    public Boolean isReserved() {
         return this.isReserved;
     }
 
@@ -72,7 +72,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
 
-    public Optional<String> getPrivateLinkResourceId() {
+    public Optional<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
     }
 
@@ -83,7 +83,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

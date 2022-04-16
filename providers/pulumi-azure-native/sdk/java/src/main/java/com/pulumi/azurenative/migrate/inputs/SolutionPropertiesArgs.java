@@ -27,7 +27,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="cleanupState")
       private final @Nullable Output<String> cleanupState;
 
-    public Output<String> getCleanupState() {
+    public Output<String> cleanupState() {
         return this.cleanupState == null ? Codegen.empty() : this.cleanupState;
     }
 
@@ -38,7 +38,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="details")
       private final @Nullable Output<SolutionDetailsArgs> details;
 
-    public Output<SolutionDetailsArgs> getDetails() {
+    public Output<SolutionDetailsArgs> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -49,7 +49,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="goal")
       private final @Nullable Output<String> goal;
 
-    public Output<String> getGoal() {
+    public Output<String> goal() {
         return this.goal == null ? Codegen.empty() : this.goal;
     }
 
@@ -60,7 +60,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
@@ -71,7 +71,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -82,7 +82,7 @@ public final class SolutionPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="tool")
       private final @Nullable Output<String> tool;
 
-    public Output<String> getTool() {
+    public Output<String> tool() {
         return this.tool == null ? Codegen.empty() : this.tool;
     }
 

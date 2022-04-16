@@ -23,7 +23,7 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -34,7 +34,7 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="dataCenterName")
       private final @Nullable Output<String> dataCenterName;
 
-    public Output<String> getDataCenterName() {
+    public Output<String> dataCenterName() {
         return this.dataCenterName == null ? Codegen.empty() : this.dataCenterName;
     }
 
@@ -45,7 +45,7 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
       private final @Nullable Output<DataCenterResourcePropertiesArgs> properties;
 
-    public Output<DataCenterResourcePropertiesArgs> getProperties() {
+    public Output<DataCenterResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class CassandraDataCenterArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

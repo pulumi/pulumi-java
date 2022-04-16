@@ -26,7 +26,7 @@ public final class VnetRouteResponse {
      * List of all Static Routes.
      * 
     */
-    public List<StaticRouteResponse> getStaticRoutes() {
+    public List<StaticRouteResponse> staticRoutes() {
         return this.staticRoutes == null ? List.of() : this.staticRoutes;
     }
 

@@ -43,7 +43,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
      * @return Unique id for identifying a data set resource
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -59,7 +59,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -73,7 +73,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
      * @return Resource id of the Synapse Workspace SQL Pool Table
      * 
      */
-    public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
+    public Output<String> synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
@@ -101,7 +101,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +115,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends com.pulumi.resources.Cu
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

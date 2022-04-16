@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
 
-    public String getErrorPrefix() {
+    public String errorPrefix() {
         return this.errorPrefix;
     }
 
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="itemsCompletedCount", required=true)
       private final Double itemsCompletedCount;
 
-    public Double getItemsCompletedCount() {
+    public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
 
@@ -68,7 +68,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="itemsCount", required=true)
       private final Double itemsCount;
 
-    public Double getItemsCount() {
+    public Double itemsCount() {
         return this.itemsCount;
     }
 
@@ -79,7 +79,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="objectName", required=true)
       private final String objectName;
 
-    public String getObjectName() {
+    public String objectName() {
         return this.objectName;
     }
 
@@ -90,7 +90,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
 
-    public String getResultPrefix() {
+    public String resultPrefix() {
         return this.resultPrefix;
     }
 
@@ -102,7 +102,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -113,7 +113,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -124,7 +124,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -135,7 +135,7 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse extends com
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

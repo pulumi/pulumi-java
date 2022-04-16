@@ -42,21 +42,21 @@ public final class IPRangeResponse {
      * The IP address.
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The friendly name for the IP address range.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The subnet mask prefix length (see CIDR notation).
      * 
     */
-    public Optional<Integer> getSubnetPrefixLength() {
+    public Optional<Integer> subnetPrefixLength() {
         return Optional.ofNullable(this.subnetPrefixLength);
     }
 

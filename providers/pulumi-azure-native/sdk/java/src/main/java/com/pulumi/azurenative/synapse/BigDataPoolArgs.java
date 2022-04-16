@@ -34,7 +34,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoPause")
       private final @Nullable Output<AutoPausePropertiesArgs> autoPause;
 
-    public Output<AutoPausePropertiesArgs> getAutoPause() {
+    public Output<AutoPausePropertiesArgs> autoPause() {
         return this.autoPause == null ? Codegen.empty() : this.autoPause;
     }
 
@@ -45,7 +45,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoScale")
       private final @Nullable Output<AutoScalePropertiesArgs> autoScale;
 
-    public Output<AutoScalePropertiesArgs> getAutoScale() {
+    public Output<AutoScalePropertiesArgs> autoScale() {
         return this.autoScale == null ? Codegen.empty() : this.autoScale;
     }
 
@@ -56,7 +56,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bigDataPoolName")
       private final @Nullable Output<String> bigDataPoolName;
 
-    public Output<String> getBigDataPoolName() {
+    public Output<String> bigDataPoolName() {
         return this.bigDataPoolName == null ? Codegen.empty() : this.bigDataPoolName;
     }
 
@@ -67,7 +67,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheSize")
       private final @Nullable Output<Integer> cacheSize;
 
-    public Output<Integer> getCacheSize() {
+    public Output<Integer> cacheSize() {
         return this.cacheSize == null ? Codegen.empty() : this.cacheSize;
     }
 
@@ -78,7 +78,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -89,7 +89,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customLibraries")
       private final @Nullable Output<List<LibraryInfoArgs>> customLibraries;
 
-    public Output<List<LibraryInfoArgs>> getCustomLibraries() {
+    public Output<List<LibraryInfoArgs>> customLibraries() {
         return this.customLibraries == null ? Codegen.empty() : this.customLibraries;
     }
 
@@ -100,7 +100,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultSparkLogFolder")
       private final @Nullable Output<String> defaultSparkLogFolder;
 
-    public Output<String> getDefaultSparkLogFolder() {
+    public Output<String> defaultSparkLogFolder() {
         return this.defaultSparkLogFolder == null ? Codegen.empty() : this.defaultSparkLogFolder;
     }
 
@@ -111,7 +111,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dynamicExecutorAllocation")
       private final @Nullable Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation;
 
-    public Output<DynamicExecutorAllocationArgs> getDynamicExecutorAllocation() {
+    public Output<DynamicExecutorAllocationArgs> dynamicExecutorAllocation() {
         return this.dynamicExecutorAllocation == null ? Codegen.empty() : this.dynamicExecutorAllocation;
     }
 
@@ -122,7 +122,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
+    public Output<Boolean> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -133,7 +133,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isComputeIsolationEnabled")
       private final @Nullable Output<Boolean> isComputeIsolationEnabled;
 
-    public Output<Boolean> getIsComputeIsolationEnabled() {
+    public Output<Boolean> isComputeIsolationEnabled() {
         return this.isComputeIsolationEnabled == null ? Codegen.empty() : this.isComputeIsolationEnabled;
     }
 
@@ -144,7 +144,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="libraryRequirements")
       private final @Nullable Output<LibraryRequirementsArgs> libraryRequirements;
 
-    public Output<LibraryRequirementsArgs> getLibraryRequirements() {
+    public Output<LibraryRequirementsArgs> libraryRequirements() {
         return this.libraryRequirements == null ? Codegen.empty() : this.libraryRequirements;
     }
 
@@ -155,7 +155,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -166,7 +166,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
@@ -177,7 +177,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSize")
       private final @Nullable Output<Either<String,NodeSize>> nodeSize;
 
-    public Output<Either<String,NodeSize>> getNodeSize() {
+    public Output<Either<String,NodeSize>> nodeSize() {
         return this.nodeSize == null ? Codegen.empty() : this.nodeSize;
     }
 
@@ -188,7 +188,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeSizeFamily")
       private final @Nullable Output<Either<String,NodeSizeFamily>> nodeSizeFamily;
 
-    public Output<Either<String,NodeSizeFamily>> getNodeSizeFamily() {
+    public Output<Either<String,NodeSizeFamily>> nodeSizeFamily() {
         return this.nodeSizeFamily == null ? Codegen.empty() : this.nodeSizeFamily;
     }
 
@@ -199,7 +199,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -210,7 +210,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -221,7 +221,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionLevelPackagesEnabled")
       private final @Nullable Output<Boolean> sessionLevelPackagesEnabled;
 
-    public Output<Boolean> getSessionLevelPackagesEnabled() {
+    public Output<Boolean> sessionLevelPackagesEnabled() {
         return this.sessionLevelPackagesEnabled == null ? Codegen.empty() : this.sessionLevelPackagesEnabled;
     }
 
@@ -232,7 +232,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkConfigProperties")
       private final @Nullable Output<LibraryRequirementsArgs> sparkConfigProperties;
 
-    public Output<LibraryRequirementsArgs> getSparkConfigProperties() {
+    public Output<LibraryRequirementsArgs> sparkConfigProperties() {
         return this.sparkConfigProperties == null ? Codegen.empty() : this.sparkConfigProperties;
     }
 
@@ -243,7 +243,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkEventsFolder")
       private final @Nullable Output<String> sparkEventsFolder;
 
-    public Output<String> getSparkEventsFolder() {
+    public Output<String> sparkEventsFolder() {
         return this.sparkEventsFolder == null ? Codegen.empty() : this.sparkEventsFolder;
     }
 
@@ -254,7 +254,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sparkVersion")
       private final @Nullable Output<String> sparkVersion;
 
-    public Output<String> getSparkVersion() {
+    public Output<String> sparkVersion() {
         return this.sparkVersion == null ? Codegen.empty() : this.sparkVersion;
     }
 
@@ -265,7 +265,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -276,7 +276,7 @@ public final class BigDataPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

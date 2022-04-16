@@ -25,7 +25,7 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
     @Import(name="rewrite")
       private final @Nullable String rewrite;
 
-    public Optional<String> getRewrite() {
+    public Optional<String> rewrite() {
         return this.rewrite == null ? Optional.empty() : Optional.ofNullable(this.rewrite);
     }
 
@@ -36,7 +36,7 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -47,7 +47,7 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -34,14 +34,14 @@ public final class OAuth2AuthenticationSettingsContractResponse {
      * OAuth authorization server identifier.
      * 
     */
-    public Optional<String> getAuthorizationServerId() {
+    public Optional<String> authorizationServerId() {
         return Optional.ofNullable(this.authorizationServerId);
     }
     /**
      * operations scope.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
 

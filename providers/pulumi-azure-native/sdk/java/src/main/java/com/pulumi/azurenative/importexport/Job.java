@@ -46,7 +46,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the job identity details
      * 
      */
-    public Output</* @Nullable */ IdentityDetailsResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityDetailsResponse> identity() {
         return this.identity;
     }
     /**
@@ -60,7 +60,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the Azure location where the job is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the name of the job.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the job properties
      * 
      */
-    public Output<JobDetailsResponse> getProperties() {
+    public Output<JobDetailsResponse> properties() {
         return this.properties;
     }
     /**
@@ -102,7 +102,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return SystemData of ImportExport Jobs.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -116,7 +116,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the tags that are assigned to the job.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +130,7 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of the job resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

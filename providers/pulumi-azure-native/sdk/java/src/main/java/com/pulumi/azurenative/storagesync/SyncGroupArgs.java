@@ -22,7 +22,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
-    public Output<String> getStorageSyncServiceName() {
+    public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
@@ -44,7 +44,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncGroupName")
       private final @Nullable Output<String> syncGroupName;
 
-    public Output<String> getSyncGroupName() {
+    public Output<String> syncGroupName() {
         return this.syncGroupName == null ? Codegen.empty() : this.syncGroupName;
     }
 

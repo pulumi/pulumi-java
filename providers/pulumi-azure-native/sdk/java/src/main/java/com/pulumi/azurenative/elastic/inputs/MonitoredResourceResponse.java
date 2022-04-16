@@ -25,7 +25,7 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="reasonForLogsStatus")
       private final @Nullable String reasonForLogsStatus;
 
-    public Optional<String> getReasonForLogsStatus() {
+    public Optional<String> reasonForLogsStatus() {
         return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
     }
 
@@ -47,7 +47,7 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
     @Import(name="sendingLogs")
       private final @Nullable String sendingLogs;
 
-    public Optional<String> getSendingLogs() {
+    public Optional<String> sendingLogs() {
         return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
     }
 

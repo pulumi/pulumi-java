@@ -25,7 +25,7 @@ public final class PipelinePolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="elapsedTimeMetric")
       private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
-    public Optional<PipelineElapsedTimeMetricPolicyResponse> getElapsedTimeMetric() {
+    public Optional<PipelineElapsedTimeMetricPolicyResponse> elapsedTimeMetric() {
         return this.elapsedTimeMetric == null ? Optional.empty() : Optional.ofNullable(this.elapsedTimeMetric);
     }
 

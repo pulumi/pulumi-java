@@ -141,112 +141,112 @@ public final class GetVpnSiteResult {
      * The AddressSpace that contains an array of IP address ranges.
      * 
     */
-    public Optional<AddressSpaceResponse> getAddressSpace() {
+    public Optional<AddressSpaceResponse> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
     /**
      * The set of bgp properties.
      * 
     */
-    public Optional<BgpSettingsResponse> getBgpProperties() {
+    public Optional<BgpSettingsResponse> bgpProperties() {
         return Optional.ofNullable(this.bgpProperties);
     }
     /**
      * The device properties.
      * 
     */
-    public Optional<DevicePropertiesResponse> getDeviceProperties() {
+    public Optional<DevicePropertiesResponse> deviceProperties() {
         return Optional.ofNullable(this.deviceProperties);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The ip-address for the vpn-site.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * IsSecuritySite flag.
      * 
     */
-    public Optional<Boolean> getIsSecuritySite() {
+    public Optional<Boolean> isSecuritySite() {
         return Optional.ofNullable(this.isSecuritySite);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Office365 Policy.
      * 
     */
-    public Optional<O365PolicyPropertiesResponse> getO365Policy() {
+    public Optional<O365PolicyPropertiesResponse> o365Policy() {
         return Optional.ofNullable(this.o365Policy);
     }
     /**
      * The provisioning state of the VPN site resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The key for vpn-site that can be used for connections.
      * 
     */
-    public Optional<String> getSiteKey() {
+    public Optional<String> siteKey() {
         return Optional.ofNullable(this.siteKey);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The VirtualWAN to which the vpnSite belongs.
      * 
     */
-    public Optional<SubResourceResponse> getVirtualWan() {
+    public Optional<SubResourceResponse> virtualWan() {
         return Optional.ofNullable(this.virtualWan);
     }
     /**
      * List of all vpn site links.
      * 
     */
-    public List<VpnSiteLinkResponse> getVpnSiteLinks() {
+    public List<VpnSiteLinkResponse> vpnSiteLinks() {
         return this.vpnSiteLinks == null ? List.of() : this.vpnSiteLinks;
     }
 

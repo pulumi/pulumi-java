@@ -28,7 +28,7 @@ public final class ExpressionEvaluationOptionsArgs extends com.pulumi.resources.
     @Import(name="scope")
       private final @Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
-    public Output<Either<String,ExpressionEvaluationOptionsScopeType>> getScope() {
+    public Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

@@ -51,28 +51,28 @@ public final class AliasPathResponse {
      * The API versions.
      * 
     */
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
      * The metadata of the alias path. If missing, fall back to the default metadata of the alias.
      * 
     */
-    public AliasPathMetadataResponse getMetadata() {
+    public AliasPathMetadataResponse metadata() {
         return this.metadata;
     }
     /**
      * The path of an alias.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The pattern for an alias path.
      * 
     */
-    public Optional<AliasPatternResponse> getPattern() {
+    public Optional<AliasPatternResponse> pattern() {
         return Optional.ofNullable(this.pattern);
     }
 

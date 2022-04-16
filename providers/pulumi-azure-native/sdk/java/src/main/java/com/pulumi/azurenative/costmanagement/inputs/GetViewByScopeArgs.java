@@ -19,7 +19,7 @@ public final class GetViewByScopeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
@@ -30,7 +30,7 @@ public final class GetViewByScopeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="viewName", required=true)
       private final String viewName;
 
-    public String getViewName() {
+    public String viewName() {
         return this.viewName;
     }
 

@@ -26,7 +26,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="repeatingTimeIntervals", required=true)
       private final Output<List<String>> repeatingTimeIntervals;
 
-    public Output<List<String>> getRepeatingTimeIntervals() {
+    public Output<List<String>> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
 

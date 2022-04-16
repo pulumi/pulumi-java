@@ -37,14 +37,14 @@ public final class BranchResponse {
      * List of actions.
      * 
     */
-    public List<Object> getActions() {
+    public List<Object> actions() {
         return this.actions;
     }
     /**
      * String of the branch name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -36,14 +36,14 @@ public final class ListMonitorVMHostsResult {
      * Link to the next set of results, if any.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Response of a list vm host update operation.
      * 
     */
-    public List<VMResourcesResponse> getValue() {
+    public List<VMResourcesResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

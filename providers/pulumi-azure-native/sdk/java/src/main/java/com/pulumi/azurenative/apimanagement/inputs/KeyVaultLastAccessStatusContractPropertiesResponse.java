@@ -25,7 +25,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -36,7 +36,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -47,7 +47,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends co
     @Import(name="timeStampUtc")
       private final @Nullable String timeStampUtc;
 
-    public Optional<String> getTimeStampUtc() {
+    public Optional<String> timeStampUtc() {
         return this.timeStampUtc == null ? Optional.empty() : Optional.ofNullable(this.timeStampUtc);
     }
 

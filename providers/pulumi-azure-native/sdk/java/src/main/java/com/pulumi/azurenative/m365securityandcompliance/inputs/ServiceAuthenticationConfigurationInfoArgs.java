@@ -27,7 +27,7 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends com.pulumi
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends com.pulumi
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
+    public Output<String> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends com.pulumi
     @Import(name="smartProxyEnabled")
       private final @Nullable Output<Boolean> smartProxyEnabled;
 
-    public Output<Boolean> getSmartProxyEnabled() {
+    public Output<Boolean> smartProxyEnabled() {
         return this.smartProxyEnabled == null ? Codegen.empty() : this.smartProxyEnabled;
     }
 

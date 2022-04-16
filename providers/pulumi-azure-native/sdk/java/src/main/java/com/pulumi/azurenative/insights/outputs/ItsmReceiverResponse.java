@@ -53,35 +53,35 @@ public final class ItsmReceiverResponse {
      * Unique identification of ITSM connection among multiple defined in above workspace.
      * 
     */
-    public String getConnectionId() {
+    public String connectionId() {
         return this.connectionId;
     }
     /**
      * The name of the Itsm receiver. Names must be unique across all receivers within an action group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
      * 
     */
-    public String getTicketConfiguration() {
+    public String ticketConfiguration() {
         return this.ticketConfiguration;
     }
     /**
      * OMS LA instance identifier.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 

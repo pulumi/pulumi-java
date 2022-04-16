@@ -54,35 +54,35 @@ public final class ContainerStateResponse {
      * The human-readable status of the container instance state.
      * 
     */
-    public String getDetailStatus() {
+    public String detailStatus() {
         return this.detailStatus;
     }
     /**
      * The container instance exit codes correspond to those from the `docker run` command.
      * 
     */
-    public Integer getExitCode() {
+    public Integer exitCode() {
         return this.exitCode;
     }
     /**
      * The date-time when the container instance state finished.
      * 
     */
-    public String getFinishTime() {
+    public String finishTime() {
         return this.finishTime;
     }
     /**
      * The date-time when the container instance state started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The state of the container instance.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

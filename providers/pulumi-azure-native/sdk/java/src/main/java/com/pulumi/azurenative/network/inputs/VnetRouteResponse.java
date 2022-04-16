@@ -26,7 +26,7 @@ public final class VnetRouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="staticRoutes")
       private final @Nullable List<StaticRouteResponse> staticRoutes;
 
-    public List<StaticRouteResponse> getStaticRoutes() {
+    public List<StaticRouteResponse> staticRoutes() {
         return this.staticRoutes == null ? List.of() : this.staticRoutes;
     }
 

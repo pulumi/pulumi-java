@@ -36,7 +36,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="apple")
       private final @Nullable Output<AppleArgs> apple;
 
-    public Output<AppleArgs> getApple() {
+    public Output<AppleArgs> apple() {
         return this.apple == null ? Codegen.empty() : this.apple;
     }
 
@@ -47,7 +47,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
+    public Output<AzureActiveDirectoryArgs> azureActiveDirectory() {
         return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
     }
 
@@ -58,7 +58,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="azureStaticWebApps")
       private final @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps;
 
-    public Output<AzureStaticWebAppsArgs> getAzureStaticWebApps() {
+    public Output<AzureStaticWebAppsArgs> azureStaticWebApps() {
         return this.azureStaticWebApps == null ? Codegen.empty() : this.azureStaticWebApps;
     }
 
@@ -70,7 +70,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="customOpenIdConnectProviders")
       private final @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
 
-    public Output<Map<String,CustomOpenIdConnectProviderArgs>> getCustomOpenIdConnectProviders() {
+    public Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders() {
         return this.customOpenIdConnectProviders == null ? Codegen.empty() : this.customOpenIdConnectProviders;
     }
 
@@ -81,7 +81,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="facebook")
       private final @Nullable Output<FacebookArgs> facebook;
 
-    public Output<FacebookArgs> getFacebook() {
+    public Output<FacebookArgs> facebook() {
         return this.facebook == null ? Codegen.empty() : this.facebook;
     }
 
@@ -92,7 +92,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="gitHub")
       private final @Nullable Output<GitHubArgs> gitHub;
 
-    public Output<GitHubArgs> getGitHub() {
+    public Output<GitHubArgs> gitHub() {
         return this.gitHub == null ? Codegen.empty() : this.gitHub;
     }
 
@@ -103,7 +103,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="google")
       private final @Nullable Output<GoogleArgs> google;
 
-    public Output<GoogleArgs> getGoogle() {
+    public Output<GoogleArgs> google() {
         return this.google == null ? Codegen.empty() : this.google;
     }
 
@@ -114,7 +114,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="legacyMicrosoftAccount")
       private final @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
 
-    public Output<LegacyMicrosoftAccountArgs> getLegacyMicrosoftAccount() {
+    public Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount() {
         return this.legacyMicrosoftAccount == null ? Codegen.empty() : this.legacyMicrosoftAccount;
     }
 
@@ -125,7 +125,7 @@ public final class IdentityProvidersArgs extends com.pulumi.resources.ResourceAr
     @Import(name="twitter")
       private final @Nullable Output<TwitterArgs> twitter;
 
-    public Output<TwitterArgs> getTwitter() {
+    public Output<TwitterArgs> twitter() {
         return this.twitter == null ? Codegen.empty() : this.twitter;
     }
 

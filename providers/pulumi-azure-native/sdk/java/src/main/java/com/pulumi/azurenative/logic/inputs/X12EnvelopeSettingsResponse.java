@@ -27,7 +27,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="controlStandardsId", required=true)
       private final Integer controlStandardsId;
 
-    public Integer getControlStandardsId() {
+    public Integer controlStandardsId() {
         return this.controlStandardsId;
     }
 
@@ -38,7 +38,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="controlVersionNumber", required=true)
       private final String controlVersionNumber;
 
-    public String getControlVersionNumber() {
+    public String controlVersionNumber() {
         return this.controlVersionNumber;
     }
 
@@ -49,7 +49,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="enableDefaultGroupHeaders", required=true)
       private final Boolean enableDefaultGroupHeaders;
 
-    public Boolean getEnableDefaultGroupHeaders() {
+    public Boolean enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
 
@@ -60,7 +60,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="functionalGroupId")
       private final @Nullable String functionalGroupId;
 
-    public Optional<String> getFunctionalGroupId() {
+    public Optional<String> functionalGroupId() {
         return this.functionalGroupId == null ? Optional.empty() : Optional.ofNullable(this.functionalGroupId);
     }
 
@@ -71,7 +71,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupControlNumberLowerBound", required=true)
       private final Integer groupControlNumberLowerBound;
 
-    public Integer getGroupControlNumberLowerBound() {
+    public Integer groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
 
@@ -82,7 +82,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupControlNumberUpperBound", required=true)
       private final Integer groupControlNumberUpperBound;
 
-    public Integer getGroupControlNumberUpperBound() {
+    public Integer groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
 
@@ -93,7 +93,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderAgencyCode", required=true)
       private final String groupHeaderAgencyCode;
 
-    public String getGroupHeaderAgencyCode() {
+    public String groupHeaderAgencyCode() {
         return this.groupHeaderAgencyCode;
     }
 
@@ -104,7 +104,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderDateFormat", required=true)
       private final String groupHeaderDateFormat;
 
-    public String getGroupHeaderDateFormat() {
+    public String groupHeaderDateFormat() {
         return this.groupHeaderDateFormat;
     }
 
@@ -115,7 +115,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderTimeFormat", required=true)
       private final String groupHeaderTimeFormat;
 
-    public String getGroupHeaderTimeFormat() {
+    public String groupHeaderTimeFormat() {
         return this.groupHeaderTimeFormat;
     }
 
@@ -126,7 +126,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderVersion", required=true)
       private final String groupHeaderVersion;
 
-    public String getGroupHeaderVersion() {
+    public String groupHeaderVersion() {
         return this.groupHeaderVersion;
     }
 
@@ -137,7 +137,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="interchangeControlNumberLowerBound", required=true)
       private final Integer interchangeControlNumberLowerBound;
 
-    public Integer getInterchangeControlNumberLowerBound() {
+    public Integer interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
 
@@ -148,7 +148,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="interchangeControlNumberUpperBound", required=true)
       private final Integer interchangeControlNumberUpperBound;
 
-    public Integer getInterchangeControlNumberUpperBound() {
+    public Integer interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
 
@@ -159,7 +159,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
       private final Boolean overwriteExistingTransactionSetControlNumber;
 
-    public Boolean getOverwriteExistingTransactionSetControlNumber() {
+    public Boolean overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
 
@@ -170,7 +170,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="receiverApplicationId", required=true)
       private final String receiverApplicationId;
 
-    public String getReceiverApplicationId() {
+    public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
 
@@ -181,7 +181,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="rolloverGroupControlNumber", required=true)
       private final Boolean rolloverGroupControlNumber;
 
-    public Boolean getRolloverGroupControlNumber() {
+    public Boolean rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
 
@@ -192,7 +192,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="rolloverInterchangeControlNumber", required=true)
       private final Boolean rolloverInterchangeControlNumber;
 
-    public Boolean getRolloverInterchangeControlNumber() {
+    public Boolean rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
 
@@ -203,7 +203,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="rolloverTransactionSetControlNumber", required=true)
       private final Boolean rolloverTransactionSetControlNumber;
 
-    public Boolean getRolloverTransactionSetControlNumber() {
+    public Boolean rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
 
@@ -214,7 +214,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="senderApplicationId", required=true)
       private final String senderApplicationId;
 
-    public String getSenderApplicationId() {
+    public String senderApplicationId() {
         return this.senderApplicationId;
     }
 
@@ -225,7 +225,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberLowerBound", required=true)
       private final Integer transactionSetControlNumberLowerBound;
 
-    public Integer getTransactionSetControlNumberLowerBound() {
+    public Integer transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
 
@@ -236,7 +236,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberPrefix")
       private final @Nullable String transactionSetControlNumberPrefix;
 
-    public Optional<String> getTransactionSetControlNumberPrefix() {
+    public Optional<String> transactionSetControlNumberPrefix() {
         return this.transactionSetControlNumberPrefix == null ? Optional.empty() : Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
 
@@ -247,7 +247,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberSuffix")
       private final @Nullable String transactionSetControlNumberSuffix;
 
-    public Optional<String> getTransactionSetControlNumberSuffix() {
+    public Optional<String> transactionSetControlNumberSuffix() {
         return this.transactionSetControlNumberSuffix == null ? Optional.empty() : Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
 
@@ -258,7 +258,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberUpperBound", required=true)
       private final Integer transactionSetControlNumberUpperBound;
 
-    public Integer getTransactionSetControlNumberUpperBound() {
+    public Integer transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
 
@@ -269,7 +269,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="usageIndicator", required=true)
       private final String usageIndicator;
 
-    public String getUsageIndicator() {
+    public String usageIndicator() {
         return this.usageIndicator;
     }
 
@@ -280,7 +280,7 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="useControlStandardsIdAsRepetitionCharacter", required=true)
       private final Boolean useControlStandardsIdAsRepetitionCharacter;
 
-    public Boolean getUseControlStandardsIdAsRepetitionCharacter() {
+    public Boolean useControlStandardsIdAsRepetitionCharacter() {
         return this.useControlStandardsIdAsRepetitionCharacter;
     }
 

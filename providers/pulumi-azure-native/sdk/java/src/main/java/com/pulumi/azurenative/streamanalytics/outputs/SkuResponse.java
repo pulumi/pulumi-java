@@ -26,7 +26,7 @@ public final class SkuResponse {
      * The name of the SKU. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

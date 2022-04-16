@@ -56,7 +56,7 @@ public final class NetworkResourcePropertiesResponse {
      * User readable description of the network.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -64,28 +64,28 @@ public final class NetworkResourcePropertiesResponse {
      * Expected value is 'NetworkResourceProperties'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * State of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the network.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the network.
      * 
     */
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
 

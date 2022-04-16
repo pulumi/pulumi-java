@@ -29,7 +29,7 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="enabled")
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
-    public Output<Either<String,EnableStatus>> getEnabled() {
+    public Output<Either<String,EnableStatus>> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -51,7 +51,7 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="expired")
       private final @Nullable Output<Boolean> expired;
 
-    public Output<Boolean> getExpired() {
+    public Output<Boolean> expired() {
         return this.expired == null ? Codegen.empty() : this.expired;
     }
 
@@ -62,7 +62,7 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="markdown")
       private final @Nullable Output<String> markdown;
 
-    public Output<String> getMarkdown() {
+    public Output<String> markdown() {
         return this.markdown == null ? Codegen.empty() : this.markdown;
     }
 
@@ -73,7 +73,7 @@ public final class LabAnnouncementPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

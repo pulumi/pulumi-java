@@ -53,35 +53,35 @@ public final class LinkedIntegrationRuntimeResponse {
      * The creating time of the linked integration runtime.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The location of the workspace for which the linked integration runtime belong to.
      * 
     */
-    public String getDataFactoryLocation() {
+    public String dataFactoryLocation() {
         return this.dataFactoryLocation;
     }
     /**
      * The name of the workspace for which the linked integration runtime belong to.
      * 
     */
-    public String getDataFactoryName() {
+    public String dataFactoryName() {
         return this.dataFactoryName;
     }
     /**
      * The name of the linked integration runtime.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The subscription ID for which the linked integration runtime belong to.
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
 

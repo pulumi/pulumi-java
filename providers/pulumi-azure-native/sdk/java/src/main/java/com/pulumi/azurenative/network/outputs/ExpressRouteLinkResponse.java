@@ -98,77 +98,77 @@ public final class ExpressRouteLinkResponse {
      * Administrative state of the physical port.
      * 
     */
-    public Optional<String> getAdminState() {
+    public Optional<String> adminState() {
         return Optional.ofNullable(this.adminState);
     }
     /**
      * Physical fiber port type.
      * 
     */
-    public String getConnectorType() {
+    public String connectorType() {
         return this.connectorType;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of Azure router interface.
      * 
     */
-    public String getInterfaceName() {
+    public String interfaceName() {
         return this.interfaceName;
     }
     /**
      * MacSec configuration.
      * 
     */
-    public Optional<ExpressRouteLinkMacSecConfigResponse> getMacSecConfig() {
+    public Optional<ExpressRouteLinkMacSecConfigResponse> macSecConfig() {
         return Optional.ofNullable(this.macSecConfig);
     }
     /**
      * Name of child port resource that is unique among child port resources of the parent.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Mapping between physical port to patch panel port.
      * 
     */
-    public String getPatchPanelId() {
+    public String patchPanelId() {
         return this.patchPanelId;
     }
     /**
      * The provisioning state of the express route link resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Mapping of physical patch panel to rack.
      * 
     */
-    public String getRackId() {
+    public String rackId() {
         return this.rackId;
     }
     /**
      * Name of Azure router associated with physical port.
      * 
     */
-    public String getRouterName() {
+    public String routerName() {
         return this.routerName;
     }
 

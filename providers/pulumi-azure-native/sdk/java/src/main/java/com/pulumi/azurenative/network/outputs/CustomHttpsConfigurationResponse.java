@@ -70,49 +70,49 @@ public final class CustomHttpsConfigurationResponse {
      * Defines the source of the SSL certificate
      * 
     */
-    public String getCertificateSource() {
+    public String certificateSource() {
         return this.certificateSource;
     }
     /**
      * Defines the type of the certificate used for secure connections to a frontendEndpoint
      * 
     */
-    public Optional<String> getCertificateType() {
+    public Optional<String> certificateType() {
         return Optional.ofNullable(this.certificateType);
     }
     /**
      * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
      * 
     */
-    public String getMinimumTlsVersion() {
+    public String minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
      * Defines the TLS extension protocol that is used for secure delivery
      * 
     */
-    public String getProtocolType() {
+    public String protocolType() {
         return this.protocolType;
     }
     /**
      * The name of the Key Vault secret representing the full certificate PFX
      * 
     */
-    public Optional<String> getSecretName() {
+    public Optional<String> secretName() {
         return Optional.ofNullable(this.secretName);
     }
     /**
      * The version of the Key Vault secret representing the full certificate PFX
      * 
     */
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
      * The Key Vault containing the SSL certificate
      * 
     */
-    public Optional<KeyVaultCertificateSourceParametersResponseVault> getVault() {
+    public Optional<KeyVaultCertificateSourceParametersResponseVault> vault() {
         return Optional.ofNullable(this.vault);
     }
 

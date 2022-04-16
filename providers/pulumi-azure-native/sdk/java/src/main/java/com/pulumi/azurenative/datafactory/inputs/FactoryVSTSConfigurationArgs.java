@@ -26,7 +26,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="collaborationBranch", required=true)
       private final Output<String> collaborationBranch;
 
-    public Output<String> getCollaborationBranch() {
+    public Output<String> collaborationBranch() {
         return this.collaborationBranch;
     }
 
@@ -48,7 +48,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
 
-    public Output<String> getLastCommitId() {
+    public Output<String> lastCommitId() {
         return this.lastCommitId == null ? Codegen.empty() : this.lastCommitId;
     }
 
@@ -59,7 +59,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -70,7 +70,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -81,7 +81,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="rootFolder", required=true)
       private final Output<String> rootFolder;
 
-    public Output<String> getRootFolder() {
+    public Output<String> rootFolder() {
         return this.rootFolder;
     }
 
@@ -92,7 +92,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -104,7 +104,7 @@ public final class FactoryVSTSConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

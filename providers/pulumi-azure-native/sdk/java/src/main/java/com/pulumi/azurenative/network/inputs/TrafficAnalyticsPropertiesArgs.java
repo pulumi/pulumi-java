@@ -26,7 +26,7 @@ public final class TrafficAnalyticsPropertiesArgs extends com.pulumi.resources.R
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
       private final @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
-    public Output<TrafficAnalyticsConfigurationPropertiesArgs> getNetworkWatcherFlowAnalyticsConfiguration() {
+    public Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration() {
         return this.networkWatcherFlowAnalyticsConfiguration == null ? Codegen.empty() : this.networkWatcherFlowAnalyticsConfiguration;
     }
 

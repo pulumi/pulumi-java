@@ -34,7 +34,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="connectionBandwidth")
       private final @Nullable Output<Integer> connectionBandwidth;
 
-    public Output<Integer> getConnectionBandwidth() {
+    public Output<Integer> connectionBandwidth() {
         return this.connectionBandwidth == null ? Codegen.empty() : this.connectionBandwidth;
     }
 
@@ -45,7 +45,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="egressNatRules")
       private final @Nullable Output<List<SubResourceArgs>> egressNatRules;
 
-    public Output<List<SubResourceArgs>> getEgressNatRules() {
+    public Output<List<SubResourceArgs>> egressNatRules() {
         return this.egressNatRules == null ? Codegen.empty() : this.egressNatRules;
     }
 
@@ -56,7 +56,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="enableBgp")
       private final @Nullable Output<Boolean> enableBgp;
 
-    public Output<Boolean> getEnableBgp() {
+    public Output<Boolean> enableBgp() {
         return this.enableBgp == null ? Codegen.empty() : this.enableBgp;
     }
 
@@ -67,7 +67,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="enableRateLimiting")
       private final @Nullable Output<Boolean> enableRateLimiting;
 
-    public Output<Boolean> getEnableRateLimiting() {
+    public Output<Boolean> enableRateLimiting() {
         return this.enableRateLimiting == null ? Codegen.empty() : this.enableRateLimiting;
     }
 
@@ -78,7 +78,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -89,7 +89,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="ingressNatRules")
       private final @Nullable Output<List<SubResourceArgs>> ingressNatRules;
 
-    public Output<List<SubResourceArgs>> getIngressNatRules() {
+    public Output<List<SubResourceArgs>> ingressNatRules() {
         return this.ingressNatRules == null ? Codegen.empty() : this.ingressNatRules;
     }
 
@@ -100,7 +100,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="ipsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
 
-    public Output<List<IpsecPolicyArgs>> getIpsecPolicies() {
+    public Output<List<IpsecPolicyArgs>> ipsecPolicies() {
         return this.ipsecPolicies == null ? Codegen.empty() : this.ipsecPolicies;
     }
 
@@ -111,7 +111,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -122,7 +122,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;
 
-    public Output<Integer> getRoutingWeight() {
+    public Output<Integer> routingWeight() {
         return this.routingWeight == null ? Codegen.empty() : this.routingWeight;
     }
 
@@ -133,7 +133,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
-    public Output<String> getSharedKey() {
+    public Output<String> sharedKey() {
         return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 
@@ -144,7 +144,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="useLocalAzureIpAddress")
       private final @Nullable Output<Boolean> useLocalAzureIpAddress;
 
-    public Output<Boolean> getUseLocalAzureIpAddress() {
+    public Output<Boolean> useLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress == null ? Codegen.empty() : this.useLocalAzureIpAddress;
     }
 
@@ -155,7 +155,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="usePolicyBasedTrafficSelectors")
       private final @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
 
-    public Output<Boolean> getUsePolicyBasedTrafficSelectors() {
+    public Output<Boolean> usePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors == null ? Codegen.empty() : this.usePolicyBasedTrafficSelectors;
     }
 
@@ -166,7 +166,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="vpnConnectionProtocolType")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
 
-    public Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> getVpnConnectionProtocolType() {
+    public Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType() {
         return this.vpnConnectionProtocolType == null ? Codegen.empty() : this.vpnConnectionProtocolType;
     }
 
@@ -177,7 +177,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="vpnLinkConnectionMode")
       private final @Nullable Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode;
 
-    public Output<Either<String,VpnLinkConnectionMode>> getVpnLinkConnectionMode() {
+    public Output<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode() {
         return this.vpnLinkConnectionMode == null ? Codegen.empty() : this.vpnLinkConnectionMode;
     }
 
@@ -188,7 +188,7 @@ public final class VpnSiteLinkConnectionArgs extends com.pulumi.resources.Resour
     @Import(name="vpnSiteLink")
       private final @Nullable Output<SubResourceArgs> vpnSiteLink;
 
-    public Output<SubResourceArgs> getVpnSiteLink() {
+    public Output<SubResourceArgs> vpnSiteLink() {
         return this.vpnSiteLink == null ? Codegen.empty() : this.vpnSiteLink;
     }
 

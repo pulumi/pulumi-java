@@ -26,7 +26,7 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
     @Import(name="baseDockerfile")
       private final @Nullable String baseDockerfile;
 
-    public Optional<String> getBaseDockerfile() {
+    public Optional<String> baseDockerfile() {
         return this.baseDockerfile == null ? Optional.empty() : Optional.ofNullable(this.baseDockerfile);
     }
 
@@ -37,7 +37,7 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
     @Import(name="baseImage")
       private final @Nullable String baseImage;
 
-    public Optional<String> getBaseImage() {
+    public Optional<String> baseImage() {
         return this.baseImage == null ? Optional.empty() : Optional.ofNullable(this.baseImage);
     }
 
@@ -48,7 +48,7 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends com.
     @Import(name="baseImageRegistry")
       private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 
-    public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> getBaseImageRegistry() {
+    public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> baseImageRegistry() {
         return this.baseImageRegistry == null ? Optional.empty() : Optional.ofNullable(this.baseImageRegistry);
     }
 

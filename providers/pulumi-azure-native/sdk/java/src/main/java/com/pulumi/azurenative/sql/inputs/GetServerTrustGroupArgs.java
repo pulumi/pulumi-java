@@ -19,7 +19,7 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="locationName", required=true)
       private final String locationName;
 
-    public String getLocationName() {
+    public String locationName() {
         return this.locationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serverTrustGroupName", required=true)
       private final String serverTrustGroupName;
 
-    public String getServerTrustGroupName() {
+    public String serverTrustGroupName() {
         return this.serverTrustGroupName;
     }
 

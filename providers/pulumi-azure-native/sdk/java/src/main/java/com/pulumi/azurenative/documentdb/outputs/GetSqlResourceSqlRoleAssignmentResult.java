@@ -62,42 +62,42 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
      * The unique resource identifier of the database account.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
     */
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The unique identifier for the associated Role Definition.
      * 
     */
-    public Optional<String> getRoleDefinitionId() {
+    public Optional<String> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
      * The data plane resource path for which access is being granted through this Role Assignment.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The type of Azure resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

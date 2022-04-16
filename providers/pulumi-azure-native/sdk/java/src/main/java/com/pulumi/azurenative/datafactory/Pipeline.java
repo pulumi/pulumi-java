@@ -77,7 +77,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of activities in pipeline.
      * 
      */
-    public Output</* @Nullable */ List<Object>> getActivities() {
+    public Output</* @Nullable */ List<Object>> activities() {
         return this.activities;
     }
     /**
@@ -91,7 +91,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of tags that can be used for describing the Pipeline.
      * 
      */
-    public Output</* @Nullable */ List<Object>> getAnnotations() {
+    public Output</* @Nullable */ List<Object>> annotations() {
         return this.annotations;
     }
     /**
@@ -105,7 +105,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The max number of concurrent runs for the pipeline.
      * 
      */
-    public Output</* @Nullable */ Integer> getConcurrency() {
+    public Output</* @Nullable */ Integer> concurrency() {
         return this.concurrency;
     }
     /**
@@ -119,7 +119,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The description of the pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -133,7 +133,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return Etag identifies change in the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -147,7 +147,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
      */
-    public Output</* @Nullable */ PipelineResponseFolder> getFolder() {
+    public Output</* @Nullable */ PipelineResponseFolder> folder() {
         return this.folder;
     }
     /**
@@ -161,7 +161,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -175,7 +175,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of parameters for pipeline.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -189,7 +189,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return Pipeline Policy.
      * 
      */
-    public Output</* @Nullable */ PipelinePolicyResponse> getPolicy() {
+    public Output</* @Nullable */ PipelinePolicyResponse> policy() {
         return this.policy;
     }
     /**
@@ -203,7 +203,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return Dimensions emitted by Pipeline.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getRunDimensions() {
+    public Output</* @Nullable */ Map<String,Object>> runDimensions() {
         return this.runDimensions;
     }
     /**
@@ -217,7 +217,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -231,7 +231,7 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * @return List of variables for pipeline.
      * 
      */
-    public Output</* @Nullable */ Map<String,VariableSpecificationResponse>> getVariables() {
+    public Output</* @Nullable */ Map<String,VariableSpecificationResponse>> variables() {
         return this.variables;
     }
 

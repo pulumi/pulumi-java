@@ -28,7 +28,7 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
     @Import(name="encryptionSettings")
       private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
 
-    public List<EncryptionSettingsElementResponse> getEncryptionSettings() {
+    public List<EncryptionSettingsElementResponse> encryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
 
@@ -50,7 +50,7 @@ public final class EncryptionSettingsCollectionResponse extends com.pulumi.resou
     @Import(name="encryptionSettingsVersion")
       private final @Nullable String encryptionSettingsVersion;
 
-    public Optional<String> getEncryptionSettingsVersion() {
+    public Optional<String> encryptionSettingsVersion() {
         return this.encryptionSettingsVersion == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettingsVersion);
     }
 

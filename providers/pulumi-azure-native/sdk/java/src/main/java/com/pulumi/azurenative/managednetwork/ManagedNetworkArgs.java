@@ -24,7 +24,7 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="managedNetworkName")
       private final @Nullable Output<String> managedNetworkName;
 
-    public Output<String> getManagedNetworkName() {
+    public Output<String> managedNetworkName() {
         return this.managedNetworkName == null ? Codegen.empty() : this.managedNetworkName;
     }
 
@@ -46,7 +46,7 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> getScope() {
+    public Output<ScopeArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -68,7 +68,7 @@ public final class ManagedNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

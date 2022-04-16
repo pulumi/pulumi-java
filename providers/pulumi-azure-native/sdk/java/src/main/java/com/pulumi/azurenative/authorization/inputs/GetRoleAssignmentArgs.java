@@ -21,7 +21,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="roleAssignmentName", required=true)
       private final String roleAssignmentName;
 
-    public String getRoleAssignmentName() {
+    public String roleAssignmentName() {
         return this.roleAssignmentName;
     }
 
@@ -32,7 +32,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
@@ -43,7 +43,7 @@ public final class GetRoleAssignmentArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

@@ -25,7 +25,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="isMaster", required=true)
       private final Boolean isMaster;
 
-    public Boolean getIsMaster() {
+    public Boolean isMaster() {
         return this.isMaster;
     }
 
@@ -36,7 +36,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="nonSslPort", required=true)
       private final Integer nonSslPort;
 
-    public Integer getNonSslPort() {
+    public Integer nonSslPort() {
         return this.nonSslPort;
     }
 
@@ -47,7 +47,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="shardId", required=true)
       private final Integer shardId;
 
-    public Integer getShardId() {
+    public Integer shardId() {
         return this.shardId;
     }
 
@@ -58,7 +58,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="sslPort", required=true)
       private final Integer sslPort;
 
-    public Integer getSslPort() {
+    public Integer sslPort() {
         return this.sslPort;
     }
 
@@ -69,7 +69,7 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

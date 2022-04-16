@@ -19,7 +19,7 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -30,7 +30,7 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="kpiName", required=true)
       private final String kpiName;
 
-    public String getKpiName() {
+    public String kpiName() {
         return this.kpiName;
     }
 
@@ -41,7 +41,7 @@ public final class GetKpiArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

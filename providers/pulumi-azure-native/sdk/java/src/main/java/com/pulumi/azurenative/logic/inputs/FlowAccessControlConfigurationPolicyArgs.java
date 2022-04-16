@@ -28,7 +28,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
     @Import(name="allowedCallerIpAddresses")
       private final @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
 
-    public Output<List<IpAddressRangeArgs>> getAllowedCallerIpAddresses() {
+    public Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses() {
         return this.allowedCallerIpAddresses == null ? Codegen.empty() : this.allowedCallerIpAddresses;
     }
 
@@ -39,7 +39,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
     @Import(name="openAuthenticationPolicies")
       private final @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
-    public Output<OpenAuthenticationAccessPoliciesArgs> getOpenAuthenticationPolicies() {
+    public Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies() {
         return this.openAuthenticationPolicies == null ? Codegen.empty() : this.openAuthenticationPolicies;
     }
 

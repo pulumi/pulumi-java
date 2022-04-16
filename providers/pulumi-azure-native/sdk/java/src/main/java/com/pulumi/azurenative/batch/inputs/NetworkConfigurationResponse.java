@@ -27,7 +27,7 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="endpointConfiguration")
       private final @Nullable PoolEndpointConfigurationResponse endpointConfiguration;
 
-    public Optional<PoolEndpointConfigurationResponse> getEndpointConfiguration() {
+    public Optional<PoolEndpointConfigurationResponse> endpointConfiguration() {
         return this.endpointConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointConfiguration);
     }
 
@@ -38,7 +38,7 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="publicIPAddressConfiguration")
       private final @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
-    public Optional<PublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
+    public Optional<PublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
@@ -49,7 +49,7 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 

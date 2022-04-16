@@ -25,7 +25,7 @@ public final class CmkKeyVaultPropertiesResponse extends com.pulumi.resources.In
     @Import(name="keyUri")
       private final @Nullable String keyUri;
 
-    public Optional<String> getKeyUri() {
+    public Optional<String> keyUri() {
         return this.keyUri == null ? Optional.empty() : Optional.ofNullable(this.keyUri);
     }
 

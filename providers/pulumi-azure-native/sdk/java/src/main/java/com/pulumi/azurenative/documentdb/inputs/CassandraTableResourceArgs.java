@@ -28,7 +28,7 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Integer> analyticalStorageTtl;
 
-    public Output<Integer> getAnalyticalStorageTtl() {
+    public Output<Integer> analyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
     }
 
@@ -39,7 +39,7 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
+    public Output<Integer> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -50,7 +50,7 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -61,7 +61,7 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="schema")
       private final @Nullable Output<CassandraSchemaArgs> schema;
 
-    public Output<CassandraSchemaArgs> getSchema() {
+    public Output<CassandraSchemaArgs> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 

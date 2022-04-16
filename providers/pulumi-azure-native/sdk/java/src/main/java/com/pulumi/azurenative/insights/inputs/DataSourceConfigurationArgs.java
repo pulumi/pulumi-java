@@ -25,7 +25,7 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="eventLogs")
       private final @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
 
-    public Output<List<EventLogConfigurationArgs>> getEventLogs() {
+    public Output<List<EventLogConfigurationArgs>> eventLogs() {
         return this.eventLogs == null ? Codegen.empty() : this.eventLogs;
     }
 
@@ -36,7 +36,7 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="perfCounters")
       private final @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
 
-    public Output<List<PerformanceCounterConfigurationArgs>> getPerfCounters() {
+    public Output<List<PerformanceCounterConfigurationArgs>> perfCounters() {
         return this.perfCounters == null ? Codegen.empty() : this.perfCounters;
     }
 
@@ -47,7 +47,7 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="providers")
       private final @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
 
-    public Output<List<EtwProviderConfigurationArgs>> getProviders() {
+    public Output<List<EtwProviderConfigurationArgs>> providers() {
         return this.providers == null ? Codegen.empty() : this.providers;
     }
 

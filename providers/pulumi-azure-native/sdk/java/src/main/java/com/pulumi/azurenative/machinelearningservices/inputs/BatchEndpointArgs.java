@@ -31,7 +31,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authMode")
       private final @Nullable Output<Either<String,EndpointAuthMode>> authMode;
 
-    public Output<Either<String,EndpointAuthMode>> getAuthMode() {
+    public Output<Either<String,EndpointAuthMode>> authMode() {
         return this.authMode == null ? Codegen.empty() : this.authMode;
     }
 
@@ -42,7 +42,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -54,7 +54,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<EndpointAuthKeysArgs> keys;
 
-    public Output<EndpointAuthKeysArgs> getKeys() {
+    public Output<EndpointAuthKeysArgs> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -65,7 +65,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -76,7 +76,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="traffic")
       private final @Nullable Output<Map<String,Integer>> traffic;
 
-    public Output<Map<String,Integer>> getTraffic() {
+    public Output<Map<String,Integer>> traffic() {
         return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 

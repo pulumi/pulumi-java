@@ -27,7 +27,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exec")
       private final @Nullable ContainerExecResponse exec;
 
-    public Optional<ContainerExecResponse> getExec() {
+    public Optional<ContainerExecResponse> exec() {
         return this.exec == null ? Optional.empty() : Optional.ofNullable(this.exec);
     }
 
@@ -38,7 +38,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
 
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
     }
 
@@ -49,7 +49,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="httpGet")
       private final @Nullable ContainerHttpGetResponse httpGet;
 
-    public Optional<ContainerHttpGetResponse> getHttpGet() {
+    public Optional<ContainerHttpGetResponse> httpGet() {
         return this.httpGet == null ? Optional.empty() : Optional.ofNullable(this.httpGet);
     }
 
@@ -60,7 +60,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="initialDelaySeconds")
       private final @Nullable Integer initialDelaySeconds;
 
-    public Optional<Integer> getInitialDelaySeconds() {
+    public Optional<Integer> initialDelaySeconds() {
         return this.initialDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.initialDelaySeconds);
     }
 
@@ -71,7 +71,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="periodSeconds")
       private final @Nullable Integer periodSeconds;
 
-    public Optional<Integer> getPeriodSeconds() {
+    public Optional<Integer> periodSeconds() {
         return this.periodSeconds == null ? Optional.empty() : Optional.ofNullable(this.periodSeconds);
     }
 
@@ -82,7 +82,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
 
-    public Optional<Integer> getSuccessThreshold() {
+    public Optional<Integer> successThreshold() {
         return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
     }
 
@@ -93,7 +93,7 @@ public final class ContainerProbeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
     }
 

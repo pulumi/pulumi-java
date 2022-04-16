@@ -24,7 +24,7 @@ public final class Gen2StorageConfigurationOutputResponse {
      * The name of the storage account that will hold the environment's Gen2 data.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 

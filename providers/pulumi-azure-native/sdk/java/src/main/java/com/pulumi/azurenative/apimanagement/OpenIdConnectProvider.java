@@ -42,7 +42,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Client ID of developer console which is the client application.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -56,7 +56,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Client Secret of developer console which is the client application.
      * 
      */
-    public Output</* @Nullable */ String> getClientSecret() {
+    public Output</* @Nullable */ String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -70,7 +70,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return User-friendly description of OpenID Connect Provider.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,7 +84,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return User-friendly OpenID Connect Provider name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -98,7 +98,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Metadata endpoint URI.
      * 
      */
-    public Output<String> getMetadataEndpoint() {
+    public Output<String> metadataEndpoint() {
         return this.metadataEndpoint;
     }
     /**
@@ -112,7 +112,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

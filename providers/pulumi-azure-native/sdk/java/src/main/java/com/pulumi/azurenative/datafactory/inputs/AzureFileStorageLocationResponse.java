@@ -26,7 +26,7 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
     @Import(name="fileName")
       private final @Nullable Object fileName;
 
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
     }
 
@@ -37,7 +37,7 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
     @Import(name="folderPath")
       private final @Nullable Object folderPath;
 
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
@@ -49,7 +49,7 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

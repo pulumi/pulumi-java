@@ -25,7 +25,7 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="interimSchemaName")
       private final @Nullable Object interimSchemaName;
 
-    public Optional<Object> getInterimSchemaName() {
+    public Optional<Object> interimSchemaName() {
         return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
     }
 
@@ -36,7 +36,7 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="keys")
       private final @Nullable Object keys;
 
-    public Optional<Object> getKeys() {
+    public Optional<Object> keys() {
         return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
     }
 
@@ -47,7 +47,7 @@ public final class SqlUpsertSettingsResponse extends com.pulumi.resources.Invoke
     @Import(name="useTempDB")
       private final @Nullable Object useTempDB;
 
-    public Optional<Object> getUseTempDB() {
+    public Optional<Object> useTempDB() {
         return this.useTempDB == null ? Optional.empty() : Optional.ofNullable(this.useTempDB);
     }
 

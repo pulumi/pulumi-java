@@ -33,7 +33,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientAffinityEnabled")
       private final @Nullable Output<Boolean> clientAffinityEnabled;
 
-    public Output<Boolean> getClientAffinityEnabled() {
+    public Output<Boolean> clientAffinityEnabled() {
         return this.clientAffinityEnabled == null ? Codegen.empty() : this.clientAffinityEnabled;
     }
 
@@ -44,7 +44,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;
 
-    public Output<Boolean> getClientCertEnabled() {
+    public Output<Boolean> clientCertEnabled() {
         return this.clientCertEnabled == null ? Codegen.empty() : this.clientCertEnabled;
     }
 
@@ -55,7 +55,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertExclusionPaths")
       private final @Nullable Output<String> clientCertExclusionPaths;
 
-    public Output<String> getClientCertExclusionPaths() {
+    public Output<String> clientCertExclusionPaths() {
         return this.clientCertExclusionPaths == null ? Codegen.empty() : this.clientCertExclusionPaths;
     }
 
@@ -69,7 +69,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertMode")
       private final @Nullable Output<ClientCertMode> clientCertMode;
 
-    public Output<ClientCertMode> getClientCertMode() {
+    public Output<ClientCertMode> clientCertMode() {
         return this.clientCertMode == null ? Codegen.empty() : this.clientCertMode;
     }
 
@@ -80,7 +80,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloningInfo")
       private final @Nullable Output<CloningInfoArgs> cloningInfo;
 
-    public Output<CloningInfoArgs> getCloningInfo() {
+    public Output<CloningInfoArgs> cloningInfo() {
         return this.cloningInfo == null ? Codegen.empty() : this.cloningInfo;
     }
 
@@ -91,7 +91,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerSize")
       private final @Nullable Output<Integer> containerSize;
 
-    public Output<Integer> getContainerSize() {
+    public Output<Integer> containerSize() {
         return this.containerSize == null ? Codegen.empty() : this.containerSize;
     }
 
@@ -102,7 +102,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomainVerificationId")
       private final @Nullable Output<String> customDomainVerificationId;
 
-    public Output<String> getCustomDomainVerificationId() {
+    public Output<String> customDomainVerificationId() {
         return this.customDomainVerificationId == null ? Codegen.empty() : this.customDomainVerificationId;
     }
 
@@ -113,7 +113,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dailyMemoryTimeQuota")
       private final @Nullable Output<Integer> dailyMemoryTimeQuota;
 
-    public Output<Integer> getDailyMemoryTimeQuota() {
+    public Output<Integer> dailyMemoryTimeQuota() {
         return this.dailyMemoryTimeQuota == null ? Codegen.empty() : this.dailyMemoryTimeQuota;
     }
 
@@ -124,7 +124,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -135,7 +135,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostNameSslStates")
       private final @Nullable Output<List<HostNameSslStateArgs>> hostNameSslStates;
 
-    public Output<List<HostNameSslStateArgs>> getHostNameSslStates() {
+    public Output<List<HostNameSslStateArgs>> hostNameSslStates() {
         return this.hostNameSslStates == null ? Codegen.empty() : this.hostNameSslStates;
     }
 
@@ -147,7 +147,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostNamesDisabled")
       private final @Nullable Output<Boolean> hostNamesDisabled;
 
-    public Output<Boolean> getHostNamesDisabled() {
+    public Output<Boolean> hostNamesDisabled() {
         return this.hostNamesDisabled == null ? Codegen.empty() : this.hostNamesDisabled;
     }
 
@@ -158,7 +158,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostingEnvironmentProfile")
       private final @Nullable Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile;
 
-    public Output<HostingEnvironmentProfileArgs> getHostingEnvironmentProfile() {
+    public Output<HostingEnvironmentProfileArgs> hostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile == null ? Codegen.empty() : this.hostingEnvironmentProfile;
     }
 
@@ -170,7 +170,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> getHttpsOnly() {
+    public Output<Boolean> httpsOnly() {
         return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
     }
 
@@ -181,7 +181,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hyperV")
       private final @Nullable Output<Boolean> hyperV;
 
-    public Output<Boolean> getHyperV() {
+    public Output<Boolean> hyperV() {
         return this.hyperV == null ? Codegen.empty() : this.hyperV;
     }
 
@@ -192,7 +192,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -203,7 +203,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isXenon")
       private final @Nullable Output<Boolean> isXenon;
 
-    public Output<Boolean> getIsXenon() {
+    public Output<Boolean> isXenon() {
         return this.isXenon == null ? Codegen.empty() : this.isXenon;
     }
 
@@ -214,7 +214,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultReferenceIdentity")
       private final @Nullable Output<String> keyVaultReferenceIdentity;
 
-    public Output<String> getKeyVaultReferenceIdentity() {
+    public Output<String> keyVaultReferenceIdentity() {
         return this.keyVaultReferenceIdentity == null ? Codegen.empty() : this.keyVaultReferenceIdentity;
     }
 
@@ -225,7 +225,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -236,7 +236,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -247,7 +247,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -258,7 +258,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="redundancyMode")
       private final @Nullable Output<RedundancyMode> redundancyMode;
 
-    public Output<RedundancyMode> getRedundancyMode() {
+    public Output<RedundancyMode> redundancyMode() {
         return this.redundancyMode == null ? Codegen.empty() : this.redundancyMode;
     }
 
@@ -269,7 +269,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
+    public Output<Boolean> reserved() {
         return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
@@ -280,7 +280,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -291,7 +291,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scmSiteAlsoStopped")
       private final @Nullable Output<Boolean> scmSiteAlsoStopped;
 
-    public Output<Boolean> getScmSiteAlsoStopped() {
+    public Output<Boolean> scmSiteAlsoStopped() {
         return this.scmSiteAlsoStopped == null ? Codegen.empty() : this.scmSiteAlsoStopped;
     }
 
@@ -302,7 +302,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
 
-    public Output<String> getServerFarmId() {
+    public Output<String> serverFarmId() {
         return this.serverFarmId == null ? Codegen.empty() : this.serverFarmId;
     }
 
@@ -313,7 +313,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="siteConfig")
       private final @Nullable Output<SiteConfigArgs> siteConfig;
 
-    public Output<SiteConfigArgs> getSiteConfig() {
+    public Output<SiteConfigArgs> siteConfig() {
         return this.siteConfig == null ? Codegen.empty() : this.siteConfig;
     }
 
@@ -324,7 +324,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountRequired")
       private final @Nullable Output<Boolean> storageAccountRequired;
 
-    public Output<Boolean> getStorageAccountRequired() {
+    public Output<Boolean> storageAccountRequired() {
         return this.storageAccountRequired == null ? Codegen.empty() : this.storageAccountRequired;
     }
 
@@ -335,7 +335,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -347,7 +347,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;
 
-    public Output<String> getVirtualNetworkSubnetId() {
+    public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId == null ? Codegen.empty() : this.virtualNetworkSubnetId;
     }
 

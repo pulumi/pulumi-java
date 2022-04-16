@@ -26,7 +26,7 @@ public final class ContainerExecResponse {
      * The commands to execute within the container.
      * 
     */
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
 

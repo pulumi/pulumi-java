@@ -32,14 +32,14 @@ public final class OsDiskImageResponse {
      * OS operating system type.
      * 
     */
-    public String getOperatingSystem() {
+    public String operatingSystem() {
         return this.operatingSystem;
     }
     /**
      * SAS key for source blob.
      * 
     */
-    public String getSourceBlobSasUri() {
+    public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
 

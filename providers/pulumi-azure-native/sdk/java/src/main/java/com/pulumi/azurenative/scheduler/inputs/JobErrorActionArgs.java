@@ -27,7 +27,7 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queueMessage")
       private final @Nullable Output<StorageQueueMessageArgs> queueMessage;
 
-    public Output<StorageQueueMessageArgs> getQueueMessage() {
+    public Output<StorageQueueMessageArgs> queueMessage() {
         return this.queueMessage == null ? Codegen.empty() : this.queueMessage;
     }
 
@@ -38,7 +38,7 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="request")
       private final @Nullable Output<HttpRequestArgs> request;
 
-    public Output<HttpRequestArgs> getRequest() {
+    public Output<HttpRequestArgs> request() {
         return this.request == null ? Codegen.empty() : this.request;
     }
 
@@ -49,7 +49,7 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
-    public Output<RetryPolicyArgs> getRetryPolicy() {
+    public Output<RetryPolicyArgs> retryPolicy() {
         return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
@@ -60,7 +60,7 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serviceBusQueueMessage")
       private final @Nullable Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
-    public Output<ServiceBusQueueMessageArgs> getServiceBusQueueMessage() {
+    public Output<ServiceBusQueueMessageArgs> serviceBusQueueMessage() {
         return this.serviceBusQueueMessage == null ? Codegen.empty() : this.serviceBusQueueMessage;
     }
 
@@ -71,7 +71,7 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serviceBusTopicMessage")
       private final @Nullable Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
-    public Output<ServiceBusTopicMessageArgs> getServiceBusTopicMessage() {
+    public Output<ServiceBusTopicMessageArgs> serviceBusTopicMessage() {
         return this.serviceBusTopicMessage == null ? Codegen.empty() : this.serviceBusTopicMessage;
     }
 
@@ -82,7 +82,7 @@ public final class JobErrorActionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<JobActionType> type;
 
-    public Output<JobActionType> getType() {
+    public Output<JobActionType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -26,7 +26,7 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -37,7 +37,7 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
     @Import(name="principalMetadata")
       private final @Nullable Map<String,String> principalMetadata;
 
-    public Map<String,String> getPrincipalMetadata() {
+    public Map<String,String> principalMetadata() {
         return this.principalMetadata == null ? Map.of() : this.principalMetadata;
     }
 
@@ -48,7 +48,7 @@ public final class AssignmentPrincipalResponse extends com.pulumi.resources.Invo
     @Import(name="principalType", required=true)
       private final String principalType;
 
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
 

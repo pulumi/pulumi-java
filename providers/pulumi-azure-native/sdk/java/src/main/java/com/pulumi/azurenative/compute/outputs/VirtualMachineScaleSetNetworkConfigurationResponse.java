@@ -95,70 +95,70 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse {
      * Specify what happens to the network interface when the VM is deleted
      * 
     */
-    public Optional<String> getDeleteOption() {
+    public Optional<String> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
     /**
      * The dns settings to be applied on the network interfaces.
      * 
     */
-    public Optional<VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse> getDnsSettings() {
+    public Optional<VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
      * Specifies whether the network interface is accelerated networking-enabled.
      * 
     */
-    public Optional<Boolean> getEnableAcceleratedNetworking() {
+    public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
      * Specifies whether the network interface is FPGA networking-enabled.
      * 
     */
-    public Optional<Boolean> getEnableFpga() {
+    public Optional<Boolean> enableFpga() {
         return Optional.ofNullable(this.enableFpga);
     }
     /**
      * Whether IP forwarding enabled on this NIC.
      * 
     */
-    public Optional<Boolean> getEnableIPForwarding() {
+    public Optional<Boolean> enableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
     /**
      * Resource Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Specifies the IP configurations of the network interface.
      * 
     */
-    public List<VirtualMachineScaleSetIPConfigurationResponse> getIpConfigurations() {
+    public List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * The network configuration name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The network security group.
      * 
     */
-    public Optional<SubResourceResponse> getNetworkSecurityGroup() {
+    public Optional<SubResourceResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
     */
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
 

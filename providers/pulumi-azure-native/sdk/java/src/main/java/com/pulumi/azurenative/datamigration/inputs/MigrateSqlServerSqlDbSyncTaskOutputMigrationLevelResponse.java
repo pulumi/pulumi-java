@@ -20,7 +20,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="databaseCount", required=true)
       private final Integer databaseCount;
 
-    public Integer getDatabaseCount() {
+    public Integer databaseCount() {
         return this.databaseCount;
     }
 
@@ -31,7 +31,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -42,7 +42,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServer", required=true)
       private final String sourceServer;
 
-    public String getSourceServer() {
+    public String sourceServer() {
         return this.sourceServer;
     }
 
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
 
@@ -87,7 +87,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -98,7 +98,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServer", required=true)
       private final String targetServer;
 
-    public String getTargetServer() {
+    public String targetServer() {
         return this.targetServer;
     }
 
@@ -109,7 +109,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

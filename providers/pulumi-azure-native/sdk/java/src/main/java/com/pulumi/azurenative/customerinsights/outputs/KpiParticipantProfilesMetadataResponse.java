@@ -24,7 +24,7 @@ public final class KpiParticipantProfilesMetadataResponse {
      * Name of the type.
      * 
     */
-    public String getTypeName() {
+    public String typeName() {
         return this.typeName;
     }
 

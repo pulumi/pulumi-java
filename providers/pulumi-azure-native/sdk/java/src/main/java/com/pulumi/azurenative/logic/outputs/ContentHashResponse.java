@@ -34,14 +34,14 @@ public final class ContentHashResponse {
      * The algorithm of the content hash.
      * 
     */
-    public Optional<String> getAlgorithm() {
+    public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
     /**
      * The value of the content hash.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

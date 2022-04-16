@@ -44,7 +44,7 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * @return Activation key of the MEC.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getConnectionString() {
+    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> connectionString() {
         return this.connectionString;
     }
     /**
@@ -60,7 +60,7 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * Expected value is 'MEC'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -74,7 +74,7 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * @return Role status.
      * 
      */
-    public Output<String> getRoleStatus() {
+    public Output<String> roleStatus() {
         return this.roleStatus;
     }
     /**
@@ -102,7 +102,7 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * @return Role configured on ASE resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -116,7 +116,7 @@ public class MECRole extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

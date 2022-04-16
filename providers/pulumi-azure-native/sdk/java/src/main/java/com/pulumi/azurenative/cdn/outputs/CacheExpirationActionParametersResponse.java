@@ -44,24 +44,24 @@ public final class CacheExpirationActionParametersResponse {
      * Caching behavior for the requests
      * 
     */
-    public String getCacheBehavior() {
+    public String cacheBehavior() {
         return this.cacheBehavior;
     }
     /**
      * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
      * 
     */
-    public Optional<String> getCacheDuration() {
+    public Optional<String> cacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
     /**
      * The level at which the content needs to be cached.
      * 
     */
-    public String getCacheType() {
+    public String cacheType() {
         return this.cacheType;
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

@@ -17,35 +17,35 @@ public final class AADProperties extends com.pulumi.resources.InvokeArgs {
     @Import(name="audience")
       private final @Nullable String audience;
 
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
     @Import(name="authority")
       private final @Nullable String authority;
 
-    public Optional<String> getAuthority() {
+    public Optional<String> authority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
     @Import(name="servicePrincipalClientId")
       private final @Nullable String servicePrincipalClientId;
 
-    public Optional<String> getServicePrincipalClientId() {
+    public Optional<String> servicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
     }
 
     @Import(name="servicePrincipalObjectId")
       private final @Nullable String servicePrincipalObjectId;
 
-    public Optional<String> getServicePrincipalObjectId() {
+    public Optional<String> servicePrincipalObjectId() {
         return this.servicePrincipalObjectId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalObjectId);
     }
 
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

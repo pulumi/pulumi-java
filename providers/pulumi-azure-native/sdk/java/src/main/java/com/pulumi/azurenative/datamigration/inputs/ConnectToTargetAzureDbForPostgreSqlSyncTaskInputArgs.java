@@ -25,7 +25,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs extends 
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<PostgreSqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<PostgreSqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs extends 
     @Import(name="targetConnectionInfo", required=true)
       private final Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<PostgreSqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<PostgreSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

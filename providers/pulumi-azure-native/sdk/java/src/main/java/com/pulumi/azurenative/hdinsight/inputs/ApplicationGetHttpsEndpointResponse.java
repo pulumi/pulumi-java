@@ -28,7 +28,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="accessModes")
       private final @Nullable List<String> accessModes;
 
-    public List<String> getAccessModes() {
+    public List<String> accessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
 
-    public Optional<Integer> getDestinationPort() {
+    public Optional<Integer> destinationPort() {
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="disableGatewayAuth")
       private final @Nullable Boolean disableGatewayAuth;
 
-    public Optional<Boolean> getDisableGatewayAuth() {
+    public Optional<Boolean> disableGatewayAuth() {
         return this.disableGatewayAuth == null ? Optional.empty() : Optional.ofNullable(this.disableGatewayAuth);
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="publicPort", required=true)
       private final Integer publicPort;
 
-    public Integer getPublicPort() {
+    public Integer publicPort() {
         return this.publicPort;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="subDomainSuffix")
       private final @Nullable String subDomainSuffix;
 
-    public Optional<String> getSubDomainSuffix() {
+    public Optional<String> subDomainSuffix() {
         return this.subDomainSuffix == null ? Optional.empty() : Optional.ofNullable(this.subDomainSuffix);
     }
 

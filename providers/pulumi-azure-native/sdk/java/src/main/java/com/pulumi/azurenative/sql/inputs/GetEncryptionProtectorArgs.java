@@ -19,7 +19,7 @@ public final class GetEncryptionProtectorArgs extends com.pulumi.resources.Invok
     @Import(name="encryptionProtectorName", required=true)
       private final String encryptionProtectorName;
 
-    public String getEncryptionProtectorName() {
+    public String encryptionProtectorName() {
         return this.encryptionProtectorName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEncryptionProtectorArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetEncryptionProtectorArgs extends com.pulumi.resources.Invok
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

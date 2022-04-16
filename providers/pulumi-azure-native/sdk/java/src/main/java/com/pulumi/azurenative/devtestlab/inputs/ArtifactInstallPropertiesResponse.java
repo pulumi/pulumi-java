@@ -27,7 +27,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="artifactId")
       private final @Nullable String artifactId;
 
-    public Optional<String> getArtifactId() {
+    public Optional<String> artifactId() {
         return this.artifactId == null ? Optional.empty() : Optional.ofNullable(this.artifactId);
     }
 
@@ -38,7 +38,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="artifactTitle")
       private final @Nullable String artifactTitle;
 
-    public Optional<String> getArtifactTitle() {
+    public Optional<String> artifactTitle() {
         return this.artifactTitle == null ? Optional.empty() : Optional.ofNullable(this.artifactTitle);
     }
 
@@ -49,7 +49,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="deploymentStatusMessage")
       private final @Nullable String deploymentStatusMessage;
 
-    public Optional<String> getDeploymentStatusMessage() {
+    public Optional<String> deploymentStatusMessage() {
         return this.deploymentStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatusMessage);
     }
 
@@ -60,7 +60,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="installTime")
       private final @Nullable String installTime;
 
-    public Optional<String> getInstallTime() {
+    public Optional<String> installTime() {
         return this.installTime == null ? Optional.empty() : Optional.ofNullable(this.installTime);
     }
 
@@ -71,7 +71,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="parameters")
       private final @Nullable List<ArtifactParameterPropertiesResponse> parameters;
 
-    public List<ArtifactParameterPropertiesResponse> getParameters() {
+    public List<ArtifactParameterPropertiesResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
@@ -82,7 +82,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -93,7 +93,7 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="vmExtensionStatusMessage")
       private final @Nullable String vmExtensionStatusMessage;
 
-    public Optional<String> getVmExtensionStatusMessage() {
+    public Optional<String> vmExtensionStatusMessage() {
         return this.vmExtensionStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.vmExtensionStatusMessage);
     }
 

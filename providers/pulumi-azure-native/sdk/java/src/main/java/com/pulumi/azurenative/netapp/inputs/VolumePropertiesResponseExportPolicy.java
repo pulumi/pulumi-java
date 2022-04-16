@@ -26,7 +26,7 @@ public final class VolumePropertiesResponseExportPolicy extends com.pulumi.resou
     @Import(name="rules")
       private final @Nullable List<ExportPolicyRuleResponse> rules;
 
-    public List<ExportPolicyRuleResponse> getRules() {
+    public List<ExportPolicyRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

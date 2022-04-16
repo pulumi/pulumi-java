@@ -30,7 +30,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="disabledRuleGroups")
       private final @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups;
 
-    public List<ApplicationGatewayFirewallDisabledRuleGroupResponse> getDisabledRuleGroups() {
+    public List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups() {
         return this.disabledRuleGroups == null ? List.of() : this.disabledRuleGroups;
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="exclusions")
       private final @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions;
 
-    public List<ApplicationGatewayFirewallExclusionResponse> getExclusions() {
+    public List<ApplicationGatewayFirewallExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="fileUploadLimitInMb")
       private final @Nullable Integer fileUploadLimitInMb;
 
-    public Optional<Integer> getFileUploadLimitInMb() {
+    public Optional<Integer> fileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Optional.empty() : Optional.ofNullable(this.fileUploadLimitInMb);
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="firewallMode", required=true)
       private final String firewallMode;
 
-    public String getFirewallMode() {
+    public String firewallMode() {
         return this.firewallMode;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="maxRequestBodySize")
       private final @Nullable Integer maxRequestBodySize;
 
-    public Optional<Integer> getMaxRequestBodySize() {
+    public Optional<Integer> maxRequestBodySize() {
         return this.maxRequestBodySize == null ? Optional.empty() : Optional.ofNullable(this.maxRequestBodySize);
     }
 
@@ -96,7 +96,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Integer maxRequestBodySizeInKb;
 
-    public Optional<Integer> getMaxRequestBodySizeInKb() {
+    public Optional<Integer> maxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Optional.empty() : Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
 
@@ -107,7 +107,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="requestBodyCheck")
       private final @Nullable Boolean requestBodyCheck;
 
-    public Optional<Boolean> getRequestBodyCheck() {
+    public Optional<Boolean> requestBodyCheck() {
         return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
     }
 
@@ -118,7 +118,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
 
-    public String getRuleSetType() {
+    public String ruleSetType() {
         return this.ruleSetType;
     }
 
@@ -129,7 +129,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;
 
-    public String getRuleSetVersion() {
+    public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

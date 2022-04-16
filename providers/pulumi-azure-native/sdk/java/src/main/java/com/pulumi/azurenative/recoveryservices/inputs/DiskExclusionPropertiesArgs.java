@@ -24,7 +24,7 @@ public final class DiskExclusionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="diskLunList")
       private final @Nullable Output<List<Integer>> diskLunList;
 
-    public Output<List<Integer>> getDiskLunList() {
+    public Output<List<Integer>> diskLunList() {
         return this.diskLunList == null ? Codegen.empty() : this.diskLunList;
     }
 
@@ -35,7 +35,7 @@ public final class DiskExclusionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="isInclusionList")
       private final @Nullable Output<Boolean> isInclusionList;
 
-    public Output<Boolean> getIsInclusionList() {
+    public Output<Boolean> isInclusionList() {
         return this.isInclusionList == null ? Codegen.empty() : this.isInclusionList;
     }
 

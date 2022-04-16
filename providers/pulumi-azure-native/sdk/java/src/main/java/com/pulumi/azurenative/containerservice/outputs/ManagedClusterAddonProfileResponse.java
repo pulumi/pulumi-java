@@ -43,21 +43,21 @@ public final class ManagedClusterAddonProfileResponse {
      * Key-value pairs for configuring an add-on.
      * 
     */
-    public Map<String,String> getConfig() {
+    public Map<String,String> config() {
         return this.config == null ? Map.of() : this.config;
     }
     /**
      * Whether the add-on is enabled or not.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Information of user assigned identity used by this add-on.
      * 
     */
-    public ManagedClusterAddonProfileResponseIdentity getIdentity() {
+    public ManagedClusterAddonProfileResponseIdentity identity() {
         return this.identity;
     }
 

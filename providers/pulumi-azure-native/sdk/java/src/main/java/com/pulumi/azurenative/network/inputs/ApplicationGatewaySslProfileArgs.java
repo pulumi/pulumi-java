@@ -30,7 +30,7 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="clientAuthConfiguration")
       private final @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
-    public Output<ApplicationGatewayClientAuthConfigurationArgs> getClientAuthConfiguration() {
+    public Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration() {
         return this.clientAuthConfiguration == null ? Codegen.empty() : this.clientAuthConfiguration;
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="sslPolicy")
       private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
-    public Output<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
+    public Output<ApplicationGatewaySslPolicyArgs> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationGatewaySslProfileArgs extends com.pulumi.resources
     @Import(name="trustedClientCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;
 
-    public Output<List<SubResourceArgs>> getTrustedClientCertificates() {
+    public Output<List<SubResourceArgs>> trustedClientCertificates() {
         return this.trustedClientCertificates == null ? Codegen.empty() : this.trustedClientCertificates;
     }
 

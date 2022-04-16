@@ -26,7 +26,7 @@ public final class AgentPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
-    public Output<Integer> getCpu() {
+    public Output<Integer> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 

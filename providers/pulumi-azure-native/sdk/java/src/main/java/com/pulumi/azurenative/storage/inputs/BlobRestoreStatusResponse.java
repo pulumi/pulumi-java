@@ -24,7 +24,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="failureReason", required=true)
       private final String failureReason;
 
-    public String getFailureReason() {
+    public String failureReason() {
         return this.failureReason;
     }
 
@@ -35,7 +35,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters", required=true)
       private final BlobRestoreParametersResponse parameters;
 
-    public BlobRestoreParametersResponse getParameters() {
+    public BlobRestoreParametersResponse parameters() {
         return this.parameters;
     }
 
@@ -46,7 +46,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="restoreId", required=true)
       private final String restoreId;
 
-    public String getRestoreId() {
+    public String restoreId() {
         return this.restoreId;
     }
 
@@ -57,7 +57,7 @@ public final class BlobRestoreStatusResponse extends com.pulumi.resources.Invoke
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

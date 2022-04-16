@@ -43,7 +43,7 @@ public class ManagedNetworkPeeringPolicy extends com.pulumi.resources.CustomReso
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class ManagedNetworkPeeringPolicy extends com.pulumi.resources.CustomReso
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ManagedNetworkPeeringPolicy extends com.pulumi.resources.CustomReso
      * @return Gets or sets the properties of a Managed Network Policy
      * 
      */
-    public Output<ManagedNetworkPeeringPolicyPropertiesResponse> getProperties() {
+    public Output<ManagedNetworkPeeringPolicyPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class ManagedNetworkPeeringPolicy extends com.pulumi.resources.CustomReso
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

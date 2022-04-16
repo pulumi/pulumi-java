@@ -18,7 +18,7 @@ public final class LogAnalyticsConfigurationResponse {
         this.customerId = customerId;
     }
 
-    public Optional<String> getCustomerId() {
+    public Optional<String> customerId() {
         return Optional.ofNullable(this.customerId);
     }
 

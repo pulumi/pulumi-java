@@ -26,7 +26,7 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="aadAuthority")
       private final @Nullable Output<String> aadAuthority;
 
-    public Output<String> getAadAuthority() {
+    public Output<String> aadAuthority() {
         return this.aadAuthority == null ? Codegen.empty() : this.aadAuthority;
     }
 
@@ -37,7 +37,7 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -48,7 +48,7 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -59,7 +59,7 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -70,7 +70,7 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rawCertData")
       private final @Nullable Output<String> rawCertData;
 
-    public Output<String> getRawCertData() {
+    public Output<String> rawCertData() {
         return this.rawCertData == null ? Codegen.empty() : this.rawCertData;
     }
 
@@ -81,7 +81,7 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

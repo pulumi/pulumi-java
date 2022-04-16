@@ -30,7 +30,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="disableGateway")
       private final @Nullable Output<Boolean> disableGateway;
 
-    public Output<Boolean> getDisableGateway() {
+    public Output<Boolean> disableGateway() {
         return this.disableGateway == null ? Codegen.empty() : this.disableGateway;
     }
 
@@ -41,7 +41,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -52,7 +52,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="sku", required=true)
       private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
 
-    public Output<ApiManagementServiceSkuPropertiesArgs> getSku() {
+    public Output<ApiManagementServiceSkuPropertiesArgs> sku() {
         return this.sku;
     }
 
@@ -63,7 +63,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
+    public Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration() {
         return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
     }
 
@@ -74,7 +74,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

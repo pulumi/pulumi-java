@@ -25,7 +25,7 @@ public final class FilterTrackSelectionResponse {
      * The track selections.
      * 
     */
-    public List<FilterTrackPropertyConditionResponse> getTrackSelections() {
+    public List<FilterTrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections;
     }
 

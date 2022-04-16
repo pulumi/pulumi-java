@@ -30,7 +30,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="access", required=true)
       private final Output<Either<String,Access>> access;
 
-    public Output<Either<String,Access>> getAccess() {
+    public Output<Either<String,Access>> access() {
         return this.access;
     }
 
@@ -41,7 +41,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="communities", required=true)
       private final Output<List<String>> communities;
 
-    public Output<List<String>> getCommunities() {
+    public Output<List<String>> communities() {
         return this.communities;
     }
 
@@ -52,7 +52,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -63,7 +63,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -74,7 +74,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="routeFilterRuleType", required=true)
       private final Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
-    public Output<Either<String,RouteFilterRuleType>> getRouteFilterRuleType() {
+    public Output<Either<String,RouteFilterRuleType>> routeFilterRuleType() {
         return this.routeFilterRuleType;
     }
 

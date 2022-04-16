@@ -43,7 +43,7 @@ public class TableServiceProperties extends com.pulumi.resources.CustomResource 
      * @return Specifies CORS rules for the Table service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Table service.
      * 
      */
-    public Output</* @Nullable */ CorsRulesResponse> getCors() {
+    public Output</* @Nullable */ CorsRulesResponse> cors() {
         return this.cors;
     }
     /**
@@ -57,7 +57,7 @@ public class TableServiceProperties extends com.pulumi.resources.CustomResource 
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class TableServiceProperties extends com.pulumi.resources.CustomResource 
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

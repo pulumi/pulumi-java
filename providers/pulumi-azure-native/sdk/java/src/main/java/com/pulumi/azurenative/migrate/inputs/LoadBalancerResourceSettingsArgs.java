@@ -29,7 +29,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="backendAddressPools")
       private final @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
-    public Output<List<LBBackendAddressPoolResourceSettingsArgs>> getBackendAddressPools() {
+    public Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools() {
         return this.backendAddressPools == null ? Codegen.empty() : this.backendAddressPools;
     }
 
@@ -40,7 +40,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
-    public Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> getFrontendIPConfigurations() {
+    public Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? Codegen.empty() : this.frontendIPConfigurations;
     }
 
@@ -52,7 +52,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -63,7 +63,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -74,7 +74,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -86,7 +86,7 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="zones")
       private final @Nullable Output<String> zones;
 
-    public Output<String> getZones() {
+    public Output<String> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

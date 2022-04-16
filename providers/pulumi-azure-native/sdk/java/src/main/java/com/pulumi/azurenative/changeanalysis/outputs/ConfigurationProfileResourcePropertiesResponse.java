@@ -26,7 +26,7 @@ public final class ConfigurationProfileResourcePropertiesResponse {
      * Settings of change notification configuration for a subscription.
      * 
     */
-    public Optional<NotificationSettingsResponse> getNotifications() {
+    public Optional<NotificationSettingsResponse> notifications() {
         return Optional.ofNullable(this.notifications);
     }
 

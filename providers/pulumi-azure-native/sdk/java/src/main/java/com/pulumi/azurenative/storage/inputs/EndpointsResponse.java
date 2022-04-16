@@ -27,7 +27,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="blob", required=true)
       private final String blob;
 
-    public String getBlob() {
+    public String blob() {
         return this.blob;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dfs", required=true)
       private final String dfs;
 
-    public String getDfs() {
+    public String dfs() {
         return this.dfs;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="file", required=true)
       private final String file;
 
-    public String getFile() {
+    public String file() {
         return this.file;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="internetEndpoints")
       private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
 
-    public Optional<StorageAccountInternetEndpointsResponse> getInternetEndpoints() {
+    public Optional<StorageAccountInternetEndpointsResponse> internetEndpoints() {
         return this.internetEndpoints == null ? Optional.empty() : Optional.ofNullable(this.internetEndpoints);
     }
 
@@ -71,7 +71,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="microsoftEndpoints")
       private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
 
-    public Optional<StorageAccountMicrosoftEndpointsResponse> getMicrosoftEndpoints() {
+    public Optional<StorageAccountMicrosoftEndpointsResponse> microsoftEndpoints() {
         return this.microsoftEndpoints == null ? Optional.empty() : Optional.ofNullable(this.microsoftEndpoints);
     }
 
@@ -82,7 +82,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="queue", required=true)
       private final String queue;
 
-    public String getQueue() {
+    public String queue() {
         return this.queue;
     }
 
@@ -93,7 +93,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
       private final String table;
 
-    public String getTable() {
+    public String table() {
         return this.table;
     }
 
@@ -104,7 +104,7 @@ public final class EndpointsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="web", required=true)
       private final String web;
 
-    public String getWeb() {
+    public String web() {
         return this.web;
     }
 

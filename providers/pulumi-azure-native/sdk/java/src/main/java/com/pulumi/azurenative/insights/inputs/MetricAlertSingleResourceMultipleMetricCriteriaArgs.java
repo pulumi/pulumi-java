@@ -28,7 +28,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends c
     @Import(name="allOf")
       private final @Nullable Output<List<MetricCriteriaArgs>> allOf;
 
-    public Output<List<MetricCriteriaArgs>> getAllOf() {
+    public Output<List<MetricCriteriaArgs>> allOf() {
         return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
@@ -40,7 +40,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends c
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

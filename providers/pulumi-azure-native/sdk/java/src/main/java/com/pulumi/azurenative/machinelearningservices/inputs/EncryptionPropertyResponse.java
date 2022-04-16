@@ -23,7 +23,7 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="identity")
       private final @Nullable IdentityForCmkResponse identity;
 
-    public Optional<IdentityForCmkResponse> getIdentity() {
+    public Optional<IdentityForCmkResponse> identity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
@@ -34,7 +34,7 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultProperties", required=true)
       private final KeyVaultPropertiesResponse keyVaultProperties;
 
-    public KeyVaultPropertiesResponse getKeyVaultProperties() {
+    public KeyVaultPropertiesResponse keyVaultProperties() {
         return this.keyVaultProperties;
     }
 
@@ -45,7 +45,7 @@ public final class EncryptionPropertyResponse extends com.pulumi.resources.Invok
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

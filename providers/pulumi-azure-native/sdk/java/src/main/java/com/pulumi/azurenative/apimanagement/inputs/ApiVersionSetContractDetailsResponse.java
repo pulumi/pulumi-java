@@ -25,7 +25,7 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -47,7 +47,7 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -58,7 +58,7 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
     @Import(name="versionHeaderName")
       private final @Nullable String versionHeaderName;
 
-    public Optional<String> getVersionHeaderName() {
+    public Optional<String> versionHeaderName() {
         return this.versionHeaderName == null ? Optional.empty() : Optional.ofNullable(this.versionHeaderName);
     }
 
@@ -69,7 +69,7 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
     @Import(name="versionQueryName")
       private final @Nullable String versionQueryName;
 
-    public Optional<String> getVersionQueryName() {
+    public Optional<String> versionQueryName() {
         return this.versionQueryName == null ? Optional.empty() : Optional.ofNullable(this.versionQueryName);
     }
 
@@ -80,7 +80,7 @@ public final class ApiVersionSetContractDetailsResponse extends com.pulumi.resou
     @Import(name="versioningScheme")
       private final @Nullable String versioningScheme;
 
-    public Optional<String> getVersioningScheme() {
+    public Optional<String> versioningScheme() {
         return this.versioningScheme == null ? Optional.empty() : Optional.ofNullable(this.versioningScheme);
     }
 

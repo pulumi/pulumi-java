@@ -117,77 +117,77 @@ public final class MoveResourcePropertiesResponse {
      * Gets or sets the move resource dependencies.
      * 
     */
-    public List<MoveResourceDependencyResponse> getDependsOn() {
+    public List<MoveResourceDependencyResponse> dependsOn() {
         return this.dependsOn;
     }
     /**
      * Gets or sets the move resource dependencies overrides.
      * 
     */
-    public List<MoveResourceDependencyOverrideResponse> getDependsOnOverrides() {
+    public List<MoveResourceDependencyOverrideResponse> dependsOnOverrides() {
         return this.dependsOnOverrides == null ? List.of() : this.dependsOnOverrides;
     }
     /**
      * Defines the move resource errors.
      * 
     */
-    public MoveResourcePropertiesResponseErrors getErrors() {
+    public MoveResourcePropertiesResponseErrors errors() {
         return this.errors;
     }
     /**
      * Gets or sets the existing target ARM Id of the resource.
      * 
     */
-    public Optional<String> getExistingTargetId() {
+    public Optional<String> existingTargetId() {
         return Optional.ofNullable(this.existingTargetId);
     }
     /**
      * Gets a value indicating whether the resolve action is required over the move collection.
      * 
     */
-    public Boolean getIsResolveRequired() {
+    public Boolean isResolveRequired() {
         return this.isResolveRequired;
     }
     /**
      * Defines the move resource status.
      * 
     */
-    public MoveResourcePropertiesResponseMoveStatus getMoveStatus() {
+    public MoveResourcePropertiesResponseMoveStatus moveStatus() {
         return this.moveStatus;
     }
     /**
      * Defines the provisioning states.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the resource settings.
      * 
     */
-    public Optional<Object> getResourceSettings() {
+    public Optional<Object> resourceSettings() {
         return Optional.ofNullable(this.resourceSettings);
     }
     /**
      * Gets or sets the Source ARM Id of the resource.
      * 
     */
-    public String getSourceId() {
+    public String sourceId() {
         return this.sourceId;
     }
     /**
      * Gets or sets the source resource settings.
      * 
     */
-    public Object getSourceResourceSettings() {
+    public Object sourceResourceSettings() {
         return this.sourceResourceSettings;
     }
     /**
      * Gets or sets the Target ARM Id of the resource.
      * 
     */
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
 

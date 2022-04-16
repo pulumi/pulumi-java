@@ -41,21 +41,21 @@ public final class ContactDetailResponse {
      * The e-mail address of the contact.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The phone number of the contact.
      * 
     */
-    public Optional<String> getPhone() {
+    public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
      * The role of the contact.
      * 
     */
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
 

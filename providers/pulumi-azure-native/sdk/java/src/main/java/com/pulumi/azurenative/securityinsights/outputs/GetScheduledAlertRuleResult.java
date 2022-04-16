@@ -157,42 +157,42 @@ public final class GetScheduledAlertRuleResult {
      * The Name of the alert rule template used to create this rule.
      * 
     */
-    public Optional<String> getAlertRuleTemplateName() {
+    public Optional<String> alertRuleTemplateName() {
         return Optional.ofNullable(this.alertRuleTemplateName);
     }
     /**
      * The description of the alert rule.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name for alerts created by this alert rule.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -200,91 +200,91 @@ public final class GetScheduledAlertRuleResult {
      * Expected value is 'Scheduled'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The last time that this alert rule has been modified.
      * 
     */
-    public String getLastModifiedUtc() {
+    public String lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The query that creates alerts for this rule.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
      * The frequency (in ISO 8601 duration format) for this alert rule to run.
      * 
     */
-    public String getQueryFrequency() {
+    public String queryFrequency() {
         return this.queryFrequency;
     }
     /**
      * The period (in ISO 8601 duration format) that this alert rule looks at.
      * 
     */
-    public String getQueryPeriod() {
+    public String queryPeriod() {
         return this.queryPeriod;
     }
     /**
      * The severity for alerts created by this alert rule.
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
      * 
     */
-    public String getSuppressionDuration() {
+    public String suppressionDuration() {
         return this.suppressionDuration;
     }
     /**
      * Determines whether the suppression for this alert rule is enabled or disabled.
      * 
     */
-    public Boolean getSuppressionEnabled() {
+    public Boolean suppressionEnabled() {
         return this.suppressionEnabled;
     }
     /**
      * The tactics of the alert rule
      * 
     */
-    public List<String> getTactics() {
+    public List<String> tactics() {
         return this.tactics == null ? List.of() : this.tactics;
     }
     /**
      * The operation against the threshold that triggers alert rule.
      * 
     */
-    public String getTriggerOperator() {
+    public String triggerOperator() {
         return this.triggerOperator;
     }
     /**
      * The threshold triggers this alert rule.
      * 
     */
-    public Integer getTriggerThreshold() {
+    public Integer triggerThreshold() {
         return this.triggerThreshold;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

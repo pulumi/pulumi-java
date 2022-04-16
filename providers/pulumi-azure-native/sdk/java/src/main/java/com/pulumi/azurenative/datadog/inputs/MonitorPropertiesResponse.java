@@ -28,14 +28,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="datadogOrganizationProperties")
       private final @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
 
-    public Optional<DatadogOrganizationPropertiesResponse> getDatadogOrganizationProperties() {
+    public Optional<DatadogOrganizationPropertiesResponse> datadogOrganizationProperties() {
         return this.datadogOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.datadogOrganizationProperties);
     }
 
     @Import(name="liftrResourceCategory", required=true)
       private final String liftrResourceCategory;
 
-    public String getLiftrResourceCategory() {
+    public String liftrResourceCategory() {
         return this.liftrResourceCategory;
     }
 
@@ -46,7 +46,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
 
-    public Integer getLiftrResourcePreference() {
+    public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
 
@@ -57,7 +57,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="marketplaceSubscriptionStatus", required=true)
       private final String marketplaceSubscriptionStatus;
 
-    public String getMarketplaceSubscriptionStatus() {
+    public String marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
     }
 
@@ -68,14 +68,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
 
-    public Optional<String> getMonitoringStatus() {
+    public Optional<String> monitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -86,7 +86,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="userInfo")
       private final @Nullable UserInfoResponse userInfo;
 
-    public Optional<UserInfoResponse> getUserInfo() {
+    public Optional<UserInfoResponse> userInfo() {
         return this.userInfo == null ? Optional.empty() : Optional.ofNullable(this.userInfo);
     }
 

@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends com.
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends com.
     @Import(name="properties", required=true)
       private final VaultPrivateEndpointConnectionResponse properties;
 
-    public VaultPrivateEndpointConnectionResponse getProperties() {
+    public VaultPrivateEndpointConnectionResponse properties() {
         return this.properties;
     }
 

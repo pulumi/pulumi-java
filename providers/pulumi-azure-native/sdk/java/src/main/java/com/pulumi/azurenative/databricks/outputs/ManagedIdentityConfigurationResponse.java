@@ -39,21 +39,21 @@ public final class ManagedIdentityConfigurationResponse {
      * The objectId of the Managed Identity that is linked to the Managed Storage account.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant Id where the Managed Identity is created.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The type of Identity created. It can be either SystemAssigned or UserAssigned.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

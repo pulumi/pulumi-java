@@ -29,7 +29,7 @@ public final class SelectVideoTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="attribute", required=true)
       private final Output<Either<String,TrackAttribute>> attribute;
 
-    public Output<Either<String,TrackAttribute>> getAttribute() {
+    public Output<Either<String,TrackAttribute>> attribute() {
         return this.attribute;
     }
 
@@ -40,7 +40,7 @@ public final class SelectVideoTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="filter", required=true)
       private final Output<Either<String,AttributeFilter>> filter;
 
-    public Output<Either<String,AttributeFilter>> getFilter() {
+    public Output<Either<String,AttributeFilter>> filter() {
         return this.filter;
     }
 
@@ -51,7 +51,7 @@ public final class SelectVideoTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="filterValue")
       private final @Nullable Output<String> filterValue;
 
-    public Output<String> getFilterValue() {
+    public Output<String> filterValue() {
         return this.filterValue == null ? Codegen.empty() : this.filterValue;
     }
 
@@ -63,7 +63,7 @@ public final class SelectVideoTrackByAttributeArgs extends com.pulumi.resources.
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

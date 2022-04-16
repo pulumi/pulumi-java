@@ -28,7 +28,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionPreferences")
       private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
-    public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
+    public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
     }
 
@@ -39,7 +39,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preferredDataCenterRegion")
       private final @Nullable List<String> preferredDataCenterRegion;
 
-    public List<String> getPreferredDataCenterRegion() {
+    public List<String> preferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
     }
 
@@ -50,7 +50,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transportPreferences")
       private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    public Optional<TransportPreferencesResponse> getTransportPreferences() {
+    public Optional<TransportPreferencesResponse> transportPreferences() {
         return this.transportPreferences == null ? Optional.empty() : Optional.ofNullable(this.transportPreferences);
     }
 

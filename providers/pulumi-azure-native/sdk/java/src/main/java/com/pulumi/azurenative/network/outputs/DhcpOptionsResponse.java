@@ -26,7 +26,7 @@ public final class DhcpOptionsResponse {
      * The list of DNS servers IP addresses.
      * 
     */
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 

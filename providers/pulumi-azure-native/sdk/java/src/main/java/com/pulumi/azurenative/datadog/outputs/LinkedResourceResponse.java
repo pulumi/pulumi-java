@@ -26,7 +26,7 @@ public final class LinkedResourceResponse {
      * The ARM id of the linked resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

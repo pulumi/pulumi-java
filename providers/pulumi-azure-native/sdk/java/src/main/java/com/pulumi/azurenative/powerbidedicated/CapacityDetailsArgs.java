@@ -28,7 +28,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="administration")
       private final @Nullable Output<DedicatedCapacityAdministratorsArgs> administration;
 
-    public Output<DedicatedCapacityAdministratorsArgs> getAdministration() {
+    public Output<DedicatedCapacityAdministratorsArgs> administration() {
         return this.administration == null ? Codegen.empty() : this.administration;
     }
 
@@ -39,7 +39,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dedicatedCapacityName")
       private final @Nullable Output<String> dedicatedCapacityName;
 
-    public Output<String> getDedicatedCapacityName() {
+    public Output<String> dedicatedCapacityName() {
         return this.dedicatedCapacityName == null ? Codegen.empty() : this.dedicatedCapacityName;
     }
 
@@ -50,7 +50,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mode")
       private final @Nullable Output<Either<String,Mode>> mode;
 
-    public Output<Either<String,Mode>> getMode() {
+    public Output<Either<String,Mode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -72,7 +72,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,7 +83,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
       private final Output<CapacitySkuArgs> sku;
 
-    public Output<CapacitySkuArgs> getSku() {
+    public Output<CapacitySkuArgs> sku() {
         return this.sku;
     }
 
@@ -94,7 +94,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="systemData")
       private final @Nullable Output<SystemDataArgs> systemData;
 
-    public Output<SystemDataArgs> getSystemData() {
+    public Output<SystemDataArgs> systemData() {
         return this.systemData == null ? Codegen.empty() : this.systemData;
     }
 
@@ -105,7 +105,7 @@ public final class CapacityDetailsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

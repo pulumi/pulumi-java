@@ -21,7 +21,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -32,7 +32,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -43,7 +43,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +54,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -65,7 +65,7 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="scopePath", required=true)
       private final String scopePath;
 
-    public String getScopePath() {
+    public String scopePath() {
         return this.scopePath;
     }
 

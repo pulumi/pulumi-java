@@ -25,7 +25,7 @@ public final class LogAnalyticsWorkspaceConfigResponse extends com.pulumi.resour
     @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 

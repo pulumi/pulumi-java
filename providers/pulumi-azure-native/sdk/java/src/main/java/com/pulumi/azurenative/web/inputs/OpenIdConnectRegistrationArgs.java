@@ -28,7 +28,7 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
     @Import(name="clientCredential")
       private final @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
 
-    public Output<OpenIdConnectClientCredentialArgs> getClientCredential() {
+    public Output<OpenIdConnectClientCredentialArgs> clientCredential() {
         return this.clientCredential == null ? Codegen.empty() : this.clientCredential;
     }
 
@@ -39,7 +39,7 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -50,7 +50,7 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
     @Import(name="openIdConnectConfiguration")
       private final @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
 
-    public Output<OpenIdConnectConfigArgs> getOpenIdConnectConfiguration() {
+    public Output<OpenIdConnectConfigArgs> openIdConnectConfiguration() {
         return this.openIdConnectConfiguration == null ? Codegen.empty() : this.openIdConnectConfiguration;
     }
 

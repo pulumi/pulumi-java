@@ -94,70 +94,70 @@ public final class GetAutoScaleVCoreResult {
      * The maximum capacity of an auto scale v-core resource.
      * 
     */
-    public Optional<Integer> getCapacityLimit() {
+    public Optional<Integer> capacityLimit() {
         return Optional.ofNullable(this.capacityLimit);
     }
     /**
      * The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
     */
-    public Optional<String> getCapacityObjectId() {
+    public Optional<String> capacityObjectId() {
         return Optional.ofNullable(this.capacityObjectId);
     }
     /**
      * An identifier that represents the PowerBI Dedicated resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the PowerBI Dedicated resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the PowerBI Dedicated resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the auto scale v-core resource.
      * 
     */
-    public AutoScaleVCoreSkuResponse getSku() {
+    public AutoScaleVCoreSkuResponse sku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public Optional<SystemDataResponse> getSystemData() {
+    public Optional<SystemDataResponse> systemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
      * Key-value pairs of additional resource provisioning properties.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the PowerBI Dedicated resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -49,28 +49,28 @@ public final class ApplicationGetEndpointResponse {
      * The destination port to connect to.
      * 
     */
-    public Optional<Integer> getDestinationPort() {
+    public Optional<Integer> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
      * The location of the endpoint.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The private ip address of the endpoint.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The public port to connect to.
      * 
     */
-    public Optional<Integer> getPublicPort() {
+    public Optional<Integer> publicPort() {
         return Optional.ofNullable(this.publicPort);
     }
 

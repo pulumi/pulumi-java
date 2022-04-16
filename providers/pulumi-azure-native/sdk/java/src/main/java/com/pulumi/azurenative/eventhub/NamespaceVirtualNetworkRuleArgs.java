@@ -22,7 +22,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -33,7 +33,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> getVirtualNetworkRuleName() {
+    public Output<String> virtualNetworkRuleName() {
         return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
     }
 
@@ -55,7 +55,7 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="virtualNetworkSubnetId")
       private final @Nullable Output<String> virtualNetworkSubnetId;
 
-    public Output<String> getVirtualNetworkSubnetId() {
+    public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId == null ? Codegen.empty() : this.virtualNetworkSubnetId;
     }
 

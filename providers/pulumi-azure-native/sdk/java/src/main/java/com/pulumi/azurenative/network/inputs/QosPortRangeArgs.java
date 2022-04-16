@@ -26,7 +26,7 @@ public final class QosPortRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="end")
       private final @Nullable Output<Integer> end;
 
-    public Output<Integer> getEnd() {
+    public Output<Integer> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -37,7 +37,7 @@ public final class QosPortRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="start")
       private final @Nullable Output<Integer> start;
 
-    public Output<Integer> getStart() {
+    public Output<Integer> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

@@ -24,7 +24,7 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="osUpdateType", required=true)
       private final String osUpdateType;
 
-    public String getOsUpdateType() {
+    public String osUpdateType() {
         return this.osUpdateType;
     }
 
@@ -35,7 +35,7 @@ public final class TargetOSInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="targetOSs", required=true)
       private final List<String> targetOSs;
 
-    public List<String> getTargetOSs() {
+    public List<String> targetOSs() {
         return this.targetOSs;
     }
 

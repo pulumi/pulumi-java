@@ -35,14 +35,14 @@ public final class ScaleSettingsResponse {
      * This property and fixedScale are mutually exclusive and one of the properties must be specified.
      * 
     */
-    public Optional<AutoScaleSettingsResponse> getAutoScale() {
+    public Optional<AutoScaleSettingsResponse> autoScale() {
         return Optional.ofNullable(this.autoScale);
     }
     /**
      * This property and autoScale are mutually exclusive and one of the properties must be specified.
      * 
     */
-    public Optional<FixedScaleSettingsResponse> getFixedScale() {
+    public Optional<FixedScaleSettingsResponse> fixedScale() {
         return Optional.ofNullable(this.fixedScale);
     }
 

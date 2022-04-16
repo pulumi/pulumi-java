@@ -42,21 +42,21 @@ public final class StaticRouteResponse {
      * List of all address prefixes.
      * 
     */
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
      * The name of the StaticRoute that is unique within a VnetRoute.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ip address of the next hop.
      * 
     */
-    public Optional<String> getNextHopIpAddress() {
+    public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
 

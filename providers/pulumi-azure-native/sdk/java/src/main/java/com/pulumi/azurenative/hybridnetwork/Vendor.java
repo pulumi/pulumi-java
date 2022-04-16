@@ -43,7 +43,7 @@ public class Vendor extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class Vendor extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the vendor resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -71,7 +71,7 @@ public class Vendor extends com.pulumi.resources.CustomResource {
      * @return A list of IDs of the vendor skus offered by the vendor.
      * 
      */
-    public Output<List<SubResourceResponse>> getSkus() {
+    public Output<List<SubResourceResponse>> skus() {
         return this.skus;
     }
     /**
@@ -85,7 +85,7 @@ public class Vendor extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -17,21 +17,21 @@ public final class PerformanceCounterConfigurationResponse extends com.pulumi.re
     @Import(name="instance")
       private final @Nullable String instance;
 
-    public Optional<String> getInstance() {
+    public Optional<String> instance() {
         return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="samplingPeriod", required=true)
       private final String samplingPeriod;
 
-    public String getSamplingPeriod() {
+    public String samplingPeriod() {
         return this.samplingPeriod;
     }
 

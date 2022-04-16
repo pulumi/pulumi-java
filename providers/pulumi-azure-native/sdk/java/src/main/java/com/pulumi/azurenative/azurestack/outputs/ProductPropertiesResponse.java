@@ -26,7 +26,7 @@ public final class ProductPropertiesResponse {
      * The version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

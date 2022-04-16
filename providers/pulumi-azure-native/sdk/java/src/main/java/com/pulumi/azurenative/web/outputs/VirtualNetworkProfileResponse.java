@@ -48,28 +48,28 @@ public final class VirtualNetworkProfileResponse {
      * Resource id of the Virtual Network.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the Virtual Network (read-only).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Subnet within the Virtual Network.
      * 
     */
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Resource type of the Virtual Network (read-only).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

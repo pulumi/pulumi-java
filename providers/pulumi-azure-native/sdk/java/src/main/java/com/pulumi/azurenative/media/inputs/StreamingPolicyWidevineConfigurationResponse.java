@@ -25,7 +25,7 @@ public final class StreamingPolicyWidevineConfigurationResponse extends com.pulu
     @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
-    public Optional<String> getCustomLicenseAcquisitionUrlTemplate() {
+    public Optional<String> customLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 

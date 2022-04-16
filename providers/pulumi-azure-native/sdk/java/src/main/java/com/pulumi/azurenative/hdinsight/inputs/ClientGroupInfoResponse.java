@@ -25,7 +25,7 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupId")
       private final @Nullable String groupId;
 
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
     }
 
@@ -36,7 +36,7 @@ public final class ClientGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupName")
       private final @Nullable String groupName;
 
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
     }
 

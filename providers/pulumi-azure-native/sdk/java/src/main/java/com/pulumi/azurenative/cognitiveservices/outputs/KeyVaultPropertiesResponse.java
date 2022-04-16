@@ -41,21 +41,21 @@ public final class KeyVaultPropertiesResponse {
      * Name of the Key from KeyVault
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Uri of KeyVault
      * 
     */
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * Version of the Key from KeyVault
      * 
     */
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
 

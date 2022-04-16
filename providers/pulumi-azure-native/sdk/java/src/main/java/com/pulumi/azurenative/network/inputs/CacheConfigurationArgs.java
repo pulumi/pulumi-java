@@ -29,7 +29,7 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
 
-    public Output<String> getCacheDuration() {
+    public Output<String> cacheDuration() {
         return this.cacheDuration == null ? Codegen.empty() : this.cacheDuration;
     }
 
@@ -40,7 +40,7 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="dynamicCompression")
       private final @Nullable Output<Either<String,DynamicCompressionEnabled>> dynamicCompression;
 
-    public Output<Either<String,DynamicCompressionEnabled>> getDynamicCompression() {
+    public Output<Either<String,DynamicCompressionEnabled>> dynamicCompression() {
         return this.dynamicCompression == null ? Codegen.empty() : this.dynamicCompression;
     }
 
@@ -51,7 +51,7 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="queryParameterStripDirective")
       private final @Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective;
 
-    public Output<Either<String,FrontDoorQuery>> getQueryParameterStripDirective() {
+    public Output<Either<String,FrontDoorQuery>> queryParameterStripDirective() {
         return this.queryParameterStripDirective == null ? Codegen.empty() : this.queryParameterStripDirective;
     }
 
@@ -62,7 +62,7 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="queryParameters")
       private final @Nullable Output<String> queryParameters;
 
-    public Output<String> getQueryParameters() {
+    public Output<String> queryParameters() {
         return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 

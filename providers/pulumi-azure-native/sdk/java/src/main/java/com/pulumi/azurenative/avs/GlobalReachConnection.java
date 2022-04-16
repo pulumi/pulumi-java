@@ -42,7 +42,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return The network used for global reach carved out from the original network block provided for the private cloud
      * 
      */
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -56,7 +56,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return Authorization key from the peer express route used for the global reach connection
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationKey() {
+    public Output</* @Nullable */ String> authorizationKey() {
         return this.authorizationKey;
     }
     /**
@@ -70,7 +70,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return The connection status of the global reach connection
      * 
      */
-    public Output<String> getCircuitConnectionStatus() {
+    public Output<String> circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
@@ -84,7 +84,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
      * 
      */
-    public Output</* @Nullable */ String> getPeerExpressRouteCircuit() {
+    public Output</* @Nullable */ String> peerExpressRouteCircuit() {
         return this.peerExpressRouteCircuit;
     }
     /**
@@ -112,7 +112,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return The state of the  ExpressRoute Circuit Authorization provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -126,7 +126,7 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

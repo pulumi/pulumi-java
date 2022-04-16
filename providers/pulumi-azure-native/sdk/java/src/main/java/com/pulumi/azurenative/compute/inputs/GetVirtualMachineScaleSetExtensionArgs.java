@@ -21,7 +21,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;
 
-    public String getVmScaleSetName() {
+    public String vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
@@ -54,7 +54,7 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends com.pulumi.res
     @Import(name="vmssExtensionName", required=true)
       private final String vmssExtensionName;
 
-    public String getVmssExtensionName() {
+    public String vmssExtensionName() {
         return this.vmssExtensionName;
     }
 

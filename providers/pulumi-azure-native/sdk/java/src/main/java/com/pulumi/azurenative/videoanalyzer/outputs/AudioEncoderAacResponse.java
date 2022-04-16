@@ -35,7 +35,7 @@ public final class AudioEncoderAacResponse {
      * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
      * 
     */
-    public Optional<String> getBitrateKbps() {
+    public Optional<String> bitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
     /**
@@ -43,7 +43,7 @@ public final class AudioEncoderAacResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

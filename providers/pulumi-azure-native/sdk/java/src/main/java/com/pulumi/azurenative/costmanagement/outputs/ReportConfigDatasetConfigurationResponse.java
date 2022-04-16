@@ -26,7 +26,7 @@ public final class ReportConfigDatasetConfigurationResponse {
      * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
      * 
     */
-    public List<String> getColumns() {
+    public List<String> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
 

@@ -33,7 +33,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     @Import(name="anyOf")
       private final @Nullable List<AlertRuleLeafConditionResponse> anyOf;
 
-    public List<AlertRuleLeafConditionResponse> getAnyOf() {
+    public List<AlertRuleLeafConditionResponse> anyOf() {
         return this.anyOf == null ? List.of() : this.anyOf;
     }
 
@@ -44,7 +44,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     @Import(name="containsAny")
       private final @Nullable List<String> containsAny;
 
-    public List<String> getContainsAny() {
+    public List<String> containsAny() {
         return this.containsAny == null ? List.of() : this.containsAny;
     }
 
@@ -55,7 +55,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     @Import(name="equals")
       private final @Nullable String equals;
 
-    public Optional<String> getEquals() {
+    public Optional<String> equals_() {
         return this.equals == null ? Optional.empty() : Optional.ofNullable(this.equals);
     }
 
@@ -67,7 +67,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     @Import(name="field")
       private final @Nullable String field;
 
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 
@@ -129,7 +129,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
-        public Builder equals(@Nullable String equals) {
+        public Builder equals_(@Nullable String equals) {
             this.equals = equals;
             return this;
         }

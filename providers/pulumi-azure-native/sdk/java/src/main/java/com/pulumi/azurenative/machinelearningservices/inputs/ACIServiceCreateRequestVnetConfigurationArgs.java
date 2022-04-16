@@ -26,7 +26,7 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends com.pulu
     @Import(name="subnetName")
       private final @Nullable Output<String> subnetName;
 
-    public Output<String> getSubnetName() {
+    public Output<String> subnetName() {
         return this.subnetName == null ? Codegen.empty() : this.subnetName;
     }
 
@@ -37,7 +37,7 @@ public final class ACIServiceCreateRequestVnetConfigurationArgs extends com.pulu
     @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;
 
-    public Output<String> getVnetName() {
+    public Output<String> vnetName() {
         return this.vnetName == null ? Codegen.empty() : this.vnetName;
     }
 

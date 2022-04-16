@@ -27,7 +27,7 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="swapFileSizeMB")
       private final @Nullable Integer swapFileSizeMB;
 
-    public Optional<Integer> getSwapFileSizeMB() {
+    public Optional<Integer> swapFileSizeMB() {
         return this.swapFileSizeMB == null ? Optional.empty() : Optional.ofNullable(this.swapFileSizeMB);
     }
 
@@ -38,7 +38,7 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="sysctls")
       private final @Nullable SysctlConfigResponse sysctls;
 
-    public Optional<SysctlConfigResponse> getSysctls() {
+    public Optional<SysctlConfigResponse> sysctls() {
         return this.sysctls == null ? Optional.empty() : Optional.ofNullable(this.sysctls);
     }
 
@@ -49,7 +49,7 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="transparentHugePageDefrag")
       private final @Nullable String transparentHugePageDefrag;
 
-    public Optional<String> getTransparentHugePageDefrag() {
+    public Optional<String> transparentHugePageDefrag() {
         return this.transparentHugePageDefrag == null ? Optional.empty() : Optional.ofNullable(this.transparentHugePageDefrag);
     }
 
@@ -60,7 +60,7 @@ public final class LinuxOSConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="transparentHugePageEnabled")
       private final @Nullable String transparentHugePageEnabled;
 
-    public Optional<String> getTransparentHugePageEnabled() {
+    public Optional<String> transparentHugePageEnabled() {
         return this.transparentHugePageEnabled == null ? Optional.empty() : Optional.ofNullable(this.transparentHugePageEnabled);
     }
 

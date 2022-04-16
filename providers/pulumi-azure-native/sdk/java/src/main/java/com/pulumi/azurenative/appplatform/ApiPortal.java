@@ -45,7 +45,7 @@ public class ApiPortal extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class ApiPortal extends com.pulumi.resources.CustomResource {
      * @return API portal properties payload
      * 
      */
-    public Output<ApiPortalPropertiesResponse> getProperties() {
+    public Output<ApiPortalPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -73,7 +73,7 @@ public class ApiPortal extends com.pulumi.resources.CustomResource {
      * @return Sku of the API portal resource
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -87,7 +87,7 @@ public class ApiPortal extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -101,7 +101,7 @@ public class ApiPortal extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

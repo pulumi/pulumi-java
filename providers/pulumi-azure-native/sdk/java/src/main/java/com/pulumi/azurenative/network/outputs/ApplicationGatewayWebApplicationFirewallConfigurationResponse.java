@@ -95,70 +95,70 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      * The disabled rule groups.
      * 
     */
-    public List<ApplicationGatewayFirewallDisabledRuleGroupResponse> getDisabledRuleGroups() {
+    public List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups() {
         return this.disabledRuleGroups == null ? List.of() : this.disabledRuleGroups;
     }
     /**
      * Whether the web application firewall is enabled or not.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The exclusion list.
      * 
     */
-    public List<ApplicationGatewayFirewallExclusionResponse> getExclusions() {
+    public List<ApplicationGatewayFirewallExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * Maximum file upload size in Mb for WAF.
      * 
     */
-    public Optional<Integer> getFileUploadLimitInMb() {
+    public Optional<Integer> fileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
     /**
      * Web application firewall mode.
      * 
     */
-    public String getFirewallMode() {
+    public String firewallMode() {
         return this.firewallMode;
     }
     /**
      * Maximum request body size for WAF.
      * 
     */
-    public Optional<Integer> getMaxRequestBodySize() {
+    public Optional<Integer> maxRequestBodySize() {
         return Optional.ofNullable(this.maxRequestBodySize);
     }
     /**
      * Maximum request body size in Kb for WAF.
      * 
     */
-    public Optional<Integer> getMaxRequestBodySizeInKb() {
+    public Optional<Integer> maxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
     /**
      * Whether allow WAF to check request Body.
      * 
     */
-    public Optional<Boolean> getRequestBodyCheck() {
+    public Optional<Boolean> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
     /**
      * The type of the web application firewall rule set. Possible values are: 'OWASP'.
      * 
     */
-    public String getRuleSetType() {
+    public String ruleSetType() {
         return this.ruleSetType;
     }
     /**
      * The version of the rule set type.
      * 
     */
-    public String getRuleSetVersion() {
+    public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

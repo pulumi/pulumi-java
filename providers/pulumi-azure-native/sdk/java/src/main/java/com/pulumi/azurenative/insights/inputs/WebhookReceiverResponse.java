@@ -26,7 +26,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="identifierUri")
       private final @Nullable String identifierUri;
 
-    public Optional<String> getIdentifierUri() {
+    public Optional<String> identifierUri() {
         return this.identifierUri == null ? Optional.empty() : Optional.ofNullable(this.identifierUri);
     }
 
@@ -37,7 +37,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="objectId")
       private final @Nullable String objectId;
 
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
@@ -59,7 +59,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serviceUri", required=true)
       private final String serviceUri;
 
-    public String getServiceUri() {
+    public String serviceUri() {
         return this.serviceUri;
     }
 
@@ -70,7 +70,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -81,7 +81,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useAadAuth")
       private final @Nullable Boolean useAadAuth;
 
-    public Optional<Boolean> getUseAadAuth() {
+    public Optional<Boolean> useAadAuth() {
         return this.useAadAuth == null ? Optional.empty() : Optional.ofNullable(this.useAadAuth);
     }
 
@@ -92,7 +92,7 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
     }
 

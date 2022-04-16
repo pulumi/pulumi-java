@@ -25,7 +25,7 @@ public final class BlockchainMemberNodesSkuResponse extends com.pulumi.resources
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 

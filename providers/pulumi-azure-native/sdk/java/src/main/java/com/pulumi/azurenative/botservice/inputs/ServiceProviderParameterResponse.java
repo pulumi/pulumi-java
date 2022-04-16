@@ -24,7 +24,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="default", required=true)
       private final String default_;
 
-    public String getDefault_() {
+    public String default_() {
         return this.default_;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="helpUrl", required=true)
       private final String helpUrl;
 
-    public String getHelpUrl() {
+    public String helpUrl() {
         return this.helpUrl;
     }
 
@@ -68,7 +68,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="metadata", required=true)
       private final ServiceProviderParameterResponseMetadata metadata;
 
-    public ServiceProviderParameterResponseMetadata getMetadata() {
+    public ServiceProviderParameterResponseMetadata metadata() {
         return this.metadata;
     }
 
@@ -79,7 +79,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

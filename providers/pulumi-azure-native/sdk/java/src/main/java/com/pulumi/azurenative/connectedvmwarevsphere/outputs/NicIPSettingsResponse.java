@@ -78,56 +78,56 @@ public final class NicIPSettingsResponse {
      * Gets or sets the nic allocation method.
      * 
     */
-    public Optional<String> getAllocationMethod() {
+    public Optional<String> allocationMethod() {
         return Optional.ofNullable(this.allocationMethod);
     }
     /**
      * Gets or sets the dns servers.
      * 
     */
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * Gets or sets the gateway.
      * 
     */
-    public List<String> getGateway() {
+    public List<String> gateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
     /**
      * Gets or sets the ip address for the nic.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
      * 
     */
-    public List<NicIPAddressSettingsResponse> getIpAddressInfo() {
+    public List<NicIPAddressSettingsResponse> ipAddressInfo() {
         return this.ipAddressInfo;
     }
     /**
      * Gets or sets the primary server.
      * 
     */
-    public String getPrimaryWinsServer() {
+    public String primaryWinsServer() {
         return this.primaryWinsServer;
     }
     /**
      * Gets or sets the secondary server.
      * 
     */
-    public String getSecondaryWinsServer() {
+    public String secondaryWinsServer() {
         return this.secondaryWinsServer;
     }
     /**
      * Gets or sets the mask.
      * 
     */
-    public Optional<String> getSubnetMask() {
+    public Optional<String> subnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
 

@@ -108,84 +108,84 @@ public final class GuestConfigurationAssignmentPropertiesResponse {
      * Combined hash of the configuration package and parameters.
      * 
     */
-    public String getAssignmentHash() {
+    public String assignmentHash() {
         return this.assignmentHash;
     }
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
     */
-    public String getComplianceStatus() {
+    public String complianceStatus() {
         return this.complianceStatus;
     }
     /**
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
      * 
     */
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
      * The guest configuration to assign.
      * 
     */
-    public Optional<GuestConfigurationNavigationResponse> getGuestConfiguration() {
+    public Optional<GuestConfigurationNavigationResponse> guestConfiguration() {
         return Optional.ofNullable(this.guestConfiguration);
     }
     /**
      * Date and time when last compliance status was checked.
      * 
     */
-    public String getLastComplianceStatusChecked() {
+    public String lastComplianceStatusChecked() {
         return this.lastComplianceStatusChecked;
     }
     /**
      * Last reported guest configuration assignment report.
      * 
     */
-    public Optional<AssignmentReportResponse> getLatestAssignmentReport() {
+    public Optional<AssignmentReportResponse> latestAssignmentReport() {
         return Optional.ofNullable(this.latestAssignmentReport);
     }
     /**
      * Id of the latest report for the guest configuration assignment.
      * 
     */
-    public String getLatestReportId() {
+    public String latestReportId() {
         return this.latestReportId;
     }
     /**
      * parameter hash for the guest configuration assignment.
      * 
     */
-    public String getParameterHash() {
+    public String parameterHash() {
         return this.parameterHash;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource - VMSS / VM
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * VM resource Id.
      * 
     */
-    public String getTargetResourceId() {
+    public String targetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The list of VM Compliance data for VMSS
      * 
     */
-    public List<VMSSVMInfoResponse> getVmssVMList() {
+    public List<VMSSVMInfoResponse> vmssVMList() {
         return this.vmssVMList == null ? List.of() : this.vmssVMList;
     }
 

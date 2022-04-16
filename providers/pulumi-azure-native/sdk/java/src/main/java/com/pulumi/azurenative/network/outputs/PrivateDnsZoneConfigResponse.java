@@ -43,21 +43,21 @@ public final class PrivateDnsZoneConfigResponse {
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource id of the private dns zone.
      * 
     */
-    public Optional<String> getPrivateDnsZoneId() {
+    public Optional<String> privateDnsZoneId() {
         return Optional.ofNullable(this.privateDnsZoneId);
     }
     /**
      * A collection of information regarding a recordSet, holding information to identify private resources.
      * 
     */
-    public List<RecordSetResponse> getRecordSets() {
+    public List<RecordSetResponse> recordSets() {
         return this.recordSets;
     }
 

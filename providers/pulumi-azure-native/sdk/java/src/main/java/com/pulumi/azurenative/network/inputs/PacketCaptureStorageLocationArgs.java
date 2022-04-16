@@ -26,7 +26,7 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
@@ -37,7 +37,7 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
     @Import(name="storageId")
       private final @Nullable Output<String> storageId;
 
-    public Output<String> getStorageId() {
+    public Output<String> storageId() {
         return this.storageId == null ? Codegen.empty() : this.storageId;
     }
 
@@ -48,7 +48,7 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
     @Import(name="storagePath")
       private final @Nullable Output<String> storagePath;
 
-    public Output<String> getStoragePath() {
+    public Output<String> storagePath() {
         return this.storagePath == null ? Codegen.empty() : this.storagePath;
     }
 

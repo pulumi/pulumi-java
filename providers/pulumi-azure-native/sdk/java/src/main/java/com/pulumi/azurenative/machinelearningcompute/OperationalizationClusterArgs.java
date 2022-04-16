@@ -30,7 +30,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="appInsights")
       private final @Nullable Output<AppInsightsPropertiesArgs> appInsights;
 
-    public Output<AppInsightsPropertiesArgs> getAppInsights() {
+    public Output<AppInsightsPropertiesArgs> appInsights() {
         return this.appInsights == null ? Codegen.empty() : this.appInsights;
     }
 
@@ -41,7 +41,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -52,7 +52,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="clusterType", required=true)
       private final Output<Either<String,ClusterType>> clusterType;
 
-    public Output<Either<String,ClusterType>> getClusterType() {
+    public Output<Either<String,ClusterType>> clusterType() {
         return this.clusterType;
     }
 
@@ -63,7 +63,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="containerRegistry")
       private final @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
 
-    public Output<ContainerRegistryPropertiesArgs> getContainerRegistry() {
+    public Output<ContainerRegistryPropertiesArgs> containerRegistry() {
         return this.containerRegistry == null ? Codegen.empty() : this.containerRegistry;
     }
 
@@ -74,7 +74,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="containerService")
       private final @Nullable Output<AcsClusterPropertiesArgs> containerService;
 
-    public Output<AcsClusterPropertiesArgs> getContainerService() {
+    public Output<AcsClusterPropertiesArgs> containerService() {
         return this.containerService == null ? Codegen.empty() : this.containerService;
     }
 
@@ -85,7 +85,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -96,7 +96,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="globalServiceConfiguration")
       private final @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
-    public Output<GlobalServiceConfigurationArgs> getGlobalServiceConfiguration() {
+    public Output<GlobalServiceConfigurationArgs> globalServiceConfiguration() {
         return this.globalServiceConfiguration == null ? Codegen.empty() : this.globalServiceConfiguration;
     }
 
@@ -107,7 +107,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -118,7 +118,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -129,7 +129,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
+    public Output<StorageAccountPropertiesArgs> storageAccount() {
         return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
@@ -140,7 +140,7 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -24,7 +24,7 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
     @Import(name="acsKubeConfig", required=true)
       private final String acsKubeConfig;
 
-    public String getAcsKubeConfig() {
+    public String acsKubeConfig() {
         return this.acsKubeConfig;
     }
 
@@ -35,7 +35,7 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
     @Import(name="imagePullSecretName", required=true)
       private final String imagePullSecretName;
 
-    public String getImagePullSecretName() {
+    public String imagePullSecretName() {
         return this.imagePullSecretName;
     }
 
@@ -46,7 +46,7 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
     @Import(name="servicePrincipalConfiguration", required=true)
       private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
-    public ServicePrincipalPropertiesResponse getServicePrincipalConfiguration() {
+    public ServicePrincipalPropertiesResponse servicePrincipalConfiguration() {
         return this.servicePrincipalConfiguration;
     }
 

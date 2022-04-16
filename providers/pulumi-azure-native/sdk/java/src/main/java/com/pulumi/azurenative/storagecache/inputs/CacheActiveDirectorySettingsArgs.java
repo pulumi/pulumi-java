@@ -27,7 +27,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="cacheNetBiosName", required=true)
       private final Output<String> cacheNetBiosName;
 
-    public Output<String> getCacheNetBiosName() {
+    public Output<String> cacheNetBiosName() {
         return this.cacheNetBiosName;
     }
 
@@ -38,7 +38,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="credentials")
       private final @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials;
 
-    public Output<CacheActiveDirectorySettingsCredentialsArgs> getCredentials() {
+    public Output<CacheActiveDirectorySettingsCredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -49,7 +49,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -60,7 +60,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="domainNetBiosName", required=true)
       private final Output<String> domainNetBiosName;
 
-    public Output<String> getDomainNetBiosName() {
+    public Output<String> domainNetBiosName() {
         return this.domainNetBiosName;
     }
 
@@ -71,7 +71,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="primaryDnsIpAddress", required=true)
       private final Output<String> primaryDnsIpAddress;
 
-    public Output<String> getPrimaryDnsIpAddress() {
+    public Output<String> primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
     }
 
@@ -82,7 +82,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
     @Import(name="secondaryDnsIpAddress")
       private final @Nullable Output<String> secondaryDnsIpAddress;
 
-    public Output<String> getSecondaryDnsIpAddress() {
+    public Output<String> secondaryDnsIpAddress() {
         return this.secondaryDnsIpAddress == null ? Codegen.empty() : this.secondaryDnsIpAddress;
     }
 

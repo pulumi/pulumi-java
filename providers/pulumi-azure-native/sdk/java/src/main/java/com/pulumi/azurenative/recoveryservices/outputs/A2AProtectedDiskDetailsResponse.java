@@ -171,147 +171,147 @@ public final class A2AProtectedDiskDetailsResponse {
      * The disk level operations list.
      * 
     */
-    public List<String> getAllowedDiskLevelOperation() {
+    public List<String> allowedDiskLevelOperation() {
         return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
     }
     /**
      * The data pending at source virtual machine in MB.
      * 
     */
-    public Optional<Double> getDataPendingAtSourceAgentInMB() {
+    public Optional<Double> dataPendingAtSourceAgentInMB() {
         return Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
     /**
      * The data pending for replication in MB at staging account.
      * 
     */
-    public Optional<Double> getDataPendingInStagingStorageAccountInMB() {
+    public Optional<Double> dataPendingInStagingStorageAccountInMB() {
         return Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
     /**
      * The KeyVault resource id for secret (BEK).
      * 
     */
-    public Optional<String> getDekKeyVaultArmId() {
+    public Optional<String> dekKeyVaultArmId() {
         return Optional.ofNullable(this.dekKeyVaultArmId);
     }
     /**
      * The disk capacity in bytes.
      * 
     */
-    public Optional<Double> getDiskCapacityInBytes() {
+    public Optional<Double> diskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
     /**
      * The disk name.
      * 
     */
-    public Optional<String> getDiskName() {
+    public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
      * The disk state.
      * 
     */
-    public Optional<String> getDiskState() {
+    public Optional<String> diskState() {
         return Optional.ofNullable(this.diskState);
     }
     /**
      * The type of disk.
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * The disk uri.
      * 
     */
-    public Optional<String> getDiskUri() {
+    public Optional<String> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
     /**
      * A value indicating whether vm has encrypted os disk or not.
      * 
     */
-    public Optional<Boolean> getIsDiskEncrypted() {
+    public Optional<Boolean> isDiskEncrypted() {
         return Optional.ofNullable(this.isDiskEncrypted);
     }
     /**
      * A value indicating whether disk key got encrypted or not.
      * 
     */
-    public Optional<Boolean> getIsDiskKeyEncrypted() {
+    public Optional<Boolean> isDiskKeyEncrypted() {
         return Optional.ofNullable(this.isDiskKeyEncrypted);
     }
     /**
      * The KeyVault resource id for key (KEK).
      * 
     */
-    public Optional<String> getKekKeyVaultArmId() {
+    public Optional<String> kekKeyVaultArmId() {
         return Optional.ofNullable(this.kekKeyVaultArmId);
     }
     /**
      * The key URL / identifier (KEK).
      * 
     */
-    public Optional<String> getKeyIdentifier() {
+    public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
     /**
      * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
      * 
     */
-    public Optional<String> getMonitoringJobType() {
+    public Optional<String> monitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
     /**
      * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
      * 
     */
-    public Optional<Integer> getMonitoringPercentageCompletion() {
+    public Optional<Integer> monitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
     /**
      * The primary disk storage account.
      * 
     */
-    public Optional<String> getPrimaryDiskAzureStorageAccountId() {
+    public Optional<String> primaryDiskAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryDiskAzureStorageAccountId);
     }
     /**
      * The primary staging storage account.
      * 
     */
-    public Optional<String> getPrimaryStagingAzureStorageAccountId() {
+    public Optional<String> primaryStagingAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
     /**
      * The recovery disk storage account.
      * 
     */
-    public Optional<String> getRecoveryAzureStorageAccountId() {
+    public Optional<String> recoveryAzureStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
     /**
      * Recovery disk uri.
      * 
     */
-    public Optional<String> getRecoveryDiskUri() {
+    public Optional<String> recoveryDiskUri() {
         return Optional.ofNullable(this.recoveryDiskUri);
     }
     /**
      * A value indicating whether resync is required for this disk.
      * 
     */
-    public Optional<Boolean> getResyncRequired() {
+    public Optional<Boolean> resyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
     /**
      * The secret URL / identifier (BEK).
      * 
     */
-    public Optional<String> getSecretIdentifier() {
+    public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
 

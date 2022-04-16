@@ -50,14 +50,14 @@ public final class SourcePropertiesResponse {
      * The branch name of the source code.
      * 
     */
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * The full URL to the source code repository
      * 
     */
-    public String getRepositoryUrl() {
+    public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
@@ -65,14 +65,14 @@ public final class SourcePropertiesResponse {
      * webhooks for notifications.
      * 
     */
-    public Optional<AuthInfoResponse> getSourceControlAuthProperties() {
+    public Optional<AuthInfoResponse> sourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
     /**
      * The type of source control service.
      * 
     */
-    public String getSourceControlType() {
+    public String sourceControlType() {
         return this.sourceControlType;
     }
 

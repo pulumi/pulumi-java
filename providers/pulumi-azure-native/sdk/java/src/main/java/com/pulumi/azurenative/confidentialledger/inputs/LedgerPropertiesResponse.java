@@ -28,7 +28,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
 
-    public List<AADBasedSecurityPrincipalResponse> getAadBasedSecurityPrincipals() {
+    public List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
     }
 
@@ -39,7 +39,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="certBasedSecurityPrincipals")
       private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
 
-    public List<CertBasedSecurityPrincipalResponse> getCertBasedSecurityPrincipals() {
+    public List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
     }
 
@@ -50,7 +50,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="identityServiceUri", required=true)
       private final String identityServiceUri;
 
-    public String getIdentityServiceUri() {
+    public String identityServiceUri() {
         return this.identityServiceUri;
     }
 
@@ -61,7 +61,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerInternalNamespace", required=true)
       private final String ledgerInternalNamespace;
 
-    public String getLedgerInternalNamespace() {
+    public String ledgerInternalNamespace() {
         return this.ledgerInternalNamespace;
     }
 
@@ -72,7 +72,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerName", required=true)
       private final String ledgerName;
 
-    public String getLedgerName() {
+    public String ledgerName() {
         return this.ledgerName;
     }
 
@@ -83,7 +83,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerStorageAccount")
       private final @Nullable String ledgerStorageAccount;
 
-    public Optional<String> getLedgerStorageAccount() {
+    public Optional<String> ledgerStorageAccount() {
         return this.ledgerStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.ledgerStorageAccount);
     }
 
@@ -94,7 +94,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerType")
       private final @Nullable String ledgerType;
 
-    public Optional<String> getLedgerType() {
+    public Optional<String> ledgerType() {
         return this.ledgerType == null ? Optional.empty() : Optional.ofNullable(this.ledgerType);
     }
 
@@ -105,7 +105,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="ledgerUri", required=true)
       private final String ledgerUri;
 
-    public String getLedgerUri() {
+    public String ledgerUri() {
         return this.ledgerUri;
     }
 
@@ -116,7 +116,7 @@ public final class LedgerPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

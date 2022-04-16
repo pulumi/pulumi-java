@@ -23,7 +23,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
 
-    public Output<String> getCorrelationId() {
+    public Output<String> correlationId() {
         return this.correlationId == null ? Codegen.empty() : this.correlationId;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="forcePersistence")
       private final @Nullable Output<Boolean> forcePersistence;
 
-    public Output<Boolean> getForcePersistence() {
+    public Output<Boolean> forcePersistence() {
         return this.forcePersistence == null ? Codegen.empty() : this.forcePersistence;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
+    public Output<String> partitionKey() {
         return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
@@ -89,7 +89,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="replyTo")
       private final @Nullable Output<String> replyTo;
 
-    public Output<String> getReplyTo() {
+    public Output<String> replyTo() {
         return this.replyTo == null ? Codegen.empty() : this.replyTo;
     }
 
@@ -100,7 +100,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="replyToSessionId")
       private final @Nullable Output<String> replyToSessionId;
 
-    public Output<String> getReplyToSessionId() {
+    public Output<String> replyToSessionId() {
         return this.replyToSessionId == null ? Codegen.empty() : this.replyToSessionId;
     }
 
@@ -111,7 +111,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="scheduledEnqueueTimeUtc")
       private final @Nullable Output<String> scheduledEnqueueTimeUtc;
 
-    public Output<String> getScheduledEnqueueTimeUtc() {
+    public Output<String> scheduledEnqueueTimeUtc() {
         return this.scheduledEnqueueTimeUtc == null ? Codegen.empty() : this.scheduledEnqueueTimeUtc;
     }
 
@@ -122,7 +122,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
 
-    public Output<String> getSessionId() {
+    public Output<String> sessionId() {
         return this.sessionId == null ? Codegen.empty() : this.sessionId;
     }
 
@@ -133,7 +133,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="timeToLive")
       private final @Nullable Output<String> timeToLive;
 
-    public Output<String> getTimeToLive() {
+    public Output<String> timeToLive() {
         return this.timeToLive == null ? Codegen.empty() : this.timeToLive;
     }
 
@@ -144,7 +144,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="to")
       private final @Nullable Output<String> to;
 
-    public Output<String> getTo() {
+    public Output<String> to() {
         return this.to == null ? Codegen.empty() : this.to;
     }
 
@@ -155,7 +155,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends com.pulumi.re
     @Import(name="viaPartitionKey")
       private final @Nullable Output<String> viaPartitionKey;
 
-    public Output<String> getViaPartitionKey() {
+    public Output<String> viaPartitionKey() {
         return this.viaPartitionKey == null ? Codegen.empty() : this.viaPartitionKey;
     }
 

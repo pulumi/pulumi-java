@@ -27,7 +27,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationDetails")
       private final @Nullable Output<Object> authenticationDetails;
 
-    public Output<Object> getAuthenticationDetails() {
+    public Output<Object> authenticationDetails() {
         return this.authenticationDetails == null ? Codegen.empty() : this.authenticationDetails;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
+    public Output<String> connectorName() {
         return this.connectorName == null ? Codegen.empty() : this.connectorName;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hybridComputeSettings")
       private final @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
-    public Output<HybridComputeSettingsPropertiesArgs> getHybridComputeSettings() {
+    public Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings() {
         return this.hybridComputeSettings == null ? Codegen.empty() : this.hybridComputeSettings;
     }
 

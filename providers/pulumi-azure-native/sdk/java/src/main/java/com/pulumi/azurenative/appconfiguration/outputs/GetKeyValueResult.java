@@ -104,21 +104,21 @@ public final class GetKeyValueResult {
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * An ETag indicating the state of a key-value within a configuration store.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -126,7 +126,7 @@ public final class GetKeyValueResult {
      * The key is used in unison with the label to uniquely identify a key-value.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -134,14 +134,14 @@ public final class GetKeyValueResult {
      * The label is used in unison with the key to uniquely identify a key-value.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * The last time a modifying operation was performed on the given key-value.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
@@ -149,35 +149,35 @@ public final class GetKeyValueResult {
      * A locked key-value may not be modified until it is unlocked.
      * 
     */
-    public Boolean getLocked() {
+    public Boolean locked() {
         return this.locked;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value of the key-value.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

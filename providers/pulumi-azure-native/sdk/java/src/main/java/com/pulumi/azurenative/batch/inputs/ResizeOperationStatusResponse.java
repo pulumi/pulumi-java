@@ -28,7 +28,7 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
     @Import(name="errors")
       private final @Nullable List<ResizeErrorResponse> errors;
 
-    public List<ResizeErrorResponse> getErrors() {
+    public List<ResizeErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
@@ -39,7 +39,7 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
     @Import(name="nodeDeallocationOption")
       private final @Nullable String nodeDeallocationOption;
 
-    public Optional<String> getNodeDeallocationOption() {
+    public Optional<String> nodeDeallocationOption() {
         return this.nodeDeallocationOption == null ? Optional.empty() : Optional.ofNullable(this.nodeDeallocationOption);
     }
 
@@ -50,28 +50,28 @@ public final class ResizeOperationStatusResponse extends com.pulumi.resources.In
     @Import(name="resizeTimeout")
       private final @Nullable String resizeTimeout;
 
-    public Optional<String> getResizeTimeout() {
+    public Optional<String> resizeTimeout() {
         return this.resizeTimeout == null ? Optional.empty() : Optional.ofNullable(this.resizeTimeout);
     }
 
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
     @Import(name="targetDedicatedNodes")
       private final @Nullable Integer targetDedicatedNodes;
 
-    public Optional<Integer> getTargetDedicatedNodes() {
+    public Optional<Integer> targetDedicatedNodes() {
         return this.targetDedicatedNodes == null ? Optional.empty() : Optional.ofNullable(this.targetDedicatedNodes);
     }
 
     @Import(name="targetLowPriorityNodes")
       private final @Nullable Integer targetLowPriorityNodes;
 
-    public Optional<Integer> getTargetLowPriorityNodes() {
+    public Optional<Integer> targetLowPriorityNodes() {
         return this.targetLowPriorityNodes == null ? Optional.empty() : Optional.ofNullable(this.targetLowPriorityNodes);
     }
 

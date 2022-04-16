@@ -26,7 +26,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dispositionNotificationTo")
       private final @Nullable String dispositionNotificationTo;
 
-    public Optional<String> getDispositionNotificationTo() {
+    public Optional<String> dispositionNotificationTo() {
         return this.dispositionNotificationTo == null ? Optional.empty() : Optional.ofNullable(this.dispositionNotificationTo);
     }
 
@@ -37,7 +37,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mdnText")
       private final @Nullable String mdnText;
 
-    public Optional<String> getMdnText() {
+    public Optional<String> mdnText() {
         return this.mdnText == null ? Optional.empty() : Optional.ofNullable(this.mdnText);
     }
 
@@ -48,7 +48,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="micHashingAlgorithm", required=true)
       private final String micHashingAlgorithm;
 
-    public String getMicHashingAlgorithm() {
+    public String micHashingAlgorithm() {
         return this.micHashingAlgorithm;
     }
 
@@ -59,7 +59,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="needMDN", required=true)
       private final Boolean needMDN;
 
-    public Boolean getNeedMDN() {
+    public Boolean needMDN() {
         return this.needMDN;
     }
 
@@ -70,7 +70,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="receiptDeliveryUrl")
       private final @Nullable String receiptDeliveryUrl;
 
-    public Optional<String> getReceiptDeliveryUrl() {
+    public Optional<String> receiptDeliveryUrl() {
         return this.receiptDeliveryUrl == null ? Optional.empty() : Optional.ofNullable(this.receiptDeliveryUrl);
     }
 
@@ -81,7 +81,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sendInboundMDNToMessageBox", required=true)
       private final Boolean sendInboundMDNToMessageBox;
 
-    public Boolean getSendInboundMDNToMessageBox() {
+    public Boolean sendInboundMDNToMessageBox() {
         return this.sendInboundMDNToMessageBox;
     }
 
@@ -92,7 +92,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sendMDNAsynchronously", required=true)
       private final Boolean sendMDNAsynchronously;
 
-    public Boolean getSendMDNAsynchronously() {
+    public Boolean sendMDNAsynchronously() {
         return this.sendMDNAsynchronously;
     }
 
@@ -103,7 +103,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="signMDN", required=true)
       private final Boolean signMDN;
 
-    public Boolean getSignMDN() {
+    public Boolean signMDN() {
         return this.signMDN;
     }
 
@@ -114,7 +114,7 @@ public final class AS2MdnSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="signOutboundMDNIfOptional", required=true)
       private final Boolean signOutboundMDNIfOptional;
 
-    public Boolean getSignOutboundMDNIfOptional() {
+    public Boolean signOutboundMDNIfOptional() {
         return this.signOutboundMDNIfOptional;
     }
 

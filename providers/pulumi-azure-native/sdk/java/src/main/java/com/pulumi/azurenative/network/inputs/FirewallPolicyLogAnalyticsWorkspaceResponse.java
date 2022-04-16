@@ -26,7 +26,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -37,7 +37,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends com.pulum
     @Import(name="workspaceId")
       private final @Nullable SubResourceResponse workspaceId;
 
-    public Optional<SubResourceResponse> getWorkspaceId() {
+    public Optional<SubResourceResponse> workspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 

@@ -26,7 +26,7 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -37,7 +37,7 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="isPrivate")
       private final @Nullable Boolean isPrivate;
 
-    public Optional<Boolean> getIsPrivate() {
+    public Optional<Boolean> isPrivate() {
         return this.isPrivate == null ? Optional.empty() : Optional.ofNullable(this.isPrivate);
     }
 
@@ -48,7 +48,7 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="owner")
       private final @Nullable String owner;
 
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
     }
 
@@ -59,7 +59,7 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="repositoryName")
       private final @Nullable String repositoryName;
 
-    public Optional<String> getRepositoryName() {
+    public Optional<String> repositoryName() {
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
     }
 
@@ -70,7 +70,7 @@ public final class StaticSiteTemplateOptionsResponse extends com.pulumi.resource
     @Import(name="templateRepositoryUrl")
       private final @Nullable String templateRepositoryUrl;
 
-    public Optional<String> getTemplateRepositoryUrl() {
+    public Optional<String> templateRepositoryUrl() {
         return this.templateRepositoryUrl == null ? Optional.empty() : Optional.ofNullable(this.templateRepositoryUrl);
     }
 

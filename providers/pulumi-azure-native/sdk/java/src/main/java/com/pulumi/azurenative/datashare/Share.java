@@ -43,7 +43,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Time at which the share was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -57,7 +57,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Share description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +99,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Share kind.
      * 
      */
-    public Output</* @Nullable */ String> getShareKind() {
+    public Output</* @Nullable */ String> shareKind() {
         return this.shareKind;
     }
     /**
@@ -113,7 +113,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -127,7 +127,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Share terms.
      * 
      */
-    public Output</* @Nullable */ String> getTerms() {
+    public Output</* @Nullable */ String> terms() {
         return this.terms;
     }
     /**
@@ -141,7 +141,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -155,7 +155,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Email of the user who created the resource
      * 
      */
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail;
     }
     /**
@@ -169,7 +169,7 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Name of the user who created the resource
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

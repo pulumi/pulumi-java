@@ -25,7 +25,7 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -36,7 +36,7 @@ public final class EventSubscriptionIdentityResponse extends com.pulumi.resource
     @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
     }
 

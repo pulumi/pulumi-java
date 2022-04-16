@@ -26,7 +26,7 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
+    public Output<NetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 

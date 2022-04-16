@@ -70,49 +70,49 @@ public final class DatabaseFileInfoResponse {
      * Name of the database
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Database file type
      * 
     */
-    public Optional<String> getFileType() {
+    public Optional<String> fileType() {
         return Optional.ofNullable(this.fileType);
     }
     /**
      * Unique identifier for database file
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Logical name of the file
      * 
     */
-    public Optional<String> getLogicalName() {
+    public Optional<String> logicalName() {
         return Optional.ofNullable(this.logicalName);
     }
     /**
      * Operating-system full path of the file
      * 
     */
-    public Optional<String> getPhysicalFullName() {
+    public Optional<String> physicalFullName() {
         return Optional.ofNullable(this.physicalFullName);
     }
     /**
      * Suggested full path of the file for restoring
      * 
     */
-    public Optional<String> getRestoreFullName() {
+    public Optional<String> restoreFullName() {
         return Optional.ofNullable(this.restoreFullName);
     }
     /**
      * Size of the file in megabytes
      * 
     */
-    public Optional<Double> getSizeMB() {
+    public Optional<Double> sizeMB() {
         return Optional.ofNullable(this.sizeMB);
     }
 

@@ -149,119 +149,119 @@ public final class GetPrivateLinkServiceResult {
      * The alias of the private link service.
      * 
     */
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
     /**
      * The auto-approval list of the private link service.
      * 
     */
-    public Optional<PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
+    public Optional<PrivateLinkServicePropertiesResponseAutoApproval> autoApproval() {
         return Optional.ofNullable(this.autoApproval);
     }
     /**
      * Whether the private link service is enabled for proxy protocol or not.
      * 
     */
-    public Optional<Boolean> getEnableProxyProtocol() {
+    public Optional<Boolean> enableProxyProtocol() {
         return Optional.ofNullable(this.enableProxyProtocol);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The extended location of the load balancer.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * The list of Fqdn.
      * 
     */
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of private link service IP configurations.
      * 
     */
-    public List<PrivateLinkServiceIpConfigurationResponse> getIpConfigurations() {
+    public List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * An array of references to the load balancer IP configurations.
      * 
     */
-    public List<FrontendIPConfigurationResponse> getLoadBalancerFrontendIpConfigurations() {
+    public List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations == null ? List.of() : this.loadBalancerFrontendIpConfigurations;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * An array of references to the network interfaces created for this private link service.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * An array of list about connections to the private endpoint.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The provisioning state of the private link service resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The visibility list of the private link service.
      * 
     */
-    public Optional<PrivateLinkServicePropertiesResponseVisibility> getVisibility() {
+    public Optional<PrivateLinkServicePropertiesResponseVisibility> visibility() {
         return Optional.ofNullable(this.visibility);
     }
 

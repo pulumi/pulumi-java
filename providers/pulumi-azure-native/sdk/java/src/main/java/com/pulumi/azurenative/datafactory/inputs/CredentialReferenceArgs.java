@@ -25,7 +25,7 @@ public final class CredentialReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName;
     }
 
@@ -36,7 +36,7 @@ public final class CredentialReferenceArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

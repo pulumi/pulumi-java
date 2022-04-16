@@ -33,7 +33,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -55,7 +55,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -66,7 +66,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -78,7 +78,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -89,7 +89,7 @@ public final class WebLinkedServiceResponse extends com.pulumi.resources.InvokeA
     @Import(name="typeProperties", required=true)
       private final Object typeProperties;
 
-    public Object getTypeProperties() {
+    public Object typeProperties() {
         return this.typeProperties;
     }
 

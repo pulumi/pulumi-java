@@ -27,7 +27,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends com.pu
     @Import(name="licenses", required=true)
       private final List<ContentKeyPolicyPlayReadyLicenseResponse> licenses;
 
-    public List<ContentKeyPolicyPlayReadyLicenseResponse> getLicenses() {
+    public List<ContentKeyPolicyPlayReadyLicenseResponse> licenses() {
         return this.licenses;
     }
 
@@ -39,7 +39,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends com.pu
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -50,7 +50,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse extends com.pu
     @Import(name="responseCustomData")
       private final @Nullable String responseCustomData;
 
-    public Optional<String> getResponseCustomData() {
+    public Optional<String> responseCustomData() {
         return this.responseCustomData == null ? Optional.empty() : Optional.ofNullable(this.responseCustomData);
     }
 

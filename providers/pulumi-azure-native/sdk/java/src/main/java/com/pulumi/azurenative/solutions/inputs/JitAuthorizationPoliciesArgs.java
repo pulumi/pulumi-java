@@ -25,7 +25,7 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -36,7 +36,7 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

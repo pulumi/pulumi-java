@@ -25,7 +25,7 @@ public final class JobDeliveryInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scheduledDateTime")
       private final @Nullable String scheduledDateTime;
 
-    public Optional<String> getScheduledDateTime() {
+    public Optional<String> scheduledDateTime() {
         return this.scheduledDateTime == null ? Optional.empty() : Optional.ofNullable(this.scheduledDateTime);
     }
 

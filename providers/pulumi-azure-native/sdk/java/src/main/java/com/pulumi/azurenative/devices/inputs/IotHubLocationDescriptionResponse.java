@@ -25,7 +25,7 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -36,7 +36,7 @@ public final class IotHubLocationDescriptionResponse extends com.pulumi.resource
     @Import(name="role")
       private final @Nullable String role;
 
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 

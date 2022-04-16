@@ -29,7 +29,7 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="accessEndpoint")
       private final @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
 
-    public Output<IntegrationServiceEnvironmentAccessEndpointArgs> getAccessEndpoint() {
+    public Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint() {
         return this.accessEndpoint == null ? Codegen.empty() : this.accessEndpoint;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="subnets")
       private final @Nullable Output<List<ResourceReferenceArgs>> subnets;
 
-    public Output<List<ResourceReferenceArgs>> getSubnets() {
+    public Output<List<ResourceReferenceArgs>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="virtualNetworkAddressSpace")
       private final @Nullable Output<String> virtualNetworkAddressSpace;
 
-    public Output<String> getVirtualNetworkAddressSpace() {
+    public Output<String> virtualNetworkAddressSpace() {
         return this.virtualNetworkAddressSpace == null ? Codegen.empty() : this.virtualNetworkAddressSpace;
     }
 

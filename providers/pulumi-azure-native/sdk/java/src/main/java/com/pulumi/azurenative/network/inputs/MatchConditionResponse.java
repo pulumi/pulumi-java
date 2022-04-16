@@ -28,7 +28,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matchValues", required=true)
       private final List<String> matchValues;
 
-    public List<String> getMatchValues() {
+    public List<String> matchValues() {
         return this.matchValues;
     }
 
@@ -39,7 +39,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matchVariables", required=true)
       private final List<MatchVariableResponse> matchVariables;
 
-    public List<MatchVariableResponse> getMatchVariables() {
+    public List<MatchVariableResponse> matchVariables() {
         return this.matchVariables;
     }
 
@@ -50,7 +50,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="negationConditon")
       private final @Nullable Boolean negationConditon;
 
-    public Optional<Boolean> getNegationConditon() {
+    public Optional<Boolean> negationConditon() {
         return this.negationConditon == null ? Optional.empty() : Optional.ofNullable(this.negationConditon);
     }
 
@@ -61,7 +61,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -72,7 +72,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
-    public List<String> getTransforms() {
+    public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }
 

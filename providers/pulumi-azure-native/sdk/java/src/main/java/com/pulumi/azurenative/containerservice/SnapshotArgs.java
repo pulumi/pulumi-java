@@ -26,7 +26,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationData")
       private final @Nullable Output<CreationDataArgs> creationData;
 
-    public Output<CreationDataArgs> getCreationData() {
+    public Output<CreationDataArgs> creationData() {
         return this.creationData == null ? Codegen.empty() : this.creationData;
     }
 
@@ -37,7 +37,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -48,7 +48,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,7 +59,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -70,7 +70,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="snapshotType")
       private final @Nullable Output<Either<String,SnapshotType>> snapshotType;
 
-    public Output<Either<String,SnapshotType>> getSnapshotType() {
+    public Output<Either<String,SnapshotType>> snapshotType() {
         return this.snapshotType == null ? Codegen.empty() : this.snapshotType;
     }
 
@@ -81,7 +81,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

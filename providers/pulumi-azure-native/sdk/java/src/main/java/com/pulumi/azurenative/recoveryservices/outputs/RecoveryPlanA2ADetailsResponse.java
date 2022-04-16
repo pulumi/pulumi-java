@@ -43,21 +43,21 @@ public final class RecoveryPlanA2ADetailsResponse {
      * Expected value is 'A2A'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The primary zone.
      * 
     */
-    public Optional<String> getPrimaryZone() {
+    public Optional<String> primaryZone() {
         return Optional.ofNullable(this.primaryZone);
     }
     /**
      * The recovery zone.
      * 
     */
-    public Optional<String> getRecoveryZone() {
+    public Optional<String> recoveryZone() {
         return Optional.ofNullable(this.recoveryZone);
     }
 

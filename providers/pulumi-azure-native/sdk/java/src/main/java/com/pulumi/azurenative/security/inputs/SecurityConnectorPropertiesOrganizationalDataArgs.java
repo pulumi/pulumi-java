@@ -29,7 +29,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
     @Import(name="excludedAccountIds")
       private final @Nullable Output<List<String>> excludedAccountIds;
 
-    public Output<List<String>> getExcludedAccountIds() {
+    public Output<List<String>> excludedAccountIds() {
         return this.excludedAccountIds == null ? Codegen.empty() : this.excludedAccountIds;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
     @Import(name="organizationMembershipType")
       private final @Nullable Output<Either<String,OrganizationMembershipType>> organizationMembershipType;
 
-    public Output<Either<String,OrganizationMembershipType>> getOrganizationMembershipType() {
+    public Output<Either<String,OrganizationMembershipType>> organizationMembershipType() {
         return this.organizationMembershipType == null ? Codegen.empty() : this.organizationMembershipType;
     }
 
@@ -51,7 +51,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
     @Import(name="parentHierarchyId")
       private final @Nullable Output<String> parentHierarchyId;
 
-    public Output<String> getParentHierarchyId() {
+    public Output<String> parentHierarchyId() {
         return this.parentHierarchyId == null ? Codegen.empty() : this.parentHierarchyId;
     }
 
@@ -62,7 +62,7 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends com
     @Import(name="stacksetName")
       private final @Nullable Output<String> stacksetName;
 
-    public Output<String> getStacksetName() {
+    public Output<String> stacksetName() {
         return this.stacksetName == null ? Codegen.empty() : this.stacksetName;
     }
 

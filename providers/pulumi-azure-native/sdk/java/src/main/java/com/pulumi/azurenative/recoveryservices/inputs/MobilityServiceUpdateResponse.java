@@ -25,7 +25,7 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -36,7 +36,7 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
     @Import(name="rebootStatus")
       private final @Nullable String rebootStatus;
 
-    public Optional<String> getRebootStatus() {
+    public Optional<String> rebootStatus() {
         return this.rebootStatus == null ? Optional.empty() : Optional.ofNullable(this.rebootStatus);
     }
 
@@ -47,7 +47,7 @@ public final class MobilityServiceUpdateResponse extends com.pulumi.resources.In
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

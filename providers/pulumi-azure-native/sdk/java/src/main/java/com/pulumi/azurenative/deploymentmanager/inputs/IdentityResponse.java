@@ -24,7 +24,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identityIds", required=true)
       private final List<String> identityIds;
 
-    public List<String> getIdentityIds() {
+    public List<String> identityIds() {
         return this.identityIds;
     }
 
@@ -35,7 +35,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,7 +34,7 @@ public final class CreatePolicyInputPropertiesArgs extends com.pulumi.resources.
     @Import(name="providerSpecificInput")
       private final @Nullable Output<Object> providerSpecificInput;
 
-    public Output<Object> getProviderSpecificInput() {
+    public Output<Object> providerSpecificInput() {
         return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
     }
 

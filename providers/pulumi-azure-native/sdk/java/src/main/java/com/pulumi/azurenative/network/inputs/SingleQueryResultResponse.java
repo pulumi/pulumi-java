@@ -24,7 +24,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -35,7 +35,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
 
-    public List<String> getDestinationPorts() {
+    public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
@@ -46,7 +46,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="direction")
       private final @Nullable Integer direction;
 
-    public Optional<Integer> getDirection() {
+    public Optional<Integer> direction() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
@@ -57,7 +57,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="group")
       private final @Nullable String group;
 
-    public Optional<String> getGroup() {
+    public Optional<String> group() {
         return this.group == null ? Optional.empty() : Optional.ofNullable(this.group);
     }
 
@@ -68,7 +68,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="inheritedFromParentPolicy")
       private final @Nullable Boolean inheritedFromParentPolicy;
 
-    public Optional<Boolean> getInheritedFromParentPolicy() {
+    public Optional<Boolean> inheritedFromParentPolicy() {
         return this.inheritedFromParentPolicy == null ? Optional.empty() : Optional.ofNullable(this.inheritedFromParentPolicy);
     }
 
@@ -79,7 +79,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="lastUpdated")
       private final @Nullable String lastUpdated;
 
-    public Optional<String> getLastUpdated() {
+    public Optional<String> lastUpdated() {
         return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
     }
 
@@ -90,7 +90,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
       private final @Nullable Integer mode;
 
-    public Optional<Integer> getMode() {
+    public Optional<Integer> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -101,7 +101,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -112,7 +112,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="severity")
       private final @Nullable Integer severity;
 
-    public Optional<Integer> getSeverity() {
+    public Optional<Integer> severity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
@@ -123,7 +123,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="signatureId")
       private final @Nullable Integer signatureId;
 
-    public Optional<Integer> getSignatureId() {
+    public Optional<Integer> signatureId() {
         return this.signatureId == null ? Optional.empty() : Optional.ofNullable(this.signatureId);
     }
 
@@ -134,7 +134,7 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
     @Import(name="sourcePorts")
       private final @Nullable List<String> sourcePorts;
 
-    public List<String> getSourcePorts() {
+    public List<String> sourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
 

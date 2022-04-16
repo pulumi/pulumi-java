@@ -41,21 +41,21 @@ public final class ComputeVmInstanceViewStatusResponse {
      * Gets the status Code.
      * 
     */
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Gets the short localizable label for the status.
      * 
     */
-    public Optional<String> getDisplayStatus() {
+    public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
      * Gets the message associated with the status.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
 

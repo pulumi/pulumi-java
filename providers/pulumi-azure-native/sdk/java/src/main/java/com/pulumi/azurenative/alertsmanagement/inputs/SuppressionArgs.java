@@ -31,7 +31,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<ConditionsArgs> conditions;
 
-    public Output<ConditionsArgs> getConditions() {
+    public Output<ConditionsArgs> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -42,7 +42,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> getScope() {
+    public Output<ScopeArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -64,7 +64,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,ActionRuleStatus>> status;
 
-    public Output<Either<String,ActionRuleStatus>> getStatus() {
+    public Output<Either<String,ActionRuleStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -75,7 +75,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suppressionConfig", required=true)
       private final Output<SuppressionConfigArgs> suppressionConfig;
 
-    public Output<SuppressionConfigArgs> getSuppressionConfig() {
+    public Output<SuppressionConfigArgs> suppressionConfig() {
         return this.suppressionConfig;
     }
 
@@ -87,7 +87,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends com.pulumi.resou
     @Import(name="parameters", required=true)
       private final Output<HttpVersionMatchConditionParametersArgs> parameters;
 
-    public Output<HttpVersionMatchConditionParametersArgs> getParameters() {
+    public Output<HttpVersionMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 

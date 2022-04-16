@@ -37,14 +37,14 @@ public final class PyTorchResponse {
      * Expected value is 'PyTorch'.
      * 
     */
-    public String getDistributionType() {
+    public String distributionType() {
         return this.distributionType;
     }
     /**
      * Total process count for the distributed job.
      * 
     */
-    public Optional<Integer> getProcessCount() {
+    public Optional<Integer> processCount() {
         return Optional.ofNullable(this.processCount);
     }
 

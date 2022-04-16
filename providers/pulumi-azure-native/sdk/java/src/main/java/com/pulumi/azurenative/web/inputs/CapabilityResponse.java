@@ -25,7 +25,7 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="reason")
       private final @Nullable String reason;
 
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return this.reason == null ? Optional.empty() : Optional.ofNullable(this.reason);
     }
 
@@ -47,7 +47,7 @@ public final class CapabilityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

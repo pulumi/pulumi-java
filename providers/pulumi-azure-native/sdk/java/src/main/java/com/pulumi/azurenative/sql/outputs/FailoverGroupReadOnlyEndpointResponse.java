@@ -26,7 +26,7 @@ public final class FailoverGroupReadOnlyEndpointResponse {
      * Failover policy of the read-only endpoint for the failover group.
      * 
     */
-    public Optional<String> getFailoverPolicy() {
+    public Optional<String> failoverPolicy() {
         return Optional.ofNullable(this.failoverPolicy);
     }
 

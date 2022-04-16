@@ -34,14 +34,14 @@ public final class SecureStringResponse {
      * Expected value is 'SecureString'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of secure string.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

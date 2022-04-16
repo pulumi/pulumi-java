@@ -26,7 +26,7 @@ public final class DataPoolEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -37,7 +37,7 @@ public final class DataPoolEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
+    public Output<String> keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -48,7 +48,7 @@ public final class DataPoolEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
+    public Output<String> keyVersion() {
         return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
@@ -59,7 +59,7 @@ public final class DataPoolEncryptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;
 
-    public Output<String> getUserAssignedIdentity() {
+    public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 

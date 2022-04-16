@@ -25,7 +25,7 @@ public final class ConnectedClusterIdentityArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
+    public Output<ResourceIdentityType> type() {
         return this.type;
     }
 

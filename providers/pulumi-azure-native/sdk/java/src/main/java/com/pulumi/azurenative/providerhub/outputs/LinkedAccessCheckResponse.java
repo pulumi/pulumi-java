@@ -31,19 +31,19 @@ public final class LinkedAccessCheckResponse {
         this.linkedType = linkedType;
     }
 
-    public Optional<String> getActionName() {
+    public Optional<String> actionName() {
         return Optional.ofNullable(this.actionName);
     }
-    public Optional<String> getLinkedAction() {
+    public Optional<String> linkedAction() {
         return Optional.ofNullable(this.linkedAction);
     }
-    public Optional<String> getLinkedActionVerb() {
+    public Optional<String> linkedActionVerb() {
         return Optional.ofNullable(this.linkedActionVerb);
     }
-    public Optional<String> getLinkedProperty() {
+    public Optional<String> linkedProperty() {
         return Optional.ofNullable(this.linkedProperty);
     }
-    public Optional<String> getLinkedType() {
+    public Optional<String> linkedType() {
         return Optional.ofNullable(this.linkedType);
     }
 

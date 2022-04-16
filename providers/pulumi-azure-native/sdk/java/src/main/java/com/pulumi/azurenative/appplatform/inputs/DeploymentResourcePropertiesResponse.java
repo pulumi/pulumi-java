@@ -30,7 +30,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="active", required=true)
       private final Boolean active;
 
-    public Boolean getActive() {
+    public Boolean active() {
         return this.active;
     }
 
@@ -41,7 +41,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="appName", required=true)
       private final String appName;
 
-    public String getAppName() {
+    public String appName() {
         return this.appName;
     }
 
@@ -52,7 +52,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -63,7 +63,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="deploymentSettings")
       private final @Nullable DeploymentSettingsResponse deploymentSettings;
 
-    public Optional<DeploymentSettingsResponse> getDeploymentSettings() {
+    public Optional<DeploymentSettingsResponse> deploymentSettings() {
         return this.deploymentSettings == null ? Optional.empty() : Optional.ofNullable(this.deploymentSettings);
     }
 
@@ -74,7 +74,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="instances", required=true)
       private final List<DeploymentInstanceResponse> instances;
 
-    public List<DeploymentInstanceResponse> getInstances() {
+    public List<DeploymentInstanceResponse> instances() {
         return this.instances;
     }
 
@@ -85,7 +85,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -96,7 +96,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="source")
       private final @Nullable UserSourceInfoResponse source;
 
-    public Optional<UserSourceInfoResponse> getSource() {
+    public Optional<UserSourceInfoResponse> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
@@ -107,7 +107,7 @@ public final class DeploymentResourcePropertiesResponse extends com.pulumi.resou
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -29,7 +29,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="cakSecretIdentifier")
       private final @Nullable Output<String> cakSecretIdentifier;
 
-    public Output<String> getCakSecretIdentifier() {
+    public Output<String> cakSecretIdentifier() {
         return this.cakSecretIdentifier == null ? Codegen.empty() : this.cakSecretIdentifier;
     }
 
@@ -40,7 +40,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="cipher")
       private final @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
 
-    public Output<Either<String,ExpressRouteLinkMacSecCipher>> getCipher() {
+    public Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher() {
         return this.cipher == null ? Codegen.empty() : this.cipher;
     }
 
@@ -51,7 +51,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="cknSecretIdentifier")
       private final @Nullable Output<String> cknSecretIdentifier;
 
-    public Output<String> getCknSecretIdentifier() {
+    public Output<String> cknSecretIdentifier() {
         return this.cknSecretIdentifier == null ? Codegen.empty() : this.cknSecretIdentifier;
     }
 
@@ -62,7 +62,7 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="sciState")
       private final @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
 
-    public Output<Either<String,ExpressRouteLinkMacSecSciState>> getSciState() {
+    public Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState() {
         return this.sciState == null ? Codegen.empty() : this.sciState;
     }
 

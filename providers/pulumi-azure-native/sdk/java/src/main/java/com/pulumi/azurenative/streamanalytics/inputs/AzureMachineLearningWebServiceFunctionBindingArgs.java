@@ -30,7 +30,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
@@ -41,7 +41,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
+    public Output<Integer> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
@@ -52,7 +52,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -63,7 +63,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
     @Import(name="inputs")
       private final @Nullable Output<AzureMachineLearningWebServiceInputsArgs> inputs;
 
-    public Output<AzureMachineLearningWebServiceInputsArgs> getInputs() {
+    public Output<AzureMachineLearningWebServiceInputsArgs> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -74,7 +74,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
     @Import(name="outputs")
       private final @Nullable Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs;
 
-    public Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> getOutputs() {
+    public Output<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs() {
         return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
@@ -86,7 +86,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends com
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

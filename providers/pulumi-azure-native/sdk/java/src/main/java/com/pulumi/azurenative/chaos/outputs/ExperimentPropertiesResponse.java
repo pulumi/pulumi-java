@@ -44,21 +44,21 @@ public final class ExperimentPropertiesResponse {
      * List of selectors.
      * 
     */
-    public List<SelectorResponse> getSelectors() {
+    public List<SelectorResponse> selectors() {
         return this.selectors;
     }
     /**
      * A boolean value that indicates if experiment should be started on creation or not.
      * 
     */
-    public Optional<Boolean> getStartOnCreation() {
+    public Optional<Boolean> startOnCreation() {
         return Optional.ofNullable(this.startOnCreation);
     }
     /**
      * List of steps.
      * 
     */
-    public List<StepResponse> getSteps() {
+    public List<StepResponse> steps() {
         return this.steps;
     }
 

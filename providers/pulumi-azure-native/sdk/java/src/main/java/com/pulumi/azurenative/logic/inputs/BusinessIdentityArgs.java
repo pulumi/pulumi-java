@@ -25,7 +25,7 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="qualifier", required=true)
       private final Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier;
     }
 
@@ -36,7 +36,7 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

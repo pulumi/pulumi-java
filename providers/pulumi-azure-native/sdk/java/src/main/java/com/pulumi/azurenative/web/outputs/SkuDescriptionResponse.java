@@ -80,56 +80,56 @@ public final class SkuDescriptionResponse {
      * Capabilities of the SKU, e.g., is traffic manager enabled?
      * 
     */
-    public List<CapabilityResponse> getCapabilities() {
+    public List<CapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * Current number of instances assigned to the resource.
      * 
     */
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Family code of the resource SKU.
      * 
     */
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
      * Locations of the SKU.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * Name of the resource SKU.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Size specifier of the resource SKU.
      * 
     */
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
      * Min, max, and default scale values of the SKU.
      * 
     */
-    public Optional<SkuCapacityResponse> getSkuCapacity() {
+    public Optional<SkuCapacityResponse> skuCapacity() {
         return Optional.ofNullable(this.skuCapacity);
     }
     /**
      * Service tier of the resource SKU.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

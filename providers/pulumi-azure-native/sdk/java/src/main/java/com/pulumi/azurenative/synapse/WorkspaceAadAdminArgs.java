@@ -22,7 +22,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="administratorType")
       private final @Nullable Output<String> administratorType;
 
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType == null ? Codegen.empty() : this.administratorType;
     }
 
@@ -33,7 +33,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="login")
       private final @Nullable Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -44,7 +44,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sid")
       private final @Nullable Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid == null ? Codegen.empty() : this.sid;
     }
 
@@ -66,7 +66,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -77,7 +77,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

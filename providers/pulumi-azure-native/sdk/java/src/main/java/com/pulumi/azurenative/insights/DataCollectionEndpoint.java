@@ -47,7 +47,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The endpoint used by agents to access their configuration.
      * 
      */
-    public Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> getConfigurationAccess() {
+    public Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> configurationAccess() {
         return this.configurationAccess;
     }
     /**
@@ -61,7 +61,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Description of the data collection endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Resource entity tag (ETag).
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -89,7 +89,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
      * 
      */
-    public Output</* @Nullable */ String> getImmutableId() {
+    public Output</* @Nullable */ String> immutableId() {
         return this.immutableId;
     }
     /**
@@ -103,7 +103,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -117,7 +117,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The geo-location where the resource lives.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -131,7 +131,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The endpoint used by clients to ingest logs.
      * 
      */
-    public Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> getLogsIngestion() {
+    public Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> logsIngestion() {
         return this.logsIngestion;
     }
     /**
@@ -145,7 +145,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +159,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Network access control rules for the endpoints.
      * 
      */
-    public Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> getNetworkAcls() {
+    public Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> networkAcls() {
         return this.networkAcls;
     }
     /**
@@ -173,7 +173,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The resource provisioning state. This property is READ-ONLY.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -187,7 +187,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<DataCollectionEndpointResourceResponseSystemData> getSystemData() {
+    public Output<DataCollectionEndpointResourceResponseSystemData> systemData() {
         return this.systemData;
     }
     /**
@@ -201,7 +201,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -215,7 +215,7 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

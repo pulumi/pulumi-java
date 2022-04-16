@@ -32,14 +32,14 @@ public final class ListWorkflowAccessKeySecretKeysResult {
      * Gets the primary secret key.
      * 
     */
-    public String getPrimarySecretKey() {
+    public String primarySecretKey() {
         return this.primarySecretKey;
     }
     /**
      * Gets the secondary secret key.
      * 
     */
-    public String getSecondarySecretKey() {
+    public String secondarySecretKey() {
         return this.secondarySecretKey;
     }
 

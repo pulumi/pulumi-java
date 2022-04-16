@@ -19,7 +19,7 @@ public final class GetDeploymentAtTenantScopeArgs extends com.pulumi.resources.I
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 

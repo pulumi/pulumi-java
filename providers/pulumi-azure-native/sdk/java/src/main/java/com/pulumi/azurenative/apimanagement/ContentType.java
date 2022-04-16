@@ -43,7 +43,7 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Content type description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Content type schema.
      * 
      */
-    public Output</* @Nullable */ Object> getSchema() {
+    public Output</* @Nullable */ Object> schema() {
         return this.schema;
     }
     /**
@@ -85,7 +85,7 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -99,7 +99,7 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Content type version.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

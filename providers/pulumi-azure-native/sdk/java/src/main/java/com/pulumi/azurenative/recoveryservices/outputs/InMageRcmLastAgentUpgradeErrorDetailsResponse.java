@@ -61,42 +61,42 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
      * The error code.
      * 
     */
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
     /**
      * The error message.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * The error message parameters.
      * 
     */
-    public Map<String,String> getErrorMessageParameters() {
+    public Map<String,String> errorMessageParameters() {
         return this.errorMessageParameters;
     }
     /**
      * The error tags.
      * 
     */
-    public Map<String,String> getErrorTags() {
+    public Map<String,String> errorTags() {
         return this.errorTags;
     }
     /**
      * The possible causes.
      * 
     */
-    public String getPossibleCauses() {
+    public String possibleCauses() {
         return this.possibleCauses;
     }
     /**
      * The recommended action.
      * 
     */
-    public String getRecommendedAction() {
+    public String recommendedAction() {
         return this.recommendedAction;
     }
 

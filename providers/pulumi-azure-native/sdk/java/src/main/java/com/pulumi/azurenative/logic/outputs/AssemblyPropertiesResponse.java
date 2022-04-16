@@ -84,62 +84,62 @@ public final class AssemblyPropertiesResponse {
      * The assembly culture.
      * 
     */
-    public Optional<String> getAssemblyCulture() {
+    public Optional<String> assemblyCulture() {
         return Optional.ofNullable(this.assemblyCulture);
     }
     /**
      * The assembly name.
      * 
     */
-    public String getAssemblyName() {
+    public String assemblyName() {
         return this.assemblyName;
     }
     /**
      * The assembly public key token.
      * 
     */
-    public Optional<String> getAssemblyPublicKeyToken() {
+    public Optional<String> assemblyPublicKeyToken() {
         return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
     /**
      * The assembly version.
      * 
     */
-    public Optional<String> getAssemblyVersion() {
+    public Optional<String> assemblyVersion() {
         return Optional.ofNullable(this.assemblyVersion);
     }
     /**
      * The artifact changed time.
      * 
     */
-    public Optional<String> getChangedTime() {
+    public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
-    public Optional<Object> getContent() {
+    public Optional<Object> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The content link.
      * 
     */
-    public Optional<ContentLinkResponse> getContentLink() {
+    public Optional<ContentLinkResponse> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
      * The content type.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The artifact creation time.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 

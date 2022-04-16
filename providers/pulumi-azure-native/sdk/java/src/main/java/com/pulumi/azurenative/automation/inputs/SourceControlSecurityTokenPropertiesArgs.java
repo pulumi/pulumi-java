@@ -24,7 +24,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -35,7 +35,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
@@ -46,7 +46,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
     @Import(name="tokenType")
       private final @Nullable Output<Either<String,TokenType>> tokenType;
 
-    public Output<Either<String,TokenType>> getTokenType() {
+    public Output<Either<String,TokenType>> tokenType() {
         return this.tokenType == null ? Codegen.empty() : this.tokenType;
     }
 

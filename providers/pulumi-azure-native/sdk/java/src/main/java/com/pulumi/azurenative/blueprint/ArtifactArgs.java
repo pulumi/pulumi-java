@@ -24,7 +24,7 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
-    public Output<String> getArtifactName() {
+    public Output<String> artifactName() {
         return this.artifactName == null ? Codegen.empty() : this.artifactName;
     }
 
@@ -35,7 +35,7 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
-    public Output<String> getBlueprintName() {
+    public Output<String> blueprintName() {
         return this.blueprintName;
     }
 
@@ -46,7 +46,7 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,ArtifactKind>> kind;
 
-    public Output<Either<String,ArtifactKind>> getKind() {
+    public Output<Either<String,ArtifactKind>> kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
-    public Output<String> getResourceScope() {
+    public Output<String> resourceScope() {
         return this.resourceScope;
     }
 

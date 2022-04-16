@@ -27,7 +27,7 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
@@ -38,7 +38,7 @@ public final class OnErrorDeploymentArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<OnErrorDeploymentType> type;
 
-    public Output<OnErrorDeploymentType> getType() {
+    public Output<OnErrorDeploymentType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,7 +27,7 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
 
-    public Output<Object> getPartitionColumnName() {
+    public Output<Object> partitionColumnName() {
         return this.partitionColumnName == null ? Codegen.empty() : this.partitionColumnName;
     }
 
@@ -38,7 +38,7 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
 
-    public Output<Object> getPartitionLowerBound() {
+    public Output<Object> partitionLowerBound() {
         return this.partitionLowerBound == null ? Codegen.empty() : this.partitionLowerBound;
     }
 
@@ -49,7 +49,7 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="partitionNames")
       private final @Nullable Output<List<Object>> partitionNames;
 
-    public Output<List<Object>> getPartitionNames() {
+    public Output<List<Object>> partitionNames() {
         return this.partitionNames == null ? Codegen.empty() : this.partitionNames;
     }
 
@@ -60,7 +60,7 @@ public final class OraclePartitionSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;
 
-    public Output<Object> getPartitionUpperBound() {
+    public Output<Object> partitionUpperBound() {
         return this.partitionUpperBound == null ? Codegen.empty() : this.partitionUpperBound;
     }
 

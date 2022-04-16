@@ -19,28 +19,28 @@ public final class EnergyServicePropertiesResponse extends com.pulumi.resources.
     @Import(name="authAppId")
       private final @Nullable String authAppId;
 
-    public Optional<String> getAuthAppId() {
+    public Optional<String> authAppId() {
         return this.authAppId == null ? Optional.empty() : Optional.ofNullable(this.authAppId);
     }
 
     @Import(name="dataPartitionNames")
       private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
 
-    public List<DataPartitionNamesResponse> getDataPartitionNames() {
+    public List<DataPartitionNamesResponse> dataPartitionNames() {
         return this.dataPartitionNames == null ? List.of() : this.dataPartitionNames;
     }
 
     @Import(name="dnsName", required=true)
       private final String dnsName;
 
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

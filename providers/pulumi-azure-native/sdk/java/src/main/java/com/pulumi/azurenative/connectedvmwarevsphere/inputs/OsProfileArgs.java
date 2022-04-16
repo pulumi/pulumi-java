@@ -28,7 +28,7 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
-    public Output<String> getAdminPassword() {
+    public Output<String> adminPassword() {
         return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
@@ -39,7 +39,7 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
@@ -50,7 +50,7 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
-    public Output<String> getComputerName() {
+    public Output<String> computerName() {
         return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
@@ -61,7 +61,7 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> getOsType() {
+    public Output<Either<String,OsType>> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 

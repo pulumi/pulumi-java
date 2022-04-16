@@ -41,21 +41,21 @@ public final class MsixPackageDependenciesResponse {
      * Name of package dependency.
      * 
     */
-    public Optional<String> getDependencyName() {
+    public Optional<String> dependencyName() {
         return Optional.ofNullable(this.dependencyName);
     }
     /**
      * Dependency version required.
      * 
     */
-    public Optional<String> getMinVersion() {
+    public Optional<String> minVersion() {
         return Optional.ofNullable(this.minVersion);
     }
     /**
      * Name of dependency publisher.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
 

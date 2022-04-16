@@ -27,7 +27,7 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="days")
       private final @Nullable Integer days;
 
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
     }
 
@@ -38,7 +38,7 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="lastEnabledTime", required=true)
       private final String lastEnabledTime;
 
-    public String getLastEnabledTime() {
+    public String lastEnabledTime() {
         return this.lastEnabledTime;
     }
 
@@ -60,7 +60,7 @@ public final class RestorePolicyPropertiesResponse extends com.pulumi.resources.
     @Import(name="minRestoreTime", required=true)
       private final String minRestoreTime;
 
-    public String getMinRestoreTime() {
+    public String minRestoreTime() {
         return this.minRestoreTime;
     }
 

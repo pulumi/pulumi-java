@@ -26,7 +26,7 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -37,7 +37,7 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -48,7 +48,7 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -59,7 +59,7 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="processServerId")
       private final @Nullable Output<String> processServerId;
 
-    public Output<String> getProcessServerId() {
+    public Output<String> processServerId() {
         return this.processServerId == null ? Codegen.empty() : this.processServerId;
     }
 
@@ -70,7 +70,7 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
     @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
-    public Output<String> getRunAsAccountId() {
+    public Output<String> runAsAccountId() {
         return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
     }
 

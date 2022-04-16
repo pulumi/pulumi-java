@@ -25,7 +25,7 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="aadTenantId")
       private final @Nullable String aadTenantId;
 
-    public Optional<String> getAadTenantId() {
+    public Optional<String> aadTenantId() {
         return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
     }
 
@@ -36,7 +36,7 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="audience")
       private final @Nullable String audience;
 
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
@@ -47,7 +47,7 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="servicePrincipalClientId")
       private final @Nullable String servicePrincipalClientId;
 
-    public Optional<String> getServicePrincipalClientId() {
+    public Optional<String> servicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
     }
 
@@ -58,7 +58,7 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
     @Import(name="uniqueName")
       private final @Nullable String uniqueName;
 
-    public Optional<String> getUniqueName() {
+    public Optional<String> uniqueName() {
         return this.uniqueName == null ? Optional.empty() : Optional.ofNullable(this.uniqueName);
     }
 

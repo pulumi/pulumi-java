@@ -23,7 +23,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
     @Import(name="exponent", required=true)
       private final String exponent;
 
-    public String getExponent() {
+    public String exponent() {
         return this.exponent;
     }
 
@@ -34,7 +34,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
     @Import(name="modulus", required=true)
       private final String modulus;
 
-    public String getModulus() {
+    public String modulus() {
         return this.modulus;
     }
 
@@ -46,7 +46,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends com.pulumi.resour
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

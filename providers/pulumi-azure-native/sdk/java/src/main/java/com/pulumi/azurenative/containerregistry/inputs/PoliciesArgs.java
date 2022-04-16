@@ -28,7 +28,7 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="quarantinePolicy")
       private final @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
 
-    public Output<QuarantinePolicyArgs> getQuarantinePolicy() {
+    public Output<QuarantinePolicyArgs> quarantinePolicy() {
         return this.quarantinePolicy == null ? Codegen.empty() : this.quarantinePolicy;
     }
 
@@ -39,7 +39,7 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+    public Output<RetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class PoliciesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustPolicy")
       private final @Nullable Output<TrustPolicyArgs> trustPolicy;
 
-    public Output<TrustPolicyArgs> getTrustPolicy() {
+    public Output<TrustPolicyArgs> trustPolicy() {
         return this.trustPolicy == null ? Codegen.empty() : this.trustPolicy;
     }
 

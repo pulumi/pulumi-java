@@ -23,7 +23,7 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -34,7 +34,7 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

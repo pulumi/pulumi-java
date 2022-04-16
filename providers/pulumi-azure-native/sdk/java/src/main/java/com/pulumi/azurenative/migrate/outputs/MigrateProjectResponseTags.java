@@ -18,7 +18,7 @@ public final class MigrateProjectResponseTags {
         this.additionalProperties = additionalProperties;
     }
 
-    public Optional<String> getAdditionalProperties() {
+    public Optional<String> additionalProperties() {
         return Optional.ofNullable(this.additionalProperties);
     }
 

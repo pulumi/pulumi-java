@@ -26,7 +26,7 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
@@ -37,7 +37,7 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
     @Import(name="isEligibleForFailover")
       private final @Nullable Boolean isEligibleForFailover;
 
-    public Optional<Boolean> getIsEligibleForFailover() {
+    public Optional<Boolean> isEligibleForFailover() {
         return this.isEligibleForFailover == null ? Optional.empty() : Optional.ofNullable(this.isEligibleForFailover);
     }
 

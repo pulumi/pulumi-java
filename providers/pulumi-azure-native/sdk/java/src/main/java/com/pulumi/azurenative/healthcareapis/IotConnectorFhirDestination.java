@@ -44,7 +44,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return FHIR Mappings
      * 
      */
-    public Output<IotMappingPropertiesResponse> getFhirMapping() {
+    public Output<IotMappingPropertiesResponse> fhirMapping() {
         return this.fhirMapping;
     }
     /**
@@ -72,7 +72,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return Fully qualified resource id of the FHIR service to connect to.
      * 
      */
-    public Output<String> getFhirServiceResourceId() {
+    public Output<String> fhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
     /**
@@ -86,7 +86,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +100,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return Determines how resource identity is resolved on the destination.
      * 
      */
-    public Output<String> getResourceIdentityResolutionType() {
+    public Output<String> resourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
     /**
@@ -128,7 +128,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -142,7 +142,7 @@ public class IotConnectorFhirDestination extends com.pulumi.resources.CustomReso
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -53,30 +53,30 @@ public final class ResizeOperationStatusResponse {
      * This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
      * 
     */
-    public List<ResizeErrorResponse> getErrors() {
+    public List<ResizeErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The default value is requeue.
      * 
     */
-    public Optional<String> getNodeDeallocationOption() {
+    public Optional<String> nodeDeallocationOption() {
         return Optional.ofNullable(this.nodeDeallocationOption);
     }
     /**
      * The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
      * 
     */
-    public Optional<String> getResizeTimeout() {
+    public Optional<String> resizeTimeout() {
         return Optional.ofNullable(this.resizeTimeout);
     }
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
-    public Optional<Integer> getTargetDedicatedNodes() {
+    public Optional<Integer> targetDedicatedNodes() {
         return Optional.ofNullable(this.targetDedicatedNodes);
     }
-    public Optional<Integer> getTargetLowPriorityNodes() {
+    public Optional<Integer> targetLowPriorityNodes() {
         return Optional.ofNullable(this.targetLowPriorityNodes);
     }
 

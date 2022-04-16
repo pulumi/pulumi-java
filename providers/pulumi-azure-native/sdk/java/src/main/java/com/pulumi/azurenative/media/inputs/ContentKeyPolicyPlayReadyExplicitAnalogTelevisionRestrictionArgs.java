@@ -26,7 +26,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     @Import(name="bestEffort", required=true)
       private final Output<Boolean> bestEffort;
 
-    public Output<Boolean> getBestEffort() {
+    public Output<Boolean> bestEffort() {
         return this.bestEffort;
     }
 
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionA
     @Import(name="configurationData", required=true)
       private final Output<Integer> configurationData;
 
-    public Output<Integer> getConfigurationData() {
+    public Output<Integer> configurationData() {
         return this.configurationData;
     }
 

@@ -29,7 +29,7 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
     @Import(name="cacheBehavior", required=true)
       private final Output<Either<String,CacheBehavior>> cacheBehavior;
 
-    public Output<Either<String,CacheBehavior>> getCacheBehavior() {
+    public Output<Either<String,CacheBehavior>> cacheBehavior() {
         return this.cacheBehavior;
     }
 
@@ -40,7 +40,7 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
     @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
 
-    public Output<String> getCacheDuration() {
+    public Output<String> cacheDuration() {
         return this.cacheDuration == null ? Codegen.empty() : this.cacheDuration;
     }
 
@@ -51,14 +51,14 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
     @Import(name="cacheType", required=true)
       private final Output<Either<String,CacheType>> cacheType;
 
-    public Output<Either<String,CacheType>> getCacheType() {
+    public Output<Either<String,CacheType>> cacheType() {
         return this.cacheType;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

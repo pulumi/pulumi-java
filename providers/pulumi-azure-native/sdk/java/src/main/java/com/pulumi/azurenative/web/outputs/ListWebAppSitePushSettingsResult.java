@@ -80,42 +80,42 @@ public final class ListWebAppSitePushSettingsResult {
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
     */
-    public Optional<String> getDynamicTagsJson() {
+    public Optional<String> dynamicTagsJson() {
         return Optional.ofNullable(this.dynamicTagsJson);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
     */
-    public Boolean getIsPushEnabled() {
+    public Boolean isPushEnabled() {
         return this.isPushEnabled;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
     */
-    public Optional<String> getTagWhitelistJson() {
+    public Optional<String> tagWhitelistJson() {
         return Optional.ofNullable(this.tagWhitelistJson);
     }
     /**
@@ -125,14 +125,14 @@ public final class ListWebAppSitePushSettingsResult {
      * Validation should be performed at the PushRequestHandler.
      * 
     */
-    public Optional<String> getTagsRequiringAuth() {
+    public Optional<String> tagsRequiringAuth() {
         return Optional.ofNullable(this.tagsRequiringAuth);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

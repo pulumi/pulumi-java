@@ -33,14 +33,14 @@ public final class ActivityDependencyResponse {
      * Activity name.
      * 
     */
-    public String getActivity() {
+    public String activity() {
         return this.activity;
     }
     /**
      * Match-Condition for the dependency.
      * 
     */
-    public List<String> getDependencyConditions() {
+    public List<String> dependencyConditions() {
         return this.dependencyConditions;
     }
 

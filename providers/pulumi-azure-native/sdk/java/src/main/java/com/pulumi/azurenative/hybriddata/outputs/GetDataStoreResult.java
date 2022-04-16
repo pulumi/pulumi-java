@@ -79,56 +79,56 @@ public final class GetDataStoreResult {
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
     */
-    public List<CustomerSecretResponse> getCustomerSecrets() {
+    public List<CustomerSecretResponse> customerSecrets() {
         return this.customerSecrets == null ? List.of() : this.customerSecrets;
     }
     /**
      * The arm id of the data store type.
      * 
     */
-    public String getDataStoreTypeId() {
+    public String dataStoreTypeId() {
         return this.dataStoreTypeId;
     }
     /**
      * A generic json used differently by each data source type.
      * 
     */
-    public Optional<Object> getExtendedProperties() {
+    public Optional<Object> extendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
     /**
      * Id of the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
     */
-    public Optional<String> getRepositoryId() {
+    public Optional<String> repositoryId() {
         return Optional.ofNullable(this.repositoryId);
     }
     /**
      * State of the data source.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentResourcePath", required=true)
       private final String parentResourcePath;
 
-    public String getParentResourcePath() {
+    public String parentResourcePath() {
         return this.parentResourcePath;
     }
 
@@ -30,7 +30,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -52,7 +52,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
 
-    public String getResourceProviderNamespace() {
+    public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -63,7 +63,7 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

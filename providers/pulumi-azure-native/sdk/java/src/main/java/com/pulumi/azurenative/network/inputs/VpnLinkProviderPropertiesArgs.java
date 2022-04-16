@@ -27,7 +27,7 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="linkProviderName")
       private final @Nullable Output<String> linkProviderName;
 
-    public Output<String> getLinkProviderName() {
+    public Output<String> linkProviderName() {
         return this.linkProviderName == null ? Codegen.empty() : this.linkProviderName;
     }
 
@@ -38,7 +38,7 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="linkSpeedInMbps")
       private final @Nullable Output<Integer> linkSpeedInMbps;
 
-    public Output<Integer> getLinkSpeedInMbps() {
+    public Output<Integer> linkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Codegen.empty() : this.linkSpeedInMbps;
     }
 

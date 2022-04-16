@@ -22,7 +22,7 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
@@ -33,7 +33,7 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="maxInstances")
       private final @Nullable Integer maxInstances;
 
-    public Optional<Integer> getMaxInstances() {
+    public Optional<Integer> maxInstances() {
         return this.maxInstances == null ? Optional.empty() : Optional.ofNullable(this.maxInstances);
     }
 
@@ -44,7 +44,7 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="minInstances")
       private final @Nullable Integer minInstances;
 
-    public Optional<Integer> getMinInstances() {
+    public Optional<Integer> minInstances() {
         return this.minInstances == null ? Optional.empty() : Optional.ofNullable(this.minInstances);
     }
 
@@ -55,7 +55,7 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="scaleType", required=true)
       private final String scaleType;
 
-    public String getScaleType() {
+    public String scaleType() {
         return this.scaleType;
     }
 

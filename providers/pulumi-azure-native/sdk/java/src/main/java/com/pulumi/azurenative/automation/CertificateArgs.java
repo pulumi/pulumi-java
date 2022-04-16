@@ -23,7 +23,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="base64Value", required=true)
       private final Output<String> base64Value;
 
-    public Output<String> getBase64Value() {
+    public Output<String> base64Value() {
         return this.base64Value;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -56,7 +56,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isExportable")
       private final @Nullable Output<Boolean> isExportable;
 
-    public Output<Boolean> getIsExportable() {
+    public Output<Boolean> isExportable() {
         return this.isExportable == null ? Codegen.empty() : this.isExportable;
     }
 
@@ -78,7 +78,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -89,7 +89,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

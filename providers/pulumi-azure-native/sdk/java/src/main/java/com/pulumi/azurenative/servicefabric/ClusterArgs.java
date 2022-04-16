@@ -35,7 +35,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addOnFeatures")
       private final @Nullable Output<List<String>> addOnFeatures;
 
-    public Output<List<String>> getAddOnFeatures() {
+    public Output<List<String>> addOnFeatures() {
         return this.addOnFeatures == null ? Codegen.empty() : this.addOnFeatures;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationTypeVersionsCleanupPolicy")
       private final @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
 
-    public Output<ApplicationTypeVersionsCleanupPolicyArgs> getApplicationTypeVersionsCleanupPolicy() {
+    public Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy() {
         return this.applicationTypeVersionsCleanupPolicy == null ? Codegen.empty() : this.applicationTypeVersionsCleanupPolicy;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
-    public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
+    public Output<AzureActiveDirectoryArgs> azureActiveDirectory() {
         return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificate")
       private final @Nullable Output<CertificateDescriptionArgs> certificate;
 
-    public Output<CertificateDescriptionArgs> getCertificate() {
+    public Output<CertificateDescriptionArgs> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -79,7 +79,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
 
-    public Output<ServerCertificateCommonNamesArgs> getCertificateCommonNames() {
+    public Output<ServerCertificateCommonNamesArgs> certificateCommonNames() {
         return this.certificateCommonNames == null ? Codegen.empty() : this.certificateCommonNames;
     }
 
@@ -90,7 +90,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateCommonNames")
       private final @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
 
-    public Output<List<ClientCertificateCommonNameArgs>> getClientCertificateCommonNames() {
+    public Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames() {
         return this.clientCertificateCommonNames == null ? Codegen.empty() : this.clientCertificateCommonNames;
     }
 
@@ -101,7 +101,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificateThumbprints")
       private final @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
 
-    public Output<List<ClientCertificateThumbprintArgs>> getClientCertificateThumbprints() {
+    public Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints() {
         return this.clientCertificateThumbprints == null ? Codegen.empty() : this.clientCertificateThumbprints;
     }
 
@@ -112,7 +112,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterCodeVersion")
       private final @Nullable Output<String> clusterCodeVersion;
 
-    public Output<String> getClusterCodeVersion() {
+    public Output<String> clusterCodeVersion() {
         return this.clusterCodeVersion == null ? Codegen.empty() : this.clusterCodeVersion;
     }
 
@@ -123,7 +123,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -134,7 +134,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticsStorageAccountConfig")
       private final @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
 
-    public Output<DiagnosticsStorageAccountConfigArgs> getDiagnosticsStorageAccountConfig() {
+    public Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig() {
         return this.diagnosticsStorageAccountConfig == null ? Codegen.empty() : this.diagnosticsStorageAccountConfig;
     }
 
@@ -145,7 +145,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventStoreServiceEnabled")
       private final @Nullable Output<Boolean> eventStoreServiceEnabled;
 
-    public Output<Boolean> getEventStoreServiceEnabled() {
+    public Output<Boolean> eventStoreServiceEnabled() {
         return this.eventStoreServiceEnabled == null ? Codegen.empty() : this.eventStoreServiceEnabled;
     }
 
@@ -156,7 +156,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fabricSettings")
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
-    public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
+    public Output<List<SettingsSectionDescriptionArgs>> fabricSettings() {
         return this.fabricSettings == null ? Codegen.empty() : this.fabricSettings;
     }
 
@@ -167,7 +167,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -178,7 +178,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managementEndpoint", required=true)
       private final Output<String> managementEndpoint;
 
-    public Output<String> getManagementEndpoint() {
+    public Output<String> managementEndpoint() {
         return this.managementEndpoint;
     }
 
@@ -189,7 +189,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypes", required=true)
       private final Output<List<NodeTypeDescriptionArgs>> nodeTypes;
 
-    public Output<List<NodeTypeDescriptionArgs>> getNodeTypes() {
+    public Output<List<NodeTypeDescriptionArgs>> nodeTypes() {
         return this.nodeTypes;
     }
 
@@ -206,7 +206,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reliabilityLevel")
       private final @Nullable Output<String> reliabilityLevel;
 
-    public Output<String> getReliabilityLevel() {
+    public Output<String> reliabilityLevel() {
         return this.reliabilityLevel == null ? Codegen.empty() : this.reliabilityLevel;
     }
 
@@ -217,7 +217,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -228,7 +228,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reverseProxyCertificate")
       private final @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
 
-    public Output<CertificateDescriptionArgs> getReverseProxyCertificate() {
+    public Output<CertificateDescriptionArgs> reverseProxyCertificate() {
         return this.reverseProxyCertificate == null ? Codegen.empty() : this.reverseProxyCertificate;
     }
 
@@ -239,7 +239,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reverseProxyCertificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
 
-    public Output<ServerCertificateCommonNamesArgs> getReverseProxyCertificateCommonNames() {
+    public Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames() {
         return this.reverseProxyCertificateCommonNames == null ? Codegen.empty() : this.reverseProxyCertificateCommonNames;
     }
 
@@ -250,7 +250,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -261,7 +261,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upgradeDescription")
       private final @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
 
-    public Output<ClusterUpgradePolicyArgs> getUpgradeDescription() {
+    public Output<ClusterUpgradePolicyArgs> upgradeDescription() {
         return this.upgradeDescription == null ? Codegen.empty() : this.upgradeDescription;
     }
 
@@ -275,7 +275,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upgradeMode")
       private final @Nullable Output<String> upgradeMode;
 
-    public Output<String> getUpgradeMode() {
+    public Output<String> upgradeMode() {
         return this.upgradeMode == null ? Codegen.empty() : this.upgradeMode;
     }
 
@@ -286,7 +286,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;
 
-    public Output<String> getVmImage() {
+    public Output<String> vmImage() {
         return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 

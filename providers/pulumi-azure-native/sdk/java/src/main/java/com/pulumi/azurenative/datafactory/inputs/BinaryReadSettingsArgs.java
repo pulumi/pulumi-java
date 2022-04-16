@@ -30,7 +30,7 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> getCompressionProperties() {
+    public Output<Object> compressionProperties() {
         return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
     }
 
@@ -42,7 +42,7 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

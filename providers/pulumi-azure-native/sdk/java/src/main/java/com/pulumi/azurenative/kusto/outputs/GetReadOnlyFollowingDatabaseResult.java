@@ -106,21 +106,21 @@ public final class GetReadOnlyFollowingDatabaseResult {
      * The name of the attached database configuration cluster
      * 
     */
-    public String getAttachedDatabaseConfigurationName() {
+    public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
     */
-    public Optional<String> getHotCachePeriod() {
+    public Optional<String> hotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -128,63 +128,63 @@ public final class GetReadOnlyFollowingDatabaseResult {
      * Expected value is 'ReadOnlyFollowing'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the leader cluster
      * 
     */
-    public String getLeaderClusterResourceId() {
+    public String leaderClusterResourceId() {
         return this.leaderClusterResourceId;
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The principals modification kind of the database
      * 
     */
-    public String getPrincipalsModificationKind() {
+    public String principalsModificationKind() {
         return this.principalsModificationKind;
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
     */
-    public String getSoftDeletePeriod() {
+    public String softDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
      * The statistics of the database.
      * 
     */
-    public DatabaseStatisticsResponse getStatistics() {
+    public DatabaseStatisticsResponse statistics() {
         return this.statistics;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

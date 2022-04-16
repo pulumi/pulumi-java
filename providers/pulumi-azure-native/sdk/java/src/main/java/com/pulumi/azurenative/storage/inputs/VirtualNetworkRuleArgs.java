@@ -29,7 +29,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="action")
       private final @Nullable Output<Action> action;
 
-    public Output<Action> getAction() {
+    public Output<Action> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
+    public Output<Either<String,State>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualNetworkResourceId", required=true)
       private final Output<String> virtualNetworkResourceId;
 
-    public Output<String> getVirtualNetworkResourceId() {
+    public Output<String> virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
 

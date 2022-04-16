@@ -27,7 +27,7 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
     @Import(name="minCreationTime")
       private final @Nullable Output<String> minCreationTime;
 
-    public Output<String> getMinCreationTime() {
+    public Output<String> minCreationTime() {
         return this.minCreationTime == null ? Codegen.empty() : this.minCreationTime;
     }
 
@@ -38,7 +38,7 @@ public final class ObjectReplicationPolicyFilterArgs extends com.pulumi.resource
     @Import(name="prefixMatch")
       private final @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> getPrefixMatch() {
+    public Output<List<String>> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 

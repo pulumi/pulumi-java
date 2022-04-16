@@ -32,14 +32,14 @@ public final class CredentialReferenceResponse {
      * Reference credential name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Credential reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

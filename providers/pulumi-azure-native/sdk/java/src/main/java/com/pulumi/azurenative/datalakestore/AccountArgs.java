@@ -34,7 +34,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -45,7 +45,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultGroup")
       private final @Nullable Output<String> defaultGroup;
 
-    public Output<String> getDefaultGroup() {
+    public Output<String> defaultGroup() {
         return this.defaultGroup == null ? Codegen.empty() : this.defaultGroup;
     }
 
@@ -56,7 +56,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+    public Output<EncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -67,7 +67,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionState")
       private final @Nullable Output<EncryptionState> encryptionState;
 
-    public Output<EncryptionState> getEncryptionState() {
+    public Output<EncryptionState> encryptionState() {
         return this.encryptionState == null ? Codegen.empty() : this.encryptionState;
     }
 
@@ -78,7 +78,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
-    public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
+    public Output<FirewallAllowAzureIpsState> firewallAllowAzureIps() {
         return this.firewallAllowAzureIps == null ? Codegen.empty() : this.firewallAllowAzureIps;
     }
 
@@ -89,7 +89,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
-    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
+    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules() {
         return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
@@ -100,7 +100,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
 
-    public Output<FirewallState> getFirewallState() {
+    public Output<FirewallState> firewallState() {
         return this.firewallState == null ? Codegen.empty() : this.firewallState;
     }
 
@@ -111,7 +111,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<EncryptionIdentityArgs> identity;
 
-    public Output<EncryptionIdentityArgs> getIdentity() {
+    public Output<EncryptionIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -122,7 +122,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -133,7 +133,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
 
-    public Output<TierType> getNewTier() {
+    public Output<TierType> newTier() {
         return this.newTier == null ? Codegen.empty() : this.newTier;
     }
 
@@ -144,7 +144,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -155,7 +155,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -166,7 +166,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustedIdProviderState")
       private final @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
 
-    public Output<TrustedIdProviderState> getTrustedIdProviderState() {
+    public Output<TrustedIdProviderState> trustedIdProviderState() {
         return this.trustedIdProviderState == null ? Codegen.empty() : this.trustedIdProviderState;
     }
 
@@ -177,7 +177,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustedIdProviders")
       private final @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
-    public Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> getTrustedIdProviders() {
+    public Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders() {
         return this.trustedIdProviders == null ? Codegen.empty() : this.trustedIdProviders;
     }
 
@@ -188,7 +188,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
-    public Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> getVirtualNetworkRules() {
+    public Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 

@@ -27,7 +27,7 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
     @Import(name="dataDisks")
       private final @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
 
-    public List<RestorePointSourceVMDataDiskResponse> getDataDisks() {
+    public List<RestorePointSourceVMDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
@@ -38,7 +38,7 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
     @Import(name="osDisk")
       private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
-    public Optional<RestorePointSourceVMOSDiskResponse> getOsDisk() {
+    public Optional<RestorePointSourceVMOSDiskResponse> osDisk() {
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
     }
 

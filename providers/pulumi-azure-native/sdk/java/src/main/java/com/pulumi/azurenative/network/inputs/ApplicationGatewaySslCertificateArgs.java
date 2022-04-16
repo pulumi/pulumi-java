@@ -26,7 +26,7 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
 
-    public Output<String> getKeyVaultSecretId() {
+    public Output<String> keyVaultSecretId() {
         return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class ApplicationGatewaySslCertificateArgs extends com.pulumi.resou
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 

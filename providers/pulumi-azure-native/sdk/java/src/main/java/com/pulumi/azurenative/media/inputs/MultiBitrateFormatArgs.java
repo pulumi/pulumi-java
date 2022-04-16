@@ -28,7 +28,7 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
     @Import(name="filenamePattern", required=true)
       private final Output<String> filenamePattern;
 
-    public Output<String> getFilenamePattern() {
+    public Output<String> filenamePattern() {
         return this.filenamePattern;
     }
 
@@ -40,7 +40,7 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -51,7 +51,7 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
     @Import(name="outputFiles")
       private final @Nullable Output<List<OutputFileArgs>> outputFiles;
 
-    public Output<List<OutputFileArgs>> getOutputFiles() {
+    public Output<List<OutputFileArgs>> outputFiles() {
         return this.outputFiles == null ? Codegen.empty() : this.outputFiles;
     }
 

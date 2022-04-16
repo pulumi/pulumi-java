@@ -34,7 +34,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
 
-    public String getBackupManagementType() {
+    public String backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -45,7 +45,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
 
-    public Optional<Integer> getProtectedItemsCount() {
+    public Optional<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
@@ -56,7 +56,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="retentionPolicy")
       private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
+    public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
@@ -67,7 +67,7 @@ public final class MabProtectionPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="schedulePolicy")
       private final @Nullable Object schedulePolicy;
 
-    public Object getSchedulePolicy() {
+    public Object schedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
     }
 

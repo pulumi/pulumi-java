@@ -42,21 +42,21 @@ public final class AutoScaleVCoreSkuResponse {
      * The capacity of an auto scale v-core resource.
      * 
     */
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Name of the SKU level.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name of the Azure pricing tier to which the SKU applies.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

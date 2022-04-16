@@ -27,7 +27,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="diskSizeInGB")
       private final @Nullable Output<Integer> diskSizeInGB;
 
-    public Output<Integer> getDiskSizeInGB() {
+    public Output<Integer> diskSizeInGB() {
         return this.diskSizeInGB == null ? Codegen.empty() : this.diskSizeInGB;
     }
 
@@ -38,7 +38,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileShareName")
       private final @Nullable Output<String> fileShareName;
 
-    public Output<String> getFileShareName() {
+    public Output<String> fileShareName() {
         return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
     }
 
@@ -49,7 +49,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageAccountResourceId")
       private final @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> getStorageAccountResourceId() {
+    public Output<String> storageAccountResourceId() {
         return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
     }
 

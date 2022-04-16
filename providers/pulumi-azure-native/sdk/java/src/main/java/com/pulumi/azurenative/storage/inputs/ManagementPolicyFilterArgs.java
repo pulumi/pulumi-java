@@ -28,7 +28,7 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
     @Import(name="blobIndexMatch")
       private final @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
 
-    public Output<List<TagFilterArgs>> getBlobIndexMatch() {
+    public Output<List<TagFilterArgs>> blobIndexMatch() {
         return this.blobIndexMatch == null ? Codegen.empty() : this.blobIndexMatch;
     }
 
@@ -39,7 +39,7 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
     @Import(name="blobTypes", required=true)
       private final Output<List<String>> blobTypes;
 
-    public Output<List<String>> getBlobTypes() {
+    public Output<List<String>> blobTypes() {
         return this.blobTypes;
     }
 
@@ -50,7 +50,7 @@ public final class ManagementPolicyFilterArgs extends com.pulumi.resources.Resou
     @Import(name="prefixMatch")
       private final @Nullable Output<List<String>> prefixMatch;
 
-    public Output<List<String>> getPrefixMatch() {
+    public Output<List<String>> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 

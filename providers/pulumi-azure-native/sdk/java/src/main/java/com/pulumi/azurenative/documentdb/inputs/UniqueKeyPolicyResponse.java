@@ -26,7 +26,7 @@ public final class UniqueKeyPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="uniqueKeys")
       private final @Nullable List<UniqueKeyResponse> uniqueKeys;
 
-    public List<UniqueKeyResponse> getUniqueKeys() {
+    public List<UniqueKeyResponse> uniqueKeys() {
         return this.uniqueKeys == null ? List.of() : this.uniqueKeys;
     }
 

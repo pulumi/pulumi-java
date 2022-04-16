@@ -19,7 +19,7 @@ public final class GetFileServicePropertiesArgs extends com.pulumi.resources.Inv
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetFileServicePropertiesArgs extends com.pulumi.resources.Inv
     @Import(name="fileServicesName", required=true)
       private final String fileServicesName;
 
-    public String getFileServicesName() {
+    public String fileServicesName() {
         return this.fileServicesName;
     }
 
@@ -41,7 +41,7 @@ public final class GetFileServicePropertiesArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

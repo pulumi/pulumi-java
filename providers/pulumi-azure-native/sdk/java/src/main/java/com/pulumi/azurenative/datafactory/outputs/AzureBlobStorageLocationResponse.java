@@ -50,21 +50,21 @@ public final class AzureBlobStorageLocationResponse {
      * Specify the container of azure blob. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getContainer() {
+    public Optional<Object> container() {
         return Optional.ofNullable(this.container);
     }
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileName() {
+    public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
@@ -72,7 +72,7 @@ public final class AzureBlobStorageLocationResponse {
      * Expected value is 'AzureBlobStorageLocation'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

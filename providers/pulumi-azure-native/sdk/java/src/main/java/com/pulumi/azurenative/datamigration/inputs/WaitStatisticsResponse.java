@@ -24,7 +24,7 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="waitCount", required=true)
       private final Double waitCount;
 
-    public Double getWaitCount() {
+    public Double waitCount() {
         return this.waitCount;
     }
 
@@ -35,7 +35,7 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="waitTimeMs", required=true)
       private final Double waitTimeMs;
 
-    public Double getWaitTimeMs() {
+    public Double waitTimeMs() {
         return this.waitTimeMs;
     }
 
@@ -46,7 +46,7 @@ public final class WaitStatisticsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="waitType", required=true)
       private final String waitType;
 
-    public String getWaitType() {
+    public String waitType() {
         return this.waitType;
     }
 

@@ -25,7 +25,7 @@ public final class PacketCaptureStorageLocationResponse extends com.pulumi.resou
     @Import(name="filePath")
       private final @Nullable String filePath;
 
-    public Optional<String> getFilePath() {
+    public Optional<String> filePath() {
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
     }
 
@@ -36,7 +36,7 @@ public final class PacketCaptureStorageLocationResponse extends com.pulumi.resou
     @Import(name="storageId")
       private final @Nullable String storageId;
 
-    public Optional<String> getStorageId() {
+    public Optional<String> storageId() {
         return this.storageId == null ? Optional.empty() : Optional.ofNullable(this.storageId);
     }
 
@@ -47,7 +47,7 @@ public final class PacketCaptureStorageLocationResponse extends com.pulumi.resou
     @Import(name="storagePath")
       private final @Nullable String storagePath;
 
-    public Optional<String> getStoragePath() {
+    public Optional<String> storagePath() {
         return this.storagePath == null ? Optional.empty() : Optional.ofNullable(this.storagePath);
     }
 

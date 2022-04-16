@@ -19,7 +19,7 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
     @Import(name="dataCollectionEndpointName", required=true)
       private final String dataCollectionEndpointName;
 
-    public String getDataCollectionEndpointName() {
+    public String dataCollectionEndpointName() {
         return this.dataCollectionEndpointName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataCollectionEndpointArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

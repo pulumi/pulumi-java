@@ -19,7 +19,7 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -30,7 +30,7 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -41,7 +41,7 @@ public final class MediaServiceIdentityResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

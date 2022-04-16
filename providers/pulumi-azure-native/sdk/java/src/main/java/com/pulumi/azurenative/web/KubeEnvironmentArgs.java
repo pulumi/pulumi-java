@@ -23,7 +23,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="aksResourceID")
       private final @Nullable Output<String> aksResourceID;
 
-    public Output<String> getAksResourceID() {
+    public Output<String> aksResourceID() {
         return this.aksResourceID == null ? Codegen.empty() : this.aksResourceID;
     }
 
@@ -36,7 +36,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="appLogsConfiguration")
       private final @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
 
-    public Output<AppLogsConfigurationArgs> getAppLogsConfiguration() {
+    public Output<AppLogsConfigurationArgs> appLogsConfiguration() {
         return this.appLogsConfiguration == null ? Codegen.empty() : this.appLogsConfiguration;
     }
 
@@ -49,7 +49,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="arcConfiguration")
       private final @Nullable Output<ArcConfigurationArgs> arcConfiguration;
 
-    public Output<ArcConfigurationArgs> getArcConfiguration() {
+    public Output<ArcConfigurationArgs> arcConfiguration() {
         return this.arcConfiguration == null ? Codegen.empty() : this.arcConfiguration;
     }
 
@@ -60,7 +60,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -71,7 +71,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="internalLoadBalancerEnabled")
       private final @Nullable Output<Boolean> internalLoadBalancerEnabled;
 
-    public Output<Boolean> getInternalLoadBalancerEnabled() {
+    public Output<Boolean> internalLoadBalancerEnabled() {
         return this.internalLoadBalancerEnabled == null ? Codegen.empty() : this.internalLoadBalancerEnabled;
     }
 
@@ -82,7 +82,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -93,7 +93,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -104,7 +104,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,7 +126,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="staticIp")
       private final @Nullable Output<String> staticIp;
 
-    public Output<String> getStaticIp() {
+    public Output<String> staticIp() {
         return this.staticIp == null ? Codegen.empty() : this.staticIp;
     }
 
@@ -137,7 +137,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -45,7 +45,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The Id of the frontdoor.
      * 
      */
-    public Output<String> getFrontdoorId() {
+    public Output<String> frontdoorId() {
         return this.frontdoorId;
     }
     /**
@@ -59,7 +59,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Provisioning status of the profile.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -101,7 +101,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource status of the profile.
      * 
      */
-    public Output<String> getResourceState() {
+    public Output<String> resourceState() {
         return this.resourceState;
     }
     /**
@@ -115,7 +115,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -129,7 +129,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -143,7 +143,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

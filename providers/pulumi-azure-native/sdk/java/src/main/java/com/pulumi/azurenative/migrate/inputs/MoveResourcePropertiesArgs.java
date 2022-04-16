@@ -42,7 +42,7 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="dependsOnOverrides")
       private final @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
-    public Output<List<MoveResourceDependencyOverrideArgs>> getDependsOnOverrides() {
+    public Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides() {
         return this.dependsOnOverrides == null ? Codegen.empty() : this.dependsOnOverrides;
     }
 
@@ -53,7 +53,7 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="existingTargetId")
       private final @Nullable Output<String> existingTargetId;
 
-    public Output<String> getExistingTargetId() {
+    public Output<String> existingTargetId() {
         return this.existingTargetId == null ? Codegen.empty() : this.existingTargetId;
     }
 
@@ -64,7 +64,7 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="resourceSettings")
       private final @Nullable Output<Object> resourceSettings;
 
-    public Output<Object> getResourceSettings() {
+    public Output<Object> resourceSettings() {
         return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 
@@ -75,7 +75,7 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 

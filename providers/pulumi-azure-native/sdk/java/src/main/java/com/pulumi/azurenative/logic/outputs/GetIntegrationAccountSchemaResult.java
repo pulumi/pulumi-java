@@ -128,105 +128,105 @@ public final class GetIntegrationAccountSchemaResult {
      * The changed time.
      * 
     */
-    public String getChangedTime() {
+    public String changedTime() {
         return this.changedTime;
     }
     /**
      * The content.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The content link.
      * 
     */
-    public ContentLinkResponse getContentLink() {
+    public ContentLinkResponse contentLink() {
         return this.contentLink;
     }
     /**
      * The content type.
      * 
     */
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The created time.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * The document name.
      * 
     */
-    public Optional<String> getDocumentName() {
+    public Optional<String> documentName() {
         return Optional.ofNullable(this.documentName);
     }
     /**
      * The file name.
      * 
     */
-    public Optional<String> getFileName() {
+    public Optional<String> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * The resource id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The schema type.
      * 
     */
-    public String getSchemaType() {
+    public String schemaType() {
         return this.schemaType;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The target namespace of the schema.
      * 
     */
-    public Optional<String> getTargetNamespace() {
+    public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
     /**
      * Gets the resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

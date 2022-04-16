@@ -44,7 +44,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +58,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the DDoS protection plan resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return The resource GUID property of the DDoS protection plan resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -114,7 +114,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +128,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -142,7 +142,7 @@ public class DdosProtectionPlan extends com.pulumi.resources.CustomResource {
      * @return The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.
      * 
      */
-    public Output<List<SubResourceResponse>> getVirtualNetworks() {
+    public Output<List<SubResourceResponse>> virtualNetworks() {
         return this.virtualNetworks;
     }
 

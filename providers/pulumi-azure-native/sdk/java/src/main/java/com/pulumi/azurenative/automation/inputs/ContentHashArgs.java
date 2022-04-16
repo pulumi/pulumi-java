@@ -25,7 +25,7 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="algorithm", required=true)
       private final Output<String> algorithm;
 
-    public Output<String> getAlgorithm() {
+    public Output<String> algorithm() {
         return this.algorithm;
     }
 
@@ -36,7 +36,7 @@ public final class ContentHashArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

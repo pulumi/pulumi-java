@@ -35,14 +35,14 @@ public final class AzureStaticWebAppsResponse {
      * <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the Azure Static Web Apps registration.
      * 
     */
-    public Optional<AzureStaticWebAppsRegistrationResponse> getRegistration() {
+    public Optional<AzureStaticWebAppsRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }
 

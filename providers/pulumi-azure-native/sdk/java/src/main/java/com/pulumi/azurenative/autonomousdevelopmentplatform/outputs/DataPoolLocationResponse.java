@@ -35,14 +35,14 @@ public final class DataPoolLocationResponse {
      * Encryption properties of a Data Pool location
      * 
     */
-    public Optional<DataPoolEncryptionResponse> getEncryption() {
+    public Optional<DataPoolEncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * The location name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -25,7 +25,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -36,7 +36,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="primaryKey")
       private final @Nullable String primaryKey;
 
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return this.primaryKey == null ? Optional.empty() : Optional.ofNullable(this.primaryKey);
     }
 
@@ -47,7 +47,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="rights", required=true)
       private final String rights;
 
-    public String getRights() {
+    public String rights() {
         return this.rights;
     }
 
@@ -58,7 +58,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends com.pu
     @Import(name="secondaryKey")
       private final @Nullable String secondaryKey;
 
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return this.secondaryKey == null ? Optional.empty() : Optional.ofNullable(this.secondaryKey);
     }
 

@@ -19,7 +19,7 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ledgerName", required=true)
       private final String ledgerName;
 
-    public String getLedgerName() {
+    public String ledgerName() {
         return this.ledgerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class WindowsConfigurationResponse {
      * If omitted, the default value is true.
      * 
     */
-    public Optional<Boolean> getEnableAutomaticUpdates() {
+    public Optional<Boolean> enableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);
     }
 

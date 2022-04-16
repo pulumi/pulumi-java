@@ -26,7 +26,7 @@ public final class CopyOnExpiryOptionResponse {
      * Expected value is 'CopyOnExpiryOption'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

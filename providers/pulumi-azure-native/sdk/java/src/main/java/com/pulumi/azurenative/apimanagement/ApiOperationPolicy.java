@@ -42,7 +42,7 @@ public class ApiOperationPolicy extends com.pulumi.resources.CustomResource {
      * @return Format of the policyContent.
      * 
      */
-    public Output</* @Nullable */ String> getFormat() {
+    public Output</* @Nullable */ String> format() {
         return this.format;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiOperationPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiOperationPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiOperationPolicy extends com.pulumi.resources.CustomResource {
      * @return Contents of the Policy as defined by the format.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

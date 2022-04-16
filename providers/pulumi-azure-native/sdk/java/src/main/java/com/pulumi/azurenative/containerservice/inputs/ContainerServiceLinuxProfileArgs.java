@@ -26,7 +26,7 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
     @Import(name="adminUsername", required=true)
       private final Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername;
     }
 
@@ -37,7 +37,7 @@ public final class ContainerServiceLinuxProfileArgs extends com.pulumi.resources
     @Import(name="ssh", required=true)
       private final Output<ContainerServiceSshConfigurationArgs> ssh;
 
-    public Output<ContainerServiceSshConfigurationArgs> getSsh() {
+    public Output<ContainerServiceSshConfigurationArgs> ssh() {
         return this.ssh;
     }
 

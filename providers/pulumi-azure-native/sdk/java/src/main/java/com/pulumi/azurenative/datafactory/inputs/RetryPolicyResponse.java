@@ -26,7 +26,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count")
       private final @Nullable Object count;
 
-    public Optional<Object> getCount() {
+    public Optional<Object> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -37,7 +37,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
-    public Optional<Integer> getIntervalInSeconds() {
+    public Optional<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 

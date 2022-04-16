@@ -24,7 +24,7 @@ public final class SystemAssignedIdentityAuthInfoResponse extends com.pulumi.res
     @Import(name="authType", required=true)
       private final String authType;
 
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
 

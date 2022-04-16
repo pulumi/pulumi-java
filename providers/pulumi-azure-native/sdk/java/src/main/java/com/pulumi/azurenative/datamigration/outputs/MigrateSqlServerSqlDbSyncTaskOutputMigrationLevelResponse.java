@@ -83,21 +83,21 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
      * Count of databases
      * 
     */
-    public Integer getDatabaseCount() {
+    public Integer databaseCount() {
         return this.databaseCount;
     }
     /**
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -105,42 +105,42 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
      * Expected value is 'MigrationLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Source server name
      * 
     */
-    public String getSourceServer() {
+    public String sourceServer() {
         return this.sourceServer;
     }
     /**
      * Source server version
      * 
     */
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Target server name
      * 
     */
-    public String getTargetServer() {
+    public String targetServer() {
         return this.targetServer;
     }
     /**
      * Target server version
      * 
     */
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

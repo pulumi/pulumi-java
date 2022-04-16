@@ -29,7 +29,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataset")
       private final @Nullable Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -40,7 +40,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="flowlet")
       private final @Nullable Output<DataFlowReferenceArgs> flowlet;
 
-    public Output<DataFlowReferenceArgs> getFlowlet() {
+    public Output<DataFlowReferenceArgs> flowlet() {
         return this.flowlet == null ? Codegen.empty() : this.flowlet;
     }
 
@@ -62,7 +62,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedService() {
+    public Output<LinkedServiceReferenceArgs> linkedService() {
         return this.linkedService == null ? Codegen.empty() : this.linkedService;
     }
 
@@ -73,7 +73,7 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -26,7 +26,7 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -37,7 +37,7 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="path")
       private final @Nullable Object path;
 
-    public Optional<Object> getPath() {
+    public Optional<Object> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

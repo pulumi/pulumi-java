@@ -27,7 +27,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="authorizations")
       private final @Nullable List<AuthorizationResponse> authorizations;
 
-    public List<AuthorizationResponse> getAuthorizations() {
+    public List<AuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
 
@@ -38,7 +38,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="managedByTenantId")
       private final @Nullable String managedByTenantId;
 
-    public Optional<String> getManagedByTenantId() {
+    public Optional<String> managedByTenantId() {
         return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
     }
 
@@ -60,7 +60,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="managedByTenantName")
       private final @Nullable String managedByTenantName;
 
-    public Optional<String> getManagedByTenantName() {
+    public Optional<String> managedByTenantName() {
         return this.managedByTenantName == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantName);
     }
 
@@ -71,7 +71,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="manageeTenantId")
       private final @Nullable String manageeTenantId;
 
-    public Optional<String> getManageeTenantId() {
+    public Optional<String> manageeTenantId() {
         return this.manageeTenantId == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantId);
     }
 
@@ -82,7 +82,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="manageeTenantName")
       private final @Nullable String manageeTenantName;
 
-    public Optional<String> getManageeTenantName() {
+    public Optional<String> manageeTenantName() {
         return this.manageeTenantName == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantName);
     }
 
@@ -93,7 +93,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -104,7 +104,7 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends co
     @Import(name="registrationDefinitionName")
       private final @Nullable String registrationDefinitionName;
 
-    public Optional<String> getRegistrationDefinitionName() {
+    public Optional<String> registrationDefinitionName() {
         return this.registrationDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.registrationDefinitionName);
     }
 

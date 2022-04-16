@@ -18,7 +18,7 @@ public final class TagsResponse {
         this.tags = tags;
     }
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

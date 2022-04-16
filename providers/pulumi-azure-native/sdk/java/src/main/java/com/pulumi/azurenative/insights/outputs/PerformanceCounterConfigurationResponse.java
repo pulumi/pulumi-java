@@ -25,13 +25,13 @@ public final class PerformanceCounterConfigurationResponse {
         this.samplingPeriod = samplingPeriod;
     }
 
-    public Optional<String> getInstance() {
+    public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getSamplingPeriod() {
+    public String samplingPeriod() {
         return this.samplingPeriod;
     }
 

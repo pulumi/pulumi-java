@@ -24,7 +24,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="connectedGateway")
       private final @Nullable Output<String> connectedGateway;
 
-    public Output<String> getConnectedGateway() {
+    public Output<String> connectedGateway() {
         return this.connectedGateway == null ? Codegen.empty() : this.connectedGateway;
     }
 
@@ -35,7 +35,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -57,7 +57,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
+    public Output<Double> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -79,7 +79,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="segmentId")
       private final @Nullable Output<String> segmentId;
 
-    public Output<String> getSegmentId() {
+    public Output<String> segmentId() {
         return this.segmentId == null ? Codegen.empty() : this.segmentId;
     }
 
@@ -90,7 +90,7 @@ public final class WorkloadNetworkSegmentArgs extends com.pulumi.resources.Resou
     @Import(name="subnet")
       private final @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
-    public Output<WorkloadNetworkSegmentSubnetArgs> getSubnet() {
+    public Output<WorkloadNetworkSegmentSubnetArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

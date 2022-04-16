@@ -25,7 +25,7 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration e
     @Import(name="bounds")
       private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
-    public Optional<ExpressRouteGatewayPropertiesResponseBounds> getBounds() {
+    public Optional<ExpressRouteGatewayPropertiesResponseBounds> bounds() {
         return this.bounds == null ? Optional.empty() : Optional.ofNullable(this.bounds);
     }
 

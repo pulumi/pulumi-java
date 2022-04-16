@@ -34,14 +34,14 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
      * Resource ID of the virtual machine that is linked to this policy
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ports that were opened for the virtual machine
      * 
     */
-    public List<JitNetworkAccessRequestPortResponse> getPorts() {
+    public List<JitNetworkAccessRequestPortResponse> ports() {
         return this.ports;
     }
 

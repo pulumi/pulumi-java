@@ -28,7 +28,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions")
       private final @Nullable ConditionsResponse conditions;
 
-    public Optional<ConditionsResponse> getConditions() {
+    public Optional<ConditionsResponse> conditions() {
         return this.conditions == null ? Optional.empty() : Optional.ofNullable(this.conditions);
     }
 
@@ -39,7 +39,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdAt", required=true)
       private final String createdAt;
 
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
 
@@ -50,7 +50,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdBy", required=true)
       private final String createdBy;
 
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
 
@@ -61,7 +61,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -72,7 +72,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
 
@@ -83,7 +83,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
 
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
 
@@ -94,7 +94,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope")
       private final @Nullable ScopeResponse scope;
 
-    public Optional<ScopeResponse> getScope() {
+    public Optional<ScopeResponse> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
@@ -105,7 +105,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -116,7 +116,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="suppressionConfig", required=true)
       private final SuppressionConfigResponse suppressionConfig;
 
-    public SuppressionConfigResponse getSuppressionConfig() {
+    public SuppressionConfigResponse suppressionConfig() {
         return this.suppressionConfig;
     }
 
@@ -128,7 +128,7 @@ public final class SuppressionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

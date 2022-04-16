@@ -35,7 +35,7 @@ public final class MoveResourceDependencyOverrideResponse {
      * Gets or sets the ARM ID of the dependent resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -43,7 +43,7 @@ public final class MoveResourceDependencyOverrideResponse {
      * the dependent resource.
      * 
     */
-    public Optional<String> getTargetId() {
+    public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
 

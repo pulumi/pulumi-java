@@ -42,7 +42,7 @@ public class WorkspaceSetting extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class WorkspaceSetting extends com.pulumi.resources.CustomResource {
      * @return All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -70,7 +70,7 @@ public class WorkspaceSetting extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -84,7 +84,7 @@ public class WorkspaceSetting extends com.pulumi.resources.CustomResource {
      * @return The full Azure ID of the workspace to save the data in
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 

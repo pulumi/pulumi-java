@@ -29,7 +29,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identitySources")
       private final @Nullable Output<List<IdentitySourceArgs>> identitySources;
 
-    public Output<List<IdentitySourceArgs>> getIdentitySources() {
+    public Output<List<IdentitySourceArgs>> identitySources() {
         return this.identitySources == null ? Codegen.empty() : this.identitySources;
     }
 
@@ -40,7 +40,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="internet")
       private final @Nullable Output<Either<String,InternetEnum>> internet;
 
-    public Output<Either<String,InternetEnum>> getInternet() {
+    public Output<Either<String,InternetEnum>> internet() {
         return this.internet == null ? Codegen.empty() : this.internet;
     }
 
@@ -51,7 +51,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -62,7 +62,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managementCluster", required=true)
       private final Output<ManagementClusterArgs> managementCluster;
 
-    public Output<ManagementClusterArgs> getManagementCluster() {
+    public Output<ManagementClusterArgs> managementCluster() {
         return this.managementCluster;
     }
 
@@ -73,7 +73,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkBlock", required=true)
       private final Output<String> networkBlock;
 
-    public Output<String> getNetworkBlock() {
+    public Output<String> networkBlock() {
         return this.networkBlock;
     }
 
@@ -84,7 +84,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nsxtPassword")
       private final @Nullable Output<String> nsxtPassword;
 
-    public Output<String> getNsxtPassword() {
+    public Output<String> nsxtPassword() {
         return this.nsxtPassword == null ? Codegen.empty() : this.nsxtPassword;
     }
 
@@ -95,7 +95,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName")
       private final @Nullable Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName == null ? Codegen.empty() : this.privateCloudName;
     }
 
@@ -106,7 +106,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -128,7 +128,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -139,7 +139,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vcenterPassword")
       private final @Nullable Output<String> vcenterPassword;
 
-    public Output<String> getVcenterPassword() {
+    public Output<String> vcenterPassword() {
         return this.vcenterPassword == null ? Codegen.empty() : this.vcenterPassword;
     }
 

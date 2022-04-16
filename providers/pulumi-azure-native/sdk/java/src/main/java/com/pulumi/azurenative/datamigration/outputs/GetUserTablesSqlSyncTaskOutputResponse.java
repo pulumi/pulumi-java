@@ -50,28 +50,28 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
      * Mapping from database name to list of source tables
      * 
     */
-    public Map<String,List<DatabaseTableResponse>> getDatabasesToSourceTables() {
+    public Map<String,List<DatabaseTableResponse>> databasesToSourceTables() {
         return this.databasesToSourceTables;
     }
     /**
      * Mapping from database name to list of target tables
      * 
     */
-    public Map<String,List<DatabaseTableResponse>> getDatabasesToTargetTables() {
+    public Map<String,List<DatabaseTableResponse>> databasesToTargetTables() {
         return this.databasesToTargetTables;
     }
     /**
      * Mapping from database name to list of validation errors
      * 
     */
-    public Map<String,List<String>> getTableValidationErrors() {
+    public Map<String,List<String>> tableValidationErrors() {
         return this.tableValidationErrors;
     }
     /**
      * Validation errors
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

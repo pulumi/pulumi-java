@@ -19,7 +19,7 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
     @Import(name="ascLocation", required=true)
       private final String ascLocation;
 
-    public String getAscLocation() {
+    public String ascLocation() {
         return this.ascLocation;
     }
 
@@ -30,7 +30,7 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
     @Import(name="jitNetworkAccessPolicyName", required=true)
       private final String jitNetworkAccessPolicyName;
 
-    public String getJitNetworkAccessPolicyName() {
+    public String jitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName;
     }
 
@@ -41,7 +41,7 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

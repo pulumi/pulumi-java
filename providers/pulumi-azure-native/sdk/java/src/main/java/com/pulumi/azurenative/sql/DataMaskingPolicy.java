@@ -42,7 +42,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The list of the application principals. This is a legacy parameter and is no longer used.
      * 
      */
-    public Output<String> getApplicationPrincipals() {
+    public Output<String> applicationPrincipals() {
         return this.applicationPrincipals;
     }
     /**
@@ -56,7 +56,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The state of the data masking policy.
      * 
      */
-    public Output<String> getDataMaskingState() {
+    public Output<String> dataMaskingState() {
         return this.dataMaskingState;
     }
     /**
@@ -70,7 +70,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
      */
-    public Output</* @Nullable */ String> getExemptPrincipals() {
+    public Output</* @Nullable */ String> exemptPrincipals() {
         return this.exemptPrincipals;
     }
     /**
@@ -84,7 +84,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The kind of data masking policy. Metadata, used for Azure portal.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -98,7 +98,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The location of the data masking policy.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -112,7 +112,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return The masking level. This is a legacy parameter and is no longer used.
      * 
      */
-    public Output<String> getMaskingLevel() {
+    public Output<String> maskingLevel() {
         return this.maskingLevel;
     }
     /**
@@ -126,7 +126,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +140,7 @@ public class DataMaskingPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

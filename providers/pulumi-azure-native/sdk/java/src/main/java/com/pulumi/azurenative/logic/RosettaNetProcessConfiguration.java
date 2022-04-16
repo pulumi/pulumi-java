@@ -45,7 +45,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The RosettaNet process configuration activity settings.
      * 
      */
-    public Output<RosettaNetPipActivitySettingsResponse> getActivitySettings() {
+    public Output<RosettaNetPipActivitySettingsResponse> activitySettings() {
         return this.activitySettings;
     }
     /**
@@ -59,7 +59,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -73,7 +73,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -87,7 +87,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The integration account RosettaNet ProcessConfiguration properties.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -101,7 +101,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The RosettaNet initiator role settings.
      * 
      */
-    public Output<RosettaNetPipRoleSettingsResponse> getInitiatorRoleSettings() {
+    public Output<RosettaNetPipRoleSettingsResponse> initiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
     /**
@@ -115,7 +115,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -129,7 +129,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -143,7 +143,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +157,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The integration account RosettaNet process code.
      * 
      */
-    public Output<String> getProcessCode() {
+    public Output<String> processCode() {
         return this.processCode;
     }
     /**
@@ -171,7 +171,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The integration account RosettaNet process name.
      * 
      */
-    public Output<String> getProcessName() {
+    public Output<String> processName() {
         return this.processName;
     }
     /**
@@ -185,7 +185,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The integration account RosettaNet process version.
      * 
      */
-    public Output<String> getProcessVersion() {
+    public Output<String> processVersion() {
         return this.processVersion;
     }
     /**
@@ -199,7 +199,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The RosettaNet responder role settings.
      * 
      */
-    public Output<RosettaNetPipRoleSettingsResponse> getResponderRoleSettings() {
+    public Output<RosettaNetPipRoleSettingsResponse> responderRoleSettings() {
         return this.responderRoleSettings;
     }
     /**
@@ -213,7 +213,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -227,7 +227,7 @@ public class RosettaNetProcessConfiguration extends com.pulumi.resources.CustomR
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

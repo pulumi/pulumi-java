@@ -23,7 +23,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties")
       private final @Nullable Output<GatewayRouteConfigPropertiesArgs> properties;
 
-    public Output<GatewayRouteConfigPropertiesArgs> getProperties() {
+    public Output<GatewayRouteConfigPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="routeConfigName")
       private final @Nullable Output<String> routeConfigName;
 
-    public Output<String> getRouteConfigName() {
+    public Output<String> routeConfigName() {
         return this.routeConfigName == null ? Codegen.empty() : this.routeConfigName;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayRouteConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

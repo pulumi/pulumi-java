@@ -25,7 +25,7 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedHeaders", required=true)
       private final List<String> allowedHeaders;
 
-    public List<String> getAllowedHeaders() {
+    public List<String> allowedHeaders() {
         return this.allowedHeaders;
     }
 
@@ -36,7 +36,7 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedMethods", required=true)
       private final List<String> allowedMethods;
 
-    public List<String> getAllowedMethods() {
+    public List<String> allowedMethods() {
         return this.allowedMethods;
     }
 
@@ -47,7 +47,7 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedOrigins", required=true)
       private final List<String> allowedOrigins;
 
-    public List<String> getAllowedOrigins() {
+    public List<String> allowedOrigins() {
         return this.allowedOrigins;
     }
 
@@ -58,7 +58,7 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exposedHeaders", required=true)
       private final List<String> exposedHeaders;
 
-    public List<String> getExposedHeaders() {
+    public List<String> exposedHeaders() {
         return this.exposedHeaders;
     }
 
@@ -69,7 +69,7 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxAgeInSeconds", required=true)
       private final Integer maxAgeInSeconds;
 
-    public Integer getMaxAgeInSeconds() {
+    public Integer maxAgeInSeconds() {
         return this.maxAgeInSeconds;
     }
 

@@ -31,7 +31,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkApiVersion")
       private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
-    public Output<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
+    public Output<Either<String,NetworkApiVersion>> networkApiVersion() {
         return this.networkApiVersion == null ? Codegen.empty() : this.networkApiVersion;
     }
 
@@ -42,7 +42,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaceConfigurations")
       private final @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> getNetworkInterfaceConfigurations() {
+    public Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? Codegen.empty() : this.networkInterfaceConfigurations;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceReferenceArgs>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 

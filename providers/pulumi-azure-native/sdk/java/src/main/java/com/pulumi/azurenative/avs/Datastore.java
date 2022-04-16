@@ -44,7 +44,7 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return An iSCSI volume
      * 
      */
-    public Output</* @Nullable */ DiskPoolVolumeResponse> getDiskPoolVolume() {
+    public Output</* @Nullable */ DiskPoolVolumeResponse> diskPoolVolume() {
         return this.diskPoolVolume;
     }
     /**
@@ -58,7 +58,7 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return An Azure NetApp Files volume
      * 
      */
-    public Output</* @Nullable */ NetAppVolumeResponse> getNetAppVolume() {
+    public Output</* @Nullable */ NetAppVolumeResponse> netAppVolume() {
         return this.netAppVolume;
     }
     /**
@@ -86,7 +86,7 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return The state of the datastore provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class Datastore extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
     @Import(name="storageAccountKey")
       private final @Nullable String storageAccountKey;
 
-    public Optional<String> getStorageAccountKey() {
+    public Optional<String> storageAccountKey() {
         return this.storageAccountKey == null ? Optional.empty() : Optional.ofNullable(this.storageAccountKey);
     }
 
@@ -36,7 +36,7 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
     @Import(name="storageAccountName")
       private final @Nullable String storageAccountName;
 
-    public Optional<String> getStorageAccountName() {
+    public Optional<String> storageAccountName() {
         return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);
     }
 

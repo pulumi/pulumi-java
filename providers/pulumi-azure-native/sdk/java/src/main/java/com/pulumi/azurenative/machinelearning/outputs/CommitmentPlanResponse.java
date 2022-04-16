@@ -24,7 +24,7 @@ public final class CommitmentPlanResponse {
      * Specifies the Azure Resource Manager ID of the commitment plan associated with the web service.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

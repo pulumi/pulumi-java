@@ -25,7 +25,7 @@ public final class ExportExecutionListResultResponse {
      * A list of export executions.
      * 
     */
-    public List<ExportExecutionResponse> getValue() {
+    public List<ExportExecutionResponse> value() {
         return this.value;
     }
 

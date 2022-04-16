@@ -27,7 +27,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends com
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
-    public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointPropertyResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -38,7 +38,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends com
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
-    public Optional<ServerPrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<ServerPrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
@@ -49,7 +49,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends com
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

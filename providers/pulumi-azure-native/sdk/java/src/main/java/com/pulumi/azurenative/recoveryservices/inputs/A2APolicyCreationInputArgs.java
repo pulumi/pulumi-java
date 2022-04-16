@@ -29,7 +29,7 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
-    public Output<Integer> getAppConsistentFrequencyInMinutes() {
+    public Output<Integer> appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Codegen.empty() : this.appConsistentFrequencyInMinutes;
     }
 
@@ -40,7 +40,7 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
 
-    public Output<Integer> getCrashConsistentFrequencyInMinutes() {
+    public Output<Integer> crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Codegen.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
@@ -52,7 +52,7 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -63,7 +63,7 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="multiVmSyncStatus", required=true)
       private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
-    public Output<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
+    public Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus() {
         return this.multiVmSyncStatus;
     }
 
@@ -74,7 +74,7 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="recoveryPointHistory")
       private final @Nullable Output<Integer> recoveryPointHistory;
 
-    public Output<Integer> getRecoveryPointHistory() {
+    public Output<Integer> recoveryPointHistory() {
         return this.recoveryPointHistory == null ? Codegen.empty() : this.recoveryPointHistory;
     }
 

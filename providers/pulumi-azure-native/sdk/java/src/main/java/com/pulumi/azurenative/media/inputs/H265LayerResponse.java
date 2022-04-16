@@ -27,7 +27,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="adaptiveBFrame")
       private final @Nullable Boolean adaptiveBFrame;
 
-    public Optional<Boolean> getAdaptiveBFrame() {
+    public Optional<Boolean> adaptiveBFrame() {
         return this.adaptiveBFrame == null ? Optional.empty() : Optional.ofNullable(this.adaptiveBFrame);
     }
 
@@ -38,7 +38,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bFrames")
       private final @Nullable Integer bFrames;
 
-    public Optional<Integer> getBFrames() {
+    public Optional<Integer> bFrames() {
         return this.bFrames == null ? Optional.empty() : Optional.ofNullable(this.bFrames);
     }
 
@@ -49,7 +49,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bitrate", required=true)
       private final Integer bitrate;
 
-    public Integer getBitrate() {
+    public Integer bitrate() {
         return this.bitrate;
     }
 
@@ -60,7 +60,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bufferWindow")
       private final @Nullable String bufferWindow;
 
-    public Optional<String> getBufferWindow() {
+    public Optional<String> bufferWindow() {
         return this.bufferWindow == null ? Optional.empty() : Optional.ofNullable(this.bufferWindow);
     }
 
@@ -71,7 +71,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frameRate")
       private final @Nullable String frameRate;
 
-    public Optional<String> getFrameRate() {
+    public Optional<String> frameRate() {
         return this.frameRate == null ? Optional.empty() : Optional.ofNullable(this.frameRate);
     }
 
@@ -82,7 +82,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height")
       private final @Nullable String height;
 
-    public Optional<String> getHeight() {
+    public Optional<String> height() {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
     }
 
@@ -93,7 +93,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -104,7 +104,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="level")
       private final @Nullable String level;
 
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
@@ -115,7 +115,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxBitrate")
       private final @Nullable Integer maxBitrate;
 
-    public Optional<Integer> getMaxBitrate() {
+    public Optional<Integer> maxBitrate() {
         return this.maxBitrate == null ? Optional.empty() : Optional.ofNullable(this.maxBitrate);
     }
 
@@ -127,7 +127,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -138,7 +138,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="profile")
       private final @Nullable String profile;
 
-    public Optional<String> getProfile() {
+    public Optional<String> profile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
@@ -149,7 +149,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="referenceFrames")
       private final @Nullable Integer referenceFrames;
 
-    public Optional<Integer> getReferenceFrames() {
+    public Optional<Integer> referenceFrames() {
         return this.referenceFrames == null ? Optional.empty() : Optional.ofNullable(this.referenceFrames);
     }
 
@@ -160,7 +160,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="slices")
       private final @Nullable Integer slices;
 
-    public Optional<Integer> getSlices() {
+    public Optional<Integer> slices() {
         return this.slices == null ? Optional.empty() : Optional.ofNullable(this.slices);
     }
 
@@ -171,7 +171,7 @@ public final class H265LayerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width")
       private final @Nullable String width;
 
-    public Optional<String> getWidth() {
+    public Optional<String> width() {
         return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
     }
 

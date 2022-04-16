@@ -44,7 +44,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return The connection status with the Security Partner Provider.
      * 
      */
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus;
     }
     /**
@@ -58,7 +58,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +72,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -86,7 +86,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return The provisioning state of the Security Partner Provider resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +114,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return The security provider name.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityProviderName() {
+    public Output</* @Nullable */ String> securityProviderName() {
         return this.securityProviderName;
     }
     /**
@@ -128,7 +128,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -156,7 +156,7 @@ public class SecurityPartnerProvider extends com.pulumi.resources.CustomResource
      * @return The virtualHub to which the Security Partner Provider belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
+    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
         return this.virtualHub;
     }
 

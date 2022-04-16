@@ -28,7 +28,7 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -39,7 +39,7 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<Either<String,AutoScalingResourceMetricName>> name;
 
-    public Output<Either<String,AutoScalingResourceMetricName>> getName() {
+    public Output<Either<String,AutoScalingResourceMetricName>> name() {
         return this.name;
     }
 

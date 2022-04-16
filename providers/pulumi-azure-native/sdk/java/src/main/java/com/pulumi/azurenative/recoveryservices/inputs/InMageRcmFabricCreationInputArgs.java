@@ -27,7 +27,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="authCertificate")
       private final @Nullable Output<String> authCertificate;
 
-    public Output<String> getAuthCertificate() {
+    public Output<String> authCertificate() {
         return this.authCertificate == null ? Codegen.empty() : this.authCertificate;
     }
 
@@ -39,7 +39,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -50,7 +50,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="physicalSiteId")
       private final @Nullable Output<String> physicalSiteId;
 
-    public Output<String> getPhysicalSiteId() {
+    public Output<String> physicalSiteId() {
         return this.physicalSiteId == null ? Codegen.empty() : this.physicalSiteId;
     }
 
@@ -61,7 +61,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="sourceAgentIdentity")
       private final @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
 
-    public Output<IdentityProviderInputArgs> getSourceAgentIdentity() {
+    public Output<IdentityProviderInputArgs> sourceAgentIdentity() {
         return this.sourceAgentIdentity == null ? Codegen.empty() : this.sourceAgentIdentity;
     }
 
@@ -72,7 +72,7 @@ public final class InMageRcmFabricCreationInputArgs extends com.pulumi.resources
     @Import(name="vmwareSiteId")
       private final @Nullable Output<String> vmwareSiteId;
 
-    public Output<String> getVmwareSiteId() {
+    public Output<String> vmwareSiteId() {
         return this.vmwareSiteId == null ? Codegen.empty() : this.vmwareSiteId;
     }
 

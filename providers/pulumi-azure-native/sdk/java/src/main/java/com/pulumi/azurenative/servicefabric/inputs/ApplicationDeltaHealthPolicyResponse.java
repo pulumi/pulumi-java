@@ -27,7 +27,7 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
     @Import(name="defaultServiceTypeDeltaHealthPolicy")
       private final @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
 
-    public Optional<ServiceTypeDeltaHealthPolicyResponse> getDefaultServiceTypeDeltaHealthPolicy() {
+    public Optional<ServiceTypeDeltaHealthPolicyResponse> defaultServiceTypeDeltaHealthPolicy() {
         return this.defaultServiceTypeDeltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
     @Import(name="serviceTypeDeltaHealthPolicies")
       private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
-    public Map<String,ServiceTypeDeltaHealthPolicyResponse> getServiceTypeDeltaHealthPolicies() {
+    public Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies() {
         return this.serviceTypeDeltaHealthPolicies == null ? Map.of() : this.serviceTypeDeltaHealthPolicies;
     }
 

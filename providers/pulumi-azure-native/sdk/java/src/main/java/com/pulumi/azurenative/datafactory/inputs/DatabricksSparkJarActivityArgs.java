@@ -33,7 +33,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -44,7 +44,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,7 +55,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="libraries")
       private final @Nullable Output<List<Map<String,Object>>> libraries;
 
-    public Output<List<Map<String,Object>>> getLibraries() {
+    public Output<List<Map<String,Object>>> libraries() {
         return this.libraries == null ? Codegen.empty() : this.libraries;
     }
 
@@ -66,7 +66,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -77,7 +77,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="mainClassName", required=true)
       private final Output<Object> mainClassName;
 
-    public Output<Object> getMainClassName() {
+    public Output<Object> mainClassName() {
         return this.mainClassName;
     }
 
@@ -88,7 +88,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -99,7 +99,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="parameters")
       private final @Nullable Output<List<Object>> parameters;
 
-    public Output<List<Object>> getParameters() {
+    public Output<List<Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -110,7 +110,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -122,7 +122,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -133,7 +133,7 @@ public final class DatabricksSparkJarActivityArgs extends com.pulumi.resources.R
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

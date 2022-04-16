@@ -26,7 +26,7 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentVersion")
       private final @Nullable Output<String> contentVersion;
 
-    public Output<String> getContentVersion() {
+    public Output<String> contentVersion() {
         return this.contentVersion == null ? Codegen.empty() : this.contentVersion;
     }
 
@@ -37,7 +37,7 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -48,7 +48,7 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -59,7 +59,7 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
-    public Output<String> getRelativePath() {
+    public Output<String> relativePath() {
         return this.relativePath == null ? Codegen.empty() : this.relativePath;
     }
 
@@ -70,7 +70,7 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

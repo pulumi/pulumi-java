@@ -26,7 +26,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="companyName", required=true)
       private final Output<String> companyName;
 
-    public Output<String> getCompanyName() {
+    public Output<String> companyName() {
         return this.companyName;
     }
 
@@ -37,7 +37,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contactPerson", required=true)
       private final Output<String> contactPerson;
 
-    public Output<String> getContactPerson() {
+    public Output<String> contactPerson() {
         return this.contactPerson;
     }
 
@@ -48,7 +48,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="emailList", required=true)
       private final Output<List<String>> emailList;
 
-    public Output<List<String>> getEmailList() {
+    public Output<List<String>> emailList() {
         return this.emailList;
     }
 
@@ -59,7 +59,7 @@ public final class ContactDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="phone", required=true)
       private final Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone;
     }
 

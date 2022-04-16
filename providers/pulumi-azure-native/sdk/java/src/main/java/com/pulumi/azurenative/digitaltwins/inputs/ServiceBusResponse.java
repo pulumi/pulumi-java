@@ -25,7 +25,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -36,7 +36,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable String deadLetterSecret;
 
-    public Optional<String> getDeadLetterSecret() {
+    public Optional<String> deadLetterSecret() {
         return this.deadLetterSecret == null ? Optional.empty() : Optional.ofNullable(this.deadLetterSecret);
     }
 
@@ -58,7 +58,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterUri")
       private final @Nullable String deadLetterUri;
 
-    public Optional<String> getDeadLetterUri() {
+    public Optional<String> deadLetterUri() {
         return this.deadLetterUri == null ? Optional.empty() : Optional.ofNullable(this.deadLetterUri);
     }
 
@@ -70,7 +70,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointType", required=true)
       private final String endpointType;
 
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
 
@@ -81,7 +81,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
     }
 
@@ -92,7 +92,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="entityPath")
       private final @Nullable String entityPath;
 
-    public Optional<String> getEntityPath() {
+    public Optional<String> entityPath() {
         return this.entityPath == null ? Optional.empty() : Optional.ofNullable(this.entityPath);
     }
 
@@ -103,7 +103,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryConnectionString")
       private final @Nullable String primaryConnectionString;
 
-    public Optional<String> getPrimaryConnectionString() {
+    public Optional<String> primaryConnectionString() {
         return this.primaryConnectionString == null ? Optional.empty() : Optional.ofNullable(this.primaryConnectionString);
     }
 
@@ -114,7 +114,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -125,7 +125,7 @@ public final class ServiceBusResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="secondaryConnectionString")
       private final @Nullable String secondaryConnectionString;
 
-    public Optional<String> getSecondaryConnectionString() {
+    public Optional<String> secondaryConnectionString() {
         return this.secondaryConnectionString == null ? Optional.empty() : Optional.ofNullable(this.secondaryConnectionString);
     }
 

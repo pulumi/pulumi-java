@@ -17,21 +17,21 @@ public final class SparkMavenPackageResponse extends com.pulumi.resources.Invoke
     @Import(name="artifact")
       private final @Nullable String artifact;
 
-    public Optional<String> getArtifact() {
+    public Optional<String> artifact() {
         return this.artifact == null ? Optional.empty() : Optional.ofNullable(this.artifact);
     }
 
     @Import(name="group")
       private final @Nullable String group;
 
-    public Optional<String> getGroup() {
+    public Optional<String> group() {
         return this.group == null ? Optional.empty() : Optional.ofNullable(this.group);
     }
 
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

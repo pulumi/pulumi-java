@@ -44,7 +44,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return Gets the creation date and time of the encryption scope in UTC.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -58,7 +58,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
      * 
      */
-    public Output</* @Nullable */ EncryptionScopeKeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Output</* @Nullable */ EncryptionScopeKeyVaultPropertiesResponse> keyVaultProperties() {
         return this.keyVaultProperties;
     }
     /**
@@ -72,7 +72,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return Gets the last modification date and time of the encryption scope in UTC.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -86,7 +86,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequireInfrastructureEncryption() {
+    public Output</* @Nullable */ Boolean> requireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption;
     }
     /**
@@ -114,7 +114,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
      * 
      */
-    public Output</* @Nullable */ String> getSource() {
+    public Output</* @Nullable */ String> source() {
         return this.source;
     }
     /**
@@ -128,7 +128,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -142,7 +142,7 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

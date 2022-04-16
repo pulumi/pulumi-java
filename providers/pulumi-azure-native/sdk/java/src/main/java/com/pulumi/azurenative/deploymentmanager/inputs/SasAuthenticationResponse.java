@@ -23,7 +23,7 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="sasUri", required=true)
       private final String sasUri;
 
-    public String getSasUri() {
+    public String sasUri() {
         return this.sasUri;
     }
 
@@ -35,7 +35,7 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

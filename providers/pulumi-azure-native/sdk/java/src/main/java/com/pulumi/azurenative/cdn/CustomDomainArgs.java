@@ -22,7 +22,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomainName")
       private final @Nullable Output<String> customDomainName;
 
-    public Output<String> getCustomDomainName() {
+    public Output<String> customDomainName() {
         return this.customDomainName == null ? Codegen.empty() : this.customDomainName;
     }
 
@@ -33,7 +33,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -44,7 +44,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -55,7 +55,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -66,7 +66,7 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

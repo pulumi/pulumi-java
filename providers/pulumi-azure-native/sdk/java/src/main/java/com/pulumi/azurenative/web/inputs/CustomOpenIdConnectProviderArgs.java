@@ -28,7 +28,7 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     @Import(name="login")
       private final @Nullable Output<OpenIdConnectLoginArgs> login;
 
-    public Output<OpenIdConnectLoginArgs> getLogin() {
+    public Output<OpenIdConnectLoginArgs> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -50,7 +50,7 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     @Import(name="registration")
       private final @Nullable Output<OpenIdConnectRegistrationArgs> registration;
 
-    public Output<OpenIdConnectRegistrationArgs> getRegistration() {
+    public Output<OpenIdConnectRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 

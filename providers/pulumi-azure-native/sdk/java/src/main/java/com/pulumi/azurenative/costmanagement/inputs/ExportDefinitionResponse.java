@@ -27,7 +27,7 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataSet")
       private final @Nullable ExportDatasetResponse dataSet;
 
-    public Optional<ExportDatasetResponse> getDataSet() {
+    public Optional<ExportDatasetResponse> dataSet() {
         return this.dataSet == null ? Optional.empty() : Optional.ofNullable(this.dataSet);
     }
 
@@ -38,7 +38,7 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="timePeriod")
       private final @Nullable ExportTimePeriodResponse timePeriod;
 
-    public Optional<ExportTimePeriodResponse> getTimePeriod() {
+    public Optional<ExportTimePeriodResponse> timePeriod() {
         return this.timePeriod == null ? Optional.empty() : Optional.ofNullable(this.timePeriod);
     }
 
@@ -49,7 +49,7 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="timeframe", required=true)
       private final String timeframe;
 
-    public String getTimeframe() {
+    public String timeframe() {
         return this.timeframe;
     }
 
@@ -60,7 +60,7 @@ public final class ExportDefinitionResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

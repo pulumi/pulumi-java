@@ -62,42 +62,42 @@ public final class SyncPropertiesResponse {
      * The gateway endpoint used by the connected registry to communicate with its parent.
      * 
     */
-    public String getGatewayEndpoint() {
+    public String gatewayEndpoint() {
         return this.gatewayEndpoint;
     }
     /**
      * The last time a sync occurred between the connected registry and its parent.
      * 
     */
-    public String getLastSyncTime() {
+    public String lastSyncTime() {
         return this.lastSyncTime;
     }
     /**
      * The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
      * 
     */
-    public String getMessageTtl() {
+    public String messageTtl() {
         return this.messageTtl;
     }
     /**
      * The cron expression indicating the schedule that the connected registry will sync with its parent.
      * 
     */
-    public Optional<String> getSchedule() {
+    public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
      * 
     */
-    public Optional<String> getSyncWindow() {
+    public Optional<String> syncWindow() {
         return Optional.ofNullable(this.syncWindow);
     }
     /**
      * The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
      * 
     */
-    public String getTokenId() {
+    public String tokenId() {
         return this.tokenId;
     }
 

@@ -27,7 +27,7 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="autoscaleSettings")
       private final @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
 
-    public Output<AutoscaleSettingsArgs> getAutoscaleSettings() {
+    public Output<AutoscaleSettingsArgs> autoscaleSettings() {
         return this.autoscaleSettings == null ? Codegen.empty() : this.autoscaleSettings;
     }
 
@@ -38,7 +38,7 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
-    public Output<Integer> getThroughput() {
+    public Output<Integer> throughput() {
         return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 

@@ -26,7 +26,7 @@ public final class AzureStaticWebAppsRegistrationArgs extends com.pulumi.resourc
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 

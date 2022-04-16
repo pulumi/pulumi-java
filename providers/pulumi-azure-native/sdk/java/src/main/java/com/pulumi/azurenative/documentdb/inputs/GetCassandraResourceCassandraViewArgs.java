@@ -19,7 +19,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
     @Import(name="keyspaceName", required=true)
       private final String keyspaceName;
 
-    public String getKeyspaceName() {
+    public String keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
     @Import(name="viewName", required=true)
       private final String viewName;
 
-    public String getViewName() {
+    public String viewName() {
         return this.viewName;
     }
 

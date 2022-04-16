@@ -24,7 +24,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="agentVersionExpiryDate", required=true)
       private final String agentVersionExpiryDate;
 
-    public String getAgentVersionExpiryDate() {
+    public String agentVersionExpiryDate() {
         return this.agentVersionExpiryDate;
     }
 
@@ -35,7 +35,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="driverVersion", required=true)
       private final String driverVersion;
 
-    public String getDriverVersion() {
+    public String driverVersion() {
         return this.driverVersion;
     }
 
@@ -46,7 +46,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="driverVersionExpiryDate", required=true)
       private final String driverVersionExpiryDate;
 
-    public String getDriverVersionExpiryDate() {
+    public String driverVersionExpiryDate() {
         return this.driverVersionExpiryDate;
     }
 
@@ -57,7 +57,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="isUpgradeable", required=true)
       private final String isUpgradeable;
 
-    public String getIsUpgradeable() {
+    public String isUpgradeable() {
         return this.isUpgradeable;
     }
 
@@ -68,7 +68,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
 
@@ -79,7 +79,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="latestUpgradableVersionWithoutReboot", required=true)
       private final String latestUpgradableVersionWithoutReboot;
 
-    public String getLatestUpgradableVersionWithoutReboot() {
+    public String latestUpgradableVersionWithoutReboot() {
         return this.latestUpgradableVersionWithoutReboot;
     }
 
@@ -90,7 +90,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="latestVersion", required=true)
       private final String latestVersion;
 
-    public String getLatestVersion() {
+    public String latestVersion() {
         return this.latestVersion;
     }
 
@@ -101,7 +101,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="reasonsBlockingUpgrade", required=true)
       private final List<String> reasonsBlockingUpgrade;
 
-    public List<String> getReasonsBlockingUpgrade() {
+    public List<String> reasonsBlockingUpgrade() {
         return this.reasonsBlockingUpgrade;
     }
 
@@ -112,7 +112,7 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

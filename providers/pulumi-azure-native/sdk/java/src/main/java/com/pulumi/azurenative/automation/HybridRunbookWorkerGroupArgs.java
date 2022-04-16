@@ -23,7 +23,7 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -34,7 +34,7 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="credential")
       private final @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential;
 
-    public Output<RunAsCredentialAssociationPropertyArgs> getCredential() {
+    public Output<RunAsCredentialAssociationPropertyArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -45,7 +45,7 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="hybridRunbookWorkerGroupName")
       private final @Nullable Output<String> hybridRunbookWorkerGroupName;
 
-    public Output<String> getHybridRunbookWorkerGroupName() {
+    public Output<String> hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName == null ? Codegen.empty() : this.hybridRunbookWorkerGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class HybridRunbookWorkerGroupArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

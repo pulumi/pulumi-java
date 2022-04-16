@@ -28,7 +28,7 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="days")
       private final @Nullable Output<List<DaysOfWeek>> days;
 
-    public Output<List<DaysOfWeek>> getDays() {
+    public Output<List<DaysOfWeek>> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -39,7 +39,7 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="timeAndCapacity")
       private final @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
-    public Output<AutoscaleTimeAndCapacityArgs> getTimeAndCapacity() {
+    public Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity() {
         return this.timeAndCapacity == null ? Codegen.empty() : this.timeAndCapacity;
     }
 

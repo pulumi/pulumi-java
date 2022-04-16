@@ -29,7 +29,7 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -40,7 +40,7 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<AccountEncryptionArgs> encryption;
 
-    public Output<AccountEncryptionArgs> getEncryption() {
+    public Output<AccountEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -51,7 +51,7 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<MediaServiceIdentityArgs> identity;
 
-    public Output<MediaServiceIdentityArgs> getIdentity() {
+    public Output<MediaServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -62,7 +62,7 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,14 +84,14 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccounts")
       private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
-    public Output<List<StorageAccountArgs>> getStorageAccounts() {
+    public Output<List<StorageAccountArgs>> storageAccounts() {
         return this.storageAccounts == null ? Codegen.empty() : this.storageAccounts;
     }
 
     @Import(name="storageAuthentication")
       private final @Nullable Output<Either<String,StorageAuthentication>> storageAuthentication;
 
-    public Output<Either<String,StorageAuthentication>> getStorageAuthentication() {
+    public Output<Either<String,StorageAuthentication>> storageAuthentication() {
         return this.storageAuthentication == null ? Codegen.empty() : this.storageAuthentication;
     }
 
@@ -102,7 +102,7 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

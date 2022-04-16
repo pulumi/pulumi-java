@@ -29,7 +29,7 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customFragment")
       private final @Nullable Output<String> customFragment;
 
-    public Output<String> getCustomFragment() {
+    public Output<String> customFragment() {
         return this.customFragment == null ? Codegen.empty() : this.customFragment;
     }
 
@@ -40,7 +40,7 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customHostname")
       private final @Nullable Output<String> customHostname;
 
-    public Output<String> getCustomHostname() {
+    public Output<String> customHostname() {
         return this.customHostname == null ? Codegen.empty() : this.customHostname;
     }
 
@@ -51,7 +51,7 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customPath")
       private final @Nullable Output<String> customPath;
 
-    public Output<String> getCustomPath() {
+    public Output<String> customPath() {
         return this.customPath == null ? Codegen.empty() : this.customPath;
     }
 
@@ -62,7 +62,7 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="customQueryString")
       private final @Nullable Output<String> customQueryString;
 
-    public Output<String> getCustomQueryString() {
+    public Output<String> customQueryString() {
         return this.customQueryString == null ? Codegen.empty() : this.customQueryString;
     }
 
@@ -73,14 +73,14 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="destinationProtocol")
       private final @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
 
-    public Output<Either<String,DestinationProtocol>> getDestinationProtocol() {
+    public Output<Either<String,DestinationProtocol>> destinationProtocol() {
         return this.destinationProtocol == null ? Codegen.empty() : this.destinationProtocol;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -91,7 +91,7 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
     @Import(name="redirectType", required=true)
       private final Output<Either<String,RedirectType>> redirectType;
 
-    public Output<Either<String,RedirectType>> getRedirectType() {
+    public Output<Either<String,RedirectType>> redirectType() {
         return this.redirectType;
     }
 

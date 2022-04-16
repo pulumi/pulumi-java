@@ -23,7 +23,7 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
     @Import(name="justification")
       private final @Nullable String justification;
 
-    public Optional<String> getJustification() {
+    public Optional<String> justification() {
         return this.justification == null ? Optional.empty() : Optional.ofNullable(this.justification);
     }
 
@@ -34,7 +34,7 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
     @Import(name="requestor", required=true)
       private final String requestor;
 
-    public String getRequestor() {
+    public String requestor() {
         return this.requestor;
     }
 
@@ -45,14 +45,14 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
     @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
 
-    public String getStartTimeUtc() {
+    public String startTimeUtc() {
         return this.startTimeUtc;
     }
 
     @Import(name="virtualMachines", required=true)
       private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
-    public List<JitNetworkAccessRequestVirtualMachineResponse> getVirtualMachines() {
+    public List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines() {
         return this.virtualMachines;
     }
 

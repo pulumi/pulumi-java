@@ -24,7 +24,7 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -35,7 +35,7 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
       private final List<ODataErrorResponse> details;
 
-    public List<ODataErrorResponse> getDetails() {
+    public List<ODataErrorResponse> details() {
         return this.details;
     }
 
@@ -46,7 +46,7 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

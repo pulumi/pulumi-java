@@ -137,112 +137,112 @@ public final class RecoveryServicesProviderPropertiesResponse {
      * The scenarios allowed on this provider.
      * 
     */
-    public List<String> getAllowedScenarios() {
+    public List<String> allowedScenarios() {
         return this.allowedScenarios == null ? List.of() : this.allowedScenarios;
     }
     /**
      * The authentication identity details.
      * 
     */
-    public Optional<IdentityProviderDetailsResponse> getAuthenticationIdentityDetails() {
+    public Optional<IdentityProviderDetailsResponse> authenticationIdentityDetails() {
         return Optional.ofNullable(this.authenticationIdentityDetails);
     }
     /**
      * A value indicating whether DRA is responsive.
      * 
     */
-    public Optional<String> getConnectionStatus() {
+    public Optional<String> connectionStatus() {
         return Optional.ofNullable(this.connectionStatus);
     }
     /**
      * The DRA Id.
      * 
     */
-    public Optional<String> getDraIdentifier() {
+    public Optional<String> draIdentifier() {
         return Optional.ofNullable(this.draIdentifier);
     }
     /**
      * The fabric friendly name.
      * 
     */
-    public Optional<String> getFabricFriendlyName() {
+    public Optional<String> fabricFriendlyName() {
         return Optional.ofNullable(this.fabricFriendlyName);
     }
     /**
      * Type of the site.
      * 
     */
-    public Optional<String> getFabricType() {
+    public Optional<String> fabricType() {
         return Optional.ofNullable(this.fabricType);
     }
     /**
      * Friendly name of the DRA.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The recovery services provider health error details.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrorDetails() {
+    public List<HealthErrorResponse> healthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
     /**
      * Time when last heartbeat was sent by the DRA.
      * 
     */
-    public Optional<String> getLastHeartBeat() {
+    public Optional<String> lastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
     /**
      * Number of protected VMs currently managed by the DRA.
      * 
     */
-    public Optional<Integer> getProtectedItemCount() {
+    public Optional<Integer> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
      * The provider version.
      * 
     */
-    public Optional<String> getProviderVersion() {
+    public Optional<String> providerVersion() {
         return Optional.ofNullable(this.providerVersion);
     }
     /**
      * The provider version details.
      * 
     */
-    public Optional<VersionDetailsResponse> getProviderVersionDetails() {
+    public Optional<VersionDetailsResponse> providerVersionDetails() {
         return Optional.ofNullable(this.providerVersionDetails);
     }
     /**
      * Expiry date of the version.
      * 
     */
-    public Optional<String> getProviderVersionExpiryDate() {
+    public Optional<String> providerVersionExpiryDate() {
         return Optional.ofNullable(this.providerVersionExpiryDate);
     }
     /**
      * DRA version status.
      * 
     */
-    public Optional<String> getProviderVersionState() {
+    public Optional<String> providerVersionState() {
         return Optional.ofNullable(this.providerVersionState);
     }
     /**
      * The resource access identity details.
      * 
     */
-    public Optional<IdentityProviderDetailsResponse> getResourceAccessIdentityDetails() {
+    public Optional<IdentityProviderDetailsResponse> resourceAccessIdentityDetails() {
         return Optional.ofNullable(this.resourceAccessIdentityDetails);
     }
     /**
      * The fabric provider.
      * 
     */
-    public Optional<String> getServerVersion() {
+    public Optional<String> serverVersion() {
         return Optional.ofNullable(this.serverVersion);
     }
 

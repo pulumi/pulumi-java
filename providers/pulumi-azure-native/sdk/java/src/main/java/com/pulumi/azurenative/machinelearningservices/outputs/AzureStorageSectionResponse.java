@@ -124,101 +124,101 @@ public final class AzureStorageSectionResponse {
      *  Storage Account Key (Deprecated).
      * 
     */
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * Storage Account Name.
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
      * 
     */
-    public Optional<Boolean> getAreWorkspaceManagedIdentitiesAllowed() {
+    public Optional<Boolean> areWorkspaceManagedIdentitiesAllowed() {
         return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
     /**
      *  If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).
      * 
     */
-    public Optional<Integer> getBlobCacheTimeout() {
+    public Optional<Integer> blobCacheTimeout() {
         return Optional.ofNullable(this.blobCacheTimeout);
     }
-    public Optional<ClientCredentialsResponse> getClientCredentials() {
+    public Optional<ClientCredentialsResponse> clientCredentials() {
         return Optional.ofNullable(this.clientCredentials);
     }
     /**
      * The storage container name.
      * 
     */
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * The credential.
      * 
     */
-    public Optional<String> getCredential() {
+    public Optional<String> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      *  The credential type.
      * 
     */
-    public Optional<String> getCredentialType() {
+    public Optional<String> credentialType() {
         return Optional.ofNullable(this.credentialType);
     }
     /**
      * The host of the container.
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * Indicate if we are using SAS token or Account Key (Deprecated).
      * 
     */
-    public Optional<Boolean> getIsSas() {
+    public Optional<Boolean> isSas() {
         return Optional.ofNullable(this.isSas);
     }
     /**
      * The protocol to use. Defaults to https.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Resource Group.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      *  SAS Token for the container (Deprecated).
      * 
     */
-    public Optional<String> getSasToken() {
+    public Optional<String> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
      * 
     */
-    public Optional<String> getServiceDataAccessAuthIdentity() {
+    public Optional<String> serviceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
      * Subscription ID.
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 

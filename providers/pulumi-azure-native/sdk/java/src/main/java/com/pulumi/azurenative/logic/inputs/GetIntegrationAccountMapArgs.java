@@ -19,7 +19,7 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
     @Import(name="mapName", required=true)
       private final String mapName;
 
-    public String getMapName() {
+    public String mapName() {
         return this.mapName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationAccountMapArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

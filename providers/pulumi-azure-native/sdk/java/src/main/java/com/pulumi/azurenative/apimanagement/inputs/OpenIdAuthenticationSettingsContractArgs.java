@@ -29,7 +29,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
     @Import(name="bearerTokenSendingMethods")
       private final @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
-    public Output<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
+    public Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? Codegen.empty() : this.bearerTokenSendingMethods;
     }
 
@@ -40,7 +40,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends com.pulumi.r
     @Import(name="openidProviderId")
       private final @Nullable Output<String> openidProviderId;
 
-    public Output<String> getOpenidProviderId() {
+    public Output<String> openidProviderId() {
         return this.openidProviderId == null ? Codegen.empty() : this.openidProviderId;
     }
 

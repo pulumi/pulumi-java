@@ -54,7 +54,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The address prefix for the subnet.
      * 
      */
-    public Output</* @Nullable */ String> getAddressPrefix() {
+    public Output</* @Nullable */ String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -68,7 +68,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return List of address prefixes for the subnet.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAddressPrefixes() {
+    public Output</* @Nullable */ List<String>> addressPrefixes() {
         return this.addressPrefixes;
     }
     /**
@@ -82,7 +82,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Application gateway IP configurations of virtual network resource.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> getApplicationGatewayIpConfigurations() {
+    public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> applicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations;
     }
     /**
@@ -96,7 +96,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of references to the delegations on the subnet.
      * 
      */
-    public Output</* @Nullable */ List<DelegationResponse>> getDelegations() {
+    public Output</* @Nullable */ List<DelegationResponse>> delegations() {
         return this.delegations;
     }
     /**
@@ -110,7 +110,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -124,7 +124,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Array of IpAllocation which reference this subnet.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> getIpAllocations() {
+    public Output</* @Nullable */ List<SubResourceResponse>> ipAllocations() {
         return this.ipAllocations;
     }
     /**
@@ -138,7 +138,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Array of IP configuration profiles which reference this subnet.
      * 
      */
-    public Output<List<IPConfigurationProfileResponse>> getIpConfigurationProfiles() {
+    public Output<List<IPConfigurationProfileResponse>> ipConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
     /**
@@ -152,7 +152,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of references to the network interface IP configurations using subnet.
      * 
      */
-    public Output<List<IPConfigurationResponse>> getIpConfigurations() {
+    public Output<List<IPConfigurationResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -166,7 +166,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -180,7 +180,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Nat gateway associated with this subnet.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getNatGateway() {
+    public Output</* @Nullable */ SubResourceResponse> natGateway() {
         return this.natGateway;
     }
     /**
@@ -194,7 +194,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The reference to the NetworkSecurityGroup resource.
      * 
      */
-    public Output</* @Nullable */ NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
+    public Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup() {
         return this.networkSecurityGroup;
     }
     /**
@@ -208,7 +208,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Enable or Disable apply network policies on private end point in the subnet.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateEndpointNetworkPolicies() {
+    public Output</* @Nullable */ String> privateEndpointNetworkPolicies() {
         return this.privateEndpointNetworkPolicies;
     }
     /**
@@ -222,7 +222,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of references to private endpoints.
      * 
      */
-    public Output<List<PrivateEndpointResponse>> getPrivateEndpoints() {
+    public Output<List<PrivateEndpointResponse>> privateEndpoints() {
         return this.privateEndpoints;
     }
     /**
@@ -236,7 +236,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Enable or Disable apply network policies on private link service in the subnet.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkServiceNetworkPolicies() {
+    public Output</* @Nullable */ String> privateLinkServiceNetworkPolicies() {
         return this.privateLinkServiceNetworkPolicies;
     }
     /**
@@ -250,7 +250,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the subnet resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -264,7 +264,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
      * 
      */
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose;
     }
     /**
@@ -278,7 +278,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of references to the external resources using subnet.
      * 
      */
-    public Output<List<ResourceNavigationLinkResponse>> getResourceNavigationLinks() {
+    public Output<List<ResourceNavigationLinkResponse>> resourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
     /**
@@ -292,7 +292,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return The reference to the RouteTable resource.
      * 
      */
-    public Output</* @Nullable */ RouteTableResponse> getRouteTable() {
+    public Output</* @Nullable */ RouteTableResponse> routeTable() {
         return this.routeTable;
     }
     /**
@@ -306,7 +306,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of references to services injecting into this subnet.
      * 
      */
-    public Output<List<ServiceAssociationLinkResponse>> getServiceAssociationLinks() {
+    public Output<List<ServiceAssociationLinkResponse>> serviceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
     /**
@@ -320,7 +320,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of service endpoint policies.
      * 
      */
-    public Output</* @Nullable */ List<ServiceEndpointPolicyResponse>> getServiceEndpointPolicies() {
+    public Output</* @Nullable */ List<ServiceEndpointPolicyResponse>> serviceEndpointPolicies() {
         return this.serviceEndpointPolicies;
     }
     /**
@@ -334,7 +334,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return An array of service endpoints.
      * 
      */
-    public Output</* @Nullable */ List<ServiceEndpointPropertiesFormatResponse>> getServiceEndpoints() {
+    public Output</* @Nullable */ List<ServiceEndpointPropertiesFormatResponse>> serviceEndpoints() {
         return this.serviceEndpoints;
     }
     /**
@@ -348,7 +348,7 @@ public class Subnet extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

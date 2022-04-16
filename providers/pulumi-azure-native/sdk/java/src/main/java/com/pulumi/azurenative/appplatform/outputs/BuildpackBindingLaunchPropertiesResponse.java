@@ -34,14 +34,14 @@ public final class BuildpackBindingLaunchPropertiesResponse {
      * Non-sensitive properties for launchProperties
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Sensitive properties for launchProperties
      * 
     */
-    public Map<String,String> getSecrets() {
+    public Map<String,String> secrets() {
         return this.secrets == null ? Map.of() : this.secrets;
     }
 

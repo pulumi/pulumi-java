@@ -25,7 +25,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="jobCategory", required=true)
       private final String jobCategory;
 
-    public String getJobCategory() {
+    public String jobCategory() {
         return this.jobCategory;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="jobOwner", required=true)
       private final String jobOwner;
 
-    public String getJobOwner() {
+    public String jobOwner() {
         return this.jobOwner;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="lastExecutedOn", required=true)
       private final String lastExecutedOn;
 
-    public String getLastExecutedOn() {
+    public String lastExecutedOn() {
         return this.lastExecutedOn;
     }
 
@@ -80,7 +80,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="migrationEligibility", required=true)
       private final MigrationEligibilityInfoResponse migrationEligibility;
 
-    public MigrationEligibilityInfoResponse getMigrationEligibility() {
+    public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
 
@@ -91,7 +91,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -103,7 +103,7 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

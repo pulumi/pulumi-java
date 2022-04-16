@@ -33,14 +33,14 @@ public final class TrafficSelectorPolicyResponse {
      * A collection of local address spaces in CIDR format.
      * 
     */
-    public List<String> getLocalAddressRanges() {
+    public List<String> localAddressRanges() {
         return this.localAddressRanges;
     }
     /**
      * A collection of remote address spaces in CIDR format.
      * 
     */
-    public List<String> getRemoteAddressRanges() {
+    public List<String> remoteAddressRanges() {
         return this.remoteAddressRanges;
     }
 

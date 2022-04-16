@@ -28,7 +28,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="creationTime", required=true)
       private final String creationTime;
 
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
 
@@ -39,7 +39,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
@@ -50,7 +50,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="instanceSize")
       private final @Nullable String instanceSize;
 
-    public Optional<String> getInstanceSize() {
+    public Optional<String> instanceSize() {
         return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
     }
 
@@ -61,7 +61,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="locations", required=true)
       private final List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations;
 
-    public List<SqlDedicatedGatewayRegionalServiceResourceResponse> getLocations() {
+    public List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations() {
         return this.locations;
     }
 
@@ -73,7 +73,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="serviceType", required=true)
       private final String serviceType;
 
-    public String getServiceType() {
+    public String serviceType() {
         return this.serviceType;
     }
 
@@ -84,7 +84,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="sqlDedicatedGatewayEndpoint")
       private final @Nullable String sqlDedicatedGatewayEndpoint;
 
-    public Optional<String> getSqlDedicatedGatewayEndpoint() {
+    public Optional<String> sqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint == null ? Optional.empty() : Optional.ofNullable(this.sqlDedicatedGatewayEndpoint);
     }
 
@@ -95,7 +95,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

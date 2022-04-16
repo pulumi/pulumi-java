@@ -31,7 +31,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="agentDetails", required=true)
       private final List<AgentDetailsResponse> agentDetails;
 
-    public List<AgentDetailsResponse> getAgentDetails() {
+    public List<AgentDetailsResponse> agentDetails() {
         return this.agentDetails;
     }
 
@@ -42,7 +42,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="controlPlaneUri", required=true)
       private final String controlPlaneUri;
 
-    public String getControlPlaneUri() {
+    public String controlPlaneUri() {
         return this.controlPlaneUri;
     }
 
@@ -53,7 +53,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="dataPlaneUri", required=true)
       private final String dataPlaneUri;
 
-    public String getDataPlaneUri() {
+    public String dataPlaneUri() {
         return this.dataPlaneUri;
     }
 
@@ -64,7 +64,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="dras", required=true)
       private final List<DraDetailsResponse> dras;
 
-    public List<DraDetailsResponse> getDras() {
+    public List<DraDetailsResponse> dras() {
         return this.dras;
     }
 
@@ -76,7 +76,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -87,7 +87,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="physicalSiteId", required=true)
       private final String physicalSiteId;
 
-    public String getPhysicalSiteId() {
+    public String physicalSiteId() {
         return this.physicalSiteId;
     }
 
@@ -98,7 +98,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="processServers", required=true)
       private final List<ProcessServerDetailsResponse> processServers;
 
-    public List<ProcessServerDetailsResponse> getProcessServers() {
+    public List<ProcessServerDetailsResponse> processServers() {
         return this.processServers;
     }
 
@@ -109,7 +109,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="pushInstallers", required=true)
       private final List<PushInstallerDetailsResponse> pushInstallers;
 
-    public List<PushInstallerDetailsResponse> getPushInstallers() {
+    public List<PushInstallerDetailsResponse> pushInstallers() {
         return this.pushInstallers;
     }
 
@@ -120,7 +120,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="rcmProxies", required=true)
       private final List<RcmProxyDetailsResponse> rcmProxies;
 
-    public List<RcmProxyDetailsResponse> getRcmProxies() {
+    public List<RcmProxyDetailsResponse> rcmProxies() {
         return this.rcmProxies;
     }
 
@@ -131,7 +131,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="replicationAgents", required=true)
       private final List<ReplicationAgentDetailsResponse> replicationAgents;
 
-    public List<ReplicationAgentDetailsResponse> getReplicationAgents() {
+    public List<ReplicationAgentDetailsResponse> replicationAgents() {
         return this.replicationAgents;
     }
 
@@ -142,7 +142,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="reprotectAgents", required=true)
       private final List<ReprotectAgentDetailsResponse> reprotectAgents;
 
-    public List<ReprotectAgentDetailsResponse> getReprotectAgents() {
+    public List<ReprotectAgentDetailsResponse> reprotectAgents() {
         return this.reprotectAgents;
     }
 
@@ -153,7 +153,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="serviceContainerId", required=true)
       private final String serviceContainerId;
 
-    public String getServiceContainerId() {
+    public String serviceContainerId() {
         return this.serviceContainerId;
     }
 
@@ -164,7 +164,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
-    public String getServiceEndpoint() {
+    public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
 
@@ -175,7 +175,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="serviceResourceId", required=true)
       private final String serviceResourceId;
 
-    public String getServiceResourceId() {
+    public String serviceResourceId() {
         return this.serviceResourceId;
     }
 
@@ -186,7 +186,7 @@ public final class InMageRcmFabricSpecificDetailsResponse extends com.pulumi.res
     @Import(name="vmwareSiteId", required=true)
       private final String vmwareSiteId;
 
-    public String getVmwareSiteId() {
+    public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
 

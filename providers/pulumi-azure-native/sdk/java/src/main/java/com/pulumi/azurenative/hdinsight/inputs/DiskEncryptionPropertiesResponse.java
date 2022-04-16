@@ -26,7 +26,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="encryptionAlgorithm")
       private final @Nullable String encryptionAlgorithm;
 
-    public Optional<String> getEncryptionAlgorithm() {
+    public Optional<String> encryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.encryptionAlgorithm);
     }
 
@@ -37,7 +37,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="encryptionAtHost")
       private final @Nullable Boolean encryptionAtHost;
 
-    public Optional<Boolean> getEncryptionAtHost() {
+    public Optional<Boolean> encryptionAtHost() {
         return this.encryptionAtHost == null ? Optional.empty() : Optional.ofNullable(this.encryptionAtHost);
     }
 
@@ -48,7 +48,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="keyName")
       private final @Nullable String keyName;
 
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
@@ -59,7 +59,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 
@@ -70,7 +70,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="msiResourceId")
       private final @Nullable String msiResourceId;
 
-    public Optional<String> getMsiResourceId() {
+    public Optional<String> msiResourceId() {
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
     }
 
@@ -81,7 +81,7 @@ public final class DiskEncryptionPropertiesResponse extends com.pulumi.resources
     @Import(name="vaultUri")
       private final @Nullable String vaultUri;
 
-    public Optional<String> getVaultUri() {
+    public Optional<String> vaultUri() {
         return this.vaultUri == null ? Optional.empty() : Optional.ofNullable(this.vaultUri);
     }
 

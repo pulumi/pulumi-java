@@ -104,84 +104,84 @@ public final class InnerHealthErrorResponse {
      * Error creation time (UTC)
      * 
     */
-    public Optional<String> getCreationTimeUtc() {
+    public Optional<String> creationTimeUtc() {
         return Optional.ofNullable(this.creationTimeUtc);
     }
     /**
      * ID of the entity.
      * 
     */
-    public Optional<String> getEntityId() {
+    public Optional<String> entityId() {
         return Optional.ofNullable(this.entityId);
     }
     /**
      * Category of error.
      * 
     */
-    public Optional<String> getErrorCategory() {
+    public Optional<String> errorCategory() {
         return Optional.ofNullable(this.errorCategory);
     }
     /**
      * Error code.
      * 
     */
-    public Optional<String> getErrorCode() {
+    public Optional<String> errorCode() {
         return Optional.ofNullable(this.errorCode);
     }
     /**
      * Level of error.
      * 
     */
-    public Optional<String> getErrorLevel() {
+    public Optional<String> errorLevel() {
         return Optional.ofNullable(this.errorLevel);
     }
     /**
      * Error message.
      * 
     */
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Source of error.
      * 
     */
-    public Optional<String> getErrorSource() {
+    public Optional<String> errorSource() {
         return Optional.ofNullable(this.errorSource);
     }
     /**
      * Type of error.
      * 
     */
-    public Optional<String> getErrorType() {
+    public Optional<String> errorType() {
         return Optional.ofNullable(this.errorType);
     }
     /**
      * Possible causes of error.
      * 
     */
-    public Optional<String> getPossibleCauses() {
+    public Optional<String> possibleCauses() {
         return Optional.ofNullable(this.possibleCauses);
     }
     /**
      * Recommended action to resolve error.
      * 
     */
-    public Optional<String> getRecommendedAction() {
+    public Optional<String> recommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
     /**
      * DRA error message.
      * 
     */
-    public Optional<String> getRecoveryProviderErrorMessage() {
+    public Optional<String> recoveryProviderErrorMessage() {
         return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
     /**
      * Summary message of the entity.
      * 
     */
-    public Optional<String> getSummaryMessage() {
+    public Optional<String> summaryMessage() {
         return Optional.ofNullable(this.summaryMessage);
     }
 

@@ -25,7 +25,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountKey", required=true)
       private final Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey;
     }
 
@@ -36,7 +36,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -48,7 +48,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageType", required=true)
       private final Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType;
     }
 

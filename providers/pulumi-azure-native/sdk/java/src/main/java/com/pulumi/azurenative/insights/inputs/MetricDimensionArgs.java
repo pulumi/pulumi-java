@@ -26,7 +26,7 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="operator", required=true)
       private final Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator;
     }
 
@@ -48,7 +48,7 @@ public final class MetricDimensionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

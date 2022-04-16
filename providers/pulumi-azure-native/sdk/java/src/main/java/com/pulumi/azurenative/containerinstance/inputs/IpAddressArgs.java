@@ -30,7 +30,7 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsNameLabel")
       private final @Nullable Output<String> dnsNameLabel;
 
-    public Output<String> getDnsNameLabel() {
+    public Output<String> dnsNameLabel() {
         return this.dnsNameLabel == null ? Codegen.empty() : this.dnsNameLabel;
     }
 
@@ -41,7 +41,7 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
@@ -52,7 +52,7 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ports", required=true)
       private final Output<List<PortArgs>> ports;
 
-    public Output<List<PortArgs>> getPorts() {
+    public Output<List<PortArgs>> ports() {
         return this.ports;
     }
 
@@ -63,7 +63,7 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,ContainerGroupIpAddressType>> type;
 
-    public Output<Either<String,ContainerGroupIpAddressType>> getType() {
+    public Output<Either<String,ContainerGroupIpAddressType>> type() {
         return this.type;
     }
 

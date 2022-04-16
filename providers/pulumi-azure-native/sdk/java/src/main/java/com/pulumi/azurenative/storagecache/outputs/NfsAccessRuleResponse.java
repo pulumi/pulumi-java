@@ -77,56 +77,56 @@ public final class NfsAccessRuleResponse {
      * Access allowed by this rule.
      * 
     */
-    public String getAccess() {
+    public String access() {
         return this.access;
     }
     /**
      * GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
      * 
     */
-    public Optional<String> getAnonymousGID() {
+    public Optional<String> anonymousGID() {
         return Optional.ofNullable(this.anonymousGID);
     }
     /**
      * UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
      * 
     */
-    public Optional<String> getAnonymousUID() {
+    public Optional<String> anonymousUID() {
         return Optional.ofNullable(this.anonymousUID);
     }
     /**
      * Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
      * 
     */
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * Map root accesses to anonymousUID and anonymousGID.
      * 
     */
-    public Optional<Boolean> getRootSquash() {
+    public Optional<Boolean> rootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
     /**
      * Scope for this rule. The scope and filter determine which clients match the rule.
      * 
     */
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
     /**
      * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.
      * 
     */
-    public Optional<Boolean> getSubmountAccess() {
+    public Optional<Boolean> submountAccess() {
         return Optional.ofNullable(this.submountAccess);
     }
     /**
      * Allow SUID semantics.
      * 
     */
-    public Optional<Boolean> getSuid() {
+    public Optional<Boolean> suid() {
         return Optional.ofNullable(this.suid);
     }
 

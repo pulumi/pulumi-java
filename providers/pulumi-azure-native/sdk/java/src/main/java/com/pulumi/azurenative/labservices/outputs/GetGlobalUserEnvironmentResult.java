@@ -24,7 +24,7 @@ public final class GetGlobalUserEnvironmentResult {
      * Details of the environment
      * 
     */
-    public EnvironmentDetailsResponse getEnvironment() {
+    public EnvironmentDetailsResponse environment() {
         return this.environment;
     }
 

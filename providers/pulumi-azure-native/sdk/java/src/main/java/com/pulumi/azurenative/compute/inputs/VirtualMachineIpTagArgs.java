@@ -26,7 +26,7 @@ public final class VirtualMachineIpTagArgs extends com.pulumi.resources.Resource
     @Import(name="ipTagType")
       private final @Nullable Output<String> ipTagType;
 
-    public Output<String> getIpTagType() {
+    public Output<String> ipTagType() {
         return this.ipTagType == null ? Codegen.empty() : this.ipTagType;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualMachineIpTagArgs extends com.pulumi.resources.Resource
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

@@ -25,7 +25,7 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
     @Import(name="dnsServiceIP")
       private final @Nullable String dnsServiceIP;
 
-    public Optional<String> getDnsServiceIP() {
+    public Optional<String> dnsServiceIP() {
         return this.dnsServiceIP == null ? Optional.empty() : Optional.ofNullable(this.dnsServiceIP);
     }
 
@@ -36,7 +36,7 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
     @Import(name="dockerBridgeCidr")
       private final @Nullable String dockerBridgeCidr;
 
-    public Optional<String> getDockerBridgeCidr() {
+    public Optional<String> dockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Optional.empty() : Optional.ofNullable(this.dockerBridgeCidr);
     }
 
@@ -47,7 +47,7 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
     @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
-    public Optional<String> getServiceCidr() {
+    public Optional<String> serviceCidr() {
         return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
     }
 
@@ -58,7 +58,7 @@ public final class AksNetworkingConfigurationResponse extends com.pulumi.resourc
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 

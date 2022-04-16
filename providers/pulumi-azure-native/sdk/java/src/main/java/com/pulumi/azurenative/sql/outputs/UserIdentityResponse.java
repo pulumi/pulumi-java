@@ -32,14 +32,14 @@ public final class UserIdentityResponse {
      * The Azure Active Directory client id.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The Azure Active Directory principal id.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

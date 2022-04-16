@@ -36,7 +36,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="accessPolicies")
       private final @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
-    public Output<List<ServiceAccessPolicyEntryArgs>> getAccessPolicies() {
+    public Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies() {
         return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
@@ -47,7 +47,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="acrConfiguration")
       private final @Nullable Output<ServiceAcrConfigurationInfoArgs> acrConfiguration;
 
-    public Output<ServiceAcrConfigurationInfoArgs> getAcrConfiguration() {
+    public Output<ServiceAcrConfigurationInfoArgs> acrConfiguration() {
         return this.acrConfiguration == null ? Codegen.empty() : this.acrConfiguration;
     }
 
@@ -58,7 +58,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
-    public Output<ServiceAuthenticationConfigurationInfoArgs> getAuthenticationConfiguration() {
+    public Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -69,7 +69,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="corsConfiguration")
       private final @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
-    public Output<ServiceCorsConfigurationInfoArgs> getCorsConfiguration() {
+    public Output<ServiceCorsConfigurationInfoArgs> corsConfiguration() {
         return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
     }
 
@@ -80,7 +80,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="cosmosDbConfiguration")
       private final @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
-    public Output<ServiceCosmosDbConfigurationInfoArgs> getCosmosDbConfiguration() {
+    public Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration() {
         return this.cosmosDbConfiguration == null ? Codegen.empty() : this.cosmosDbConfiguration;
     }
 
@@ -91,7 +91,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="exportConfiguration")
       private final @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
-    public Output<ServiceExportConfigurationInfoArgs> getExportConfiguration() {
+    public Output<ServiceExportConfigurationInfoArgs> exportConfiguration() {
         return this.exportConfiguration == null ? Codegen.empty() : this.exportConfiguration;
     }
 
@@ -102,7 +102,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
     }
 
@@ -113,7 +113,7 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 

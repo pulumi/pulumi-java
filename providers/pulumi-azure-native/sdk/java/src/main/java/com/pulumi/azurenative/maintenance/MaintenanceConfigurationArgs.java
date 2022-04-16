@@ -25,7 +25,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="extensionProperties")
       private final @Nullable Output<Map<String,String>> extensionProperties;
 
-    public Output<Map<String,String>> getExtensionProperties() {
+    public Output<Map<String,String>> extensionProperties() {
         return this.extensionProperties == null ? Codegen.empty() : this.extensionProperties;
     }
 
@@ -36,7 +36,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="maintenanceScope")
       private final @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
 
-    public Output<Either<String,MaintenanceScope>> getMaintenanceScope() {
+    public Output<Either<String,MaintenanceScope>> maintenanceScope() {
         return this.maintenanceScope == null ? Codegen.empty() : this.maintenanceScope;
     }
 
@@ -58,7 +58,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -69,7 +69,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -91,7 +91,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

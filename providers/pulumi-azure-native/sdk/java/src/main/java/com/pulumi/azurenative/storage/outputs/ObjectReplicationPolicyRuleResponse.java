@@ -49,28 +49,28 @@ public final class ObjectReplicationPolicyRuleResponse {
      * Required. Destination container name.
      * 
     */
-    public String getDestinationContainer() {
+    public String destinationContainer() {
         return this.destinationContainer;
     }
     /**
      * Optional. An object that defines the filter set.
      * 
     */
-    public Optional<ObjectReplicationPolicyFilterResponse> getFilters() {
+    public Optional<ObjectReplicationPolicyFilterResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
     /**
      * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
      * 
     */
-    public Optional<String> getRuleId() {
+    public Optional<String> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
     /**
      * Required. Source container name.
      * 
     */
-    public String getSourceContainer() {
+    public String sourceContainer() {
         return this.sourceContainer;
     }
 

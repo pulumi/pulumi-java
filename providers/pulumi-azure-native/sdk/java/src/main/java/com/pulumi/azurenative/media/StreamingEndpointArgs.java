@@ -29,7 +29,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accessControl")
       private final @Nullable Output<StreamingEndpointAccessControlArgs> accessControl;
 
-    public Output<StreamingEndpointAccessControlArgs> getAccessControl() {
+    public Output<StreamingEndpointAccessControlArgs> accessControl() {
         return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
@@ -40,7 +40,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -51,7 +51,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
 
-    public Output<Boolean> getAutoStart() {
+    public Output<Boolean> autoStart() {
         return this.autoStart == null ? Codegen.empty() : this.autoStart;
     }
 
@@ -62,7 +62,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="availabilitySetName")
       private final @Nullable Output<String> availabilitySetName;
 
-    public Output<String> getAvailabilitySetName() {
+    public Output<String> availabilitySetName() {
         return this.availabilitySetName == null ? Codegen.empty() : this.availabilitySetName;
     }
 
@@ -73,7 +73,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cdnEnabled")
       private final @Nullable Output<Boolean> cdnEnabled;
 
-    public Output<Boolean> getCdnEnabled() {
+    public Output<Boolean> cdnEnabled() {
         return this.cdnEnabled == null ? Codegen.empty() : this.cdnEnabled;
     }
 
@@ -84,7 +84,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cdnProfile")
       private final @Nullable Output<String> cdnProfile;
 
-    public Output<String> getCdnProfile() {
+    public Output<String> cdnProfile() {
         return this.cdnProfile == null ? Codegen.empty() : this.cdnProfile;
     }
 
@@ -95,7 +95,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="cdnProvider")
       private final @Nullable Output<String> cdnProvider;
 
-    public Output<String> getCdnProvider() {
+    public Output<String> cdnProvider() {
         return this.cdnProvider == null ? Codegen.empty() : this.cdnProvider;
     }
 
@@ -106,7 +106,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="crossSiteAccessPolicies")
       private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
-    public Output<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
+    public Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies == null ? Codegen.empty() : this.crossSiteAccessPolicies;
     }
 
@@ -117,7 +117,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="customHostNames")
       private final @Nullable Output<List<String>> customHostNames;
 
-    public Output<List<String>> getCustomHostNames() {
+    public Output<List<String>> customHostNames() {
         return this.customHostNames == null ? Codegen.empty() : this.customHostNames;
     }
 
@@ -128,7 +128,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -139,7 +139,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -150,7 +150,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxCacheAge")
       private final @Nullable Output<Double> maxCacheAge;
 
-    public Output<Double> getMaxCacheAge() {
+    public Output<Double> maxCacheAge() {
         return this.maxCacheAge == null ? Codegen.empty() : this.maxCacheAge;
     }
 
@@ -161,7 +161,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -172,7 +172,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scaleUnits", required=true)
       private final Output<Integer> scaleUnits;
 
-    public Output<Integer> getScaleUnits() {
+    public Output<Integer> scaleUnits() {
         return this.scaleUnits;
     }
 
@@ -183,7 +183,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="streamingEndpointName")
       private final @Nullable Output<String> streamingEndpointName;
 
-    public Output<String> getStreamingEndpointName() {
+    public Output<String> streamingEndpointName() {
         return this.streamingEndpointName == null ? Codegen.empty() : this.streamingEndpointName;
     }
 
@@ -194,7 +194,7 @@ public final class StreamingEndpointArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -25,7 +25,7 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
     @Import(name="appId")
       private final @Nullable String appId;
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
@@ -36,7 +36,7 @@ public final class AppInsightsCredentialsResponse extends com.pulumi.resources.I
     @Import(name="instrumentationKey")
       private final @Nullable String instrumentationKey;
 
-    public Optional<String> getInstrumentationKey() {
+    public Optional<String> instrumentationKey() {
         return this.instrumentationKey == null ? Optional.empty() : Optional.ofNullable(this.instrumentationKey);
     }
 

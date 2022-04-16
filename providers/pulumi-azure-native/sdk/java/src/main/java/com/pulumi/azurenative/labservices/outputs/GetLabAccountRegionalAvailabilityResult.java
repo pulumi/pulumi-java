@@ -26,7 +26,7 @@ public final class GetLabAccountRegionalAvailabilityResult {
      * Availability information for different size categories per region
      * 
     */
-    public List<RegionalAvailabilityResponse> getRegionalAvailability() {
+    public List<RegionalAvailabilityResponse> regionalAvailability() {
         return this.regionalAvailability == null ? List.of() : this.regionalAvailability;
     }
 

@@ -29,7 +29,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySource")
       private final @Nullable Output<Either<String,KeySource>> keySource;
 
-    public Output<Either<String,KeySource>> getKeySource() {
+    public Output<Either<String,KeySource>> keySource() {
         return this.keySource == null ? Codegen.empty() : this.keySource;
     }
 
@@ -40,7 +40,7 @@ public final class EncryptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
         return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 

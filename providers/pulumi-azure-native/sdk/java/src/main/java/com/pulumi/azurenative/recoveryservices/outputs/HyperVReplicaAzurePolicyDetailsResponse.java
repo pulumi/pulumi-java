@@ -71,21 +71,21 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
      * The active storage account Id.
      * 
     */
-    public Optional<String> getActiveStorageAccountId() {
+    public Optional<String> activeStorageAccountId() {
         return Optional.ofNullable(this.activeStorageAccountId);
     }
     /**
      * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
      * 
     */
-    public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
+    public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
     /**
      * A value indicating whether encryption is enabled for virtual machines in this cloud.
      * 
     */
-    public Optional<String> getEncryption() {
+    public Optional<String> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
@@ -93,28 +93,28 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
      * Expected value is 'HyperVReplicaAzure'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
      * 
     */
-    public Optional<String> getOnlineReplicationStartTime() {
+    public Optional<String> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
     /**
      * The duration (in hours) to which point the recovery history needs to be maintained.
      * 
     */
-    public Optional<Integer> getRecoveryPointHistoryDurationInHours() {
+    public Optional<Integer> recoveryPointHistoryDurationInHours() {
         return Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
     /**
      * The replication interval.
      * 
     */
-    public Optional<Integer> getReplicationInterval() {
+    public Optional<Integer> replicationInterval() {
         return Optional.ofNullable(this.replicationInterval);
     }
 

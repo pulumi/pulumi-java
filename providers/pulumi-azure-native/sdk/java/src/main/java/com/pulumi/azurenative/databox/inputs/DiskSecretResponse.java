@@ -23,7 +23,7 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bitLockerKey", required=true)
       private final String bitLockerKey;
 
-    public String getBitLockerKey() {
+    public String bitLockerKey() {
         return this.bitLockerKey;
     }
 
@@ -34,7 +34,7 @@ public final class DiskSecretResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskSerialNumber", required=true)
       private final String diskSerialNumber;
 
-    public String getDiskSerialNumber() {
+    public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
 

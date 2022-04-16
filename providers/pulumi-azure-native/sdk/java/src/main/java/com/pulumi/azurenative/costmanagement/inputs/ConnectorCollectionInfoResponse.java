@@ -26,7 +26,7 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="error")
       private final @Nullable ConnectorCollectionErrorInfoResponse error;
 
-    public Optional<ConnectorCollectionErrorInfoResponse> getError() {
+    public Optional<ConnectorCollectionErrorInfoResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="lastChecked", required=true)
       private final String lastChecked;
 
-    public String getLastChecked() {
+    public String lastChecked() {
         return this.lastChecked;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="lastUpdated", required=true)
       private final String lastUpdated;
 
-    public String getLastUpdated() {
+    public String lastUpdated() {
         return this.lastUpdated;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectorCollectionInfoResponse extends com.pulumi.resources.
     @Import(name="sourceLastUpdated", required=true)
       private final String sourceLastUpdated;
 
-    public String getSourceLastUpdated() {
+    public String sourceLastUpdated() {
         return this.sourceLastUpdated;
     }
 

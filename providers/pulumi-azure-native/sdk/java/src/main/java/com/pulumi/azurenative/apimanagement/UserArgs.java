@@ -29,7 +29,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appType")
       private final @Nullable Output<Either<String,AppType>> appType;
 
-    public Output<Either<String,AppType>> getAppType() {
+    public Output<Either<String,AppType>> appType() {
         return this.appType == null ? Codegen.empty() : this.appType;
     }
 
@@ -40,7 +40,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="confirmation")
       private final @Nullable Output<Either<String,Confirmation>> confirmation;
 
-    public Output<Either<String,Confirmation>> getConfirmation() {
+    public Output<Either<String,Confirmation>> confirmation() {
         return this.confirmation == null ? Codegen.empty() : this.confirmation;
     }
 
@@ -51,7 +51,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -62,7 +62,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName", required=true)
       private final Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName;
     }
 
@@ -73,7 +73,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identities")
       private final @Nullable Output<List<UserIdentityContractArgs>> identities;
 
-    public Output<List<UserIdentityContractArgs>> getIdentities() {
+    public Output<List<UserIdentityContractArgs>> identities() {
         return this.identities == null ? Codegen.empty() : this.identities;
     }
 
@@ -84,7 +84,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName", required=true)
       private final Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName;
     }
 
@@ -95,7 +95,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="note")
       private final @Nullable Output<String> note;
 
-    public Output<String> getNote() {
+    public Output<String> note() {
         return this.note == null ? Codegen.empty() : this.note;
     }
 
@@ -106,7 +106,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notify")
       private final @Nullable Output<Boolean> notify;
 
-    public Output<Boolean> getNotify() {
+    public Output<Boolean> notify_() {
         return this.notify == null ? Codegen.empty() : this.notify;
     }
 
@@ -117,7 +117,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -128,7 +128,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,7 +139,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -150,7 +150,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<Either<String,UserState>> state;
 
-    public Output<Either<String,UserState>> getState() {
+    public Output<Either<String,UserState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -161,7 +161,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userId")
       private final @Nullable Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId == null ? Codegen.empty() : this.userId;
     }
 
@@ -313,11 +313,11 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             this.note = Codegen.ofNullable(note);
             return this;
         }
-        public Builder notify(@Nullable Output<Boolean> notify) {
+        public Builder notify_(@Nullable Output<Boolean> notify) {
             this.notify = notify;
             return this;
         }
-        public Builder notify(@Nullable Boolean notify) {
+        public Builder notify_(@Nullable Boolean notify) {
             this.notify = Codegen.ofNullable(notify);
             return this;
         }

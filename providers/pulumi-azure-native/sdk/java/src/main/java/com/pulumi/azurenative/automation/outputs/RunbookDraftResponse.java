@@ -67,42 +67,42 @@ public final class RunbookDraftResponse {
      * Gets or sets the creation time of the runbook draft.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the draft runbook content link.
      * 
     */
-    public Optional<ContentLinkResponse> getDraftContentLink() {
+    public Optional<ContentLinkResponse> draftContentLink() {
         return Optional.ofNullable(this.draftContentLink);
     }
     /**
      * Gets or sets whether runbook is in edit mode.
      * 
     */
-    public Optional<Boolean> getInEdit() {
+    public Optional<Boolean> inEdit() {
         return Optional.ofNullable(this.inEdit);
     }
     /**
      * Gets or sets the last modified time of the runbook draft.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Gets or sets the runbook output types.
      * 
     */
-    public List<String> getOutputTypes() {
+    public List<String> outputTypes() {
         return this.outputTypes == null ? List.of() : this.outputTypes;
     }
     /**
      * Gets or sets the runbook draft parameters.
      * 
     */
-    public Map<String,RunbookParameterResponse> getParameters() {
+    public Map<String,RunbookParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 

@@ -29,7 +29,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="dateFormat", required=true)
       private final Output<Either<String,X12DateFormat>> dateFormat;
 
-    public Output<Either<String,X12DateFormat>> getDateFormat() {
+    public Output<Either<String,X12DateFormat>> dateFormat() {
         return this.dateFormat;
     }
 
@@ -40,7 +40,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="functionalIdentifierCode")
       private final @Nullable Output<String> functionalIdentifierCode;
 
-    public Output<String> getFunctionalIdentifierCode() {
+    public Output<String> functionalIdentifierCode() {
         return this.functionalIdentifierCode == null ? Codegen.empty() : this.functionalIdentifierCode;
     }
 
@@ -51,7 +51,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="headerVersion", required=true)
       private final Output<String> headerVersion;
 
-    public Output<String> getHeaderVersion() {
+    public Output<String> headerVersion() {
         return this.headerVersion;
     }
 
@@ -62,7 +62,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId;
     }
 
@@ -73,7 +73,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="protocolVersion", required=true)
       private final Output<String> protocolVersion;
 
-    public Output<String> getProtocolVersion() {
+    public Output<String> protocolVersion() {
         return this.protocolVersion;
     }
 
@@ -84,7 +84,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="receiverApplicationId", required=true)
       private final Output<String> receiverApplicationId;
 
-    public Output<String> getReceiverApplicationId() {
+    public Output<String> receiverApplicationId() {
         return this.receiverApplicationId;
     }
 
@@ -95,7 +95,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="responsibleAgencyCode", required=true)
       private final Output<String> responsibleAgencyCode;
 
-    public Output<String> getResponsibleAgencyCode() {
+    public Output<String> responsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
 
@@ -106,7 +106,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="senderApplicationId", required=true)
       private final Output<String> senderApplicationId;
 
-    public Output<String> getSenderApplicationId() {
+    public Output<String> senderApplicationId() {
         return this.senderApplicationId;
     }
 
@@ -117,7 +117,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="targetNamespace", required=true)
       private final Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace;
     }
 
@@ -128,7 +128,7 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="timeFormat", required=true)
       private final Output<Either<String,X12TimeFormat>> timeFormat;
 
-    public Output<Either<String,X12TimeFormat>> getTimeFormat() {
+    public Output<Either<String,X12TimeFormat>> timeFormat() {
         return this.timeFormat;
     }
 

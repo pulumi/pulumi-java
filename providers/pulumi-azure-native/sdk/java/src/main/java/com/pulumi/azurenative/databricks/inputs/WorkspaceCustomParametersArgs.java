@@ -28,7 +28,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="amlWorkspaceId")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> amlWorkspaceId;
 
-    public Output<WorkspaceCustomStringParameterArgs> getAmlWorkspaceId() {
+    public Output<WorkspaceCustomStringParameterArgs> amlWorkspaceId() {
         return this.amlWorkspaceId == null ? Codegen.empty() : this.amlWorkspaceId;
     }
 
@@ -39,7 +39,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="customPrivateSubnetName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> customPrivateSubnetName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getCustomPrivateSubnetName() {
+    public Output<WorkspaceCustomStringParameterArgs> customPrivateSubnetName() {
         return this.customPrivateSubnetName == null ? Codegen.empty() : this.customPrivateSubnetName;
     }
 
@@ -50,7 +50,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="customPublicSubnetName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> customPublicSubnetName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getCustomPublicSubnetName() {
+    public Output<WorkspaceCustomStringParameterArgs> customPublicSubnetName() {
         return this.customPublicSubnetName == null ? Codegen.empty() : this.customPublicSubnetName;
     }
 
@@ -61,7 +61,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="customVirtualNetworkId")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> customVirtualNetworkId;
 
-    public Output<WorkspaceCustomStringParameterArgs> getCustomVirtualNetworkId() {
+    public Output<WorkspaceCustomStringParameterArgs> customVirtualNetworkId() {
         return this.customVirtualNetworkId == null ? Codegen.empty() : this.customVirtualNetworkId;
     }
 
@@ -72,7 +72,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="enableNoPublicIp")
       private final @Nullable Output<WorkspaceCustomBooleanParameterArgs> enableNoPublicIp;
 
-    public Output<WorkspaceCustomBooleanParameterArgs> getEnableNoPublicIp() {
+    public Output<WorkspaceCustomBooleanParameterArgs> enableNoPublicIp() {
         return this.enableNoPublicIp == null ? Codegen.empty() : this.enableNoPublicIp;
     }
 
@@ -83,7 +83,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="encryption")
       private final @Nullable Output<WorkspaceEncryptionParameterArgs> encryption;
 
-    public Output<WorkspaceEncryptionParameterArgs> getEncryption() {
+    public Output<WorkspaceEncryptionParameterArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -94,7 +94,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="loadBalancerBackendPoolName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> loadBalancerBackendPoolName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getLoadBalancerBackendPoolName() {
+    public Output<WorkspaceCustomStringParameterArgs> loadBalancerBackendPoolName() {
         return this.loadBalancerBackendPoolName == null ? Codegen.empty() : this.loadBalancerBackendPoolName;
     }
 
@@ -105,7 +105,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="loadBalancerId")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> loadBalancerId;
 
-    public Output<WorkspaceCustomStringParameterArgs> getLoadBalancerId() {
+    public Output<WorkspaceCustomStringParameterArgs> loadBalancerId() {
         return this.loadBalancerId == null ? Codegen.empty() : this.loadBalancerId;
     }
 
@@ -116,7 +116,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="natGatewayName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> natGatewayName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getNatGatewayName() {
+    public Output<WorkspaceCustomStringParameterArgs> natGatewayName() {
         return this.natGatewayName == null ? Codegen.empty() : this.natGatewayName;
     }
 
@@ -127,7 +127,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="prepareEncryption")
       private final @Nullable Output<WorkspaceCustomBooleanParameterArgs> prepareEncryption;
 
-    public Output<WorkspaceCustomBooleanParameterArgs> getPrepareEncryption() {
+    public Output<WorkspaceCustomBooleanParameterArgs> prepareEncryption() {
         return this.prepareEncryption == null ? Codegen.empty() : this.prepareEncryption;
     }
 
@@ -138,7 +138,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="publicIpName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> publicIpName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getPublicIpName() {
+    public Output<WorkspaceCustomStringParameterArgs> publicIpName() {
         return this.publicIpName == null ? Codegen.empty() : this.publicIpName;
     }
 
@@ -149,7 +149,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="requireInfrastructureEncryption")
       private final @Nullable Output<WorkspaceCustomBooleanParameterArgs> requireInfrastructureEncryption;
 
-    public Output<WorkspaceCustomBooleanParameterArgs> getRequireInfrastructureEncryption() {
+    public Output<WorkspaceCustomBooleanParameterArgs> requireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Codegen.empty() : this.requireInfrastructureEncryption;
     }
 
@@ -160,7 +160,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="storageAccountName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> storageAccountName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getStorageAccountName() {
+    public Output<WorkspaceCustomStringParameterArgs> storageAccountName() {
         return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
@@ -171,7 +171,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="storageAccountSkuName")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> storageAccountSkuName;
 
-    public Output<WorkspaceCustomStringParameterArgs> getStorageAccountSkuName() {
+    public Output<WorkspaceCustomStringParameterArgs> storageAccountSkuName() {
         return this.storageAccountSkuName == null ? Codegen.empty() : this.storageAccountSkuName;
     }
 
@@ -182,7 +182,7 @@ public final class WorkspaceCustomParametersArgs extends com.pulumi.resources.Re
     @Import(name="vnetAddressPrefix")
       private final @Nullable Output<WorkspaceCustomStringParameterArgs> vnetAddressPrefix;
 
-    public Output<WorkspaceCustomStringParameterArgs> getVnetAddressPrefix() {
+    public Output<WorkspaceCustomStringParameterArgs> vnetAddressPrefix() {
         return this.vnetAddressPrefix == null ? Codegen.empty() : this.vnetAddressPrefix;
     }
 

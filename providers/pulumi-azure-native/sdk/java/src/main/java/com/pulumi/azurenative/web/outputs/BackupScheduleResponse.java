@@ -64,42 +64,42 @@ public final class BackupScheduleResponse {
      * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
      * 
     */
-    public Integer getFrequencyInterval() {
+    public Integer frequencyInterval() {
         return this.frequencyInterval;
     }
     /**
      * The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
      * 
     */
-    public String getFrequencyUnit() {
+    public String frequencyUnit() {
         return this.frequencyUnit;
     }
     /**
      * True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
      * 
     */
-    public Boolean getKeepAtLeastOneBackup() {
+    public Boolean keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
     /**
      * Last time when this schedule was triggered.
      * 
     */
-    public String getLastExecutionTime() {
+    public String lastExecutionTime() {
         return this.lastExecutionTime;
     }
     /**
      * After how many days backups should be deleted.
      * 
     */
-    public Integer getRetentionPeriodInDays() {
+    public Integer retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
     /**
      * When the schedule should start working.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

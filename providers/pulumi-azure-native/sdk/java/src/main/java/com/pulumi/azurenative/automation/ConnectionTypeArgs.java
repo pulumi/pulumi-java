@@ -25,7 +25,7 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="connectionTypeName")
       private final @Nullable Output<String> connectionTypeName;
 
-    public Output<String> getConnectionTypeName() {
+    public Output<String> connectionTypeName() {
         return this.connectionTypeName == null ? Codegen.empty() : this.connectionTypeName;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fieldDefinitions", required=true)
       private final Output<Map<String,FieldDefinitionArgs>> fieldDefinitions;
 
-    public Output<Map<String,FieldDefinitionArgs>> getFieldDefinitions() {
+    public Output<Map<String,FieldDefinitionArgs>> fieldDefinitions() {
         return this.fieldDefinitions;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isGlobal")
       private final @Nullable Output<Boolean> isGlobal;
 
-    public Output<Boolean> getIsGlobal() {
+    public Output<Boolean> isGlobal() {
         return this.isGlobal == null ? Codegen.empty() : this.isGlobal;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

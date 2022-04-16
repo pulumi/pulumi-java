@@ -25,7 +25,7 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="countryCode", required=true)
       private final Output<String> countryCode;
 
-    public Output<String> getCountryCode() {
+    public Output<String> countryCode() {
         return this.countryCode;
     }
 
@@ -36,7 +36,7 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class SmsReceiverArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 

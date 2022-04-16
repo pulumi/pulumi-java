@@ -27,7 +27,7 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
+    public Output<String> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
@@ -38,7 +38,7 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -49,7 +49,7 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
+    public Output<String> mountPath() {
         return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
@@ -60,7 +60,7 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
@@ -71,7 +71,7 @@ public final class AzureStorageInfoValueArgs extends com.pulumi.resources.Resour
     @Import(name="type")
       private final @Nullable Output<AzureStorageType> type;
 
-    public Output<AzureStorageType> getType() {
+    public Output<AzureStorageType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

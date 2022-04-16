@@ -43,31 +43,31 @@ public final class AzureFileShareConfigurationResponse {
         this.relativeMountPath = relativeMountPath;
     }
 
-    public String getAccountKey() {
+    public String accountKey() {
         return this.accountKey;
     }
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
      * This is of the form 'https://{account}.file.core.windows.net/'.
      * 
     */
-    public String getAzureFileUrl() {
+    public String azureFileUrl() {
         return this.azureFileUrl;
     }
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
     */
-    public Optional<String> getMountOptions() {
+    public Optional<String> mountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
     */
-    public String getRelativeMountPath() {
+    public String relativeMountPath() {
         return this.relativeMountPath;
     }
 

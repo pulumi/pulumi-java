@@ -25,7 +25,7 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="keyData")
       private final @Nullable String keyData;
 
-    public Optional<String> getKeyData() {
+    public Optional<String> keyData() {
         return this.keyData == null ? Optional.empty() : Optional.ofNullable(this.keyData);
     }
 
@@ -36,7 +36,7 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

@@ -32,7 +32,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matchValue", required=true)
       private final Output<List<String>> matchValue;
 
-    public Output<List<String>> getMatchValue() {
+    public Output<List<String>> matchValue() {
         return this.matchValue;
     }
 
@@ -43,7 +43,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matchVariable", required=true)
       private final Output<Either<String,MatchVariable>> matchVariable;
 
-    public Output<Either<String,MatchVariable>> getMatchVariable() {
+    public Output<Either<String,MatchVariable>> matchVariable() {
         return this.matchVariable;
     }
 
@@ -54,7 +54,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> getNegateCondition() {
+    public Output<Boolean> negateCondition() {
         return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
@@ -65,7 +65,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
 
-    public Output<Either<String,Operator>> getOperator() {
+    public Output<Either<String,Operator>> operator() {
         return this.operator;
     }
 
@@ -76,7 +76,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -87,7 +87,7 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,TransformType>>> transforms;
 
-    public Output<List<Either<String,TransformType>>> getTransforms() {
+    public Output<List<Either<String,TransformType>>> transforms() {
         return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 

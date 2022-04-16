@@ -26,7 +26,7 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
+    public Output<String> height() {
         return this.height == null ? Codegen.empty() : this.height;
     }
 
@@ -37,7 +37,7 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="left")
       private final @Nullable Output<String> left;
 
-    public Output<String> getLeft() {
+    public Output<String> left() {
         return this.left == null ? Codegen.empty() : this.left;
     }
 
@@ -48,7 +48,7 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="top")
       private final @Nullable Output<String> top;
 
-    public Output<String> getTop() {
+    public Output<String> top() {
         return this.top == null ? Codegen.empty() : this.top;
     }
 
@@ -59,7 +59,7 @@ public final class RectangleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
+    public Output<String> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 

@@ -42,7 +42,7 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The authorization key.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationKey() {
+    public Output</* @Nullable */ String> authorizationKey() {
         return this.authorizationKey;
     }
     /**
@@ -56,7 +56,7 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The authorization use status.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationUseStatus() {
+    public Output</* @Nullable */ String> authorizationUseStatus() {
         return this.authorizationUseStatus;
     }
     /**
@@ -70,7 +70,7 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -84,7 +84,7 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The provisioning state of the authorization resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +112,7 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="properties")
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
 
-    public Output<SharedPrivateLinkResourcePropertiesArgs> getProperties() {
+    public Output<SharedPrivateLinkResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="searchServiceName", required=true)
       private final Output<String> searchServiceName;
 
-    public Output<String> getSearchServiceName() {
+    public Output<String> searchServiceName() {
         return this.searchServiceName;
     }
 
@@ -56,7 +56,7 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
-    public Output<String> getSharedPrivateLinkResourceName() {
+    public Output<String> sharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName == null ? Codegen.empty() : this.sharedPrivateLinkResourceName;
     }
 

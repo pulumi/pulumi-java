@@ -32,7 +32,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificates")
       private final @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
 
-    public Output<List<Either<String,CertificatePermissions>>> getCertificates() {
+    public Output<List<Either<String,CertificatePermissions>>> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
@@ -43,7 +43,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<List<Either<String,KeyPermissions>>> keys;
 
-    public Output<List<Either<String,KeyPermissions>>> getKeys() {
+    public Output<List<Either<String,KeyPermissions>>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -54,7 +54,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
 
-    public Output<List<Either<String,SecretPermissions>>> getSecrets() {
+    public Output<List<Either<String,SecretPermissions>>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
@@ -65,7 +65,7 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storage")
       private final @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
-    public Output<List<Either<String,StoragePermissions>>> getStorage() {
+    public Output<List<Either<String,StoragePermissions>>> storage() {
         return this.storage == null ? Codegen.empty() : this.storage;
     }
 

@@ -26,7 +26,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
      * A function alias, used when the type of the item is Function
      * 
     */
-    public Optional<String> getFunctionAlias() {
+    public Optional<String> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
 

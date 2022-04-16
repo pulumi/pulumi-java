@@ -41,21 +41,21 @@ public final class AsymmetricEncryptedSecretResponse {
      * The algorithm used to encrypt "Value".
      * 
     */
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
      * 
     */
-    public Optional<String> getEncryptionCertThumbprint() {
+    public Optional<String> encryptionCertThumbprint() {
         return Optional.ofNullable(this.encryptionCertThumbprint);
     }
     /**
      * The value of the secret.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

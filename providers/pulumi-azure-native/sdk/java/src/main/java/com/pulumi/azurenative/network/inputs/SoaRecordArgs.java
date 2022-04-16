@@ -27,7 +27,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -38,7 +38,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<Double> expireTime;
 
-    public Output<Double> getExpireTime() {
+    public Output<Double> expireTime() {
         return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
@@ -49,7 +49,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -60,7 +60,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="minimumTtl")
       private final @Nullable Output<Double> minimumTtl;
 
-    public Output<Double> getMinimumTtl() {
+    public Output<Double> minimumTtl() {
         return this.minimumTtl == null ? Codegen.empty() : this.minimumTtl;
     }
 
@@ -71,7 +71,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="refreshTime")
       private final @Nullable Output<Double> refreshTime;
 
-    public Output<Double> getRefreshTime() {
+    public Output<Double> refreshTime() {
         return this.refreshTime == null ? Codegen.empty() : this.refreshTime;
     }
 
@@ -82,7 +82,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retryTime")
       private final @Nullable Output<Double> retryTime;
 
-    public Output<Double> getRetryTime() {
+    public Output<Double> retryTime() {
         return this.retryTime == null ? Codegen.empty() : this.retryTime;
     }
 
@@ -93,7 +93,7 @@ public final class SoaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialNumber")
       private final @Nullable Output<Double> serialNumber;
 
-    public Output<Double> getSerialNumber() {
+    public Output<Double> serialNumber() {
         return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
     }
 

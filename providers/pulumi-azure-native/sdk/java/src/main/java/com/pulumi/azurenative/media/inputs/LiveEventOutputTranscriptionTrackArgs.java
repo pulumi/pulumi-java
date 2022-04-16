@@ -25,7 +25,7 @@ public final class LiveEventOutputTranscriptionTrackArgs extends com.pulumi.reso
     @Import(name="trackName", required=true)
       private final Output<String> trackName;
 
-    public Output<String> getTrackName() {
+    public Output<String> trackName() {
         return this.trackName;
     }
 

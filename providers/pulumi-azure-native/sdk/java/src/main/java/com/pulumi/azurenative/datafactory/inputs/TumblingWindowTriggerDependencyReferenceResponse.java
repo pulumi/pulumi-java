@@ -26,7 +26,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="offset")
       private final @Nullable String offset;
 
-    public Optional<String> getOffset() {
+    public Optional<String> offset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
     }
 
@@ -37,7 +37,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="referenceTrigger", required=true)
       private final TriggerReferenceResponse referenceTrigger;
 
-    public TriggerReferenceResponse getReferenceTrigger() {
+    public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
     }
 
@@ -48,7 +48,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="size")
       private final @Nullable String size;
 
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -60,7 +60,7 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends com.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

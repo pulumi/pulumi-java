@@ -50,7 +50,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The unique identifier associated with this Data Lake Analytics account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -64,7 +64,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of compute policies associated with this account.
      * 
      */
-    public Output<List<ComputePolicyResponse>> getComputePolicies() {
+    public Output<List<ComputePolicyResponse>> computePolicies() {
         return this.computePolicies;
     }
     /**
@@ -78,7 +78,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The account creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -92,7 +92,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The commitment tier in use for the current month.
      * 
      */
-    public Output<String> getCurrentTier() {
+    public Output<String> currentTier() {
         return this.currentTier;
     }
     /**
@@ -106,7 +106,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of Data Lake Store accounts associated with this account.
      * 
      */
-    public Output<List<DataLakeStoreAccountInformationResponse>> getDataLakeStoreAccounts() {
+    public Output<List<DataLakeStoreAccountInformationResponse>> dataLakeStoreAccounts() {
         return this.dataLakeStoreAccounts;
     }
     /**
@@ -120,7 +120,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The current state of the DebugDataAccessLevel for this account.
      * 
      */
-    public Output<String> getDebugDataAccessLevel() {
+    public Output<String> debugDataAccessLevel() {
         return this.debugDataAccessLevel;
     }
     /**
@@ -134,7 +134,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The default Data Lake Store account associated with this account.
      * 
      */
-    public Output<String> getDefaultDataLakeStoreAccount() {
+    public Output<String> defaultDataLakeStoreAccount() {
         return this.defaultDataLakeStoreAccount;
     }
     /**
@@ -148,7 +148,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The full CName endpoint for this account.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -162,7 +162,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    public Output</* @Nullable */ String> getFirewallAllowAzureIps() {
+    public Output</* @Nullable */ String> firewallAllowAzureIps() {
         return this.firewallAllowAzureIps;
     }
     /**
@@ -176,7 +176,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of firewall rules associated with this account.
      * 
      */
-    public Output<List<FirewallRuleResponse>> getFirewallRules() {
+    public Output<List<FirewallRuleResponse>> firewallRules() {
         return this.firewallRules;
     }
     /**
@@ -190,7 +190,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The current state of the IP address firewall for this account.
      * 
      */
-    public Output</* @Nullable */ String> getFirewallState() {
+    public Output</* @Nullable */ String> firewallState() {
         return this.firewallState;
     }
     /**
@@ -204,7 +204,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of hiveMetastores associated with this account.
      * 
      */
-    public Output<List<HiveMetastoreResponse>> getHiveMetastores() {
+    public Output<List<HiveMetastoreResponse>> hiveMetastores() {
         return this.hiveMetastores;
     }
     /**
@@ -218,7 +218,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The account last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -232,7 +232,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -246,7 +246,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported active jobs under the account at the same time.
      * 
      */
-    public Output<Integer> getMaxActiveJobCountPerUser() {
+    public Output<Integer> maxActiveJobCountPerUser() {
         return this.maxActiveJobCountPerUser;
     }
     /**
@@ -260,7 +260,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported degree of parallelism for this account.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxDegreeOfParallelism() {
+    public Output</* @Nullable */ Integer> maxDegreeOfParallelism() {
         return this.maxDegreeOfParallelism;
     }
     /**
@@ -274,7 +274,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported degree of parallelism per job for this account.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxDegreeOfParallelismPerJob() {
+    public Output</* @Nullable */ Integer> maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
@@ -288,7 +288,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported jobs running under the account at the same time.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxJobCount() {
+    public Output</* @Nullable */ Integer> maxJobCount() {
         return this.maxJobCount;
     }
     /**
@@ -302,7 +302,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported active jobs under the account at the same time.
      * 
      */
-    public Output<Integer> getMaxJobRunningTimeInMin() {
+    public Output<Integer> maxJobRunningTimeInMin() {
         return this.maxJobRunningTimeInMin;
     }
     /**
@@ -316,7 +316,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The maximum supported jobs queued under the account at the same time.
      * 
      */
-    public Output<Integer> getMaxQueuedJobCountPerUser() {
+    public Output<Integer> maxQueuedJobCountPerUser() {
         return this.maxQueuedJobCountPerUser;
     }
     /**
@@ -330,7 +330,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The minimum supported priority per job for this account.
      * 
      */
-    public Output<Integer> getMinPriorityPerJob() {
+    public Output<Integer> minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
@@ -344,7 +344,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -358,7 +358,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The commitment tier for the next month.
      * 
      */
-    public Output</* @Nullable */ String> getNewTier() {
+    public Output</* @Nullable */ String> newTier() {
         return this.newTier;
     }
     /**
@@ -372,7 +372,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the Data Lake Analytics account.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -386,7 +386,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of Data Lake Store accounts associated with this account.
      * 
      */
-    public Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> getPublicDataLakeStoreAccounts() {
+    public Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> publicDataLakeStoreAccounts() {
         return this.publicDataLakeStoreAccounts;
     }
     /**
@@ -400,7 +400,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The number of days that job metadata is retained.
      * 
      */
-    public Output</* @Nullable */ Integer> getQueryStoreRetention() {
+    public Output</* @Nullable */ Integer> queryStoreRetention() {
         return this.queryStoreRetention;
     }
     /**
@@ -414,7 +414,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The state of the Data Lake Analytics account.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -428,7 +428,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of Azure Blob Storage accounts associated with this account.
      * 
      */
-    public Output<List<StorageAccountInformationResponse>> getStorageAccounts() {
+    public Output<List<StorageAccountInformationResponse>> storageAccounts() {
         return this.storageAccounts;
     }
     /**
@@ -442,7 +442,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
      * 
      */
-    public Output<Integer> getSystemMaxDegreeOfParallelism() {
+    public Output<Integer> systemMaxDegreeOfParallelism() {
         return this.systemMaxDegreeOfParallelism;
     }
     /**
@@ -456,7 +456,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
      * 
      */
-    public Output<Integer> getSystemMaxJobCount() {
+    public Output<Integer> systemMaxJobCount() {
         return this.systemMaxJobCount;
     }
     /**
@@ -470,7 +470,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -484,7 +484,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -498,7 +498,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The list of virtualNetwork rules associated with this account.
      * 
      */
-    public Output<List<VirtualNetworkRuleResponse>> getVirtualNetworkRules() {
+    public Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 

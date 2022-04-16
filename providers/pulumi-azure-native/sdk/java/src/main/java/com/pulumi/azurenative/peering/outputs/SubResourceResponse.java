@@ -26,7 +26,7 @@ public final class SubResourceResponse {
      * The identifier of the referenced resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

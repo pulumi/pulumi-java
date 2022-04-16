@@ -26,7 +26,7 @@ public final class DFPInstanceAdministratorsResponse extends com.pulumi.resource
     @Import(name="members")
       private final @Nullable List<String> members;
 
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members == null ? List.of() : this.members;
     }
 

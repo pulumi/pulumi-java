@@ -33,7 +33,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dnsSettings")
       private final @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
-    public Output<NetworkInterfaceDnsSettingsArgs> getDnsSettings() {
+    public Output<NetworkInterfaceDnsSettingsArgs> dnsSettings() {
         return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
@@ -44,7 +44,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Output<Boolean> getEnableAcceleratedNetworking() {
+    public Output<Boolean> enableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Codegen.empty() : this.enableAcceleratedNetworking;
     }
 
@@ -55,7 +55,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableIPForwarding")
       private final @Nullable Output<Boolean> enableIPForwarding;
 
-    public Output<Boolean> getEnableIPForwarding() {
+    public Output<Boolean> enableIPForwarding() {
         return this.enableIPForwarding == null ? Codegen.empty() : this.enableIPForwarding;
     }
 
@@ -66,7 +66,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -77,7 +77,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -88,7 +88,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
+    public Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -99,7 +99,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -110,7 +110,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="migrationPhase")
       private final @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
-    public Output<Either<String,NetworkInterfaceMigrationPhase>> getMigrationPhase() {
+    public Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase() {
         return this.migrationPhase == null ? Codegen.empty() : this.migrationPhase;
     }
 
@@ -121,7 +121,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkInterfaceName")
       private final @Nullable Output<String> networkInterfaceName;
 
-    public Output<String> getNetworkInterfaceName() {
+    public Output<String> networkInterfaceName() {
         return this.networkInterfaceName == null ? Codegen.empty() : this.networkInterfaceName;
     }
 
@@ -132,7 +132,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
-    public Output<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
+    public Output<NetworkSecurityGroupArgs> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
     }
 
@@ -143,7 +143,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nicType")
       private final @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
 
-    public Output<Either<String,NetworkInterfaceNicType>> getNicType() {
+    public Output<Either<String,NetworkInterfaceNicType>> nicType() {
         return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
@@ -154,7 +154,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateLinkService")
       private final @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
 
-    public Output<PrivateLinkServiceArgs> getPrivateLinkService() {
+    public Output<PrivateLinkServiceArgs> privateLinkService() {
         return this.privateLinkService == null ? Codegen.empty() : this.privateLinkService;
     }
 
@@ -165,7 +165,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -176,7 +176,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

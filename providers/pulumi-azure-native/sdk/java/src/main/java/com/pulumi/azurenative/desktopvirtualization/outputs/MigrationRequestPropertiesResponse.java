@@ -34,14 +34,14 @@ public final class MigrationRequestPropertiesResponse {
      * The path to the legacy object to migrate.
      * 
     */
-    public Optional<String> getMigrationPath() {
+    public Optional<String> migrationPath() {
         return Optional.ofNullable(this.migrationPath);
     }
     /**
      * The type of operation for migration.
      * 
     */
-    public Optional<String> getOperation() {
+    public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
 

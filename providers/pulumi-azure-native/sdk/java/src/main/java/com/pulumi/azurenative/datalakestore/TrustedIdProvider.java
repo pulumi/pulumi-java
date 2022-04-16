@@ -42,7 +42,7 @@ public class TrustedIdProvider extends com.pulumi.resources.CustomResource {
      * @return The URL of this trusted identity provider.
      * 
      */
-    public Output<String> getIdProvider() {
+    public Output<String> idProvider() {
         return this.idProvider;
     }
     /**
@@ -56,7 +56,7 @@ public class TrustedIdProvider extends com.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class TrustedIdProvider extends com.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

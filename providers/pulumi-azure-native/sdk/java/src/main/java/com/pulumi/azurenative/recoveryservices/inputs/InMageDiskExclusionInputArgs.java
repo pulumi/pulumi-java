@@ -28,7 +28,7 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
     @Import(name="diskSignatureOptions")
       private final @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
-    public Output<List<InMageDiskSignatureExclusionOptionsArgs>> getDiskSignatureOptions() {
+    public Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions() {
         return this.diskSignatureOptions == null ? Codegen.empty() : this.diskSignatureOptions;
     }
 
@@ -39,7 +39,7 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
     @Import(name="volumeOptions")
       private final @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
-    public Output<List<InMageVolumeExclusionOptionsArgs>> getVolumeOptions() {
+    public Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions() {
         return this.volumeOptions == null ? Codegen.empty() : this.volumeOptions;
     }
 

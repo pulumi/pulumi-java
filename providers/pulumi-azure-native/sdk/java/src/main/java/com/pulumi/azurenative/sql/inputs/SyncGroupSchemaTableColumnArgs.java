@@ -26,7 +26,7 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
     @Import(name="dataSize")
       private final @Nullable Output<String> dataSize;
 
-    public Output<String> getDataSize() {
+    public Output<String> dataSize() {
         return this.dataSize == null ? Codegen.empty() : this.dataSize;
     }
 
@@ -37,7 +37,7 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -48,7 +48,7 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
     @Import(name="quotedName")
       private final @Nullable Output<String> quotedName;
 
-    public Output<String> getQuotedName() {
+    public Output<String> quotedName() {
         return this.quotedName == null ? Codegen.empty() : this.quotedName;
     }
 

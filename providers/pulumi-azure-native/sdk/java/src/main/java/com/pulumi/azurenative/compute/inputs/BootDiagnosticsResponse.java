@@ -26,7 +26,7 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -37,7 +37,7 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageUri")
       private final @Nullable String storageUri;
 
-    public Optional<String> getStorageUri() {
+    public Optional<String> storageUri() {
         return this.storageUri == null ? Optional.empty() : Optional.ofNullable(this.storageUri);
     }
 

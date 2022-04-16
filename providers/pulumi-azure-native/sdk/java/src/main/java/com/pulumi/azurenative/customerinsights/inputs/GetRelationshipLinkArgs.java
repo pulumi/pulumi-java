@@ -19,7 +19,7 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
     @Import(name="relationshipLinkName", required=true)
       private final String relationshipLinkName;
 
-    public String getRelationshipLinkName() {
+    public String relationshipLinkName() {
         return this.relationshipLinkName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

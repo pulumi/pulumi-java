@@ -26,7 +26,7 @@ public final class GetEventSubscriptionFullUrlResult {
      * The URL that represents the endpoint of the destination of an event subscription.
      * 
     */
-    public Optional<String> getEndpointUrl() {
+    public Optional<String> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
 

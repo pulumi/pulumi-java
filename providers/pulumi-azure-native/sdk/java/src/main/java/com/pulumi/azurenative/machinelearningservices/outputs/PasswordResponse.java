@@ -20,10 +20,10 @@ public final class PasswordResponse {
         this.value = value;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

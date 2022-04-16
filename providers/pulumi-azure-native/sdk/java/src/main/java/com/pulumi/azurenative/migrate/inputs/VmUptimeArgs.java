@@ -22,7 +22,7 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="daysPerMonth")
       private final @Nullable Output<Double> daysPerMonth;
 
-    public Output<Double> getDaysPerMonth() {
+    public Output<Double> daysPerMonth() {
         return this.daysPerMonth == null ? Codegen.empty() : this.daysPerMonth;
     }
 
@@ -33,7 +33,7 @@ public final class VmUptimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hoursPerDay")
       private final @Nullable Output<Double> hoursPerDay;
 
-    public Output<Double> getHoursPerDay() {
+    public Output<Double> hoursPerDay() {
         return this.hoursPerDay == null ? Codegen.empty() : this.hoursPerDay;
     }
 

@@ -55,35 +55,35 @@ public final class ExtensionResourcePlanResponse {
      * Name of the plan.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Product name.
      * 
     */
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
      * Optional: the promotion code associated with the plan.
      * 
     */
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * Name of the extension publisher.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * A string that uniquely identifies the plan version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

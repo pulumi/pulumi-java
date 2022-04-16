@@ -62,14 +62,14 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
      * The ID of the cloud account
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * State of the multi-cloud connector
      * 
     */
-    public String getAuthenticationProvisioningState() {
+    public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
     /**
@@ -77,28 +77,28 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
      * Expected value is 'awsCreds'.
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * Public key element of the AWS credential object (write only)
      * 
     */
-    public String getAwsAccessKeyId() {
+    public String awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
     /**
      * Secret key element of the AWS credential object (write only)
      * 
     */
-    public String getAwsSecretAccessKey() {
+    public String awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
     /**
      * The permissions detected in the cloud account.
      * 
     */
-    public List<String> getGrantedPermissions() {
+    public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
 

@@ -26,7 +26,7 @@ public final class ExperimentsResponse {
      * List of ramp-up rules.
      * 
     */
-    public List<RampUpRuleResponse> getRampUpRules() {
+    public List<RampUpRuleResponse> rampUpRules() {
         return this.rampUpRules == null ? List.of() : this.rampUpRules;
     }
 

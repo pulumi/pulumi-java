@@ -35,14 +35,14 @@ public final class SelectVideoTrackByIdResponse {
      * Expected value is '#Microsoft.Media.SelectVideoTrackById'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Track identifier to select
      * 
     */
-    public Double getTrackId() {
+    public Double trackId() {
         return this.trackId;
     }
 

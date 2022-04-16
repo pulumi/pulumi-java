@@ -29,7 +29,7 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
     @Import(name="compressionProperties")
       private final @Nullable Object compressionProperties;
 
-    public Object getCompressionProperties() {
+    public Object compressionProperties() {
         return this.compressionProperties == null ? null : this.compressionProperties;
     }
 
@@ -40,7 +40,7 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
     @Import(name="skipLineCount")
       private final @Nullable Object skipLineCount;
 
-    public Optional<Object> getSkipLineCount() {
+    public Optional<Object> skipLineCount() {
         return this.skipLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipLineCount);
     }
 
@@ -52,7 +52,7 @@ public final class DelimitedTextReadSettingsResponse extends com.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

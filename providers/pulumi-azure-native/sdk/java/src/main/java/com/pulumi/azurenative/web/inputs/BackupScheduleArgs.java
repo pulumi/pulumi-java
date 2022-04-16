@@ -29,7 +29,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frequencyInterval", required=true)
       private final Output<Integer> frequencyInterval;
 
-    public Output<Integer> getFrequencyInterval() {
+    public Output<Integer> frequencyInterval() {
         return this.frequencyInterval;
     }
 
@@ -40,7 +40,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frequencyUnit", required=true)
       private final Output<FrequencyUnit> frequencyUnit;
 
-    public Output<FrequencyUnit> getFrequencyUnit() {
+    public Output<FrequencyUnit> frequencyUnit() {
         return this.frequencyUnit;
     }
 
@@ -51,7 +51,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keepAtLeastOneBackup", required=true)
       private final Output<Boolean> keepAtLeastOneBackup;
 
-    public Output<Boolean> getKeepAtLeastOneBackup() {
+    public Output<Boolean> keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
 
@@ -62,7 +62,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionPeriodInDays", required=true)
       private final Output<Integer> retentionPeriodInDays;
 
-    public Output<Integer> getRetentionPeriodInDays() {
+    public Output<Integer> retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
 
@@ -73,7 +73,7 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

@@ -41,21 +41,21 @@ public final class PipelineReferenceResponse {
      * Reference name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Reference pipeline name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Pipeline reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

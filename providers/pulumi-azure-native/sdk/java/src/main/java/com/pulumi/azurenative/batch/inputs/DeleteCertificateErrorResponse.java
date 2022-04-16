@@ -26,7 +26,7 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -37,7 +37,7 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="details")
       private final @Nullable List<DeleteCertificateErrorResponse> details;
 
-    public List<DeleteCertificateErrorResponse> getDetails() {
+    public List<DeleteCertificateErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
 
@@ -48,7 +48,7 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -59,7 +59,7 @@ public final class DeleteCertificateErrorResponse extends com.pulumi.resources.I
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

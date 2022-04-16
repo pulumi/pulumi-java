@@ -23,7 +23,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -45,7 +45,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
 
-    public Output<String> getSettingsName() {
+    public Output<String> settingsName() {
         return this.settingsName == null ? Codegen.empty() : this.settingsName;
     }
 
@@ -67,7 +67,7 @@ public final class EyesOnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

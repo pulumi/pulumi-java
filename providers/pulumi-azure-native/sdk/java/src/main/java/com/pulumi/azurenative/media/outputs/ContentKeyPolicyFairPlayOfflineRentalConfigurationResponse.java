@@ -32,14 +32,14 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
      * Playback duration
      * 
     */
-    public Double getPlaybackDurationSeconds() {
+    public Double playbackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
     /**
      * Storage duration
      * 
     */
-    public Double getStorageDurationSeconds() {
+    public Double storageDurationSeconds() {
         return this.storageDurationSeconds;
     }
 

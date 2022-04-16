@@ -27,7 +27,7 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="delete")
       private final @Nullable Output<DateAfterModificationArgs> delete;
 
-    public Output<DateAfterModificationArgs> getDelete() {
+    public Output<DateAfterModificationArgs> delete() {
         return this.delete == null ? Codegen.empty() : this.delete;
     }
 
@@ -38,7 +38,7 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="enableAutoTierToHotFromCool")
       private final @Nullable Output<Boolean> enableAutoTierToHotFromCool;
 
-    public Output<Boolean> getEnableAutoTierToHotFromCool() {
+    public Output<Boolean> enableAutoTierToHotFromCool() {
         return this.enableAutoTierToHotFromCool == null ? Codegen.empty() : this.enableAutoTierToHotFromCool;
     }
 
@@ -49,7 +49,7 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterModificationArgs> tierToArchive;
 
-    public Output<DateAfterModificationArgs> getTierToArchive() {
+    public Output<DateAfterModificationArgs> tierToArchive() {
         return this.tierToArchive == null ? Codegen.empty() : this.tierToArchive;
     }
 
@@ -60,7 +60,7 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="tierToCool")
       private final @Nullable Output<DateAfterModificationArgs> tierToCool;
 
-    public Output<DateAfterModificationArgs> getTierToCool() {
+    public Output<DateAfterModificationArgs> tierToCool() {
         return this.tierToCool == null ? Codegen.empty() : this.tierToCool;
     }
 

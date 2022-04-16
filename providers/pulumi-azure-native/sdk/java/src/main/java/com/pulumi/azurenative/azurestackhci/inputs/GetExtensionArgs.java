@@ -19,7 +19,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arcSettingName", required=true)
       private final String arcSettingName;
 
-    public String getArcSettingName() {
+    public String arcSettingName() {
         return this.arcSettingName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="extensionName", required=true)
       private final String extensionName;
 
-    public String getExtensionName() {
+    public String extensionName() {
         return this.extensionName;
     }
 
@@ -52,7 +52,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

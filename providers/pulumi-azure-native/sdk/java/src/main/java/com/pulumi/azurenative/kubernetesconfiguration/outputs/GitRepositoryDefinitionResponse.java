@@ -78,56 +78,56 @@ public final class GitRepositoryDefinitionResponse {
      * Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
      * 
     */
-    public Optional<String> getHttpsCAFile() {
+    public Optional<String> httpsCAFile() {
         return Optional.ofNullable(this.httpsCAFile);
     }
     /**
      * Base64-encoded HTTPS username used to access private git repositories over HTTPS
      * 
     */
-    public Optional<String> getHttpsUser() {
+    public Optional<String> httpsUser() {
         return Optional.ofNullable(this.httpsUser);
     }
     /**
      * Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
      * 
     */
-    public Optional<String> getLocalAuthRef() {
+    public Optional<String> localAuthRef() {
         return Optional.ofNullable(this.localAuthRef);
     }
     /**
      * The source reference for the GitRepository object.
      * 
     */
-    public Optional<RepositoryRefDefinitionResponse> getRepositoryRef() {
+    public Optional<RepositoryRefDefinitionResponse> repositoryRef() {
         return Optional.ofNullable(this.repositoryRef);
     }
     /**
      * Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
      * 
     */
-    public Optional<String> getSshKnownHosts() {
+    public Optional<String> sshKnownHosts() {
         return Optional.ofNullable(this.sshKnownHosts);
     }
     /**
      * The interval at which to re-reconcile the cluster git repository source with the remote.
      * 
     */
-    public Optional<Double> getSyncIntervalInSeconds() {
+    public Optional<Double> syncIntervalInSeconds() {
         return Optional.ofNullable(this.syncIntervalInSeconds);
     }
     /**
      * The maximum time to attempt to reconcile the cluster git repository source with the remote.
      * 
     */
-    public Optional<Double> getTimeoutInSeconds() {
+    public Optional<Double> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * The URL to sync for the flux configuration git repository.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

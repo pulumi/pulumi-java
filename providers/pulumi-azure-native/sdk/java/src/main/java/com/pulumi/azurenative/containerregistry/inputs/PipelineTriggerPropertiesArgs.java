@@ -22,7 +22,7 @@ public final class PipelineTriggerPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="sourceTrigger")
       private final @Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
 
-    public Output<PipelineSourceTriggerPropertiesArgs> getSourceTrigger() {
+    public Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger() {
         return this.sourceTrigger == null ? Codegen.empty() : this.sourceTrigger;
     }
 

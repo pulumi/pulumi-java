@@ -26,7 +26,7 @@ public final class FilterTrackSelectionArgs extends com.pulumi.resources.Resourc
     @Import(name="trackSelections", required=true)
       private final Output<List<FilterTrackPropertyConditionArgs>> trackSelections;
 
-    public Output<List<FilterTrackPropertyConditionArgs>> getTrackSelections() {
+    public Output<List<FilterTrackPropertyConditionArgs>> trackSelections() {
         return this.trackSelections;
     }
 

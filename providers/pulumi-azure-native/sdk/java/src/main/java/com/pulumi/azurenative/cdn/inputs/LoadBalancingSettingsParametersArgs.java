@@ -26,7 +26,7 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
     @Import(name="additionalLatencyInMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyInMilliseconds;
 
-    public Output<Integer> getAdditionalLatencyInMilliseconds() {
+    public Output<Integer> additionalLatencyInMilliseconds() {
         return this.additionalLatencyInMilliseconds == null ? Codegen.empty() : this.additionalLatencyInMilliseconds;
     }
 
@@ -37,7 +37,7 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> getSampleSize() {
+    public Output<Integer> sampleSize() {
         return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
@@ -48,7 +48,7 @@ public final class LoadBalancingSettingsParametersArgs extends com.pulumi.resour
     @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;
 
-    public Output<Integer> getSuccessfulSamplesRequired() {
+    public Output<Integer> successfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Codegen.empty() : this.successfulSamplesRequired;
     }
 

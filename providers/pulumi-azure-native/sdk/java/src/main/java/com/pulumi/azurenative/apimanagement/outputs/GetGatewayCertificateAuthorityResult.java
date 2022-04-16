@@ -49,28 +49,28 @@ public final class GetGatewayCertificateAuthorityResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Determines whether certificate authority is trusted.
      * 
     */
-    public Optional<Boolean> getIsTrusted() {
+    public Optional<Boolean> isTrusted() {
         return Optional.ofNullable(this.isTrusted);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

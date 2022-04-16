@@ -162,132 +162,132 @@ public final class GetBatchAccountResult {
      * The account endpoint used to interact with the Batch service.
      * 
     */
-    public String getAccountEndpoint() {
+    public String accountEndpoint() {
         return this.accountEndpoint;
     }
-    public Integer getActiveJobAndJobScheduleQuota() {
+    public Integer activeJobAndJobScheduleQuota() {
         return this.activeJobAndJobScheduleQuota;
     }
     /**
      * Contains information about the auto-storage account associated with a Batch account.
      * 
     */
-    public AutoStoragePropertiesResponse getAutoStorage() {
+    public AutoStoragePropertiesResponse autoStorage() {
         return this.autoStorage;
     }
     /**
      * For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
      * 
     */
-    public Integer getDedicatedCoreQuota() {
+    public Integer dedicatedCoreQuota() {
         return this.dedicatedCoreQuota;
     }
     /**
      * A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
      * 
     */
-    public List<VirtualMachineFamilyCoreQuotaResponse> getDedicatedCoreQuotaPerVMFamily() {
+    public List<VirtualMachineFamilyCoreQuotaResponse> dedicatedCoreQuotaPerVMFamily() {
         return this.dedicatedCoreQuotaPerVMFamily;
     }
     /**
      * Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.
      * 
     */
-    public Boolean getDedicatedCoreQuotaPerVMFamilyEnforced() {
+    public Boolean dedicatedCoreQuotaPerVMFamilyEnforced() {
         return this.dedicatedCoreQuotaPerVMFamilyEnforced;
     }
     /**
      * Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
      * 
     */
-    public EncryptionPropertiesResponse getEncryption() {
+    public EncryptionPropertiesResponse encryption() {
         return this.encryption;
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the Batch account.
      * 
     */
-    public Optional<BatchAccountIdentityResponse> getIdentity() {
+    public Optional<BatchAccountIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Identifies the Azure key vault associated with a Batch account.
      * 
     */
-    public KeyVaultReferenceResponse getKeyVaultReference() {
+    public KeyVaultReferenceResponse keyVaultReference() {
         return this.keyVaultReference;
     }
     /**
      * The location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
      * 
     */
-    public Integer getLowPriorityCoreQuota() {
+    public Integer lowPriorityCoreQuota() {
         return this.lowPriorityCoreQuota;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The allocation mode for creating pools in the Batch account.
      * 
     */
-    public String getPoolAllocationMode() {
+    public String poolAllocationMode() {
         return this.poolAllocationMode;
     }
-    public Integer getPoolQuota() {
+    public Integer poolQuota() {
         return this.poolQuota;
     }
     /**
      * List of private endpoint connections associated with the Batch account
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * The provisioned state of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * If not specified, the default value is 'enabled'.
      * 
     */
-    public String getPublicNetworkAccess() {
+    public String publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

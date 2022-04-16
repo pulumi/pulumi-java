@@ -25,7 +25,7 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
     @Import(name="clientApplication")
       private final @Nullable String clientApplication;
 
-    public Optional<String> getClientApplication() {
+    public Optional<String> clientApplication() {
         return this.clientApplication == null ? Optional.empty() : Optional.ofNullable(this.clientApplication);
     }
 
@@ -36,7 +36,7 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
     @Import(name="clusterApplication")
       private final @Nullable String clusterApplication;
 
-    public Optional<String> getClusterApplication() {
+    public Optional<String> clusterApplication() {
         return this.clusterApplication == null ? Optional.empty() : Optional.ofNullable(this.clusterApplication);
     }
 
@@ -47,7 +47,7 @@ public final class AzureActiveDirectoryResponse extends com.pulumi.resources.Inv
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

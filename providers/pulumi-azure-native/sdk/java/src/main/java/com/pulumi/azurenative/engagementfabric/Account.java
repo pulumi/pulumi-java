@@ -44,7 +44,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The location of the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource
      * 
      */
-    public Output<SKUResponse> getSku() {
+    public Output<SKUResponse> sku() {
         return this.sku;
     }
     /**
@@ -86,7 +86,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The fully qualified type of the resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="currentBillingFeatures")
       private final @Nullable Output<List<String>> currentBillingFeatures;
 
-    public Output<List<String>> getCurrentBillingFeatures() {
+    public Output<List<String>> currentBillingFeatures() {
         return this.currentBillingFeatures == null ? Codegen.empty() : this.currentBillingFeatures;
     }
 
@@ -35,7 +35,7 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="dataVolumeCap")
       private final @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
-    public Output<ApplicationInsightsComponentDataVolumeCapArgs> getDataVolumeCap() {
+    public Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap() {
         return this.dataVolumeCap == null ? Codegen.empty() : this.dataVolumeCap;
     }
 
@@ -46,7 +46,7 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ComponentCurrentBillingFeatureArgs extends com.pulumi.resourc
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

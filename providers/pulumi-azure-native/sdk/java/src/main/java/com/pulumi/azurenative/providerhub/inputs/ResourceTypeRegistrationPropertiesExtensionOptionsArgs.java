@@ -18,7 +18,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     @Import(name="resourceCreationBegin")
       private final @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
-    public Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> getResourceCreationBegin() {
+    public Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin() {
         return this.resourceCreationBegin == null ? Codegen.empty() : this.resourceCreationBegin;
     }
 

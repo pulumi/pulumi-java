@@ -27,7 +27,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -38,7 +38,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption", required=true)
       private final Output<AccountEncryptionArgs> encryption;
 
-    public Output<AccountEncryptionArgs> getEncryption() {
+    public Output<AccountEncryptionArgs> encryption() {
         return this.encryption;
     }
 
@@ -49,7 +49,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<VideoAnalyzerIdentityArgs> identity;
 
-    public Output<VideoAnalyzerIdentityArgs> getIdentity() {
+    public Output<VideoAnalyzerIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -60,7 +60,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -71,7 +71,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccounts", required=true)
       private final Output<List<StorageAccountArgs>> storageAccounts;
 
-    public Output<List<StorageAccountArgs>> getStorageAccounts() {
+    public Output<List<StorageAccountArgs>> storageAccounts() {
         return this.storageAccounts;
     }
 
@@ -93,7 +93,7 @@ public final class VideoAnalyzerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

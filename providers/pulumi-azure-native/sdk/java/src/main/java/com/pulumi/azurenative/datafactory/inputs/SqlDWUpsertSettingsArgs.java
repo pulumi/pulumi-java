@@ -26,7 +26,7 @@ public final class SqlDWUpsertSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="interimSchemaName")
       private final @Nullable Output<Object> interimSchemaName;
 
-    public Output<Object> getInterimSchemaName() {
+    public Output<Object> interimSchemaName() {
         return this.interimSchemaName == null ? Codegen.empty() : this.interimSchemaName;
     }
 
@@ -37,7 +37,7 @@ public final class SqlDWUpsertSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="keys")
       private final @Nullable Output<Object> keys;
 
-    public Output<Object> getKeys() {
+    public Output<Object> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 

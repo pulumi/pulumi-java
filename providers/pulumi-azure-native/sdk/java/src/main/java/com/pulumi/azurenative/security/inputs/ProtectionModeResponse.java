@@ -25,7 +25,7 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exe")
       private final @Nullable String exe;
 
-    public Optional<String> getExe() {
+    public Optional<String> exe() {
         return this.exe == null ? Optional.empty() : Optional.ofNullable(this.exe);
     }
 
@@ -36,7 +36,7 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="executable")
       private final @Nullable String executable;
 
-    public Optional<String> getExecutable() {
+    public Optional<String> executable() {
         return this.executable == null ? Optional.empty() : Optional.ofNullable(this.executable);
     }
 
@@ -47,7 +47,7 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="msi")
       private final @Nullable String msi;
 
-    public Optional<String> getMsi() {
+    public Optional<String> msi() {
         return this.msi == null ? Optional.empty() : Optional.ofNullable(this.msi);
     }
 
@@ -58,7 +58,7 @@ public final class ProtectionModeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="script")
       private final @Nullable String script;
 
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 

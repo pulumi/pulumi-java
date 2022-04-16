@@ -19,7 +19,7 @@ public final class GetManagedDatabaseArgs extends com.pulumi.resources.InvokeArg
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagedDatabaseArgs extends com.pulumi.resources.InvokeArg
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
-    public String getManagedInstanceName() {
+    public String managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagedDatabaseArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

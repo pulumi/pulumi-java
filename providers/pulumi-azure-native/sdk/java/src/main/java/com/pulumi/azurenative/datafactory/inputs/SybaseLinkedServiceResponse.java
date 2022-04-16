@@ -33,7 +33,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -55,7 +55,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="database", required=true)
       private final Object database;
 
-    public Object getDatabase() {
+    public Object database() {
         return this.database;
     }
 
@@ -77,7 +77,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -88,7 +88,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -99,7 +99,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -110,7 +110,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -121,7 +121,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="schema")
       private final @Nullable Object schema;
 
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
@@ -132,7 +132,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="server", required=true)
       private final Object server;
 
-    public Object getServer() {
+    public Object server() {
         return this.server;
     }
 
@@ -144,7 +144,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -155,7 +155,7 @@ public final class SybaseLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="username")
       private final @Nullable Object username;
 
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

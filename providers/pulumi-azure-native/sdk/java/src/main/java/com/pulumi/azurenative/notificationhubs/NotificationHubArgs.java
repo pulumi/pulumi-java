@@ -32,7 +32,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="admCredential")
       private final @Nullable Output<AdmCredentialArgs> admCredential;
 
-    public Output<AdmCredentialArgs> getAdmCredential() {
+    public Output<AdmCredentialArgs> admCredential() {
         return this.admCredential == null ? Codegen.empty() : this.admCredential;
     }
 
@@ -43,7 +43,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="apnsCredential")
       private final @Nullable Output<ApnsCredentialArgs> apnsCredential;
 
-    public Output<ApnsCredentialArgs> getApnsCredential() {
+    public Output<ApnsCredentialArgs> apnsCredential() {
         return this.apnsCredential == null ? Codegen.empty() : this.apnsCredential;
     }
 
@@ -54,7 +54,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="authorizationRules")
       private final @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
-    public Output<List<SharedAccessAuthorizationRulePropertiesArgs>> getAuthorizationRules() {
+    public Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules() {
         return this.authorizationRules == null ? Codegen.empty() : this.authorizationRules;
     }
 
@@ -65,7 +65,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="baiduCredential")
       private final @Nullable Output<BaiduCredentialArgs> baiduCredential;
 
-    public Output<BaiduCredentialArgs> getBaiduCredential() {
+    public Output<BaiduCredentialArgs> baiduCredential() {
         return this.baiduCredential == null ? Codegen.empty() : this.baiduCredential;
     }
 
@@ -76,7 +76,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gcmCredential")
       private final @Nullable Output<GcmCredentialArgs> gcmCredential;
 
-    public Output<GcmCredentialArgs> getGcmCredential() {
+    public Output<GcmCredentialArgs> gcmCredential() {
         return this.gcmCredential == null ? Codegen.empty() : this.gcmCredential;
     }
 
@@ -87,7 +87,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -98,7 +98,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mpnsCredential")
       private final @Nullable Output<MpnsCredentialArgs> mpnsCredential;
 
-    public Output<MpnsCredentialArgs> getMpnsCredential() {
+    public Output<MpnsCredentialArgs> mpnsCredential() {
         return this.mpnsCredential == null ? Codegen.empty() : this.mpnsCredential;
     }
 
@@ -109,7 +109,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -120,7 +120,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -131,7 +131,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="notificationHubName")
       private final @Nullable Output<String> notificationHubName;
 
-    public Output<String> getNotificationHubName() {
+    public Output<String> notificationHubName() {
         return this.notificationHubName == null ? Codegen.empty() : this.notificationHubName;
     }
 
@@ -142,7 +142,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="registrationTtl")
       private final @Nullable Output<String> registrationTtl;
 
-    public Output<String> getRegistrationTtl() {
+    public Output<String> registrationTtl() {
         return this.registrationTtl == null ? Codegen.empty() : this.registrationTtl;
     }
 
@@ -153,7 +153,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -164,7 +164,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -175,7 +175,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -186,7 +186,7 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="wnsCredential")
       private final @Nullable Output<WnsCredentialArgs> wnsCredential;
 
-    public Output<WnsCredentialArgs> getWnsCredential() {
+    public Output<WnsCredentialArgs> wnsCredential() {
         return this.wnsCredential == null ? Codegen.empty() : this.wnsCredential;
     }
 

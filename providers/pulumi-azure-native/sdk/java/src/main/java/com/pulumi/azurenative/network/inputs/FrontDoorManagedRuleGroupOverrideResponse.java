@@ -28,7 +28,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
     @Import(name="exclusions")
       private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
-    public List<ManagedRuleExclusionResponse> getExclusions() {
+    public List<ManagedRuleExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
 
@@ -39,7 +39,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
     @Import(name="ruleGroupName", required=true)
       private final String ruleGroupName;
 
-    public String getRuleGroupName() {
+    public String ruleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -50,7 +50,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
     @Import(name="rules")
       private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
-    public List<FrontDoorManagedRuleOverrideResponse> getRules() {
+    public List<FrontDoorManagedRuleOverrideResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

@@ -25,13 +25,13 @@ public final class ImportCollectorPropertiesResponse {
         this.updatedTimestamp = updatedTimestamp;
     }
 
-    public String getCreatedTimestamp() {
+    public String createdTimestamp() {
         return this.createdTimestamp;
     }
-    public Optional<String> getDiscoverySiteId() {
+    public Optional<String> discoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
-    public String getUpdatedTimestamp() {
+    public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 

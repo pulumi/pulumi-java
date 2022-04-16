@@ -28,7 +28,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.re
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -39,7 +39,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.re
     @Import(name="routingType")
       private final @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
 
-    public Output<Either<String,ResourceTypeRouting>> getRoutingType() {
+    public Output<Either<String,ResourceTypeRouting>> routingType() {
         return this.routingType == null ? Codegen.empty() : this.routingType;
     }
 

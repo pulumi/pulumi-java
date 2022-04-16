@@ -28,7 +28,7 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="buildpackGroups")
       private final @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
-    public Output<List<BuildpacksGroupPropertiesArgs>> getBuildpackGroups() {
+    public Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups() {
         return this.buildpackGroups == null ? Codegen.empty() : this.buildpackGroups;
     }
 
@@ -39,7 +39,7 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stack")
       private final @Nullable Output<StackPropertiesArgs> stack;
 
-    public Output<StackPropertiesArgs> getStack() {
+    public Output<StackPropertiesArgs> stack() {
         return this.stack == null ? Codegen.empty() : this.stack;
     }
 

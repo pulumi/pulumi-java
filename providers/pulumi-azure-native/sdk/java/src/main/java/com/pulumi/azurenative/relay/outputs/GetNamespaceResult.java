@@ -95,73 +95,73 @@ public final class GetNamespaceResult {
      * The time the namespace was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Identifier for Azure Insights metrics.
      * 
     */
-    public String getMetricId() {
+    public String metricId() {
         return this.metricId;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint you can use to perform Service Bus operations.
      * 
     */
-    public String getServiceBusEndpoint() {
+    public String serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * SKU of the namespace.
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
 

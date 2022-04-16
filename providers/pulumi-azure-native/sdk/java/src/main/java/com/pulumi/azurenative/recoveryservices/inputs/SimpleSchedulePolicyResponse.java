@@ -28,7 +28,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="schedulePolicyType", required=true)
       private final String schedulePolicyType;
 
-    public String getSchedulePolicyType() {
+    public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 
@@ -39,7 +39,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="scheduleRunDays")
       private final @Nullable List<String> scheduleRunDays;
 
-    public List<String> getScheduleRunDays() {
+    public List<String> scheduleRunDays() {
         return this.scheduleRunDays == null ? List.of() : this.scheduleRunDays;
     }
 
@@ -50,7 +50,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="scheduleRunFrequency")
       private final @Nullable String scheduleRunFrequency;
 
-    public Optional<String> getScheduleRunFrequency() {
+    public Optional<String> scheduleRunFrequency() {
         return this.scheduleRunFrequency == null ? Optional.empty() : Optional.ofNullable(this.scheduleRunFrequency);
     }
 
@@ -61,7 +61,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="scheduleRunTimes")
       private final @Nullable List<String> scheduleRunTimes;
 
-    public List<String> getScheduleRunTimes() {
+    public List<String> scheduleRunTimes() {
         return this.scheduleRunTimes == null ? List.of() : this.scheduleRunTimes;
     }
 
@@ -72,7 +72,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="scheduleWeeklyFrequency")
       private final @Nullable Integer scheduleWeeklyFrequency;
 
-    public Optional<Integer> getScheduleWeeklyFrequency() {
+    public Optional<Integer> scheduleWeeklyFrequency() {
         return this.scheduleWeeklyFrequency == null ? Optional.empty() : Optional.ofNullable(this.scheduleWeeklyFrequency);
     }
 

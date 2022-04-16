@@ -48,28 +48,28 @@ public final class ListIotDpsResourceKeysForKeyNameResult {
      * Name of the key.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * Primary SAS key value.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Rights that this key has.
      * 
     */
-    public String getRights() {
+    public String rights() {
         return this.rights;
     }
     /**
      * Secondary SAS key value.
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

@@ -25,7 +25,7 @@ public final class SapHanaPartitionSettingsResponse extends com.pulumi.resources
     @Import(name="partitionColumnName")
       private final @Nullable Object partitionColumnName;
 
-    public Optional<Object> getPartitionColumnName() {
+    public Optional<Object> partitionColumnName() {
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
     }
 

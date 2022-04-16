@@ -15,7 +15,7 @@ public final class SinkConfigurationResponse extends com.pulumi.resources.Invoke
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

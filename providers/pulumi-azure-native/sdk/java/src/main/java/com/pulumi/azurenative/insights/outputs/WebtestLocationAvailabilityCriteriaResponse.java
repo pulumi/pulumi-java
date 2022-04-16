@@ -48,14 +48,14 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
      * The Application Insights resource Id.
      * 
     */
-    public String getComponentId() {
+    public String componentId() {
         return this.componentId;
     }
     /**
      * The number of failed locations.
      * 
     */
-    public Double getFailedLocationCount() {
+    public Double failedLocationCount() {
         return this.failedLocationCount;
     }
     /**
@@ -63,14 +63,14 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
      * Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The Application Insights web test Id.
      * 
     */
-    public String getWebTestId() {
+    public String webTestId() {
         return this.webTestId;
     }
 

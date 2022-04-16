@@ -29,7 +29,7 @@ public final class FabricCreationInputPropertiesArgs extends com.pulumi.resource
     @Import(name="customDetails")
       private final @Nullable Output<Object> customDetails;
 
-    public Output<Object> getCustomDetails() {
+    public Output<Object> customDetails() {
         return this.customDetails == null ? Codegen.empty() : this.customDetails;
     }
 

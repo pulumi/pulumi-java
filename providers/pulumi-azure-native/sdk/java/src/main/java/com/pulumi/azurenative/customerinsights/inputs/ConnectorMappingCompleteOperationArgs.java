@@ -27,7 +27,7 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
     @Import(name="completionOperationType")
       private final @Nullable Output<CompletionOperationTypes> completionOperationType;
 
-    public Output<CompletionOperationTypes> getCompletionOperationType() {
+    public Output<CompletionOperationTypes> completionOperationType() {
         return this.completionOperationType == null ? Codegen.empty() : this.completionOperationType;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
     @Import(name="destinationFolder")
       private final @Nullable Output<String> destinationFolder;
 
-    public Output<String> getDestinationFolder() {
+    public Output<String> destinationFolder() {
         return this.destinationFolder == null ? Codegen.empty() : this.destinationFolder;
     }
 

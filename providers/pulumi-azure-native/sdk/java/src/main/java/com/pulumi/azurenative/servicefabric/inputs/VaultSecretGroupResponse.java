@@ -25,7 +25,7 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceVault", required=true)
       private final SubResourceResponse sourceVault;
 
-    public SubResourceResponse getSourceVault() {
+    public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }
 
@@ -36,7 +36,7 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
     @Import(name="vaultCertificates", required=true)
       private final List<VaultCertificateResponse> vaultCertificates;
 
-    public List<VaultCertificateResponse> getVaultCertificates() {
+    public List<VaultCertificateResponse> vaultCertificates() {
         return this.vaultCertificates;
     }
 

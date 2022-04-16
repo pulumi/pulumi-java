@@ -27,7 +27,7 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
     @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
 
-    public Output<Map<String,String>> getArtifactTags() {
+    public Output<Map<String,String>> artifactTags() {
         return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
     }
 
@@ -38,7 +38,7 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
     @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
 
-    public Output<String> getRunOutputName() {
+    public Output<String> runOutputName() {
         return this.runOutputName;
     }
 
@@ -50,7 +50,7 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

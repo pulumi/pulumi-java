@@ -49,28 +49,28 @@ public final class KeyEncryptionKeyResponse {
      * Managed identity properties used for key encryption.
      * 
     */
-    public Optional<IdentityPropertiesResponse> getIdentityProperties() {
+    public Optional<IdentityPropertiesResponse> identityProperties() {
         return Optional.ofNullable(this.identityProperties);
     }
     /**
      * Type of encryption key used for key encryption.
      * 
     */
-    public String getKekType() {
+    public String kekType() {
         return this.kekType;
     }
     /**
      * Key encryption key. It is required in case of Customer managed KekType.
      * 
     */
-    public Optional<String> getKekUrl() {
+    public Optional<String> kekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
     /**
      * Kek vault resource id. It is required in case of Customer managed KekType.
      * 
     */
-    public Optional<String> getKekVaultResourceID() {
+    public Optional<String> kekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
 

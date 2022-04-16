@@ -19,7 +19,7 @@ public final class GetConnectionTypeArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConnectionTypeArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="connectionTypeName", required=true)
       private final String connectionTypeName;
 
-    public String getConnectionTypeName() {
+    public String connectionTypeName() {
         return this.connectionTypeName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConnectionTypeArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

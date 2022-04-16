@@ -113,91 +113,91 @@ public final class GetWebAppDeploymentResult {
      * True if deployment is currently active, false if completed and null if not started.
      * 
     */
-    public Optional<Boolean> getActive() {
+    public Optional<Boolean> active() {
         return Optional.ofNullable(this.active);
     }
     /**
      * Who authored the deployment.
      * 
     */
-    public Optional<String> getAuthor() {
+    public Optional<String> author() {
         return Optional.ofNullable(this.author);
     }
     /**
      * Author email.
      * 
     */
-    public Optional<String> getAuthorEmail() {
+    public Optional<String> authorEmail() {
         return Optional.ofNullable(this.authorEmail);
     }
     /**
      * Who performed the deployment.
      * 
     */
-    public Optional<String> getDeployer() {
+    public Optional<String> deployer() {
         return Optional.ofNullable(this.deployer);
     }
     /**
      * Details on deployment.
      * 
     */
-    public Optional<String> getDetails() {
+    public Optional<String> details() {
         return Optional.ofNullable(this.details);
     }
     /**
      * End time.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Details about deployment status.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Start time.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Deployment status.
      * 
     */
-    public Optional<Integer> getStatus() {
+    public Optional<Integer> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

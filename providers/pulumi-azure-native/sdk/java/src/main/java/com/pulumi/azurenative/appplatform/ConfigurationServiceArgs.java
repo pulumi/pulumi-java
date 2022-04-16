@@ -23,7 +23,7 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationServiceName")
       private final @Nullable Output<String> configurationServiceName;
 
-    public Output<String> getConfigurationServiceName() {
+    public Output<String> configurationServiceName() {
         return this.configurationServiceName == null ? Codegen.empty() : this.configurationServiceName;
     }
 
@@ -34,7 +34,7 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<ConfigurationServicePropertiesArgs> properties;
 
-    public Output<ConfigurationServicePropertiesArgs> getProperties() {
+    public Output<ConfigurationServicePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ConfigurationServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

@@ -21,7 +21,7 @@ public final class JitSchedulingPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -32,7 +32,7 @@ public final class JitSchedulingPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

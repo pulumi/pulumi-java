@@ -183,154 +183,154 @@ public final class VpnConnectionResponse {
      * Expected bandwidth in MBPS.
      * 
     */
-    public Optional<Integer> getConnectionBandwidth() {
+    public Optional<Integer> connectionBandwidth() {
         return Optional.ofNullable(this.connectionBandwidth);
     }
     /**
      * The connection status.
      * 
     */
-    public String getConnectionStatus() {
+    public String connectionStatus() {
         return this.connectionStatus;
     }
     /**
      * DPD timeout in seconds for vpn connection.
      * 
     */
-    public Optional<Integer> getDpdTimeoutSeconds() {
+    public Optional<Integer> dpdTimeoutSeconds() {
         return Optional.ofNullable(this.dpdTimeoutSeconds);
     }
     /**
      * Egress bytes transferred.
      * 
     */
-    public Double getEgressBytesTransferred() {
+    public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
      * EnableBgp flag.
      * 
     */
-    public Optional<Boolean> getEnableBgp() {
+    public Optional<Boolean> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
     /**
      * Enable internet security.
      * 
     */
-    public Optional<Boolean> getEnableInternetSecurity() {
+    public Optional<Boolean> enableInternetSecurity() {
         return Optional.ofNullable(this.enableInternetSecurity);
     }
     /**
      * EnableBgp flag.
      * 
     */
-    public Optional<Boolean> getEnableRateLimiting() {
+    public Optional<Boolean> enableRateLimiting() {
         return Optional.ofNullable(this.enableRateLimiting);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Ingress bytes transferred.
      * 
     */
-    public Double getIngressBytesTransferred() {
+    public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
      * The IPSec Policies to be considered by this connection.
      * 
     */
-    public List<IpsecPolicyResponse> getIpsecPolicies() {
+    public List<IpsecPolicyResponse> ipsecPolicies() {
         return this.ipsecPolicies == null ? List.of() : this.ipsecPolicies;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the VPN connection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Id of the connected vpn site.
      * 
     */
-    public Optional<SubResourceResponse> getRemoteVpnSite() {
+    public Optional<SubResourceResponse> remoteVpnSite() {
         return Optional.ofNullable(this.remoteVpnSite);
     }
     /**
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
     */
-    public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return Optional.ofNullable(this.routingConfiguration);
     }
     /**
      * Routing weight for vpn connection.
      * 
     */
-    public Optional<Integer> getRoutingWeight() {
+    public Optional<Integer> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
     /**
      * SharedKey for the vpn connection.
      * 
     */
-    public Optional<String> getSharedKey() {
+    public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
     /**
      * The Traffic Selector Policies to be considered by this connection.
      * 
     */
-    public List<TrafficSelectorPolicyResponse> getTrafficSelectorPolicies() {
+    public List<TrafficSelectorPolicyResponse> trafficSelectorPolicies() {
         return this.trafficSelectorPolicies == null ? List.of() : this.trafficSelectorPolicies;
     }
     /**
      * Use local azure ip to initiate connection.
      * 
     */
-    public Optional<Boolean> getUseLocalAzureIpAddress() {
+    public Optional<Boolean> useLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
     /**
      * Enable policy-based traffic selectors.
      * 
     */
-    public Optional<Boolean> getUsePolicyBasedTrafficSelectors() {
+    public Optional<Boolean> usePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
     /**
      * Connection protocol used for this connection.
      * 
     */
-    public Optional<String> getVpnConnectionProtocolType() {
+    public Optional<String> vpnConnectionProtocolType() {
         return Optional.ofNullable(this.vpnConnectionProtocolType);
     }
     /**
      * List of all vpn site link connections to the gateway.
      * 
     */
-    public List<VpnSiteLinkConnectionResponse> getVpnLinkConnections() {
+    public List<VpnSiteLinkConnectionResponse> vpnLinkConnections() {
         return this.vpnLinkConnections == null ? List.of() : this.vpnLinkConnections;
     }
 

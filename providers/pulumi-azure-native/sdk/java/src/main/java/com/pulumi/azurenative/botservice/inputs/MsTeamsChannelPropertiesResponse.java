@@ -26,7 +26,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="acceptedTerms")
       private final @Nullable Boolean acceptedTerms;
 
-    public Optional<Boolean> getAcceptedTerms() {
+    public Optional<Boolean> acceptedTerms() {
         return this.acceptedTerms == null ? Optional.empty() : Optional.ofNullable(this.acceptedTerms);
     }
 
@@ -37,7 +37,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="callingWebHook")
       private final @Nullable String callingWebHook;
 
-    public Optional<String> getCallingWebHook() {
+    public Optional<String> callingWebHook() {
         return this.callingWebHook == null ? Optional.empty() : Optional.ofNullable(this.callingWebHook);
     }
 
@@ -48,7 +48,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="deploymentEnvironment")
       private final @Nullable String deploymentEnvironment;
 
-    public Optional<String> getDeploymentEnvironment() {
+    public Optional<String> deploymentEnvironment() {
         return this.deploymentEnvironment == null ? Optional.empty() : Optional.ofNullable(this.deploymentEnvironment);
     }
 
@@ -59,7 +59,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="enableCalling")
       private final @Nullable Boolean enableCalling;
 
-    public Optional<Boolean> getEnableCalling() {
+    public Optional<Boolean> enableCalling() {
         return this.enableCalling == null ? Optional.empty() : Optional.ofNullable(this.enableCalling);
     }
 
@@ -70,7 +70,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="incomingCallRoute")
       private final @Nullable String incomingCallRoute;
 
-    public Optional<String> getIncomingCallRoute() {
+    public Optional<String> incomingCallRoute() {
         return this.incomingCallRoute == null ? Optional.empty() : Optional.ofNullable(this.incomingCallRoute);
     }
 
@@ -81,7 +81,7 @@ public final class MsTeamsChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 

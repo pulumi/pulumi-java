@@ -39,21 +39,21 @@ public final class ConnectionStatePropertiesResponse {
      * The actions required on the managed private endpoint
      * 
     */
-    public String getActionsRequired() {
+    public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The managed private endpoint description
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The approval status
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

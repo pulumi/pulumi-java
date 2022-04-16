@@ -47,14 +47,14 @@ public final class ApiKeyAuthenticationResponse {
      * The location of the authentication key/value pair in the request.
      * 
     */
-    public String getIn() {
+    public String in() {
         return this.in;
     }
     /**
      * The key name of the authentication key/value pair.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -62,14 +62,14 @@ public final class ApiKeyAuthenticationResponse {
      * Expected value is 'ApiKey'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value of the authentication key/value pair.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

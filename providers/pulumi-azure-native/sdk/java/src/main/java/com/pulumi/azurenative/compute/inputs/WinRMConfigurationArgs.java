@@ -27,7 +27,7 @@ public final class WinRMConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="listeners")
       private final @Nullable Output<List<WinRMListenerArgs>> listeners;
 
-    public Output<List<WinRMListenerArgs>> getListeners() {
+    public Output<List<WinRMListenerArgs>> listeners() {
         return this.listeners == null ? Codegen.empty() : this.listeners;
     }
 

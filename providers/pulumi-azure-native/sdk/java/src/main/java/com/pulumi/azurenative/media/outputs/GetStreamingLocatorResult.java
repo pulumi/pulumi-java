@@ -121,98 +121,98 @@ public final class GetStreamingLocatorResult {
      * Alternative Media ID of this Streaming Locator
      * 
     */
-    public Optional<String> getAlternativeMediaId() {
+    public Optional<String> alternativeMediaId() {
         return Optional.ofNullable(this.alternativeMediaId);
     }
     /**
      * Asset Name
      * 
     */
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
     /**
      * The ContentKeys used by this Streaming Locator.
      * 
     */
-    public List<StreamingLocatorContentKeyResponse> getContentKeys() {
+    public List<StreamingLocatorContentKeyResponse> contentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;
     }
     /**
      * The creation time of the Streaming Locator.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
     */
-    public Optional<String> getDefaultContentKeyPolicyName() {
+    public Optional<String> defaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
     /**
      * The end time of the Streaming Locator.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * A list of asset or account filters which apply to this streaming locator
      * 
     */
-    public List<String> getFilters() {
+    public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The start time of the Streaming Locator.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The StreamingLocatorId of the Streaming Locator.
      * 
     */
-    public Optional<String> getStreamingLocatorId() {
+    public Optional<String> streamingLocatorId() {
         return Optional.ofNullable(this.streamingLocatorId);
     }
     /**
      * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
      * 
     */
-    public String getStreamingPolicyName() {
+    public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
     /**
      * The system metadata relating to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

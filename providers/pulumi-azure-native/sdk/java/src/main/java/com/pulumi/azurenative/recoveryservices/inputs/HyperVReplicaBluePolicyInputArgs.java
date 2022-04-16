@@ -27,7 +27,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="allowedAuthenticationType")
       private final @Nullable Output<Integer> allowedAuthenticationType;
 
-    public Output<Integer> getAllowedAuthenticationType() {
+    public Output<Integer> allowedAuthenticationType() {
         return this.allowedAuthenticationType == null ? Codegen.empty() : this.allowedAuthenticationType;
     }
 
@@ -38,7 +38,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
-    public Output<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
+    public Output<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Codegen.empty() : this.applicationConsistentSnapshotFrequencyInHours;
     }
 
@@ -49,7 +49,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
+    public Output<String> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -60,7 +60,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="initialReplicationMethod")
       private final @Nullable Output<String> initialReplicationMethod;
 
-    public Output<String> getInitialReplicationMethod() {
+    public Output<String> initialReplicationMethod() {
         return this.initialReplicationMethod == null ? Codegen.empty() : this.initialReplicationMethod;
     }
 
@@ -72,7 +72,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -83,7 +83,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="offlineReplicationExportPath")
       private final @Nullable Output<String> offlineReplicationExportPath;
 
-    public Output<String> getOfflineReplicationExportPath() {
+    public Output<String> offlineReplicationExportPath() {
         return this.offlineReplicationExportPath == null ? Codegen.empty() : this.offlineReplicationExportPath;
     }
 
@@ -94,7 +94,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="offlineReplicationImportPath")
       private final @Nullable Output<String> offlineReplicationImportPath;
 
-    public Output<String> getOfflineReplicationImportPath() {
+    public Output<String> offlineReplicationImportPath() {
         return this.offlineReplicationImportPath == null ? Codegen.empty() : this.offlineReplicationImportPath;
     }
 
@@ -105,7 +105,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="onlineReplicationStartTime")
       private final @Nullable Output<String> onlineReplicationStartTime;
 
-    public Output<String> getOnlineReplicationStartTime() {
+    public Output<String> onlineReplicationStartTime() {
         return this.onlineReplicationStartTime == null ? Codegen.empty() : this.onlineReplicationStartTime;
     }
 
@@ -116,7 +116,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="recoveryPoints")
       private final @Nullable Output<Integer> recoveryPoints;
 
-    public Output<Integer> getRecoveryPoints() {
+    public Output<Integer> recoveryPoints() {
         return this.recoveryPoints == null ? Codegen.empty() : this.recoveryPoints;
     }
 
@@ -127,7 +127,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="replicaDeletion")
       private final @Nullable Output<String> replicaDeletion;
 
-    public Output<String> getReplicaDeletion() {
+    public Output<String> replicaDeletion() {
         return this.replicaDeletion == null ? Codegen.empty() : this.replicaDeletion;
     }
 
@@ -138,7 +138,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="replicationFrequencyInSeconds")
       private final @Nullable Output<Integer> replicationFrequencyInSeconds;
 
-    public Output<Integer> getReplicationFrequencyInSeconds() {
+    public Output<Integer> replicationFrequencyInSeconds() {
         return this.replicationFrequencyInSeconds == null ? Codegen.empty() : this.replicationFrequencyInSeconds;
     }
 
@@ -149,7 +149,7 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="replicationPort")
       private final @Nullable Output<Integer> replicationPort;
 
-    public Output<Integer> getReplicationPort() {
+    public Output<Integer> replicationPort() {
         return this.replicationPort == null ? Codegen.empty() : this.replicationPort;
     }
 

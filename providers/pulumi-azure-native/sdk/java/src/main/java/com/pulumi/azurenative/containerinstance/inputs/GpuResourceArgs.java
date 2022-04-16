@@ -28,7 +28,7 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -39,7 +39,7 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<Either<String,GpuSku>> sku;
 
-    public Output<Either<String,GpuSku>> getSku() {
+    public Output<Either<String,GpuSku>> sku() {
         return this.sku;
     }
 

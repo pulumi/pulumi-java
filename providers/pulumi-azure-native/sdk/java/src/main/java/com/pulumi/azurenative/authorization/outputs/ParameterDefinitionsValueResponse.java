@@ -51,28 +51,28 @@ public final class ParameterDefinitionsValueResponse {
      * The allowed values for the parameter.
      * 
     */
-    public List<Object> getAllowedValues() {
+    public List<Object> allowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
     /**
      * The default value for the parameter if no value is provided.
      * 
     */
-    public Optional<Object> getDefaultValue() {
+    public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * General metadata for the parameter.
      * 
     */
-    public Optional<ParameterDefinitionsValueResponseMetadata> getMetadata() {
+    public Optional<ParameterDefinitionsValueResponseMetadata> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The data type of the parameter.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

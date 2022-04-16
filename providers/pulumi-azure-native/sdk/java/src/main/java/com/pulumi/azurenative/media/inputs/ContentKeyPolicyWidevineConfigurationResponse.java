@@ -24,7 +24,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends com.pul
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -35,7 +35,7 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends com.pul
     @Import(name="widevineTemplate", required=true)
       private final String widevineTemplate;
 
-    public String getWidevineTemplate() {
+    public String widevineTemplate() {
         return this.widevineTemplate;
     }
 

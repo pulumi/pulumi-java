@@ -25,7 +25,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
     @Import(name="blobEndpoint", required=true)
       private final String blobEndpoint;
 
-    public String getBlobEndpoint() {
+    public String blobEndpoint() {
         return this.blobEndpoint;
     }
 
@@ -36,7 +36,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
     @Import(name="protectedAccountKeyName", required=true)
       private final String protectedAccountKeyName;
 
-    public String getProtectedAccountKeyName() {
+    public String protectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
 
@@ -47,7 +47,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
     @Import(name="protectedAccountKeyName2")
       private final @Nullable String protectedAccountKeyName2;
 
-    public Optional<String> getProtectedAccountKeyName2() {
+    public Optional<String> protectedAccountKeyName2() {
         return this.protectedAccountKeyName2 == null ? Optional.empty() : Optional.ofNullable(this.protectedAccountKeyName2);
     }
 
@@ -58,7 +58,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
     @Import(name="queueEndpoint", required=true)
       private final String queueEndpoint;
 
-    public String getQueueEndpoint() {
+    public String queueEndpoint() {
         return this.queueEndpoint;
     }
 
@@ -69,7 +69,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
     @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -80,7 +80,7 @@ public final class DiagnosticsStorageAccountConfigResponse extends com.pulumi.re
     @Import(name="tableEndpoint", required=true)
       private final String tableEndpoint;
 
-    public String getTableEndpoint() {
+    public String tableEndpoint() {
         return this.tableEndpoint;
     }
 

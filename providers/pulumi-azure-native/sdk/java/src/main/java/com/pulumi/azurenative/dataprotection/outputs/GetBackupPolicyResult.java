@@ -55,35 +55,35 @@ public final class GetBackupPolicyResult {
      * Resource Id represents the complete path to the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name associated with the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * BaseBackupPolicyResource properties
      * 
     */
-    public BackupPolicyResponse getProperties() {
+    public BackupPolicyResponse properties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

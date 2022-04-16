@@ -19,7 +19,7 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="recordType", required=true)
       private final String recordType;
 
-    public String getRecordType() {
+    public String recordType() {
         return this.recordType;
     }
 
@@ -30,7 +30,7 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="relativeRecordSetName", required=true)
       private final String relativeRecordSetName;
 
-    public String getRelativeRecordSetName() {
+    public String relativeRecordSetName() {
         return this.relativeRecordSetName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="zoneName", required=true)
       private final String zoneName;
 
-    public String getZoneName() {
+    public String zoneName() {
         return this.zoneName;
     }
 

@@ -25,7 +25,7 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
     @Import(name="action")
       private final @Nullable String action;
 
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -36,7 +36,7 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
     @Import(name="filterName", required=true)
       private final String filterName;
 
-    public String getFilterName() {
+    public String filterName() {
         return this.filterName;
     }
 
@@ -47,7 +47,7 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
     @Import(name="ipMask", required=true)
       private final String ipMask;
 
-    public String getIpMask() {
+    public String ipMask() {
         return this.ipMask;
     }
 

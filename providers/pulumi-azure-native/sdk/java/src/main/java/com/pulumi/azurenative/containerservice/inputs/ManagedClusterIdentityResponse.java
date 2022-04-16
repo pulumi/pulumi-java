@@ -27,7 +27,7 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -60,7 +60,7 @@ public final class ManagedClusterIdentityResponse extends com.pulumi.resources.I
     @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    public Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
+    public Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

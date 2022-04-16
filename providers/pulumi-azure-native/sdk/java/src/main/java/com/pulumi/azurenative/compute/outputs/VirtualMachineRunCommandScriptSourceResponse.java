@@ -41,21 +41,21 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
      * Specifies a commandId of predefined built-in script.
      * 
     */
-    public Optional<String> getCommandId() {
+    public Optional<String> commandId() {
         return Optional.ofNullable(this.commandId);
     }
     /**
      * Specifies the script content to be executed on the VM.
      * 
     */
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
      * Specifies the script download location.
      * 
     */
-    public Optional<String> getScriptUri() {
+    public Optional<String> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
 

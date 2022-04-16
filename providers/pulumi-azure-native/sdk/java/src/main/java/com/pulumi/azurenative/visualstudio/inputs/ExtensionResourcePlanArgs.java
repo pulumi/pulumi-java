@@ -26,7 +26,7 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="product")
       private final @Nullable Output<String> product;
 
-    public Output<String> getProduct() {
+    public Output<String> product() {
         return this.product == null ? Codegen.empty() : this.product;
     }
 
@@ -48,7 +48,7 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
-    public Output<String> getPromotionCode() {
+    public Output<String> promotionCode() {
         return this.promotionCode == null ? Codegen.empty() : this.promotionCode;
     }
 
@@ -59,7 +59,7 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -70,7 +70,7 @@ public final class ExtensionResourcePlanArgs extends com.pulumi.resources.Resour
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

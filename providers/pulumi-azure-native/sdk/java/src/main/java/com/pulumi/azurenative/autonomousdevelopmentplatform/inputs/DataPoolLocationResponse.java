@@ -26,7 +26,7 @@ public final class DataPoolLocationResponse extends com.pulumi.resources.InvokeA
     @Import(name="encryption")
       private final @Nullable DataPoolEncryptionResponse encryption;
 
-    public Optional<DataPoolEncryptionResponse> getEncryption() {
+    public Optional<DataPoolEncryptionResponse> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -37,7 +37,7 @@ public final class DataPoolLocationResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

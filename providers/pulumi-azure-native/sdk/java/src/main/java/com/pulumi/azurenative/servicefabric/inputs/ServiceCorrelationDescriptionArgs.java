@@ -27,7 +27,7 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
     @Import(name="scheme", required=true)
       private final Output<Either<String,ServiceCorrelationScheme>> scheme;
 
-    public Output<Either<String,ServiceCorrelationScheme>> getScheme() {
+    public Output<Either<String,ServiceCorrelationScheme>> scheme() {
         return this.scheme;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

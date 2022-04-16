@@ -32,7 +32,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allSettings")
       private final @Nullable Output<Map<String,String>> allSettings;
 
-    public Output<Map<String,String>> getAllSettings() {
+    public Output<Map<String,String>> allSettings() {
         return this.allSettings == null ? Codegen.empty() : this.allSettings;
     }
 
@@ -43,7 +43,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appPasswordHint")
       private final @Nullable Output<String> appPasswordHint;
 
-    public Output<String> getAppPasswordHint() {
+    public Output<String> appPasswordHint() {
         return this.appPasswordHint == null ? Codegen.empty() : this.appPasswordHint;
     }
 
@@ -54,7 +54,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cmekKeyVaultUrl")
       private final @Nullable Output<String> cmekKeyVaultUrl;
 
-    public Output<String> getCmekKeyVaultUrl() {
+    public Output<String> cmekKeyVaultUrl() {
         return this.cmekKeyVaultUrl == null ? Codegen.empty() : this.cmekKeyVaultUrl;
     }
 
@@ -65,7 +65,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerAppInsightKey")
       private final @Nullable Output<String> developerAppInsightKey;
 
-    public Output<String> getDeveloperAppInsightKey() {
+    public Output<String> developerAppInsightKey() {
         return this.developerAppInsightKey == null ? Codegen.empty() : this.developerAppInsightKey;
     }
 
@@ -87,7 +87,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerAppInsightsApiKey")
       private final @Nullable Output<String> developerAppInsightsApiKey;
 
-    public Output<String> getDeveloperAppInsightsApiKey() {
+    public Output<String> developerAppInsightsApiKey() {
         return this.developerAppInsightsApiKey == null ? Codegen.empty() : this.developerAppInsightsApiKey;
     }
 
@@ -98,7 +98,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="developerAppInsightsApplicationId")
       private final @Nullable Output<String> developerAppInsightsApplicationId;
 
-    public Output<String> getDeveloperAppInsightsApplicationId() {
+    public Output<String> developerAppInsightsApplicationId() {
         return this.developerAppInsightsApplicationId == null ? Codegen.empty() : this.developerAppInsightsApplicationId;
     }
 
@@ -109,7 +109,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Output<Boolean> getDisableLocalAuth() {
+    public Output<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
@@ -120,7 +120,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -131,7 +131,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -142,7 +142,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iconUrl")
       private final @Nullable Output<String> iconUrl;
 
-    public Output<String> getIconUrl() {
+    public Output<String> iconUrl() {
         return this.iconUrl == null ? Codegen.empty() : this.iconUrl;
     }
 
@@ -153,7 +153,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isCmekEnabled")
       private final @Nullable Output<Boolean> isCmekEnabled;
 
-    public Output<Boolean> getIsCmekEnabled() {
+    public Output<Boolean> isCmekEnabled() {
         return this.isCmekEnabled == null ? Codegen.empty() : this.isCmekEnabled;
     }
 
@@ -164,7 +164,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isStreamingSupported")
       private final @Nullable Output<Boolean> isStreamingSupported;
 
-    public Output<Boolean> getIsStreamingSupported() {
+    public Output<Boolean> isStreamingSupported() {
         return this.isStreamingSupported == null ? Codegen.empty() : this.isStreamingSupported;
     }
 
@@ -175,7 +175,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="luisAppIds")
       private final @Nullable Output<List<String>> luisAppIds;
 
-    public Output<List<String>> getLuisAppIds() {
+    public Output<List<String>> luisAppIds() {
         return this.luisAppIds == null ? Codegen.empty() : this.luisAppIds;
     }
 
@@ -186,7 +186,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="luisKey")
       private final @Nullable Output<String> luisKey;
 
-    public Output<String> getLuisKey() {
+    public Output<String> luisKey() {
         return this.luisKey == null ? Codegen.empty() : this.luisKey;
     }
 
@@ -197,7 +197,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifestUrl")
       private final @Nullable Output<String> manifestUrl;
 
-    public Output<String> getManifestUrl() {
+    public Output<String> manifestUrl() {
         return this.manifestUrl == null ? Codegen.empty() : this.manifestUrl;
     }
 
@@ -208,7 +208,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msaAppId", required=true)
       private final Output<String> msaAppId;
 
-    public Output<String> getMsaAppId() {
+    public Output<String> msaAppId() {
         return this.msaAppId;
     }
 
@@ -219,7 +219,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msaAppMSIResourceId")
       private final @Nullable Output<String> msaAppMSIResourceId;
 
-    public Output<String> getMsaAppMSIResourceId() {
+    public Output<String> msaAppMSIResourceId() {
         return this.msaAppMSIResourceId == null ? Codegen.empty() : this.msaAppMSIResourceId;
     }
 
@@ -230,7 +230,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msaAppTenantId")
       private final @Nullable Output<String> msaAppTenantId;
 
-    public Output<String> getMsaAppTenantId() {
+    public Output<String> msaAppTenantId() {
         return this.msaAppTenantId == null ? Codegen.empty() : this.msaAppTenantId;
     }
 
@@ -241,7 +241,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msaAppType")
       private final @Nullable Output<Either<String,MsaAppType>> msaAppType;
 
-    public Output<Either<String,MsaAppType>> getMsaAppType() {
+    public Output<Either<String,MsaAppType>> msaAppType() {
         return this.msaAppType == null ? Codegen.empty() : this.msaAppType;
     }
 
@@ -252,7 +252,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="openWithHint")
       private final @Nullable Output<String> openWithHint;
 
-    public Output<String> getOpenWithHint() {
+    public Output<String> openWithHint() {
         return this.openWithHint == null ? Codegen.empty() : this.openWithHint;
     }
 
@@ -263,7 +263,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -274,7 +274,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -285,7 +285,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishingCredentials")
       private final @Nullable Output<String> publishingCredentials;
 
-    public Output<String> getPublishingCredentials() {
+    public Output<String> publishingCredentials() {
         return this.publishingCredentials == null ? Codegen.empty() : this.publishingCredentials;
     }
 
@@ -296,7 +296,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaTransformationVersion")
       private final @Nullable Output<String> schemaTransformationVersion;
 
-    public Output<String> getSchemaTransformationVersion() {
+    public Output<String> schemaTransformationVersion() {
         return this.schemaTransformationVersion == null ? Codegen.empty() : this.schemaTransformationVersion;
     }
 
@@ -307,7 +307,7 @@ public final class BotPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageResourceId")
       private final @Nullable Output<String> storageResourceId;
 
-    public Output<String> getStorageResourceId() {
+    public Output<String> storageResourceId() {
         return this.storageResourceId == null ? Codegen.empty() : this.storageResourceId;
     }
 

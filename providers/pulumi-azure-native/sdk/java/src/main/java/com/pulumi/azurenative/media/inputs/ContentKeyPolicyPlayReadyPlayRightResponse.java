@@ -28,7 +28,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="agcAndColorStripeRestriction")
       private final @Nullable Integer agcAndColorStripeRestriction;
 
-    public Optional<Integer> getAgcAndColorStripeRestriction() {
+    public Optional<Integer> agcAndColorStripeRestriction() {
         return this.agcAndColorStripeRestriction == null ? Optional.empty() : Optional.ofNullable(this.agcAndColorStripeRestriction);
     }
 
@@ -39,7 +39,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="allowPassingVideoContentToUnknownOutput", required=true)
       private final String allowPassingVideoContentToUnknownOutput;
 
-    public String getAllowPassingVideoContentToUnknownOutput() {
+    public String allowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
     }
 
@@ -50,7 +50,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="analogVideoOpl")
       private final @Nullable Integer analogVideoOpl;
 
-    public Optional<Integer> getAnalogVideoOpl() {
+    public Optional<Integer> analogVideoOpl() {
         return this.analogVideoOpl == null ? Optional.empty() : Optional.ofNullable(this.analogVideoOpl);
     }
 
@@ -61,7 +61,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="compressedDigitalAudioOpl")
       private final @Nullable Integer compressedDigitalAudioOpl;
 
-    public Optional<Integer> getCompressedDigitalAudioOpl() {
+    public Optional<Integer> compressedDigitalAudioOpl() {
         return this.compressedDigitalAudioOpl == null ? Optional.empty() : Optional.ofNullable(this.compressedDigitalAudioOpl);
     }
 
@@ -72,7 +72,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="compressedDigitalVideoOpl")
       private final @Nullable Integer compressedDigitalVideoOpl;
 
-    public Optional<Integer> getCompressedDigitalVideoOpl() {
+    public Optional<Integer> compressedDigitalVideoOpl() {
         return this.compressedDigitalVideoOpl == null ? Optional.empty() : Optional.ofNullable(this.compressedDigitalVideoOpl);
     }
 
@@ -83,7 +83,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="digitalVideoOnlyContentRestriction", required=true)
       private final Boolean digitalVideoOnlyContentRestriction;
 
-    public Boolean getDigitalVideoOnlyContentRestriction() {
+    public Boolean digitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
     }
 
@@ -94,7 +94,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="explicitAnalogTelevisionOutputRestriction")
       private final @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction;
 
-    public Optional<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse> getExplicitAnalogTelevisionOutputRestriction() {
+    public Optional<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse> explicitAnalogTelevisionOutputRestriction() {
         return this.explicitAnalogTelevisionOutputRestriction == null ? Optional.empty() : Optional.ofNullable(this.explicitAnalogTelevisionOutputRestriction);
     }
 
@@ -105,7 +105,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="firstPlayExpiration")
       private final @Nullable String firstPlayExpiration;
 
-    public Optional<String> getFirstPlayExpiration() {
+    public Optional<String> firstPlayExpiration() {
         return this.firstPlayExpiration == null ? Optional.empty() : Optional.ofNullable(this.firstPlayExpiration);
     }
 
@@ -116,7 +116,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
       private final Boolean imageConstraintForAnalogComponentVideoRestriction;
 
-    public Boolean getImageConstraintForAnalogComponentVideoRestriction() {
+    public Boolean imageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
 
@@ -127,7 +127,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
       private final Boolean imageConstraintForAnalogComputerMonitorRestriction;
 
-    public Boolean getImageConstraintForAnalogComputerMonitorRestriction() {
+    public Boolean imageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
 
@@ -138,7 +138,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="scmsRestriction")
       private final @Nullable Integer scmsRestriction;
 
-    public Optional<Integer> getScmsRestriction() {
+    public Optional<Integer> scmsRestriction() {
         return this.scmsRestriction == null ? Optional.empty() : Optional.ofNullable(this.scmsRestriction);
     }
 
@@ -149,7 +149,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="uncompressedDigitalAudioOpl")
       private final @Nullable Integer uncompressedDigitalAudioOpl;
 
-    public Optional<Integer> getUncompressedDigitalAudioOpl() {
+    public Optional<Integer> uncompressedDigitalAudioOpl() {
         return this.uncompressedDigitalAudioOpl == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDigitalAudioOpl);
     }
 
@@ -160,7 +160,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends com.pulumi
     @Import(name="uncompressedDigitalVideoOpl")
       private final @Nullable Integer uncompressedDigitalVideoOpl;
 
-    public Optional<Integer> getUncompressedDigitalVideoOpl() {
+    public Optional<Integer> uncompressedDigitalVideoOpl() {
         return this.uncompressedDigitalVideoOpl == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDigitalVideoOpl);
     }
 

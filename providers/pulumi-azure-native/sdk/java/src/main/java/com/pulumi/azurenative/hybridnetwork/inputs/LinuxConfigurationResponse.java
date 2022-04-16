@@ -25,7 +25,7 @@ public final class LinuxConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="ssh")
       private final @Nullable SshConfigurationResponse ssh;
 
-    public Optional<SshConfigurationResponse> getSsh() {
+    public Optional<SshConfigurationResponse> ssh() {
         return this.ssh == null ? Optional.empty() : Optional.ofNullable(this.ssh);
     }
 

@@ -30,7 +30,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="capacity", required=true)
       private final ScaleCapacityResponse capacity;
 
-    public ScaleCapacityResponse getCapacity() {
+    public ScaleCapacityResponse capacity() {
         return this.capacity;
     }
 
@@ -41,7 +41,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="fixedDate")
       private final @Nullable TimeWindowResponse fixedDate;
 
-    public Optional<TimeWindowResponse> getFixedDate() {
+    public Optional<TimeWindowResponse> fixedDate() {
         return this.fixedDate == null ? Optional.empty() : Optional.ofNullable(this.fixedDate);
     }
 
@@ -52,7 +52,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="recurrence")
       private final @Nullable RecurrenceResponse recurrence;
 
-    public Optional<RecurrenceResponse> getRecurrence() {
+    public Optional<RecurrenceResponse> recurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 
@@ -74,7 +74,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="rules", required=true)
       private final List<ScaleRuleResponse> rules;
 
-    public List<ScaleRuleResponse> getRules() {
+    public List<ScaleRuleResponse> rules() {
         return this.rules;
     }
 

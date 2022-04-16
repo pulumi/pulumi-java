@@ -198,168 +198,168 @@ public final class GetExpressRouteCircuitPeeringResult {
      * The Azure ASN.
      * 
     */
-    public Optional<Integer> getAzureASN() {
+    public Optional<Integer> azureASN() {
         return Optional.ofNullable(this.azureASN);
     }
     /**
      * The list of circuit connections associated with Azure Private Peering for this circuit.
      * 
     */
-    public List<ExpressRouteCircuitConnectionResponse> getConnections() {
+    public List<ExpressRouteCircuitConnectionResponse> connections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The ExpressRoute connection.
      * 
     */
-    public Optional<ExpressRouteConnectionIdResponse> getExpressRouteConnection() {
+    public Optional<ExpressRouteConnectionIdResponse> expressRouteConnection() {
         return Optional.ofNullable(this.expressRouteConnection);
     }
     /**
      * The GatewayManager Etag.
      * 
     */
-    public Optional<String> getGatewayManagerEtag() {
+    public Optional<String> gatewayManagerEtag() {
         return Optional.ofNullable(this.gatewayManagerEtag);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IPv6 peering configuration.
      * 
     */
-    public Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse> getIpv6PeeringConfig() {
+    public Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
         return Optional.ofNullable(this.ipv6PeeringConfig);
     }
     /**
      * Who was the last to modify the peering.
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The Microsoft peering configuration.
      * 
     */
-    public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
+    public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The peer ASN.
      * 
     */
-    public Optional<Double> getPeerASN() {
+    public Optional<Double> peerASN() {
         return Optional.ofNullable(this.peerASN);
     }
     /**
      * The list of peered circuit connections associated with Azure Private Peering for this circuit.
      * 
     */
-    public List<PeerExpressRouteCircuitConnectionResponse> getPeeredConnections() {
+    public List<PeerExpressRouteCircuitConnectionResponse> peeredConnections() {
         return this.peeredConnections;
     }
     /**
      * The peering type.
      * 
     */
-    public Optional<String> getPeeringType() {
+    public Optional<String> peeringType() {
         return Optional.ofNullable(this.peeringType);
     }
     /**
      * The primary port.
      * 
     */
-    public Optional<String> getPrimaryAzurePort() {
+    public Optional<String> primaryAzurePort() {
         return Optional.ofNullable(this.primaryAzurePort);
     }
     /**
      * The primary address prefix.
      * 
     */
-    public Optional<String> getPrimaryPeerAddressPrefix() {
+    public Optional<String> primaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
     /**
      * The provisioning state of the express route circuit peering resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The reference to the RouteFilter resource.
      * 
     */
-    public Optional<SubResourceResponse> getRouteFilter() {
+    public Optional<SubResourceResponse> routeFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
     /**
      * The secondary port.
      * 
     */
-    public Optional<String> getSecondaryAzurePort() {
+    public Optional<String> secondaryAzurePort() {
         return Optional.ofNullable(this.secondaryAzurePort);
     }
     /**
      * The secondary address prefix.
      * 
     */
-    public Optional<String> getSecondaryPeerAddressPrefix() {
+    public Optional<String> secondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
     /**
      * The shared key.
      * 
     */
-    public Optional<String> getSharedKey() {
+    public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
     /**
      * The peering state.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The peering stats of express route circuit.
      * 
     */
-    public Optional<ExpressRouteCircuitStatsResponse> getStats() {
+    public Optional<ExpressRouteCircuitStatsResponse> stats() {
         return Optional.ofNullable(this.stats);
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The VLAN ID.
      * 
     */
-    public Optional<Integer> getVlanId() {
+    public Optional<Integer> vlanId() {
         return Optional.ofNullable(this.vlanId);
     }
 

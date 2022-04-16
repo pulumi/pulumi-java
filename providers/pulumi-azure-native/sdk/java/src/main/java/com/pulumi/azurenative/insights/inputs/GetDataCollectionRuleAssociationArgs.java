@@ -19,7 +19,7 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
     @Import(name="associationName", required=true)
       private final String associationName;
 
-    public String getAssociationName() {
+    public String associationName() {
         return this.associationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

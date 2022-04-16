@@ -27,7 +27,7 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dependsOn")
       private final @Nullable List<BasicDependencyResponse> dependsOn;
 
-    public List<BasicDependencyResponse> getDependsOn() {
+    public List<BasicDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -38,7 +38,7 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -49,7 +49,7 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName")
       private final @Nullable String resourceName;
 
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
@@ -60,7 +60,7 @@ public final class DependencyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceType")
       private final @Nullable String resourceType;
 
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 

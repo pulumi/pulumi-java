@@ -26,7 +26,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpuHotAddEnabled", required=true)
       private final Boolean cpuHotAddEnabled;
 
-    public Boolean getCpuHotAddEnabled() {
+    public Boolean cpuHotAddEnabled() {
         return this.cpuHotAddEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpuHotRemoveEnabled", required=true)
       private final Boolean cpuHotRemoveEnabled;
 
-    public Boolean getCpuHotRemoveEnabled() {
+    public Boolean cpuHotRemoveEnabled() {
         return this.cpuHotRemoveEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="memoryHotAddEnabled", required=true)
       private final Boolean memoryHotAddEnabled;
 
-    public Boolean getMemoryHotAddEnabled() {
+    public Boolean memoryHotAddEnabled() {
         return this.memoryHotAddEnabled;
     }
 
@@ -59,7 +59,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="memorySizeMB")
       private final @Nullable Integer memorySizeMB;
 
-    public Optional<Integer> getMemorySizeMB() {
+    public Optional<Integer> memorySizeMB() {
         return this.memorySizeMB == null ? Optional.empty() : Optional.ofNullable(this.memorySizeMB);
     }
 
@@ -70,7 +70,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="numCPUs")
       private final @Nullable Integer numCPUs;
 
-    public Optional<Integer> getNumCPUs() {
+    public Optional<Integer> numCPUs() {
         return this.numCPUs == null ? Optional.empty() : Optional.ofNullable(this.numCPUs);
     }
 
@@ -81,7 +81,7 @@ public final class HardwareProfileResponse extends com.pulumi.resources.InvokeAr
     @Import(name="numCoresPerSocket")
       private final @Nullable Integer numCoresPerSocket;
 
-    public Optional<Integer> getNumCoresPerSocket() {
+    public Optional<Integer> numCoresPerSocket() {
         return this.numCoresPerSocket == null ? Optional.empty() : Optional.ofNullable(this.numCoresPerSocket);
     }
 

@@ -56,35 +56,35 @@ public final class GetFileResult {
      * HTTP strong entity tag value. This is ignored if submitted.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Custom file properties
      * 
     */
-    public ProjectFilePropertiesResponse getProperties() {
+    public ProjectFilePropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

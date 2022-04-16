@@ -26,7 +26,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
-    public Output<String> getComputerName() {
+    public Output<String> computerName() {
         return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
@@ -37,7 +37,7 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKey")
       private final @Nullable Output<String> sshPublicKey;
 
-    public Output<String> getSshPublicKey() {
+    public Output<String> sshPublicKey() {
         return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
     }
 

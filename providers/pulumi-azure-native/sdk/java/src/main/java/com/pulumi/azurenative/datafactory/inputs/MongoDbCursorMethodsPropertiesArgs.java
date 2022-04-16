@@ -26,7 +26,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends com.pulumi.resourc
     @Import(name="limit")
       private final @Nullable Output<Object> limit;
 
-    public Output<Object> getLimit() {
+    public Output<Object> limit() {
         return this.limit == null ? Codegen.empty() : this.limit;
     }
 
@@ -37,7 +37,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends com.pulumi.resourc
     @Import(name="project")
       private final @Nullable Output<Object> project;
 
-    public Output<Object> getProject() {
+    public Output<Object> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -48,7 +48,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends com.pulumi.resourc
     @Import(name="skip")
       private final @Nullable Output<Object> skip;
 
-    public Output<Object> getSkip() {
+    public Output<Object> skip() {
         return this.skip == null ? Codegen.empty() : this.skip;
     }
 
@@ -59,7 +59,7 @@ public final class MongoDbCursorMethodsPropertiesArgs extends com.pulumi.resourc
     @Import(name="sort")
       private final @Nullable Output<Object> sort;
 
-    public Output<Object> getSort() {
+    public Output<Object> sort() {
         return this.sort == null ? Codegen.empty() : this.sort;
     }
 

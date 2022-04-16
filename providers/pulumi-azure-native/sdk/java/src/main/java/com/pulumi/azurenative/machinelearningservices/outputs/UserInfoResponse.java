@@ -69,49 +69,49 @@ public final class UserInfoResponse {
      * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
      * 
     */
-    public Optional<String> getUserAltSecId() {
+    public Optional<String> userAltSecId() {
         return Optional.ofNullable(this.userAltSecId);
     }
     /**
      * A user identity provider. Eg live.com
      * 
     */
-    public Optional<String> getUserIdp() {
+    public Optional<String> userIdp() {
         return Optional.ofNullable(this.userIdp);
     }
     /**
      * The issuer which issued the token for this user.
      * 
     */
-    public Optional<String> getUserIss() {
+    public Optional<String> userIss() {
         return Optional.ofNullable(this.userIss);
     }
     /**
      *  A user's full name or a service principal's app ID.
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
     /**
      * A user or service principal's object ID..
      * 
     */
-    public Optional<String> getUserObjectId() {
+    public Optional<String> userObjectId() {
         return Optional.ofNullable(this.userObjectId);
     }
     /**
      * A user or service principal's PuID.
      * 
     */
-    public Optional<String> getUserPuId() {
+    public Optional<String> userPuId() {
         return Optional.ofNullable(this.userPuId);
     }
     /**
      * A user or service principal's tenant ID.
      * 
     */
-    public Optional<String> getUserTenantId() {
+    public Optional<String> userTenantId() {
         return Optional.ofNullable(this.userTenantId);
     }
 

@@ -29,7 +29,7 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encodingType")
       private final @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
 
-    public Output<Either<String,LiveEventEncodingType>> getEncodingType() {
+    public Output<Either<String,LiveEventEncodingType>> encodingType() {
         return this.encodingType == null ? Codegen.empty() : this.encodingType;
     }
 
@@ -40,7 +40,7 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> getKeyFrameInterval() {
+    public Output<String> keyFrameInterval() {
         return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
@@ -51,7 +51,7 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="presetName")
       private final @Nullable Output<String> presetName;
 
-    public Output<String> getPresetName() {
+    public Output<String> presetName() {
         return this.presetName == null ? Codegen.empty() : this.presetName;
     }
 
@@ -62,7 +62,7 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> getStretchMode() {
+    public Output<Either<String,StretchMode>> stretchMode() {
         return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 

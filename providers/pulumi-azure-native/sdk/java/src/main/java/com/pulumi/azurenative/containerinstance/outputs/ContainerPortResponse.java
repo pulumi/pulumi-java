@@ -35,14 +35,14 @@ public final class ContainerPortResponse {
      * The port number exposed within the container group.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The protocol associated with the port.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

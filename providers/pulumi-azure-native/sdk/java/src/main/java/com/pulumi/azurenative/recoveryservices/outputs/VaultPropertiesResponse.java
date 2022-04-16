@@ -66,42 +66,42 @@ public final class VaultPropertiesResponse {
      * Customer Managed Key details of the resource.
      * 
     */
-    public Optional<VaultPropertiesResponseEncryption> getEncryption() {
+    public Optional<VaultPropertiesResponseEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * List of private endpoint connection.
      * 
     */
-    public List<PrivateEndpointConnectionVaultPropertiesResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Private endpoint state for backup.
      * 
     */
-    public String getPrivateEndpointStateForBackup() {
+    public String privateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
     }
     /**
      * Private endpoint state for site recovery.
      * 
     */
-    public String getPrivateEndpointStateForSiteRecovery() {
+    public String privateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
     }
     /**
      * Provisioning State.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Details for upgrading vault.
      * 
     */
-    public Optional<UpgradeDetailsResponse> getUpgradeDetails() {
+    public Optional<UpgradeDetailsResponse> upgradeDetails() {
         return Optional.ofNullable(this.upgradeDetails);
     }
 

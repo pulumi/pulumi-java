@@ -20,7 +20,7 @@ public final class LoadBalancerConfigurationPropertiesResponse extends com.pulum
     @Import(name="frontendIPConfigurations", required=true)
       private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
-    public List<LoadBalancerFrontendIPConfigurationResponse> getFrontendIPConfigurations() {
+    public List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 

@@ -28,7 +28,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
     @Import(name="authorizedIPRanges")
       private final @Nullable Output<List<String>> authorizedIPRanges;
 
-    public Output<List<String>> getAuthorizedIPRanges() {
+    public Output<List<String>> authorizedIPRanges() {
         return this.authorizedIPRanges == null ? Codegen.empty() : this.authorizedIPRanges;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
     @Import(name="enablePrivateCluster")
       private final @Nullable Output<Boolean> enablePrivateCluster;
 
-    public Output<Boolean> getEnablePrivateCluster() {
+    public Output<Boolean> enablePrivateCluster() {
         return this.enablePrivateCluster == null ? Codegen.empty() : this.enablePrivateCluster;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends com.pulumi.r
     @Import(name="privateDNSZone")
       private final @Nullable Output<String> privateDNSZone;
 
-    public Output<String> getPrivateDNSZone() {
+    public Output<String> privateDNSZone() {
         return this.privateDNSZone == null ? Codegen.empty() : this.privateDNSZone;
     }
 

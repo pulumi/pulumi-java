@@ -26,7 +26,7 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes e
     @Import(name="publicIPPrefixes")
       private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
-    public List<ResourceReferenceResponse> getPublicIPPrefixes() {
+    public List<ResourceReferenceResponse> publicIPPrefixes() {
         return this.publicIPPrefixes == null ? List.of() : this.publicIPPrefixes;
     }
 

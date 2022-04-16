@@ -62,42 +62,42 @@ public final class DescriptionResponse {
      * Attributes for the product system.
      * 
     */
-    public List<String> getAttributes() {
+    public List<String> attributes() {
         return this.attributes;
     }
     /**
      * Type of description.
      * 
     */
-    public String getDescriptionType() {
+    public String descriptionType() {
         return this.descriptionType;
     }
     /**
      * Keywords for the product system.
      * 
     */
-    public List<String> getKeywords() {
+    public List<String> keywords() {
         return this.keywords;
     }
     /**
      * Links for the product system.
      * 
     */
-    public List<LinkResponse> getLinks() {
+    public List<LinkResponse> links() {
         return this.links;
     }
     /**
      * Long description of the product system.
      * 
     */
-    public String getLongDescription() {
+    public String longDescription() {
         return this.longDescription;
     }
     /**
      * Short description of the product system.
      * 
     */
-    public String getShortDescription() {
+    public String shortDescription() {
         return this.shortDescription;
     }
 

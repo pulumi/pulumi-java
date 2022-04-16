@@ -32,14 +32,14 @@ public final class IngestionConnectionStringResponse {
      * The region where ingested logs and data resides
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Connection string value
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

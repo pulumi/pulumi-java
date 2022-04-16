@@ -25,7 +25,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="controllerDetails")
       private final @Nullable Output<ControllerDetailsArgs> controllerDetails;
 
-    public Output<ControllerDetailsArgs> getControllerDetails() {
+    public Output<ControllerDetailsArgs> controllerDetails() {
         return this.controllerDetails == null ? Codegen.empty() : this.controllerDetails;
     }
 
@@ -36,7 +36,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -69,7 +69,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="subnetDetails")
       private final @Nullable Output<SubnetDetailsArgs> subnetDetails;
 
-    public Output<SubnetDetailsArgs> getSubnetDetails() {
+    public Output<SubnetDetailsArgs> subnetDetails() {
         return this.subnetDetails == null ? Codegen.empty() : this.subnetDetails;
     }
 
@@ -80,7 +80,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends com.pulumi.resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -30,7 +30,7 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="audioLanguage")
       private final @Nullable Output<String> audioLanguage;
 
-    public Output<String> getAudioLanguage() {
+    public Output<String> audioLanguage() {
         return this.audioLanguage == null ? Codegen.empty() : this.audioLanguage;
     }
 
@@ -41,7 +41,7 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="experimentalOptions")
       private final @Nullable Output<Map<String,String>> experimentalOptions;
 
-    public Output<Map<String,String>> getExperimentalOptions() {
+    public Output<Map<String,String>> experimentalOptions() {
         return this.experimentalOptions == null ? Codegen.empty() : this.experimentalOptions;
     }
 
@@ -52,7 +52,7 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="insightsToExtract")
       private final @Nullable Output<Either<String,InsightsType>> insightsToExtract;
 
-    public Output<Either<String,InsightsType>> getInsightsToExtract() {
+    public Output<Either<String,InsightsType>> insightsToExtract() {
         return this.insightsToExtract == null ? Codegen.empty() : this.insightsToExtract;
     }
 
@@ -63,7 +63,7 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="mode")
       private final @Nullable Output<Either<String,AudioAnalysisMode>> mode;
 
-    public Output<Either<String,AudioAnalysisMode>> getMode() {
+    public Output<Either<String,AudioAnalysisMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -75,7 +75,7 @@ public final class VideoAnalyzerPresetArgs extends com.pulumi.resources.Resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

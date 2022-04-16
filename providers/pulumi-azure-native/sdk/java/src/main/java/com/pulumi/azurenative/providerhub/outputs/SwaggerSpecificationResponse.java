@@ -23,10 +23,10 @@ public final class SwaggerSpecificationResponse {
         this.swaggerSpecFolderUri = swaggerSpecFolderUri;
     }
 
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
-    public Optional<String> getSwaggerSpecFolderUri() {
+    public Optional<String> swaggerSpecFolderUri() {
         return Optional.ofNullable(this.swaggerSpecFolderUri);
     }
 

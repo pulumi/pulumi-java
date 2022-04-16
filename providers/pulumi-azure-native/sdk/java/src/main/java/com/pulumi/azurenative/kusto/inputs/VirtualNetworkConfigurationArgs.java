@@ -25,7 +25,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
     @Import(name="dataManagementPublicIpId", required=true)
       private final Output<String> dataManagementPublicIpId;
 
-    public Output<String> getDataManagementPublicIpId() {
+    public Output<String> dataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
     @Import(name="enginePublicIpId", required=true)
       private final Output<String> enginePublicIpId;
 
-    public Output<String> getEnginePublicIpId() {
+    public Output<String> enginePublicIpId() {
         return this.enginePublicIpId;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

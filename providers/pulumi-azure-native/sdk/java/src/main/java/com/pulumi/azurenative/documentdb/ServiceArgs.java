@@ -26,7 +26,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceSize")
       private final @Nullable Output<Either<String,ServiceSize>> instanceSize;
 
-    public Output<Either<String,ServiceSize>> getInstanceSize() {
+    public Output<Either<String,ServiceSize>> instanceSize() {
         return this.instanceSize == null ? Codegen.empty() : this.instanceSize;
     }
 
@@ -59,7 +59,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -81,7 +81,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceType")
       private final @Nullable Output<Either<String,ServiceType>> serviceType;
 
-    public Output<Either<String,ServiceType>> getServiceType() {
+    public Output<Either<String,ServiceType>> serviceType() {
         return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 

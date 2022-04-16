@@ -28,7 +28,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
     @Import(name="armTemplateId")
       private final @Nullable Output<String> armTemplateId;
 
-    public Output<String> getArmTemplateId() {
+    public Output<String> armTemplateId() {
         return this.armTemplateId == null ? Codegen.empty() : this.armTemplateId;
     }
 
@@ -39,7 +39,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends com.pulumi.resour
     @Import(name="parameters")
       private final @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
-    public Output<List<ArmTemplateParameterPropertiesArgs>> getParameters() {
+    public Output<List<ArmTemplateParameterPropertiesArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

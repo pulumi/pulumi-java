@@ -67,55 +67,55 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile {
         this.skipNodesWithSystemPods = skipNodesWithSystemPods;
     }
 
-    public Optional<String> getBalanceSimilarNodeGroups() {
+    public Optional<String> balanceSimilarNodeGroups() {
         return Optional.ofNullable(this.balanceSimilarNodeGroups);
     }
-    public Optional<String> getExpander() {
+    public Optional<String> expander() {
         return Optional.ofNullable(this.expander);
     }
-    public Optional<String> getMaxEmptyBulkDelete() {
+    public Optional<String> maxEmptyBulkDelete() {
         return Optional.ofNullable(this.maxEmptyBulkDelete);
     }
-    public Optional<String> getMaxGracefulTerminationSec() {
+    public Optional<String> maxGracefulTerminationSec() {
         return Optional.ofNullable(this.maxGracefulTerminationSec);
     }
-    public Optional<String> getMaxNodeProvisionTime() {
+    public Optional<String> maxNodeProvisionTime() {
         return Optional.ofNullable(this.maxNodeProvisionTime);
     }
-    public Optional<String> getMaxTotalUnreadyPercentage() {
+    public Optional<String> maxTotalUnreadyPercentage() {
         return Optional.ofNullable(this.maxTotalUnreadyPercentage);
     }
-    public Optional<String> getNewPodScaleUpDelay() {
+    public Optional<String> newPodScaleUpDelay() {
         return Optional.ofNullable(this.newPodScaleUpDelay);
     }
-    public Optional<String> getOkTotalUnreadyCount() {
+    public Optional<String> okTotalUnreadyCount() {
         return Optional.ofNullable(this.okTotalUnreadyCount);
     }
-    public Optional<String> getScaleDownDelayAfterAdd() {
+    public Optional<String> scaleDownDelayAfterAdd() {
         return Optional.ofNullable(this.scaleDownDelayAfterAdd);
     }
-    public Optional<String> getScaleDownDelayAfterDelete() {
+    public Optional<String> scaleDownDelayAfterDelete() {
         return Optional.ofNullable(this.scaleDownDelayAfterDelete);
     }
-    public Optional<String> getScaleDownDelayAfterFailure() {
+    public Optional<String> scaleDownDelayAfterFailure() {
         return Optional.ofNullable(this.scaleDownDelayAfterFailure);
     }
-    public Optional<String> getScaleDownUnneededTime() {
+    public Optional<String> scaleDownUnneededTime() {
         return Optional.ofNullable(this.scaleDownUnneededTime);
     }
-    public Optional<String> getScaleDownUnreadyTime() {
+    public Optional<String> scaleDownUnreadyTime() {
         return Optional.ofNullable(this.scaleDownUnreadyTime);
     }
-    public Optional<String> getScaleDownUtilizationThreshold() {
+    public Optional<String> scaleDownUtilizationThreshold() {
         return Optional.ofNullable(this.scaleDownUtilizationThreshold);
     }
-    public Optional<String> getScanInterval() {
+    public Optional<String> scanInterval() {
         return Optional.ofNullable(this.scanInterval);
     }
-    public Optional<String> getSkipNodesWithLocalStorage() {
+    public Optional<String> skipNodesWithLocalStorage() {
         return Optional.ofNullable(this.skipNodesWithLocalStorage);
     }
-    public Optional<String> getSkipNodesWithSystemPods() {
+    public Optional<String> skipNodesWithSystemPods() {
         return Optional.ofNullable(this.skipNodesWithSystemPods);
     }
 

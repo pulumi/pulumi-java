@@ -23,7 +23,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="associateDate", required=true)
       private final String associateDate;
 
-    public String getAssociateDate() {
+    public String associateDate() {
         return this.associateDate;
     }
 
@@ -34,7 +34,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -45,7 +45,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 
@@ -56,7 +56,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

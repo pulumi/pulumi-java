@@ -26,7 +26,7 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -37,7 +37,7 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
     @Import(name="kind", required=true)
       private final Output<Either<String,ScriptType>> kind;
 
-    public Output<Either<String,ScriptType>> getKind() {
+    public Output<Either<String,ScriptType>> kind() {
         return this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,7 +70,7 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
-    public Output<String> getScriptName() {
+    public Output<String> scriptName() {
         return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
@@ -81,7 +81,7 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

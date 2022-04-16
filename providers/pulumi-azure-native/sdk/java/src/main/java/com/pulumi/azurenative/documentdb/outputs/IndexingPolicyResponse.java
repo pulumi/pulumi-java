@@ -68,42 +68,42 @@ public final class IndexingPolicyResponse {
      * Indicates if the indexing policy is automatic
      * 
     */
-    public Optional<Boolean> getAutomatic() {
+    public Optional<Boolean> automatic() {
         return Optional.ofNullable(this.automatic);
     }
     /**
      * List of composite path list
      * 
     */
-    public List<List<CompositePathResponse>> getCompositeIndexes() {
+    public List<List<CompositePathResponse>> compositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }
     /**
      * List of paths to exclude from indexing
      * 
     */
-    public List<ExcludedPathResponse> getExcludedPaths() {
+    public List<ExcludedPathResponse> excludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
     /**
      * List of paths to include in the indexing
      * 
     */
-    public List<IncludedPathResponse> getIncludedPaths() {
+    public List<IncludedPathResponse> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
     /**
      * Indicates the indexing mode.
      * 
     */
-    public Optional<String> getIndexingMode() {
+    public Optional<String> indexingMode() {
         return Optional.ofNullable(this.indexingMode);
     }
     /**
      * List of spatial specifics
      * 
     */
-    public List<SpatialSpecResponse> getSpatialIndexes() {
+    public List<SpatialSpecResponse> spatialIndexes() {
         return this.spatialIndexes == null ? List.of() : this.spatialIndexes;
     }
 

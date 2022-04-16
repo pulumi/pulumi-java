@@ -192,168 +192,168 @@ public final class GetQueueResult {
      * Last time a message was sent, or the last time there was a receive request to this queue.
      * 
     */
-    public String getAccessedAt() {
+    public String accessedAt() {
         return this.accessedAt;
     }
     /**
      * ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
      * 
     */
-    public Optional<String> getAutoDeleteOnIdle() {
+    public Optional<String> autoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
     /**
      * Message Count Details.
      * 
     */
-    public MessageCountDetailsResponse getCountDetails() {
+    public MessageCountDetailsResponse countDetails() {
         return this.countDetails;
     }
     /**
      * The exact time the message was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * A value that indicates whether this queue has dead letter support when a message expires.
      * 
     */
-    public Optional<Boolean> getDeadLetteringOnMessageExpiration() {
+    public Optional<Boolean> deadLetteringOnMessageExpiration() {
         return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
     /**
      * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
     */
-    public Optional<String> getDefaultMessageTimeToLive() {
+    public Optional<String> defaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
     /**
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
     */
-    public Optional<String> getDuplicateDetectionHistoryTimeWindow() {
+    public Optional<String> duplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
      * 
     */
-    public Optional<Boolean> getEnableBatchedOperations() {
+    public Optional<Boolean> enableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
     /**
      * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
      * 
     */
-    public Optional<Boolean> getEnableExpress() {
+    public Optional<Boolean> enableExpress() {
         return Optional.ofNullable(this.enableExpress);
     }
     /**
      * A value that indicates whether the queue is to be partitioned across multiple message brokers.
      * 
     */
-    public Optional<Boolean> getEnablePartitioning() {
+    public Optional<Boolean> enablePartitioning() {
         return Optional.ofNullable(this.enablePartitioning);
     }
     /**
      * Queue/Topic name to forward the Dead Letter message
      * 
     */
-    public Optional<String> getForwardDeadLetteredMessagesTo() {
+    public Optional<String> forwardDeadLetteredMessagesTo() {
         return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
     /**
      * Queue/Topic name to forward the messages
      * 
     */
-    public Optional<String> getForwardTo() {
+    public Optional<String> forwardTo() {
         return Optional.ofNullable(this.forwardTo);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
      * 
     */
-    public Optional<String> getLockDuration() {
+    public Optional<String> lockDuration() {
         return Optional.ofNullable(this.lockDuration);
     }
     /**
      * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
      * 
     */
-    public Optional<Integer> getMaxDeliveryCount() {
+    public Optional<Integer> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
      * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
      * 
     */
-    public Optional<Integer> getMaxSizeInMegabytes() {
+    public Optional<Integer> maxSizeInMegabytes() {
         return Optional.ofNullable(this.maxSizeInMegabytes);
     }
     /**
      * The number of messages in the queue.
      * 
     */
-    public Double getMessageCount() {
+    public Double messageCount() {
         return this.messageCount;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A value indicating if this queue requires duplicate detection.
      * 
     */
-    public Optional<Boolean> getRequiresDuplicateDetection() {
+    public Optional<Boolean> requiresDuplicateDetection() {
         return Optional.ofNullable(this.requiresDuplicateDetection);
     }
     /**
      * A value that indicates whether the queue supports the concept of sessions.
      * 
     */
-    public Optional<Boolean> getRequiresSession() {
+    public Optional<Boolean> requiresSession() {
         return Optional.ofNullable(this.requiresSession);
     }
     /**
      * The size of the queue, in bytes.
      * 
     */
-    public Double getSizeInBytes() {
+    public Double sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * Enumerates the possible values for the status of a messaging entity.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
 

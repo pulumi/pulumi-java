@@ -26,7 +26,7 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scopePath")
       private final @Nullable Output<String> scopePath;
 
-    public Output<String> getScopePath() {
+    public Output<String> scopePath() {
         return this.scopePath == null ? Codegen.empty() : this.scopePath;
     }
 

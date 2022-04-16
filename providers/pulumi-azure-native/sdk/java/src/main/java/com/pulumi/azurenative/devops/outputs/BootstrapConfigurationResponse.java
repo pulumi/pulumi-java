@@ -35,14 +35,14 @@ public final class BootstrapConfigurationResponse {
      * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
      * 
     */
-    public Optional<CodeRepositoryResponse> getSourceRepository() {
+    public Optional<CodeRepositoryResponse> sourceRepository() {
         return Optional.ofNullable(this.sourceRepository);
     }
     /**
      * Template used to bootstrap the pipeline.
      * 
     */
-    public PipelineTemplateResponse getTemplate() {
+    public PipelineTemplateResponse template() {
         return this.template;
     }
 

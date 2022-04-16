@@ -39,21 +39,21 @@ public final class PackageShippingDetailsResponse {
      * Name of the carrier.
      * 
     */
-    public String getCarrierName() {
+    public String carrierName() {
         return this.carrierName;
     }
     /**
      * Tracking Id of shipment.
      * 
     */
-    public String getTrackingId() {
+    public String trackingId() {
         return this.trackingId;
     }
     /**
      * Url where shipment can be tracked.
      * 
     */
-    public String getTrackingUrl() {
+    public String trackingUrl() {
         return this.trackingUrl;
     }
 

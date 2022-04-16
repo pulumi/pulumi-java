@@ -35,7 +35,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="clusterUri", required=true)
       private final Output<Object> clusterUri;
 
-    public Output<Object> getClusterUri() {
+    public Output<Object> clusterUri() {
         return this.clusterUri;
     }
 
@@ -57,7 +57,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -68,7 +68,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -79,7 +79,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -90,7 +90,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="fileSystem")
       private final @Nullable Output<Object> fileSystem;
 
-    public Output<Object> getFileSystem() {
+    public Output<Object> fileSystem() {
         return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
@@ -101,7 +101,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="hcatalogLinkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName() {
         return this.hcatalogLinkedServiceName == null ? Codegen.empty() : this.hcatalogLinkedServiceName;
     }
 
@@ -112,7 +112,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="isEspEnabled")
       private final @Nullable Output<Object> isEspEnabled;
 
-    public Output<Object> getIsEspEnabled() {
+    public Output<Object> isEspEnabled() {
         return this.isEspEnabled == null ? Codegen.empty() : this.isEspEnabled;
     }
 
@@ -123,7 +123,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -134,7 +134,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -145,7 +145,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -157,7 +157,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +168,7 @@ public final class HDInsightLinkedServiceArgs extends com.pulumi.resources.Resou
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

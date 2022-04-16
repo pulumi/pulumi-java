@@ -23,7 +23,7 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
     @Import(name="elasticCloudSsoDefaultUrl", required=true)
       private final String elasticCloudSsoDefaultUrl;
 
-    public String getElasticCloudSsoDefaultUrl() {
+    public String elasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
     }
 
@@ -34,7 +34,7 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
     @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
-    public String getEmailAddress() {
+    public String emailAddress() {
         return this.emailAddress;
     }
 
@@ -45,7 +45,7 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

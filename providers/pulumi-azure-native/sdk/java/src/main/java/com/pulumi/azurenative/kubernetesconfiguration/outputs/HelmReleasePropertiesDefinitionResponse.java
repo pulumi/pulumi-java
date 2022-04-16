@@ -56,35 +56,35 @@ public final class HelmReleasePropertiesDefinitionResponse {
      * Total number of times that the HelmRelease failed to install or upgrade
      * 
     */
-    public Optional<Double> getFailureCount() {
+    public Optional<Double> failureCount() {
         return Optional.ofNullable(this.failureCount);
     }
     /**
      * The reference to the HelmChart object used as the source to this HelmRelease
      * 
     */
-    public Optional<ObjectReferenceDefinitionResponse> getHelmChartRef() {
+    public Optional<ObjectReferenceDefinitionResponse> helmChartRef() {
         return Optional.ofNullable(this.helmChartRef);
     }
     /**
      * Number of times that the HelmRelease failed to install
      * 
     */
-    public Optional<Double> getInstallFailureCount() {
+    public Optional<Double> installFailureCount() {
         return Optional.ofNullable(this.installFailureCount);
     }
     /**
      * The revision number of the last released object change
      * 
     */
-    public Optional<Double> getLastRevisionApplied() {
+    public Optional<Double> lastRevisionApplied() {
         return Optional.ofNullable(this.lastRevisionApplied);
     }
     /**
      * Number of times that the HelmRelease failed to upgrade
      * 
     */
-    public Optional<Double> getUpgradeFailureCount() {
+    public Optional<Double> upgradeFailureCount() {
         return Optional.ofNullable(this.upgradeFailureCount);
     }
 

@@ -23,7 +23,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="eventHubEndpointName", required=true)
       private final Output<String> eventHubEndpointName;
 
-    public Output<String> getEventHubEndpointName() {
+    public Output<String> eventHubEndpointName() {
         return this.eventHubEndpointName;
     }
 
@@ -34,7 +34,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="properties")
       private final @Nullable Output<EventHubConsumerGroupNameArgs> properties;
 
-    public Output<EventHubConsumerGroupNameArgs> getProperties() {
+    public Output<EventHubConsumerGroupNameArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class IotHubResourceEventHubConsumerGroupArgs extends com.pulumi.re
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

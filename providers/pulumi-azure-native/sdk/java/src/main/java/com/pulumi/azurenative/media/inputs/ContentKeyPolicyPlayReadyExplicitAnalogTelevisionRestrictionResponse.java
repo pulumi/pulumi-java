@@ -24,7 +24,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     @Import(name="bestEffort", required=true)
       private final Boolean bestEffort;
 
-    public Boolean getBestEffort() {
+    public Boolean bestEffort() {
         return this.bestEffort;
     }
 
@@ -35,7 +35,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     @Import(name="configurationData", required=true)
       private final Integer configurationData;
 
-    public Integer getConfigurationData() {
+    public Integer configurationData() {
         return this.configurationData;
     }
 

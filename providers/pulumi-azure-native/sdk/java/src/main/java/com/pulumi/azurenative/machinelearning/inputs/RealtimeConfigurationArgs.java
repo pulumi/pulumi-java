@@ -26,7 +26,7 @@ public final class RealtimeConfigurationArgs extends com.pulumi.resources.Resour
     @Import(name="maxConcurrentCalls")
       private final @Nullable Output<Integer> maxConcurrentCalls;
 
-    public Output<Integer> getMaxConcurrentCalls() {
+    public Output<Integer> maxConcurrentCalls() {
         return this.maxConcurrentCalls == null ? Codegen.empty() : this.maxConcurrentCalls;
     }
 

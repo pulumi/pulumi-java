@@ -32,7 +32,7 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="azureFileFilterDetails")
       private final @Nullable Output<AzureFileFilterDetailsArgs> azureFileFilterDetails;
 
-    public Output<AzureFileFilterDetailsArgs> getAzureFileFilterDetails() {
+    public Output<AzureFileFilterDetailsArgs> azureFileFilterDetails() {
         return this.azureFileFilterDetails == null ? Codegen.empty() : this.azureFileFilterDetails;
     }
 
@@ -43,7 +43,7 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="blobFilterDetails")
       private final @Nullable Output<BlobFilterDetailsArgs> blobFilterDetails;
 
-    public Output<BlobFilterDetailsArgs> getBlobFilterDetails() {
+    public Output<BlobFilterDetailsArgs> blobFilterDetails() {
         return this.blobFilterDetails == null ? Codegen.empty() : this.blobFilterDetails;
     }
 
@@ -54,7 +54,7 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="dataAccountType", required=true)
       private final Output<Either<String,DataAccountType>> dataAccountType;
 
-    public Output<Either<String,DataAccountType>> getDataAccountType() {
+    public Output<Either<String,DataAccountType>> dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -65,7 +65,7 @@ public final class TransferFilterDetailsArgs extends com.pulumi.resources.Resour
     @Import(name="filterFileDetails")
       private final @Nullable Output<List<FilterFileDetailsArgs>> filterFileDetails;
 
-    public Output<List<FilterFileDetailsArgs>> getFilterFileDetails() {
+    public Output<List<FilterFileDetailsArgs>> filterFileDetails() {
         return this.filterFileDetails == null ? Codegen.empty() : this.filterFileDetails;
     }
 

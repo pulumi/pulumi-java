@@ -30,7 +30,7 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="baseImageTriggerType", required=true)
       private final Output<Either<String,BaseImageTriggerType>> baseImageTriggerType;
 
-    public Output<Either<String,BaseImageTriggerType>> getBaseImageTriggerType() {
+    public Output<Either<String,BaseImageTriggerType>> baseImageTriggerType() {
         return this.baseImageTriggerType;
     }
 
@@ -41,7 +41,7 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> getStatus() {
+    public Output<Either<String,TriggerStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -63,7 +63,7 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="updateTriggerEndpoint")
       private final @Nullable Output<String> updateTriggerEndpoint;
 
-    public Output<String> getUpdateTriggerEndpoint() {
+    public Output<String> updateTriggerEndpoint() {
         return this.updateTriggerEndpoint == null ? Codegen.empty() : this.updateTriggerEndpoint;
     }
 
@@ -74,7 +74,7 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="updateTriggerPayloadType")
       private final @Nullable Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType;
 
-    public Output<Either<String,UpdateTriggerPayloadType>> getUpdateTriggerPayloadType() {
+    public Output<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType() {
         return this.updateTriggerPayloadType == null ? Codegen.empty() : this.updateTriggerPayloadType;
     }
 

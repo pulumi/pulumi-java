@@ -25,7 +25,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventTimeToLiveInMinutes")
       private final @Nullable Integer eventTimeToLiveInMinutes;
 
-    public Optional<Integer> getEventTimeToLiveInMinutes() {
+    public Optional<Integer> eventTimeToLiveInMinutes() {
         return this.eventTimeToLiveInMinutes == null ? Optional.empty() : Optional.ofNullable(this.eventTimeToLiveInMinutes);
     }
 
@@ -36,7 +36,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxDeliveryAttempts")
       private final @Nullable Integer maxDeliveryAttempts;
 
-    public Optional<Integer> getMaxDeliveryAttempts() {
+    public Optional<Integer> maxDeliveryAttempts() {
         return this.maxDeliveryAttempts == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryAttempts);
     }
 

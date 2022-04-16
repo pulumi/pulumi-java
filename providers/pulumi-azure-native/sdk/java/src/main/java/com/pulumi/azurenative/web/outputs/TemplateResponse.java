@@ -52,28 +52,28 @@ public final class TemplateResponse {
      * List of container definitions for the Container App.
      * 
     */
-    public List<ContainerResponse> getContainers() {
+    public List<ContainerResponse> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
      * Dapr configuration for the Container App.
      * 
     */
-    public Optional<DaprResponse> getDapr() {
+    public Optional<DaprResponse> dapr() {
         return Optional.ofNullable(this.dapr);
     }
     /**
      * User friendly suffix that is appended to the revision name
      * 
     */
-    public Optional<String> getRevisionSuffix() {
+    public Optional<String> revisionSuffix() {
         return Optional.ofNullable(this.revisionSuffix);
     }
     /**
      * Scaling properties for the Container App.
      * 
     */
-    public Optional<ScaleResponse> getScale() {
+    public Optional<ScaleResponse> scale() {
         return Optional.ofNullable(this.scale);
     }
 

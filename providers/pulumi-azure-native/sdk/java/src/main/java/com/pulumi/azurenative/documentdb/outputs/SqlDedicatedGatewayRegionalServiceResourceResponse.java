@@ -46,28 +46,28 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
      * The location name.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The regional service name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The regional endpoint for SqlDedicatedGateway.
      * 
     */
-    public String getSqlDedicatedGatewayEndpoint() {
+    public String sqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
     }
     /**
      * Describes the status of a service.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -23,7 +23,7 @@ public final class ConnStringValueTypePairResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -34,7 +34,7 @@ public final class ConnStringValueTypePairResponse extends com.pulumi.resources.
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

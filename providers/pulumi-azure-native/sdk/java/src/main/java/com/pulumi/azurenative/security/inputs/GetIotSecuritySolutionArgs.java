@@ -19,7 +19,7 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIotSecuritySolutionArgs extends com.pulumi.resources.Invok
     @Import(name="solutionName", required=true)
       private final String solutionName;
 
-    public String getSolutionName() {
+    public String solutionName() {
         return this.solutionName;
     }
 

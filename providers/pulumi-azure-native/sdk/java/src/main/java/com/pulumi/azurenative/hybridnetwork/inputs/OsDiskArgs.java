@@ -30,7 +30,7 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -41,7 +41,7 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<Either<String,OperatingSystemTypes>> osType;
 
-    public Output<Either<String,OperatingSystemTypes>> getOsType() {
+    public Output<Either<String,OperatingSystemTypes>> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -63,7 +63,7 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
       private final @Nullable Output<VirtualHardDiskArgs> vhd;
 
-    public Output<VirtualHardDiskArgs> getVhd() {
+    public Output<VirtualHardDiskArgs> vhd() {
         return this.vhd == null ? Codegen.empty() : this.vhd;
     }
 

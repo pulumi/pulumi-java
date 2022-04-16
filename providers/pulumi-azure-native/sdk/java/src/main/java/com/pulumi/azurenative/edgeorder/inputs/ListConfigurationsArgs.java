@@ -24,7 +24,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="configurationFilters", required=true)
       private final List<ConfigurationFilters> configurationFilters;
 
-    public List<ConfigurationFilters> getConfigurationFilters() {
+    public List<ConfigurationFilters> configurationFilters() {
         return this.configurationFilters;
     }
 
@@ -35,7 +35,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="customerSubscriptionDetails")
       private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
-    public Optional<CustomerSubscriptionDetails> getCustomerSubscriptionDetails() {
+    public Optional<CustomerSubscriptionDetails> customerSubscriptionDetails() {
         return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
@@ -46,7 +46,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

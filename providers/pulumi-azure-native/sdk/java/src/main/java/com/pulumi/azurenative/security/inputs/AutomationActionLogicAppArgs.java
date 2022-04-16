@@ -27,7 +27,7 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
 
@@ -38,7 +38,7 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
     @Import(name="logicAppResourceId")
       private final @Nullable Output<String> logicAppResourceId;
 
-    public Output<String> getLogicAppResourceId() {
+    public Output<String> logicAppResourceId() {
         return this.logicAppResourceId == null ? Codegen.empty() : this.logicAppResourceId;
     }
 
@@ -49,7 +49,7 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

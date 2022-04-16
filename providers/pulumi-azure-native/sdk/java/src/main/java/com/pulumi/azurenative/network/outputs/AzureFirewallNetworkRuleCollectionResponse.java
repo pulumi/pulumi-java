@@ -73,49 +73,49 @@ public final class AzureFirewallNetworkRuleCollectionResponse {
      * The action type of a rule collection.
      * 
     */
-    public Optional<AzureFirewallRCActionResponse> getAction() {
+    public Optional<AzureFirewallRCActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the network rule collection resource.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The provisioning state of the network rule collection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Collection of rules used by a network rule collection.
      * 
     */
-    public List<AzureFirewallNetworkRuleResponse> getRules() {
+    public List<AzureFirewallNetworkRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

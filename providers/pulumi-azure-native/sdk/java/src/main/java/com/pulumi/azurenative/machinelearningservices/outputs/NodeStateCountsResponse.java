@@ -60,42 +60,42 @@ public final class NodeStateCountsResponse {
      * Number of compute nodes in idle state.
      * 
     */
-    public Integer getIdleNodeCount() {
+    public Integer idleNodeCount() {
         return this.idleNodeCount;
     }
     /**
      * Number of compute nodes which are leaving the amlCompute.
      * 
     */
-    public Integer getLeavingNodeCount() {
+    public Integer leavingNodeCount() {
         return this.leavingNodeCount;
     }
     /**
      * Number of compute nodes which are in preempted state.
      * 
     */
-    public Integer getPreemptedNodeCount() {
+    public Integer preemptedNodeCount() {
         return this.preemptedNodeCount;
     }
     /**
      * Number of compute nodes which are being prepared.
      * 
     */
-    public Integer getPreparingNodeCount() {
+    public Integer preparingNodeCount() {
         return this.preparingNodeCount;
     }
     /**
      * Number of compute nodes which are running jobs.
      * 
     */
-    public Integer getRunningNodeCount() {
+    public Integer runningNodeCount() {
         return this.runningNodeCount;
     }
     /**
      * Number of compute nodes which are in unusable state.
      * 
     */
-    public Integer getUnusableNodeCount() {
+    public Integer unusableNodeCount() {
         return this.unusableNodeCount;
     }
 

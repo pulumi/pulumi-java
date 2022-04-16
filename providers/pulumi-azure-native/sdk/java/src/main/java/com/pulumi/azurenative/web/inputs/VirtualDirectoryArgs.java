@@ -26,7 +26,7 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="physicalPath")
       private final @Nullable Output<String> physicalPath;
 
-    public Output<String> getPhysicalPath() {
+    public Output<String> physicalPath() {
         return this.physicalPath == null ? Codegen.empty() : this.physicalPath;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualDirectoryArgs extends com.pulumi.resources.ResourceArg
     @Import(name="virtualPath")
       private final @Nullable Output<String> virtualPath;
 
-    public Output<String> getVirtualPath() {
+    public Output<String> virtualPath() {
         return this.virtualPath == null ? Codegen.empty() : this.virtualPath;
     }
 

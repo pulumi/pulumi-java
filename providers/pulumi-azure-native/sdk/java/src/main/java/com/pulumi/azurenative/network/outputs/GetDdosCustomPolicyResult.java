@@ -94,70 +94,70 @@ public final class GetDdosCustomPolicyResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The protocol-specific DDoS policy customization parameters.
      * 
     */
-    public List<ProtocolCustomSettingsFormatResponse> getProtocolCustomSettings() {
+    public List<ProtocolCustomSettingsFormatResponse> protocolCustomSettings() {
         return this.protocolCustomSettings == null ? List.of() : this.protocolCustomSettings;
     }
     /**
      * The provisioning state of the DDoS custom policy resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
      * 
     */
-    public List<SubResourceResponse> getPublicIPAddresses() {
+    public List<SubResourceResponse> publicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
      * The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

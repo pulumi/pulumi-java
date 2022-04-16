@@ -27,7 +27,7 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="sourceRepository")
       private final @Nullable Output<CodeRepositoryArgs> sourceRepository;
 
-    public Output<CodeRepositoryArgs> getSourceRepository() {
+    public Output<CodeRepositoryArgs> sourceRepository() {
         return this.sourceRepository == null ? Codegen.empty() : this.sourceRepository;
     }
 
@@ -38,7 +38,7 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="template", required=true)
       private final Output<PipelineTemplateArgs> template;
 
-    public Output<PipelineTemplateArgs> getTemplate() {
+    public Output<PipelineTemplateArgs> template() {
         return this.template;
     }
 

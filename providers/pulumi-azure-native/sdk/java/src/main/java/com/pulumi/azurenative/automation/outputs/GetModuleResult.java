@@ -145,119 +145,119 @@ public final class GetModuleResult {
      * Gets or sets the activity count of the module.
      * 
     */
-    public Optional<Integer> getActivityCount() {
+    public Optional<Integer> activityCount() {
         return Optional.ofNullable(this.activityCount);
     }
     /**
      * Gets or sets the contentLink of the module.
      * 
     */
-    public Optional<ContentLinkResponse> getContentLink() {
+    public Optional<ContentLinkResponse> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
      * Gets or sets the creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the error info of the module.
      * 
     */
-    public Optional<ModuleErrorInfoResponse> getError() {
+    public Optional<ModuleErrorInfoResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets type of module, if its composite or not.
      * 
     */
-    public Optional<Boolean> getIsComposite() {
+    public Optional<Boolean> isComposite() {
         return Optional.ofNullable(this.isComposite);
     }
     /**
      * Gets or sets the isGlobal flag of the module.
      * 
     */
-    public Optional<Boolean> getIsGlobal() {
+    public Optional<Boolean> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The Azure Region where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state of the module.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets or sets the size in bytes of the module.
      * 
     */
-    public Optional<Double> getSizeInBytes() {
+    public Optional<Double> sizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets the version of the module.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

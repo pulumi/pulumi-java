@@ -39,17 +39,17 @@ public final class SourceLifeCycleResponse {
      * Delete Option
      * 
     */
-    public AbsoluteDeleteOptionResponse getDeleteAfter() {
+    public AbsoluteDeleteOptionResponse deleteAfter() {
         return this.deleteAfter;
     }
     /**
      * DataStoreInfo base
      * 
     */
-    public DataStoreInfoBaseResponse getSourceDataStore() {
+    public DataStoreInfoBaseResponse sourceDataStore() {
         return this.sourceDataStore;
     }
-    public List<TargetCopySettingResponse> getTargetDataStoreCopySettings() {
+    public List<TargetCopySettingResponse> targetDataStoreCopySettings() {
         return this.targetDataStoreCopySettings == null ? List.of() : this.targetDataStoreCopySettings;
     }
 

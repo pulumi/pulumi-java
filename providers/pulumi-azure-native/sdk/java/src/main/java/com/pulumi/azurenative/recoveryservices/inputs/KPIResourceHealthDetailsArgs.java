@@ -28,7 +28,7 @@ public final class KPIResourceHealthDetailsArgs extends com.pulumi.resources.Res
     @Import(name="resourceHealthStatus")
       private final @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
-    public Output<Either<String,ResourceHealthStatus>> getResourceHealthStatus() {
+    public Output<Either<String,ResourceHealthStatus>> resourceHealthStatus() {
         return this.resourceHealthStatus == null ? Codegen.empty() : this.resourceHealthStatus;
     }
 

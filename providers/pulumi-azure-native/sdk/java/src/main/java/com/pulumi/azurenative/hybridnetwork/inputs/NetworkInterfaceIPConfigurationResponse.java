@@ -26,7 +26,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="gateway")
       private final @Nullable String gateway;
 
-    public Optional<String> getGateway() {
+    public Optional<String> gateway() {
         return this.gateway == null ? Optional.empty() : Optional.ofNullable(this.gateway);
     }
 
@@ -48,7 +48,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -59,7 +59,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="ipAllocationMethod")
       private final @Nullable String ipAllocationMethod;
 
-    public Optional<String> getIpAllocationMethod() {
+    public Optional<String> ipAllocationMethod() {
         return this.ipAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.ipAllocationMethod);
     }
 
@@ -70,7 +70,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="ipVersion")
       private final @Nullable String ipVersion;
 
-    public Optional<String> getIpVersion() {
+    public Optional<String> ipVersion() {
         return this.ipVersion == null ? Optional.empty() : Optional.ofNullable(this.ipVersion);
     }
 
@@ -81,7 +81,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="subnet")
       private final @Nullable String subnet;
 
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

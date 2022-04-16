@@ -26,7 +26,7 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="extension")
       private final @Nullable String extension;
 
-    public Optional<String> getExtension() {
+    public Optional<String> extension() {
         return this.extension == null ? Optional.empty() : Optional.ofNullable(this.extension);
     }
 
@@ -37,7 +37,7 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="filePath")
       private final @Nullable String filePath;
 
-    public Optional<String> getFilePath() {
+    public Optional<String> filePath() {
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
     }
 
@@ -48,7 +48,7 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="lastModified", required=true)
       private final String lastModified;
 
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
 
@@ -59,7 +59,7 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="mediaType")
       private final @Nullable String mediaType;
 
-    public Optional<String> getMediaType() {
+    public Optional<String> mediaType() {
         return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
     }
 
@@ -70,7 +70,7 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
     @Import(name="size", required=true)
       private final Double size;
 
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
 

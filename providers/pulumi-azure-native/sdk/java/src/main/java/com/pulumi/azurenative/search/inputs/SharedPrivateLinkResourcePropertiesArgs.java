@@ -28,7 +28,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -39,7 +39,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
@@ -50,7 +50,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="provisioningState")
       private final @Nullable Output<SharedPrivateLinkResourceProvisioningState> provisioningState;
 
-    public Output<SharedPrivateLinkResourceProvisioningState> getProvisioningState() {
+    public Output<SharedPrivateLinkResourceProvisioningState> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -61,7 +61,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
@@ -72,7 +72,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="resourceRegion")
       private final @Nullable Output<String> resourceRegion;
 
-    public Output<String> getResourceRegion() {
+    public Output<String> resourceRegion() {
         return this.resourceRegion == null ? Codegen.empty() : this.resourceRegion;
     }
 
@@ -83,7 +83,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends com.pulumi.re
     @Import(name="status")
       private final @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
-    public Output<SharedPrivateLinkResourceStatus> getStatus() {
+    public Output<SharedPrivateLinkResourceStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

@@ -27,7 +27,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
     @Import(name="offset")
       private final @Nullable Output<String> offset;
 
-    public Output<String> getOffset() {
+    public Output<String> offset() {
         return this.offset == null ? Codegen.empty() : this.offset;
     }
 
@@ -38,7 +38,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
     @Import(name="referenceTrigger", required=true)
       private final Output<TriggerReferenceArgs> referenceTrigger;
 
-    public Output<TriggerReferenceArgs> getReferenceTrigger() {
+    public Output<TriggerReferenceArgs> referenceTrigger() {
         return this.referenceTrigger;
     }
 
@@ -49,7 +49,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -61,7 +61,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

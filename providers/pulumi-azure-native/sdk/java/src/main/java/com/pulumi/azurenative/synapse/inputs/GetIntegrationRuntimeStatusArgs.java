@@ -19,7 +19,7 @@ public final class GetIntegrationRuntimeStatusArgs extends com.pulumi.resources.
     @Import(name="integrationRuntimeName", required=true)
       private final String integrationRuntimeName;
 
-    public String getIntegrationRuntimeName() {
+    public String integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationRuntimeStatusArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationRuntimeStatusArgs extends com.pulumi.resources.
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

@@ -27,7 +27,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends com.pulumi.resource
     @Import(name="blockSizeInMB")
       private final @Nullable Output<Object> blockSizeInMB;
 
-    public Output<Object> getBlockSizeInMB() {
+    public Output<Object> blockSizeInMB() {
         return this.blockSizeInMB == null ? Codegen.empty() : this.blockSizeInMB;
     }
 
@@ -38,7 +38,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends com.pulumi.resource
     @Import(name="copyBehavior")
       private final @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> getCopyBehavior() {
+    public Output<Object> copyBehavior() {
         return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
     }
 
@@ -49,7 +49,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends com.pulumi.resource
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -60,7 +60,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends com.pulumi.resource
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -72,7 +72,7 @@ public final class AzureBlobStorageWriteSettingsArgs extends com.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

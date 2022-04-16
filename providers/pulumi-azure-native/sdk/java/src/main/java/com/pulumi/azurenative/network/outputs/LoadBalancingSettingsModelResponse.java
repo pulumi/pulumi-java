@@ -70,49 +70,49 @@ public final class LoadBalancingSettingsModelResponse {
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
     */
-    public Optional<Integer> getAdditionalLatencyMilliseconds() {
+    public Optional<Integer> additionalLatencyMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource status.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * The number of samples to consider for load balancing decisions
      * 
     */
-    public Optional<Integer> getSampleSize() {
+    public Optional<Integer> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
     /**
      * The number of samples within the sample period that must succeed
      * 
     */
-    public Optional<Integer> getSuccessfulSamplesRequired() {
+    public Optional<Integer> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

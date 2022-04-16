@@ -48,28 +48,28 @@ public final class TldLegalAgreementResponse {
      * Unique identifier for the agreement.
      * 
     */
-    public String getAgreementKey() {
+    public String agreementKey() {
         return this.agreementKey;
     }
     /**
      * Agreement details.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * Agreement title.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
     /**
      * URL where a copy of the agreement details is hosted.
      * 
     */
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

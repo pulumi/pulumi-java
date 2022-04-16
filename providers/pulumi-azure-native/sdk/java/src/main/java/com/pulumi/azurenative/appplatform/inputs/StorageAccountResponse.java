@@ -23,7 +23,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageType", required=true)
       private final String storageType;
 
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
 

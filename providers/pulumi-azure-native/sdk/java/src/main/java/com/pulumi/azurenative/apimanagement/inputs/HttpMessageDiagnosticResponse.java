@@ -28,7 +28,7 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
     @Import(name="body")
       private final @Nullable BodyDiagnosticSettingsResponse body;
 
-    public Optional<BodyDiagnosticSettingsResponse> getBody() {
+    public Optional<BodyDiagnosticSettingsResponse> body() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
@@ -39,7 +39,7 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
     @Import(name="dataMasking")
       private final @Nullable DataMaskingResponse dataMasking;
 
-    public Optional<DataMaskingResponse> getDataMasking() {
+    public Optional<DataMaskingResponse> dataMasking() {
         return this.dataMasking == null ? Optional.empty() : Optional.ofNullable(this.dataMasking);
     }
 
@@ -50,7 +50,7 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
     @Import(name="headers")
       private final @Nullable List<String> headers;
 
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
 

@@ -27,7 +27,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allocationMethod")
       private final @Nullable String allocationMethod;
 
-    public Optional<String> getAllocationMethod() {
+    public Optional<String> allocationMethod() {
         return this.allocationMethod == null ? Optional.empty() : Optional.ofNullable(this.allocationMethod);
     }
 
@@ -38,7 +38,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
@@ -49,7 +49,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gateway")
       private final @Nullable List<String> gateway;
 
-    public List<String> getGateway() {
+    public List<String> gateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
 
@@ -60,7 +60,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -71,7 +71,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddressInfo", required=true)
       private final List<NicIPAddressSettingsResponse> ipAddressInfo;
 
-    public List<NicIPAddressSettingsResponse> getIpAddressInfo() {
+    public List<NicIPAddressSettingsResponse> ipAddressInfo() {
         return this.ipAddressInfo;
     }
 
@@ -82,7 +82,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="primaryWinsServer", required=true)
       private final String primaryWinsServer;
 
-    public String getPrimaryWinsServer() {
+    public String primaryWinsServer() {
         return this.primaryWinsServer;
     }
 
@@ -93,7 +93,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secondaryWinsServer", required=true)
       private final String secondaryWinsServer;
 
-    public String getSecondaryWinsServer() {
+    public String secondaryWinsServer() {
         return this.secondaryWinsServer;
     }
 
@@ -104,7 +104,7 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetMask")
       private final @Nullable String subnetMask;
 
-    public Optional<String> getSubnetMask() {
+    public Optional<String> subnetMask() {
         return this.subnetMask == null ? Optional.empty() : Optional.ofNullable(this.subnetMask);
     }
 

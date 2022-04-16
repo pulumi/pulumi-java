@@ -31,7 +31,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessControl")
       private final @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
 
-    public Output<FlowAccessControlConfigurationArgs> getAccessControl() {
+    public Output<FlowAccessControlConfigurationArgs> accessControl() {
         return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
@@ -42,7 +42,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition")
       private final @Nullable Output<Object> definition;
 
-    public Output<Object> getDefinition() {
+    public Output<Object> definition() {
         return this.definition == null ? Codegen.empty() : this.definition;
     }
 
@@ -53,7 +53,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointsConfiguration")
       private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
-    public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
+    public Output<FlowEndpointsConfigurationArgs> endpointsConfiguration() {
         return this.endpointsConfiguration == null ? Codegen.empty() : this.endpointsConfiguration;
     }
 
@@ -64,7 +64,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -75,7 +75,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="integrationAccount")
       private final @Nullable Output<ResourceReferenceArgs> integrationAccount;
 
-    public Output<ResourceReferenceArgs> getIntegrationAccount() {
+    public Output<ResourceReferenceArgs> integrationAccount() {
         return this.integrationAccount == null ? Codegen.empty() : this.integrationAccount;
     }
 
@@ -86,7 +86,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
+    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
         return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
     }
 
@@ -97,7 +97,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -108,7 +108,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
 
-    public Output<Map<String,WorkflowParameterArgs>> getParameters() {
+    public Output<Map<String,WorkflowParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -119,7 +119,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -130,7 +130,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> getState() {
+    public Output<Either<String,WorkflowState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -141,7 +141,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -152,7 +152,7 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workflowName")
       private final @Nullable Output<String> workflowName;
 
-    public Output<String> getWorkflowName() {
+    public Output<String> workflowName() {
         return this.workflowName == null ? Codegen.empty() : this.workflowName;
     }
 

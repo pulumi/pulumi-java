@@ -71,49 +71,49 @@ public final class SsisVariableResponse {
      * Variable type.
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * Variable description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Variable id.
      * 
     */
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Variable name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether variable is sensitive.
      * 
     */
-    public Optional<Boolean> getSensitive() {
+    public Optional<Boolean> sensitive() {
         return Optional.ofNullable(this.sensitive);
     }
     /**
      * Variable sensitive value.
      * 
     */
-    public Optional<String> getSensitiveValue() {
+    public Optional<String> sensitiveValue() {
         return Optional.ofNullable(this.sensitiveValue);
     }
     /**
      * Variable value.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

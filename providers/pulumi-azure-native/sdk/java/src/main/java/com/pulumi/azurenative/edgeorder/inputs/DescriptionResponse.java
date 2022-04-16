@@ -25,7 +25,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributes", required=true)
       private final List<String> attributes;
 
-    public List<String> getAttributes() {
+    public List<String> attributes() {
         return this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="descriptionType", required=true)
       private final String descriptionType;
 
-    public String getDescriptionType() {
+    public String descriptionType() {
         return this.descriptionType;
     }
 
@@ -47,7 +47,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keywords", required=true)
       private final List<String> keywords;
 
-    public List<String> getKeywords() {
+    public List<String> keywords() {
         return this.keywords;
     }
 
@@ -58,7 +58,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="links", required=true)
       private final List<LinkResponse> links;
 
-    public List<LinkResponse> getLinks() {
+    public List<LinkResponse> links() {
         return this.links;
     }
 
@@ -69,7 +69,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="longDescription", required=true)
       private final String longDescription;
 
-    public String getLongDescription() {
+    public String longDescription() {
         return this.longDescription;
     }
 
@@ -80,7 +80,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shortDescription", required=true)
       private final String shortDescription;
 
-    public String getShortDescription() {
+    public String shortDescription() {
         return this.shortDescription;
     }
 

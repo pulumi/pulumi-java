@@ -23,7 +23,7 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="forwardAddress", required=true)
       private final AddressPropertiesResponse forwardAddress;
 
-    public AddressPropertiesResponse getForwardAddress() {
+    public AddressPropertiesResponse forwardAddress() {
         return this.forwardAddress;
     }
 
@@ -34,7 +34,7 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="returnAddress", required=true)
       private final AddressPropertiesResponse returnAddress;
 
-    public AddressPropertiesResponse getReturnAddress() {
+    public AddressPropertiesResponse returnAddress() {
         return this.returnAddress;
     }
 

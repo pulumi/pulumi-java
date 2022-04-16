@@ -29,7 +29,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="autoUpdate", required=true)
       private final String autoUpdate;
 
-    public String getAutoUpdate() {
+    public String autoUpdate() {
         return this.autoUpdate;
     }
 
@@ -40,7 +40,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="autoUpdateETA", required=true)
       private final String autoUpdateETA;
 
-    public String getAutoUpdateETA() {
+    public String autoUpdateETA() {
         return this.autoUpdateETA;
     }
 
@@ -51,7 +51,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="capabilities", required=true)
       private final Map<String,String> capabilities;
 
-    public Map<String,String> getCapabilities() {
+    public Map<String,String> capabilities() {
         return this.capabilities;
     }
 
@@ -62,7 +62,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -73,7 +73,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
 
-    public String getDataFactoryName() {
+    public String dataFactoryName() {
         return this.dataFactoryName;
     }
 
@@ -84,7 +84,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="internalChannelEncryption", required=true)
       private final String internalChannelEncryption;
 
-    public String getInternalChannelEncryption() {
+    public String internalChannelEncryption() {
         return this.internalChannelEncryption;
     }
 
@@ -95,7 +95,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="latestVersion", required=true)
       private final String latestVersion;
 
-    public String getLatestVersion() {
+    public String latestVersion() {
         return this.latestVersion;
     }
 
@@ -106,7 +106,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="links")
       private final @Nullable List<LinkedIntegrationRuntimeResponse> links;
 
-    public List<LinkedIntegrationRuntimeResponse> getLinks() {
+    public List<LinkedIntegrationRuntimeResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
 
@@ -117,7 +117,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="localTimeZoneOffset", required=true)
       private final String localTimeZoneOffset;
 
-    public String getLocalTimeZoneOffset() {
+    public String localTimeZoneOffset() {
         return this.localTimeZoneOffset;
     }
 
@@ -128,7 +128,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="nodes")
       private final @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
 
-    public List<SelfHostedIntegrationRuntimeNodeResponse> getNodes() {
+    public List<SelfHostedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes == null ? List.of() : this.nodes;
     }
 
@@ -139,7 +139,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="pushedVersion", required=true)
       private final String pushedVersion;
 
-    public String getPushedVersion() {
+    public String pushedVersion() {
         return this.pushedVersion;
     }
 
@@ -150,7 +150,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="scheduledUpdateDate", required=true)
       private final String scheduledUpdateDate;
 
-    public String getScheduledUpdateDate() {
+    public String scheduledUpdateDate() {
         return this.scheduledUpdateDate;
     }
 
@@ -161,7 +161,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="serviceUrls", required=true)
       private final List<String> serviceUrls;
 
-    public List<String> getServiceUrls() {
+    public List<String> serviceUrls() {
         return this.serviceUrls;
     }
 
@@ -172,7 +172,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -183,7 +183,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="taskQueueId", required=true)
       private final String taskQueueId;
 
-    public String getTaskQueueId() {
+    public String taskQueueId() {
         return this.taskQueueId;
     }
 
@@ -195,7 +195,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -206,7 +206,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="updateDelayOffset", required=true)
       private final String updateDelayOffset;
 
-    public String getUpdateDelayOffset() {
+    public String updateDelayOffset() {
         return this.updateDelayOffset;
     }
 
@@ -217,7 +217,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 
@@ -228,7 +228,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="versionStatus", required=true)
       private final String versionStatus;
 
-    public String getVersionStatus() {
+    public String versionStatus() {
         return this.versionStatus;
     }
 

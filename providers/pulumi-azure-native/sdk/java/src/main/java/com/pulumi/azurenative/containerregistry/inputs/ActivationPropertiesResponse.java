@@ -23,7 +23,7 @@ public final class ActivationPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

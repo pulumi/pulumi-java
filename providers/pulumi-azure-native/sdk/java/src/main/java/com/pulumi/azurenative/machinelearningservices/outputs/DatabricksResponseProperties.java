@@ -34,14 +34,14 @@ public final class DatabricksResponseProperties {
      * Databricks access token
      * 
     */
-    public Optional<String> getDatabricksAccessToken() {
+    public Optional<String> databricksAccessToken() {
         return Optional.ofNullable(this.databricksAccessToken);
     }
     /**
      * Workspace Url
      * 
     */
-    public Optional<String> getWorkspaceUrl() {
+    public Optional<String> workspaceUrl() {
         return Optional.ofNullable(this.workspaceUrl);
     }
 

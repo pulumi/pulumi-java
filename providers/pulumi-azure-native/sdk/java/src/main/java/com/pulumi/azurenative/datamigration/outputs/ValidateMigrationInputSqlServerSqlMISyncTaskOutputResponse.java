@@ -41,21 +41,21 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
      * Database identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of database
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Errors associated with a selected database object
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

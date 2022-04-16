@@ -41,21 +41,21 @@ public final class ExportDeliveryDestinationResponse {
      * The name of the container where exports will be uploaded.
      * 
     */
-    public String getContainer() {
+    public String container() {
         return this.container;
     }
     /**
      * The resource id of the storage account where exports will be delivered.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * The name of the directory where exports will be uploaded.
      * 
     */
-    public Optional<String> getRootFolderPath() {
+    public Optional<String> rootFolderPath() {
         return Optional.ofNullable(this.rootFolderPath);
     }
 

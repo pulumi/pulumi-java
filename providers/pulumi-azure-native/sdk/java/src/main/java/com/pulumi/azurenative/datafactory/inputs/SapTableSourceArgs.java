@@ -28,7 +28,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> getAdditionalColumns() {
+    public Output<Object> additionalColumns() {
         return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
@@ -39,7 +39,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="batchSize")
       private final @Nullable Output<Object> batchSize;
 
-    public Output<Object> getBatchSize() {
+    public Output<Object> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
@@ -50,7 +50,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="customRfcReadTableFunctionModule")
       private final @Nullable Output<Object> customRfcReadTableFunctionModule;
 
-    public Output<Object> getCustomRfcReadTableFunctionModule() {
+    public Output<Object> customRfcReadTableFunctionModule() {
         return this.customRfcReadTableFunctionModule == null ? Codegen.empty() : this.customRfcReadTableFunctionModule;
     }
 
@@ -61,7 +61,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -72,7 +72,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -83,7 +83,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="partitionOption")
       private final @Nullable Output<Object> partitionOption;
 
-    public Output<Object> getPartitionOption() {
+    public Output<Object> partitionOption() {
         return this.partitionOption == null ? Codegen.empty() : this.partitionOption;
     }
 
@@ -94,7 +94,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="partitionSettings")
       private final @Nullable Output<SapTablePartitionSettingsArgs> partitionSettings;
 
-    public Output<SapTablePartitionSettingsArgs> getPartitionSettings() {
+    public Output<SapTablePartitionSettingsArgs> partitionSettings() {
         return this.partitionSettings == null ? Codegen.empty() : this.partitionSettings;
     }
 
@@ -105,7 +105,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> getQueryTimeout() {
+    public Output<Object> queryTimeout() {
         return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
     }
 
@@ -116,7 +116,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rfcTableFields")
       private final @Nullable Output<Object> rfcTableFields;
 
-    public Output<Object> getRfcTableFields() {
+    public Output<Object> rfcTableFields() {
         return this.rfcTableFields == null ? Codegen.empty() : this.rfcTableFields;
     }
 
@@ -127,7 +127,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rfcTableOptions")
       private final @Nullable Output<Object> rfcTableOptions;
 
-    public Output<Object> getRfcTableOptions() {
+    public Output<Object> rfcTableOptions() {
         return this.rfcTableOptions == null ? Codegen.empty() : this.rfcTableOptions;
     }
 
@@ -138,7 +138,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rowCount")
       private final @Nullable Output<Object> rowCount;
 
-    public Output<Object> getRowCount() {
+    public Output<Object> rowCount() {
         return this.rowCount == null ? Codegen.empty() : this.rowCount;
     }
 
@@ -149,7 +149,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rowSkips")
       private final @Nullable Output<Object> rowSkips;
 
-    public Output<Object> getRowSkips() {
+    public Output<Object> rowSkips() {
         return this.rowSkips == null ? Codegen.empty() : this.rowSkips;
     }
 
@@ -160,7 +160,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sapDataColumnDelimiter")
       private final @Nullable Output<Object> sapDataColumnDelimiter;
 
-    public Output<Object> getSapDataColumnDelimiter() {
+    public Output<Object> sapDataColumnDelimiter() {
         return this.sapDataColumnDelimiter == null ? Codegen.empty() : this.sapDataColumnDelimiter;
     }
 
@@ -171,7 +171,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
+    public Output<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
@@ -182,7 +182,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
+    public Output<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
@@ -194,7 +194,7 @@ public final class SapTableSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

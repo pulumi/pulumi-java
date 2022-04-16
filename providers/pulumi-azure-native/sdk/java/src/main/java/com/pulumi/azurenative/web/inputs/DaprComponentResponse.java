@@ -27,7 +27,7 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="metadata")
       private final @Nullable List<DaprMetadataResponse> metadata;
 
-    public List<DaprMetadataResponse> getMetadata() {
+    public List<DaprMetadataResponse> metadata() {
         return this.metadata == null ? List.of() : this.metadata;
     }
 
@@ -38,7 +38,7 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -49,7 +49,7 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -60,7 +60,7 @@ public final class DaprComponentResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

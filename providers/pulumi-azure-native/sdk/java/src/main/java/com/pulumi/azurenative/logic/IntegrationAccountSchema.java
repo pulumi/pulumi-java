@@ -45,7 +45,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -59,7 +59,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The content.
      * 
      */
-    public Output</* @Nullable */ String> getContent() {
+    public Output</* @Nullable */ String> content() {
         return this.content;
     }
     /**
@@ -73,7 +73,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The content link.
      * 
      */
-    public Output<ContentLinkResponse> getContentLink() {
+    public Output<ContentLinkResponse> contentLink() {
         return this.contentLink;
     }
     /**
@@ -87,7 +87,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The content type.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -101,7 +101,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -115,7 +115,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The document name.
      * 
      */
-    public Output</* @Nullable */ String> getDocumentName() {
+    public Output</* @Nullable */ String> documentName() {
         return this.documentName;
     }
     /**
@@ -129,7 +129,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The file name.
      * 
      */
-    public Output</* @Nullable */ String> getFileName() {
+    public Output</* @Nullable */ String> fileName() {
         return this.fileName;
     }
     /**
@@ -143,7 +143,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -157,7 +157,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -171,7 +171,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -185,7 +185,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The schema type.
      * 
      */
-    public Output<String> getSchemaType() {
+    public Output<String> schemaType() {
         return this.schemaType;
     }
     /**
@@ -199,7 +199,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -213,7 +213,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The target namespace of the schema.
      * 
      */
-    public Output</* @Nullable */ String> getTargetNamespace() {
+    public Output</* @Nullable */ String> targetNamespace() {
         return this.targetNamespace;
     }
     /**
@@ -227,7 +227,7 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

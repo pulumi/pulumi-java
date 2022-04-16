@@ -26,7 +26,7 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="faultDomain")
       private final @Nullable Integer faultDomain;
 
-    public Optional<Integer> getFaultDomain() {
+    public Optional<Integer> faultDomain() {
         return this.faultDomain == null ? Optional.empty() : Optional.ofNullable(this.faultDomain);
     }
 
@@ -38,7 +38,7 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -49,7 +49,7 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -60,7 +60,7 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="updateDomain")
       private final @Nullable Integer updateDomain;
 
-    public Optional<Integer> getUpdateDomain() {
+    public Optional<Integer> updateDomain() {
         return this.updateDomain == null ? Optional.empty() : Optional.ofNullable(this.updateDomain);
     }
 

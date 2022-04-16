@@ -33,7 +33,7 @@ public final class StorageAccountResponse {
      * The account name of the Azure Storage Account.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
@@ -41,7 +41,7 @@ public final class StorageAccountResponse {
      * Expected value is 'StorageAccount'.
      * 
     */
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
 

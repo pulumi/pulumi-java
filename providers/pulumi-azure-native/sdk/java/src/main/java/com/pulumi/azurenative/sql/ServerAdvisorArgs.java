@@ -23,7 +23,7 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="advisorName")
       private final @Nullable Output<String> advisorName;
 
-    public Output<String> getAdvisorName() {
+    public Output<String> advisorName() {
         return this.advisorName == null ? Codegen.empty() : this.advisorName;
     }
 
@@ -34,7 +34,7 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoExecuteStatus", required=true)
       private final Output<AutoExecuteStatus> autoExecuteStatus;
 
-    public Output<AutoExecuteStatus> getAutoExecuteStatus() {
+    public Output<AutoExecuteStatus> autoExecuteStatus() {
         return this.autoExecuteStatus;
     }
 
@@ -45,7 +45,7 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class ServerAdvisorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

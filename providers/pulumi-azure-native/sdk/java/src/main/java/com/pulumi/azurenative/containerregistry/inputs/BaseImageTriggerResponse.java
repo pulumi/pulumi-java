@@ -25,7 +25,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="baseImageTriggerType", required=true)
       private final String baseImageTriggerType;
 
-    public String getBaseImageTriggerType() {
+    public String baseImageTriggerType() {
         return this.baseImageTriggerType;
     }
 
@@ -36,7 +36,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -58,7 +58,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="updateTriggerEndpoint")
       private final @Nullable String updateTriggerEndpoint;
 
-    public Optional<String> getUpdateTriggerEndpoint() {
+    public Optional<String> updateTriggerEndpoint() {
         return this.updateTriggerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerEndpoint);
     }
 
@@ -69,7 +69,7 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="updateTriggerPayloadType")
       private final @Nullable String updateTriggerPayloadType;
 
-    public Optional<String> getUpdateTriggerPayloadType() {
+    public Optional<String> updateTriggerPayloadType() {
         return this.updateTriggerPayloadType == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerPayloadType);
     }
 

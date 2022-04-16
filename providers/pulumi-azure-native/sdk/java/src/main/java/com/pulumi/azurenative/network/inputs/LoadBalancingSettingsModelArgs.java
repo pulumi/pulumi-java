@@ -27,7 +27,7 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="additionalLatencyMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyMilliseconds;
 
-    public Output<Integer> getAdditionalLatencyMilliseconds() {
+    public Output<Integer> additionalLatencyMilliseconds() {
         return this.additionalLatencyMilliseconds == null ? Codegen.empty() : this.additionalLatencyMilliseconds;
     }
 
@@ -38,7 +38,7 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> getSampleSize() {
+    public Output<Integer> sampleSize() {
         return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
@@ -71,7 +71,7 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;
 
-    public Output<Integer> getSuccessfulSamplesRequired() {
+    public Output<Integer> successfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Codegen.empty() : this.successfulSamplesRequired;
     }
 

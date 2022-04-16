@@ -21,7 +21,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -32,7 +32,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="product", required=true)
       private final String product;
 
-    public String getProduct() {
+    public String product() {
         return this.product;
     }
 
@@ -43,7 +43,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="promotionCode")
       private final @Nullable String promotionCode;
 
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
@@ -54,7 +54,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="publisher", required=true)
       private final String publisher;
 
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
 
@@ -65,7 +65,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

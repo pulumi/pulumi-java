@@ -43,7 +43,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return Flag if need to delete existing network security groups.
      * 
      */
-    public Output</* @Nullable */ String> getDeleteExistingNSGs() {
+    public Output</* @Nullable */ String> deleteExistingNSGs() {
         return this.deleteExistingNSGs;
     }
     /**
@@ -57,7 +57,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return A description of the security configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return A display name of the security configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +85,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -99,7 +99,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +127,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return Security Type.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityType() {
+    public Output</* @Nullable */ String> securityType() {
         return this.securityType;
     }
     /**
@@ -141,7 +141,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -155,7 +155,7 @@ public class SecurityAdminConfiguration extends com.pulumi.resources.CustomResou
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

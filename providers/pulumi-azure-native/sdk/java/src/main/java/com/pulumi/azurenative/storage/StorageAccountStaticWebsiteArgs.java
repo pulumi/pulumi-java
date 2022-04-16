@@ -22,7 +22,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="error404Document")
       private final @Nullable Output<String> error404Document;
 
-    public Output<String> getError404Document() {
+    public Output<String> error404Document() {
         return this.error404Document == null ? Codegen.empty() : this.error404Document;
     }
 
@@ -44,7 +44,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
 
-    public Output<String> getIndexDocument() {
+    public Output<String> indexDocument() {
         return this.indexDocument == null ? Codegen.empty() : this.indexDocument;
     }
 
@@ -55,7 +55,7 @@ public final class StorageAccountStaticWebsiteArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

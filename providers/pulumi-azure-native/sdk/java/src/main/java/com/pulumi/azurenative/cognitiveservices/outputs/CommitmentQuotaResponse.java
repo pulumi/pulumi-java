@@ -35,14 +35,14 @@ public final class CommitmentQuotaResponse {
      * Commitment quota quantity.
      * 
     */
-    public Optional<Double> getQuantity() {
+    public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
     /**
      * Commitment quota unit.
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
 

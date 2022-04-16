@@ -28,7 +28,7 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="healthStates", required=true)
       private final Output<List<HealthStateArgs>> healthStates;
 
-    public Output<List<HealthStateArgs>> getHealthStates() {
+    public Output<List<HealthStateArgs>> healthStates() {
         return this.healthStates;
     }
 
@@ -39,7 +39,7 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="monitorNames")
       private final @Nullable Output<List<String>> monitorNames;
 
-    public Output<List<String>> getMonitorNames() {
+    public Output<List<String>> monitorNames() {
         return this.monitorNames == null ? Codegen.empty() : this.monitorNames;
     }
 
@@ -50,7 +50,7 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="monitorTypes")
       private final @Nullable Output<List<String>> monitorTypes;
 
-    public Output<List<String>> getMonitorTypes() {
+    public Output<List<String>> monitorTypes() {
         return this.monitorTypes == null ? Codegen.empty() : this.monitorTypes;
     }
 
@@ -62,7 +62,7 @@ public final class VmGuestHealthAlertCriterionArgs extends com.pulumi.resources.
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 

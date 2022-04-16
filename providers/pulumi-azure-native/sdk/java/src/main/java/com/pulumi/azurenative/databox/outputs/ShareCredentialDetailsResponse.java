@@ -54,35 +54,35 @@ public final class ShareCredentialDetailsResponse {
      * Password for the share.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Name of the share.
      * 
     */
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
     /**
      * Type of the share.
      * 
     */
-    public String getShareType() {
+    public String shareType() {
         return this.shareType;
     }
     /**
      * Access protocols supported on the device.
      * 
     */
-    public List<String> getSupportedAccessProtocols() {
+    public List<String> supportedAccessProtocols() {
         return this.supportedAccessProtocols;
     }
     /**
      * User name for the share.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

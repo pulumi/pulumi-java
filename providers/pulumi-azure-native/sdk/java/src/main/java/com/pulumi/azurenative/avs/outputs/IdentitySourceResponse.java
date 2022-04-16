@@ -90,70 +90,70 @@ public final class IdentitySourceResponse {
      * The domain's NetBIOS name
      * 
     */
-    public Optional<String> getAlias() {
+    public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * The base distinguished name for groups
      * 
     */
-    public Optional<String> getBaseGroupDN() {
+    public Optional<String> baseGroupDN() {
         return Optional.ofNullable(this.baseGroupDN);
     }
     /**
      * The base distinguished name for users
      * 
     */
-    public Optional<String> getBaseUserDN() {
+    public Optional<String> baseUserDN() {
         return Optional.ofNullable(this.baseUserDN);
     }
     /**
      * The domain's dns name
      * 
     */
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The name of the identity source
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Primary server URL
      * 
     */
-    public Optional<String> getPrimaryServer() {
+    public Optional<String> primaryServer() {
         return Optional.ofNullable(this.primaryServer);
     }
     /**
      * Secondary server URL
      * 
     */
-    public Optional<String> getSecondaryServer() {
+    public Optional<String> secondaryServer() {
         return Optional.ofNullable(this.secondaryServer);
     }
     /**
      * Protect LDAP communication using SSL certificate (LDAPS)
      * 
     */
-    public Optional<String> getSsl() {
+    public Optional<String> ssl() {
         return Optional.ofNullable(this.ssl);
     }
     /**
      * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

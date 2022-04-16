@@ -26,7 +26,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="legacyResourceId")
       private final @Nullable Output<String> legacyResourceId;
 
-    public Output<String> getLegacyResourceId() {
+    public Output<String> legacyResourceId() {
         return this.legacyResourceId == null ? Codegen.empty() : this.legacyResourceId;
     }
 
@@ -37,7 +37,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
@@ -48,7 +48,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
@@ -60,7 +60,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -71,7 +71,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceLocation")
       private final @Nullable Output<String> resourceLocation;
 
-    public Output<String> getResourceLocation() {
+    public Output<String> resourceLocation() {
         return this.resourceLocation == null ? Codegen.empty() : this.resourceLocation;
     }
 
@@ -82,7 +82,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 

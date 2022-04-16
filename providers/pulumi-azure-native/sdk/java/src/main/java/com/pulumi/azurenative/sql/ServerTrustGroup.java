@@ -43,7 +43,7 @@ public class ServerTrustGroup extends com.pulumi.resources.CustomResource {
      * @return Group members information for the server trust group.
      * 
      */
-    public Output<List<ServerInfoResponse>> getGroupMembers() {
+    public Output<List<ServerInfoResponse>> groupMembers() {
         return this.groupMembers;
     }
     /**
@@ -57,7 +57,7 @@ public class ServerTrustGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ServerTrustGroup extends com.pulumi.resources.CustomResource {
      * @return Trust scope of the server trust group.
      * 
      */
-    public Output<List<String>> getTrustScopes() {
+    public Output<List<String>> trustScopes() {
         return this.trustScopes;
     }
     /**
@@ -85,7 +85,7 @@ public class ServerTrustGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

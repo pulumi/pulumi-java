@@ -25,7 +25,7 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="bytesCopied", required=true)
       private final Double bytesCopied;
 
-    public Double getBytesCopied() {
+    public Double bytesCopied() {
         return this.bytesCopied;
     }
 
@@ -36,7 +36,7 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="percentComplete", required=true)
       private final Integer percentComplete;
 
-    public Integer getPercentComplete() {
+    public Integer percentComplete() {
         return this.percentComplete;
     }
 
@@ -47,7 +47,7 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
@@ -58,7 +58,7 @@ public final class DataBoxDiskCopyProgressResponse extends com.pulumi.resources.
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

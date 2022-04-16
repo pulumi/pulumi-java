@@ -26,7 +26,7 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="linkProviderName")
       private final @Nullable String linkProviderName;
 
-    public Optional<String> getLinkProviderName() {
+    public Optional<String> linkProviderName() {
         return this.linkProviderName == null ? Optional.empty() : Optional.ofNullable(this.linkProviderName);
     }
 
@@ -37,7 +37,7 @@ public final class VpnLinkProviderPropertiesResponse extends com.pulumi.resource
     @Import(name="linkSpeedInMbps")
       private final @Nullable Integer linkSpeedInMbps;
 
-    public Optional<Integer> getLinkSpeedInMbps() {
+    public Optional<Integer> linkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Optional.empty() : Optional.ofNullable(this.linkSpeedInMbps);
     }
 

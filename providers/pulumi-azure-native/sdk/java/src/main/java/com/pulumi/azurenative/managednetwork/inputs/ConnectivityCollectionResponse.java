@@ -25,7 +25,7 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
     @Import(name="groups", required=true)
       private final List<ManagedNetworkGroupResponse> groups;
 
-    public List<ManagedNetworkGroupResponse> getGroups() {
+    public List<ManagedNetworkGroupResponse> groups() {
         return this.groups;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
     @Import(name="peerings", required=true)
       private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 
-    public List<ManagedNetworkPeeringPolicyResponse> getPeerings() {
+    public List<ManagedNetworkPeeringPolicyResponse> peerings() {
         return this.peerings;
     }
 

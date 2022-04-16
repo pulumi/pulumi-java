@@ -23,7 +23,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="hcId")
       private final @Nullable Output<String> hcId;
 
-    public Output<String> getHcId() {
+    public Output<String> hcId() {
         return this.hcId == null ? Codegen.empty() : this.hcId;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="http2Enabled")
       private final @Nullable Output<Boolean> http2Enabled;
 
-    public Output<Boolean> getHttp2Enabled() {
+    public Output<Boolean> http2Enabled() {
         return this.http2Enabled == null ? Codegen.empty() : this.http2Enabled;
     }
 
@@ -78,7 +78,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="negotiateClientCertificate")
       private final @Nullable Output<Boolean> negotiateClientCertificate;
 
-    public Output<Boolean> getNegotiateClientCertificate() {
+    public Output<Boolean> negotiateClientCertificate() {
         return this.negotiateClientCertificate == null ? Codegen.empty() : this.negotiateClientCertificate;
     }
 
@@ -89,7 +89,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +100,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -111,7 +111,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="tls10Enabled")
       private final @Nullable Output<Boolean> tls10Enabled;
 
-    public Output<Boolean> getTls10Enabled() {
+    public Output<Boolean> tls10Enabled() {
         return this.tls10Enabled == null ? Codegen.empty() : this.tls10Enabled;
     }
 
@@ -122,7 +122,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     @Import(name="tls11Enabled")
       private final @Nullable Output<Boolean> tls11Enabled;
 
-    public Output<Boolean> getTls11Enabled() {
+    public Output<Boolean> tls11Enabled() {
         return this.tls11Enabled == null ? Codegen.empty() : this.tls11Enabled;
     }
 

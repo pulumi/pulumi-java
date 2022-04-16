@@ -28,7 +28,7 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
     @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
 
-    public Output<List<String>> getMatchValues() {
+    public Output<List<String>> matchValues() {
         return this.matchValues == null ? Codegen.empty() : this.matchValues;
     }
 
@@ -39,14 +39,14 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> getNegateCondition() {
+    public Output<Boolean> negateCondition() {
         return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -57,7 +57,7 @@ public final class RequestSchemeMatchConditionParametersArgs extends com.pulumi.
     @Import(name="operator", required=true)
       private final Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator;
     }
 

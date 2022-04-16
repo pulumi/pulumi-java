@@ -36,14 +36,14 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
      * Expected value is 'HybridConnection'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The Azure Resource ID of an hybrid connection that is the destination of an event subscription.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

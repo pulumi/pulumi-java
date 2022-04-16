@@ -130,105 +130,105 @@ public final class GetHanaInstanceResult {
      * Specifies the HANA instance unique ID.
      * 
     */
-    public String getHanaInstanceId() {
+    public String hanaInstanceId() {
         return this.hanaInstanceId;
     }
     /**
      * Specifies the hardware settings for the HANA instance.
      * 
     */
-    public Optional<HardwareProfileResponse> getHardwareProfile() {
+    public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
      * Hardware revision of a HANA instance
      * 
     */
-    public String getHwRevision() {
+    public String hwRevision() {
         return this.hwRevision;
     }
     /**
      * Resource ID
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the network settings for the HANA instance.
      * 
     */
-    public Optional<NetworkProfileResponse> getNetworkProfile() {
+    public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Specifies the operating system settings for the HANA instance.
      * 
     */
-    public Optional<OSProfileResponse> getOsProfile() {
+    public Optional<OSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
     */
-    public Optional<String> getPartnerNodeId() {
+    public Optional<String> partnerNodeId() {
         return Optional.ofNullable(this.partnerNodeId);
     }
     /**
      * Resource power state
      * 
     */
-    public String getPowerState() {
+    public String powerState() {
         return this.powerState;
     }
     /**
      * State of provisioning of the HanaInstance
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource proximity placement group
      * 
     */
-    public String getProximityPlacementGroup() {
+    public String proximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
      * Specifies the storage settings for the HANA instance disks.
      * 
     */
-    public Optional<StorageProfileResponse> getStorageProfile() {
+    public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

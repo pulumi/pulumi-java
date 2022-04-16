@@ -48,28 +48,28 @@ public final class AdditionalUnattendContentResponse {
      * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
      * 
     */
-    public Optional<String> getComponentName() {
+    public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
     /**
      * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The pass name. Currently, the only allowable value is OobeSystem.
      * 
     */
-    public Optional<String> getPassName() {
+    public Optional<String> passName() {
         return Optional.ofNullable(this.passName);
     }
     /**
      * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
      * 
     */
-    public Optional<String> getSettingName() {
+    public Optional<String> settingName() {
         return Optional.ofNullable(this.settingName);
     }
 

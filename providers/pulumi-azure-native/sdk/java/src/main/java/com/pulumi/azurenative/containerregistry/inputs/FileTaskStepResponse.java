@@ -28,7 +28,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="baseImageDependencies", required=true)
       private final List<BaseImageDependencyResponse> baseImageDependencies;
 
-    public List<BaseImageDependencyResponse> getBaseImageDependencies() {
+    public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
 
@@ -39,7 +39,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contextAccessToken")
       private final @Nullable String contextAccessToken;
 
-    public Optional<String> getContextAccessToken() {
+    public Optional<String> contextAccessToken() {
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
     }
 
@@ -50,7 +50,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="contextPath")
       private final @Nullable String contextPath;
 
-    public Optional<String> getContextPath() {
+    public Optional<String> contextPath() {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
@@ -61,7 +61,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="taskFilePath", required=true)
       private final String taskFilePath;
 
-    public String getTaskFilePath() {
+    public String taskFilePath() {
         return this.taskFilePath;
     }
 
@@ -73,7 +73,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -84,7 +84,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="values")
       private final @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> getValues() {
+    public List<SetValueResponse> values() {
         return this.values == null ? List.of() : this.values;
     }
 
@@ -95,7 +95,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="valuesFilePath")
       private final @Nullable String valuesFilePath;
 
-    public Optional<String> getValuesFilePath() {
+    public Optional<String> valuesFilePath() {
         return this.valuesFilePath == null ? Optional.empty() : Optional.ofNullable(this.valuesFilePath);
     }
 

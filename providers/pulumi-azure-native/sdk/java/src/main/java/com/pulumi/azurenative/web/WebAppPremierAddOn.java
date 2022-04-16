@@ -40,7 +40,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -54,7 +54,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -68,7 +68,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Marketplace offer.
      * 
      */
-    public Output</* @Nullable */ String> getMarketplaceOffer() {
+    public Output</* @Nullable */ String> marketplaceOffer() {
         return this.marketplaceOffer;
     }
     /**
@@ -82,7 +82,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Marketplace publisher.
      * 
      */
-    public Output</* @Nullable */ String> getMarketplacePublisher() {
+    public Output</* @Nullable */ String> marketplacePublisher() {
         return this.marketplacePublisher;
     }
     /**
@@ -96,7 +96,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -110,7 +110,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Product.
      * 
      */
-    public Output</* @Nullable */ String> getProduct() {
+    public Output</* @Nullable */ String> product() {
         return this.product;
     }
     /**
@@ -124,7 +124,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on SKU.
      * 
      */
-    public Output</* @Nullable */ String> getSku() {
+    public Output</* @Nullable */ String> sku() {
         return this.sku;
     }
     /**
@@ -138,7 +138,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -152,7 +152,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -166,7 +166,7 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Vendor.
      * 
      */
-    public Output</* @Nullable */ String> getVendor() {
+    public Output</* @Nullable */ String> vendor() {
         return this.vendor;
     }
 

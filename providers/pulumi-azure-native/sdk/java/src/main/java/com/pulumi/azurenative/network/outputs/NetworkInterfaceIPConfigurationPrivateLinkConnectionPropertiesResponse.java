@@ -40,21 +40,21 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * List of FQDNs for current private link connection.
      * 
     */
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns;
     }
     /**
      * The group ID for current private link connection.
      * 
     */
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
     /**
      * The required member name for current private link connection.
      * 
     */
-    public String getRequiredMemberName() {
+    public String requiredMemberName() {
         return this.requiredMemberName;
     }
 

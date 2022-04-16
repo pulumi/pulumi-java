@@ -31,7 +31,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
 
-    public Output<Either<String,HealthProbeEnabled>> getEnabledState() {
+    public Output<Either<String,HealthProbeEnabled>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -42,7 +42,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="healthProbeMethod")
       private final @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
-    public Output<Either<String,FrontDoorHealthProbeMethod>> getHealthProbeMethod() {
+    public Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod() {
         return this.healthProbeMethod == null ? Codegen.empty() : this.healthProbeMethod;
     }
 
@@ -53,7 +53,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -64,7 +64,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
+    public Output<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
@@ -75,7 +75,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -86,7 +86,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -97,7 +97,7 @@ public final class HealthProbeSettingsModelArgs extends com.pulumi.resources.Res
     @Import(name="protocol")
       private final @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
-    public Output<Either<String,FrontDoorProtocol>> getProtocol() {
+    public Output<Either<String,FrontDoorProtocol>> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

@@ -49,28 +49,28 @@ public final class IntegrationRuntimeVNetPropertiesResponse {
      * Resource IDs of the public IP addresses that this integration runtime will use.
      * 
     */
-    public List<String> getPublicIPs() {
+    public List<String> publicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
     }
     /**
      * The name of the subnet this integration runtime will join.
      * 
     */
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The ID of the VNet that this integration runtime will join.
      * 
     */
-    public Optional<String> getVNetId() {
+    public Optional<String> vNetId() {
         return Optional.ofNullable(this.vNetId);
     }
 

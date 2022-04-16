@@ -35,7 +35,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools;
 
-    public List<ApplicationGatewayBackendAddressPoolResponse> getApplicationGatewayBackendAddressPools() {
+    public List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="applicationSecurityGroups")
       private final @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups;
 
-    public List<ApplicationSecurityGroupResponse> getApplicationSecurityGroups() {
+    public List<ApplicationSecurityGroupResponse> applicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
 
@@ -57,7 +57,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -68,7 +68,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -79,7 +79,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools;
 
-    public List<BackendAddressPoolResponse> getLoadBalancerBackendAddressPools() {
+    public List<BackendAddressPoolResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
 
@@ -90,7 +90,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="loadBalancerInboundNatRules")
       private final @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules;
 
-    public List<InboundNatRuleResponse> getLoadBalancerInboundNatRules() {
+    public List<InboundNatRuleResponse> loadBalancerInboundNatRules() {
         return this.loadBalancerInboundNatRules == null ? List.of() : this.loadBalancerInboundNatRules;
     }
 
@@ -101,7 +101,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -112,7 +112,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
@@ -123,7 +123,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -134,7 +134,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
@@ -145,7 +145,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
@@ -156,7 +156,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="privateLinkConnectionProperties", required=true)
       private final NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties;
 
-    public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse getPrivateLinkConnectionProperties() {
+    public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties() {
         return this.privateLinkConnectionProperties;
     }
 
@@ -167,7 +167,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -178,7 +178,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="publicIPAddress")
       private final @Nullable PublicIPAddressResponse publicIPAddress;
 
-    public Optional<PublicIPAddressResponse> getPublicIPAddress() {
+    public Optional<PublicIPAddressResponse> publicIPAddress() {
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
@@ -189,7 +189,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
-    public Optional<SubnetResponse> getSubnet() {
+    public Optional<SubnetResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -200,7 +200,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -211,7 +211,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="virtualNetworkTaps")
       private final @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps;
 
-    public List<VirtualNetworkTapResponse> getVirtualNetworkTaps() {
+    public List<VirtualNetworkTapResponse> virtualNetworkTaps() {
         return this.virtualNetworkTaps == null ? List.of() : this.virtualNetworkTaps;
     }
 

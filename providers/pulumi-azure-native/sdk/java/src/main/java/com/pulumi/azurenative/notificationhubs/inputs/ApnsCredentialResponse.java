@@ -25,7 +25,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="apnsCertificate")
       private final @Nullable String apnsCertificate;
 
-    public Optional<String> getApnsCertificate() {
+    public Optional<String> apnsCertificate() {
         return this.apnsCertificate == null ? Optional.empty() : Optional.ofNullable(this.apnsCertificate);
     }
 
@@ -36,7 +36,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="appId")
       private final @Nullable String appId;
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
@@ -47,7 +47,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="appName")
       private final @Nullable String appName;
 
-    public Optional<String> getAppName() {
+    public Optional<String> appName() {
         return this.appName == null ? Optional.empty() : Optional.ofNullable(this.appName);
     }
 
@@ -58,7 +58,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="certificateKey")
       private final @Nullable String certificateKey;
 
-    public Optional<String> getCertificateKey() {
+    public Optional<String> certificateKey() {
         return this.certificateKey == null ? Optional.empty() : Optional.ofNullable(this.certificateKey);
     }
 
@@ -69,7 +69,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
@@ -80,7 +80,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="keyId")
       private final @Nullable String keyId;
 
-    public Optional<String> getKeyId() {
+    public Optional<String> keyId() {
         return this.keyId == null ? Optional.empty() : Optional.ofNullable(this.keyId);
     }
 
@@ -91,7 +91,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 
@@ -102,7 +102,7 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="token")
       private final @Nullable String token;
 
-    public Optional<String> getToken() {
+    public Optional<String> token() {
         return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
     }
 

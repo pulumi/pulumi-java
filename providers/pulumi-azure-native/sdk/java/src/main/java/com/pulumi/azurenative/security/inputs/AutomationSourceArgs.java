@@ -30,7 +30,7 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eventSource")
       private final @Nullable Output<Either<String,EventSource>> eventSource;
 
-    public Output<Either<String,EventSource>> getEventSource() {
+    public Output<Either<String,EventSource>> eventSource() {
         return this.eventSource == null ? Codegen.empty() : this.eventSource;
     }
 
@@ -41,7 +41,7 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ruleSets")
       private final @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
-    public Output<List<AutomationRuleSetArgs>> getRuleSets() {
+    public Output<List<AutomationRuleSetArgs>> ruleSets() {
         return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 

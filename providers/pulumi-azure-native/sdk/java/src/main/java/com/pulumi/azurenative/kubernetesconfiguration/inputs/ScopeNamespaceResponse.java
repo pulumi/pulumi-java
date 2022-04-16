@@ -25,7 +25,7 @@ public final class ScopeNamespaceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="targetNamespace")
       private final @Nullable String targetNamespace;
 
-    public Optional<String> getTargetNamespace() {
+    public Optional<String> targetNamespace() {
         return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
     }
 

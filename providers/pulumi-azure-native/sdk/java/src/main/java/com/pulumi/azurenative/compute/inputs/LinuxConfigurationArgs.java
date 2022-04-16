@@ -28,7 +28,7 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="disablePasswordAuthentication")
       private final @Nullable Output<Boolean> disablePasswordAuthentication;
 
-    public Output<Boolean> getDisablePasswordAuthentication() {
+    public Output<Boolean> disablePasswordAuthentication() {
         return this.disablePasswordAuthentication == null ? Codegen.empty() : this.disablePasswordAuthentication;
     }
 
@@ -39,7 +39,7 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="patchSettings")
       private final @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
 
-    public Output<LinuxPatchSettingsArgs> getPatchSettings() {
+    public Output<LinuxPatchSettingsArgs> patchSettings() {
         return this.patchSettings == null ? Codegen.empty() : this.patchSettings;
     }
 
@@ -50,7 +50,7 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="provisionVMAgent")
       private final @Nullable Output<Boolean> provisionVMAgent;
 
-    public Output<Boolean> getProvisionVMAgent() {
+    public Output<Boolean> provisionVMAgent() {
         return this.provisionVMAgent == null ? Codegen.empty() : this.provisionVMAgent;
     }
 
@@ -61,7 +61,7 @@ public final class LinuxConfigurationArgs extends com.pulumi.resources.ResourceA
     @Import(name="ssh")
       private final @Nullable Output<SshConfigurationArgs> ssh;
 
-    public Output<SshConfigurationArgs> getSsh() {
+    public Output<SshConfigurationArgs> ssh() {
         return this.ssh == null ? Codegen.empty() : this.ssh;
     }
 

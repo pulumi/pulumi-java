@@ -25,7 +25,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseName")
       private final @Nullable String databaseName;
 
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
@@ -36,7 +36,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elasticPoolName")
       private final @Nullable String elasticPoolName;
 
-    public Optional<String> getElasticPoolName() {
+    public Optional<String> elasticPoolName() {
         return this.elasticPoolName == null ? Optional.empty() : Optional.ofNullable(this.elasticPoolName);
     }
 
@@ -47,7 +47,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="membershipType")
       private final @Nullable String membershipType;
 
-    public Optional<String> getMembershipType() {
+    public Optional<String> membershipType() {
         return this.membershipType == null ? Optional.empty() : Optional.ofNullable(this.membershipType);
     }
 
@@ -58,7 +58,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="refreshCredential")
       private final @Nullable String refreshCredential;
 
-    public Optional<String> getRefreshCredential() {
+    public Optional<String> refreshCredential() {
         return this.refreshCredential == null ? Optional.empty() : Optional.ofNullable(this.refreshCredential);
     }
 
@@ -69,7 +69,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverName")
       private final @Nullable String serverName;
 
-    public Optional<String> getServerName() {
+    public Optional<String> serverName() {
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
     }
 
@@ -80,7 +80,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shardMapName")
       private final @Nullable String shardMapName;
 
-    public Optional<String> getShardMapName() {
+    public Optional<String> shardMapName() {
         return this.shardMapName == null ? Optional.empty() : Optional.ofNullable(this.shardMapName);
     }
 
@@ -91,7 +91,7 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

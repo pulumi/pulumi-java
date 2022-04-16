@@ -99,77 +99,77 @@ public final class GetWCFRelayResult {
      * The time the WCF relay was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Returns true if the relay is dynamic; otherwise, false.
      * 
     */
-    public Boolean getIsDynamic() {
+    public Boolean isDynamic() {
         return this.isDynamic;
     }
     /**
      * The number of listeners for this relay. Note that min :1 and max:25 are supported.
      * 
     */
-    public Integer getListenerCount() {
+    public Integer listenerCount() {
         return this.listenerCount;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * WCF relay type.
      * 
     */
-    public Optional<String> getRelayType() {
+    public Optional<String> relayType() {
         return Optional.ofNullable(this.relayType);
     }
     /**
      * Returns true if client authorization is needed for this relay; otherwise, false.
      * 
     */
-    public Optional<Boolean> getRequiresClientAuthorization() {
+    public Optional<Boolean> requiresClientAuthorization() {
         return Optional.ofNullable(this.requiresClientAuthorization);
     }
     /**
      * Returns true if transport security is needed for this relay; otherwise, false.
      * 
     */
-    public Optional<Boolean> getRequiresTransportSecurity() {
+    public Optional<Boolean> requiresTransportSecurity() {
         return Optional.ofNullable(this.requiresTransportSecurity);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
     /**
      * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
     */
-    public Optional<String> getUserMetadata() {
+    public Optional<String> userMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }
 

@@ -22,7 +22,7 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
     @Import(name="maxJobCount")
       private final @Nullable Integer maxJobCount;
 
-    public Optional<Integer> getMaxJobCount() {
+    public Optional<Integer> maxJobCount() {
         return this.maxJobCount == null ? Optional.empty() : Optional.ofNullable(this.maxJobCount);
     }
 
@@ -33,7 +33,7 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
     @Import(name="maxJobOccurrence")
       private final @Nullable Integer maxJobOccurrence;
 
-    public Optional<Integer> getMaxJobOccurrence() {
+    public Optional<Integer> maxJobOccurrence() {
         return this.maxJobOccurrence == null ? Optional.empty() : Optional.ofNullable(this.maxJobOccurrence);
     }
 
@@ -44,7 +44,7 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
     @Import(name="maxRecurrence")
       private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
-    public Optional<JobMaxRecurrenceResponse> getMaxRecurrence() {
+    public Optional<JobMaxRecurrenceResponse> maxRecurrence() {
         return this.maxRecurrence == null ? Optional.empty() : Optional.ofNullable(this.maxRecurrence);
     }
 

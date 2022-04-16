@@ -35,7 +35,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
     @Export(name="authCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> authCode;
 
-    public Output</* @Nullable */ String> getAuthCode() {
+    public Output</* @Nullable */ String> authCode() {
         return this.authCode;
     }
     /**
@@ -49,7 +49,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoRenew() {
+    public Output</* @Nullable */ Boolean> autoRenew() {
         return this.autoRenew;
     }
     /**
@@ -63,7 +63,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Domain creation timestamp.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -77,7 +77,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Current DNS type
      * 
      */
-    public Output</* @Nullable */ String> getDnsType() {
+    public Output</* @Nullable */ String> dnsType() {
         return this.dnsType;
     }
     /**
@@ -91,7 +91,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Azure DNS Zone to use
      * 
      */
-    public Output</* @Nullable */ String> getDnsZoneId() {
+    public Output</* @Nullable */ String> dnsZoneId() {
         return this.dnsZoneId;
     }
     /**
@@ -105,7 +105,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Reasons why domain is not renewable.
      * 
      */
-    public Output<List<String>> getDomainNotRenewableReasons() {
+    public Output<List<String>> domainNotRenewableReasons() {
         return this.domainNotRenewableReasons;
     }
     /**
@@ -119,7 +119,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Domain expiration timestamp.
      * 
      */
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -133,7 +133,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -147,7 +147,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Timestamp when the domain was renewed last time.
      * 
      */
-    public Output<String> getLastRenewedTime() {
+    public Output<String> lastRenewedTime() {
         return this.lastRenewedTime;
     }
     /**
@@ -161,7 +161,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -175,7 +175,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return All hostnames derived from the domain and assigned to Azure resources.
      * 
      */
-    public Output<List<HostNameResponse>> getManagedHostNames() {
+    public Output<List<HostNameResponse>> managedHostNames() {
         return this.managedHostNames;
     }
     /**
@@ -189,7 +189,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -203,7 +203,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Name servers.
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -217,7 +217,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPrivacy() {
+    public Output</* @Nullable */ Boolean> privacy() {
         return this.privacy;
     }
     /**
@@ -231,7 +231,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Domain provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -247,7 +247,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      *  it is hosted on name servers Azure has programmatic access to.
      * 
      */
-    public Output<Boolean> getReadyForDnsRecordManagement() {
+    public Output<Boolean> readyForDnsRecordManagement() {
         return this.readyForDnsRecordManagement;
     }
     /**
@@ -261,7 +261,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Domain registration status.
      * 
      */
-    public Output<String> getRegistrationStatus() {
+    public Output<String> registrationStatus() {
         return this.registrationStatus;
     }
     /**
@@ -275,7 +275,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -289,7 +289,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -303,7 +303,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Target DNS type (would be used for migration)
      * 
      */
-    public Output</* @Nullable */ String> getTargetDnsType() {
+    public Output</* @Nullable */ String> targetDnsType() {
         return this.targetDnsType;
     }
     /**
@@ -317,7 +317,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

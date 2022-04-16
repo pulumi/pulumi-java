@@ -116,14 +116,14 @@ public final class CloudServicePropertiesResponse {
      * The default value is `false`.
      * 
     */
-    public Optional<Boolean> getAllowModelOverride() {
+    public Optional<Boolean> allowModelOverride() {
         return Optional.ofNullable(this.allowModelOverride);
     }
     /**
      * Specifies the XML service configuration (.cscfg) for the cloud service.
      * 
     */
-    public Optional<String> getConfiguration() {
+    public Optional<String> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
@@ -131,28 +131,28 @@ public final class CloudServicePropertiesResponse {
      * This is a write-only property and is not returned in GET calls.
      * 
     */
-    public Optional<String> getConfigurationUrl() {
+    public Optional<String> configurationUrl() {
         return Optional.ofNullable(this.configurationUrl);
     }
     /**
      * Describes a cloud service extension profile.
      * 
     */
-    public Optional<CloudServiceExtensionProfileResponse> getExtensionProfile() {
+    public Optional<CloudServiceExtensionProfileResponse> extensionProfile() {
         return Optional.ofNullable(this.extensionProfile);
     }
     /**
      * Network Profile for the cloud service.
      * 
     */
-    public Optional<CloudServiceNetworkProfileResponse> getNetworkProfile() {
+    public Optional<CloudServiceNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Describes the OS profile for the cloud service.
      * 
     */
-    public Optional<CloudServiceOsProfileResponse> getOsProfile() {
+    public Optional<CloudServiceOsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
@@ -160,21 +160,21 @@ public final class CloudServicePropertiesResponse {
      * This is a write-only property and is not returned in GET calls.
      * 
     */
-    public Optional<String> getPackageUrl() {
+    public Optional<String> packageUrl() {
         return Optional.ofNullable(this.packageUrl);
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Describes the role profile for the cloud service.
      * 
     */
-    public Optional<CloudServiceRoleProfileResponse> getRoleProfile() {
+    public Optional<CloudServiceRoleProfileResponse> roleProfile() {
         return Optional.ofNullable(this.roleProfile);
     }
     /**
@@ -182,14 +182,14 @@ public final class CloudServicePropertiesResponse {
      * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
      * 
     */
-    public Optional<Boolean> getStartCloudService() {
+    public Optional<Boolean> startCloudService() {
         return Optional.ofNullable(this.startCloudService);
     }
     /**
      * The unique identifier for the cloud service.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -198,7 +198,7 @@ public final class CloudServicePropertiesResponse {
      * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
      * 
     */
-    public Optional<String> getUpgradeMode() {
+    public Optional<String> upgradeMode() {
         return Optional.ofNullable(this.upgradeMode);
     }
 

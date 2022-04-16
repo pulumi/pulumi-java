@@ -29,7 +29,7 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="copyAfter", required=true)
       private final Output<Object> copyAfter;
 
-    public Output<Object> getCopyAfter() {
+    public Output<Object> copyAfter() {
         return this.copyAfter;
     }
 
@@ -40,7 +40,7 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> dataStore;
 
-    public Output<DataStoreInfoBaseArgs> getDataStore() {
+    public Output<DataStoreInfoBaseArgs> dataStore() {
         return this.dataStore;
     }
 

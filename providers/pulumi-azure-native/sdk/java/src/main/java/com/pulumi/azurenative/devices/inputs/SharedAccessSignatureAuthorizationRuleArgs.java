@@ -27,7 +27,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -38,7 +38,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
-    public Output<String> getPrimaryKey() {
+    public Output<String> primaryKey() {
         return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
@@ -49,7 +49,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="rights", required=true)
       private final Output<AccessRights> rights;
 
-    public Output<AccessRights> getRights() {
+    public Output<AccessRights> rights() {
         return this.rights;
     }
 
@@ -60,7 +60,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends com.pulumi
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
-    public Output<String> getSecondaryKey() {
+    public Output<String> secondaryKey() {
         return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 

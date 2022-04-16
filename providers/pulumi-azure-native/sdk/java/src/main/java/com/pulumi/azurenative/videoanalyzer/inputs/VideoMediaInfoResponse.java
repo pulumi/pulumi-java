@@ -23,7 +23,7 @@ public final class VideoMediaInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="segmentLength", required=true)
       private final String segmentLength;
 
-    public String getSegmentLength() {
+    public String segmentLength() {
         return this.segmentLength;
     }
 

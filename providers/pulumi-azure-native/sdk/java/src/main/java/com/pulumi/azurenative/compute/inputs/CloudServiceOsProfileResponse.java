@@ -26,7 +26,7 @@ public final class CloudServiceOsProfileResponse extends com.pulumi.resources.In
     @Import(name="secrets")
       private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
-    public List<CloudServiceVaultSecretGroupResponse> getSecrets() {
+    public List<CloudServiceVaultSecretGroupResponse> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
 

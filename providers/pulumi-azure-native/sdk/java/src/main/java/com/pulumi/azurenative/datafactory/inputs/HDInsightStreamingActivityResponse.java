@@ -32,7 +32,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="arguments")
       private final @Nullable List<Object> arguments;
 
-    public List<Object> getArguments() {
+    public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
 
@@ -43,7 +43,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="combiner")
       private final @Nullable Object combiner;
 
-    public Optional<Object> getCombiner() {
+    public Optional<Object> combiner() {
         return this.combiner == null ? Optional.empty() : Optional.ofNullable(this.combiner);
     }
 
@@ -54,7 +54,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="commandEnvironment")
       private final @Nullable List<Object> commandEnvironment;
 
-    public List<Object> getCommandEnvironment() {
+    public List<Object> commandEnvironment() {
         return this.commandEnvironment == null ? List.of() : this.commandEnvironment;
     }
 
@@ -65,7 +65,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
 
-    public Map<String,Object> getDefines() {
+    public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
 
@@ -76,7 +76,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -87,7 +87,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -98,7 +98,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="fileLinkedService")
       private final @Nullable LinkedServiceReferenceResponse fileLinkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getFileLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> fileLinkedService() {
         return this.fileLinkedService == null ? Optional.empty() : Optional.ofNullable(this.fileLinkedService);
     }
 
@@ -109,7 +109,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="filePaths", required=true)
       private final List<Object> filePaths;
 
-    public List<Object> getFilePaths() {
+    public List<Object> filePaths() {
         return this.filePaths;
     }
 
@@ -120,7 +120,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
 
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
@@ -131,7 +131,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="input", required=true)
       private final Object input;
 
-    public Object getInput() {
+    public Object input() {
         return this.input;
     }
 
@@ -142,7 +142,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -153,7 +153,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="mapper", required=true)
       private final Object mapper;
 
-    public Object getMapper() {
+    public Object mapper() {
         return this.mapper;
     }
 
@@ -164,7 +164,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -175,7 +175,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="output", required=true)
       private final Object output;
 
-    public Object getOutput() {
+    public Object output() {
         return this.output;
     }
 
@@ -186,7 +186,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -197,7 +197,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="reducer", required=true)
       private final Object reducer;
 
-    public Object getReducer() {
+    public Object reducer() {
         return this.reducer;
     }
 
@@ -208,7 +208,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
-    public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
+    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
 
@@ -220,7 +220,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -231,7 +231,7 @@ public final class HDInsightStreamingActivityResponse extends com.pulumi.resourc
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

@@ -29,7 +29,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
-    public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
+    public Output<List<InboundIpRuleArgs>> inboundIpRules() {
         return this.inboundIpRules == null ? Codegen.empty() : this.inboundIpRules;
     }
 
@@ -40,7 +40,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputSchema")
       private final @Nullable Output<Either<String,InputSchema>> inputSchema;
 
-    public Output<Either<String,InputSchema>> getInputSchema() {
+    public Output<Either<String,InputSchema>> inputSchema() {
         return this.inputSchema == null ? Codegen.empty() : this.inputSchema;
     }
 
@@ -51,7 +51,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputSchemaMapping")
       private final @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
-    public Output<JsonInputSchemaMappingArgs> getInputSchemaMapping() {
+    public Output<JsonInputSchemaMappingArgs> inputSchemaMapping() {
         return this.inputSchemaMapping == null ? Codegen.empty() : this.inputSchemaMapping;
     }
 
@@ -62,7 +62,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -74,7 +74,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -85,7 +85,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -96,7 +96,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -107,7 +107,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName")
       private final @Nullable Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName == null ? Codegen.empty() : this.topicName;
     }
 

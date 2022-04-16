@@ -25,7 +25,7 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
     @Import(name="parameters", required=true)
       private final List<SettingsParameterDescriptionResponse> parameters;
 
-    public List<SettingsParameterDescriptionResponse> getParameters() {
+    public List<SettingsParameterDescriptionResponse> parameters() {
         return this.parameters;
     }
 

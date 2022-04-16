@@ -48,7 +48,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return The time when the server farm free offer expires.
      * 
      */
-    public Output</* @Nullable */ String> getFreeOfferExpirationTime() {
+    public Output</* @Nullable */ String> freeOfferExpirationTime() {
         return this.freeOfferExpirationTime;
     }
     /**
@@ -62,7 +62,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Geographical location for the App Service plan.
      * 
      */
-    public Output<String> getGeoRegion() {
+    public Output<String> geoRegion() {
         return this.geoRegion;
     }
     /**
@@ -76,7 +76,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Specification for the App Service Environment to use for the App Service plan.
      * 
      */
-    public Output</* @Nullable */ HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
+    public Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile;
     }
     /**
@@ -90,7 +90,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> getHyperV() {
+    public Output</* @Nullable */ Boolean> hyperV() {
         return this.hyperV;
     }
     /**
@@ -104,7 +104,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return If <code>true</code>, this App Service Plan owns spot instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsSpot() {
+    public Output</* @Nullable */ Boolean> isSpot() {
         return this.isSpot;
     }
     /**
@@ -118,7 +118,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsXenon() {
+    public Output</* @Nullable */ Boolean> isXenon() {
         return this.isXenon;
     }
     /**
@@ -132,7 +132,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -146,7 +146,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Specification for the Kubernetes Environment to use for the App Service plan.
      * 
      */
-    public Output</* @Nullable */ KubeEnvironmentProfileResponse> getKubeEnvironmentProfile() {
+    public Output</* @Nullable */ KubeEnvironmentProfileResponse> kubeEnvironmentProfile() {
         return this.kubeEnvironmentProfile;
     }
     /**
@@ -160,7 +160,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Resource Location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -174,7 +174,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumElasticWorkerCount() {
+    public Output</* @Nullable */ Integer> maximumElasticWorkerCount() {
         return this.maximumElasticWorkerCount;
     }
     /**
@@ -188,7 +188,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Maximum number of instances that can be assigned to this App Service plan.
      * 
      */
-    public Output<Integer> getMaximumNumberOfWorkers() {
+    public Output<Integer> maximumNumberOfWorkers() {
         return this.maximumNumberOfWorkers;
     }
     /**
@@ -202,7 +202,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -216,7 +216,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Number of apps assigned to this App Service plan.
      * 
      */
-    public Output<Integer> getNumberOfSites() {
+    public Output<Integer> numberOfSites() {
         return this.numberOfSites;
     }
     /**
@@ -232,7 +232,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPerSiteScaling() {
+    public Output</* @Nullable */ Boolean> perSiteScaling() {
         return this.perSiteScaling;
     }
     /**
@@ -246,7 +246,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the App Service Plan.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -260,7 +260,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return If Linux app service plan <code>true</code>, <code>false</code> otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReserved() {
+    public Output</* @Nullable */ Boolean> reserved() {
         return this.reserved;
     }
     /**
@@ -274,7 +274,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Resource group of the App Service plan.
      * 
      */
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -288,7 +288,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Description of a SKU for a scalable resource.
      * 
      */
-    public Output</* @Nullable */ SkuDescriptionResponse> getSku() {
+    public Output</* @Nullable */ SkuDescriptionResponse> sku() {
         return this.sku;
     }
     /**
@@ -302,7 +302,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return The time when the server farm expires. Valid only if it is a spot server farm.
      * 
      */
-    public Output</* @Nullable */ String> getSpotExpirationTime() {
+    public Output</* @Nullable */ String> spotExpirationTime() {
         return this.spotExpirationTime;
     }
     /**
@@ -316,7 +316,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return App Service plan status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -330,7 +330,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return App Service plan subscription.
      * 
      */
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription;
     }
     /**
@@ -344,7 +344,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -358,7 +358,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Scaling worker count.
      * 
      */
-    public Output</* @Nullable */ Integer> getTargetWorkerCount() {
+    public Output</* @Nullable */ Integer> targetWorkerCount() {
         return this.targetWorkerCount;
     }
     /**
@@ -372,7 +372,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Scaling worker size ID.
      * 
      */
-    public Output</* @Nullable */ Integer> getTargetWorkerSizeId() {
+    public Output</* @Nullable */ Integer> targetWorkerSizeId() {
         return this.targetWorkerSizeId;
     }
     /**
@@ -386,7 +386,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -400,7 +400,7 @@ public class AppServicePlan extends com.pulumi.resources.CustomResource {
      * @return Target worker tier assigned to the App Service plan.
      * 
      */
-    public Output</* @Nullable */ String> getWorkerTierName() {
+    public Output</* @Nullable */ String> workerTierName() {
         return this.workerTierName;
     }
 

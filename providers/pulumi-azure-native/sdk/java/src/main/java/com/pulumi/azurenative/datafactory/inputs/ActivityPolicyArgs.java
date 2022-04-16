@@ -28,7 +28,7 @@ public final class ActivityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retry")
       private final @Nullable Output<Object> retry;
 
-    public Output<Object> getRetry() {
+    public Output<Object> retry() {
         return this.retry == null ? Codegen.empty() : this.retry;
     }
 
@@ -39,7 +39,7 @@ public final class ActivityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retryIntervalInSeconds")
       private final @Nullable Output<Integer> retryIntervalInSeconds;
 
-    public Output<Integer> getRetryIntervalInSeconds() {
+    public Output<Integer> retryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Codegen.empty() : this.retryIntervalInSeconds;
     }
 
@@ -50,7 +50,7 @@ public final class ActivityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secureInput")
       private final @Nullable Output<Boolean> secureInput;
 
-    public Output<Boolean> getSecureInput() {
+    public Output<Boolean> secureInput() {
         return this.secureInput == null ? Codegen.empty() : this.secureInput;
     }
 
@@ -61,7 +61,7 @@ public final class ActivityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secureOutput")
       private final @Nullable Output<Boolean> secureOutput;
 
-    public Output<Boolean> getSecureOutput() {
+    public Output<Boolean> secureOutput() {
         return this.secureOutput == null ? Codegen.empty() : this.secureOutput;
     }
 
@@ -72,7 +72,7 @@ public final class ActivityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<Object> timeout;
 
-    public Output<Object> getTimeout() {
+    public Output<Object> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

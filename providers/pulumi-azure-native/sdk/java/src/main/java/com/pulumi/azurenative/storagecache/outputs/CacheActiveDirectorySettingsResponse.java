@@ -70,49 +70,49 @@ public final class CacheActiveDirectorySettingsResponse {
      * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
      * 
     */
-    public String getCacheNetBiosName() {
+    public String cacheNetBiosName() {
         return this.cacheNetBiosName;
     }
     /**
      * Active Directory admin credentials used to join the HPC Cache to a domain.
      * 
     */
-    public Optional<CacheActiveDirectorySettingsResponseCredentials> getCredentials() {
+    public Optional<CacheActiveDirectorySettingsResponseCredentials> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * True if the HPC Cache is joined to the Active Directory domain.
      * 
     */
-    public String getDomainJoined() {
+    public String domainJoined() {
         return this.domainJoined;
     }
     /**
      * The fully qualified domain name of the Active Directory domain controller.
      * 
     */
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
     /**
      * The Active Directory domain's NetBIOS name.
      * 
     */
-    public String getDomainNetBiosName() {
+    public String domainNetBiosName() {
         return this.domainNetBiosName;
     }
     /**
      * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
      * 
     */
-    public String getPrimaryDnsIpAddress() {
+    public String primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
     }
     /**
      * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
      * 
     */
-    public Optional<String> getSecondaryDnsIpAddress() {
+    public Optional<String> secondaryDnsIpAddress() {
         return Optional.ofNullable(this.secondaryDnsIpAddress);
     }
 

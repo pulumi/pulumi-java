@@ -42,7 +42,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Describes the user's progress in configuring their environment setting
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationState() {
+    public Output</* @Nullable */ String> configurationState() {
         return this.configurationState;
     }
     /**
@@ -56,7 +56,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Describes the environment and its resource settings
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Time when the template VM was last changed.
      * 
      */
-    public Output<String> getLastChanged() {
+    public Output<String> lastChanged() {
         return this.lastChanged;
     }
     /**
@@ -84,7 +84,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Time when the template VM was last sent for publishing.
      * 
      */
-    public Output<String> getLastPublished() {
+    public Output<String> lastPublished() {
         return this.lastPublished;
     }
     /**
@@ -98,7 +98,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The details of the latest operation. ex: status, error
      * 
      */
-    public Output<LatestOperationResultResponse> getLatestOperationResult() {
+    public Output<LatestOperationResultResponse> latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
@@ -112,7 +112,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -126,7 +126,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +140,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -154,7 +154,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Describes the readiness of this environment setting
      * 
      */
-    public Output<String> getPublishingState() {
+    public Output<String> publishingState() {
         return this.publishingState;
     }
     /**
@@ -168,7 +168,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The resource specific settings
      * 
      */
-    public Output<ResourceSettingsResponse> getResourceSettings() {
+    public Output<ResourceSettingsResponse> resourceSettings() {
         return this.resourceSettings;
     }
     /**
@@ -182,7 +182,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -196,7 +196,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return Brief title describing the environment and its resource settings
      * 
      */
-    public Output</* @Nullable */ String> getTitle() {
+    public Output</* @Nullable */ String> title() {
         return this.title;
     }
     /**
@@ -210,7 +210,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -224,7 +224,7 @@ public class EnvironmentSetting extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output</* @Nullable */ String> getUniqueIdentifier() {
+    public Output</* @Nullable */ String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

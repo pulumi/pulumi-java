@@ -26,7 +26,7 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="actionType", required=true)
       private final String actionType;
 
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="connectionString")
       private final @Nullable String connectionString;
 
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -48,7 +48,7 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="eventHubResourceId")
       private final @Nullable String eventHubResourceId;
 
-    public Optional<String> getEventHubResourceId() {
+    public Optional<String> eventHubResourceId() {
         return this.eventHubResourceId == null ? Optional.empty() : Optional.ofNullable(this.eventHubResourceId);
     }
 
@@ -59,7 +59,7 @@ public final class AutomationActionEventHubResponse extends com.pulumi.resources
     @Import(name="sasPolicyName", required=true)
       private final String sasPolicyName;
 
-    public String getSasPolicyName() {
+    public String sasPolicyName() {
         return this.sasPolicyName;
     }
 

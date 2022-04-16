@@ -23,7 +23,7 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operatingSystem", required=true)
       private final String operatingSystem;
 
-    public String getOperatingSystem() {
+    public String operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -34,7 +34,7 @@ public final class OsDiskImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceBlobSasUri", required=true)
       private final String sourceBlobSasUri;
 
-    public String getSourceBlobSasUri() {
+    public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }
 

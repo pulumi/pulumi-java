@@ -40,7 +40,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="activeActive")
       private final @Nullable Output<Boolean> activeActive;
 
-    public Output<Boolean> getActiveActive() {
+    public Output<Boolean> activeActive() {
         return this.activeActive == null ? Codegen.empty() : this.activeActive;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="bgpSettings")
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
-    public Output<BgpSettingsArgs> getBgpSettings() {
+    public Output<BgpSettingsArgs> bgpSettings() {
         return this.bgpSettings == null ? Codegen.empty() : this.bgpSettings;
     }
 
@@ -62,7 +62,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="customRoutes")
       private final @Nullable Output<AddressSpaceArgs> customRoutes;
 
-    public Output<AddressSpaceArgs> getCustomRoutes() {
+    public Output<AddressSpaceArgs> customRoutes() {
         return this.customRoutes == null ? Codegen.empty() : this.customRoutes;
     }
 
@@ -73,7 +73,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="enableBgp")
       private final @Nullable Output<Boolean> enableBgp;
 
-    public Output<Boolean> getEnableBgp() {
+    public Output<Boolean> enableBgp() {
         return this.enableBgp == null ? Codegen.empty() : this.enableBgp;
     }
 
@@ -84,7 +84,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="enableDnsForwarding")
       private final @Nullable Output<Boolean> enableDnsForwarding;
 
-    public Output<Boolean> getEnableDnsForwarding() {
+    public Output<Boolean> enableDnsForwarding() {
         return this.enableDnsForwarding == null ? Codegen.empty() : this.enableDnsForwarding;
     }
 
@@ -95,7 +95,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="enablePrivateIpAddress")
       private final @Nullable Output<Boolean> enablePrivateIpAddress;
 
-    public Output<Boolean> getEnablePrivateIpAddress() {
+    public Output<Boolean> enablePrivateIpAddress() {
         return this.enablePrivateIpAddress == null ? Codegen.empty() : this.enablePrivateIpAddress;
     }
 
@@ -106,7 +106,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -117,7 +117,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="gatewayDefaultSite")
       private final @Nullable Output<SubResourceArgs> gatewayDefaultSite;
 
-    public Output<SubResourceArgs> getGatewayDefaultSite() {
+    public Output<SubResourceArgs> gatewayDefaultSite() {
         return this.gatewayDefaultSite == null ? Codegen.empty() : this.gatewayDefaultSite;
     }
 
@@ -128,7 +128,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="gatewayType")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayType>> gatewayType;
 
-    public Output<Either<String,VirtualNetworkGatewayType>> getGatewayType() {
+    public Output<Either<String,VirtualNetworkGatewayType>> gatewayType() {
         return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
     }
 
@@ -139,7 +139,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -150,7 +150,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<VirtualNetworkGatewayIPConfigurationArgs>> getIpConfigurations() {
+    public Output<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -161,7 +161,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -172,7 +172,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="sku")
       private final @Nullable Output<VirtualNetworkGatewaySkuArgs> sku;
 
-    public Output<VirtualNetworkGatewaySkuArgs> getSku() {
+    public Output<VirtualNetworkGatewaySkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -183,7 +183,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -194,7 +194,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vNetExtendedLocationResourceId")
       private final @Nullable Output<String> vNetExtendedLocationResourceId;
 
-    public Output<String> getVNetExtendedLocationResourceId() {
+    public Output<String> vNetExtendedLocationResourceId() {
         return this.vNetExtendedLocationResourceId == null ? Codegen.empty() : this.vNetExtendedLocationResourceId;
     }
 
@@ -205,7 +205,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vpnClientConfiguration")
       private final @Nullable Output<VpnClientConfigurationArgs> vpnClientConfiguration;
 
-    public Output<VpnClientConfigurationArgs> getVpnClientConfiguration() {
+    public Output<VpnClientConfigurationArgs> vpnClientConfiguration() {
         return this.vpnClientConfiguration == null ? Codegen.empty() : this.vpnClientConfiguration;
     }
 
@@ -216,7 +216,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vpnGatewayGeneration")
       private final @Nullable Output<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration;
 
-    public Output<Either<String,VpnGatewayGeneration>> getVpnGatewayGeneration() {
+    public Output<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration() {
         return this.vpnGatewayGeneration == null ? Codegen.empty() : this.vpnGatewayGeneration;
     }
 
@@ -227,7 +227,7 @@ public final class VirtualNetworkGatewayArgs extends com.pulumi.resources.Resour
     @Import(name="vpnType")
       private final @Nullable Output<Either<String,VpnType>> vpnType;
 
-    public Output<Either<String,VpnType>> getVpnType() {
+    public Output<Either<String,VpnType>> vpnType() {
         return this.vpnType == null ? Codegen.empty() : this.vpnType;
     }
 

@@ -64,42 +64,42 @@ public final class GetDeploymentAtTenantScopeResult {
      * The ID of the deployment.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * the location of the deployment.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the deployment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Deployment properties.
      * 
     */
-    public DeploymentPropertiesExtendedResponse getProperties() {
+    public DeploymentPropertiesExtendedResponse properties() {
         return this.properties;
     }
     /**
      * Deployment tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the deployment.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

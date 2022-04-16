@@ -26,7 +26,7 @@ public final class BodyDiagnosticSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="bytes")
       private final @Nullable Output<Integer> bytes;
 
-    public Output<Integer> getBytes() {
+    public Output<Integer> bytes() {
         return this.bytes == null ? Codegen.empty() : this.bytes;
     }
 

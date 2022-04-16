@@ -28,7 +28,7 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     @Import(name="osDiskSizeGB")
       private final @Nullable Output<Integer> osDiskSizeGB;
 
-    public Output<Integer> getOsDiskSizeGB() {
+    public Output<Integer> osDiskSizeGB() {
         return this.osDiskSizeGB == null ? Codegen.empty() : this.osDiskSizeGB;
     }
 
@@ -39,7 +39,7 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
@@ -50,7 +50,7 @@ public final class ImageTemplateVmProfileArgs extends com.pulumi.resources.Resou
     @Import(name="vnetConfig")
       private final @Nullable Output<VirtualNetworkConfigArgs> vnetConfig;
 
-    public Output<VirtualNetworkConfigArgs> getVnetConfig() {
+    public Output<VirtualNetworkConfigArgs> vnetConfig() {
         return this.vnetConfig == null ? Codegen.empty() : this.vnetConfig;
     }
 

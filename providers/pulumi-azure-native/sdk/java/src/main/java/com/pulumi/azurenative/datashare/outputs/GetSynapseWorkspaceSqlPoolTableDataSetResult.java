@@ -69,14 +69,14 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
      * Unique id for identifying a data set resource
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -84,35 +84,35 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource id of the Synapse Workspace SQL Pool Table
      * 
     */
-    public String getSynapseWorkspaceSqlPoolTableResourceId() {
+    public String synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

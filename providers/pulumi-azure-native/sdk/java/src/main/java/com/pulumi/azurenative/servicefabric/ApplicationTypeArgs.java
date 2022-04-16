@@ -23,7 +23,7 @@ public final class ApplicationTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="applicationTypeName")
       private final @Nullable Output<String> applicationTypeName;
 
-    public Output<String> getApplicationTypeName() {
+    public Output<String> applicationTypeName() {
         return this.applicationTypeName == null ? Codegen.empty() : this.applicationTypeName;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ApplicationTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

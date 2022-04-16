@@ -34,14 +34,14 @@ public final class MigrationEligibilityInfoResponse {
      * Whether object is eligible for migration or not.
      * 
     */
-    public Boolean getIsEligibleForMigration() {
+    public Boolean isEligibleForMigration() {
         return this.isEligibleForMigration;
     }
     /**
      * Information about eligibility failure for the server object.
      * 
     */
-    public List<String> getValidationMessages() {
+    public List<String> validationMessages() {
         return this.validationMessages;
     }
 

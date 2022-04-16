@@ -21,7 +21,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="hostGroupName", required=true)
       private final String hostGroupName;
 
-    public String getHostGroupName() {
+    public String hostGroupName() {
         return this.hostGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="hostName", required=true)
       private final String hostName;
 
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
 
@@ -54,7 +54,7 @@ public final class GetDedicatedHostArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

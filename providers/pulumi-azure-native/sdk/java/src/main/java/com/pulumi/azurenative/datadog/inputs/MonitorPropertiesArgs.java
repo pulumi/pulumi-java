@@ -30,7 +30,7 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="datadogOrganizationProperties")
       private final @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
 
-    public Output<DatadogOrganizationPropertiesArgs> getDatadogOrganizationProperties() {
+    public Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties() {
         return this.datadogOrganizationProperties == null ? Codegen.empty() : this.datadogOrganizationProperties;
     }
 
@@ -41,7 +41,7 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
     }
 
@@ -52,7 +52,7 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Output<UserInfoArgs> getUserInfo() {
+    public Output<UserInfoArgs> userInfo() {
         return this.userInfo == null ? Codegen.empty() : this.userInfo;
     }
 

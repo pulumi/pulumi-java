@@ -29,7 +29,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
     @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
+    public Output<List<ManagedRuleExclusionArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -40,7 +40,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
     @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
 
@@ -51,7 +51,7 @@ public final class FrontDoorManagedRuleGroupOverrideArgs extends com.pulumi.reso
     @Import(name="rules")
       private final @Nullable Output<List<FrontDoorManagedRuleOverrideArgs>> rules;
 
-    public Output<List<FrontDoorManagedRuleOverrideArgs>> getRules() {
+    public Output<List<FrontDoorManagedRuleOverrideArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

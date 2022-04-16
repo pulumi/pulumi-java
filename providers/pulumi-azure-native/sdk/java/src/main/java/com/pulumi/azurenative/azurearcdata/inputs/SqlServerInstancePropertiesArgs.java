@@ -26,7 +26,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
@@ -37,7 +37,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="containerResourceId", required=true)
       private final Output<String> containerResourceId;
 
-    public Output<String> getContainerResourceId() {
+    public Output<String> containerResourceId() {
         return this.containerResourceId;
     }
 
@@ -48,7 +48,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="currentVersion")
       private final @Nullable Output<String> currentVersion;
 
-    public Output<String> getCurrentVersion() {
+    public Output<String> currentVersion() {
         return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
     }
 
@@ -59,7 +59,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="edition")
       private final @Nullable Output<String> edition;
 
-    public Output<String> getEdition() {
+    public Output<String> edition() {
         return this.edition == null ? Codegen.empty() : this.edition;
     }
 
@@ -70,7 +70,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -81,7 +81,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -92,7 +92,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="patchLevel")
       private final @Nullable Output<String> patchLevel;
 
-    public Output<String> getPatchLevel() {
+    public Output<String> patchLevel() {
         return this.patchLevel == null ? Codegen.empty() : this.patchLevel;
     }
 
@@ -103,7 +103,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -114,7 +114,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -125,7 +125,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="tcpDynamicPorts")
       private final @Nullable Output<String> tcpDynamicPorts;
 
-    public Output<String> getTcpDynamicPorts() {
+    public Output<String> tcpDynamicPorts() {
         return this.tcpDynamicPorts == null ? Codegen.empty() : this.tcpDynamicPorts;
     }
 
@@ -136,7 +136,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="tcpStaticPorts")
       private final @Nullable Output<String> tcpStaticPorts;
 
-    public Output<String> getTcpStaticPorts() {
+    public Output<String> tcpStaticPorts() {
         return this.tcpStaticPorts == null ? Codegen.empty() : this.tcpStaticPorts;
     }
 
@@ -147,7 +147,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="vCore")
       private final @Nullable Output<String> vCore;
 
-    public Output<String> getVCore() {
+    public Output<String> vCore() {
         return this.vCore == null ? Codegen.empty() : this.vCore;
     }
 
@@ -158,7 +158,7 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends com.pulum
     @Import(name="input")
       private final @Nullable Output<MigrateSqlServerSqlMISyncTaskInputArgs> input;
 
-    public Output<MigrateSqlServerSqlMISyncTaskInputArgs> getInput() {
+    public Output<MigrateSqlServerSqlMISyncTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends com.pulum
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

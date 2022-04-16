@@ -33,7 +33,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="aadResourceId")
       private final @Nullable Object aadResourceId;
 
-    public Optional<Object> getAadResourceId() {
+    public Optional<Object> aadResourceId() {
         return this.aadResourceId == null ? Optional.empty() : Optional.ofNullable(this.aadResourceId);
     }
 
@@ -44,7 +44,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="aadServicePrincipalCredentialType")
       private final @Nullable String aadServicePrincipalCredentialType;
 
-    public Optional<String> getAadServicePrincipalCredentialType() {
+    public Optional<String> aadServicePrincipalCredentialType() {
         return this.aadServicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.aadServicePrincipalCredentialType);
     }
 
@@ -55,7 +55,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -66,7 +66,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="authHeaders")
       private final @Nullable Object authHeaders;
 
-    public Optional<Object> getAuthHeaders() {
+    public Optional<Object> authHeaders() {
         return this.authHeaders == null ? Optional.empty() : Optional.ofNullable(this.authHeaders);
     }
 
@@ -77,7 +77,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -88,7 +88,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="azureCloudType")
       private final @Nullable Object azureCloudType;
 
-    public Optional<Object> getAzureCloudType() {
+    public Optional<Object> azureCloudType() {
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
@@ -99,7 +99,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -110,7 +110,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -121,7 +121,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -132,7 +132,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -143,7 +143,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -154,7 +154,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalEmbeddedCert")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalEmbeddedCert() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert() {
         return this.servicePrincipalEmbeddedCert == null ? null : this.servicePrincipalEmbeddedCert;
     }
 
@@ -165,7 +165,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalEmbeddedCertPassword")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalEmbeddedCertPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword() {
         return this.servicePrincipalEmbeddedCertPassword == null ? null : this.servicePrincipalEmbeddedCertPassword;
     }
 
@@ -176,7 +176,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
-    public Optional<Object> getServicePrincipalId() {
+    public Optional<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
@@ -187,7 +187,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
@@ -198,7 +198,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="tenant")
       private final @Nullable Object tenant;
 
-    public Optional<Object> getTenant() {
+    public Optional<Object> tenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
@@ -210,7 +210,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -221,7 +221,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="url", required=true)
       private final Object url;
 
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 
@@ -232,7 +232,7 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
     @Import(name="userName")
       private final @Nullable Object userName;
 
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

@@ -29,7 +29,7 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -40,7 +40,7 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="appSecret")
       private final @Nullable Output<String> appSecret;
 
-    public Output<String> getAppSecret() {
+    public Output<String> appSecret() {
         return this.appSecret == null ? Codegen.empty() : this.appSecret;
     }
 
@@ -51,7 +51,7 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -62,7 +62,7 @@ public final class FacebookChannelPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="pages")
       private final @Nullable Output<List<FacebookPageArgs>> pages;
 
-    public Output<List<FacebookPageArgs>> getPages() {
+    public Output<List<FacebookPageArgs>> pages() {
         return this.pages == null ? Codegen.empty() : this.pages;
     }
 

@@ -29,7 +29,7 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyType")
       private final @Nullable Output<Either<String,KeyType>> keyType;
 
-    public Output<Either<String,KeyType>> getKeyType() {
+    public Output<Either<String,KeyType>> keyType() {
         return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 

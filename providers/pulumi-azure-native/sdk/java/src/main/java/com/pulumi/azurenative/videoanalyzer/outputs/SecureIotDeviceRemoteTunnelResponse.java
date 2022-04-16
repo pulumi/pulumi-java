@@ -40,14 +40,14 @@ public final class SecureIotDeviceRemoteTunnelResponse {
      * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
      * 
     */
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
     /**
      * Name of the IoT Hub.
      * 
     */
-    public String getIotHubName() {
+    public String iotHubName() {
         return this.iotHubName;
     }
     /**
@@ -55,7 +55,7 @@ public final class SecureIotDeviceRemoteTunnelResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

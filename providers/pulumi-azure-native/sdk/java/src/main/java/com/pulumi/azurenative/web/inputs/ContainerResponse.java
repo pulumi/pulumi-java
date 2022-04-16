@@ -28,7 +28,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="args")
       private final @Nullable List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="command")
       private final @Nullable List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="env")
       private final @Nullable List<EnvironmentVarResponse> env;
 
-    public List<EnvironmentVarResponse> getEnv() {
+    public List<EnvironmentVarResponse> env() {
         return this.env == null ? List.of() : this.env;
     }
 
@@ -61,7 +61,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="image")
       private final @Nullable String image;
 
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
@@ -72,7 +72,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resources")
       private final @Nullable ContainerResourcesResponse resources;
 
-    public Optional<ContainerResourcesResponse> getResources() {
+    public Optional<ContainerResourcesResponse> resources() {
         return this.resources == null ? Optional.empty() : Optional.ofNullable(this.resources);
     }
 

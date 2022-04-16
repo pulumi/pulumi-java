@@ -19,7 +19,7 @@ public final class GetDistributedAvailabilityGroupArgs extends com.pulumi.resour
     @Import(name="distributedAvailabilityGroupName", required=true)
       private final String distributedAvailabilityGroupName;
 
-    public String getDistributedAvailabilityGroupName() {
+    public String distributedAvailabilityGroupName() {
         return this.distributedAvailabilityGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDistributedAvailabilityGroupArgs extends com.pulumi.resour
     @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
-    public String getManagedInstanceName() {
+    public String managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDistributedAvailabilityGroupArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

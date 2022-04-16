@@ -21,7 +21,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     @Import(name="labName", required=true)
       private final String labName;
 
-    public String getLabName() {
+    public String labName() {
         return this.labName;
     }
 
@@ -43,7 +43,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -54,7 +54,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +65,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     @Import(name="serviceFabricName", required=true)
       private final String serviceFabricName;
 
-    public String getServiceFabricName() {
+    public String serviceFabricName() {
         return this.serviceFabricName;
     }
 
@@ -76,7 +76,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

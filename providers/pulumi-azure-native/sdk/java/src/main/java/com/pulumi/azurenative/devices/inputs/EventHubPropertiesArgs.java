@@ -27,7 +27,7 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="partitionCount")
       private final @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> getPartitionCount() {
+    public Output<Integer> partitionCount() {
         return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
@@ -38,7 +38,7 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="retentionTimeInDays")
       private final @Nullable Output<Double> retentionTimeInDays;
 
-    public Output<Double> getRetentionTimeInDays() {
+    public Output<Double> retentionTimeInDays() {
         return this.retentionTimeInDays == null ? Codegen.empty() : this.retentionTimeInDays;
     }
 

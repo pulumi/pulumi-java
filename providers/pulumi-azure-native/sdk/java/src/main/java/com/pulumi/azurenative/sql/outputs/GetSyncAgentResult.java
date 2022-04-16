@@ -84,63 +84,63 @@ public final class GetSyncAgentResult {
      * Expiration time of the sync agent version.
      * 
     */
-    public String getExpiryTime() {
+    public String expiryTime() {
         return this.expiryTime;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * If the sync agent version is up to date.
      * 
     */
-    public Boolean getIsUpToDate() {
+    public Boolean isUpToDate() {
         return this.isUpToDate;
     }
     /**
      * Last alive time of the sync agent.
      * 
     */
-    public String getLastAliveTime() {
+    public String lastAliveTime() {
         return this.lastAliveTime;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the sync agent.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * ARM resource id of the sync database in the sync agent.
      * 
     */
-    public Optional<String> getSyncDatabaseId() {
+    public Optional<String> syncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Version of the sync agent.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

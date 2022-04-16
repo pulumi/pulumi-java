@@ -27,7 +27,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
+    public Output<String> publicIpAddress() {
         return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="publicIpAddressId")
       private final @Nullable Output<String> publicIpAddressId;
 
-    public Output<String> getPublicIpAddressId() {
+    public Output<String> publicIpAddressId() {
         return this.publicIpAddressId == null ? Codegen.empty() : this.publicIpAddressId;
     }
 
@@ -71,7 +71,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="rdpAuthority")
       private final @Nullable Output<String> rdpAuthority;
 
-    public Output<String> getRdpAuthority() {
+    public Output<String> rdpAuthority() {
         return this.rdpAuthority == null ? Codegen.empty() : this.rdpAuthority;
     }
 
@@ -82,7 +82,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
-    public Output<SharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
+    public Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Codegen.empty() : this.sharedPublicIpAddressConfiguration;
     }
 
@@ -93,7 +93,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="sshAuthority")
       private final @Nullable Output<String> sshAuthority;
 
-    public Output<String> getSshAuthority() {
+    public Output<String> sshAuthority() {
         return this.sshAuthority == null ? Codegen.empty() : this.sshAuthority;
     }
 
@@ -104,7 +104,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -115,7 +115,7 @@ public final class NetworkInterfacePropertiesArgs extends com.pulumi.resources.R
     @Import(name="virtualNetworkId")
       private final @Nullable Output<String> virtualNetworkId;
 
-    public Output<String> getVirtualNetworkId() {
+    public Output<String> virtualNetworkId() {
         return this.virtualNetworkId == null ? Codegen.empty() : this.virtualNetworkId;
     }
 

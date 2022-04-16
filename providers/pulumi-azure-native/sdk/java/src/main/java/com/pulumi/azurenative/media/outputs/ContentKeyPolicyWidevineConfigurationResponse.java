@@ -34,14 +34,14 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
      * Expected value is '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The Widevine template.
      * 
     */
-    public String getWidevineTemplate() {
+    public String widevineTemplate() {
         return this.widevineTemplate;
     }
 

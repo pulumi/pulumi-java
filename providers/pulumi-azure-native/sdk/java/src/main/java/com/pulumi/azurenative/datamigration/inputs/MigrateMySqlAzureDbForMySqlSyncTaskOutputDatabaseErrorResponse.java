@@ -23,7 +23,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
@@ -34,7 +34,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     @Import(name="events")
       private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
 
-    public List<SyncMigrationDatabaseErrorEventResponse> getEvents() {
+    public List<SyncMigrationDatabaseErrorEventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
 
@@ -45,7 +45,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -57,7 +57,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

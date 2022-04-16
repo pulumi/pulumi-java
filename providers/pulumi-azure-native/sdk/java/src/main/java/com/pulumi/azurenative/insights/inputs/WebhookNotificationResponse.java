@@ -26,7 +26,7 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -37,7 +37,7 @@ public final class WebhookNotificationResponse extends com.pulumi.resources.Invo
     @Import(name="serviceUri")
       private final @Nullable String serviceUri;
 
-    public Optional<String> getServiceUri() {
+    public Optional<String> serviceUri() {
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
     }
 

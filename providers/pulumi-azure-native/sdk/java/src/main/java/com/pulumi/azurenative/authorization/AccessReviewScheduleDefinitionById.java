@@ -46,7 +46,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The role assignment state eligible/active to review
      * 
      */
-    public Output<String> getAssignmentState() {
+    public Output<String> assignmentState() {
         return this.assignmentState;
     }
     /**
@@ -60,7 +60,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoApplyDecisionsEnabled() {
+    public Output</* @Nullable */ Boolean> autoApplyDecisionsEnabled() {
         return this.autoApplyDecisionsEnabled;
     }
     /**
@@ -74,7 +74,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This is the collection of backup reviewers.
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewReviewerResponse>> getBackupReviewers() {
+    public Output</* @Nullable */ List<AccessReviewReviewerResponse>> backupReviewers() {
         return this.backupReviewers;
     }
     /**
@@ -88,7 +88,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This specifies the behavior for the autoReview feature when an access review completes.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultDecision() {
+    public Output</* @Nullable */ String> defaultDecision() {
         return this.defaultDecision;
     }
     /**
@@ -102,7 +102,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Flag to indicate whether reviewers are required to provide a justification when reviewing access.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDefaultDecisionEnabled() {
+    public Output</* @Nullable */ Boolean> defaultDecisionEnabled() {
         return this.defaultDecisionEnabled;
     }
     /**
@@ -116,7 +116,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The description provided by the access review creator and visible to admins.
      * 
      */
-    public Output</* @Nullable */ String> getDescriptionForAdmins() {
+    public Output</* @Nullable */ String> descriptionForAdmins() {
         return this.descriptionForAdmins;
     }
     /**
@@ -130,7 +130,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The description provided by the access review creator to be shown to reviewers.
      * 
      */
-    public Output</* @Nullable */ String> getDescriptionForReviewers() {
+    public Output</* @Nullable */ String> descriptionForReviewers() {
         return this.descriptionForReviewers;
     }
     /**
@@ -144,7 +144,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The display name for the schedule definition.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -158,7 +158,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The DateTime when the review is scheduled to end. Required if type is endDate
      * 
      */
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     /**
@@ -172,7 +172,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
      */
-    public Output</* @Nullable */ String> getInactiveDuration() {
+    public Output</* @Nullable */ String> inactiveDuration() {
         return this.inactiveDuration;
     }
     /**
@@ -186,7 +186,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The duration in days for an instance.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstanceDurationInDays() {
+    public Output</* @Nullable */ Integer> instanceDurationInDays() {
         return this.instanceDurationInDays;
     }
     /**
@@ -200,7 +200,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This is the collection of instances returned when one does an expand on it.
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewInstanceResponse>> getInstances() {
+    public Output</* @Nullable */ List<AccessReviewInstanceResponse>> instances() {
         return this.instances;
     }
     /**
@@ -214,7 +214,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
      */
-    public Output</* @Nullable */ Integer> getInterval() {
+    public Output</* @Nullable */ Integer> interval() {
         return this.interval;
     }
     /**
@@ -228,7 +228,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Flag to indicate whether the reviewer is required to pass justification when recording a decision.
      * 
      */
-    public Output</* @Nullable */ Boolean> getJustificationRequiredOnApproval() {
+    public Output</* @Nullable */ Boolean> justificationRequiredOnApproval() {
         return this.justificationRequiredOnApproval;
     }
     /**
@@ -242,7 +242,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Flag to indicate whether sending mails to reviewers and the review creator is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMailNotificationsEnabled() {
+    public Output</* @Nullable */ Boolean> mailNotificationsEnabled() {
         return this.mailNotificationsEnabled;
     }
     /**
@@ -256,7 +256,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The access review schedule definition unique id.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -270,7 +270,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfOccurrences() {
+    public Output</* @Nullable */ Integer> numberOfOccurrences() {
         return this.numberOfOccurrences;
     }
     /**
@@ -284,7 +284,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The identity id
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -298,7 +298,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The identity display name
      * 
      */
-    public Output<String> getPrincipalName() {
+    public Output<String> principalName() {
         return this.principalName;
     }
     /**
@@ -312,7 +312,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The identity type user/servicePrincipal to review
      * 
      */
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType;
     }
     /**
@@ -326,7 +326,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Flag to indicate whether showing recommendations to reviewers is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRecommendationsEnabled() {
+    public Output</* @Nullable */ Boolean> recommendationsEnabled() {
         return this.recommendationsEnabled;
     }
     /**
@@ -340,7 +340,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return Flag to indicate whether sending reminder emails to reviewers are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReminderNotificationsEnabled() {
+    public Output</* @Nullable */ Boolean> reminderNotificationsEnabled() {
         return this.reminderNotificationsEnabled;
     }
     /**
@@ -354,7 +354,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return ResourceId in which this review is getting created
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -368,7 +368,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This is the collection of reviewers.
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewReviewerResponse>> getReviewers() {
+    public Output</* @Nullable */ List<AccessReviewReviewerResponse>> reviewers() {
         return this.reviewers;
     }
     /**
@@ -382,7 +382,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
      * 
      */
-    public Output<String> getReviewersType() {
+    public Output<String> reviewersType() {
         return this.reviewersType;
     }
     /**
@@ -396,7 +396,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This is used to indicate the role being reviewed
      * 
      */
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
@@ -410,7 +410,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
      */
-    public Output</* @Nullable */ String> getStartDate() {
+    public Output</* @Nullable */ String> startDate() {
         return this.startDate;
     }
     /**
@@ -424,7 +424,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return This read-only field specifies the status of an accessReview.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -438,7 +438,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -452,7 +452,7 @@ public class AccessReviewScheduleDefinitionById extends com.pulumi.resources.Cus
      * @return The user principal name(if valid)
      * 
      */
-    public Output<String> getUserPrincipalName() {
+    public Output<String> userPrincipalName() {
         return this.userPrincipalName;
     }
 

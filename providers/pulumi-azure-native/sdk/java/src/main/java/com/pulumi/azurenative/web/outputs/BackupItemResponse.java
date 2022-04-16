@@ -144,119 +144,119 @@ public final class BackupItemResponse {
      * Id of the backup.
      * 
     */
-    public Integer getBackupId() {
+    public Integer backupId() {
         return this.backupId;
     }
     /**
      * Name of the blob which contains data for this backup.
      * 
     */
-    public String getBlobName() {
+    public String blobName() {
         return this.blobName;
     }
     /**
      * Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
      * 
     */
-    public String getCorrelationId() {
+    public String correlationId() {
         return this.correlationId;
     }
     /**
      * Timestamp of the backup creation.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * List of databases included in the backup.
      * 
     */
-    public List<DatabaseBackupSettingResponse> getDatabases() {
+    public List<DatabaseBackupSettingResponse> databases() {
         return this.databases;
     }
     /**
      * Timestamp when this backup finished.
      * 
     */
-    public String getFinishedTimeStamp() {
+    public String finishedTimeStamp() {
         return this.finishedTimeStamp;
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Timestamp of a last restore operation which used this backup.
      * 
     */
-    public String getLastRestoreTimeStamp() {
+    public String lastRestoreTimeStamp() {
         return this.lastRestoreTimeStamp;
     }
     /**
      * Details regarding this backup. Might contain an error message.
      * 
     */
-    public String getLog() {
+    public String log() {
         return this.log;
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * True if this backup has been created due to a schedule being triggered.
      * 
     */
-    public Boolean getScheduled() {
+    public Boolean scheduled() {
         return this.scheduled;
     }
     /**
      * Size of the backup in bytes.
      * 
     */
-    public Double getSizeInBytes() {
+    public Double sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * Backup status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * SAS URL for the storage account container which contains this backup.
      * 
     */
-    public String getStorageAccountUrl() {
+    public String storageAccountUrl() {
         return this.storageAccountUrl;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Size of the original web app which has been backed up.
      * 
     */
-    public Double getWebsiteSizeInBytes() {
+    public Double websiteSizeInBytes() {
         return this.websiteSizeInBytes;
     }
 

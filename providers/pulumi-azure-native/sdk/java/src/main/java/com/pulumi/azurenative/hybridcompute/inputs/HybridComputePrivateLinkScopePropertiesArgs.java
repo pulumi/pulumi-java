@@ -28,7 +28,7 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends com.pulum
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 

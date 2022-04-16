@@ -43,7 +43,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * Point-To-Site VPN connection.
      * 
      */
-    public Output</* @Nullable */ String> getCertBlob() {
+    public Output</* @Nullable */ String> certBlob() {
         return this.certBlob;
     }
     /**
@@ -57,7 +57,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return The client certificate thumbprint.
      * 
      */
-    public Output<String> getCertThumbprint() {
+    public Output<String> certThumbprint() {
         return this.certThumbprint;
     }
     /**
@@ -71,7 +71,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
      */
-    public Output</* @Nullable */ String> getDnsServers() {
+    public Output</* @Nullable */ String> dnsServers() {
         return this.dnsServers;
     }
     /**
@@ -85,7 +85,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return Flag that is used to denote if this is VNET injection
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsSwift() {
+    public Output</* @Nullable */ Boolean> isSwift() {
         return this.isSwift;
     }
     /**
@@ -99,7 +99,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -113,7 +113,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return <code>true</code> if a resync is required; otherwise, <code>false</code>.
      * 
      */
-    public Output<Boolean> getResyncRequired() {
+    public Output<Boolean> resyncRequired() {
         return this.resyncRequired;
     }
     /**
@@ -141,7 +141,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return The routes that this Virtual Network connection uses.
      * 
      */
-    public Output<List<VnetRouteResponse>> getRoutes() {
+    public Output<List<VnetRouteResponse>> routes() {
         return this.routes;
     }
     /**
@@ -155,7 +155,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -169,7 +169,7 @@ public class WebAppVnetConnection extends com.pulumi.resources.CustomResource {
      * @return The Virtual Network's resource ID.
      * 
      */
-    public Output</* @Nullable */ String> getVnetResourceId() {
+    public Output</* @Nullable */ String> vnetResourceId() {
         return this.vnetResourceId;
     }
 

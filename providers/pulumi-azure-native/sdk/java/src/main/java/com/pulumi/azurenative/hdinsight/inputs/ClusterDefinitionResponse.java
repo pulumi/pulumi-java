@@ -27,7 +27,7 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="blueprint")
       private final @Nullable String blueprint;
 
-    public Optional<String> getBlueprint() {
+    public Optional<String> blueprint() {
         return this.blueprint == null ? Optional.empty() : Optional.ofNullable(this.blueprint);
     }
 
@@ -38,7 +38,7 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="componentVersion")
       private final @Nullable Map<String,String> componentVersion;
 
-    public Map<String,String> getComponentVersion() {
+    public Map<String,String> componentVersion() {
         return this.componentVersion == null ? Map.of() : this.componentVersion;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="configurations")
       private final @Nullable Object configurations;
 
-    public Optional<Object> getConfigurations() {
+    public Optional<Object> configurations() {
         return this.configurations == null ? Optional.empty() : Optional.ofNullable(this.configurations);
     }
 
@@ -60,7 +60,7 @@ public final class ClusterDefinitionResponse extends com.pulumi.resources.Invoke
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 

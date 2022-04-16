@@ -31,7 +31,7 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -43,7 +43,7 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
 
-    public Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> getStreams() {
+    public Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams() {
         return this.streams == null ? Codegen.empty() : this.streams;
     }
 
@@ -54,7 +54,7 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
     @Import(name="xPathQueries")
       private final @Nullable Output<List<String>> xPathQueries;
 
-    public Output<List<String>> getXPathQueries() {
+    public Output<List<String>> xPathQueries() {
         return this.xPathQueries == null ? Codegen.empty() : this.xPathQueries;
     }
 

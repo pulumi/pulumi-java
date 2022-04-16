@@ -16,7 +16,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule {
         this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 
-    public String getRequiredFeaturesPolicy() {
+    public String requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 

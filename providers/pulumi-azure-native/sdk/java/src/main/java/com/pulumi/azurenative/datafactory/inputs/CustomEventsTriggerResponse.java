@@ -28,7 +28,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -39,7 +39,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -50,7 +50,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="events", required=true)
       private final List<Object> events;
 
-    public List<Object> getEvents() {
+    public List<Object> events() {
         return this.events;
     }
 
@@ -61,7 +61,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
-    public List<TriggerPipelineReferenceResponse> getPipelines() {
+    public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
@@ -72,7 +72,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
 
@@ -83,7 +83,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
@@ -94,7 +94,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="subjectBeginsWith")
       private final @Nullable String subjectBeginsWith;
 
-    public Optional<String> getSubjectBeginsWith() {
+    public Optional<String> subjectBeginsWith() {
         return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
     }
 
@@ -105,7 +105,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="subjectEndsWith")
       private final @Nullable String subjectEndsWith;
 
-    public Optional<String> getSubjectEndsWith() {
+    public Optional<String> subjectEndsWith() {
         return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
     }
 
@@ -117,7 +117,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

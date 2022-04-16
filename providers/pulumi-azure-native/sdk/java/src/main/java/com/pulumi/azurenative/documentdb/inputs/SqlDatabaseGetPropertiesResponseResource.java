@@ -22,7 +22,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="colls")
       private final @Nullable String colls;
 
-    public Optional<String> getColls() {
+    public Optional<String> colls() {
         return this.colls == null ? Optional.empty() : Optional.ofNullable(this.colls);
     }
 
@@ -33,7 +33,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -44,7 +44,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -55,7 +55,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="rid", required=true)
       private final String rid;
 
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
 
@@ -66,7 +66,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="ts", required=true)
       private final Double ts;
 
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 
@@ -77,7 +77,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends com.pulumi.r
     @Import(name="users")
       private final @Nullable String users;
 
-    public Optional<String> getUsers() {
+    public Optional<String> users() {
         return this.users == null ? Optional.empty() : Optional.ofNullable(this.users);
     }
 

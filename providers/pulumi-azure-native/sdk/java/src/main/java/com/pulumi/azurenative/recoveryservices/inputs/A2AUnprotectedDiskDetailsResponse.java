@@ -25,7 +25,7 @@ public final class A2AUnprotectedDiskDetailsResponse extends com.pulumi.resource
     @Import(name="diskLunId")
       private final @Nullable Integer diskLunId;
 
-    public Optional<Integer> getDiskLunId() {
+    public Optional<Integer> diskLunId() {
         return this.diskLunId == null ? Optional.empty() : Optional.ofNullable(this.diskLunId);
     }
 

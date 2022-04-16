@@ -25,7 +25,7 @@ public final class UefiSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="secureBootEnabled")
       private final @Nullable Boolean secureBootEnabled;
 
-    public Optional<Boolean> getSecureBootEnabled() {
+    public Optional<Boolean> secureBootEnabled() {
         return this.secureBootEnabled == null ? Optional.empty() : Optional.ofNullable(this.secureBootEnabled);
     }
 
@@ -36,7 +36,7 @@ public final class UefiSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vTpmEnabled")
       private final @Nullable Boolean vTpmEnabled;
 
-    public Optional<Boolean> getVTpmEnabled() {
+    public Optional<Boolean> vTpmEnabled() {
         return this.vTpmEnabled == null ? Optional.empty() : Optional.ofNullable(this.vTpmEnabled);
     }
 

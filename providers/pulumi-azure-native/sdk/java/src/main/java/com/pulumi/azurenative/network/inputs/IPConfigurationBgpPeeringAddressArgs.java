@@ -27,7 +27,7 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
     @Import(name="customBgpIpAddresses")
       private final @Nullable Output<List<String>> customBgpIpAddresses;
 
-    public Output<List<String>> getCustomBgpIpAddresses() {
+    public Output<List<String>> customBgpIpAddresses() {
         return this.customBgpIpAddresses == null ? Codegen.empty() : this.customBgpIpAddresses;
     }
 
@@ -38,7 +38,7 @@ public final class IPConfigurationBgpPeeringAddressArgs extends com.pulumi.resou
     @Import(name="ipconfigurationId")
       private final @Nullable Output<String> ipconfigurationId;
 
-    public Output<String> getIpconfigurationId() {
+    public Output<String> ipconfigurationId() {
         return this.ipconfigurationId == null ? Codegen.empty() : this.ipconfigurationId;
     }
 

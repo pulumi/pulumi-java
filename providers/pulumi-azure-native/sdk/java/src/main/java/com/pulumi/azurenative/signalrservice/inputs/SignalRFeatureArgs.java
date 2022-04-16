@@ -31,7 +31,7 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="flag", required=true)
       private final Output<Either<String,FeatureFlags>> flag;
 
-    public Output<Either<String,FeatureFlags>> getFlag() {
+    public Output<Either<String,FeatureFlags>> flag() {
         return this.flag;
     }
 
@@ -42,7 +42,7 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -53,7 +53,7 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

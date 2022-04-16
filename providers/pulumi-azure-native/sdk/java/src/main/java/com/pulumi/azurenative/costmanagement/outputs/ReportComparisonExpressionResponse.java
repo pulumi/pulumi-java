@@ -40,21 +40,21 @@ public final class ReportComparisonExpressionResponse {
      * The name of the column to use in comparison.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The operator to use for comparison.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Array of values to use for comparison
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

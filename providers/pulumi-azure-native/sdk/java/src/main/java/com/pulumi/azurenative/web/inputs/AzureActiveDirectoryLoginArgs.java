@@ -28,7 +28,7 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
     @Import(name="disableWWWAuthenticate")
       private final @Nullable Output<Boolean> disableWWWAuthenticate;
 
-    public Output<Boolean> getDisableWWWAuthenticate() {
+    public Output<Boolean> disableWWWAuthenticate() {
         return this.disableWWWAuthenticate == null ? Codegen.empty() : this.disableWWWAuthenticate;
     }
 
@@ -40,7 +40,7 @@ public final class AzureActiveDirectoryLoginArgs extends com.pulumi.resources.Re
     @Import(name="loginParameters")
       private final @Nullable Output<List<String>> loginParameters;
 
-    public Output<List<String>> getLoginParameters() {
+    public Output<List<String>> loginParameters() {
         return this.loginParameters == null ? Codegen.empty() : this.loginParameters;
     }
 

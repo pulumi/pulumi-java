@@ -29,7 +29,7 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="privateLink")
       private final @Nullable Output<Either<String,PrivateLink>> privateLink;
 
-    public Output<Either<String,PrivateLink>> getPrivateLink() {
+    public Output<Either<String,PrivateLink>> privateLink() {
         return this.privateLink == null ? Codegen.empty() : this.privateLink;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceProviderConnection")
       private final @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
-    public Output<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {
+    public Output<Either<String,ResourceProviderConnection>> resourceProviderConnection() {
         return this.resourceProviderConnection == null ? Codegen.empty() : this.resourceProviderConnection;
     }
 

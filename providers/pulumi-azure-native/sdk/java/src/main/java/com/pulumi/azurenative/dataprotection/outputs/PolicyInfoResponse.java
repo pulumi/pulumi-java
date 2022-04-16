@@ -30,17 +30,17 @@ public final class PolicyInfoResponse {
         this.policyVersion = policyVersion;
     }
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * Policy parameters for the backup instance
      * 
     */
-    public Optional<PolicyParametersResponse> getPolicyParameters() {
+    public Optional<PolicyParametersResponse> policyParameters() {
         return Optional.ofNullable(this.policyParameters);
     }
-    public String getPolicyVersion() {
+    public String policyVersion() {
         return this.policyVersion;
     }
 

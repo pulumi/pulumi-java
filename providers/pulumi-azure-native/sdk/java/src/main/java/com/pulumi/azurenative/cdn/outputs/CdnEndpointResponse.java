@@ -26,7 +26,7 @@ public final class CdnEndpointResponse {
      * ARM Resource ID string.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

@@ -21,7 +21,7 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="groupConnectivity")
       private final @Nullable String groupConnectivity;
 
-    public Optional<String> getGroupConnectivity() {
+    public Optional<String> groupConnectivity() {
         return this.groupConnectivity == null ? Optional.empty() : Optional.ofNullable(this.groupConnectivity);
     }
 
@@ -32,7 +32,7 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="isGlobal")
       private final @Nullable String isGlobal;
 
-    public Optional<String> getIsGlobal() {
+    public Optional<String> isGlobal() {
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
     }
 
@@ -43,7 +43,7 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="networkGroupId")
       private final @Nullable String networkGroupId;
 
-    public Optional<String> getNetworkGroupId() {
+    public Optional<String> networkGroupId() {
         return this.networkGroupId == null ? Optional.empty() : Optional.ofNullable(this.networkGroupId);
     }
 
@@ -54,7 +54,7 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="useHubGateway")
       private final @Nullable String useHubGateway;
 
-    public Optional<String> getUseHubGateway() {
+    public Optional<String> useHubGateway() {
         return this.useHubGateway == null ? Optional.empty() : Optional.ofNullable(this.useHubGateway);
     }
 

@@ -25,7 +25,7 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
     @Import(name="keyVaultUri", required=true)
       private final String keyVaultUri;
 
-    public String getKeyVaultUri() {
+    public String keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -36,7 +36,7 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -49,7 +49,7 @@ public final class ExportPipelineTargetPropertiesResponse extends com.pulumi.res
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

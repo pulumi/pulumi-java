@@ -30,7 +30,7 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="day")
       private final @Nullable Output<Either<String,WeekDay>> day;
 
-    public Output<Either<String,WeekDay>> getDay() {
+    public Output<Either<String,WeekDay>> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -41,7 +41,7 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hourSlots")
       private final @Nullable Output<List<Integer>> hourSlots;
 
-    public Output<List<Integer>> getHourSlots() {
+    public Output<List<Integer>> hourSlots() {
         return this.hourSlots == null ? Codegen.empty() : this.hourSlots;
     }
 

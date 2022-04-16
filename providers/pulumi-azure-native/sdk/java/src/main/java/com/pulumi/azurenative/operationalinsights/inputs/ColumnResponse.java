@@ -26,7 +26,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataTypeHint")
       private final @Nullable String dataTypeHint;
 
-    public Optional<String> getDataTypeHint() {
+    public Optional<String> dataTypeHint() {
         return this.dataTypeHint == null ? Optional.empty() : Optional.ofNullable(this.dataTypeHint);
     }
 
@@ -37,7 +37,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -48,7 +48,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -59,7 +59,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isDefaultDisplay", required=true)
       private final Boolean isDefaultDisplay;
 
-    public Boolean getIsDefaultDisplay() {
+    public Boolean isDefaultDisplay() {
         return this.isDefaultDisplay;
     }
 
@@ -70,7 +70,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isHidden", required=true)
       private final Boolean isHidden;
 
-    public Boolean getIsHidden() {
+    public Boolean isHidden() {
         return this.isHidden;
     }
 
@@ -81,7 +81,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -92,7 +92,7 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

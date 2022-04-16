@@ -23,7 +23,7 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -34,7 +34,7 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
     @Import(name="timeCreated", required=true)
       private final String timeCreated;
 
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
 
@@ -45,7 +45,7 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
     @Import(name="timeModified", required=true)
       private final String timeModified;
 
-    public String getTimeModified() {
+    public String timeModified() {
         return this.timeModified;
     }
 

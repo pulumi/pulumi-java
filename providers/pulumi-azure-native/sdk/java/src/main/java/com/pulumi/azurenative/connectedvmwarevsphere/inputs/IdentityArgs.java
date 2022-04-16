@@ -27,7 +27,7 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,IdentityType>> type;
 
-    public Output<Either<String,IdentityType>> getType() {
+    public Output<Either<String,IdentityType>> type() {
         return this.type;
     }
 

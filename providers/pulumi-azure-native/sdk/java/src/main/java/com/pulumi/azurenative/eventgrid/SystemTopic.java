@@ -45,7 +45,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Identity information for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityInfoResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityInfoResponse> identity() {
         return this.identity;
     }
     /**
@@ -59,7 +59,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Metric resource id for the system topic.
      * 
      */
-    public Output<String> getMetricResourceId() {
+    public Output<String> metricResourceId() {
         return this.metricResourceId;
     }
     /**
@@ -87,7 +87,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the system topic.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Source for the system topic.
      * 
      */
-    public Output</* @Nullable */ String> getSource() {
+    public Output</* @Nullable */ String> source() {
         return this.source;
     }
     /**
@@ -129,7 +129,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to System Topic resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -143,7 +143,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return TopicType for the system topic.
      * 
      */
-    public Output</* @Nullable */ String> getTopicType() {
+    public Output</* @Nullable */ String> topicType() {
         return this.topicType;
     }
     /**
@@ -171,7 +171,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

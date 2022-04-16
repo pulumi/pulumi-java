@@ -99,70 +99,70 @@ public final class GetAssessmentResult {
      * Additional data regarding the assessment
      * 
     */
-    public Map<String,String> getAdditionalData() {
+    public Map<String,String> additionalData() {
         return this.additionalData == null ? Map.of() : this.additionalData;
     }
     /**
      * User friendly display name of the assessment
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Links relevant to the assessment
      * 
     */
-    public AssessmentLinksResponse getLinks() {
+    public AssessmentLinksResponse links() {
         return this.links;
     }
     /**
      * Describes properties of an assessment metadata.
      * 
     */
-    public Optional<SecurityAssessmentMetadataPropertiesResponse> getMetadata() {
+    public Optional<SecurityAssessmentMetadataPropertiesResponse> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Data regarding 3rd party partner integration
      * 
     */
-    public Optional<SecurityAssessmentPartnerDataResponse> getPartnersData() {
+    public Optional<SecurityAssessmentPartnerDataResponse> partnersData() {
         return Optional.ofNullable(this.partnersData);
     }
     /**
      * Details of the resource that was assessed
      * 
     */
-    public Object getResourceDetails() {
+    public Object resourceDetails() {
         return this.resourceDetails;
     }
     /**
      * The result of the assessment
      * 
     */
-    public AssessmentStatusResponse getStatus() {
+    public AssessmentStatusResponse status() {
         return this.status;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

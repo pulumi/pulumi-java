@@ -26,7 +26,7 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="accessEndpointIpAddresses")
       private final @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
 
-    public List<IpAddressResponse> getAccessEndpointIpAddresses() {
+    public List<IpAddressResponse> accessEndpointIpAddresses() {
         return this.accessEndpointIpAddresses == null ? List.of() : this.accessEndpointIpAddresses;
     }
 
@@ -37,7 +37,7 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="outgoingIpAddresses")
       private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
-    public List<IpAddressResponse> getOutgoingIpAddresses() {
+    public List<IpAddressResponse> outgoingIpAddresses() {
         return this.outgoingIpAddresses == null ? List.of() : this.outgoingIpAddresses;
     }
 

@@ -26,7 +26,7 @@ public final class WebTestGeolocationResponse {
      * Location ID for the webtest to run from.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
 

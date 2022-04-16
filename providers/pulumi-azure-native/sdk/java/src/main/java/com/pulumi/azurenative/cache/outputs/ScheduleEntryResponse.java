@@ -42,21 +42,21 @@ public final class ScheduleEntryResponse {
      * Day of the week when a cache can be patched.
      * 
     */
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * ISO8601 timespan specifying how much time cache patching can take.
      * 
     */
-    public Optional<String> getMaintenanceWindow() {
+    public Optional<String> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
      * Start hour after which cache patching can start.
      * 
     */
-    public Integer getStartHourUtc() {
+    public Integer startHourUtc() {
         return this.startHourUtc;
     }
 

@@ -28,7 +28,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -39,7 +39,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="backupSetName")
       private final @Nullable String backupSetName;
 
-    public Optional<String> getBackupSetName() {
+    public Optional<String> backupSetName() {
         return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
     }
 
@@ -50,7 +50,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="computerName")
       private final @Nullable String computerName;
 
-    public Optional<String> getComputerName() {
+    public Optional<String> computerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
     }
 
@@ -61,7 +61,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="containerName")
       private final @Nullable String containerName;
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
     }
 
@@ -72,7 +72,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="createMode")
       private final @Nullable String createMode;
 
-    public Optional<String> getCreateMode() {
+    public Optional<String> createMode() {
         return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
     }
 
@@ -83,7 +83,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="deferredDeleteSyncTimeInUTC")
       private final @Nullable Double deferredDeleteSyncTimeInUTC;
 
-    public Optional<Double> getDeferredDeleteSyncTimeInUTC() {
+    public Optional<Double> deferredDeleteSyncTimeInUTC() {
         return this.deferredDeleteSyncTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteSyncTimeInUTC);
     }
 
@@ -94,7 +94,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
 
-    public Optional<String> getDeferredDeleteTimeInUTC() {
+    public Optional<String> deferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
@@ -105,7 +105,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
 
-    public Optional<String> getDeferredDeleteTimeRemaining() {
+    public Optional<String> deferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
@@ -116,7 +116,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="extendedInfo")
       private final @Nullable MabFileFolderProtectedItemExtendedInfoResponse extendedInfo;
 
-    public Optional<MabFileFolderProtectedItemExtendedInfoResponse> getExtendedInfo() {
+    public Optional<MabFileFolderProtectedItemExtendedInfoResponse> extendedInfo() {
         return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
     }
 
@@ -127,7 +127,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -138,7 +138,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
-    public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+    public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
@@ -149,7 +149,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
 
-    public Optional<Boolean> getIsRehydrate() {
+    public Optional<Boolean> isRehydrate() {
         return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
     }
 
@@ -160,7 +160,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
 
-    public Optional<Boolean> getIsScheduledForDeferredDelete() {
+    public Optional<Boolean> isScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
@@ -171,7 +171,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
 
-    public Optional<String> getLastBackupStatus() {
+    public Optional<String> lastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
     }
 
@@ -182,7 +182,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="lastBackupTime")
       private final @Nullable String lastBackupTime;
 
-    public Optional<String> getLastBackupTime() {
+    public Optional<String> lastBackupTime() {
         return this.lastBackupTime == null ? Optional.empty() : Optional.ofNullable(this.lastBackupTime);
     }
 
@@ -193,7 +193,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
 
-    public Optional<String> getLastRecoveryPoint() {
+    public Optional<String> lastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
     }
 
@@ -204,7 +204,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -216,7 +216,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
 
-    public String getProtectedItemType() {
+    public String protectedItemType() {
         return this.protectedItemType;
     }
 
@@ -227,7 +227,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="protectionState")
       private final @Nullable String protectionState;
 
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
@@ -238,7 +238,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
@@ -249,7 +249,7 @@ public final class MabFileFolderProtectedItemResponse extends com.pulumi.resourc
     @Import(name="workloadType")
       private final @Nullable String workloadType;
 
-    public Optional<String> getWorkloadType() {
+    public Optional<String> workloadType() {
         return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
     }
 

@@ -27,7 +27,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
 
@@ -38,7 +38,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetName", required=true)
       private final Object targetName;
 
-    public Object getTargetName() {
+    public Object targetName() {
         return this.targetName;
     }
 
@@ -50,7 +50,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -61,7 +61,7 @@ public final class CmdkeySetupResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
       private final Object userName;
 
-    public Object getUserName() {
+    public Object userName() {
         return this.userName;
     }
 

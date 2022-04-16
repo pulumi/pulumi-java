@@ -24,7 +24,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     @Import(name="fqdns", required=true)
       private final List<String> fqdns;
 
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     @Import(name="requiredMemberName", required=true)
       private final String requiredMemberName;
 
-    public String getRequiredMemberName() {
+    public String requiredMemberName() {
         return this.requiredMemberName;
     }
 

@@ -45,7 +45,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return App id of cluster AAD identity.
      * 
      */
-    public Output<String> getAadClientId() {
+    public Output<String> aadClientId() {
         return this.aadClientId;
     }
     /**
@@ -59,7 +59,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Tenant id of cluster AAD identity.
      * 
      */
-    public Output<String> getAadTenantId() {
+    public Output<String> aadTenantId() {
         return this.aadTenantId;
     }
     /**
@@ -73,7 +73,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Type of billing applied to the resource.
      * 
      */
-    public Output<String> getBillingModel() {
+    public Output<String> billingModel() {
         return this.billingModel;
     }
     /**
@@ -87,7 +87,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Unique, immutable resource id.
      * 
      */
-    public Output<String> getCloudId() {
+    public Output<String> cloudId() {
         return this.cloudId;
     }
     /**
@@ -101,7 +101,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> getCreatedAt() {
+    public Output</* @Nullable */ String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -115,7 +115,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedBy() {
+    public Output</* @Nullable */ String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -129,7 +129,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedByType() {
+    public Output</* @Nullable */ String> createdByType() {
         return this.createdByType;
     }
     /**
@@ -143,7 +143,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Most recent billing meter timestamp.
      * 
      */
-    public Output<String> getLastBillingTimestamp() {
+    public Output<String> lastBillingTimestamp() {
         return this.lastBillingTimestamp;
     }
     /**
@@ -157,7 +157,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedAt() {
+    public Output</* @Nullable */ String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -171,7 +171,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -185,7 +185,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedByType() {
+    public Output</* @Nullable */ String> lastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
@@ -199,7 +199,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Most recent cluster sync timestamp.
      * 
      */
-    public Output<String> getLastSyncTimestamp() {
+    public Output<String> lastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
     /**
@@ -213,7 +213,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -227,7 +227,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -241,7 +241,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -255,7 +255,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return First cluster sync timestamp.
      * 
      */
-    public Output<String> getRegistrationTimestamp() {
+    public Output<String> registrationTimestamp() {
         return this.registrationTimestamp;
     }
     /**
@@ -269,7 +269,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Properties reported by cluster agent.
      * 
      */
-    public Output</* @Nullable */ ClusterReportedPropertiesResponse> getReportedProperties() {
+    public Output</* @Nullable */ ClusterReportedPropertiesResponse> reportedProperties() {
         return this.reportedProperties;
     }
     /**
@@ -283,7 +283,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Status of the cluster agent.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -297,7 +297,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -311,7 +311,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Number of days remaining in the trial period.
      * 
      */
-    public Output<Double> getTrialDaysRemaining() {
+    public Output<Double> trialDaysRemaining() {
         return this.trialDaysRemaining;
     }
     /**
@@ -325,7 +325,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

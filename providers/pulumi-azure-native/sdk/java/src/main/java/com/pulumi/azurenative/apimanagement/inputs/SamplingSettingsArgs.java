@@ -29,7 +29,7 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 
@@ -40,7 +40,7 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="samplingType")
       private final @Nullable Output<Either<String,SamplingType>> samplingType;
 
-    public Output<Either<String,SamplingType>> getSamplingType() {
+    public Output<Either<String,SamplingType>> samplingType() {
         return this.samplingType == null ? Codegen.empty() : this.samplingType;
     }
 

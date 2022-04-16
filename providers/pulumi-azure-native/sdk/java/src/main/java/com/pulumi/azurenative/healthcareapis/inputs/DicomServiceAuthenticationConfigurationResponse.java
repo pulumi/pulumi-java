@@ -24,7 +24,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
     @Import(name="audiences", required=true)
       private final List<String> audiences;
 
-    public List<String> getAudiences() {
+    public List<String> audiences() {
         return this.audiences;
     }
 
@@ -35,7 +35,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends com.p
     @Import(name="authority", required=true)
       private final String authority;
 
-    public String getAuthority() {
+    public String authority() {
         return this.authority;
     }
 

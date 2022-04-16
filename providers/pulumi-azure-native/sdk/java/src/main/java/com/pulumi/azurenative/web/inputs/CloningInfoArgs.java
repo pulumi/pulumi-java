@@ -29,7 +29,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appSettingsOverrides")
       private final @Nullable Output<Map<String,String>> appSettingsOverrides;
 
-    public Output<Map<String,String>> getAppSettingsOverrides() {
+    public Output<Map<String,String>> appSettingsOverrides() {
         return this.appSettingsOverrides == null ? Codegen.empty() : this.appSettingsOverrides;
     }
 
@@ -40,7 +40,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloneCustomHostNames")
       private final @Nullable Output<Boolean> cloneCustomHostNames;
 
-    public Output<Boolean> getCloneCustomHostNames() {
+    public Output<Boolean> cloneCustomHostNames() {
         return this.cloneCustomHostNames == null ? Codegen.empty() : this.cloneCustomHostNames;
     }
 
@@ -51,7 +51,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloneSourceControl")
       private final @Nullable Output<Boolean> cloneSourceControl;
 
-    public Output<Boolean> getCloneSourceControl() {
+    public Output<Boolean> cloneSourceControl() {
         return this.cloneSourceControl == null ? Codegen.empty() : this.cloneSourceControl;
     }
 
@@ -62,7 +62,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configureLoadBalancing")
       private final @Nullable Output<Boolean> configureLoadBalancing;
 
-    public Output<Boolean> getConfigureLoadBalancing() {
+    public Output<Boolean> configureLoadBalancing() {
         return this.configureLoadBalancing == null ? Codegen.empty() : this.configureLoadBalancing;
     }
 
@@ -74,7 +74,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
 
-    public Output<String> getCorrelationId() {
+    public Output<String> correlationId() {
         return this.correlationId == null ? Codegen.empty() : this.correlationId;
     }
 
@@ -85,7 +85,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostingEnvironment")
       private final @Nullable Output<String> hostingEnvironment;
 
-    public Output<String> getHostingEnvironment() {
+    public Output<String> hostingEnvironment() {
         return this.hostingEnvironment == null ? Codegen.empty() : this.hostingEnvironment;
     }
 
@@ -96,7 +96,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
+    public Output<Boolean> overwrite() {
         return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
@@ -109,7 +109,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceWebAppId", required=true)
       private final Output<String> sourceWebAppId;
 
-    public Output<String> getSourceWebAppId() {
+    public Output<String> sourceWebAppId() {
         return this.sourceWebAppId;
     }
 
@@ -120,7 +120,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceWebAppLocation")
       private final @Nullable Output<String> sourceWebAppLocation;
 
-    public Output<String> getSourceWebAppLocation() {
+    public Output<String> sourceWebAppLocation() {
         return this.sourceWebAppLocation == null ? Codegen.empty() : this.sourceWebAppLocation;
     }
 
@@ -132,7 +132,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficManagerProfileId")
       private final @Nullable Output<String> trafficManagerProfileId;
 
-    public Output<String> getTrafficManagerProfileId() {
+    public Output<String> trafficManagerProfileId() {
         return this.trafficManagerProfileId == null ? Codegen.empty() : this.trafficManagerProfileId;
     }
 
@@ -143,7 +143,7 @@ public final class CloningInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trafficManagerProfileName")
       private final @Nullable Output<String> trafficManagerProfileName;
 
-    public Output<String> getTrafficManagerProfileName() {
+    public Output<String> trafficManagerProfileName() {
         return this.trafficManagerProfileName == null ? Codegen.empty() : this.trafficManagerProfileName;
     }
 

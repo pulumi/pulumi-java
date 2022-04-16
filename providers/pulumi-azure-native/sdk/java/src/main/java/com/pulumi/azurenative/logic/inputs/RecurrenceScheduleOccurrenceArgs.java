@@ -27,7 +27,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
     @Import(name="day")
       private final @Nullable Output<DayOfWeek> day;
 
-    public Output<DayOfWeek> getDay() {
+    public Output<DayOfWeek> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -38,7 +38,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends com.pulumi.resources
     @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> getOccurrence() {
+    public Output<Integer> occurrence() {
         return this.occurrence == null ? Codegen.empty() : this.occurrence;
     }
 

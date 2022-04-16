@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
     @Import(name="healthProbe")
       private final @Nullable ApiEntityReferenceResponse healthProbe;
 
-    public Optional<ApiEntityReferenceResponse> getHealthProbe() {
+    public Optional<ApiEntityReferenceResponse> healthProbe() {
         return this.healthProbe == null ? Optional.empty() : Optional.ofNullable(this.healthProbe);
     }
 
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
     @Import(name="networkApiVersion")
       private final @Nullable String networkApiVersion;
 
-    public Optional<String> getNetworkApiVersion() {
+    public Optional<String> networkApiVersion() {
         return this.networkApiVersion == null ? Optional.empty() : Optional.ofNullable(this.networkApiVersion);
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
     @Import(name="networkInterfaceConfigurations")
       private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
+    public List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }
 

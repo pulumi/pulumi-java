@@ -29,7 +29,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
-    public Output<Integer> getComponentSeparator() {
+    public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -40,7 +40,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
-    public Output<Integer> getDataElementSeparator() {
+    public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -51,7 +51,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
-    public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
+    public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -62,7 +62,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageAssociationAssignedCode")
       private final @Nullable Output<String> messageAssociationAssignedCode;
 
-    public Output<String> getMessageAssociationAssignedCode() {
+    public Output<String> messageAssociationAssignedCode() {
         return this.messageAssociationAssignedCode == null ? Codegen.empty() : this.messageAssociationAssignedCode;
     }
 
@@ -73,7 +73,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
@@ -84,7 +84,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageRelease")
       private final @Nullable Output<String> messageRelease;
 
-    public Output<String> getMessageRelease() {
+    public Output<String> messageRelease() {
         return this.messageRelease == null ? Codegen.empty() : this.messageRelease;
     }
 
@@ -95,7 +95,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="messageVersion")
       private final @Nullable Output<String> messageVersion;
 
-    public Output<String> getMessageVersion() {
+    public Output<String> messageVersion() {
         return this.messageVersion == null ? Codegen.empty() : this.messageVersion;
     }
 
@@ -106,7 +106,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
 
-    public Output<Integer> getReleaseIndicator() {
+    public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -117,7 +117,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
 
-    public Output<Integer> getRepetitionSeparator() {
+    public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -128,7 +128,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
-    public Output<Integer> getSegmentTerminator() {
+    public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -139,7 +139,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -150,7 +150,7 @@ public final class EdifactDelimiterOverrideArgs extends com.pulumi.resources.Res
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 

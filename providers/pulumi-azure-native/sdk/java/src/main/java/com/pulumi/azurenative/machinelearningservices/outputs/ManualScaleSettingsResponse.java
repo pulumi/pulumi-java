@@ -49,28 +49,28 @@ public final class ManualScaleSettingsResponse {
      * Fixed number of instances for this deployment.
      * 
     */
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * Maximum number of instances for this deployment.
      * 
     */
-    public Optional<Integer> getMaxInstances() {
+    public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
      * Minimum number of instances for this deployment.
      * 
     */
-    public Optional<Integer> getMinInstances() {
+    public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
      * Expected value is 'Manual'.
      * 
     */
-    public String getScaleType() {
+    public String scaleType() {
         return this.scaleType;
     }
 

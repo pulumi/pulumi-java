@@ -27,7 +27,7 @@ public final class EventChannelSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

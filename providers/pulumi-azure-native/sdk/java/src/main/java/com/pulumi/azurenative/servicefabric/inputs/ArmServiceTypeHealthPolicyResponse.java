@@ -25,7 +25,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyPartitionsPerService")
       private final @Nullable Integer maxPercentUnhealthyPartitionsPerService;
 
-    public Optional<Integer> getMaxPercentUnhealthyPartitionsPerService() {
+    public Optional<Integer> maxPercentUnhealthyPartitionsPerService() {
         return this.maxPercentUnhealthyPartitionsPerService == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyPartitionsPerService);
     }
 
@@ -36,7 +36,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyReplicasPerPartition")
       private final @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
 
-    public Optional<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
+    public Optional<Integer> maxPercentUnhealthyReplicasPerPartition() {
         return this.maxPercentUnhealthyReplicasPerPartition == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyReplicasPerPartition);
     }
 
@@ -47,7 +47,7 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyServices")
       private final @Nullable Integer maxPercentUnhealthyServices;
 
-    public Optional<Integer> getMaxPercentUnhealthyServices() {
+    public Optional<Integer> maxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
 

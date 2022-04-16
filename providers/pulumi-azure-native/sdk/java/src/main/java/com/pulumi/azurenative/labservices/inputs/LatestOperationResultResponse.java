@@ -23,7 +23,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="errorCode", required=true)
       private final String errorCode;
 
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
 
@@ -34,7 +34,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -45,7 +45,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="httpMethod", required=true)
       private final String httpMethod;
 
-    public String getHttpMethod() {
+    public String httpMethod() {
         return this.httpMethod;
     }
 
@@ -56,7 +56,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="operationUrl", required=true)
       private final String operationUrl;
 
-    public String getOperationUrl() {
+    public String operationUrl() {
         return this.operationUrl;
     }
 
@@ -67,7 +67,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="requestUri", required=true)
       private final String requestUri;
 
-    public String getRequestUri() {
+    public String requestUri() {
         return this.requestUri;
     }
 
@@ -78,7 +78,7 @@ public final class LatestOperationResultResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

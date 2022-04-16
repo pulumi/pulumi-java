@@ -45,7 +45,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The integration service environment.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
+    public Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
     /**
@@ -59,7 +59,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The sku.
      * 
      */
-    public Output</* @Nullable */ IntegrationAccountSkuResponse> getSku() {
+    public Output</* @Nullable */ IntegrationAccountSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +101,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The workflow state.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -115,7 +115,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class IntegrationAccount extends com.pulumi.resources.CustomResource {
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

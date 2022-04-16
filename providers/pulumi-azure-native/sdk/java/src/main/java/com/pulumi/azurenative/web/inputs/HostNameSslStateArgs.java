@@ -29,7 +29,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hostType")
       private final @Nullable Output<HostType> hostType;
 
-    public Output<HostType> getHostType() {
+    public Output<HostType> hostType() {
         return this.hostType == null ? Codegen.empty() : this.hostType;
     }
 
@@ -40,7 +40,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sslState")
       private final @Nullable Output<SslState> sslState;
 
-    public Output<SslState> getSslState() {
+    public Output<SslState> sslState() {
         return this.sslState == null ? Codegen.empty() : this.sslState;
     }
 
@@ -62,7 +62,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
@@ -73,7 +73,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="toUpdate")
       private final @Nullable Output<Boolean> toUpdate;
 
-    public Output<Boolean> getToUpdate() {
+    public Output<Boolean> toUpdate() {
         return this.toUpdate == null ? Codegen.empty() : this.toUpdate;
     }
 
@@ -84,7 +84,7 @@ public final class HostNameSslStateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="virtualIP")
       private final @Nullable Output<String> virtualIP;
 
-    public Output<String> getVirtualIP() {
+    public Output<String> virtualIP() {
         return this.virtualIP == null ? Codegen.empty() : this.virtualIP;
     }
 

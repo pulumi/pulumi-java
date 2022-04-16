@@ -43,14 +43,14 @@ public final class OrcFormatResponse {
      * Deserializer. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getDeserializer() {
+    public Optional<Object> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
     /**
      * Serializer. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSerializer() {
+    public Optional<Object> serializer() {
         return Optional.ofNullable(this.serializer);
     }
     /**
@@ -58,7 +58,7 @@ public final class OrcFormatResponse {
      * Expected value is 'OrcFormat'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

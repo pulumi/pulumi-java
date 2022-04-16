@@ -28,7 +28,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="deviceKey")
       private final @Nullable Integer deviceKey;
 
-    public Optional<Integer> getDeviceKey() {
+    public Optional<Integer> deviceKey() {
         return this.deviceKey == null ? Optional.empty() : Optional.ofNullable(this.deviceKey);
     }
 
@@ -39,7 +39,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="ipSettings")
       private final @Nullable NicIPSettingsResponse ipSettings;
 
-    public Optional<NicIPSettingsResponse> getIpSettings() {
+    public Optional<NicIPSettingsResponse> ipSettings() {
         return this.ipSettings == null ? Optional.empty() : Optional.ofNullable(this.ipSettings);
     }
 
@@ -61,7 +61,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="label", required=true)
       private final String label;
 
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
 
@@ -72,7 +72,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="macAddress", required=true)
       private final String macAddress;
 
-    public String getMacAddress() {
+    public String macAddress() {
         return this.macAddress;
     }
 
@@ -83,7 +83,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -94,7 +94,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkId")
       private final @Nullable String networkId;
 
-    public Optional<String> getNetworkId() {
+    public Optional<String> networkId() {
         return this.networkId == null ? Optional.empty() : Optional.ofNullable(this.networkId);
     }
 
@@ -105,7 +105,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkMoName", required=true)
       private final String networkMoName;
 
-    public String getNetworkMoName() {
+    public String networkMoName() {
         return this.networkMoName;
     }
 
@@ -117,7 +117,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="networkMoRefId", required=true)
       private final String networkMoRefId;
 
-    public String getNetworkMoRefId() {
+    public String networkMoRefId() {
         return this.networkMoRefId;
     }
 
@@ -128,7 +128,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="nicType")
       private final @Nullable String nicType;
 
-    public Optional<String> getNicType() {
+    public Optional<String> nicType() {
         return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
     }
 
@@ -139,7 +139,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="powerOnBoot")
       private final @Nullable String powerOnBoot;
 
-    public Optional<String> getPowerOnBoot() {
+    public Optional<String> powerOnBoot() {
         return this.powerOnBoot == null ? Optional.empty() : Optional.ofNullable(this.powerOnBoot);
     }
 

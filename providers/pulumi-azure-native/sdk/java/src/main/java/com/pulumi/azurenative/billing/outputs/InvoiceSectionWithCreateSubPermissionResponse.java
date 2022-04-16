@@ -91,70 +91,70 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
      * The name of the billing profile for the invoice section.
      * 
     */
-    public String getBillingProfileDisplayName() {
+    public String billingProfileDisplayName() {
         return this.billingProfileDisplayName;
     }
     /**
      * The ID of the billing profile for the invoice section.
      * 
     */
-    public String getBillingProfileId() {
+    public String billingProfileId() {
         return this.billingProfileId;
     }
     /**
      * The billing profile spending limit.
      * 
     */
-    public String getBillingProfileSpendingLimit() {
+    public String billingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
     }
     /**
      * The status of the billing profile.
      * 
     */
-    public String getBillingProfileStatus() {
+    public String billingProfileStatus() {
         return this.billingProfileStatus;
     }
     /**
      * Reason for the specified billing profile status.
      * 
     */
-    public String getBillingProfileStatusReasonCode() {
+    public String billingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
     }
     /**
      * The system generated unique identifier for a billing profile.
      * 
     */
-    public String getBillingProfileSystemId() {
+    public String billingProfileSystemId() {
         return this.billingProfileSystemId;
     }
     /**
      * Enabled azure plans for the associated billing profile.
      * 
     */
-    public List<AzurePlanResponse> getEnabledAzurePlans() {
+    public List<AzurePlanResponse> enabledAzurePlans() {
         return this.enabledAzurePlans == null ? List.of() : this.enabledAzurePlans;
     }
     /**
      * The name of the invoice section.
      * 
     */
-    public String getInvoiceSectionDisplayName() {
+    public String invoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
     }
     /**
      * The ID of the invoice section.
      * 
     */
-    public String getInvoiceSectionId() {
+    public String invoiceSectionId() {
         return this.invoiceSectionId;
     }
     /**
      * The system generated unique identifier for an invoice section.
      * 
     */
-    public String getInvoiceSectionSystemId() {
+    public String invoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
     }
 

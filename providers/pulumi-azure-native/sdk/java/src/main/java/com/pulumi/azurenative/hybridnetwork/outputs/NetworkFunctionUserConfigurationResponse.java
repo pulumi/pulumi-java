@@ -52,28 +52,28 @@ public final class NetworkFunctionUserConfigurationResponse {
      * The network interface configuration.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
      * Specifies the operating system settings for the role instance.
      * 
     */
-    public Optional<NetworkFunctionUserConfigurationResponseOsProfile> getOsProfile() {
+    public Optional<NetworkFunctionUserConfigurationResponseOsProfile> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * The name of the network function role.
      * 
     */
-    public Optional<String> getRoleName() {
+    public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * The user data parameters from the customer.
      * 
     */
-    public Optional<Object> getUserDataParameters() {
+    public Optional<Object> userDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }
 

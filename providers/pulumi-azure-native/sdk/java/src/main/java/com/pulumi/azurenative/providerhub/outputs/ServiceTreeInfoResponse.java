@@ -22,10 +22,10 @@ public final class ServiceTreeInfoResponse {
         this.serviceId = serviceId;
     }
 
-    public Optional<String> getComponentId() {
+    public Optional<String> componentId() {
         return Optional.ofNullable(this.componentId);
     }
-    public Optional<String> getServiceId() {
+    public Optional<String> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
 

@@ -115,77 +115,77 @@ public final class AzureBatchLinkedServiceResponse {
      * The Azure Batch account access key.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessKey() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
      * The Azure Batch account name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getAccountName() {
+    public Object accountName() {
         return this.accountName;
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The Azure Batch URI. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getBatchUri() {
+    public Object batchUri() {
         return this.batchUri;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
     */
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The Azure Storage linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The Azure Batch pool name. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getPoolName() {
+    public Object poolName() {
         return this.poolName;
     }
     /**
@@ -193,7 +193,7 @@ public final class AzureBatchLinkedServiceResponse {
      * Expected value is 'AzureBatch'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

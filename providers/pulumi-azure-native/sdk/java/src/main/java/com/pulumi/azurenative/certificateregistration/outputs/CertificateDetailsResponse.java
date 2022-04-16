@@ -82,63 +82,63 @@ public final class CertificateDetailsResponse {
      * Certificate Issuer.
      * 
     */
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
     /**
      * Date Certificate is valid to.
      * 
     */
-    public String getNotAfter() {
+    public String notAfter() {
         return this.notAfter;
     }
     /**
      * Date Certificate is valid from.
      * 
     */
-    public String getNotBefore() {
+    public String notBefore() {
         return this.notBefore;
     }
     /**
      * Raw certificate data.
      * 
     */
-    public String getRawData() {
+    public String rawData() {
         return this.rawData;
     }
     /**
      * Certificate Serial Number.
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * Certificate Signature algorithm.
      * 
     */
-    public String getSignatureAlgorithm() {
+    public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
     /**
      * Certificate Subject.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
     /**
      * Certificate Thumbprint.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Certificate Version.
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

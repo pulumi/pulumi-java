@@ -19,7 +19,7 @@ public final class GetConfigurationProfileArgs extends com.pulumi.resources.Invo
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 

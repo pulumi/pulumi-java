@@ -26,7 +26,7 @@ public final class ExtendedPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="diskExclusionProperties")
       private final @Nullable Output<DiskExclusionPropertiesArgs> diskExclusionProperties;
 
-    public Output<DiskExclusionPropertiesArgs> getDiskExclusionProperties() {
+    public Output<DiskExclusionPropertiesArgs> diskExclusionProperties() {
         return this.diskExclusionProperties == null ? Codegen.empty() : this.diskExclusionProperties;
     }
 

@@ -26,7 +26,7 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="httpProxy")
       private final @Nullable String httpProxy;
 
-    public Optional<String> getHttpProxy() {
+    public Optional<String> httpProxy() {
         return this.httpProxy == null ? Optional.empty() : Optional.ofNullable(this.httpProxy);
     }
 
@@ -37,7 +37,7 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="httpsProxy")
       private final @Nullable String httpsProxy;
 
-    public Optional<String> getHttpsProxy() {
+    public Optional<String> httpsProxy() {
         return this.httpsProxy == null ? Optional.empty() : Optional.ofNullable(this.httpsProxy);
     }
 
@@ -48,7 +48,7 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="noProxy")
       private final @Nullable List<String> noProxy;
 
-    public List<String> getNoProxy() {
+    public List<String> noProxy() {
         return this.noProxy == null ? List.of() : this.noProxy;
     }
 
@@ -59,7 +59,7 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
     @Import(name="trustedCa")
       private final @Nullable String trustedCa;
 
-    public Optional<String> getTrustedCa() {
+    public Optional<String> trustedCa() {
         return this.trustedCa == null ? Optional.empty() : Optional.ofNullable(this.trustedCa);
     }
 

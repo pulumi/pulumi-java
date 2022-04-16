@@ -26,7 +26,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="azureResourceName")
       private final @Nullable Output<String> azureResourceName;
 
-    public Output<String> getAzureResourceName() {
+    public Output<String> azureResourceName() {
         return this.azureResourceName == null ? Codegen.empty() : this.azureResourceName;
     }
 
@@ -37,7 +37,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="azureResourceType")
       private final @Nullable Output<AzureResourceType> azureResourceType;
 
-    public Output<AzureResourceType> getAzureResourceType() {
+    public Output<AzureResourceType> azureResourceType() {
         return this.azureResourceType == null ? Codegen.empty() : this.azureResourceType;
     }
 
@@ -48,7 +48,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="customHostNameDnsRecordType")
       private final @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
-    public Output<CustomHostNameDnsRecordType> getCustomHostNameDnsRecordType() {
+    public Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType() {
         return this.customHostNameDnsRecordType == null ? Codegen.empty() : this.customHostNameDnsRecordType;
     }
 
@@ -59,7 +59,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId == null ? Codegen.empty() : this.domainId;
     }
 
@@ -70,7 +70,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -81,7 +81,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="hostNameType")
       private final @Nullable Output<HostNameType> hostNameType;
 
-    public Output<HostNameType> getHostNameType() {
+    public Output<HostNameType> hostNameType() {
         return this.hostNameType == null ? Codegen.empty() : this.hostNameType;
     }
 
@@ -92,7 +92,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -103,7 +103,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -114,7 +114,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,7 +125,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="siteName")
       private final @Nullable Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName == null ? Codegen.empty() : this.siteName;
     }
 
@@ -136,7 +136,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -147,7 +147,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="sslState")
       private final @Nullable Output<SslState> sslState;
 
-    public Output<SslState> getSslState() {
+    public Output<SslState> sslState() {
         return this.sslState == null ? Codegen.empty() : this.sslState;
     }
 
@@ -158,7 +158,7 @@ public final class WebAppHostNameBindingSlotArgs extends com.pulumi.resources.Re
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

@@ -297,63 +297,63 @@ public final class InMageReplicationDetailsResponse {
      * The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
      * 
     */
-    public Optional<String> getActiveSiteType() {
+    public Optional<String> activeSiteType() {
         return Optional.ofNullable(this.activeSiteType);
     }
     /**
      * The agent details.
      * 
     */
-    public Optional<InMageAgentDetailsResponse> getAgentDetails() {
+    public Optional<InMageAgentDetailsResponse> agentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
     /**
      * A value indicating the underlying Azure storage account. If the VM is not running in Azure, this value shall be set to null.
      * 
     */
-    public Optional<String> getAzureStorageAccountId() {
+    public Optional<String> azureStorageAccountId() {
         return Optional.ofNullable(this.azureStorageAccountId);
     }
     /**
      * The compressed data change rate in MB.
      * 
     */
-    public Optional<Double> getCompressedDataRateInMB() {
+    public Optional<Double> compressedDataRateInMB() {
         return Optional.ofNullable(this.compressedDataRateInMB);
     }
     /**
      * The collection of Consistency points.
      * 
     */
-    public Map<String,String> getConsistencyPoints() {
+    public Map<String,String> consistencyPoints() {
         return this.consistencyPoints == null ? Map.of() : this.consistencyPoints;
     }
     /**
      * The data stores of the on-premise machine Value can be list of strings that contain data store names
      * 
     */
-    public List<String> getDatastores() {
+    public List<String> datastores() {
         return this.datastores == null ? List.of() : this.datastores;
     }
     /**
      * A value indicating the discovery type of the machine.
      * 
     */
-    public Optional<String> getDiscoveryType() {
+    public Optional<String> discoveryType() {
         return Optional.ofNullable(this.discoveryType);
     }
     /**
      * A value indicating whether any disk is resized for this VM.
      * 
     */
-    public Optional<String> getDiskResized() {
+    public Optional<String> diskResized() {
         return Optional.ofNullable(this.diskResized);
     }
     /**
      * The infrastructure VM Id.
      * 
     */
-    public Optional<String> getInfrastructureVmId() {
+    public Optional<String> infrastructureVmId() {
         return Optional.ofNullable(this.infrastructureVmId);
     }
     /**
@@ -361,203 +361,203 @@ public final class InMageReplicationDetailsResponse {
      * Expected value is 'InMage'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The source IP address.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The last heartbeat received from the source server.
      * 
     */
-    public Optional<String> getLastHeartbeat() {
+    public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The last RPO calculated time.
      * 
     */
-    public Optional<String> getLastRpoCalculatedTime() {
+    public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
      * The last update time received from on-prem components.
      * 
     */
-    public Optional<String> getLastUpdateReceivedTime() {
+    public Optional<String> lastUpdateReceivedTime() {
         return Optional.ofNullable(this.lastUpdateReceivedTime);
     }
     /**
      * The master target Id.
      * 
     */
-    public Optional<String> getMasterTargetId() {
+    public Optional<String> masterTargetId() {
         return Optional.ofNullable(this.masterTargetId);
     }
     /**
      * The multi vm group Id, if any.
      * 
     */
-    public Optional<String> getMultiVmGroupId() {
+    public Optional<String> multiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
     /**
      * The multi vm group name, if any.
      * 
     */
-    public Optional<String> getMultiVmGroupName() {
+    public Optional<String> multiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
     /**
      * A value indicating whether the multi vm sync is enabled or disabled.
      * 
     */
-    public Optional<String> getMultiVmSyncStatus() {
+    public Optional<String> multiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
      * The OS details.
      * 
     */
-    public Optional<OSDiskDetailsResponse> getOsDetails() {
+    public Optional<OSDiskDetailsResponse> osDetails() {
         return Optional.ofNullable(this.osDetails);
     }
     /**
      * The OS Version of the protected item.
      * 
     */
-    public Optional<String> getOsVersion() {
+    public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
      * The process server Id.
      * 
     */
-    public Optional<String> getProcessServerId() {
+    public Optional<String> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
     /**
      * The list of protected disks.
      * 
     */
-    public List<InMageProtectedDiskDetailsResponse> getProtectedDisks() {
+    public List<InMageProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
     /**
      * The protection stage.
      * 
     */
-    public Optional<String> getProtectionStage() {
+    public Optional<String> protectionStage() {
         return Optional.ofNullable(this.protectionStage);
     }
     /**
      * A value indicating whether the source server requires a restart after update.
      * 
     */
-    public Optional<String> getRebootAfterUpdateStatus() {
+    public Optional<String> rebootAfterUpdateStatus() {
         return Optional.ofNullable(this.rebootAfterUpdateStatus);
     }
     /**
      * The replica id of the protected item.
      * 
     */
-    public Optional<String> getReplicaId() {
+    public Optional<String> replicaId() {
         return Optional.ofNullable(this.replicaId);
     }
     /**
      * The resync details of the machine
      * 
     */
-    public Optional<InitialReplicationDetailsResponse> getResyncDetails() {
+    public Optional<InitialReplicationDetailsResponse> resyncDetails() {
         return Optional.ofNullable(this.resyncDetails);
     }
     /**
      * The retention window end time.
      * 
     */
-    public Optional<String> getRetentionWindowEnd() {
+    public Optional<String> retentionWindowEnd() {
         return Optional.ofNullable(this.retentionWindowEnd);
     }
     /**
      * The retention window start time.
      * 
     */
-    public Optional<String> getRetentionWindowStart() {
+    public Optional<String> retentionWindowStart() {
         return Optional.ofNullable(this.retentionWindowStart);
     }
     /**
      * The RPO in seconds.
      * 
     */
-    public Optional<Double> getRpoInSeconds() {
+    public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
     /**
      * The CPU count of the VM on the primary side.
      * 
     */
-    public Optional<Integer> getSourceVmCpuCount() {
+    public Optional<Integer> sourceVmCpuCount() {
         return Optional.ofNullable(this.sourceVmCpuCount);
     }
     /**
      * The RAM size of the VM on the primary side.
      * 
     */
-    public Optional<Integer> getSourceVmRamSizeInMB() {
+    public Optional<Integer> sourceVmRamSizeInMB() {
         return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
     /**
      * The uncompressed data change rate in MB.
      * 
     */
-    public Optional<Double> getUncompressedDataRateInMB() {
+    public Optional<Double> uncompressedDataRateInMB() {
         return Optional.ofNullable(this.uncompressedDataRateInMB);
     }
     /**
      * The vCenter infrastructure Id.
      * 
     */
-    public Optional<String> getVCenterInfrastructureId() {
+    public Optional<String> vCenterInfrastructureId() {
         return Optional.ofNullable(this.vCenterInfrastructureId);
     }
     /**
      * The validation errors of the on-premise machine Value can be list of validation errors
      * 
     */
-    public List<HealthErrorResponse> getValidationErrors() {
+    public List<HealthErrorResponse> validationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
     /**
      * The virtual machine Id.
      * 
     */
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
      * 
     */
-    public List<VMNicDetailsResponse> getVmNics() {
+    public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
      * 
     */
-    public Optional<String> getVmProtectionState() {
+    public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
      * 
     */
-    public Optional<String> getVmProtectionStateDescription() {
+    public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 

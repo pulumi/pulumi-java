@@ -28,7 +28,7 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
     @Import(name="columns")
       private final @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns;
 
-    public Output<List<SyncGroupSchemaTableColumnArgs>> getColumns() {
+    public Output<List<SyncGroupSchemaTableColumnArgs>> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 
@@ -39,7 +39,7 @@ public final class SyncGroupSchemaTableArgs extends com.pulumi.resources.Resourc
     @Import(name="quotedName")
       private final @Nullable Output<String> quotedName;
 
-    public Output<String> getQuotedName() {
+    public Output<String> quotedName() {
         return this.quotedName == null ? Codegen.empty() : this.quotedName;
     }
 

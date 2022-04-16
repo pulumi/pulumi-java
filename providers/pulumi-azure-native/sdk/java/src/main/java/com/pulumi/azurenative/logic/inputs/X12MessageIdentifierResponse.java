@@ -23,7 +23,7 @@ public final class X12MessageIdentifierResponse extends com.pulumi.resources.Inv
     @Import(name="messageId", required=true)
       private final String messageId;
 
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 

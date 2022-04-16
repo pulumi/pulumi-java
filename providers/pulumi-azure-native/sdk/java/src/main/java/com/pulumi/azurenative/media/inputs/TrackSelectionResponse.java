@@ -26,7 +26,7 @@ public final class TrackSelectionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="trackSelections")
       private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
-    public List<TrackPropertyConditionResponse> getTrackSelections() {
+    public List<TrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections == null ? List.of() : this.trackSelections;
     }
 

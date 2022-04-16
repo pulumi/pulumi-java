@@ -26,7 +26,7 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
     @Import(name="azureApp", required=true)
       private final Output<AzureActiveDirectoryAppArgs> azureApp;
 
-    public Output<AzureActiveDirectoryAppArgs> getAzureApp() {
+    public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends com.pulumi.reso
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

@@ -39,21 +39,21 @@ public final class SystemAssignedServiceIdentityResponse {
      * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Type of managed service identity (either system assigned, or none).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

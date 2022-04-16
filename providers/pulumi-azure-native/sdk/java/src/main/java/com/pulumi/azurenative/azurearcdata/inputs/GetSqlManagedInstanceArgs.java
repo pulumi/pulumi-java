@@ -19,7 +19,7 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlManagedInstanceArgs extends com.pulumi.resources.Invoke
     @Import(name="sqlManagedInstanceName", required=true)
       private final String sqlManagedInstanceName;
 
-    public String getSqlManagedInstanceName() {
+    public String sqlManagedInstanceName() {
         return this.sqlManagedInstanceName;
     }
 

@@ -28,7 +28,7 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
     @Import(name="applyToBuiltInEventHubEndpoint", required=true)
       private final Boolean applyToBuiltInEventHubEndpoint;
 
-    public Boolean getApplyToBuiltInEventHubEndpoint() {
+    public Boolean applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
     @Import(name="defaultAction")
       private final @Nullable String defaultAction;
 
-    public Optional<String> getDefaultAction() {
+    public Optional<String> defaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
     }
 
@@ -50,7 +50,7 @@ public final class NetworkRuleSetPropertiesResponse extends com.pulumi.resources
     @Import(name="ipRules", required=true)
       private final List<NetworkRuleSetIpRuleResponse> ipRules;
 
-    public List<NetworkRuleSetIpRuleResponse> getIpRules() {
+    public List<NetworkRuleSetIpRuleResponse> ipRules() {
         return this.ipRules;
     }
 

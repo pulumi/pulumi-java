@@ -23,7 +23,7 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualApplianceNicPropertiesResponse extends com.pulumi.reso
     @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 

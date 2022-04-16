@@ -69,49 +69,49 @@ public final class ConditionsResponse {
      * filter alerts by alert context (payload)
      * 
     */
-    public Optional<ConditionResponse> getAlertContext() {
+    public Optional<ConditionResponse> alertContext() {
         return Optional.ofNullable(this.alertContext);
     }
     /**
      * filter alerts by alert rule id
      * 
     */
-    public Optional<ConditionResponse> getAlertRuleId() {
+    public Optional<ConditionResponse> alertRuleId() {
         return Optional.ofNullable(this.alertRuleId);
     }
     /**
      * filter alerts by alert rule description
      * 
     */
-    public Optional<ConditionResponse> getDescription() {
+    public Optional<ConditionResponse> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * filter alerts by monitor condition
      * 
     */
-    public Optional<ConditionResponse> getMonitorCondition() {
+    public Optional<ConditionResponse> monitorCondition() {
         return Optional.ofNullable(this.monitorCondition);
     }
     /**
      * filter alerts by monitor service
      * 
     */
-    public Optional<ConditionResponse> getMonitorService() {
+    public Optional<ConditionResponse> monitorService() {
         return Optional.ofNullable(this.monitorService);
     }
     /**
      * filter alerts by severity
      * 
     */
-    public Optional<ConditionResponse> getSeverity() {
+    public Optional<ConditionResponse> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * filter alerts by target resource type
      * 
     */
-    public Optional<ConditionResponse> getTargetResourceType() {
+    public Optional<ConditionResponse> targetResourceType() {
         return Optional.ofNullable(this.targetResourceType);
     }
 

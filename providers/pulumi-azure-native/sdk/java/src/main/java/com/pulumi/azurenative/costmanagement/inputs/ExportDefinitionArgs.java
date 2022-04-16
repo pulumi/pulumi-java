@@ -31,7 +31,7 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataSet")
       private final @Nullable Output<ExportDatasetArgs> dataSet;
 
-    public Output<ExportDatasetArgs> getDataSet() {
+    public Output<ExportDatasetArgs> dataSet() {
         return this.dataSet == null ? Codegen.empty() : this.dataSet;
     }
 
@@ -42,7 +42,7 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timePeriod")
       private final @Nullable Output<ExportTimePeriodArgs> timePeriod;
 
-    public Output<ExportTimePeriodArgs> getTimePeriod() {
+    public Output<ExportTimePeriodArgs> timePeriod() {
         return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
     }
 
@@ -53,7 +53,7 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="timeframe", required=true)
       private final Output<Either<String,TimeframeType>> timeframe;
 
-    public Output<Either<String,TimeframeType>> getTimeframe() {
+    public Output<Either<String,TimeframeType>> timeframe() {
         return this.timeframe;
     }
 
@@ -64,7 +64,7 @@ public final class ExportDefinitionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<Either<String,ExportType>> type;
 
-    public Output<Either<String,ExportType>> getType() {
+    public Output<Either<String,ExportType>> type() {
         return this.type;
     }
 

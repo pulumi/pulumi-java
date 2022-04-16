@@ -29,7 +29,7 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probeIntervalInSeconds")
       private final @Nullable Output<Integer> probeIntervalInSeconds;
 
-    public Output<Integer> getProbeIntervalInSeconds() {
+    public Output<Integer> probeIntervalInSeconds() {
         return this.probeIntervalInSeconds == null ? Codegen.empty() : this.probeIntervalInSeconds;
     }
 
@@ -40,7 +40,7 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probePath")
       private final @Nullable Output<String> probePath;
 
-    public Output<String> getProbePath() {
+    public Output<String> probePath() {
         return this.probePath == null ? Codegen.empty() : this.probePath;
     }
 
@@ -51,7 +51,7 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probeProtocol")
       private final @Nullable Output<ProbeProtocol> probeProtocol;
 
-    public Output<ProbeProtocol> getProbeProtocol() {
+    public Output<ProbeProtocol> probeProtocol() {
         return this.probeProtocol == null ? Codegen.empty() : this.probeProtocol;
     }
 
@@ -62,7 +62,7 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probeRequestType")
       private final @Nullable Output<HealthProbeRequestType> probeRequestType;
 
-    public Output<HealthProbeRequestType> getProbeRequestType() {
+    public Output<HealthProbeRequestType> probeRequestType() {
         return this.probeRequestType == null ? Codegen.empty() : this.probeRequestType;
     }
 

@@ -127,7 +127,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
 
@@ -138,7 +138,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -149,7 +149,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -160,7 +160,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="firstRowOnly")
       private final @Nullable Object firstRowOnly;
 
-    public Optional<Object> getFirstRowOnly() {
+    public Optional<Object> firstRowOnly() {
         return this.firstRowOnly == null ? Optional.empty() : Optional.ofNullable(this.firstRowOnly);
     }
 
@@ -171,7 +171,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -182,7 +182,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -193,7 +193,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -204,7 +204,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="source", required=true)
       private final Object source;
 
-    public Object getSource() {
+    public Object source() {
         return this.source;
     }
 
@@ -216,7 +216,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -227,7 +227,7 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

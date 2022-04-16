@@ -63,42 +63,42 @@ public final class GetChannelResult {
      * The functions to be enabled for the channel
      * 
     */
-    public List<String> getChannelFunctions() {
+    public List<String> channelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
     /**
      * The channel type
      * 
     */
-    public String getChannelType() {
+    public String channelType() {
         return this.channelType;
     }
     /**
      * The channel credentials
      * 
     */
-    public Map<String,String> getCredentials() {
+    public Map<String,String> credentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
     /**
      * The ID of the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The fully qualified type of the resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -42,21 +42,21 @@ public final class PredictionResponseGrades {
      * Name of the grade.
      * 
     */
-    public Optional<String> getGradeName() {
+    public Optional<String> gradeName() {
         return Optional.ofNullable(this.gradeName);
     }
     /**
      * Maximum score threshold.
      * 
     */
-    public Optional<Integer> getMaxScoreThreshold() {
+    public Optional<Integer> maxScoreThreshold() {
         return Optional.ofNullable(this.maxScoreThreshold);
     }
     /**
      * Minimum score threshold.
      * 
     */
-    public Optional<Integer> getMinScoreThreshold() {
+    public Optional<Integer> minScoreThreshold() {
         return Optional.ofNullable(this.minScoreThreshold);
     }
 

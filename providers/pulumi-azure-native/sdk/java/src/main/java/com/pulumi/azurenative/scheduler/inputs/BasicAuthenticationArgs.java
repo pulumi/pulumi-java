@@ -22,7 +22,7 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -34,7 +34,7 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -45,7 +45,7 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

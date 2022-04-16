@@ -19,7 +19,7 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="ddosCustomPolicyName", required=true)
       private final String ddosCustomPolicyName;
 
-    public String getDdosCustomPolicyName() {
+    public String ddosCustomPolicyName() {
         return this.ddosCustomPolicyName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDdosCustomPolicyArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

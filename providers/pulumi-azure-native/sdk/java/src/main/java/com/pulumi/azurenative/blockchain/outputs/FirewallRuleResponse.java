@@ -41,21 +41,21 @@ public final class FirewallRuleResponse {
      * Gets or sets the end IP address of the firewall rule range.
      * 
     */
-    public Optional<String> getEndIpAddress() {
+    public Optional<String> endIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
     /**
      * Gets or sets the name of the firewall rules.
      * 
     */
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
     /**
      * Gets or sets the start IP address of the firewall rule range.
      * 
     */
-    public Optional<String> getStartIpAddress() {
+    public Optional<String> startIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
 

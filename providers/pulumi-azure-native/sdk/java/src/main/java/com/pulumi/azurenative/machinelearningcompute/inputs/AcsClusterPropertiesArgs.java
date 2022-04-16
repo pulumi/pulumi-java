@@ -33,7 +33,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="agentCount")
       private final @Nullable Output<Integer> agentCount;
 
-    public Output<Integer> getAgentCount() {
+    public Output<Integer> agentCount() {
         return this.agentCount == null ? Codegen.empty() : this.agentCount;
     }
 
@@ -44,7 +44,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="agentVmSize")
       private final @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
 
-    public Output<Either<String,AgentVMSizeTypes>> getAgentVmSize() {
+    public Output<Either<String,AgentVMSizeTypes>> agentVmSize() {
         return this.agentVmSize == null ? Codegen.empty() : this.agentVmSize;
     }
 
@@ -55,7 +55,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="masterCount")
       private final @Nullable Output<Integer> masterCount;
 
-    public Output<Integer> getMasterCount() {
+    public Output<Integer> masterCount() {
         return this.masterCount == null ? Codegen.empty() : this.masterCount;
     }
 
@@ -66,7 +66,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="orchestratorProperties")
       private final @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
-    public Output<KubernetesClusterPropertiesArgs> getOrchestratorProperties() {
+    public Output<KubernetesClusterPropertiesArgs> orchestratorProperties() {
         return this.orchestratorProperties == null ? Codegen.empty() : this.orchestratorProperties;
     }
 
@@ -77,7 +77,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="orchestratorType", required=true)
       private final Output<Either<String,OrchestratorType>> orchestratorType;
 
-    public Output<Either<String,OrchestratorType>> getOrchestratorType() {
+    public Output<Either<String,OrchestratorType>> orchestratorType() {
         return this.orchestratorType;
     }
 
@@ -88,7 +88,7 @@ public final class AcsClusterPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="systemServices")
       private final @Nullable Output<List<SystemServiceArgs>> systemServices;
 
-    public Output<List<SystemServiceArgs>> getSystemServices() {
+    public Output<List<SystemServiceArgs>> systemServices() {
         return this.systemServices == null ? Codegen.empty() : this.systemServices;
     }
 

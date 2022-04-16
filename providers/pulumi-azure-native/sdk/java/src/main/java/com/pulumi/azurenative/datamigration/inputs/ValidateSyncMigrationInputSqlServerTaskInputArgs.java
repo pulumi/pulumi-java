@@ -27,7 +27,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -38,7 +38,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -49,7 +49,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends com.
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

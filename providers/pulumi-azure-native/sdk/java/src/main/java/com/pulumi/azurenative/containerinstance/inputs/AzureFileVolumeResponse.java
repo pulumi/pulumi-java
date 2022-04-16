@@ -26,7 +26,7 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
     }
 
@@ -37,7 +37,7 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="shareName", required=true)
       private final String shareName;
 
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 
@@ -48,7 +48,7 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageAccountKey")
       private final @Nullable String storageAccountKey;
 
-    public Optional<String> getStorageAccountKey() {
+    public Optional<String> storageAccountKey() {
         return this.storageAccountKey == null ? Optional.empty() : Optional.ofNullable(this.storageAccountKey);
     }
 
@@ -59,7 +59,7 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
 

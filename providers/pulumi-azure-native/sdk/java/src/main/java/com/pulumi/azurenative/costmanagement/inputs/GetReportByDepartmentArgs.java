@@ -19,7 +19,7 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
     @Import(name="departmentId", required=true)
       private final String departmentId;
 
-    public String getDepartmentId() {
+    public String departmentId() {
         return this.departmentId;
     }
 
@@ -30,7 +30,7 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
     @Import(name="reportName", required=true)
       private final String reportName;
 
-    public String getReportName() {
+    public String reportName() {
         return this.reportName;
     }
 

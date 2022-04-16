@@ -91,28 +91,28 @@ public final class ServiceBusResponse {
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
     */
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Time when the Endpoint was added to DigitalTwinsInstance.
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getDeadLetterSecret() {
+    public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
     /**
      * Dead letter storage URL for identity-based authentication.
      * 
     */
-    public Optional<String> getDeadLetterUri() {
+    public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
     /**
@@ -120,42 +120,42 @@ public final class ServiceBusResponse {
      * Expected value is 'ServiceBus'.
      * 
     */
-    public String getEndpointType() {
+    public String endpointType() {
         return this.endpointType;
     }
     /**
      * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
      * 
     */
-    public Optional<String> getEndpointUri() {
+    public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
      * The ServiceBus Topic name for identity-based authentication
      * 
     */
-    public Optional<String> getEntityPath() {
+    public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
     /**
      * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getPrimaryConnectionString() {
+    public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
     */
-    public Optional<String> getSecondaryConnectionString() {
+    public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
 

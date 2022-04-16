@@ -31,7 +31,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="acceptedProtocols")
       private final @Nullable List<String> acceptedProtocols;
 
-    public List<String> getAcceptedProtocols() {
+    public List<String> acceptedProtocols() {
         return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
     }
 
@@ -42,7 +42,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabledState")
       private final @Nullable String enabledState;
 
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
@@ -53,7 +53,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frontendEndpoints")
       private final @Nullable List<SubResourceResponse> frontendEndpoints;
 
-    public List<SubResourceResponse> getFrontendEndpoints() {
+    public List<SubResourceResponse> frontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
 
@@ -64,7 +64,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -75,7 +75,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -86,7 +86,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="patternsToMatch")
       private final @Nullable List<String> patternsToMatch;
 
-    public List<String> getPatternsToMatch() {
+    public List<String> patternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
 
@@ -97,7 +97,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceState", required=true)
       private final String resourceState;
 
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
 
@@ -108,7 +108,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeConfiguration")
       private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
 
-    public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> getRouteConfiguration() {
+    public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration() {
         return this.routeConfiguration == null ? null : this.routeConfiguration;
     }
 
@@ -119,7 +119,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rulesEngine")
       private final @Nullable SubResourceResponse rulesEngine;
 
-    public Optional<SubResourceResponse> getRulesEngine() {
+    public Optional<SubResourceResponse> rulesEngine() {
         return this.rulesEngine == null ? Optional.empty() : Optional.ofNullable(this.rulesEngine);
     }
 
@@ -130,7 +130,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -141,7 +141,7 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
+    public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 

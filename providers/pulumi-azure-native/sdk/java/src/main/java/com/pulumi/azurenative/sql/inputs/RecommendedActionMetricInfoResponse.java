@@ -24,7 +24,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 
@@ -35,7 +35,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -46,7 +46,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="timeGrain", required=true)
       private final String timeGrain;
 
-    public String getTimeGrain() {
+    public String timeGrain() {
         return this.timeGrain;
     }
 
@@ -57,7 +57,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 
@@ -68,7 +68,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
     @Import(name="value", required=true)
       private final Double value;
 
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

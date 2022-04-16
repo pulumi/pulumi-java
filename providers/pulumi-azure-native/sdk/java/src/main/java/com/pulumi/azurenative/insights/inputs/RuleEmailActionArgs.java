@@ -28,7 +28,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
 
-    public Output<List<String>> getCustomEmails() {
+    public Output<List<String>> customEmails() {
         return this.customEmails == null ? Codegen.empty() : this.customEmails;
     }
 
@@ -40,7 +40,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -51,7 +51,7 @@ public final class RuleEmailActionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sendToServiceOwners")
       private final @Nullable Output<Boolean> sendToServiceOwners;
 
-    public Output<Boolean> getSendToServiceOwners() {
+    public Output<Boolean> sendToServiceOwners() {
         return this.sendToServiceOwners == null ? Codegen.empty() : this.sendToServiceOwners;
     }
 

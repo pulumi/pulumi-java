@@ -25,7 +25,7 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
     @Import(name="logicAppResourceId")
       private final @Nullable String logicAppResourceId;
 
-    public Optional<String> getLogicAppResourceId() {
+    public Optional<String> logicAppResourceId() {
         return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
     }
 
@@ -36,7 +36,7 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

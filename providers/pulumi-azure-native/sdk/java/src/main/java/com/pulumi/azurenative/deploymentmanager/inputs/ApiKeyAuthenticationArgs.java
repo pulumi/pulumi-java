@@ -26,7 +26,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
     @Import(name="in", required=true)
       private final Output<RestAuthLocation> in;
 
-    public Output<RestAuthLocation> getIn() {
+    public Output<RestAuthLocation> in() {
         return this.in;
     }
 
@@ -37,7 +37,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -60,7 +60,7 @@ public final class ApiKeyAuthenticationArgs extends com.pulumi.resources.Resourc
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

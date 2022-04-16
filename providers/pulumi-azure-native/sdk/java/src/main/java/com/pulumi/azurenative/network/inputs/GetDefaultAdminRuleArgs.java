@@ -19,7 +19,7 @@ public final class GetDefaultAdminRuleArgs extends com.pulumi.resources.InvokeAr
     @Import(name="configurationName", required=true)
       private final String configurationName;
 
-    public String getConfigurationName() {
+    public String configurationName() {
         return this.configurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDefaultAdminRuleArgs extends com.pulumi.resources.InvokeAr
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
-    public String getNetworkManagerName() {
+    public String networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDefaultAdminRuleArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetDefaultAdminRuleArgs extends com.pulumi.resources.InvokeAr
     @Import(name="ruleCollectionName", required=true)
       private final String ruleCollectionName;
 
-    public String getRuleCollectionName() {
+    public String ruleCollectionName() {
         return this.ruleCollectionName;
     }
 
@@ -63,7 +63,7 @@ public final class GetDefaultAdminRuleArgs extends com.pulumi.resources.InvokeAr
     @Import(name="ruleName", required=true)
       private final String ruleName;
 
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 

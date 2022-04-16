@@ -27,7 +27,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends com.p
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends com.p
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

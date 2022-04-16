@@ -95,77 +95,77 @@ public final class GetDisasterRecoveryConfigurationResult {
      * Whether or not failover can be done automatically.
      * 
     */
-    public String getAutoFailover() {
+    public String autoFailover() {
         return this.autoFailover;
     }
     /**
      * How aggressive the automatic failover should be.
      * 
     */
-    public String getFailoverPolicy() {
+    public String failoverPolicy() {
         return this.failoverPolicy;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the server that contains this disaster recovery configuration.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Logical name of the server.
      * 
     */
-    public String getLogicalServerName() {
+    public String logicalServerName() {
         return this.logicalServerName;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Logical name of the partner server.
      * 
     */
-    public String getPartnerLogicalServerName() {
+    public String partnerLogicalServerName() {
         return this.partnerLogicalServerName;
     }
     /**
      * Id of the partner server.
      * 
     */
-    public String getPartnerServerId() {
+    public String partnerServerId() {
         return this.partnerServerId;
     }
     /**
      * The role of the current server in the disaster recovery configuration.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The status of the disaster recovery configuration.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

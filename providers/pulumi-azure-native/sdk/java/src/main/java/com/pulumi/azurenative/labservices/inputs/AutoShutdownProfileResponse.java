@@ -25,7 +25,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     @Import(name="disconnectDelay")
       private final @Nullable String disconnectDelay;
 
-    public Optional<String> getDisconnectDelay() {
+    public Optional<String> disconnectDelay() {
         return this.disconnectDelay == null ? Optional.empty() : Optional.ofNullable(this.disconnectDelay);
     }
 
@@ -36,7 +36,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     @Import(name="idleDelay")
       private final @Nullable String idleDelay;
 
-    public Optional<String> getIdleDelay() {
+    public Optional<String> idleDelay() {
         return this.idleDelay == null ? Optional.empty() : Optional.ofNullable(this.idleDelay);
     }
 
@@ -47,7 +47,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     @Import(name="noConnectDelay")
       private final @Nullable String noConnectDelay;
 
-    public Optional<String> getNoConnectDelay() {
+    public Optional<String> noConnectDelay() {
         return this.noConnectDelay == null ? Optional.empty() : Optional.ofNullable(this.noConnectDelay);
     }
 
@@ -58,7 +58,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     @Import(name="shutdownOnDisconnect")
       private final @Nullable String shutdownOnDisconnect;
 
-    public Optional<String> getShutdownOnDisconnect() {
+    public Optional<String> shutdownOnDisconnect() {
         return this.shutdownOnDisconnect == null ? Optional.empty() : Optional.ofNullable(this.shutdownOnDisconnect);
     }
 
@@ -69,7 +69,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     @Import(name="shutdownOnIdle")
       private final @Nullable String shutdownOnIdle;
 
-    public Optional<String> getShutdownOnIdle() {
+    public Optional<String> shutdownOnIdle() {
         return this.shutdownOnIdle == null ? Optional.empty() : Optional.ofNullable(this.shutdownOnIdle);
     }
 
@@ -80,7 +80,7 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
     @Import(name="shutdownWhenNotConnected")
       private final @Nullable String shutdownWhenNotConnected;
 
-    public Optional<String> getShutdownWhenNotConnected() {
+    public Optional<String> shutdownWhenNotConnected() {
         return this.shutdownWhenNotConnected == null ? Optional.empty() : Optional.ofNullable(this.shutdownWhenNotConnected);
     }
 

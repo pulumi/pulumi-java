@@ -24,7 +24,7 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
     @Import(name="filePath", required=true)
       private final Object filePath;
 
-    public Object getFilePath() {
+    public Object filePath() {
         return this.filePath;
     }
 
@@ -35,7 +35,7 @@ public final class AzureMLWebServiceFileResponse extends com.pulumi.resources.In
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 

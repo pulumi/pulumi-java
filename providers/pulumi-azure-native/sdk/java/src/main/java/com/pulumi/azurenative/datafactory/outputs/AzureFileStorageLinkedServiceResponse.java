@@ -134,91 +134,91 @@ public final class AzureFileStorageLinkedServiceResponse {
      * The Azure key vault secret reference of accountKey in connection string.
      * 
     */
-    public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Optional<Object> getConnectionString() {
+    public Optional<Object> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileShare() {
+    public Optional<Object> fileShare() {
         return Optional.ofNullable(this.fileShare);
     }
     /**
      * Host name of the server. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getHost() {
+    public Optional<Object> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to logon the server.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The Azure key vault secret reference of sasToken in sas uri.
      * 
     */
-    public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
     */
-    public Optional<Object> getSasUri() {
+    public Optional<Object> sasUri() {
         return Optional.ofNullable(this.sasUri);
     }
     /**
      * The azure file share snapshot version. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSnapshot() {
+    public Optional<Object> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
@@ -226,14 +226,14 @@ public final class AzureFileStorageLinkedServiceResponse {
      * Expected value is 'AzureFileStorage'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * User ID to logon the server. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUserId() {
+    public Optional<Object> userId() {
         return Optional.ofNullable(this.userId);
     }
 

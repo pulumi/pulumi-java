@@ -34,7 +34,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceptedProtocols")
       private final @Nullable Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
 
-    public Output<List<Either<String,FrontDoorProtocol>>> getAcceptedProtocols() {
+    public Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols() {
         return this.acceptedProtocols == null ? Codegen.empty() : this.acceptedProtocols;
     }
 
@@ -45,7 +45,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState;
 
-    public Output<Either<String,RoutingRuleEnabledState>> getEnabledState() {
+    public Output<Either<String,RoutingRuleEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -56,7 +56,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frontendEndpoints")
       private final @Nullable Output<List<SubResourceArgs>> frontendEndpoints;
 
-    public Output<List<SubResourceArgs>> getFrontendEndpoints() {
+    public Output<List<SubResourceArgs>> frontendEndpoints() {
         return this.frontendEndpoints == null ? Codegen.empty() : this.frontendEndpoints;
     }
 
@@ -67,7 +67,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -78,7 +78,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="patternsToMatch")
       private final @Nullable Output<List<String>> patternsToMatch;
 
-    public Output<List<String>> getPatternsToMatch() {
+    public Output<List<String>> patternsToMatch() {
         return this.patternsToMatch == null ? Codegen.empty() : this.patternsToMatch;
     }
 
@@ -100,7 +100,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeConfiguration")
       private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
 
-    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfiguration() {
+    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration() {
         return this.routeConfiguration == null ? Codegen.empty() : this.routeConfiguration;
     }
 
@@ -111,7 +111,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rulesEngine")
       private final @Nullable Output<SubResourceArgs> rulesEngine;
 
-    public Output<SubResourceArgs> getRulesEngine() {
+    public Output<SubResourceArgs> rulesEngine() {
         return this.rulesEngine == null ? Codegen.empty() : this.rulesEngine;
     }
 
@@ -122,7 +122,7 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
+    public Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Codegen.empty() : this.webApplicationFirewallPolicyLink;
     }
 

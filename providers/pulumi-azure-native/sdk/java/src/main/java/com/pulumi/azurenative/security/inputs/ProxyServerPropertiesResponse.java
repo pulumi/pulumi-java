@@ -25,7 +25,7 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
     @Import(name="ip")
       private final @Nullable String ip;
 
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
@@ -36,7 +36,7 @@ public final class ProxyServerPropertiesResponse extends com.pulumi.resources.In
     @Import(name="port")
       private final @Nullable String port;
 
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 

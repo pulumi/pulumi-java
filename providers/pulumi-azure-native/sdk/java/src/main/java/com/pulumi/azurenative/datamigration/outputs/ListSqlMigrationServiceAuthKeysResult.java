@@ -34,14 +34,14 @@ public final class ListSqlMigrationServiceAuthKeysResult {
      * The first authentication key.
      * 
     */
-    public Optional<String> getAuthKey1() {
+    public Optional<String> authKey1() {
         return Optional.ofNullable(this.authKey1);
     }
     /**
      * The second authentication key.
      * 
     */
-    public Optional<String> getAuthKey2() {
+    public Optional<String> authKey2() {
         return Optional.ofNullable(this.authKey2);
     }
 

@@ -279,245 +279,245 @@ public final class GetDiskResult {
      * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
      * 
     */
-    public Optional<Boolean> getBurstingEnabled() {
+    public Optional<Boolean> burstingEnabled() {
         return Optional.ofNullable(this.burstingEnabled);
     }
     /**
      * Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
     */
-    public CreationDataResponse getCreationData() {
+    public CreationDataResponse creationData() {
         return this.creationData;
     }
     /**
      * ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
     */
-    public Optional<String> getDiskAccessId() {
+    public Optional<String> diskAccessId() {
         return Optional.ofNullable(this.diskAccessId);
     }
     /**
      * The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
      * 
     */
-    public Optional<Double> getDiskIOPSReadOnly() {
+    public Optional<Double> diskIOPSReadOnly() {
         return Optional.ofNullable(this.diskIOPSReadOnly);
     }
     /**
      * The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
      * 
     */
-    public Optional<Double> getDiskIOPSReadWrite() {
+    public Optional<Double> diskIOPSReadWrite() {
         return Optional.ofNullable(this.diskIOPSReadWrite);
     }
     /**
      * The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
      * 
     */
-    public Optional<Double> getDiskMBpsReadOnly() {
+    public Optional<Double> diskMBpsReadOnly() {
         return Optional.ofNullable(this.diskMBpsReadOnly);
     }
     /**
      * The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
      * 
     */
-    public Optional<Double> getDiskMBpsReadWrite() {
+    public Optional<Double> diskMBpsReadWrite() {
         return Optional.ofNullable(this.diskMBpsReadWrite);
     }
     /**
      * The size of the disk in bytes. This field is read only.
      * 
     */
-    public Double getDiskSizeBytes() {
+    public Double diskSizeBytes() {
         return this.diskSizeBytes;
     }
     /**
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * The state of the disk.
      * 
     */
-    public String getDiskState() {
+    public String diskState() {
         return this.diskState;
     }
     /**
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
     */
-    public Optional<EncryptionResponse> getEncryption() {
+    public Optional<EncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
     */
-    public Optional<EncryptionSettingsCollectionResponse> getEncryptionSettingsCollection() {
+    public Optional<EncryptionSettingsCollectionResponse> encryptionSettingsCollection() {
         return Optional.ofNullable(this.encryptionSettingsCollection);
     }
     /**
      * The extended location where the disk will be created. Extended location cannot be changed.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
     */
-    public Optional<String> getHyperVGeneration() {
+    public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * A relative URI containing the ID of the VM that has the disk attached.
      * 
     */
-    public String getManagedBy() {
+    public String managedBy() {
         return this.managedBy;
     }
     /**
      * List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
      * 
     */
-    public List<String> getManagedByExtended() {
+    public List<String> managedByExtended() {
         return this.managedByExtended;
     }
     /**
      * The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
      * 
     */
-    public Optional<Integer> getMaxShares() {
+    public Optional<Integer> maxShares() {
         return Optional.ofNullable(this.maxShares);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Policy for accessing the disk via network.
      * 
     */
-    public Optional<String> getNetworkAccessPolicy() {
+    public Optional<String> networkAccessPolicy() {
         return Optional.ofNullable(this.networkAccessPolicy);
     }
     /**
      * The Operating System type.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Properties of the disk for which update is pending.
      * 
     */
-    public PropertyUpdatesInProgressResponse getPropertyUpdatesInProgress() {
+    public PropertyUpdatesInProgressResponse propertyUpdatesInProgress() {
         return this.propertyUpdatesInProgress;
     }
     /**
      * The disk provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
      * 
     */
-    public Optional<PurchasePlanResponse> getPurchasePlan() {
+    public Optional<PurchasePlanResponse> purchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
     /**
      * Contains the security related information for the resource.
      * 
     */
-    public Optional<DiskSecurityProfileResponse> getSecurityProfile() {
+    public Optional<DiskSecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
      * Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
      * 
     */
-    public List<ShareInfoElementResponse> getShareInfo() {
+    public List<ShareInfoElementResponse> shareInfo() {
         return this.shareInfo;
     }
     /**
      * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
      * 
     */
-    public Optional<DiskSkuResponse> getSku() {
+    public Optional<DiskSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Indicates the OS on a disk supports hibernation.
      * 
     */
-    public Optional<Boolean> getSupportsHibernation() {
+    public Optional<Boolean> supportsHibernation() {
         return Optional.ofNullable(this.supportsHibernation);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
     /**
      * The time when the disk was created.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Unique Guid identifying the resource.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
     /**
      * The Logical zone list for Disk.
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

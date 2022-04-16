@@ -62,42 +62,42 @@ public final class ResourceOperationResponse {
      * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
      * 
     */
-    public String getOperationId() {
+    public String operationId() {
         return this.operationId;
     }
     /**
      * State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
      * 
     */
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * Http status code of the operation.
      * 
     */
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
     /**
      * Descriptive information of the resource operation.
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

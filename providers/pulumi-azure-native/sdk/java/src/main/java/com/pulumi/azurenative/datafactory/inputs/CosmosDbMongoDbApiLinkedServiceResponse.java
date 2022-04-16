@@ -30,7 +30,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -52,7 +52,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="connectionString", required=true)
       private final Object connectionString;
 
-    public Object getConnectionString() {
+    public Object connectionString() {
         return this.connectionString;
     }
 
@@ -63,7 +63,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="database", required=true)
       private final Object database;
 
-    public Object getDatabase() {
+    public Object database() {
         return this.database;
     }
 
@@ -74,7 +74,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -85,7 +85,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="isServerVersionAbove32")
       private final @Nullable Object isServerVersionAbove32;
 
-    public Optional<Object> getIsServerVersionAbove32() {
+    public Optional<Object> isServerVersionAbove32() {
         return this.isServerVersionAbove32 == null ? Optional.empty() : Optional.ofNullable(this.isServerVersionAbove32);
     }
 
@@ -96,7 +96,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -108,7 +108,7 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse extends com.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

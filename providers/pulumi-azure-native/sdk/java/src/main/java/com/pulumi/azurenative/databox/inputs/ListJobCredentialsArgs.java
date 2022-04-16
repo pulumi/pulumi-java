@@ -19,7 +19,7 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="jobName", required=true)
       private final String jobName;
 
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
 
@@ -30,7 +30,7 @@ public final class ListJobCredentialsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

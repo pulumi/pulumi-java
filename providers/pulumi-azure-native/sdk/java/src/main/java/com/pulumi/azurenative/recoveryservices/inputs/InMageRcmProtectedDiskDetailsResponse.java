@@ -24,7 +24,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
 
-    public Double getCapacityInBytes() {
+    public Double capacityInBytes() {
         return this.capacityInBytes;
     }
 
@@ -35,7 +35,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskEncryptionSetId", required=true)
       private final String diskEncryptionSetId;
 
-    public String getDiskEncryptionSetId() {
+    public String diskEncryptionSetId() {
         return this.diskEncryptionSetId;
     }
 
@@ -46,7 +46,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskId", required=true)
       private final String diskId;
 
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
 
@@ -57,7 +57,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskName", required=true)
       private final String diskName;
 
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
 
@@ -68,7 +68,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -79,7 +79,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
 
-    public String getIsOSDisk() {
+    public String isOSDisk() {
         return this.isOSDisk;
     }
 
@@ -90,7 +90,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="logStorageAccountId", required=true)
       private final String logStorageAccountId;
 
-    public String getLogStorageAccountId() {
+    public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
 
@@ -101,7 +101,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="seedManagedDiskId", required=true)
       private final String seedManagedDiskId;
 
-    public String getSeedManagedDiskId() {
+    public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
 
@@ -112,7 +112,7 @@ public final class InMageRcmProtectedDiskDetailsResponse extends com.pulumi.reso
     @Import(name="targetManagedDiskId", required=true)
       private final String targetManagedDiskId;
 
-    public String getTargetManagedDiskId() {
+    public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
 

@@ -27,7 +27,7 @@ public final class UniqueKeyPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="uniqueKeys")
       private final @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
 
-    public Output<List<UniqueKeyArgs>> getUniqueKeys() {
+    public Output<List<UniqueKeyArgs>> uniqueKeys() {
         return this.uniqueKeys == null ? Codegen.empty() : this.uniqueKeys;
     }
 

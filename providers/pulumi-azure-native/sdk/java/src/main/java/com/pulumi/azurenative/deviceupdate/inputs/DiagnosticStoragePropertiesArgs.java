@@ -28,7 +28,7 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -39,7 +39,7 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -50,7 +50,7 @@ public final class DiagnosticStoragePropertiesArgs extends com.pulumi.resources.
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

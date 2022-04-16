@@ -26,7 +26,7 @@ public final class AzureFirewallPublicIPAddressArgs extends com.pulumi.resources
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 

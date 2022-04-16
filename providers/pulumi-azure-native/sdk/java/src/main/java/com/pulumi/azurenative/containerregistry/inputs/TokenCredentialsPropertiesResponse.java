@@ -23,14 +23,14 @@ public final class TokenCredentialsPropertiesResponse extends com.pulumi.resourc
     @Import(name="certificates")
       private final @Nullable List<TokenCertificateResponse> certificates;
 
-    public List<TokenCertificateResponse> getCertificates() {
+    public List<TokenCertificateResponse> certificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
 
     @Import(name="passwords")
       private final @Nullable List<TokenPasswordResponse> passwords;
 
-    public List<TokenPasswordResponse> getPasswords() {
+    public List<TokenPasswordResponse> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
 

@@ -19,7 +19,7 @@ public final class GetSqlVirtualMachineGroupArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlVirtualMachineGroupArgs extends com.pulumi.resources.In
     @Import(name="sqlVirtualMachineGroupName", required=true)
       private final String sqlVirtualMachineGroupName;
 
-    public String getSqlVirtualMachineGroupName() {
+    public String sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 

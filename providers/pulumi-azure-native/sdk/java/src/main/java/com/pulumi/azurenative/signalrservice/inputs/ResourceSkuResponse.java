@@ -30,7 +30,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
       private final @Nullable Integer capacity;
 
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -41,7 +41,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family", required=true)
       private final String family;
 
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
 
@@ -54,7 +54,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -65,7 +65,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size", required=true)
       private final String size;
 
-    public String getSize() {
+    public String size() {
         return this.size;
     }
 
@@ -78,7 +78,7 @@ public final class ResourceSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

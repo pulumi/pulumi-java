@@ -46,7 +46,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Daily backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> getDailyBackupsToKeep() {
+    public Output</* @Nullable */ Integer> dailyBackupsToKeep() {
         return this.dailyBackupsToKeep;
     }
     /**
@@ -60,7 +60,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return The property to decide policy is enabled or not
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -74,7 +74,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Monthly backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> getMonthlyBackupsToKeep() {
+    public Output</* @Nullable */ Integer> monthlyBackupsToKeep() {
         return this.monthlyBackupsToKeep;
     }
     /**
@@ -102,7 +102,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Name of backup policy
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Azure lifecycle management
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -130,7 +130,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -158,7 +158,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return A list of volumes assigned to this policy
      * 
      */
-    public Output</* @Nullable */ List<VolumeBackupsResponse>> getVolumeBackups() {
+    public Output</* @Nullable */ List<VolumeBackupsResponse>> volumeBackups() {
         return this.volumeBackups;
     }
     /**
@@ -172,7 +172,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Volumes using current backup policy
      * 
      */
-    public Output</* @Nullable */ Integer> getVolumesAssigned() {
+    public Output</* @Nullable */ Integer> volumesAssigned() {
         return this.volumesAssigned;
     }
     /**
@@ -186,7 +186,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Weekly backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> getWeeklyBackupsToKeep() {
+    public Output</* @Nullable */ Integer> weeklyBackupsToKeep() {
         return this.weeklyBackupsToKeep;
     }
     /**
@@ -200,7 +200,7 @@ public class BackupPolicy extends com.pulumi.resources.CustomResource {
      * @return Yearly backups count to keep
      * 
      */
-    public Output</* @Nullable */ Integer> getYearlyBackupsToKeep() {
+    public Output</* @Nullable */ Integer> yearlyBackupsToKeep() {
         return this.yearlyBackupsToKeep;
     }
 

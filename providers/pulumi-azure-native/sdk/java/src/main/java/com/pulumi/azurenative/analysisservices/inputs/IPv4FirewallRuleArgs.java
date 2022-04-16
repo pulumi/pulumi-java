@@ -26,7 +26,7 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
-    public Output<String> getFirewallRuleName() {
+    public Output<String> firewallRuleName() {
         return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
@@ -37,7 +37,7 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rangeEnd")
       private final @Nullable Output<String> rangeEnd;
 
-    public Output<String> getRangeEnd() {
+    public Output<String> rangeEnd() {
         return this.rangeEnd == null ? Codegen.empty() : this.rangeEnd;
     }
 
@@ -48,7 +48,7 @@ public final class IPv4FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="rangeStart")
       private final @Nullable Output<String> rangeStart;
 
-    public Output<String> getRangeStart() {
+    public Output<String> rangeStart() {
         return this.rangeStart == null ? Codegen.empty() : this.rangeStart;
     }
 

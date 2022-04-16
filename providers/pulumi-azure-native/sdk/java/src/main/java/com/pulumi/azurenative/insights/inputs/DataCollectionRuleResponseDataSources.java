@@ -30,7 +30,7 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="extensions")
       private final @Nullable List<ExtensionDataSourceResponse> extensions;
 
-    public List<ExtensionDataSourceResponse> getExtensions() {
+    public List<ExtensionDataSourceResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 
@@ -41,7 +41,7 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="performanceCounters")
       private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
 
-    public List<PerfCounterDataSourceResponse> getPerformanceCounters() {
+    public List<PerfCounterDataSourceResponse> performanceCounters() {
         return this.performanceCounters == null ? List.of() : this.performanceCounters;
     }
 
@@ -52,7 +52,7 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="syslog")
       private final @Nullable List<SyslogDataSourceResponse> syslog;
 
-    public List<SyslogDataSourceResponse> getSyslog() {
+    public List<SyslogDataSourceResponse> syslog() {
         return this.syslog == null ? List.of() : this.syslog;
     }
 
@@ -63,7 +63,7 @@ public final class DataCollectionRuleResponseDataSources extends com.pulumi.reso
     @Import(name="windowsEventLogs")
       private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
-    public List<WindowsEventLogDataSourceResponse> getWindowsEventLogs() {
+    public List<WindowsEventLogDataSourceResponse> windowsEventLogs() {
         return this.windowsEventLogs == null ? List.of() : this.windowsEventLogs;
     }
 

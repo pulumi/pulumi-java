@@ -26,7 +26,7 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="commitTime")
       private final @Nullable String commitTime;
 
-    public Optional<String> getCommitTime() {
+    public Optional<String> commitTime() {
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
@@ -37,7 +37,7 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="configurationIds")
       private final @Nullable List<String> configurationIds;
 
-    public List<String> getConfigurationIds() {
+    public List<String> configurationIds() {
         return this.configurationIds == null ? List.of() : this.configurationIds;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="deploymentStatus")
       private final @Nullable String deploymentStatus;
 
-    public Optional<String> getDeploymentStatus() {
+    public Optional<String> deploymentStatus() {
         return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
     }
 
@@ -59,7 +59,7 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
 
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
@@ -70,7 +70,7 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
@@ -81,7 +81,7 @@ public final class NetworkManagerDeploymentStatusResponse extends com.pulumi.res
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 

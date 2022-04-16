@@ -26,7 +26,7 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
       private final @Nullable String code;
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
@@ -37,7 +37,7 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="extendedCode")
       private final @Nullable String extendedCode;
 
-    public Optional<String> getExtendedCode() {
+    public Optional<String> extendedCode() {
         return this.extendedCode == null ? Optional.empty() : Optional.ofNullable(this.extendedCode);
     }
 
@@ -48,7 +48,7 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="innerErrors")
       private final @Nullable List<ErrorEntityResponse> innerErrors;
 
-    public List<ErrorEntityResponse> getInnerErrors() {
+    public List<ErrorEntityResponse> innerErrors() {
         return this.innerErrors == null ? List.of() : this.innerErrors;
     }
 
@@ -59,7 +59,7 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -70,7 +70,7 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="messageTemplate")
       private final @Nullable String messageTemplate;
 
-    public Optional<String> getMessageTemplate() {
+    public Optional<String> messageTemplate() {
         return this.messageTemplate == null ? Optional.empty() : Optional.ofNullable(this.messageTemplate);
     }
 
@@ -81,7 +81,7 @@ public final class ErrorEntityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable List<String> parameters;
 
-    public List<String> getParameters() {
+    public List<String> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 

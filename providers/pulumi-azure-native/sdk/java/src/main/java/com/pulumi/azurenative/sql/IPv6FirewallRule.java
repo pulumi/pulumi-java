@@ -42,7 +42,7 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
      * 
      */
-    public Output</* @Nullable */ String> getEndIPv6Address() {
+    public Output</* @Nullable */ String> endIPv6Address() {
         return this.endIPv6Address;
     }
     /**
@@ -56,7 +56,7 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return The start IP address of the firewall rule. Must be IPv6 format.
      * 
      */
-    public Output</* @Nullable */ String> getStartIPv6Address() {
+    public Output</* @Nullable */ String> startIPv6Address() {
         return this.startIPv6Address;
     }
     /**
@@ -84,7 +84,7 @@ public class IPv6FirewallRule extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

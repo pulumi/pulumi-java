@@ -41,21 +41,21 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
      * authentication key
      * 
     */
-    public Optional<String> getBase64Key() {
+    public Optional<String> base64Key() {
         return Optional.ofNullable(this.base64Key);
     }
     /**
      * The expiration time of the authentication key.
      * 
     */
-    public Optional<String> getExpiration() {
+    public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
      * identifier of the key
      * 
     */
-    public Optional<String> getIdentifier() {
+    public Optional<String> identifier() {
         return Optional.ofNullable(this.identifier);
     }
 

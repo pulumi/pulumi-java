@@ -27,7 +27,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPPrefixesArgs exten
     @Import(name="publicIPPrefixes")
       private final @Nullable Output<List<ResourceReferenceArgs>> publicIPPrefixes;
 
-    public Output<List<ResourceReferenceArgs>> getPublicIPPrefixes() {
+    public Output<List<ResourceReferenceArgs>> publicIPPrefixes() {
         return this.publicIPPrefixes == null ? Codegen.empty() : this.publicIPPrefixes;
     }
 

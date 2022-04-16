@@ -26,7 +26,7 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
@@ -37,7 +37,7 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -49,7 +49,7 @@ public final class OutputPathAssetReferenceArgs extends com.pulumi.resources.Res
     @Import(name="referenceType", required=true)
       private final Output<String> referenceType;
 
-    public Output<String> getReferenceType() {
+    public Output<String> referenceType() {
         return this.referenceType;
     }
 

@@ -28,7 +28,7 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -39,7 +39,7 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
     @Import(name="logAnalyticsResources")
       private final @Nullable Output<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources;
 
-    public Output<FirewallPolicyLogAnalyticsResourcesArgs> getLogAnalyticsResources() {
+    public Output<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources() {
         return this.logAnalyticsResources == null ? Codegen.empty() : this.logAnalyticsResources;
     }
 
@@ -50,7 +50,7 @@ public final class FirewallPolicyInsightsArgs extends com.pulumi.resources.Resou
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 

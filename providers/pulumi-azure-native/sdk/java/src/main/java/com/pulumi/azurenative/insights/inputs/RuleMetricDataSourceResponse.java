@@ -25,7 +25,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="legacyResourceId")
       private final @Nullable String legacyResourceId;
 
-    public Optional<String> getLegacyResourceId() {
+    public Optional<String> legacyResourceId() {
         return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
     }
 
@@ -36,7 +36,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="metricName")
       private final @Nullable String metricName;
 
-    public Optional<String> getMetricName() {
+    public Optional<String> metricName() {
         return this.metricName == null ? Optional.empty() : Optional.ofNullable(this.metricName);
     }
 
@@ -47,7 +47,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
 
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
@@ -59,7 +59,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -70,7 +70,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
 
-    public Optional<String> getResourceLocation() {
+    public Optional<String> resourceLocation() {
         return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
     }
 
@@ -81,7 +81,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 

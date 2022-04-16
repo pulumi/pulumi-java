@@ -42,7 +42,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return An description of the access policy.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The objectId of the principal in Azure Active Directory.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalObjectId() {
+    public Output</* @Nullable */ String> principalObjectId() {
         return this.principalObjectId;
     }
     /**
@@ -84,7 +84,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return The list of roles the principal is assigned on the environment.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRoles() {
+    public Output</* @Nullable */ List<String>> roles() {
         return this.roles;
     }
     /**
@@ -98,7 +98,7 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

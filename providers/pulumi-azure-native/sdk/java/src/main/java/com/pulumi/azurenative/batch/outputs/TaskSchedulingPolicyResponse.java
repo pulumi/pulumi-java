@@ -16,7 +16,7 @@ public final class TaskSchedulingPolicyResponse {
         this.nodeFillType = nodeFillType;
     }
 
-    public String getNodeFillType() {
+    public String nodeFillType() {
         return this.nodeFillType;
     }
 

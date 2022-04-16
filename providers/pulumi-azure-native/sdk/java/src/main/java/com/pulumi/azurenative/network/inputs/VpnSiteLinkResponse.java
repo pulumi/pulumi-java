@@ -27,7 +27,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bgpProperties")
       private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
 
-    public Optional<VpnLinkBgpSettingsResponse> getBgpProperties() {
+    public Optional<VpnLinkBgpSettingsResponse> bgpProperties() {
         return this.bgpProperties == null ? Optional.empty() : Optional.ofNullable(this.bgpProperties);
     }
 
@@ -38,7 +38,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -49,7 +49,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn")
       private final @Nullable String fqdn;
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
@@ -60,7 +60,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -71,7 +71,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -82,7 +82,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkProperties")
       private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
 
-    public Optional<VpnLinkProviderPropertiesResponse> getLinkProperties() {
+    public Optional<VpnLinkProviderPropertiesResponse> linkProperties() {
         return this.linkProperties == null ? Optional.empty() : Optional.ofNullable(this.linkProperties);
     }
 
@@ -93,7 +93,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -104,7 +104,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -115,7 +115,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -33,7 +33,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="availability", required=true)
       private final Output<ConnectorMappingAvailabilityArgs> availability;
 
-    public Output<ConnectorMappingAvailabilityArgs> getAvailability() {
+    public Output<ConnectorMappingAvailabilityArgs> availability() {
         return this.availability;
     }
 
@@ -44,7 +44,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="completeOperation", required=true)
       private final Output<ConnectorMappingCompleteOperationArgs> completeOperation;
 
-    public Output<ConnectorMappingCompleteOperationArgs> getCompleteOperation() {
+    public Output<ConnectorMappingCompleteOperationArgs> completeOperation() {
         return this.completeOperation;
     }
 
@@ -55,7 +55,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="errorManagement", required=true)
       private final Output<ConnectorMappingErrorManagementArgs> errorManagement;
 
-    public Output<ConnectorMappingErrorManagementArgs> getErrorManagement() {
+    public Output<ConnectorMappingErrorManagementArgs> errorManagement() {
         return this.errorManagement;
     }
 
@@ -66,7 +66,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="fileFilter")
       private final @Nullable Output<String> fileFilter;
 
-    public Output<String> getFileFilter() {
+    public Output<String> fileFilter() {
         return this.fileFilter == null ? Codegen.empty() : this.fileFilter;
     }
 
@@ -77,7 +77,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -88,7 +88,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="format", required=true)
       private final Output<ConnectorMappingFormatArgs> format;
 
-    public Output<ConnectorMappingFormatArgs> getFormat() {
+    public Output<ConnectorMappingFormatArgs> format() {
         return this.format;
     }
 
@@ -99,7 +99,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="hasHeader")
       private final @Nullable Output<Boolean> hasHeader;
 
-    public Output<Boolean> getHasHeader() {
+    public Output<Boolean> hasHeader() {
         return this.hasHeader == null ? Codegen.empty() : this.hasHeader;
     }
 
@@ -110,7 +110,7 @@ public final class ConnectorMappingPropertiesArgs extends com.pulumi.resources.R
     @Import(name="structure", required=true)
       private final Output<List<ConnectorMappingStructureArgs>> structure;
 
-    public Output<List<ConnectorMappingStructureArgs>> getStructure() {
+    public Output<List<ConnectorMappingStructureArgs>> structure() {
         return this.structure;
     }
 

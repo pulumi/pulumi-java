@@ -40,21 +40,21 @@ public final class ServiceRegistryResourceRequestsResponse {
      * Cpu allocated to each Service Registry instance
      * 
     */
-    public String getCpu() {
+    public String cpu() {
         return this.cpu;
     }
     /**
      * Instance count of the Service Registry
      * 
     */
-    public Integer getInstanceCount() {
+    public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
      * Memory allocated to each Service Registry instance
      * 
     */
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

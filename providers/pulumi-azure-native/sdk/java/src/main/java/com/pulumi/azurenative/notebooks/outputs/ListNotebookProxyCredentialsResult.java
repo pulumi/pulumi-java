@@ -48,28 +48,28 @@ public final class ListNotebookProxyCredentialsResult {
      * Hostname for the Notebook Proxy resource
      * 
     */
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * The primary key of the NotebookProxy resource.
      * 
     */
-    public Optional<String> getPrimaryAccessKey() {
+    public Optional<String> primaryAccessKey() {
         return Optional.ofNullable(this.primaryAccessKey);
     }
     /**
      * Notebook Proxy resource id
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The secondary key of the NotebookProxy resource.
      * 
     */
-    public Optional<String> getSecondaryAccessKey() {
+    public Optional<String> secondaryAccessKey() {
         return Optional.ofNullable(this.secondaryAccessKey);
     }
 

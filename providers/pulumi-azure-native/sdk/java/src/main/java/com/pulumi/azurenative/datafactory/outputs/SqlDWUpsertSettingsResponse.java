@@ -34,14 +34,14 @@ public final class SqlDWUpsertSettingsResponse {
      * Schema name for interim table. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getInterimSchemaName() {
+    public Optional<Object> interimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
     /**
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
      * 
     */
-    public Optional<Object> getKeys() {
+    public Optional<Object> keys() {
         return Optional.ofNullable(this.keys);
     }
 

@@ -25,7 +25,7 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
     @Import(name="modifiedSwaggerUrl")
       private final @Nullable String modifiedSwaggerUrl;
 
-    public Optional<String> getModifiedSwaggerUrl() {
+    public Optional<String> modifiedSwaggerUrl() {
         return this.modifiedSwaggerUrl == null ? Optional.empty() : Optional.ofNullable(this.modifiedSwaggerUrl);
     }
 
@@ -36,7 +36,7 @@ public final class ApiResourceDefinitionsResponse extends com.pulumi.resources.I
     @Import(name="originalSwaggerUrl")
       private final @Nullable String originalSwaggerUrl;
 
-    public Optional<String> getOriginalSwaggerUrl() {
+    public Optional<String> originalSwaggerUrl() {
         return this.originalSwaggerUrl == null ? Optional.empty() : Optional.ofNullable(this.originalSwaggerUrl);
     }
 

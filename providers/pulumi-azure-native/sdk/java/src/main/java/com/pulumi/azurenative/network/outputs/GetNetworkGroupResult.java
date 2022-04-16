@@ -100,77 +100,77 @@ public final class GetNetworkGroupResult {
      * Network group conditional filter.
      * 
     */
-    public Optional<String> getConditionalMembership() {
+    public Optional<String> conditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
     /**
      * A description of the network group.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the network group.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Group members of network group.
      * 
     */
-    public List<GroupMembersItemResponse> getGroupMembers() {
+    public List<GroupMembersItemResponse> groupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Group member type.
      * 
     */
-    public Optional<String> getMemberType() {
+    public Optional<String> memberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the scope assignment resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

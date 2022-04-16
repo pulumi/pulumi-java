@@ -25,7 +25,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="accountId")
       private final @Nullable String accountId;
 
-    public Optional<String> getAccountId() {
+    public Optional<String> accountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
@@ -36,7 +36,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="accountKey")
       private final @Nullable String accountKey;
 
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -47,7 +47,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="collectionNamePattern")
       private final @Nullable String collectionNamePattern;
 
-    public Optional<String> getCollectionNamePattern() {
+    public Optional<String> collectionNamePattern() {
         return this.collectionNamePattern == null ? Optional.empty() : Optional.ofNullable(this.collectionNamePattern);
     }
 
@@ -58,7 +58,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="database")
       private final @Nullable String database;
 
-    public Optional<String> getDatabase() {
+    public Optional<String> database() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
@@ -69,7 +69,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="documentId")
       private final @Nullable String documentId;
 
-    public Optional<String> getDocumentId() {
+    public Optional<String> documentId() {
         return this.documentId == null ? Optional.empty() : Optional.ofNullable(this.documentId);
     }
 
@@ -80,7 +80,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
@@ -92,7 +92,7 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

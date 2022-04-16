@@ -25,7 +25,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse extends com.pulum
     @Import(name="logs")
       private final @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
 
-    public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> getLogs() {
+    public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> logs() {
         return this.logs == null ? Optional.empty() : Optional.ofNullable(this.logs);
     }
 

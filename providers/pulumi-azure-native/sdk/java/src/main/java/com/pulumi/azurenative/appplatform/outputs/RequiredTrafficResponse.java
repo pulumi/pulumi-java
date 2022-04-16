@@ -55,35 +55,35 @@ public final class RequiredTrafficResponse {
      * The direction of required traffic
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * The FQDN list of required traffic
      * 
     */
-    public List<String> getFqdns() {
+    public List<String> fqdns() {
         return this.fqdns;
     }
     /**
      * The ip list of required traffic
      * 
     */
-    public List<String> getIps() {
+    public List<String> ips() {
         return this.ips;
     }
     /**
      * The port of required traffic
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The protocol of required traffic
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

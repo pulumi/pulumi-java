@@ -26,7 +26,7 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probeIntervalInSeconds")
       private final @Nullable Integer probeIntervalInSeconds;
 
-    public Optional<Integer> getProbeIntervalInSeconds() {
+    public Optional<Integer> probeIntervalInSeconds() {
         return this.probeIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.probeIntervalInSeconds);
     }
 
@@ -37,7 +37,7 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probePath")
       private final @Nullable String probePath;
 
-    public Optional<String> getProbePath() {
+    public Optional<String> probePath() {
         return this.probePath == null ? Optional.empty() : Optional.ofNullable(this.probePath);
     }
 
@@ -48,7 +48,7 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probeProtocol")
       private final @Nullable String probeProtocol;
 
-    public Optional<String> getProbeProtocol() {
+    public Optional<String> probeProtocol() {
         return this.probeProtocol == null ? Optional.empty() : Optional.ofNullable(this.probeProtocol);
     }
 
@@ -59,7 +59,7 @@ public final class HealthProbeParametersResponse extends com.pulumi.resources.In
     @Import(name="probeRequestType")
       private final @Nullable String probeRequestType;
 
-    public Optional<String> getProbeRequestType() {
+    public Optional<String> probeRequestType() {
         return this.probeRequestType == null ? Optional.empty() : Optional.ofNullable(this.probeRequestType);
     }
 

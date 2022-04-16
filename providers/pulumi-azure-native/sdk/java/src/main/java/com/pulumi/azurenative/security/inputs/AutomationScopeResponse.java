@@ -25,7 +25,7 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class AutomationScopeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="scopePath")
       private final @Nullable String scopePath;
 
-    public Optional<String> getScopePath() {
+    public Optional<String> scopePath() {
         return this.scopePath == null ? Optional.empty() : Optional.ofNullable(this.scopePath);
     }
 

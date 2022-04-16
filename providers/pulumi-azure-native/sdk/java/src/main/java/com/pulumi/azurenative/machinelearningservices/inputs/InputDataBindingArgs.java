@@ -24,7 +24,7 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataId")
       private final @Nullable Output<String> dataId;
 
-    public Output<String> getDataId() {
+    public Output<String> dataId() {
         return this.dataId == null ? Codegen.empty() : this.dataId;
     }
 
@@ -35,7 +35,7 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mode")
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
 
-    public Output<Either<String,DataBindingMode>> getMode() {
+    public Output<Either<String,DataBindingMode>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -46,7 +46,7 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="pathOnCompute")
       private final @Nullable Output<String> pathOnCompute;
 
-    public Output<String> getPathOnCompute() {
+    public Output<String> pathOnCompute() {
         return this.pathOnCompute == null ? Codegen.empty() : this.pathOnCompute;
     }
 

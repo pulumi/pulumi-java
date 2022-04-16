@@ -69,49 +69,49 @@ public final class SourceTriggerDescriptorResponse {
      * The branch name in the repository.
      * 
     */
-    public Optional<String> getBranchName() {
+    public Optional<String> branchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * The unique ID that identifies a commit.
      * 
     */
-    public Optional<String> getCommitId() {
+    public Optional<String> commitId() {
         return Optional.ofNullable(this.commitId);
     }
     /**
      * The event type of the trigger.
      * 
     */
-    public Optional<String> getEventType() {
+    public Optional<String> eventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
      * The unique ID of the trigger.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The source control provider type.
      * 
     */
-    public Optional<String> getProviderType() {
+    public Optional<String> providerType() {
         return Optional.ofNullable(this.providerType);
     }
     /**
      * The unique ID that identifies pull request.
      * 
     */
-    public Optional<String> getPullRequestId() {
+    public Optional<String> pullRequestId() {
         return Optional.ofNullable(this.pullRequestId);
     }
     /**
      * The repository URL.
      * 
     */
-    public Optional<String> getRepositoryUrl() {
+    public Optional<String> repositoryUrl() {
         return Optional.ofNullable(this.repositoryUrl);
     }
 

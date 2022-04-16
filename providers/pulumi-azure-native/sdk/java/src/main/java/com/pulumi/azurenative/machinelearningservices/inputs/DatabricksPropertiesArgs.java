@@ -22,7 +22,7 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="databricksAccessToken")
       private final @Nullable Output<String> databricksAccessToken;
 
-    public Output<String> getDatabricksAccessToken() {
+    public Output<String> databricksAccessToken() {
         return this.databricksAccessToken == null ? Codegen.empty() : this.databricksAccessToken;
     }
 
@@ -33,7 +33,7 @@ public final class DatabricksPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="workspaceUrl")
       private final @Nullable Output<String> workspaceUrl;
 
-    public Output<String> getWorkspaceUrl() {
+    public Output<String> workspaceUrl() {
         return this.workspaceUrl == null ? Codegen.empty() : this.workspaceUrl;
     }
 

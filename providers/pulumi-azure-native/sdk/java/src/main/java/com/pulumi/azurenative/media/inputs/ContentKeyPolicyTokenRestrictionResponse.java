@@ -31,7 +31,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="alternateVerificationKeys")
       private final @Nullable List<Object> alternateVerificationKeys;
 
-    public List<Object> getAlternateVerificationKeys() {
+    public List<Object> alternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
     }
 
@@ -42,7 +42,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="audience", required=true)
       private final String audience;
 
-    public String getAudience() {
+    public String audience() {
         return this.audience;
     }
 
@@ -53,7 +53,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
@@ -65,7 +65,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -76,7 +76,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="openIdConnectDiscoveryDocument")
       private final @Nullable String openIdConnectDiscoveryDocument;
 
-    public Optional<String> getOpenIdConnectDiscoveryDocument() {
+    public Optional<String> openIdConnectDiscoveryDocument() {
         return this.openIdConnectDiscoveryDocument == null ? Optional.empty() : Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
 
@@ -87,7 +87,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="primaryVerificationKey", required=true)
       private final Object primaryVerificationKey;
 
-    public Object getPrimaryVerificationKey() {
+    public Object primaryVerificationKey() {
         return this.primaryVerificationKey;
     }
 
@@ -98,7 +98,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="requiredClaims")
       private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
 
-    public List<ContentKeyPolicyTokenClaimResponse> getRequiredClaims() {
+    public List<ContentKeyPolicyTokenClaimResponse> requiredClaims() {
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
     }
 
@@ -109,7 +109,7 @@ public final class ContentKeyPolicyTokenRestrictionResponse extends com.pulumi.r
     @Import(name="restrictionTokenType", required=true)
       private final String restrictionTokenType;
 
-    public String getRestrictionTokenType() {
+    public String restrictionTokenType() {
         return this.restrictionTokenType;
     }
 

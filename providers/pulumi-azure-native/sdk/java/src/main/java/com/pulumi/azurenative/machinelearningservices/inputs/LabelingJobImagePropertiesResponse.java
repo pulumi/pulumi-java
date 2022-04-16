@@ -21,7 +21,7 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
     @Import(name="annotationType")
       private final @Nullable String annotationType;
 
-    public Optional<String> getAnnotationType() {
+    public Optional<String> annotationType() {
         return this.annotationType == null ? Optional.empty() : Optional.ofNullable(this.annotationType);
     }
 
@@ -32,7 +32,7 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
     @Import(name="mediaType", required=true)
       private final String mediaType;
 
-    public String getMediaType() {
+    public String mediaType() {
         return this.mediaType;
     }
 

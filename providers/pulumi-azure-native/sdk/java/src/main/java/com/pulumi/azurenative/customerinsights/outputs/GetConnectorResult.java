@@ -122,98 +122,98 @@ public final class GetConnectorResult {
      * ID of the connector.
      * 
     */
-    public Integer getConnectorId() {
+    public Integer connectorId() {
         return this.connectorId;
     }
     /**
      * Name of the connector.
      * 
     */
-    public Optional<String> getConnectorName() {
+    public Optional<String> connectorName() {
         return Optional.ofNullable(this.connectorName);
     }
     /**
      * The connector properties.
      * 
     */
-    public Map<String,Object> getConnectorProperties() {
+    public Map<String,Object> connectorProperties() {
         return this.connectorProperties;
     }
     /**
      * Type of connector.
      * 
     */
-    public String getConnectorType() {
+    public String connectorType() {
         return this.connectorType;
     }
     /**
      * The created time.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * Description of the connector.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Display name of the connector.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * If this is an internal connector.
      * 
     */
-    public Optional<Boolean> getIsInternal() {
+    public Optional<Boolean> isInternal() {
         return Optional.ofNullable(this.isInternal);
     }
     /**
      * The last modified time.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of connector.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

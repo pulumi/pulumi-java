@@ -25,7 +25,7 @@ public final class ReportConfigSortingResponse extends com.pulumi.resources.Invo
     @Import(name="direction")
       private final @Nullable String direction;
 
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
@@ -36,7 +36,7 @@ public final class ReportConfigSortingResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

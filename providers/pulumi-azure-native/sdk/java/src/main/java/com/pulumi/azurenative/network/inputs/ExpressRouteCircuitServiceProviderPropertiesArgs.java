@@ -27,7 +27,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
     @Import(name="bandwidthInMbps")
       private final @Nullable Output<Integer> bandwidthInMbps;
 
-    public Output<Integer> getBandwidthInMbps() {
+    public Output<Integer> bandwidthInMbps() {
         return this.bandwidthInMbps == null ? Codegen.empty() : this.bandwidthInMbps;
     }
 
@@ -38,7 +38,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
     @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
 
-    public Output<String> getPeeringLocation() {
+    public Output<String> peeringLocation() {
         return this.peeringLocation == null ? Codegen.empty() : this.peeringLocation;
     }
 
@@ -49,7 +49,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends com.
     @Import(name="serviceProviderName")
       private final @Nullable Output<String> serviceProviderName;
 
-    public Output<String> getServiceProviderName() {
+    public Output<String> serviceProviderName() {
         return this.serviceProviderName == null ? Codegen.empty() : this.serviceProviderName;
     }
 

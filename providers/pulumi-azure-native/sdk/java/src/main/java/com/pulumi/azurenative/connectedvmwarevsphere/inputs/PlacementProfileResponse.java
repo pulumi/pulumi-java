@@ -25,7 +25,7 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="clusterId")
       private final @Nullable String clusterId;
 
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
     }
 
@@ -36,7 +36,7 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="datastoreId")
       private final @Nullable String datastoreId;
 
-    public Optional<String> getDatastoreId() {
+    public Optional<String> datastoreId() {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
@@ -47,7 +47,7 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostId")
       private final @Nullable String hostId;
 
-    public Optional<String> getHostId() {
+    public Optional<String> hostId() {
         return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
     }
 
@@ -58,7 +58,7 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourcePoolId")
       private final @Nullable String resourcePoolId;
 
-    public Optional<String> getResourcePoolId() {
+    public Optional<String> resourcePoolId() {
         return this.resourcePoolId == null ? Optional.empty() : Optional.ofNullable(this.resourcePoolId);
     }
 

@@ -47,28 +47,28 @@ public final class DatasetResponseSqlDataPath {
      * SQL query timeout. Unit in seconds.
      * 
     */
-    public Double getQueryTimeout() {
+    public Double queryTimeout() {
         return this.queryTimeout;
     }
     /**
      * SQL query
      * 
     */
-    public String getSqlQuery() {
+    public String sqlQuery() {
         return this.sqlQuery;
     }
     /**
      * SQL storedProcedure name
      * 
     */
-    public String getSqlStoredProcedureName() {
+    public String sqlStoredProcedureName() {
         return this.sqlStoredProcedureName;
     }
     /**
      * SQL table name
      * 
     */
-    public String getSqlTableName() {
+    public String sqlTableName() {
         return this.sqlTableName;
     }
 

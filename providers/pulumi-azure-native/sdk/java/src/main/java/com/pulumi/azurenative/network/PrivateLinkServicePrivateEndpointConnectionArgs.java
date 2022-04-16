@@ -23,7 +23,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends com.p
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends com.p
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends com.p
     @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
 
-    public Output<String> getPeConnectionName() {
+    public Output<String> peConnectionName() {
         return this.peConnectionName == null ? Codegen.empty() : this.peConnectionName;
     }
 
@@ -56,7 +56,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends com.p
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -67,7 +67,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends com.p
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends com.p
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

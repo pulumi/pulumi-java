@@ -26,7 +26,7 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -37,7 +37,7 @@ public final class ImageDiskReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="lun")
       private final @Nullable Integer lun;
 
-    public Optional<Integer> getLun() {
+    public Optional<Integer> lun() {
         return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
     }
 

@@ -26,7 +26,7 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn", required=true)
       private final String fqdn;
 
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
 
@@ -37,7 +37,7 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="relativeName")
       private final @Nullable String relativeName;
 
-    public Optional<String> getRelativeName() {
+    public Optional<String> relativeName() {
         return this.relativeName == null ? Optional.empty() : Optional.ofNullable(this.relativeName);
     }
 
@@ -48,7 +48,7 @@ public final class DnsConfigResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ttl")
       private final @Nullable Double ttl;
 
-    public Optional<Double> getTtl() {
+    public Optional<Double> ttl() {
         return this.ttl == null ? Optional.empty() : Optional.ofNullable(this.ttl);
     }
 

@@ -25,7 +25,7 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="configurationStatus")
       private final @Nullable String configurationStatus;
 
-    public Optional<String> getConfigurationStatus() {
+    public Optional<String> configurationStatus() {
         return this.configurationStatus == null ? Optional.empty() : Optional.ofNullable(this.configurationStatus);
     }
 
@@ -36,7 +36,7 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="enforcementSupport")
       private final @Nullable String enforcementSupport;
 
-    public Optional<String> getEnforcementSupport() {
+    public Optional<String> enforcementSupport() {
         return this.enforcementSupport == null ? Optional.empty() : Optional.ofNullable(this.enforcementSupport);
     }
 
@@ -47,7 +47,7 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="recommendationAction")
       private final @Nullable String recommendationAction;
 
-    public Optional<String> getRecommendationAction() {
+    public Optional<String> recommendationAction() {
         return this.recommendationAction == null ? Optional.empty() : Optional.ofNullable(this.recommendationAction);
     }
 
@@ -58,7 +58,7 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

@@ -32,14 +32,14 @@ public final class AS2ErrorSettingsResponse {
      * The value indicating whether to resend message If MDN is not received.
      * 
     */
-    public Boolean getResendIfMDNNotReceived() {
+    public Boolean resendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
     }
     /**
      * The value indicating whether to suspend duplicate message.
      * 
     */
-    public Boolean getSuspendDuplicateMessage() {
+    public Boolean suspendDuplicateMessage() {
         return this.suspendDuplicateMessage;
     }
 

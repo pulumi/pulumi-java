@@ -26,7 +26,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
@@ -37,7 +37,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="baseRequestId")
       private final @Nullable Object baseRequestId;
 
-    public Optional<Object> getBaseRequestId() {
+    public Optional<Object> baseRequestId() {
         return this.baseRequestId == null ? Optional.empty() : Optional.ofNullable(this.baseRequestId);
     }
 
@@ -48,7 +48,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="customRfcReadTableFunctionModule")
       private final @Nullable Object customRfcReadTableFunctionModule;
 
-    public Optional<Object> getCustomRfcReadTableFunctionModule() {
+    public Optional<Object> customRfcReadTableFunctionModule() {
         return this.customRfcReadTableFunctionModule == null ? Optional.empty() : Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
 
@@ -59,7 +59,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -70,7 +70,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="excludeLastRequest")
       private final @Nullable Object excludeLastRequest;
 
-    public Optional<Object> getExcludeLastRequest() {
+    public Optional<Object> excludeLastRequest() {
         return this.excludeLastRequest == null ? Optional.empty() : Optional.ofNullable(this.excludeLastRequest);
     }
 
@@ -81,7 +81,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -92,7 +92,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
-    public Optional<Object> getQueryTimeout() {
+    public Optional<Object> queryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
@@ -103,7 +103,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sapDataColumnDelimiter")
       private final @Nullable Object sapDataColumnDelimiter;
 
-    public Optional<Object> getSapDataColumnDelimiter() {
+    public Optional<Object> sapDataColumnDelimiter() {
         return this.sapDataColumnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.sapDataColumnDelimiter);
     }
 
@@ -114,7 +114,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -125,7 +125,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -137,7 +137,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

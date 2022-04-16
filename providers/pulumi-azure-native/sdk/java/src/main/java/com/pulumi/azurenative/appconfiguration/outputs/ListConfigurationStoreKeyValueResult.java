@@ -81,14 +81,14 @@ public final class ListConfigurationStoreKeyValueResult {
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * An ETag indicating the state of a key-value within a configuration store.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
@@ -96,7 +96,7 @@ public final class ListConfigurationStoreKeyValueResult {
      * The key is used in unison with the label to uniquely identify a key-value.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -104,14 +104,14 @@ public final class ListConfigurationStoreKeyValueResult {
      * The label is used in unison with the key to uniquely identify a key-value.
      * 
     */
-    public String getLabel() {
+    public String label() {
         return this.label;
     }
     /**
      * The last time a modifying operation was performed on the given key-value.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
@@ -119,21 +119,21 @@ public final class ListConfigurationStoreKeyValueResult {
      * A locked key-value may not be modified until it is unlocked.
      * 
     */
-    public Boolean getLocked() {
+    public Boolean locked() {
         return this.locked;
     }
     /**
      * A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The value of the key-value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

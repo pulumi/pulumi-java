@@ -46,7 +46,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -60,7 +60,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The idle timeout of the nat gateway.
      * 
      */
-    public Output</* @Nullable */ Integer> getIdleTimeoutInMinutes() {
+    public Output</* @Nullable */ Integer> idleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes;
     }
     /**
@@ -74,7 +74,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the NAT gateway resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +116,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return An array of public ip addresses associated with the nat gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> getPublicIpAddresses() {
+    public Output</* @Nullable */ List<SubResourceResponse>> publicIpAddresses() {
         return this.publicIpAddresses;
     }
     /**
@@ -130,7 +130,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return An array of public ip prefixes associated with the nat gateway resource.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> getPublicIpPrefixes() {
+    public Output</* @Nullable */ List<SubResourceResponse>> publicIpPrefixes() {
         return this.publicIpPrefixes;
     }
     /**
@@ -144,7 +144,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The resource GUID property of the NAT gateway resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -158,7 +158,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return The nat gateway SKU.
      * 
      */
-    public Output</* @Nullable */ NatGatewaySkuResponse> getSku() {
+    public Output</* @Nullable */ NatGatewaySkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -172,7 +172,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return An array of references to the subnets using this nat gateway resource.
      * 
      */
-    public Output<List<SubResourceResponse>> getSubnets() {
+    public Output<List<SubResourceResponse>> subnets() {
         return this.subnets;
     }
     /**
@@ -186,7 +186,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -200,7 +200,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -214,7 +214,7 @@ public class NatGateway extends com.pulumi.resources.CustomResource {
      * @return A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

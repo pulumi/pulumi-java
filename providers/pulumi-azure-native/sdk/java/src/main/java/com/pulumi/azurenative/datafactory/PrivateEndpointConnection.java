@@ -43,7 +43,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Etag identifies change in the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Core resource properties
      * 
      */
-    public Output<RemotePrivateEndpointConnectionResponse> getProperties() {
+    public Output<RemotePrivateEndpointConnectionResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

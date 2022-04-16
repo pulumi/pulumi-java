@@ -25,7 +25,7 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="end")
       private final @Nullable Integer end;
 
-    public Optional<Integer> getEnd() {
+    public Optional<Integer> end() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
     }
 
@@ -36,7 +36,7 @@ public final class QosPortRangeResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="start")
       private final @Nullable Integer start;
 
-    public Optional<Integer> getStart() {
+    public Optional<Integer> start() {
         return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
     }
 

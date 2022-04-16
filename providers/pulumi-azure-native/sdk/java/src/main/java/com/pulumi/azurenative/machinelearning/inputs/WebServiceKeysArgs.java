@@ -26,7 +26,7 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="primary")
       private final @Nullable Output<String> primary;
 
-    public Output<String> getPrimary() {
+    public Output<String> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 
@@ -37,7 +37,7 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secondary")
       private final @Nullable Output<String> secondary;
 
-    public Output<String> getSecondary() {
+    public Output<String> secondary() {
         return this.secondary == null ? Codegen.empty() : this.secondary;
     }
 

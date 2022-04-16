@@ -28,7 +28,7 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> getGroupIds() {
+    public Output<List<String>> groupIds() {
         return this.groupIds == null ? Codegen.empty() : this.groupIds;
     }
 
@@ -39,7 +39,7 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -50,7 +50,7 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
@@ -72,7 +72,7 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="privateLinkServiceId")
       private final @Nullable Output<String> privateLinkServiceId;
 
-    public Output<String> getPrivateLinkServiceId() {
+    public Output<String> privateLinkServiceId() {
         return this.privateLinkServiceId == null ? Codegen.empty() : this.privateLinkServiceId;
     }
 
@@ -83,7 +83,7 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 

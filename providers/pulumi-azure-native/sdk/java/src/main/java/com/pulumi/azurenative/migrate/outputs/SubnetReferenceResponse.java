@@ -34,14 +34,14 @@ public final class SubnetReferenceResponse {
      * Gets the name of the proxy resource on the target side.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
     */
-    public String getSourceArmResourceId() {
+    public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 

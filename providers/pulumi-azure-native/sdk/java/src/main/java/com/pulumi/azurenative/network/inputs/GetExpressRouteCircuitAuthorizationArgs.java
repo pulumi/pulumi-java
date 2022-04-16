@@ -19,7 +19,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
     @Import(name="authorizationName", required=true)
       private final String authorizationName;
 
-    public String getAuthorizationName() {
+    public String authorizationName() {
         return this.authorizationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
     @Import(name="circuitName", required=true)
       private final String circuitName;
 
-    public String getCircuitName() {
+    public String circuitName() {
         return this.circuitName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExpressRouteCircuitAuthorizationArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

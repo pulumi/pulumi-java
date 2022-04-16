@@ -19,7 +19,7 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="autoscaleSettingName", required=true)
       private final String autoscaleSettingName;
 
-    public String getAutoscaleSettingName() {
+    public String autoscaleSettingName() {
         return this.autoscaleSettingName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

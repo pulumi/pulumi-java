@@ -32,14 +32,14 @@ public final class CacheActiveDirectorySettingsResponseCredentials {
      * Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

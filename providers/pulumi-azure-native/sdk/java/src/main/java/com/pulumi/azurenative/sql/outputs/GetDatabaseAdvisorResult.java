@@ -97,77 +97,77 @@ public final class GetDatabaseAdvisorResult {
      * Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
      * 
     */
-    public String getAdvisorStatus() {
+    public String advisorStatus() {
         return this.advisorStatus;
     }
     /**
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
      * 
     */
-    public String getAutoExecuteStatus() {
+    public String autoExecuteStatus() {
         return this.autoExecuteStatus;
     }
     /**
      * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
      * 
     */
-    public String getAutoExecuteStatusInheritedFrom() {
+    public String autoExecuteStatusInheritedFrom() {
         return this.autoExecuteStatusInheritedFrom;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource kind.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Gets the time when the current resource was analyzed for recommendations by this advisor.
      * 
     */
-    public String getLastChecked() {
+    public String lastChecked() {
         return this.lastChecked;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
      * 
     */
-    public String getRecommendationsStatus() {
+    public String recommendationsStatus() {
         return this.recommendationsStatus;
     }
     /**
      * Gets the recommended actions for this advisor.
      * 
     */
-    public List<RecommendedActionResponse> getRecommendedActions() {
+    public List<RecommendedActionResponse> recommendedActions() {
         return this.recommendedActions;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

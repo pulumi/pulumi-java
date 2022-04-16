@@ -45,7 +45,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Modified whenever there is a change in the state of private endpoint connection.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Azure location of the key vault resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Name of the key vault resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Properties of the private endpoint object.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -101,7 +101,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Approval state of the private link connection.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -115,7 +115,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Provisioning state of the private endpoint connection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -129,7 +129,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Tags assigned to the key vault resource.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Resource type of the key vault resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

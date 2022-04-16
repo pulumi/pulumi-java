@@ -23,7 +23,7 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -34,7 +34,7 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineRunName")
       private final @Nullable Output<String> pipelineRunName;
 
-    public Output<String> getPipelineRunName() {
+    public Output<String> pipelineRunName() {
         return this.pipelineRunName == null ? Codegen.empty() : this.pipelineRunName;
     }
 
@@ -45,7 +45,7 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -56,7 +56,7 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="request")
       private final @Nullable Output<PipelineRunRequestArgs> request;
 
-    public Output<PipelineRunRequestArgs> getRequest() {
+    public Output<PipelineRunRequestArgs> request() {
         return this.request == null ? Codegen.empty() : this.request;
     }
 
@@ -67,7 +67,7 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

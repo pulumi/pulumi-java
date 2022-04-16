@@ -44,21 +44,21 @@ public final class BuilderPropertiesResponse {
      * Builder buildpack groups.
      * 
     */
-    public List<BuildpacksGroupPropertiesResponse> getBuildpackGroups() {
+    public List<BuildpacksGroupPropertiesResponse> buildpackGroups() {
         return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
     }
     /**
      * Builder provision status.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Builder cluster stack property.
      * 
     */
-    public Optional<StackPropertiesResponse> getStack() {
+    public Optional<StackPropertiesResponse> stack() {
         return Optional.ofNullable(this.stack);
     }
 

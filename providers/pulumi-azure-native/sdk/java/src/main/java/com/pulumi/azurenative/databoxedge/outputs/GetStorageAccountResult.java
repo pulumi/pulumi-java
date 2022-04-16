@@ -92,70 +92,70 @@ public final class GetStorageAccountResult {
      * BlobEndpoint of Storage Account
      * 
     */
-    public String getBlobEndpoint() {
+    public String blobEndpoint() {
         return this.blobEndpoint;
     }
     /**
      * The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
      * 
     */
-    public Integer getContainerCount() {
+    public Integer containerCount() {
         return this.containerCount;
     }
     /**
      * Data policy of the storage Account.
      * 
     */
-    public String getDataPolicy() {
+    public String dataPolicy() {
         return this.dataPolicy;
     }
     /**
      * Description for the storage Account.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Storage Account Credential Id
      * 
     */
-    public Optional<String> getStorageAccountCredentialId() {
+    public Optional<String> storageAccountCredentialId() {
         return Optional.ofNullable(this.storageAccountCredentialId);
     }
     /**
      * Current status of the storage account
      * 
     */
-    public Optional<String> getStorageAccountStatus() {
+    public Optional<String> storageAccountStatus() {
         return Optional.ofNullable(this.storageAccountStatus);
     }
     /**
      * StorageAccount object on ASE device
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -44,21 +44,21 @@ public final class LabelCategoryResponse {
      * Indicates whether it is allowed to select multiple classes in this category.
      * 
     */
-    public Optional<Boolean> getAllowMultiSelect() {
+    public Optional<Boolean> allowMultiSelect() {
         return Optional.ofNullable(this.allowMultiSelect);
     }
     /**
      * Dictionary of label classes in this category.
      * 
     */
-    public Map<String,LabelClassResponse> getClasses() {
+    public Map<String,LabelClassResponse> classes() {
         return this.classes;
     }
     /**
      * Display name of the label category.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 

@@ -28,7 +28,7 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -39,7 +39,7 @@ public final class ExtendedLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<Either<String,ExtendedLocationTypes>> type;
 
-    public Output<Either<String,ExtendedLocationTypes>> getType() {
+    public Output<Either<String,ExtendedLocationTypes>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

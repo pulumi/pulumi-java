@@ -27,7 +27,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distro")
       private final @Nullable Output<Either<String,Distro>> distro;
 
-    public Output<Either<String,Distro>> getDistro() {
+    public Output<Either<String,Distro>> distro() {
         return this.distro == null ? Codegen.empty() : this.distro;
     }
 
@@ -38,7 +38,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -49,7 +49,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfig")
       private final @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
-    public Output<AppliancePropertiesInfrastructureConfigArgs> getInfrastructureConfig() {
+    public Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig() {
         return this.infrastructureConfig == null ? Codegen.empty() : this.infrastructureConfig;
     }
 
@@ -60,7 +60,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -71,7 +71,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -82,7 +82,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -104,7 +104,7 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

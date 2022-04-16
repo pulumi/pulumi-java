@@ -27,7 +27,7 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="expirationDate", required=true)
       private final String expirationDate;
 
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
 
@@ -38,7 +38,7 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="frequency", required=true)
       private final String frequency;
 
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
 
@@ -49,7 +49,7 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="interval")
       private final @Nullable Integer interval;
 
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
@@ -60,7 +60,7 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="weekDays")
       private final @Nullable List<String> weekDays;
 
-    public List<String> getWeekDays() {
+    public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }
 

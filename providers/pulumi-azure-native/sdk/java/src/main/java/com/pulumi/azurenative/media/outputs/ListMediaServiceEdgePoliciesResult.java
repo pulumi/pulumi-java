@@ -18,7 +18,7 @@ public final class ListMediaServiceEdgePoliciesResult {
         this.usageDataCollectionPolicy = usageDataCollectionPolicy;
     }
 
-    public Optional<EdgeUsageDataCollectionPolicyResponse> getUsageDataCollectionPolicy() {
+    public Optional<EdgeUsageDataCollectionPolicyResponse> usageDataCollectionPolicy() {
         return Optional.ofNullable(this.usageDataCollectionPolicy);
     }
 

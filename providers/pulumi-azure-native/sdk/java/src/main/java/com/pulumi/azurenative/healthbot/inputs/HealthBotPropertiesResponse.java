@@ -23,7 +23,7 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="botManagementPortalLink", required=true)
       private final String botManagementPortalLink;
 
-    public String getBotManagementPortalLink() {
+    public String botManagementPortalLink() {
         return this.botManagementPortalLink;
     }
 
@@ -34,7 +34,7 @@ public final class HealthBotPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

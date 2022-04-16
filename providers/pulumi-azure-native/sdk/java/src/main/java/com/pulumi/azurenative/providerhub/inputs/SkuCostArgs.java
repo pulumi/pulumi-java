@@ -19,21 +19,21 @@ public final class SkuCostArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedUnit")
       private final @Nullable Output<String> extendedUnit;
 
-    public Output<String> getExtendedUnit() {
+    public Output<String> extendedUnit() {
         return this.extendedUnit == null ? Codegen.empty() : this.extendedUnit;
     }
 
     @Import(name="meterId", required=true)
       private final Output<String> meterId;
 
-    public Output<String> getMeterId() {
+    public Output<String> meterId() {
         return this.meterId;
     }
 
     @Import(name="quantity")
       private final @Nullable Output<Integer> quantity;
 
-    public Output<Integer> getQuantity() {
+    public Output<Integer> quantity() {
         return this.quantity == null ? Codegen.empty() : this.quantity;
     }
 

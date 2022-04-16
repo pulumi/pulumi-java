@@ -27,7 +27,7 @@ public final class MongoIndexKeysArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> getKeys() {
+    public Output<List<String>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 

@@ -16,7 +16,7 @@ public final class ArmIdWrapperResponse {
         this.id = id;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

@@ -46,7 +46,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return List of managed instance pairs in the failover group.
      * 
      */
-    public Output<List<ManagedInstancePairInfoResponse>> getManagedInstancePairs() {
+    public Output<List<ManagedInstancePairInfoResponse>> managedInstancePairs() {
         return this.managedInstancePairs;
     }
     /**
@@ -60,7 +60,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Partner region information for the failover group.
      * 
      */
-    public Output<List<PartnerRegionInfoResponse>> getPartnerRegions() {
+    public Output<List<PartnerRegionInfoResponse>> partnerRegions() {
         return this.partnerRegions;
     }
     /**
@@ -88,7 +88,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Read-only endpoint of the failover group instance.
      * 
      */
-    public Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
+    public Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return this.readOnlyEndpoint;
     }
     /**
@@ -102,7 +102,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Read-write endpoint of the failover group instance.
      * 
      */
-    public Output<InstanceFailoverGroupReadWriteEndpointResponse> getReadWriteEndpoint() {
+    public Output<InstanceFailoverGroupReadWriteEndpointResponse> readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
@@ -116,7 +116,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Local replication role of the failover group instance.
      * 
      */
-    public Output<String> getReplicationRole() {
+    public Output<String> replicationRole() {
         return this.replicationRole;
     }
     /**
@@ -130,7 +130,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Replication state of the failover group instance.
      * 
      */
-    public Output<String> getReplicationState() {
+    public Output<String> replicationState() {
         return this.replicationState;
     }
     /**
@@ -144,7 +144,7 @@ public class InstanceFailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

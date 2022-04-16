@@ -43,7 +43,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The folder containing Azure Resource Manager templates.
      * 
      */
-    public Output</* @Nullable */ String> getArmTemplateFolderPath() {
+    public Output</* @Nullable */ String> armTemplateFolderPath() {
         return this.armTemplateFolderPath;
     }
     /**
@@ -57,7 +57,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source's branch reference.
      * 
      */
-    public Output</* @Nullable */ String> getBranchRef() {
+    public Output</* @Nullable */ String> branchRef() {
         return this.branchRef;
     }
     /**
@@ -71,7 +71,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source's creation date.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -85,7 +85,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source's display name.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -99,7 +99,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The folder containing artifacts.
      * 
      */
-    public Output</* @Nullable */ String> getFolderPath() {
+    public Output</* @Nullable */ String> folderPath() {
         return this.folderPath;
     }
     /**
@@ -113,7 +113,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -127,7 +127,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +141,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -155,7 +155,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The security token to authenticate to the artifact source.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityToken() {
+    public Output</* @Nullable */ String> securityToken() {
         return this.securityToken;
     }
     /**
@@ -169,7 +169,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source's type.
      * 
      */
-    public Output</* @Nullable */ String> getSourceType() {
+    public Output</* @Nullable */ String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -183,7 +183,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return Indicates if the artifact source is enabled (values: Enabled, Disabled).
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -197,7 +197,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -211,7 +211,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -225,7 +225,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -239,7 +239,7 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source's URI.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
 

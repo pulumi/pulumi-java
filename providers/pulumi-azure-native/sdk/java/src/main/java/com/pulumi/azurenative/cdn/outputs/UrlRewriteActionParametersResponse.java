@@ -45,24 +45,24 @@ public final class UrlRewriteActionParametersResponse {
      * Define the relative URL to which the above requests will be rewritten by.
      * 
     */
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Whether to preserve unmatched path. Default value is true.
      * 
     */
-    public Optional<Boolean> getPreserveUnmatchedPath() {
+    public Optional<Boolean> preserveUnmatchedPath() {
         return Optional.ofNullable(this.preserveUnmatchedPath);
     }
     /**
      * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
      * 
     */
-    public String getSourcePattern() {
+    public String sourcePattern() {
         return this.sourcePattern;
     }
 

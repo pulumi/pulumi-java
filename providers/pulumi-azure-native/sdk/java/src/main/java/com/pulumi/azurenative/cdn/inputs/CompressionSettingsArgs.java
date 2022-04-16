@@ -28,7 +28,7 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="contentTypesToCompress")
       private final @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Output<List<String>> getContentTypesToCompress() {
+    public Output<List<String>> contentTypesToCompress() {
         return this.contentTypesToCompress == null ? Codegen.empty() : this.contentTypesToCompress;
     }
 
@@ -39,7 +39,7 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="isCompressionEnabled")
       private final @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Output<Boolean> getIsCompressionEnabled() {
+    public Output<Boolean> isCompressionEnabled() {
         return this.isCompressionEnabled == null ? Codegen.empty() : this.isCompressionEnabled;
     }
 

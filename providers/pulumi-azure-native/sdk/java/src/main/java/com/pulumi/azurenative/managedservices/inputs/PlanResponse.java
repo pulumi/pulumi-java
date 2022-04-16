@@ -23,7 +23,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="product", required=true)
       private final String product;
 
-    public String getProduct() {
+    public String product() {
         return this.product;
     }
 
@@ -45,7 +45,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="publisher", required=true)
       private final String publisher;
 
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
 
@@ -56,7 +56,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

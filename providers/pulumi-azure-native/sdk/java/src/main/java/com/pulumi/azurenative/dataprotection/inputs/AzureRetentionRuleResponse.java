@@ -24,21 +24,21 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
     @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
 
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
     }
 
     @Import(name="lifecycles", required=true)
       private final List<SourceLifeCycleResponse> lifecycles;
 
-    public List<SourceLifeCycleResponse> getLifecycles() {
+    public List<SourceLifeCycleResponse> lifecycles() {
         return this.lifecycles;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

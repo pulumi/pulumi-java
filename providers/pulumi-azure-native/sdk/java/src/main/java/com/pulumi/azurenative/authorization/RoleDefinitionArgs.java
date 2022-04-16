@@ -24,7 +24,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="assignableScopes")
       private final @Nullable Output<List<String>> assignableScopes;
 
-    public Output<List<String>> getAssignableScopes() {
+    public Output<List<String>> assignableScopes() {
         return this.assignableScopes == null ? Codegen.empty() : this.assignableScopes;
     }
 
@@ -35,7 +35,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="permissions")
       private final @Nullable Output<List<PermissionArgs>> permissions;
 
-    public Output<List<PermissionArgs>> getPermissions() {
+    public Output<List<PermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -57,7 +57,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
@@ -68,7 +68,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -79,7 +79,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleType")
       private final @Nullable Output<String> roleType;
 
-    public Output<String> getRoleType() {
+    public Output<String> roleType() {
         return this.roleType == null ? Codegen.empty() : this.roleType;
     }
 
@@ -90,7 +90,7 @@ public final class RoleDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

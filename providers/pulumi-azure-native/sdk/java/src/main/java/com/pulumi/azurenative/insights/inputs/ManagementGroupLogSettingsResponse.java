@@ -24,7 +24,7 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
     @Import(name="category", required=true)
       private final String category;
 
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
 
@@ -35,7 +35,7 @@ public final class ManagementGroupLogSettingsResponse extends com.pulumi.resourc
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

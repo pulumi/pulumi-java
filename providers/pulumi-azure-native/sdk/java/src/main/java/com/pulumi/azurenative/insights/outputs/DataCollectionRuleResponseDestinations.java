@@ -36,14 +36,14 @@ public final class DataCollectionRuleResponseDestinations {
      * Azure Monitor Metrics destination.
      * 
     */
-    public Optional<DestinationsSpecResponseAzureMonitorMetrics> getAzureMonitorMetrics() {
+    public Optional<DestinationsSpecResponseAzureMonitorMetrics> azureMonitorMetrics() {
         return Optional.ofNullable(this.azureMonitorMetrics);
     }
     /**
      * List of Log Analytics destinations.
      * 
     */
-    public List<LogAnalyticsDestinationResponse> getLogAnalytics() {
+    public List<LogAnalyticsDestinationResponse> logAnalytics() {
         return this.logAnalytics == null ? List.of() : this.logAnalytics;
     }
 

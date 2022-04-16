@@ -28,7 +28,7 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
     @Import(name="cert")
       private final @Nullable Output<String> cert;
 
-    public Output<String> getCert() {
+    public Output<String> cert() {
         return this.cert == null ? Codegen.empty() : this.cert;
     }
 
@@ -39,7 +39,7 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
     @Import(name="ledgerRoleName")
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
-    public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {
+    public Output<Either<String,LedgerRoleName>> ledgerRoleName() {
         return this.ledgerRoleName == null ? Codegen.empty() : this.ledgerRoleName;
     }
 

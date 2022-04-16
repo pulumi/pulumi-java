@@ -27,7 +27,7 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="authorizations", required=true)
       private final List<AuthorizationResponse> authorizations;
 
-    public List<AuthorizationResponse> getAuthorizations() {
+    public List<AuthorizationResponse> authorizations() {
         return this.authorizations;
     }
 
@@ -38,7 +38,7 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="managedByTenantId", required=true)
       private final String managedByTenantId;
 
-    public String getManagedByTenantId() {
+    public String managedByTenantId() {
         return this.managedByTenantId;
     }
 
@@ -60,7 +60,7 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="managedByTenantName", required=true)
       private final String managedByTenantName;
 
-    public String getManagedByTenantName() {
+    public String managedByTenantName() {
         return this.managedByTenantName;
     }
 
@@ -71,7 +71,7 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -82,7 +82,7 @@ public final class RegistrationDefinitionPropertiesResponse extends com.pulumi.r
     @Import(name="registrationDefinitionName")
       private final @Nullable String registrationDefinitionName;
 
-    public Optional<String> getRegistrationDefinitionName() {
+    public Optional<String> registrationDefinitionName() {
         return this.registrationDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.registrationDefinitionName);
     }
 

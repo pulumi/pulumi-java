@@ -35,14 +35,14 @@ public final class ListSpacecraftAvailableContactsResult {
      * The URL to get the next set of results.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * A list of available contacts
      * 
     */
-    public List<AvailableContactsResponse> getValue() {
+    public List<AvailableContactsResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

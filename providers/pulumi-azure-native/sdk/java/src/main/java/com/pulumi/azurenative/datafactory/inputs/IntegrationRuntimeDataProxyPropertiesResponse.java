@@ -26,7 +26,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
     @Import(name="connectVia")
       private final @Nullable EntityReferenceResponse connectVia;
 
-    public Optional<EntityReferenceResponse> getConnectVia() {
+    public Optional<EntityReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -37,7 +37,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
     @Import(name="stagingLinkedService")
       private final @Nullable EntityReferenceResponse stagingLinkedService;
 
-    public Optional<EntityReferenceResponse> getStagingLinkedService() {
+    public Optional<EntityReferenceResponse> stagingLinkedService() {
         return this.stagingLinkedService == null ? Optional.empty() : Optional.ofNullable(this.stagingLinkedService);
     }
 

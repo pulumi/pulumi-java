@@ -23,7 +23,7 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elevationLevel")
       private final @Nullable String elevationLevel;
 
-    public Optional<String> getElevationLevel() {
+    public Optional<String> elevationLevel() {
         return this.elevationLevel == null ? Optional.empty() : Optional.ofNullable(this.elevationLevel);
     }
 
@@ -34,21 +34,21 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxUserConfiguration")
       private final @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
 
-    public Optional<LinuxUserConfigurationResponse> getLinuxUserConfiguration() {
+    public Optional<LinuxUserConfigurationResponse> linuxUserConfiguration() {
         return this.linuxUserConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxUserConfiguration);
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -59,7 +59,7 @@ public final class UserAccountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="windowsUserConfiguration")
       private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
-    public Optional<WindowsUserConfigurationResponse> getWindowsUserConfiguration() {
+    public Optional<WindowsUserConfigurationResponse> windowsUserConfiguration() {
         return this.windowsUserConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsUserConfiguration);
     }
 

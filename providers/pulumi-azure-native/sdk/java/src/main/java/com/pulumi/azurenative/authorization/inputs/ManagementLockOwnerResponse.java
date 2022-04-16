@@ -25,7 +25,7 @@ public final class ManagementLockOwnerResponse extends com.pulumi.resources.Invo
     @Import(name="applicationId")
       private final @Nullable String applicationId;
 
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 

@@ -87,63 +87,63 @@ public final class GetStorageInsightConfigResult {
      * The names of the blob containers that the workspace should read
      * 
     */
-    public List<String> getContainers() {
+    public List<String> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
      * The ETag of the storage insight.
      * 
     */
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The status of the storage insight
      * 
     */
-    public StorageInsightStatusResponse getStatus() {
+    public StorageInsightStatusResponse status() {
         return this.status;
     }
     /**
      * The storage account connection details
      * 
     */
-    public StorageAccountResponse getStorageAccount() {
+    public StorageAccountResponse storageAccount() {
         return this.storageAccount;
     }
     /**
      * The names of the Azure tables that the workspace should read
      * 
     */
-    public List<String> getTables() {
+    public List<String> tables() {
         return this.tables == null ? List.of() : this.tables;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

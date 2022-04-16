@@ -178,35 +178,35 @@ public final class SweepJobResponse {
      * Type of the hyperparameter sampling algorithms
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * Compute binding for the job.
      * 
     */
-    public ComputeConfigurationResponse getCompute() {
+    public ComputeConfigurationResponse compute() {
         return this.compute;
     }
     /**
      * The asset description text.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Early termination policies enable canceling poor-performing runs before they complete.
      * 
     */
-    public Optional<Object> getEarlyTermination() {
+    public Optional<Object> earlyTermination() {
         return Optional.ofNullable(this.earlyTermination);
     }
     /**
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
      * 
     */
-    public Optional<String> getExperimentName() {
+    public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
     /**
@@ -214,7 +214,7 @@ public final class SweepJobResponse {
      * Defaults to AmlToken if null.
      * 
     */
-    public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> getIdentity() {
+    public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
@@ -222,7 +222,7 @@ public final class SweepJobResponse {
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
      * 
     */
-    public Map<String,JobEndpointResponse> getInteractionEndpoints() {
+    public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
     /**
@@ -230,35 +230,35 @@ public final class SweepJobResponse {
      * Expected value is 'Sweep'.
      * 
     */
-    public String getJobType() {
+    public String jobType() {
         return this.jobType;
     }
     /**
      * An upper bound on the number of trials performed in parallel.
      * 
     */
-    public Optional<Integer> getMaxConcurrentTrials() {
+    public Optional<Integer> maxConcurrentTrials() {
         return Optional.ofNullable(this.maxConcurrentTrials);
     }
     /**
      * An upper bound on the number of trials to perform.
      * 
     */
-    public Optional<Integer> getMaxTotalTrials() {
+    public Optional<Integer> maxTotalTrials() {
         return Optional.ofNullable(this.maxTotalTrials);
     }
     /**
      * Optimization objective.
      * 
     */
-    public ObjectiveResponse getObjective() {
+    public ObjectiveResponse objective() {
         return this.objective;
     }
     /**
      * Location of the job output logs and artifacts.
      * 
     */
-    public JobOutputResponse getOutput() {
+    public JobOutputResponse output() {
         return this.output;
     }
     /**
@@ -266,56 +266,56 @@ public final class SweepJobResponse {
      * Private preview feature and only available to users on the allow list.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The asset property dictionary.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Specifies the job provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
     */
-    public Map<String,Object> getSearchSpace() {
+    public Map<String,Object> searchSpace() {
         return this.searchSpace;
     }
     /**
      * The status of a job.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Trial component definition.
      * 
     */
-    public Optional<TrialComponentResponse> getTrial() {
+    public Optional<TrialComponentResponse> trial() {
         return Optional.ofNullable(this.trial);
     }
 

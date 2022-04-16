@@ -97,77 +97,77 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
      * First storage account connection string
      * 
     */
-    public Optional<String> getAofStorageConnectionString0() {
+    public Optional<String> aofStorageConnectionString0() {
         return Optional.ofNullable(this.aofStorageConnectionString0);
     }
     /**
      * Second storage account connection string
      * 
     */
-    public Optional<String> getAofStorageConnectionString1() {
+    public Optional<String> aofStorageConnectionString1() {
         return Optional.ofNullable(this.aofStorageConnectionString1);
     }
     /**
      * The max clients config
      * 
     */
-    public String getMaxclients() {
+    public String maxclients() {
         return this.maxclients;
     }
     /**
      * Value in megabytes reserved for fragmentation per shard
      * 
     */
-    public Optional<String> getMaxfragmentationmemoryReserved() {
+    public Optional<String> maxfragmentationmemoryReserved() {
         return Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
     /**
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
     */
-    public Optional<String> getMaxmemoryDelta() {
+    public Optional<String> maxmemoryDelta() {
         return Optional.ofNullable(this.maxmemoryDelta);
     }
     /**
      * The eviction strategy used when your data won't fit within its memory limit.
      * 
     */
-    public Optional<String> getMaxmemoryPolicy() {
+    public Optional<String> maxmemoryPolicy() {
         return Optional.ofNullable(this.maxmemoryPolicy);
     }
     /**
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
     */
-    public Optional<String> getMaxmemoryReserved() {
+    public Optional<String> maxmemoryReserved() {
         return Optional.ofNullable(this.maxmemoryReserved);
     }
     /**
      * Specifies whether the rdb backup is enabled
      * 
     */
-    public Optional<String> getRdbBackupEnabled() {
+    public Optional<String> rdbBackupEnabled() {
         return Optional.ofNullable(this.rdbBackupEnabled);
     }
     /**
      * Specifies the frequency for creating rdb backup
      * 
     */
-    public Optional<String> getRdbBackupFrequency() {
+    public Optional<String> rdbBackupFrequency() {
         return Optional.ofNullable(this.rdbBackupFrequency);
     }
     /**
      * Specifies the maximum number of snapshots for rdb backup
      * 
     */
-    public Optional<String> getRdbBackupMaxSnapshotCount() {
+    public Optional<String> rdbBackupMaxSnapshotCount() {
         return Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
     /**
      * The storage account connection string for storing rdb file
      * 
     */
-    public Optional<String> getRdbStorageConnectionString() {
+    public Optional<String> rdbStorageConnectionString() {
         return Optional.ofNullable(this.rdbStorageConnectionString);
     }
 

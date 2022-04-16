@@ -23,7 +23,7 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
     @Import(name="requestResourceType", required=true)
       private final String requestResourceType;
 
-    public String getRequestResourceType() {
+    public String requestResourceType() {
         return this.requestResourceType;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
     @Import(name="vaultCriticalOperation", required=true)
       private final String vaultCriticalOperation;
 
-    public String getVaultCriticalOperation() {
+    public String vaultCriticalOperation() {
         return this.vaultCriticalOperation;
     }
 

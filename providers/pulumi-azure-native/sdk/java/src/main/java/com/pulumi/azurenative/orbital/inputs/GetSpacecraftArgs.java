@@ -19,7 +19,7 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSpacecraftArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="spacecraftName", required=true)
       private final String spacecraftName;
 
-    public String getSpacecraftName() {
+    public String spacecraftName() {
         return this.spacecraftName;
     }
 

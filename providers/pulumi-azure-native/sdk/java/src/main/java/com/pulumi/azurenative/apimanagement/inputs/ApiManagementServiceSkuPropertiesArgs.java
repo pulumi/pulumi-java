@@ -28,7 +28,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
     @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
 
@@ -39,7 +39,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
     @Import(name="name", required=true)
       private final Output<Either<String,SkuType>> name;
 
-    public Output<Either<String,SkuType>> getName() {
+    public Output<Either<String,SkuType>> name() {
         return this.name;
     }
 

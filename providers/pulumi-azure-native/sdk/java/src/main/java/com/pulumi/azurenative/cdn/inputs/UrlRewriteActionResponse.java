@@ -25,7 +25,7 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class UrlRewriteActionResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters", required=true)
       private final UrlRewriteActionParametersResponse parameters;
 
-    public UrlRewriteActionParametersResponse getParameters() {
+    public UrlRewriteActionParametersResponse parameters() {
         return this.parameters;
     }
 

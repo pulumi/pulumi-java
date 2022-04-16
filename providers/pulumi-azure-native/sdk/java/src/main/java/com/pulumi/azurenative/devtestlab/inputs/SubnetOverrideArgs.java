@@ -29,7 +29,7 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
-    public Output<String> getLabSubnetName() {
+    public Output<String> labSubnetName() {
         return this.labSubnetName == null ? Codegen.empty() : this.labSubnetName;
     }
 
@@ -40,7 +40,7 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -51,7 +51,7 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
-    public Output<SubnetSharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
+    public Output<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Codegen.empty() : this.sharedPublicIpAddressConfiguration;
     }
 
@@ -62,7 +62,7 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="useInVmCreationPermission")
       private final @Nullable Output<Either<String,UsagePermissionType>> useInVmCreationPermission;
 
-    public Output<Either<String,UsagePermissionType>> getUseInVmCreationPermission() {
+    public Output<Either<String,UsagePermissionType>> useInVmCreationPermission() {
         return this.useInVmCreationPermission == null ? Codegen.empty() : this.useInVmCreationPermission;
     }
 
@@ -73,7 +73,7 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="usePublicIpAddressPermission")
       private final @Nullable Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission;
 
-    public Output<Either<String,UsagePermissionType>> getUsePublicIpAddressPermission() {
+    public Output<Either<String,UsagePermissionType>> usePublicIpAddressPermission() {
         return this.usePublicIpAddressPermission == null ? Codegen.empty() : this.usePublicIpAddressPermission;
     }
 
@@ -84,7 +84,7 @@ public final class SubnetOverrideArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkPoolName")
       private final @Nullable Output<String> virtualNetworkPoolName;
 
-    public Output<String> getVirtualNetworkPoolName() {
+    public Output<String> virtualNetworkPoolName() {
         return this.virtualNetworkPoolName == null ? Codegen.empty() : this.virtualNetworkPoolName;
     }
 

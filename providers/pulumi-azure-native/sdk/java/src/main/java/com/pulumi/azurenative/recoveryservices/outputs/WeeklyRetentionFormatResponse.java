@@ -34,14 +34,14 @@ public final class WeeklyRetentionFormatResponse {
      * List of days of the week.
      * 
     */
-    public List<String> getDaysOfTheWeek() {
+    public List<String> daysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
     /**
      * List of weeks of month.
      * 
     */
-    public List<String> getWeeksOfTheMonth() {
+    public List<String> weeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
     }
 

@@ -20,7 +20,7 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     @Import(name="optInHeaders")
       private final @Nullable Output<Either<String,OptInHeaderType>> optInHeaders;
 
-    public Output<Either<String,OptInHeaderType>> getOptInHeaders() {
+    public Output<Either<String,OptInHeaderType>> optInHeaders() {
         return this.optInHeaders == null ? Codegen.empty() : this.optInHeaders;
     }
 

@@ -36,14 +36,14 @@ public final class FlowAccessControlConfigurationPolicyResponse {
      * The allowed caller IP address ranges.
      * 
     */
-    public List<IpAddressRangeResponse> getAllowedCallerIpAddresses() {
+    public List<IpAddressRangeResponse> allowedCallerIpAddresses() {
         return this.allowedCallerIpAddresses == null ? List.of() : this.allowedCallerIpAddresses;
     }
     /**
      * The authentication policies for workflow.
      * 
     */
-    public Optional<OpenAuthenticationAccessPoliciesResponse> getOpenAuthenticationPolicies() {
+    public Optional<OpenAuthenticationAccessPoliciesResponse> openAuthenticationPolicies() {
         return Optional.ofNullable(this.openAuthenticationPolicies);
     }
 

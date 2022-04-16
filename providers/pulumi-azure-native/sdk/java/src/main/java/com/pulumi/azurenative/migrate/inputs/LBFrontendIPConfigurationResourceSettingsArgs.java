@@ -27,7 +27,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -39,7 +39,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -50,7 +50,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="privateIpAllocationMethod")
       private final @Nullable Output<String> privateIpAllocationMethod;
 
-    public Output<String> getPrivateIpAllocationMethod() {
+    public Output<String> privateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Codegen.empty() : this.privateIpAllocationMethod;
     }
 
@@ -61,7 +61,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="subnet")
       private final @Nullable Output<SubnetReferenceArgs> subnet;
 
-    public Output<SubnetReferenceArgs> getSubnet() {
+    public Output<SubnetReferenceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
@@ -72,7 +72,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends com.pul
     @Import(name="zones")
       private final @Nullable Output<String> zones;
 
-    public Output<String> getZones() {
+    public Output<String> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

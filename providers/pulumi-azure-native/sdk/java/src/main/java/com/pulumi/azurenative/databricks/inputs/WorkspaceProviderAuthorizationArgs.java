@@ -25,7 +25,7 @@ public final class WorkspaceProviderAuthorizationArgs extends com.pulumi.resourc
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -36,7 +36,7 @@ public final class WorkspaceProviderAuthorizationArgs extends com.pulumi.resourc
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

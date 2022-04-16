@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
-    public Optional<String> getDeleteOption() {
+    public Optional<String> deleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="dnsSettings")
       private final @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings;
 
-    public Optional<VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse> getDnsSettings() {
+    public Optional<VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse> dnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
 
-    public Optional<Boolean> getEnableAcceleratedNetworking() {
+    public Optional<Boolean> enableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="enableFpga")
       private final @Nullable Boolean enableFpga;
 
-    public Optional<Boolean> getEnableFpga() {
+    public Optional<Boolean> enableFpga() {
         return this.enableFpga == null ? Optional.empty() : Optional.ofNullable(this.enableFpga);
     }
 
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="enableIPForwarding")
       private final @Nullable Boolean enableIPForwarding;
 
-    public Optional<Boolean> getEnableIPForwarding() {
+    public Optional<Boolean> enableIPForwarding() {
         return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
     }
 
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="ipConfigurations", required=true)
       private final List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations;
 
-    public List<VirtualMachineScaleSetIPConfigurationResponse> getIpConfigurations() {
+    public List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
 
@@ -107,7 +107,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -118,7 +118,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="networkSecurityGroup")
       private final @Nullable SubResourceResponse networkSecurityGroup;
 
-    public Optional<SubResourceResponse> getNetworkSecurityGroup() {
+    public Optional<SubResourceResponse> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
     }
 
@@ -129,7 +129,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse extends co
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 

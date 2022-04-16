@@ -26,7 +26,7 @@ public final class LongTermSchedulePolicyResponse {
      * Expected value is 'LongTermSchedulePolicy'.
      * 
     */
-    public String getSchedulePolicyType() {
+    public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 

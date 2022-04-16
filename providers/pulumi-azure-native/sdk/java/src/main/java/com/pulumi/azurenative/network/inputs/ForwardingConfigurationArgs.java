@@ -30,7 +30,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="backendPool")
       private final @Nullable Output<SubResourceArgs> backendPool;
 
-    public Output<SubResourceArgs> getBackendPool() {
+    public Output<SubResourceArgs> backendPool() {
         return this.backendPool == null ? Codegen.empty() : this.backendPool;
     }
 
@@ -41,7 +41,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="cacheConfiguration")
       private final @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
 
-    public Output<CacheConfigurationArgs> getCacheConfiguration() {
+    public Output<CacheConfigurationArgs> cacheConfiguration() {
         return this.cacheConfiguration == null ? Codegen.empty() : this.cacheConfiguration;
     }
 
@@ -52,7 +52,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="customForwardingPath")
       private final @Nullable Output<String> customForwardingPath;
 
-    public Output<String> getCustomForwardingPath() {
+    public Output<String> customForwardingPath() {
         return this.customForwardingPath == null ? Codegen.empty() : this.customForwardingPath;
     }
 
@@ -63,7 +63,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="forwardingProtocol")
       private final @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
-    public Output<Either<String,FrontDoorForwardingProtocol>> getForwardingProtocol() {
+    public Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol() {
         return this.forwardingProtocol == null ? Codegen.empty() : this.forwardingProtocol;
     }
 
@@ -74,7 +74,7 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

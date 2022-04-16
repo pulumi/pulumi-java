@@ -57,40 +57,40 @@ public final class SkuSettingResponse {
         this.tier = tier;
     }
 
-    public List<SkuCapabilityResponse> getCapabilities() {
+    public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
-    public Optional<SkuSettingResponseCapacity> getCapacity() {
+    public Optional<SkuSettingResponseCapacity> capacity() {
         return Optional.ofNullable(this.capacity);
     }
-    public List<SkuCostResponse> getCosts() {
+    public List<SkuCostResponse> costs() {
         return this.costs == null ? List.of() : this.costs;
     }
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
-    public List<SkuLocationInfoResponse> getLocationInfo() {
+    public List<SkuLocationInfoResponse> locationInfo() {
         return this.locationInfo == null ? List.of() : this.locationInfo;
     }
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
-    public List<String> getRequiredQuotaIds() {
+    public List<String> requiredQuotaIds() {
         return this.requiredQuotaIds == null ? List.of() : this.requiredQuotaIds;
     }
-    public Optional<String> getSize() {
+    public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

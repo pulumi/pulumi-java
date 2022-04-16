@@ -26,7 +26,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -37,7 +37,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="customerAdminGroupId")
       private final @Nullable Output<String> customerAdminGroupId;
 
-    public Output<String> getCustomerAdminGroupId() {
+    public Output<String> customerAdminGroupId() {
         return this.customerAdminGroupId == null ? Codegen.empty() : this.customerAdminGroupId;
     }
 
@@ -49,7 +49,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -60,7 +60,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -71,7 +71,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends com.pu
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

@@ -19,7 +19,7 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
     @Import(name="providerName", required=true)
       private final String providerName;
 
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAttestationProviderArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

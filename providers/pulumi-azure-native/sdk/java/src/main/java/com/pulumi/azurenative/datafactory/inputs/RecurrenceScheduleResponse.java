@@ -28,7 +28,7 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="hours")
       private final @Nullable List<Integer> hours;
 
-    public List<Integer> getHours() {
+    public List<Integer> hours() {
         return this.hours == null ? List.of() : this.hours;
     }
 
@@ -39,7 +39,7 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="minutes")
       private final @Nullable List<Integer> minutes;
 
-    public List<Integer> getMinutes() {
+    public List<Integer> minutes() {
         return this.minutes == null ? List.of() : this.minutes;
     }
 
@@ -50,7 +50,7 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="monthDays")
       private final @Nullable List<Integer> monthDays;
 
-    public List<Integer> getMonthDays() {
+    public List<Integer> monthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
 
@@ -61,7 +61,7 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="monthlyOccurrences")
       private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
 
-    public List<RecurrenceScheduleOccurrenceResponse> getMonthlyOccurrences() {
+    public List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
 
@@ -72,7 +72,7 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="weekDays")
       private final @Nullable List<String> weekDays;
 
-    public List<String> getWeekDays() {
+    public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }
 

@@ -22,7 +22,7 @@ public final class ResourceTypeRegistrationResponse extends com.pulumi.resources
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -33,14 +33,14 @@ public final class ResourceTypeRegistrationResponse extends com.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="properties")
       private final @Nullable ResourceTypeRegistrationResponseProperties properties;
 
-    public Optional<ResourceTypeRegistrationResponseProperties> getProperties() {
+    public Optional<ResourceTypeRegistrationResponseProperties> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
@@ -51,7 +51,7 @@ public final class ResourceTypeRegistrationResponse extends com.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -36,14 +36,14 @@ public final class ListBuildStepBuildArgumentsResult {
      * The URI that can be used to request the next set of paged results.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * The collection value.
      * 
     */
-    public List<BuildArgumentResponse> getValue() {
+    public List<BuildArgumentResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

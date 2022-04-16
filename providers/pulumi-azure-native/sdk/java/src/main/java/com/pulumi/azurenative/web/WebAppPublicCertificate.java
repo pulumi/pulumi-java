@@ -39,7 +39,7 @@ public class WebAppPublicCertificate extends com.pulumi.resources.CustomResource
      * @return Public Certificate byte array
      * 
      */
-    public Output</* @Nullable */ String> getBlob() {
+    public Output</* @Nullable */ String> blob() {
         return this.blob;
     }
     /**
@@ -53,7 +53,7 @@ public class WebAppPublicCertificate extends com.pulumi.resources.CustomResource
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -67,7 +67,7 @@ public class WebAppPublicCertificate extends com.pulumi.resources.CustomResource
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +81,7 @@ public class WebAppPublicCertificate extends com.pulumi.resources.CustomResource
      * @return Public Certificate Location
      * 
      */
-    public Output</* @Nullable */ String> getPublicCertificateLocation() {
+    public Output</* @Nullable */ String> publicCertificateLocation() {
         return this.publicCertificateLocation;
     }
     /**
@@ -95,7 +95,7 @@ public class WebAppPublicCertificate extends com.pulumi.resources.CustomResource
      * @return Certificate Thumbprint
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -109,7 +109,7 @@ public class WebAppPublicCertificate extends com.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class KubernetesClusterPropertiesArgs extends com.pulumi.resources.
     @Import(name="servicePrincipal")
       private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
-    public Output<ServicePrincipalPropertiesArgs> getServicePrincipal() {
+    public Output<ServicePrincipalPropertiesArgs> servicePrincipal() {
         return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 

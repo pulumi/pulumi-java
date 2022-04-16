@@ -27,7 +27,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
     @Import(name="authorizedIPRanges")
       private final @Nullable List<String> authorizedIPRanges;
 
-    public List<String> getAuthorizedIPRanges() {
+    public List<String> authorizedIPRanges() {
         return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
     @Import(name="enablePrivateCluster")
       private final @Nullable Boolean enablePrivateCluster;
 
-    public Optional<Boolean> getEnablePrivateCluster() {
+    public Optional<Boolean> enablePrivateCluster() {
         return this.enablePrivateCluster == null ? Optional.empty() : Optional.ofNullable(this.enablePrivateCluster);
     }
 
@@ -49,7 +49,7 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends com.pulu
     @Import(name="privateDNSZone")
       private final @Nullable String privateDNSZone;
 
-    public Optional<String> getPrivateDNSZone() {
+    public Optional<String> privateDNSZone() {
         return this.privateDNSZone == null ? Optional.empty() : Optional.ofNullable(this.privateDNSZone);
     }
 

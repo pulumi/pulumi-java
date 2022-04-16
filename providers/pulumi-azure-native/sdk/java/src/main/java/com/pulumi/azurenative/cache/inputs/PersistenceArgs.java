@@ -30,7 +30,7 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aofEnabled")
       private final @Nullable Output<Boolean> aofEnabled;
 
-    public Output<Boolean> getAofEnabled() {
+    public Output<Boolean> aofEnabled() {
         return this.aofEnabled == null ? Codegen.empty() : this.aofEnabled;
     }
 
@@ -41,7 +41,7 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aofFrequency")
       private final @Nullable Output<Either<String,AofFrequency>> aofFrequency;
 
-    public Output<Either<String,AofFrequency>> getAofFrequency() {
+    public Output<Either<String,AofFrequency>> aofFrequency() {
         return this.aofFrequency == null ? Codegen.empty() : this.aofFrequency;
     }
 
@@ -52,7 +52,7 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rdbEnabled")
       private final @Nullable Output<Boolean> rdbEnabled;
 
-    public Output<Boolean> getRdbEnabled() {
+    public Output<Boolean> rdbEnabled() {
         return this.rdbEnabled == null ? Codegen.empty() : this.rdbEnabled;
     }
 
@@ -63,7 +63,7 @@ public final class PersistenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rdbFrequency")
       private final @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
-    public Output<Either<String,RdbFrequency>> getRdbFrequency() {
+    public Output<Either<String,RdbFrequency>> rdbFrequency() {
         return this.rdbFrequency == null ? Codegen.empty() : this.rdbFrequency;
     }
 

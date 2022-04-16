@@ -32,7 +32,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="arguments")
       private final @Nullable List<Object> arguments;
 
-    public List<Object> getArguments() {
+    public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
 
@@ -43,7 +43,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="className", required=true)
       private final Object className;
 
-    public Object getClassName() {
+    public Object className() {
         return this.className;
     }
 
@@ -54,7 +54,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
 
-    public Map<String,Object> getDefines() {
+    public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
 
@@ -65,7 +65,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -76,7 +76,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -87,7 +87,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
 
-    public Optional<String> getGetDebugInfo() {
+    public Optional<String> getDebugInfo() {
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
@@ -98,7 +98,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="jarFilePath", required=true)
       private final Object jarFilePath;
 
-    public Object getJarFilePath() {
+    public Object jarFilePath() {
         return this.jarFilePath;
     }
 
@@ -109,7 +109,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="jarLibs")
       private final @Nullable List<Object> jarLibs;
 
-    public List<Object> getJarLibs() {
+    public List<Object> jarLibs() {
         return this.jarLibs == null ? List.of() : this.jarLibs;
     }
 
@@ -120,7 +120,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="jarLinkedService")
       private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
 
-    public Optional<LinkedServiceReferenceResponse> getJarLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> jarLinkedService() {
         return this.jarLinkedService == null ? Optional.empty() : Optional.ofNullable(this.jarLinkedService);
     }
 
@@ -131,7 +131,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -142,7 +142,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -153,7 +153,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -164,7 +164,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
-    public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
+    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
 
@@ -176,7 +176,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -187,7 +187,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

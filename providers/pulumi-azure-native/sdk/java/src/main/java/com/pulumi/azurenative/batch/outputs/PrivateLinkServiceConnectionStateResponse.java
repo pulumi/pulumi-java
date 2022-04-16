@@ -25,13 +25,13 @@ public final class PrivateLinkServiceConnectionStateResponse {
         this.status = status;
     }
 
-    public String getActionRequired() {
+    public String actionRequired() {
         return this.actionRequired;
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

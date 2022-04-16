@@ -34,14 +34,14 @@ public final class NonAzureQueryPropertiesResponse {
      * Log Analytics Saved Search name.
      * 
     */
-    public Optional<String> getFunctionAlias() {
+    public Optional<String> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
     /**
      * Workspace Id for Log Analytics in which the saved Search is resided.
      * 
     */
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
 

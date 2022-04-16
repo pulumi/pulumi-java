@@ -29,7 +29,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="azureVirtualMachines")
       private final @Nullable List<String> azureVirtualMachines;
 
-    public List<String> getAzureVirtualMachines() {
+    public List<String> azureVirtualMachines() {
         return this.azureVirtualMachines == null ? List.of() : this.azureVirtualMachines;
     }
 
@@ -40,7 +40,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="duration")
       private final @Nullable String duration;
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 
@@ -51,7 +51,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="linux")
       private final @Nullable LinuxPropertiesResponse linux;
 
-    public Optional<LinuxPropertiesResponse> getLinux() {
+    public Optional<LinuxPropertiesResponse> linux() {
         return this.linux == null ? Optional.empty() : Optional.ofNullable(this.linux);
     }
 
@@ -62,7 +62,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="nonAzureComputerNames")
       private final @Nullable List<String> nonAzureComputerNames;
 
-    public List<String> getNonAzureComputerNames() {
+    public List<String> nonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? List.of() : this.nonAzureComputerNames;
     }
 
@@ -73,7 +73,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="operatingSystem", required=true)
       private final String operatingSystem;
 
-    public String getOperatingSystem() {
+    public String operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -84,7 +84,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="targets")
       private final @Nullable TargetPropertiesResponse targets;
 
-    public Optional<TargetPropertiesResponse> getTargets() {
+    public Optional<TargetPropertiesResponse> targets() {
         return this.targets == null ? Optional.empty() : Optional.ofNullable(this.targets);
     }
 
@@ -95,7 +95,7 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="windows")
       private final @Nullable WindowsPropertiesResponse windows;
 
-    public Optional<WindowsPropertiesResponse> getWindows() {
+    public Optional<WindowsPropertiesResponse> windows() {
         return this.windows == null ? Optional.empty() : Optional.ofNullable(this.windows);
     }
 

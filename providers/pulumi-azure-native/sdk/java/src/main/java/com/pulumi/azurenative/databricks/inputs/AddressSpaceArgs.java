@@ -27,7 +27,7 @@ public final class AddressSpaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> getAddressPrefixes() {
+    public Output<List<String>> addressPrefixes() {
         return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 

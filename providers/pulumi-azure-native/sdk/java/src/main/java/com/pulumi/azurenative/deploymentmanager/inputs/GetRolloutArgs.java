@@ -22,7 +22,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryAttempt")
       private final @Nullable Integer retryAttempt;
 
-    public Optional<Integer> getRetryAttempt() {
+    public Optional<Integer> retryAttempt() {
         return this.retryAttempt == null ? Optional.empty() : Optional.ofNullable(this.retryAttempt);
     }
 
@@ -44,7 +44,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="rolloutName", required=true)
       private final String rolloutName;
 
-    public String getRolloutName() {
+    public String rolloutName() {
         return this.rolloutName;
     }
 

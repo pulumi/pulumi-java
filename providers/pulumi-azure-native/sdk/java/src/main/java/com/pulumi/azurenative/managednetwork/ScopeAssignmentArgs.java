@@ -22,7 +22,7 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="assignedManagedNetwork")
       private final @Nullable Output<String> assignedManagedNetwork;
 
-    public Output<String> getAssignedManagedNetwork() {
+    public Output<String> assignedManagedNetwork() {
         return this.assignedManagedNetwork == null ? Codegen.empty() : this.assignedManagedNetwork;
     }
 
@@ -33,7 +33,7 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -44,7 +44,7 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -55,7 +55,7 @@ public final class ScopeAssignmentArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scopeAssignmentName")
       private final @Nullable Output<String> scopeAssignmentName;
 
-    public Output<String> getScopeAssignmentName() {
+    public Output<String> scopeAssignmentName() {
         return this.scopeAssignmentName == null ? Codegen.empty() : this.scopeAssignmentName;
     }
 

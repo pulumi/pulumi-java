@@ -65,7 +65,7 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="activities")
       private final @Nullable List<Object> activities;
 
-    public List<Object> getActivities() {
+    public List<Object> activities() {
         return this.activities == null ? List.of() : this.activities;
     }
 
@@ -76,7 +76,7 @@ public final class SwitchCaseResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

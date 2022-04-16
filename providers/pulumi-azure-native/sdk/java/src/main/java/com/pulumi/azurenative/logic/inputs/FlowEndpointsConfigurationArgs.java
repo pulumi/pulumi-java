@@ -26,7 +26,7 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
     @Import(name="connector")
       private final @Nullable Output<FlowEndpointsArgs> connector;
 
-    public Output<FlowEndpointsArgs> getConnector() {
+    public Output<FlowEndpointsArgs> connector() {
         return this.connector == null ? Codegen.empty() : this.connector;
     }
 
@@ -37,7 +37,7 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
     @Import(name="workflow")
       private final @Nullable Output<FlowEndpointsArgs> workflow;
 
-    public Output<FlowEndpointsArgs> getWorkflow() {
+    public Output<FlowEndpointsArgs> workflow() {
         return this.workflow == null ? Codegen.empty() : this.workflow;
     }
 

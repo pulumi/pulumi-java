@@ -26,7 +26,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="planId")
       private final @Nullable Output<String> planId;
 
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId == null ? Codegen.empty() : this.planId;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="planName")
       private final @Nullable Output<String> planName;
 
-    public Output<String> getPlanName() {
+    public Output<String> planName() {
         return this.planName == null ? Codegen.empty() : this.planName;
     }
 
@@ -59,7 +59,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="publisherId")
       private final @Nullable Output<String> publisherId;
 
-    public Output<String> getPublisherId() {
+    public Output<String> publisherId() {
         return this.publisherId == null ? Codegen.empty() : this.publisherId;
     }
 
@@ -70,7 +70,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends com.pul
     @Import(name="termUnit")
       private final @Nullable Output<String> termUnit;
 
-    public Output<String> getTermUnit() {
+    public Output<String> termUnit() {
         return this.termUnit == null ? Codegen.empty() : this.termUnit;
     }
 

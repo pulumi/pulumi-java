@@ -49,7 +49,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The authentication type.
      * 
      */
-    public Output</* @Nullable */ Object> getAuthInfo() {
+    public Output</* @Nullable */ Object> authInfo() {
         return this.authInfo;
     }
     /**
@@ -63,7 +63,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The application client type
      * 
      */
-    public Output</* @Nullable */ String> getClientType() {
+    public Output</* @Nullable */ String> clientType() {
         return this.clientType;
     }
     /**
@@ -77,7 +77,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -105,7 +105,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -119,7 +119,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The resource Id of target service.
      * 
      */
-    public Output</* @Nullable */ String> getTargetId() {
+    public Output</* @Nullable */ String> targetId() {
         return this.targetId;
     }
     /**
@@ -133,7 +133,7 @@ public class Linker extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

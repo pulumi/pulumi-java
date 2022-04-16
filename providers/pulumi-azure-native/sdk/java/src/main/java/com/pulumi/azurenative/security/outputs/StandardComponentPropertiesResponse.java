@@ -26,7 +26,7 @@ public final class StandardComponentPropertiesResponse {
      * Component Key matching componentMetadata
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
 

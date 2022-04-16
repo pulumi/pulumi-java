@@ -44,7 +44,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The list of databases from the clusterResourceId which are currently attached to the kusto pool.
      * 
      */
-    public Output<List<String>> getAttachedDatabaseNames() {
+    public Output<List<String>> attachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
@@ -58,7 +58,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -72,7 +72,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The default principals modification kind
      * 
      */
-    public Output<String> getDefaultPrincipalsModificationKind() {
+    public Output<String> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
@@ -86,7 +86,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The resource id of the kusto pool where the databases you would like to attach reside.
      * 
      */
-    public Output<String> getKustoPoolResourceId() {
+    public Output<String> kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
     /**
@@ -100,7 +100,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -114,7 +114,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -142,7 +142,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -156,7 +156,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return Table level sharing specifications
      * 
      */
-    public Output</* @Nullable */ TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
+    public Output</* @Nullable */ TableLevelSharingPropertiesResponse> tableLevelSharingProperties() {
         return this.tableLevelSharingProperties;
     }
     /**
@@ -170,7 +170,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends com.pulumi.resources
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

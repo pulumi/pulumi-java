@@ -36,7 +36,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="appInsightsEnabled")
       private final @Nullable Boolean appInsightsEnabled;
 
-    public Optional<Boolean> getAppInsightsEnabled() {
+    public Optional<Boolean> appInsightsEnabled() {
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
     }
 
@@ -47,7 +47,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="authEnabled")
       private final @Nullable Boolean authEnabled;
 
-    public Optional<Boolean> getAuthEnabled() {
+    public Optional<Boolean> authEnabled() {
         return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
     }
 
@@ -58,7 +58,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="cname")
       private final @Nullable String cname;
 
-    public Optional<String> getCname() {
+    public Optional<String> cname() {
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
     }
 
@@ -70,7 +70,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="computeType", required=true)
       private final String computeType;
 
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
 
@@ -81,7 +81,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="containerResourceRequirements")
       private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
-    public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
+    public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
     }
 
@@ -92,7 +92,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="dataCollection")
       private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
 
-    public Optional<ACIServiceResponseResponseDataCollection> getDataCollection() {
+    public Optional<ACIServiceResponseResponseDataCollection> dataCollection() {
         return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
     }
 
@@ -103,7 +103,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="deploymentType")
       private final @Nullable String deploymentType;
 
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
@@ -114,7 +114,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -125,7 +125,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="encryptionProperties")
       private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
 
-    public Optional<ACIServiceResponseResponseEncryptionProperties> getEncryptionProperties() {
+    public Optional<ACIServiceResponseResponseEncryptionProperties> encryptionProperties() {
         return this.encryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionProperties);
     }
 
@@ -136,7 +136,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="environmentImageRequest")
       private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
-    public Optional<ACIServiceResponseResponseEnvironmentImageRequest> getEnvironmentImageRequest() {
+    public Optional<ACIServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
     }
 
@@ -147,7 +147,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
 
-    public ServiceResponseBaseResponseError getError() {
+    public ServiceResponseBaseResponseError error() {
         return this.error;
     }
 
@@ -158,7 +158,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> getKvTags() {
+    public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
@@ -169,7 +169,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -180,7 +180,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="modelConfigMap", required=true)
       private final Map<String,Object> modelConfigMap;
 
-    public Map<String,Object> getModelConfigMap() {
+    public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
 
@@ -191,7 +191,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="models")
       private final @Nullable List<ModelResponse> models;
 
-    public List<ModelResponse> getModels() {
+    public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
 
@@ -202,7 +202,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -213,7 +213,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="publicFqdn")
       private final @Nullable String publicFqdn;
 
-    public Optional<String> getPublicFqdn() {
+    public Optional<String> publicFqdn() {
         return this.publicFqdn == null ? Optional.empty() : Optional.ofNullable(this.publicFqdn);
     }
 
@@ -224,7 +224,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="publicIp")
       private final @Nullable String publicIp;
 
-    public Optional<String> getPublicIp() {
+    public Optional<String> publicIp() {
         return this.publicIp == null ? Optional.empty() : Optional.ofNullable(this.publicIp);
     }
 
@@ -235,7 +235,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="scoringUri", required=true)
       private final String scoringUri;
 
-    public String getScoringUri() {
+    public String scoringUri() {
         return this.scoringUri;
     }
 
@@ -246,7 +246,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="sslCertificate")
       private final @Nullable String sslCertificate;
 
-    public Optional<String> getSslCertificate() {
+    public Optional<String> sslCertificate() {
         return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
     }
 
@@ -257,7 +257,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="sslEnabled")
       private final @Nullable Boolean sslEnabled;
 
-    public Optional<Boolean> getSslEnabled() {
+    public Optional<Boolean> sslEnabled() {
         return this.sslEnabled == null ? Optional.empty() : Optional.ofNullable(this.sslEnabled);
     }
 
@@ -268,7 +268,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="sslKey")
       private final @Nullable String sslKey;
 
-    public Optional<String> getSslKey() {
+    public Optional<String> sslKey() {
         return this.sslKey == null ? Optional.empty() : Optional.ofNullable(this.sslKey);
     }
 
@@ -279,7 +279,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -290,7 +290,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
 
-    public String getSwaggerUri() {
+    public String swaggerUri() {
         return this.swaggerUri;
     }
 
@@ -301,7 +301,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
     @Import(name="vnetConfiguration")
       private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 
-    public Optional<ACIServiceResponseResponseVnetConfiguration> getVnetConfiguration() {
+    public Optional<ACIServiceResponseResponseVnetConfiguration> vnetConfiguration() {
         return this.vnetConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vnetConfiguration);
     }
 

@@ -26,7 +26,7 @@ public final class ParameterValuesValueArgs extends com.pulumi.resources.Resourc
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

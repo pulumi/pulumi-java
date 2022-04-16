@@ -25,7 +25,7 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="ignoreCertificateNameMismatch", required=true)
       private final Output<Boolean> ignoreCertificateNameMismatch;
 
-    public Output<Boolean> getIgnoreCertificateNameMismatch() {
+    public Output<Boolean> ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
 
@@ -36,7 +36,7 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="keepHttpConnectionAlive", required=true)
       private final Output<Boolean> keepHttpConnectionAlive;
 
-    public Output<Boolean> getKeepHttpConnectionAlive() {
+    public Output<Boolean> keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
 
@@ -47,7 +47,7 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="supportHttpStatusCodeContinue", required=true)
       private final Output<Boolean> supportHttpStatusCodeContinue;
 
-    public Output<Boolean> getSupportHttpStatusCodeContinue() {
+    public Output<Boolean> supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
 
@@ -58,7 +58,7 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="unfoldHttpHeaders", required=true)
       private final Output<Boolean> unfoldHttpHeaders;
 
-    public Output<Boolean> getUnfoldHttpHeaders() {
+    public Output<Boolean> unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 

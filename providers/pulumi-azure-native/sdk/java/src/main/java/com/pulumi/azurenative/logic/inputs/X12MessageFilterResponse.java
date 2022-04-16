@@ -23,7 +23,7 @@ public final class X12MessageFilterResponse extends com.pulumi.resources.InvokeA
     @Import(name="messageFilterType", required=true)
       private final String messageFilterType;
 
-    public String getMessageFilterType() {
+    public String messageFilterType() {
         return this.messageFilterType;
     }
 

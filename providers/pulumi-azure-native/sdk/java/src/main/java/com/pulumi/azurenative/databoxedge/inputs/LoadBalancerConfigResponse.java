@@ -23,7 +23,7 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -34,7 +34,7 @@ public final class LoadBalancerConfigResponse extends com.pulumi.resources.Invok
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

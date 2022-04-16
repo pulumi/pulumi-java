@@ -48,28 +48,28 @@ public final class IdentityPropertiesResponse {
      * The client secret URL of the identity.
      * 
     */
-    public Optional<String> getClientSecretUrl() {
+    public Optional<String> clientSecretUrl() {
         return Optional.ofNullable(this.clientSecretUrl);
     }
     /**
      * The principal id of resource identity.
      * 
     */
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The tenant identifier of resource.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Managed identity.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

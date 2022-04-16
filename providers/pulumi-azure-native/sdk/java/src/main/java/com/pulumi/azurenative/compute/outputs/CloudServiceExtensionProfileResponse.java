@@ -26,7 +26,7 @@ public final class CloudServiceExtensionProfileResponse {
      * List of extensions for the cloud service.
      * 
     */
-    public List<ExtensionResponse> getExtensions() {
+    public List<ExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 

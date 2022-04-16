@@ -29,7 +29,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostingMode")
       private final @Nullable Output<HostingMode> hostingMode;
 
-    public Output<HostingMode> getHostingMode() {
+    public Output<HostingMode> hostingMode() {
         return this.hostingMode == null ? Codegen.empty() : this.hostingMode;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
+    public Output<NetworkRuleSetArgs> networkRuleSet() {
         return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
     }
 
@@ -73,7 +73,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionCount")
       private final @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> getPartitionCount() {
+    public Output<Integer> partitionCount() {
         return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
@@ -84,7 +84,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<PublicNetworkAccess> publicNetworkAccess;
 
-    public Output<PublicNetworkAccess> getPublicNetworkAccess() {
+    public Output<PublicNetworkAccess> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -95,7 +95,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
@@ -106,7 +106,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -117,7 +117,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchServiceName")
       private final @Nullable Output<String> searchServiceName;
 
-    public Output<String> getSearchServiceName() {
+    public Output<String> searchServiceName() {
         return this.searchServiceName == null ? Codegen.empty() : this.searchServiceName;
     }
 
@@ -128,7 +128,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -139,7 +139,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

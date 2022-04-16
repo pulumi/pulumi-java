@@ -85,56 +85,56 @@ public final class FactoryGitHubConfigurationResponse {
      * Account name.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
      * GitHub bring your own app client id.
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * GitHub bring your own app client secret information.
      * 
     */
-    public Optional<GitHubClientSecretResponse> getClientSecret() {
+    public Optional<GitHubClientSecretResponse> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Collaboration branch.
      * 
     */
-    public String getCollaborationBranch() {
+    public String collaborationBranch() {
         return this.collaborationBranch;
     }
     /**
      * GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
     */
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * Last commit id.
      * 
     */
-    public Optional<String> getLastCommitId() {
+    public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
      * Repository name.
      * 
     */
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
     /**
      * Root folder.
      * 
     */
-    public String getRootFolder() {
+    public String rootFolder() {
         return this.rootFolder;
     }
     /**
@@ -142,7 +142,7 @@ public final class FactoryGitHubConfigurationResponse {
      * Expected value is 'FactoryGitHubConfiguration'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

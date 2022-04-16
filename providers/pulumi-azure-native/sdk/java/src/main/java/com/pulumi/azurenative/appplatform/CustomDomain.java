@@ -43,7 +43,7 @@ public class CustomDomain extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class CustomDomain extends com.pulumi.resources.CustomResource {
      * @return Properties of the custom domain resource.
      * 
      */
-    public Output<CustomDomainPropertiesResponse> getProperties() {
+    public Output<CustomDomainPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class CustomDomain extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

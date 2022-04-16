@@ -27,7 +27,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends com.pulumi.res
     @Import(name="input")
       private final @Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input;
 
-    public Output<ConnectToTargetSqlDbTaskInputArgs> getInput() {
+    public Output<ConnectToTargetSqlDbTaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends com.pulumi.res
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

@@ -44,7 +44,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Properties of the Deployment resource
      * 
      */
-    public Output<DeploymentResourcePropertiesResponse> getProperties() {
+    public Output<DeploymentResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Sku of the Deployment resource
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -86,7 +86,7 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
     @Import(name="wsdlEndpointName")
       private final @Nullable Output<String> wsdlEndpointName;
 
-    public Output<String> getWsdlEndpointName() {
+    public Output<String> wsdlEndpointName() {
         return this.wsdlEndpointName == null ? Codegen.empty() : this.wsdlEndpointName;
     }
 
@@ -37,7 +37,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
     @Import(name="wsdlServiceName")
       private final @Nullable Output<String> wsdlServiceName;
 
-    public Output<String> getWsdlServiceName() {
+    public Output<String> wsdlServiceName() {
         return this.wsdlServiceName == null ? Codegen.empty() : this.wsdlServiceName;
     }
 

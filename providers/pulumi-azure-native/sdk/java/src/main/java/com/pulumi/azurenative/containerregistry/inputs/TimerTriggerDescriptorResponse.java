@@ -21,7 +21,7 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
     @Import(name="scheduleOccurrence")
       private final @Nullable String scheduleOccurrence;
 
-    public Optional<String> getScheduleOccurrence() {
+    public Optional<String> scheduleOccurrence() {
         return this.scheduleOccurrence == null ? Optional.empty() : Optional.ofNullable(this.scheduleOccurrence);
     }
 
@@ -32,7 +32,7 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
     @Import(name="timerTriggerName")
       private final @Nullable String timerTriggerName;
 
-    public Optional<String> getTimerTriggerName() {
+    public Optional<String> timerTriggerName() {
         return this.timerTriggerName == null ? Optional.empty() : Optional.ofNullable(this.timerTriggerName);
     }
 

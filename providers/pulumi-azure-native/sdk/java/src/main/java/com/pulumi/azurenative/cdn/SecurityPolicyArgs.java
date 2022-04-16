@@ -23,7 +23,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="parameters")
       private final @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
-    public Output<SecurityPolicyWebApplicationFirewallParametersArgs> getParameters() {
+    public Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -45,7 +45,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="securityPolicyName")
       private final @Nullable Output<String> securityPolicyName;
 
-    public Output<String> getSecurityPolicyName() {
+    public Output<String> securityPolicyName() {
         return this.securityPolicyName == null ? Codegen.empty() : this.securityPolicyName;
     }
 

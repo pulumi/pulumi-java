@@ -19,7 +19,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -41,7 +41,7 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

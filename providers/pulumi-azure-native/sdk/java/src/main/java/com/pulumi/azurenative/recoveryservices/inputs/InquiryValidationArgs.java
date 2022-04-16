@@ -26,7 +26,7 @@ public final class InquiryValidationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

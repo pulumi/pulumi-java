@@ -128,105 +128,105 @@ public final class GetkustoPoolResult {
      * The Kusto Pool data ingestion URI.
      * 
     */
-    public String getDataIngestionUri() {
+    public String dataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
      * The engine type
      * 
     */
-    public Optional<String> getEngineType() {
+    public Optional<String> engineType() {
         return Optional.ofNullable(this.engineType);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU of the kusto pool.
      * 
     */
-    public AzureSkuResponse getSku() {
+    public AzureSkuResponse sku() {
         return this.sku;
     }
     /**
      * The state of the resource.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The reason for the Kusto Pool's current state.
      * 
     */
-    public String getStateReason() {
+    public String stateReason() {
         return this.stateReason;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Kusto Pool URI.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
     /**
      * The workspace unique identifier.
      * 
     */
-    public Optional<String> getWorkspaceUid() {
+    public Optional<String> workspaceUid() {
         return Optional.ofNullable(this.workspaceUid);
     }
 

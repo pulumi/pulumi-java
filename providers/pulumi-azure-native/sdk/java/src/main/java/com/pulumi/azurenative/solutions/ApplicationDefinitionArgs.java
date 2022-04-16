@@ -35,7 +35,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="applicationDefinitionName")
       private final @Nullable Output<String> applicationDefinitionName;
 
-    public Output<String> getApplicationDefinitionName() {
+    public Output<String> applicationDefinitionName() {
         return this.applicationDefinitionName == null ? Codegen.empty() : this.applicationDefinitionName;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="artifacts")
       private final @Nullable Output<List<ApplicationDefinitionArtifactArgs>> artifacts;
 
-    public Output<List<ApplicationDefinitionArtifactArgs>> getArtifacts() {
+    public Output<List<ApplicationDefinitionArtifactArgs>> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="authorizations")
       private final @Nullable Output<List<ApplicationAuthorizationArgs>> authorizations;
 
-    public Output<List<ApplicationAuthorizationArgs>> getAuthorizations() {
+    public Output<List<ApplicationAuthorizationArgs>> authorizations() {
         return this.authorizations == null ? Codegen.empty() : this.authorizations;
     }
 
@@ -68,7 +68,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="createUiDefinition")
       private final @Nullable Output<Object> createUiDefinition;
 
-    public Output<Object> getCreateUiDefinition() {
+    public Output<Object> createUiDefinition() {
         return this.createUiDefinition == null ? Codegen.empty() : this.createUiDefinition;
     }
 
@@ -79,7 +79,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="deploymentPolicy")
       private final @Nullable Output<ApplicationDeploymentPolicyArgs> deploymentPolicy;
 
-    public Output<ApplicationDeploymentPolicyArgs> getDeploymentPolicy() {
+    public Output<ApplicationDeploymentPolicyArgs> deploymentPolicy() {
         return this.deploymentPolicy == null ? Codegen.empty() : this.deploymentPolicy;
     }
 
@@ -90,7 +90,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -112,7 +112,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -123,7 +123,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -134,7 +134,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="lockLevel", required=true)
       private final Output<ApplicationLockLevel> lockLevel;
 
-    public Output<ApplicationLockLevel> getLockLevel() {
+    public Output<ApplicationLockLevel> lockLevel() {
         return this.lockLevel;
     }
 
@@ -145,7 +145,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="lockingPolicy")
       private final @Nullable Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy;
 
-    public Output<ApplicationPackageLockingPolicyDefinitionArgs> getLockingPolicy() {
+    public Output<ApplicationPackageLockingPolicyDefinitionArgs> lockingPolicy() {
         return this.lockingPolicy == null ? Codegen.empty() : this.lockingPolicy;
     }
 
@@ -156,7 +156,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="mainTemplate")
       private final @Nullable Output<Object> mainTemplate;
 
-    public Output<Object> getMainTemplate() {
+    public Output<Object> mainTemplate() {
         return this.mainTemplate == null ? Codegen.empty() : this.mainTemplate;
     }
 
@@ -167,7 +167,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
@@ -178,7 +178,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="managementPolicy")
       private final @Nullable Output<ApplicationManagementPolicyArgs> managementPolicy;
 
-    public Output<ApplicationManagementPolicyArgs> getManagementPolicy() {
+    public Output<ApplicationManagementPolicyArgs> managementPolicy() {
         return this.managementPolicy == null ? Codegen.empty() : this.managementPolicy;
     }
 
@@ -189,7 +189,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="notificationPolicy")
       private final @Nullable Output<ApplicationNotificationPolicyArgs> notificationPolicy;
 
-    public Output<ApplicationNotificationPolicyArgs> getNotificationPolicy() {
+    public Output<ApplicationNotificationPolicyArgs> notificationPolicy() {
         return this.notificationPolicy == null ? Codegen.empty() : this.notificationPolicy;
     }
 
@@ -200,7 +200,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="packageFileUri")
       private final @Nullable Output<String> packageFileUri;
 
-    public Output<String> getPackageFileUri() {
+    public Output<String> packageFileUri() {
         return this.packageFileUri == null ? Codegen.empty() : this.packageFileUri;
     }
 
@@ -211,7 +211,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="policies")
       private final @Nullable Output<List<ApplicationPolicyArgs>> policies;
 
-    public Output<List<ApplicationPolicyArgs>> getPolicies() {
+    public Output<List<ApplicationPolicyArgs>> policies() {
         return this.policies == null ? Codegen.empty() : this.policies;
     }
 
@@ -222,7 +222,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -233,7 +233,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -244,7 +244,7 @@ public final class ApplicationDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

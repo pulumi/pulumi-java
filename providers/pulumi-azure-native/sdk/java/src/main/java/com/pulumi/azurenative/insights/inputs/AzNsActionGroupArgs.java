@@ -27,7 +27,7 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="actionGroup")
       private final @Nullable Output<List<String>> actionGroup;
 
-    public Output<List<String>> getActionGroup() {
+    public Output<List<String>> actionGroup() {
         return this.actionGroup == null ? Codegen.empty() : this.actionGroup;
     }
 
@@ -38,7 +38,7 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="customWebhookPayload")
       private final @Nullable Output<String> customWebhookPayload;
 
-    public Output<String> getCustomWebhookPayload() {
+    public Output<String> customWebhookPayload() {
         return this.customWebhookPayload == null ? Codegen.empty() : this.customWebhookPayload;
     }
 
@@ -49,7 +49,7 @@ public final class AzNsActionGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
-    public Output<String> getEmailSubject() {
+    public Output<String> emailSubject() {
         return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
     }
 

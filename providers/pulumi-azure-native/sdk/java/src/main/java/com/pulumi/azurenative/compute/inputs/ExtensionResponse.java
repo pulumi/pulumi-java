@@ -26,7 +26,7 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -37,7 +37,7 @@ public final class ExtensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable CloudServiceExtensionPropertiesResponse properties;
 
-    public Optional<CloudServiceExtensionPropertiesResponse> getProperties() {
+    public Optional<CloudServiceExtensionPropertiesResponse> properties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 

@@ -28,7 +28,7 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="disconnectDelay")
       private final @Nullable Output<String> disconnectDelay;
 
-    public Output<String> getDisconnectDelay() {
+    public Output<String> disconnectDelay() {
         return this.disconnectDelay == null ? Codegen.empty() : this.disconnectDelay;
     }
 
@@ -39,7 +39,7 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="idleDelay")
       private final @Nullable Output<String> idleDelay;
 
-    public Output<String> getIdleDelay() {
+    public Output<String> idleDelay() {
         return this.idleDelay == null ? Codegen.empty() : this.idleDelay;
     }
 
@@ -50,7 +50,7 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="noConnectDelay")
       private final @Nullable Output<String> noConnectDelay;
 
-    public Output<String> getNoConnectDelay() {
+    public Output<String> noConnectDelay() {
         return this.noConnectDelay == null ? Codegen.empty() : this.noConnectDelay;
     }
 
@@ -61,7 +61,7 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="shutdownOnDisconnect")
       private final @Nullable Output<EnableState> shutdownOnDisconnect;
 
-    public Output<EnableState> getShutdownOnDisconnect() {
+    public Output<EnableState> shutdownOnDisconnect() {
         return this.shutdownOnDisconnect == null ? Codegen.empty() : this.shutdownOnDisconnect;
     }
 
@@ -72,7 +72,7 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="shutdownOnIdle")
       private final @Nullable Output<ShutdownOnIdleMode> shutdownOnIdle;
 
-    public Output<ShutdownOnIdleMode> getShutdownOnIdle() {
+    public Output<ShutdownOnIdleMode> shutdownOnIdle() {
         return this.shutdownOnIdle == null ? Codegen.empty() : this.shutdownOnIdle;
     }
 
@@ -83,7 +83,7 @@ public final class AutoShutdownProfileArgs extends com.pulumi.resources.Resource
     @Import(name="shutdownWhenNotConnected")
       private final @Nullable Output<EnableState> shutdownWhenNotConnected;
 
-    public Output<EnableState> getShutdownWhenNotConnected() {
+    public Output<EnableState> shutdownWhenNotConnected() {
         return this.shutdownWhenNotConnected == null ? Codegen.empty() : this.shutdownWhenNotConnected;
     }
 

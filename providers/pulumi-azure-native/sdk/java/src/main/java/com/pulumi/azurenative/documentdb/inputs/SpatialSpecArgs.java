@@ -25,7 +25,7 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -36,7 +36,7 @@ public final class SpatialSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="types")
       private final @Nullable Output<List<Either<String,SpatialType>>> types;
 
-    public Output<List<Either<String,SpatialType>>> getTypes() {
+    public Output<List<Either<String,SpatialType>>> types() {
         return this.types == null ? Codegen.empty() : this.types;
     }
 

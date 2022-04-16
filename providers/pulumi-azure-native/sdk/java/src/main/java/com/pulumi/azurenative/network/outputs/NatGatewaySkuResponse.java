@@ -26,7 +26,7 @@ public final class NatGatewaySkuResponse {
      * Name of Nat Gateway SKU.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

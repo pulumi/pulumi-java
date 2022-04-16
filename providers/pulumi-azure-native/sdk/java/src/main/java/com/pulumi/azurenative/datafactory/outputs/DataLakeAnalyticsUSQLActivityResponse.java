@@ -126,84 +126,84 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
      * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getCompilationMode() {
+    public Optional<Object> compilationMode() {
         return Optional.ofNullable(this.compilationMode);
     }
     /**
      * The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
      * 
     */
-    public Optional<Object> getDegreeOfParallelism() {
+    public Optional<Object> degreeOfParallelism() {
         return Optional.ofNullable(this.degreeOfParallelism);
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Parameters for U-SQL job request.
      * 
     */
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
      * 
     */
-    public Optional<Object> getPriority() {
+    public Optional<Object> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRuntimeVersion() {
+    public Optional<Object> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
     /**
      * Script linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getScriptLinkedService() {
+    public LinkedServiceReferenceResponse scriptLinkedService() {
         return this.scriptLinkedService;
     }
     /**
      * Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getScriptPath() {
+    public Object scriptPath() {
         return this.scriptPath;
     }
     /**
@@ -211,14 +211,14 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
      * Expected value is 'DataLakeAnalyticsU-SQL'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

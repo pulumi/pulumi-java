@@ -27,7 +27,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alg")
       private final @Nullable Output<String> alg;
 
-    public Output<String> getAlg() {
+    public Output<String> alg() {
         return this.alg == null ? Codegen.empty() : this.alg;
     }
 
@@ -38,7 +38,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crv")
       private final @Nullable Output<String> crv;
 
-    public Output<String> getCrv() {
+    public Output<String> crv() {
         return this.crv == null ? Codegen.empty() : this.crv;
     }
 
@@ -49,7 +49,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="d")
       private final @Nullable Output<String> d;
 
-    public Output<String> getD() {
+    public Output<String> d() {
         return this.d == null ? Codegen.empty() : this.d;
     }
 
@@ -60,7 +60,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dp")
       private final @Nullable Output<String> dp;
 
-    public Output<String> getDp() {
+    public Output<String> dp() {
         return this.dp == null ? Codegen.empty() : this.dp;
     }
 
@@ -71,7 +71,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dq")
       private final @Nullable Output<String> dq;
 
-    public Output<String> getDq() {
+    public Output<String> dq() {
         return this.dq == null ? Codegen.empty() : this.dq;
     }
 
@@ -82,7 +82,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="e")
       private final @Nullable Output<String> e;
 
-    public Output<String> getE() {
+    public Output<String> e() {
         return this.e == null ? Codegen.empty() : this.e;
     }
 
@@ -93,7 +93,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="k")
       private final @Nullable Output<String> k;
 
-    public Output<String> getK() {
+    public Output<String> k() {
         return this.k == null ? Codegen.empty() : this.k;
     }
 
@@ -112,7 +112,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kid")
       private final @Nullable Output<String> kid;
 
-    public Output<String> getKid() {
+    public Output<String> kid() {
         return this.kid == null ? Codegen.empty() : this.kid;
     }
 
@@ -127,7 +127,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kty", required=true)
       private final Output<String> kty;
 
-    public Output<String> getKty() {
+    public Output<String> kty() {
         return this.kty;
     }
 
@@ -138,7 +138,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="n")
       private final @Nullable Output<String> n;
 
-    public Output<String> getN() {
+    public Output<String> n() {
         return this.n == null ? Codegen.empty() : this.n;
     }
 
@@ -149,7 +149,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="p")
       private final @Nullable Output<String> p;
 
-    public Output<String> getP() {
+    public Output<String> p() {
         return this.p == null ? Codegen.empty() : this.p;
     }
 
@@ -160,7 +160,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="q")
       private final @Nullable Output<String> q;
 
-    public Output<String> getQ() {
+    public Output<String> q() {
         return this.q == null ? Codegen.empty() : this.q;
     }
 
@@ -171,7 +171,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qi")
       private final @Nullable Output<String> qi;
 
-    public Output<String> getQi() {
+    public Output<String> qi() {
         return this.qi == null ? Codegen.empty() : this.qi;
     }
 
@@ -185,7 +185,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="use")
       private final @Nullable Output<String> use;
 
-    public Output<String> getUse() {
+    public Output<String> use() {
         return this.use == null ? Codegen.empty() : this.use;
     }
 
@@ -196,7 +196,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="x")
       private final @Nullable Output<String> x;
 
-    public Output<String> getX() {
+    public Output<String> x() {
         return this.x == null ? Codegen.empty() : this.x;
     }
 
@@ -213,7 +213,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="x5c")
       private final @Nullable Output<List<String>> x5c;
 
-    public Output<List<String>> getX5c() {
+    public Output<List<String>> x5c() {
         return this.x5c == null ? Codegen.empty() : this.x5c;
     }
 
@@ -224,7 +224,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="y")
       private final @Nullable Output<String> y;
 
-    public Output<String> getY() {
+    public Output<String> y() {
         return this.y == null ? Codegen.empty() : this.y;
     }
 

@@ -309,287 +309,287 @@ public final class EdifactEnvelopeSettingsResponse {
      * The application reference id.
      * 
     */
-    public Optional<String> getApplicationReferenceId() {
+    public Optional<String> applicationReferenceId() {
         return Optional.ofNullable(this.applicationReferenceId);
     }
     /**
      * The value indicating whether to apply delimiter string advice.
      * 
     */
-    public Boolean getApplyDelimiterStringAdvice() {
+    public Boolean applyDelimiterStringAdvice() {
         return this.applyDelimiterStringAdvice;
     }
     /**
      * The communication agreement id.
      * 
     */
-    public Optional<String> getCommunicationAgreementId() {
+    public Optional<String> communicationAgreementId() {
         return Optional.ofNullable(this.communicationAgreementId);
     }
     /**
      * The value indicating whether to create grouping segments.
      * 
     */
-    public Boolean getCreateGroupingSegments() {
+    public Boolean createGroupingSegments() {
         return this.createGroupingSegments;
     }
     /**
      * The value indicating whether to enable default group headers.
      * 
     */
-    public Boolean getEnableDefaultGroupHeaders() {
+    public Boolean enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
     /**
      * The functional group id.
      * 
     */
-    public Optional<String> getFunctionalGroupId() {
+    public Optional<String> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
     /**
      * The group application password.
      * 
     */
-    public Optional<String> getGroupApplicationPassword() {
+    public Optional<String> groupApplicationPassword() {
         return Optional.ofNullable(this.groupApplicationPassword);
     }
     /**
      * The group application receiver id.
      * 
     */
-    public Optional<String> getGroupApplicationReceiverId() {
+    public Optional<String> groupApplicationReceiverId() {
         return Optional.ofNullable(this.groupApplicationReceiverId);
     }
     /**
      * The group application receiver qualifier.
      * 
     */
-    public Optional<String> getGroupApplicationReceiverQualifier() {
+    public Optional<String> groupApplicationReceiverQualifier() {
         return Optional.ofNullable(this.groupApplicationReceiverQualifier);
     }
     /**
      * The group application sender id.
      * 
     */
-    public Optional<String> getGroupApplicationSenderId() {
+    public Optional<String> groupApplicationSenderId() {
         return Optional.ofNullable(this.groupApplicationSenderId);
     }
     /**
      * The group application sender qualifier.
      * 
     */
-    public Optional<String> getGroupApplicationSenderQualifier() {
+    public Optional<String> groupApplicationSenderQualifier() {
         return Optional.ofNullable(this.groupApplicationSenderQualifier);
     }
     /**
      * The group association assigned code.
      * 
     */
-    public Optional<String> getGroupAssociationAssignedCode() {
+    public Optional<String> groupAssociationAssignedCode() {
         return Optional.ofNullable(this.groupAssociationAssignedCode);
     }
     /**
      * The group control number lower bound.
      * 
     */
-    public Double getGroupControlNumberLowerBound() {
+    public Double groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
     /**
      * The group control number prefix.
      * 
     */
-    public Optional<String> getGroupControlNumberPrefix() {
+    public Optional<String> groupControlNumberPrefix() {
         return Optional.ofNullable(this.groupControlNumberPrefix);
     }
     /**
      * The group control number suffix.
      * 
     */
-    public Optional<String> getGroupControlNumberSuffix() {
+    public Optional<String> groupControlNumberSuffix() {
         return Optional.ofNullable(this.groupControlNumberSuffix);
     }
     /**
      * The group control number upper bound.
      * 
     */
-    public Double getGroupControlNumberUpperBound() {
+    public Double groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
     /**
      * The group controlling agency code.
      * 
     */
-    public Optional<String> getGroupControllingAgencyCode() {
+    public Optional<String> groupControllingAgencyCode() {
         return Optional.ofNullable(this.groupControllingAgencyCode);
     }
     /**
      * The group message release.
      * 
     */
-    public Optional<String> getGroupMessageRelease() {
+    public Optional<String> groupMessageRelease() {
         return Optional.ofNullable(this.groupMessageRelease);
     }
     /**
      * The group message version.
      * 
     */
-    public Optional<String> getGroupMessageVersion() {
+    public Optional<String> groupMessageVersion() {
         return Optional.ofNullable(this.groupMessageVersion);
     }
     /**
      * The interchange control number lower bound.
      * 
     */
-    public Double getInterchangeControlNumberLowerBound() {
+    public Double interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
     /**
      * The interchange control number prefix.
      * 
     */
-    public Optional<String> getInterchangeControlNumberPrefix() {
+    public Optional<String> interchangeControlNumberPrefix() {
         return Optional.ofNullable(this.interchangeControlNumberPrefix);
     }
     /**
      * The interchange control number suffix.
      * 
     */
-    public Optional<String> getInterchangeControlNumberSuffix() {
+    public Optional<String> interchangeControlNumberSuffix() {
         return Optional.ofNullable(this.interchangeControlNumberSuffix);
     }
     /**
      * The interchange control number upper bound.
      * 
     */
-    public Double getInterchangeControlNumberUpperBound() {
+    public Double interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
     /**
      * The value indicating whether the message is a test interchange.
      * 
     */
-    public Boolean getIsTestInterchange() {
+    public Boolean isTestInterchange() {
         return this.isTestInterchange;
     }
     /**
      * The value indicating whether to overwrite existing transaction set control number.
      * 
     */
-    public Boolean getOverwriteExistingTransactionSetControlNumber() {
+    public Boolean overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
     /**
      * The processing priority code.
      * 
     */
-    public Optional<String> getProcessingPriorityCode() {
+    public Optional<String> processingPriorityCode() {
         return Optional.ofNullable(this.processingPriorityCode);
     }
     /**
      * The receiver internal identification.
      * 
     */
-    public Optional<String> getReceiverInternalIdentification() {
+    public Optional<String> receiverInternalIdentification() {
         return Optional.ofNullable(this.receiverInternalIdentification);
     }
     /**
      * The receiver internal sub identification.
      * 
     */
-    public Optional<String> getReceiverInternalSubIdentification() {
+    public Optional<String> receiverInternalSubIdentification() {
         return Optional.ofNullable(this.receiverInternalSubIdentification);
     }
     /**
      * The receiver reverse routing address.
      * 
     */
-    public Optional<String> getReceiverReverseRoutingAddress() {
+    public Optional<String> receiverReverseRoutingAddress() {
         return Optional.ofNullable(this.receiverReverseRoutingAddress);
     }
     /**
      * The recipient reference password qualifier.
      * 
     */
-    public Optional<String> getRecipientReferencePasswordQualifier() {
+    public Optional<String> recipientReferencePasswordQualifier() {
         return Optional.ofNullable(this.recipientReferencePasswordQualifier);
     }
     /**
      * The recipient reference password value.
      * 
     */
-    public Optional<String> getRecipientReferencePasswordValue() {
+    public Optional<String> recipientReferencePasswordValue() {
         return Optional.ofNullable(this.recipientReferencePasswordValue);
     }
     /**
      * The value indicating whether to rollover group control number.
      * 
     */
-    public Boolean getRolloverGroupControlNumber() {
+    public Boolean rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
     /**
      * The value indicating whether to rollover interchange control number.
      * 
     */
-    public Boolean getRolloverInterchangeControlNumber() {
+    public Boolean rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
     /**
      * The value indicating whether to rollover transaction set control number.
      * 
     */
-    public Boolean getRolloverTransactionSetControlNumber() {
+    public Boolean rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
     /**
      * The sender internal identification.
      * 
     */
-    public Optional<String> getSenderInternalIdentification() {
+    public Optional<String> senderInternalIdentification() {
         return Optional.ofNullable(this.senderInternalIdentification);
     }
     /**
      * The sender internal sub identification.
      * 
     */
-    public Optional<String> getSenderInternalSubIdentification() {
+    public Optional<String> senderInternalSubIdentification() {
         return Optional.ofNullable(this.senderInternalSubIdentification);
     }
     /**
      * The sender reverse routing address.
      * 
     */
-    public Optional<String> getSenderReverseRoutingAddress() {
+    public Optional<String> senderReverseRoutingAddress() {
         return Optional.ofNullable(this.senderReverseRoutingAddress);
     }
     /**
      * The transaction set control number lower bound.
      * 
     */
-    public Double getTransactionSetControlNumberLowerBound() {
+    public Double transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
     /**
      * The transaction set control number prefix.
      * 
     */
-    public Optional<String> getTransactionSetControlNumberPrefix() {
+    public Optional<String> transactionSetControlNumberPrefix() {
         return Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
     /**
      * The transaction set control number suffix.
      * 
     */
-    public Optional<String> getTransactionSetControlNumberSuffix() {
+    public Optional<String> transactionSetControlNumberSuffix() {
         return Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
     /**
      * The transaction set control number upper bound.
      * 
     */
-    public Double getTransactionSetControlNumberUpperBound() {
+    public Double transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
 

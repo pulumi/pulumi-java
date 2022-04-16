@@ -28,7 +28,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="backendAddresses")
       private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
 
-    public List<ApplicationGatewayBackendAddressResponse> getBackendAddresses() {
+    public List<ApplicationGatewayBackendAddressResponse> backendAddresses() {
         return this.backendAddresses == null ? List.of() : this.backendAddresses;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="backendIPConfigurations", required=true)
       private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
-    public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
+    public List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations() {
         return this.backendIPConfigurations;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

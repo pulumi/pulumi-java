@@ -25,7 +25,7 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="subnetResourceId")
       private final @Nullable String subnetResourceId;
 
-    public Optional<String> getSubnetResourceId() {
+    public Optional<String> subnetResourceId() {
         return this.subnetResourceId == null ? Optional.empty() : Optional.ofNullable(this.subnetResourceId);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="subnetname", required=true)
       private final String subnetname;
 
-    public String getSubnetname() {
+    public String subnetname() {
         return this.subnetname;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualNetworkConfigurationResponse extends com.pulumi.resour
     @Import(name="vnetid", required=true)
       private final String vnetid;
 
-    public String getVnetid() {
+    public String vnetid() {
         return this.vnetid;
     }
 

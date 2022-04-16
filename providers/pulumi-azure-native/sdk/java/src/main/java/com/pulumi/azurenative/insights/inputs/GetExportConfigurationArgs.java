@@ -19,7 +19,7 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="exportId", required=true)
       private final String exportId;
 
-    public String getExportId() {
+    public String exportId() {
         return this.exportId;
     }
 
@@ -30,7 +30,7 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetExportConfigurationArgs extends com.pulumi.resources.Invok
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

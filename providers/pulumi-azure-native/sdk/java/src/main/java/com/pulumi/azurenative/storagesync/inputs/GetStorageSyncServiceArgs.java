@@ -19,7 +19,7 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
     @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;
 
-    public String getStorageSyncServiceName() {
+    public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 

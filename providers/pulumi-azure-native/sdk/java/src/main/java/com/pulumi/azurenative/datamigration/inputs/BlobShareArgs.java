@@ -25,7 +25,7 @@ public final class BlobShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sasUri", required=true)
       private final Output<String> sasUri;
 
-    public Output<String> getSasUri() {
+    public Output<String> sasUri() {
         return this.sasUri;
     }
 

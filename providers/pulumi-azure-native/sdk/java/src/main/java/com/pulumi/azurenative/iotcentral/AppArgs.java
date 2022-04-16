@@ -24,7 +24,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -68,7 +68,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<AppSkuInfoArgs> sku;
 
-    public Output<AppSkuInfoArgs> getSku() {
+    public Output<AppSkuInfoArgs> sku() {
         return this.sku;
     }
 
@@ -79,7 +79,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
-    public Output<String> getSubdomain() {
+    public Output<String> subdomain() {
         return this.subdomain == null ? Codegen.empty() : this.subdomain;
     }
 
@@ -90,7 +90,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class AppArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<String> template;
 
-    public Output<String> getTemplate() {
+    public Output<String> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 

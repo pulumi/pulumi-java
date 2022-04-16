@@ -45,7 +45,7 @@ public class WebPubSubPrivateEndpointConnection extends com.pulumi.resources.Cus
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class WebPubSubPrivateEndpointConnection extends com.pulumi.resources.Cus
      * @return Private endpoint associated with the private endpoint connection
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -73,7 +73,7 @@ public class WebPubSubPrivateEndpointConnection extends com.pulumi.resources.Cus
      * @return Connection state
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -87,7 +87,7 @@ public class WebPubSubPrivateEndpointConnection extends com.pulumi.resources.Cus
      * @return Provisioning state of the private endpoint connection
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -101,7 +101,7 @@ public class WebPubSubPrivateEndpointConnection extends com.pulumi.resources.Cus
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +115,7 @@ public class WebPubSubPrivateEndpointConnection extends com.pulumi.resources.Cus
      * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

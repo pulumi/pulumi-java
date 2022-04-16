@@ -19,7 +19,7 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
     @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
-    public String getGatewayId() {
+    public String gatewayId() {
         return this.gatewayId;
     }
 
@@ -30,7 +30,7 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
     @Import(name="hcId", required=true)
       private final String hcId;
 
-    public String getHcId() {
+    public String hcId() {
         return this.hcId;
     }
 
@@ -41,7 +41,7 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetGatewayHostnameConfigurationArgs extends com.pulumi.resour
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

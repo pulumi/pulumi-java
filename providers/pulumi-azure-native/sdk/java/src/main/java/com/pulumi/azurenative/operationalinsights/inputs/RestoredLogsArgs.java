@@ -26,7 +26,7 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endRestoreTime")
       private final @Nullable Output<String> endRestoreTime;
 
-    public Output<String> getEndRestoreTime() {
+    public Output<String> endRestoreTime() {
         return this.endRestoreTime == null ? Codegen.empty() : this.endRestoreTime;
     }
 
@@ -37,7 +37,7 @@ public final class RestoredLogsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startRestoreTime")
       private final @Nullable Output<String> startRestoreTime;
 
-    public Output<String> getStartRestoreTime() {
+    public Output<String> startRestoreTime() {
         return this.startRestoreTime == null ? Codegen.empty() : this.startRestoreTime;
     }
 

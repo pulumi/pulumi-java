@@ -33,7 +33,7 @@ public final class EncoderSystemPresetResponse {
      * Name of the built-in encoding preset.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -41,7 +41,7 @@ public final class EncoderSystemPresetResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

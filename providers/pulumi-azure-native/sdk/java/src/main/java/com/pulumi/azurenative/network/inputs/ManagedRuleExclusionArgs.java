@@ -28,7 +28,7 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
     @Import(name="matchVariable", required=true)
       private final Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
-    public Output<Either<String,ManagedRuleExclusionMatchVariable>> getMatchVariable() {
+    public Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable() {
         return this.matchVariable;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
     @Import(name="selector", required=true)
       private final Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
     @Import(name="selectorMatchOperator", required=true)
       private final Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 
-    public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> getSelectorMatchOperator() {
+    public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 

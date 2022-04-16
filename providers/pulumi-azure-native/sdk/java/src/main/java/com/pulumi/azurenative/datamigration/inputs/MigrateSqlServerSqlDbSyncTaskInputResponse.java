@@ -28,7 +28,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends com.pulumi
     @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
 
-    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends com.pulumi
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends com.pulumi
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -61,7 +61,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse extends com.pulumi
     @Import(name="validationOptions")
       private final @Nullable MigrationValidationOptionsResponse validationOptions;
 
-    public Optional<MigrationValidationOptionsResponse> getValidationOptions() {
+    public Optional<MigrationValidationOptionsResponse> validationOptions() {
         return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
     }
 

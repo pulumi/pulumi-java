@@ -41,7 +41,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -52,7 +52,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="formatSettings")
       private final @Nullable Output<BinaryReadSettingsArgs> formatSettings;
 
-    public Output<BinaryReadSettingsArgs> getFormatSettings() {
+    public Output<BinaryReadSettingsArgs> formatSettings() {
         return this.formatSettings == null ? Codegen.empty() : this.formatSettings;
     }
 
@@ -63,7 +63,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -74,7 +74,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
+    public Output<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
@@ -85,7 +85,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
+    public Output<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
@@ -96,7 +96,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
 
-    public Output<Object> getStoreSettings() {
+    public Output<Object> storeSettings() {
         return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
     }
 
@@ -108,7 +108,7 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

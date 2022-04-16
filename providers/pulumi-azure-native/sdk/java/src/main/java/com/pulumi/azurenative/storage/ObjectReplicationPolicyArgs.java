@@ -24,7 +24,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="destinationAccount", required=true)
       private final Output<String> destinationAccount;
 
-    public Output<String> getDestinationAccount() {
+    public Output<String> destinationAccount() {
         return this.destinationAccount;
     }
 
@@ -46,7 +46,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="objectReplicationPolicyId")
       private final @Nullable Output<String> objectReplicationPolicyId;
 
-    public Output<String> getObjectReplicationPolicyId() {
+    public Output<String> objectReplicationPolicyId() {
         return this.objectReplicationPolicyId == null ? Codegen.empty() : this.objectReplicationPolicyId;
     }
 
@@ -57,7 +57,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="rules")
       private final @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
 
-    public Output<List<ObjectReplicationPolicyRuleArgs>> getRules() {
+    public Output<List<ObjectReplicationPolicyRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -79,7 +79,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="sourceAccount", required=true)
       private final Output<String> sourceAccount;
 
-    public Output<String> getSourceAccount() {
+    public Output<String> sourceAccount() {
         return this.sourceAccount;
     }
 

@@ -26,7 +26,7 @@ public final class SymmetricKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionString")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
-    public Output<AsymmetricEncryptedSecretArgs> getConnectionString() {
+    public Output<AsymmetricEncryptedSecretArgs> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 

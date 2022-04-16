@@ -35,14 +35,14 @@ public final class FlowLogFormatParametersResponse {
      * The file type of flow log.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The version (revision) of the flow log.
      * 
     */
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
 

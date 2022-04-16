@@ -45,24 +45,24 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration {
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<ProviderRegistrationResponseProperties> getProperties() {
+    public Optional<ProviderRegistrationResponseProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

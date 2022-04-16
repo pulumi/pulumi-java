@@ -25,7 +25,7 @@ public final class StorageClassificationMappingPropertiesResponse extends com.pu
     @Import(name="targetStorageClassificationId")
       private final @Nullable String targetStorageClassificationId;
 
-    public Optional<String> getTargetStorageClassificationId() {
+    public Optional<String> targetStorageClassificationId() {
         return this.targetStorageClassificationId == null ? Optional.empty() : Optional.ofNullable(this.targetStorageClassificationId);
     }
 

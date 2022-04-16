@@ -34,14 +34,14 @@ public final class StorageAccountResponse {
      * Specifies the key used to access the storage account.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Specifies the name of the storage account.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

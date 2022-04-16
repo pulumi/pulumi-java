@@ -99,56 +99,56 @@ public final class AzureTableSinkResponse {
      * Azure Table default partition key value. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAzureTableDefaultPartitionKeyValue() {
+    public Optional<Object> azureTableDefaultPartitionKeyValue() {
         return Optional.ofNullable(this.azureTableDefaultPartitionKeyValue);
     }
     /**
      * Azure Table insert type. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAzureTableInsertType() {
+    public Optional<Object> azureTableInsertType() {
         return Optional.ofNullable(this.azureTableInsertType);
     }
     /**
      * Azure Table partition key name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAzureTablePartitionKeyName() {
+    public Optional<Object> azureTablePartitionKeyName() {
         return Optional.ofNullable(this.azureTablePartitionKeyName);
     }
     /**
      * Azure Table row key name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAzureTableRowKeyName() {
+    public Optional<Object> azureTableRowKeyName() {
         return Optional.ofNullable(this.azureTableRowKeyName);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
@@ -156,21 +156,21 @@ public final class AzureTableSinkResponse {
      * Expected value is 'AzureTableSink'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
     */
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
 

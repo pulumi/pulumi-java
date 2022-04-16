@@ -19,7 +19,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
     @Import(name="buildTaskName", required=true)
       private final String buildTaskName;
 
-    public String getBuildTaskName() {
+    public String buildTaskName() {
         return this.buildTaskName;
     }
 
@@ -30,7 +30,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -41,7 +41,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

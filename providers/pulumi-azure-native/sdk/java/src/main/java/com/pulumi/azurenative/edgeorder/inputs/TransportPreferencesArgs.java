@@ -27,7 +27,7 @@ public final class TransportPreferencesArgs extends com.pulumi.resources.Resourc
     @Import(name="preferredShipmentType", required=true)
       private final Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
-    public Output<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {
+    public Output<Either<String,TransportShipmentTypes>> preferredShipmentType() {
         return this.preferredShipmentType;
     }
 

@@ -23,7 +23,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
     @Import(name="baseCondaEnvironment")
       private final @Nullable String baseCondaEnvironment;
 
-    public Optional<String> getBaseCondaEnvironment() {
+    public Optional<String> baseCondaEnvironment() {
         return this.baseCondaEnvironment == null ? Optional.empty() : Optional.ofNullable(this.baseCondaEnvironment);
     }
 
@@ -34,7 +34,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
     @Import(name="condaDependencies")
       private final @Nullable Object condaDependencies;
 
-    public Optional<Object> getCondaDependencies() {
+    public Optional<Object> condaDependencies() {
         return this.condaDependencies == null ? Optional.empty() : Optional.ofNullable(this.condaDependencies);
     }
 
@@ -45,7 +45,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
     @Import(name="interpreterPath")
       private final @Nullable String interpreterPath;
 
-    public Optional<String> getInterpreterPath() {
+    public Optional<String> interpreterPath() {
         return this.interpreterPath == null ? Optional.empty() : Optional.ofNullable(this.interpreterPath);
     }
 
@@ -56,7 +56,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends com.
     @Import(name="userManagedDependencies")
       private final @Nullable Boolean userManagedDependencies;
 
-    public Optional<Boolean> getUserManagedDependencies() {
+    public Optional<Boolean> userManagedDependencies() {
         return this.userManagedDependencies == null ? Optional.empty() : Optional.ofNullable(this.userManagedDependencies);
     }
 

@@ -26,7 +26,7 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
     @Import(name="claimType")
       private final @Nullable Output<String> claimType;
 
-    public Output<String> getClaimType() {
+    public Output<String> claimType() {
         return this.claimType == null ? Codegen.empty() : this.claimType;
     }
 
@@ -37,7 +37,7 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
     @Import(name="claimValue")
       private final @Nullable Output<String> claimValue;
 
-    public Output<String> getClaimValue() {
+    public Output<String> claimValue() {
         return this.claimValue == null ? Codegen.empty() : this.claimValue;
     }
 

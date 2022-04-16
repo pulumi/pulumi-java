@@ -26,7 +26,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="commonEncryptionCbcs")
       private final @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
 
-    public Output<CommonEncryptionCbcsArgs> getCommonEncryptionCbcs() {
+    public Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs() {
         return this.commonEncryptionCbcs == null ? Codegen.empty() : this.commonEncryptionCbcs;
     }
 
@@ -48,7 +48,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="commonEncryptionCenc")
       private final @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
 
-    public Output<CommonEncryptionCencArgs> getCommonEncryptionCenc() {
+    public Output<CommonEncryptionCencArgs> commonEncryptionCenc() {
         return this.commonEncryptionCenc == null ? Codegen.empty() : this.commonEncryptionCenc;
     }
 
@@ -59,7 +59,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="defaultContentKeyPolicyName")
       private final @Nullable Output<String> defaultContentKeyPolicyName;
 
-    public Output<String> getDefaultContentKeyPolicyName() {
+    public Output<String> defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName == null ? Codegen.empty() : this.defaultContentKeyPolicyName;
     }
 
@@ -70,7 +70,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="envelopeEncryption")
       private final @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
 
-    public Output<EnvelopeEncryptionArgs> getEnvelopeEncryption() {
+    public Output<EnvelopeEncryptionArgs> envelopeEncryption() {
         return this.envelopeEncryption == null ? Codegen.empty() : this.envelopeEncryption;
     }
 
@@ -81,7 +81,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="noEncryption")
       private final @Nullable Output<NoEncryptionArgs> noEncryption;
 
-    public Output<NoEncryptionArgs> getNoEncryption() {
+    public Output<NoEncryptionArgs> noEncryption() {
         return this.noEncryption == null ? Codegen.empty() : this.noEncryption;
     }
 
@@ -92,7 +92,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="streamingPolicyName")
       private final @Nullable Output<String> streamingPolicyName;
 
-    public Output<String> getStreamingPolicyName() {
+    public Output<String> streamingPolicyName() {
         return this.streamingPolicyName == null ? Codegen.empty() : this.streamingPolicyName;
     }
 

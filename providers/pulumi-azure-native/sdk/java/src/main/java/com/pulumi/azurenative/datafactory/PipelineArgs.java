@@ -68,7 +68,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activities")
       private final @Nullable Output<List<Object>> activities;
 
-    public Output<List<Object>> getActivities() {
+    public Output<List<Object>> activities() {
         return this.activities == null ? Codegen.empty() : this.activities;
     }
 
@@ -79,7 +79,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -90,7 +90,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="concurrency")
       private final @Nullable Output<Integer> concurrency;
 
-    public Output<Integer> getConcurrency() {
+    public Output<Integer> concurrency() {
         return this.concurrency == null ? Codegen.empty() : this.concurrency;
     }
 
@@ -101,7 +101,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -112,7 +112,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -123,7 +123,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<PipelineFolderArgs> folder;
 
-    public Output<PipelineFolderArgs> getFolder() {
+    public Output<PipelineFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -134,7 +134,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -145,7 +145,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
 
-    public Output<String> getPipelineName() {
+    public Output<String> pipelineName() {
         return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
@@ -156,7 +156,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<PipelinePolicyArgs> policy;
 
-    public Output<PipelinePolicyArgs> getPolicy() {
+    public Output<PipelinePolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -167,7 +167,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -178,7 +178,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runDimensions")
       private final @Nullable Output<Map<String,Object>> runDimensions;
 
-    public Output<Map<String,Object>> getRunDimensions() {
+    public Output<Map<String,Object>> runDimensions() {
         return this.runDimensions == null ? Codegen.empty() : this.runDimensions;
     }
 
@@ -189,7 +189,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="variables")
       private final @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
-    public Output<Map<String,VariableSpecificationArgs>> getVariables() {
+    public Output<Map<String,VariableSpecificationArgs>> variables() {
         return this.variables == null ? Codegen.empty() : this.variables;
     }
 

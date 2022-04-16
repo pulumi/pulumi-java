@@ -19,7 +19,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
     @Import(name="fabricName", required=true)
       private final String fabricName;
 
-    public String getFabricName() {
+    public String fabricName() {
         return this.fabricName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
     @Import(name="providerName", required=true)
       private final String providerName;
 
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetReplicationRecoveryServicesProviderArgs extends com.pulumi
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

@@ -30,7 +30,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="cpuTimeMs", required=true)
       private final Double cpuTimeMs;
 
-    public Double getCpuTimeMs() {
+    public Double cpuTimeMs() {
         return this.cpuTimeMs;
     }
 
@@ -41,7 +41,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="elapsedTimeMs", required=true)
       private final Double elapsedTimeMs;
 
-    public Double getElapsedTimeMs() {
+    public Double elapsedTimeMs() {
         return this.elapsedTimeMs;
     }
 
@@ -52,7 +52,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="executionCount", required=true)
       private final Double executionCount;
 
-    public Double getExecutionCount() {
+    public Double executionCount() {
         return this.executionCount;
     }
 
@@ -63,7 +63,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="hasErrors", required=true)
       private final Boolean hasErrors;
 
-    public Boolean getHasErrors() {
+    public Boolean hasErrors() {
         return this.hasErrors;
     }
 
@@ -74,7 +74,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="sqlErrors", required=true)
       private final List<String> sqlErrors;
 
-    public List<String> getSqlErrors() {
+    public List<String> sqlErrors() {
         return this.sqlErrors;
     }
 
@@ -85,7 +85,7 @@ public final class ExecutionStatisticsResponse extends com.pulumi.resources.Invo
     @Import(name="waitStats")
       private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
-    public Map<String,WaitStatisticsResponse> getWaitStats() {
+    public Map<String,WaitStatisticsResponse> waitStats() {
         return this.waitStats == null ? Map.of() : this.waitStats;
     }
 

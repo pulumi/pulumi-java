@@ -26,7 +26,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -37,7 +37,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 

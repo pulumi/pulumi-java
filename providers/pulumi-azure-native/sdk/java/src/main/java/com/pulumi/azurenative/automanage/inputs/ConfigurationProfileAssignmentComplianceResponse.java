@@ -23,7 +23,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends com.
     @Import(name="updateStatus", required=true)
       private final String updateStatus;
 
-    public String getUpdateStatus() {
+    public String updateStatus() {
         return this.updateStatus;
     }
 

@@ -19,7 +19,7 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
     @Import(name="virtualRouterName", required=true)
       private final String virtualRouterName;
 
-    public String getVirtualRouterName() {
+    public String virtualRouterName() {
         return this.virtualRouterName;
     }
 

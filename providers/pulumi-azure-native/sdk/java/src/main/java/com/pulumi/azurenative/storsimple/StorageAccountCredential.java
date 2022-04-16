@@ -44,7 +44,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return The details of the storage account password.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getAccessKey() {
+    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accessKey() {
         return this.accessKey;
     }
     /**
@@ -58,7 +58,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return The storage endpoint
      * 
      */
-    public Output<String> getEndPoint() {
+    public Output<String> endPoint() {
         return this.endPoint;
     }
     /**
@@ -72,7 +72,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +86,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return Signifies whether SSL needs to be enabled or not.
      * 
      */
-    public Output<String> getSslStatus() {
+    public Output<String> sslStatus() {
         return this.sslStatus;
     }
     /**
@@ -114,7 +114,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -128,7 +128,7 @@ public class StorageAccountCredential extends com.pulumi.resources.CustomResourc
      * @return The count of volumes using this storage account credential.
      * 
      */
-    public Output<Integer> getVolumesCount() {
+    public Output<Integer> volumesCount() {
         return this.volumesCount;
     }
 

@@ -25,7 +25,7 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class CassandraViewResourceArgs extends com.pulumi.resources.Resour
     @Import(name="viewDefinition", required=true)
       private final Output<String> viewDefinition;
 
-    public Output<String> getViewDefinition() {
+    public Output<String> viewDefinition() {
         return this.viewDefinition;
     }
 

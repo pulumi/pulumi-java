@@ -25,7 +25,7 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
 
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -36,7 +36,7 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     @Import(name="encryptionCertThumbprint")
       private final @Nullable String encryptionCertThumbprint;
 
-    public Optional<String> getEncryptionCertThumbprint() {
+    public Optional<String> encryptionCertThumbprint() {
         return this.encryptionCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertThumbprint);
     }
 
@@ -47,7 +47,7 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

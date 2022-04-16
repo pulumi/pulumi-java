@@ -23,7 +23,7 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     @Import(name="containerImageNames")
       private final @Nullable List<String> containerImageNames;
 
-    public List<String> getContainerImageNames() {
+    public List<String> containerImageNames() {
         return this.containerImageNames == null ? List.of() : this.containerImageNames;
     }
 
@@ -34,14 +34,14 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     @Import(name="containerRegistries")
       private final @Nullable List<ContainerRegistryResponse> containerRegistries;
 
-    public List<ContainerRegistryResponse> getContainerRegistries() {
+    public List<ContainerRegistryResponse> containerRegistries() {
         return this.containerRegistries == null ? List.of() : this.containerRegistries;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

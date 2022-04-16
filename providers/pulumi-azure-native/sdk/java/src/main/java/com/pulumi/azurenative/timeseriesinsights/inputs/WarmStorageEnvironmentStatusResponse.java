@@ -26,7 +26,7 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     @Import(name="currentCount")
       private final @Nullable Integer currentCount;
 
-    public Optional<Integer> getCurrentCount() {
+    public Optional<Integer> currentCount() {
         return this.currentCount == null ? Optional.empty() : Optional.ofNullable(this.currentCount);
     }
 
@@ -37,7 +37,7 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     @Import(name="maxCount")
       private final @Nullable Integer maxCount;
 
-    public Optional<Integer> getMaxCount() {
+    public Optional<Integer> maxCount() {
         return this.maxCount == null ? Optional.empty() : Optional.ofNullable(this.maxCount);
     }
 
@@ -48,7 +48,7 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

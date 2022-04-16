@@ -41,21 +41,21 @@ public final class BreakOutCategoryPoliciesResponse {
      * Flag to control breakout of o365 allow category.
      * 
     */
-    public Optional<Boolean> getAllow() {
+    public Optional<Boolean> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Flag to control breakout of o365 default category.
      * 
     */
-    public Optional<Boolean> getDefault_() {
+    public Optional<Boolean> default_() {
         return Optional.ofNullable(this.default_);
     }
     /**
      * Flag to control breakout of o365 optimize category.
      * 
     */
-    public Optional<Boolean> getOptimize() {
+    public Optional<Boolean> optimize() {
         return Optional.ofNullable(this.optimize);
     }
 

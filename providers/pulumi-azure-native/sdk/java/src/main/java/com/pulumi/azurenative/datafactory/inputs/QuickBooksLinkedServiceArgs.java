@@ -34,7 +34,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -45,7 +45,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="accessTokenSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessTokenSecret() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret() {
         return this.accessTokenSecret == null ? Codegen.empty() : this.accessTokenSecret;
     }
 
@@ -56,7 +56,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -67,7 +67,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="companyId")
       private final @Nullable Output<Object> companyId;
 
-    public Output<Object> getCompanyId() {
+    public Output<Object> companyId() {
         return this.companyId == null ? Codegen.empty() : this.companyId;
     }
 
@@ -78,7 +78,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -89,7 +89,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> getConnectionProperties() {
+    public Output<Object> connectionProperties() {
         return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
@@ -100,7 +100,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="consumerKey")
       private final @Nullable Output<Object> consumerKey;
 
-    public Output<Object> getConsumerKey() {
+    public Output<Object> consumerKey() {
         return this.consumerKey == null ? Codegen.empty() : this.consumerKey;
     }
 
@@ -111,7 +111,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="consumerSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerSecret() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret() {
         return this.consumerSecret == null ? Codegen.empty() : this.consumerSecret;
     }
 
@@ -122,7 +122,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -133,7 +133,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -144,7 +144,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="endpoint")
       private final @Nullable Output<Object> endpoint;
 
-    public Output<Object> getEndpoint() {
+    public Output<Object> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -155,7 +155,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -167,7 +167,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -178,7 +178,7 @@ public final class QuickBooksLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> getUseEncryptedEndpoints() {
+    public Output<Object> useEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
     }
 

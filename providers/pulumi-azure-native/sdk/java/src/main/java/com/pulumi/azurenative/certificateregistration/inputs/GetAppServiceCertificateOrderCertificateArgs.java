@@ -19,7 +19,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
     @Import(name="certificateOrderName", required=true)
       private final String certificateOrderName;
 
-    public String getCertificateOrderName() {
+    public String certificateOrderName() {
         return this.certificateOrderName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="branch")
       private final @Nullable String branch;
 
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
     }
 
@@ -37,7 +37,7 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="repositoryUrl", required=true)
       private final String repositoryUrl;
 
-    public String getRepositoryUrl() {
+    public String repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -49,7 +49,7 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceControlAuthProperties")
       private final @Nullable AuthInfoResponse sourceControlAuthProperties;
 
-    public Optional<AuthInfoResponse> getSourceControlAuthProperties() {
+    public Optional<AuthInfoResponse> sourceControlAuthProperties() {
         return this.sourceControlAuthProperties == null ? Optional.empty() : Optional.ofNullable(this.sourceControlAuthProperties);
     }
 
@@ -60,7 +60,7 @@ public final class SourcePropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceControlType", required=true)
       private final String sourceControlType;
 
-    public String getSourceControlType() {
+    public String sourceControlType() {
         return this.sourceControlType;
     }
 

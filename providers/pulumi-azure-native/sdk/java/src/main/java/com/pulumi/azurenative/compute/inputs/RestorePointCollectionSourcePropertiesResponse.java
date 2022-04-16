@@ -25,7 +25,7 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class RestorePointCollectionSourcePropertiesResponse extends com.pu
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

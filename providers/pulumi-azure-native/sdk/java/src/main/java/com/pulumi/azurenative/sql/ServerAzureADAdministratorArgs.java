@@ -24,7 +24,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="administratorName")
       private final @Nullable Output<String> administratorName;
 
-    public Output<String> getAdministratorName() {
+    public Output<String> administratorName() {
         return this.administratorName == null ? Codegen.empty() : this.administratorName;
     }
 
@@ -35,7 +35,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
 
-    public Output<Either<String,AdministratorType>> getAdministratorType() {
+    public Output<Either<String,AdministratorType>> administratorType() {
         return this.administratorType;
     }
 
@@ -46,7 +46,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="login", required=true)
       private final Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
 
@@ -57,7 +57,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -79,7 +79,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="sid", required=true)
       private final Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
 
@@ -90,7 +90,7 @@ public final class ServerAzureADAdministratorArgs extends com.pulumi.resources.R
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 

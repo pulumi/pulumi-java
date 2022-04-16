@@ -196,175 +196,175 @@ public final class GetRegisteredServerResult {
      * Registered Server Agent Version
      * 
     */
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Registered Server Agent Version Expiration Date
      * 
     */
-    public String getAgentVersionExpirationDate() {
+    public String agentVersionExpirationDate() {
         return this.agentVersionExpirationDate;
     }
     /**
      * Registered Server Agent Version Status
      * 
     */
-    public String getAgentVersionStatus() {
+    public String agentVersionStatus() {
         return this.agentVersionStatus;
     }
     /**
      * Registered Server clusterId
      * 
     */
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * Registered Server clusterName
      * 
     */
-    public Optional<String> getClusterName() {
+    public Optional<String> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
     /**
      * Resource discoveryEndpointUri
      * 
     */
-    public Optional<String> getDiscoveryEndpointUri() {
+    public Optional<String> discoveryEndpointUri() {
         return Optional.ofNullable(this.discoveryEndpointUri);
     }
     /**
      * Friendly Name
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Registered Server last heart beat
      * 
     */
-    public Optional<String> getLastHeartBeat() {
+    public Optional<String> lastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
     /**
      * Resource Last Operation Name
      * 
     */
-    public Optional<String> getLastOperationName() {
+    public Optional<String> lastOperationName() {
         return Optional.ofNullable(this.lastOperationName);
     }
     /**
      * Registered Server lastWorkflowId
      * 
     */
-    public Optional<String> getLastWorkflowId() {
+    public Optional<String> lastWorkflowId() {
         return Optional.ofNullable(this.lastWorkflowId);
     }
     /**
      * Management Endpoint Uri
      * 
     */
-    public Optional<String> getManagementEndpointUri() {
+    public Optional<String> managementEndpointUri() {
         return Optional.ofNullable(this.managementEndpointUri);
     }
     /**
      * Monitoring Configuration
      * 
     */
-    public Optional<String> getMonitoringConfiguration() {
+    public Optional<String> monitoringConfiguration() {
         return Optional.ofNullable(this.monitoringConfiguration);
     }
     /**
      * Telemetry Endpoint Uri
      * 
     */
-    public Optional<String> getMonitoringEndpointUri() {
+    public Optional<String> monitoringEndpointUri() {
         return Optional.ofNullable(this.monitoringEndpointUri);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Registered Server Provisioning State
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Resource Location
      * 
     */
-    public Optional<String> getResourceLocation() {
+    public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
      * Registered Server Certificate
      * 
     */
-    public Optional<String> getServerCertificate() {
+    public Optional<String> serverCertificate() {
         return Optional.ofNullable(this.serverCertificate);
     }
     /**
      * Registered Server serverId
      * 
     */
-    public Optional<String> getServerId() {
+    public Optional<String> serverId() {
         return Optional.ofNullable(this.serverId);
     }
     /**
      * Registered Server Management Error Code
      * 
     */
-    public Optional<Integer> getServerManagementErrorCode() {
+    public Optional<Integer> serverManagementErrorCode() {
         return Optional.ofNullable(this.serverManagementErrorCode);
     }
     /**
      * Registered Server OS Version
      * 
     */
-    public Optional<String> getServerOSVersion() {
+    public Optional<String> serverOSVersion() {
         return Optional.ofNullable(this.serverOSVersion);
     }
     /**
      * Registered Server serverRole
      * 
     */
-    public Optional<String> getServerRole() {
+    public Optional<String> serverRole() {
         return Optional.ofNullable(this.serverRole);
     }
     /**
      * Service Location
      * 
     */
-    public Optional<String> getServiceLocation() {
+    public Optional<String> serviceLocation() {
         return Optional.ofNullable(this.serviceLocation);
     }
     /**
      * Registered Server storageSyncServiceUid
      * 
     */
-    public Optional<String> getStorageSyncServiceUid() {
+    public Optional<String> storageSyncServiceUid() {
         return Optional.ofNullable(this.storageSyncServiceUid);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

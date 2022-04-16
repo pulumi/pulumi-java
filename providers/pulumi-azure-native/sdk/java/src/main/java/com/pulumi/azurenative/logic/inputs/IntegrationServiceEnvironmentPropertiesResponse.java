@@ -28,7 +28,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="encryptionConfiguration")
       private final @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
 
-    public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> getEncryptionConfiguration() {
+    public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
@@ -39,7 +39,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="endpointsConfiguration")
       private final @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
 
-    public Optional<FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
+    public Optional<FlowEndpointsConfigurationResponse> endpointsConfiguration() {
         return this.endpointsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointsConfiguration);
     }
 
@@ -50,7 +50,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="integrationServiceEnvironmentId")
       private final @Nullable String integrationServiceEnvironmentId;
 
-    public Optional<String> getIntegrationServiceEnvironmentId() {
+    public Optional<String> integrationServiceEnvironmentId() {
         return this.integrationServiceEnvironmentId == null ? Optional.empty() : Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
 
@@ -61,7 +61,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="networkConfiguration")
       private final @Nullable NetworkConfigurationResponse networkConfiguration;
 
-    public Optional<NetworkConfigurationResponse> getNetworkConfiguration() {
+    public Optional<NetworkConfigurationResponse> networkConfiguration() {
         return this.networkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.networkConfiguration);
     }
 
@@ -72,7 +72,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -83,7 +83,7 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

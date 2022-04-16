@@ -43,7 +43,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return The URL to the application package
      * 
      */
-    public Output<String> getAppPackageUrl() {
+    public Output<String> appPackageUrl() {
         return this.appPackageUrl;
     }
     /**
@@ -57,7 +57,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return List of application type parameters that can be overridden when creating or updating the application.
      * 
      */
-    public Output<Map<String,String>> getDefaultParameterList() {
+    public Output<Map<String,String>> defaultParameterList() {
         return this.defaultParameterList;
     }
     /**
@@ -71,7 +71,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return Azure resource etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +85,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -99,7 +99,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return Azure resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return The current deployment or provisioning state, which only appears in the response
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +127,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class ApplicationTypeVersion extends com.pulumi.resources.CustomResource 
      * @return Azure resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

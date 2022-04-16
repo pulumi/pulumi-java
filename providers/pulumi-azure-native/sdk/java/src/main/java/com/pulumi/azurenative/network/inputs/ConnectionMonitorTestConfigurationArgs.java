@@ -34,7 +34,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="httpConfiguration")
       private final @Nullable Output<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
 
-    public Output<ConnectionMonitorHttpConfigurationArgs> getHttpConfiguration() {
+    public Output<ConnectionMonitorHttpConfigurationArgs> httpConfiguration() {
         return this.httpConfiguration == null ? Codegen.empty() : this.httpConfiguration;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="icmpConfiguration")
       private final @Nullable Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
 
-    public Output<ConnectionMonitorIcmpConfigurationArgs> getIcmpConfiguration() {
+    public Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration() {
         return this.icmpConfiguration == null ? Codegen.empty() : this.icmpConfiguration;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -67,7 +67,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="preferredIPVersion")
       private final @Nullable Output<Either<String,PreferredIPVersion>> preferredIPVersion;
 
-    public Output<Either<String,PreferredIPVersion>> getPreferredIPVersion() {
+    public Output<Either<String,PreferredIPVersion>> preferredIPVersion() {
         return this.preferredIPVersion == null ? Codegen.empty() : this.preferredIPVersion;
     }
 
@@ -78,7 +78,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="protocol", required=true)
       private final Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol;
 
-    public Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> getProtocol() {
+    public Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol() {
         return this.protocol;
     }
 
@@ -89,7 +89,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="successThreshold")
       private final @Nullable Output<ConnectionMonitorSuccessThresholdArgs> successThreshold;
 
-    public Output<ConnectionMonitorSuccessThresholdArgs> getSuccessThreshold() {
+    public Output<ConnectionMonitorSuccessThresholdArgs> successThreshold() {
         return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
@@ -100,7 +100,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="tcpConfiguration")
       private final @Nullable Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
 
-    public Output<ConnectionMonitorTcpConfigurationArgs> getTcpConfiguration() {
+    public Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration() {
         return this.tcpConfiguration == null ? Codegen.empty() : this.tcpConfiguration;
     }
 
@@ -111,7 +111,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
     @Import(name="testFrequencySec")
       private final @Nullable Output<Integer> testFrequencySec;
 
-    public Output<Integer> getTestFrequencySec() {
+    public Output<Integer> testFrequencySec() {
         return this.testFrequencySec == null ? Codegen.empty() : this.testFrequencySec;
     }
 

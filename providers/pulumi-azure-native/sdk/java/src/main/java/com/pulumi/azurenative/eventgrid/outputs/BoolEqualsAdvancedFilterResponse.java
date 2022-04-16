@@ -43,7 +43,7 @@ public final class BoolEqualsAdvancedFilterResponse {
      * The field/property in the event based on which you want to filter.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
@@ -51,14 +51,14 @@ public final class BoolEqualsAdvancedFilterResponse {
      * Expected value is 'BoolEquals'.
      * 
     */
-    public String getOperatorType() {
+    public String operatorType() {
         return this.operatorType;
     }
     /**
      * The boolean filter value.
      * 
     */
-    public Optional<Boolean> getValue() {
+    public Optional<Boolean> value() {
         return Optional.ofNullable(this.value);
     }
 

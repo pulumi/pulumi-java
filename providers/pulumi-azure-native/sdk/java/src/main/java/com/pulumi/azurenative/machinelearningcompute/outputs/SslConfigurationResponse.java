@@ -48,28 +48,28 @@ public final class SslConfigurationResponse {
      * The SSL cert data in PEM format.
      * 
     */
-    public Optional<String> getCert() {
+    public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
     /**
      * The CName of the certificate.
      * 
     */
-    public Optional<String> getCname() {
+    public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
     /**
      * The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * SSL status. Allowed values are Enabled and Disabled.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

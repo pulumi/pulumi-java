@@ -27,7 +27,7 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="filePattern")
       private final @Nullable Output<Object> filePattern;
 
-    public Output<Object> getFilePattern() {
+    public Output<Object> filePattern() {
         return this.filePattern == null ? Codegen.empty() : this.filePattern;
     }
 
@@ -39,7 +39,7 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

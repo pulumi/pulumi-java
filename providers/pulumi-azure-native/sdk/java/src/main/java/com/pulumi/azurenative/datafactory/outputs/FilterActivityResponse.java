@@ -74,35 +74,35 @@ public final class FilterActivityResponse {
      * Condition to be used for filtering the input.
      * 
     */
-    public ExpressionResponse getCondition() {
+    public ExpressionResponse condition() {
         return this.condition;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Input array on which filter should be applied.
      * 
     */
-    public ExpressionResponse getItems() {
+    public ExpressionResponse items() {
         return this.items;
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -110,14 +110,14 @@ public final class FilterActivityResponse {
      * Expected value is 'Filter'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

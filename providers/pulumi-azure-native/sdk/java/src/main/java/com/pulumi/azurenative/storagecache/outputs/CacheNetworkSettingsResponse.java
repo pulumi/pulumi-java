@@ -57,35 +57,35 @@ public final class CacheNetworkSettingsResponse {
      * DNS search domain
      * 
     */
-    public Optional<String> getDnsSearchDomain() {
+    public Optional<String> dnsSearchDomain() {
         return Optional.ofNullable(this.dnsSearchDomain);
     }
     /**
      * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
      * 
     */
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * The IPv4 maximum transmission unit configured for the subnet.
      * 
     */
-    public Optional<Integer> getMtu() {
+    public Optional<Integer> mtu() {
         return Optional.ofNullable(this.mtu);
     }
     /**
      * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
      * 
     */
-    public Optional<String> getNtpServer() {
+    public Optional<String> ntpServer() {
         return Optional.ofNullable(this.ntpServer);
     }
     /**
      * Array of additional IP addresses used by this Cache.
      * 
     */
-    public List<String> getUtilityAddresses() {
+    public List<String> utilityAddresses() {
         return this.utilityAddresses;
     }
 

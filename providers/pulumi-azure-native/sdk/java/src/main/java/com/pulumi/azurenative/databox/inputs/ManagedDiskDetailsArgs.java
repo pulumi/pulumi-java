@@ -27,7 +27,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataAccountType", required=true)
       private final Output<String> dataAccountType;
 
-    public Output<String> getDataAccountType() {
+    public Output<String> dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="sharePassword")
       private final @Nullable Output<String> sharePassword;
 
-    public Output<String> getSharePassword() {
+    public Output<String> sharePassword() {
         return this.sharePassword == null ? Codegen.empty() : this.sharePassword;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="stagingStorageAccountId", required=true)
       private final Output<String> stagingStorageAccountId;
 
-    public Output<String> getStagingStorageAccountId() {
+    public Output<String> stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
 

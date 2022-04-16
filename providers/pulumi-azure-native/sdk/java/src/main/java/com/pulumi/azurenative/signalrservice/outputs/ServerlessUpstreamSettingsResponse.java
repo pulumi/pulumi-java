@@ -26,7 +26,7 @@ public final class ServerlessUpstreamSettingsResponse {
      * Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
      * 
     */
-    public List<UpstreamTemplateResponse> getTemplates() {
+    public List<UpstreamTemplateResponse> templates() {
         return this.templates == null ? List.of() : this.templates;
     }
 

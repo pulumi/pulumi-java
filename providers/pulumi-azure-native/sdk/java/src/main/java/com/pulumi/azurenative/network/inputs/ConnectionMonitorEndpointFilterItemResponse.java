@@ -25,7 +25,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
     @Import(name="address")
       private final @Nullable String address;
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
@@ -36,7 +36,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

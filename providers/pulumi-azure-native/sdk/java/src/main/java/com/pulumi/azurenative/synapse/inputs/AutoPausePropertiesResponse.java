@@ -26,7 +26,7 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="delayInMinutes")
       private final @Nullable Integer delayInMinutes;
 
-    public Optional<Integer> getDelayInMinutes() {
+    public Optional<Integer> delayInMinutes() {
         return this.delayInMinutes == null ? Optional.empty() : Optional.ofNullable(this.delayInMinutes);
     }
 
@@ -37,7 +37,7 @@ public final class AutoPausePropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 

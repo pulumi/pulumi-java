@@ -27,7 +27,7 @@ public final class NumberLessThanAdvancedFilterArgs extends com.pulumi.resources
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -39,7 +39,7 @@ public final class NumberLessThanAdvancedFilterArgs extends com.pulumi.resources
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
 
-    public Output<String> getOperatorType() {
+    public Output<String> operatorType() {
         return this.operatorType;
     }
 
@@ -50,7 +50,7 @@ public final class NumberLessThanAdvancedFilterArgs extends com.pulumi.resources
     @Import(name="value")
       private final @Nullable Output<Double> value;
 
-    public Output<Double> getValue() {
+    public Output<Double> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

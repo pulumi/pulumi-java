@@ -26,7 +26,7 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
     @Import(name="encryptionUserAssignedIdentity")
       private final @Nullable Output<String> encryptionUserAssignedIdentity;
 
-    public Output<String> getEncryptionUserAssignedIdentity() {
+    public Output<String> encryptionUserAssignedIdentity() {
         return this.encryptionUserAssignedIdentity == null ? Codegen.empty() : this.encryptionUserAssignedIdentity;
     }
 

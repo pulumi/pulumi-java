@@ -25,7 +25,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
 
-    public Output<String> getAccessPolicyName() {
+    public Output<String> accessPolicyName() {
         return this.accessPolicyName == null ? Codegen.empty() : this.accessPolicyName;
     }
 
@@ -36,7 +36,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -47,7 +47,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<JwtAuthenticationArgs> authentication;
 
-    public Output<JwtAuthenticationArgs> getAuthentication() {
+    public Output<JwtAuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -58,7 +58,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<Either<String,AccessPolicyRole>> role;
 
-    public Output<Either<String,AccessPolicyRole>> getRole() {
+    public Output<Either<String,AccessPolicyRole>> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

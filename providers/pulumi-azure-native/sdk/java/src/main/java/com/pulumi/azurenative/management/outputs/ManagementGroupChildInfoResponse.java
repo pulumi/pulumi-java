@@ -56,35 +56,35 @@ public final class ManagementGroupChildInfoResponse {
      * The list of children.
      * 
     */
-    public List<ManagementGroupChildInfoResponse> getChildren() {
+    public List<ManagementGroupChildInfoResponse> children() {
         return this.children == null ? List.of() : this.children;
     }
     /**
      * The friendly name of the child resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the child entity.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

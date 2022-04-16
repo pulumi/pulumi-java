@@ -100,77 +100,77 @@ public final class GetPolicyExemptionResult {
      * The description of the policy exemption.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy exemption.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The policy exemption category. Possible values are Waiver and Mitigated.
      * 
     */
-    public String getExemptionCategory() {
+    public String exemptionCategory() {
         return this.exemptionCategory;
     }
     /**
      * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
      * 
     */
-    public Optional<String> getExpiresOn() {
+    public Optional<String> expiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
     /**
      * The ID of the policy exemption.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the policy exemption.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ID of the policy assignment that is being exempted.
      * 
     */
-    public String getPolicyAssignmentId() {
+    public String policyAssignmentId() {
         return this.policyAssignmentId;
     }
     /**
      * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
      * 
     */
-    public List<String> getPolicyDefinitionReferenceIds() {
+    public List<String> policyDefinitionReferenceIds() {
         return this.policyDefinitionReferenceIds == null ? List.of() : this.policyDefinitionReferenceIds;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyExemptions).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

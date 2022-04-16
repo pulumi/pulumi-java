@@ -23,7 +23,7 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="dataSourceType")
       private final @Nullable Output<String> dataSourceType;
 
-    public Output<String> getDataSourceType() {
+    public Output<String> dataSourceType() {
         return this.dataSourceType == null ? Codegen.empty() : this.dataSourceType;
     }
 
@@ -34,7 +34,7 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="storageAccountIds")
       private final @Nullable Output<List<String>> storageAccountIds;
 
-    public Output<List<String>> getStorageAccountIds() {
+    public Output<List<String>> storageAccountIds() {
         return this.storageAccountIds == null ? Codegen.empty() : this.storageAccountIds;
     }
 
@@ -56,7 +56,7 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

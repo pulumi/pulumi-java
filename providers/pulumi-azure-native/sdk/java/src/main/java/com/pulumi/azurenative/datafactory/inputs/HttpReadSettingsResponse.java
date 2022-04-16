@@ -27,7 +27,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
 
-    public Optional<Object> getAdditionalHeaders() {
+    public Optional<Object> additionalHeaders() {
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
     }
 
@@ -38,7 +38,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -49,7 +49,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Boolean enablePartitionDiscovery;
 
-    public Optional<Boolean> getEnablePartitionDiscovery() {
+    public Optional<Boolean> enablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
@@ -60,7 +60,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -71,7 +71,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="partitionRootPath")
       private final @Nullable Object partitionRootPath;
 
-    public Optional<Object> getPartitionRootPath() {
+    public Optional<Object> partitionRootPath() {
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
     }
 
@@ -82,7 +82,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestBody")
       private final @Nullable Object requestBody;
 
-    public Optional<Object> getRequestBody() {
+    public Optional<Object> requestBody() {
         return this.requestBody == null ? Optional.empty() : Optional.ofNullable(this.requestBody);
     }
 
@@ -93,7 +93,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
 
-    public Optional<Object> getRequestMethod() {
+    public Optional<Object> requestMethod() {
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
     }
 
@@ -104,7 +104,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="requestTimeout")
       private final @Nullable Object requestTimeout;
 
-    public Optional<Object> getRequestTimeout() {
+    public Optional<Object> requestTimeout() {
         return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
     }
 
@@ -116,7 +116,7 @@ public final class HttpReadSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends com
     @Import(name="allowedActions")
       private final @Nullable List<String> allowedActions;
 
-    public List<String> getAllowedActions() {
+    public List<String> allowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends com
     @Import(name="allowedDataActions")
       private final @Nullable List<String> allowedDataActions;
 
-    public List<String> getAllowedDataActions() {
+    public List<String> allowedDataActions() {
         return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
     }
 

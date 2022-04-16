@@ -30,7 +30,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -41,7 +41,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
     @Import(name="osType")
       private final @Nullable Output<Either<String,OSType>> osType;
 
-    public Output<Either<String,OSType>> getOsType() {
+    public Output<Either<String,OSType>> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -63,7 +63,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
     @Import(name="subnetCidr")
       private final @Nullable Output<String> subnetCidr;
 
-    public Output<String> getSubnetCidr() {
+    public Output<String> subnetCidr() {
         return this.subnetCidr == null ? Codegen.empty() : this.subnetCidr;
     }
 
@@ -74,7 +74,7 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
     @Import(name="vmSize", required=true)
       private final Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
-    public Output<Either<String,OpenShiftContainerServiceVMSize>> getVmSize() {
+    public Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize() {
         return this.vmSize;
     }
 

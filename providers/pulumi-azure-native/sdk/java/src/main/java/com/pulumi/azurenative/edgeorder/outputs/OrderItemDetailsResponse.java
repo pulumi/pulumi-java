@@ -140,112 +140,112 @@ public final class OrderItemDetailsResponse {
      * Cancellation reason.
      * 
     */
-    public String getCancellationReason() {
+    public String cancellationReason() {
         return this.cancellationReason;
     }
     /**
      * Describes whether the order item is cancellable or not.
      * 
     */
-    public String getCancellationStatus() {
+    public String cancellationStatus() {
         return this.cancellationStatus;
     }
     /**
      * Current Order item Status
      * 
     */
-    public StageDetailsResponse getCurrentStage() {
+    public StageDetailsResponse currentStage() {
         return this.currentStage;
     }
     /**
      * Describes whether the order item is deletable or not.
      * 
     */
-    public String getDeletionStatus() {
+    public String deletionStatus() {
         return this.deletionStatus;
     }
     /**
      * Top level error for the job.
      * 
     */
-    public ErrorDetailResponse getError() {
+    public ErrorDetailResponse error() {
         return this.error;
     }
     /**
      * Forward Package Shipping details
      * 
     */
-    public ForwardShippingDetailsResponse getForwardShippingDetails() {
+    public ForwardShippingDetailsResponse forwardShippingDetails() {
         return this.forwardShippingDetails;
     }
     /**
      * Parent RP details - this returns only the first or default parent RP from the entire list
      * 
     */
-    public ResourceProviderDetailsResponse getManagementRpDetails() {
+    public ResourceProviderDetailsResponse managementRpDetails() {
         return this.managementRpDetails;
     }
     /**
      * List of parent RP details supported for configuration.
      * 
     */
-    public List<ResourceProviderDetailsResponse> getManagementRpDetailsList() {
+    public List<ResourceProviderDetailsResponse> managementRpDetailsList() {
         return this.managementRpDetailsList;
     }
     /**
      * Additional notification email list
      * 
     */
-    public List<String> getNotificationEmailList() {
+    public List<String> notificationEmailList() {
         return this.notificationEmailList == null ? List.of() : this.notificationEmailList;
     }
     /**
      * Order item status history
      * 
     */
-    public List<StageDetailsResponse> getOrderItemStageHistory() {
+    public List<StageDetailsResponse> orderItemStageHistory() {
         return this.orderItemStageHistory;
     }
     /**
      * Order item type.
      * 
     */
-    public String getOrderItemType() {
+    public String orderItemType() {
         return this.orderItemType;
     }
     /**
      * Customer notification Preferences
      * 
     */
-    public Optional<PreferencesResponse> getPreferences() {
+    public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
      * Unique identifier for configuration.
      * 
     */
-    public ProductDetailsResponse getProductDetails() {
+    public ProductDetailsResponse productDetails() {
         return this.productDetails;
     }
     /**
      * Return reason.
      * 
     */
-    public String getReturnReason() {
+    public String returnReason() {
         return this.returnReason;
     }
     /**
      * Describes whether the order item is returnable or not.
      * 
     */
-    public String getReturnStatus() {
+    public String returnStatus() {
         return this.returnStatus;
     }
     /**
      * Reverse Package Shipping details
      * 
     */
-    public ReverseShippingDetailsResponse getReverseShippingDetails() {
+    public ReverseShippingDetailsResponse reverseShippingDetails() {
         return this.reverseShippingDetails;
     }
 

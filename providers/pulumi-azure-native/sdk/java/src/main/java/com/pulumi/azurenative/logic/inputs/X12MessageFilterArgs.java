@@ -27,7 +27,7 @@ public final class X12MessageFilterArgs extends com.pulumi.resources.ResourceArg
     @Import(name="messageFilterType", required=true)
       private final Output<Either<String,MessageFilterType>> messageFilterType;
 
-    public Output<Either<String,MessageFilterType>> getMessageFilterType() {
+    public Output<Either<String,MessageFilterType>> messageFilterType() {
         return this.messageFilterType;
     }
 

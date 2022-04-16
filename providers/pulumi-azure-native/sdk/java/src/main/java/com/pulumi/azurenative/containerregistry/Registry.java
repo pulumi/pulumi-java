@@ -49,7 +49,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The value that indicates whether the admin user is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAdminUserEnabled() {
+    public Output</* @Nullable */ Boolean> adminUserEnabled() {
         return this.adminUserEnabled;
     }
     /**
@@ -63,7 +63,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The creation date of the container registry in ISO8601 format.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -77,7 +77,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -91,7 +91,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The URL that can be used to log into the container registry.
      * 
      */
-    public Output<String> getLoginServer() {
+    public Output<String> loginServer() {
         return this.loginServer;
     }
     /**
@@ -105,7 +105,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The network rule set for a container registry.
      * 
      */
-    public Output</* @Nullable */ NetworkRuleSetResponse> getNetworkRuleSet() {
+    public Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet() {
         return this.networkRuleSet;
     }
     /**
@@ -133,7 +133,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The policies for a container registry.
      * 
      */
-    public Output</* @Nullable */ PoliciesResponse> getPolicies() {
+    public Output</* @Nullable */ PoliciesResponse> policies() {
         return this.policies;
     }
     /**
@@ -147,7 +147,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the container registry at the time the operation was called.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -161,7 +161,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The SKU of the container registry.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -175,7 +175,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The status of the container registry at the time the operation was called.
      * 
      */
-    public Output<StatusResponse> getStatus() {
+    public Output<StatusResponse> status() {
         return this.status;
     }
     /**
@@ -189,7 +189,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The properties of the storage account for the container registry. Only applicable to Classic SKU.
      * 
      */
-    public Output</* @Nullable */ StorageAccountPropertiesResponse> getStorageAccount() {
+    public Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount() {
         return this.storageAccount;
     }
     /**
@@ -203,7 +203,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -217,7 +217,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

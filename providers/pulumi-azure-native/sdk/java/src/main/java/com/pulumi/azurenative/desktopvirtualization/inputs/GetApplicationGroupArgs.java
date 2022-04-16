@@ -19,7 +19,7 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="applicationGroupName", required=true)
       private final String applicationGroupName;
 
-    public String getApplicationGroupName() {
+    public String applicationGroupName() {
         return this.applicationGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

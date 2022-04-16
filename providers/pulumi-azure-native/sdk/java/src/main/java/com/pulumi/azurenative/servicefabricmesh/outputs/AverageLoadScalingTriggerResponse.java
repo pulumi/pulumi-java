@@ -58,35 +58,35 @@ public final class AverageLoadScalingTriggerResponse {
      * Expected value is 'AverageLoad'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Lower load threshold (if average load is below this threshold, service will scale down).
      * 
     */
-    public Double getLowerLoadThreshold() {
+    public Double lowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
     /**
      * Description of the metric that is used for scaling.
      * 
     */
-    public AutoScalingResourceMetricResponse getMetric() {
+    public AutoScalingResourceMetricResponse metric() {
         return this.metric;
     }
     /**
      * Scale interval that indicates how often will this trigger be checked.
      * 
     */
-    public Integer getScaleIntervalInSeconds() {
+    public Integer scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
     /**
      * Upper load threshold (if average load is above this threshold, service will scale up).
      * 
     */
-    public Double getUpperLoadThreshold() {
+    public Double upperLoadThreshold() {
         return this.upperLoadThreshold;
     }
 

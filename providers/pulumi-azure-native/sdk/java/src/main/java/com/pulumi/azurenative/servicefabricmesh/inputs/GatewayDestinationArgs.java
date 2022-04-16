@@ -25,7 +25,7 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -36,7 +36,7 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -47,7 +47,7 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

@@ -26,7 +26,7 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Integer appConsistentFrequencyInMinutes;
 
-    public Optional<Integer> getAppConsistentFrequencyInMinutes() {
+    public Optional<Integer> appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
@@ -37,7 +37,7 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
-    public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
+    public Optional<Integer> crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
@@ -49,7 +49,7 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -60,7 +60,7 @@ public final class VmwareCbtPolicyDetailsResponse extends com.pulumi.resources.I
     @Import(name="recoveryPointHistoryInMinutes")
       private final @Nullable Integer recoveryPointHistoryInMinutes;
 
-    public Optional<Integer> getRecoveryPointHistoryInMinutes() {
+    public Optional<Integer> recoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistoryInMinutes);
     }
 

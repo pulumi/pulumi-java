@@ -25,7 +25,7 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -36,7 +36,7 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     @Import(name="server", required=true)
       private final String server;
 
-    public String getServer() {
+    public String server() {
         return this.server;
     }
 
@@ -47,7 +47,7 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

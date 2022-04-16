@@ -42,7 +42,7 @@ public class ServerAdministrator extends com.pulumi.resources.CustomResource {
      * @return The type of administrator.
      * 
      */
-    public Output<String> getAdministratorType() {
+    public Output<String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -56,7 +56,7 @@ public class ServerAdministrator extends com.pulumi.resources.CustomResource {
      * @return The server administrator login account name.
      * 
      */
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
     /**
@@ -70,7 +70,7 @@ public class ServerAdministrator extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ServerAdministrator extends com.pulumi.resources.CustomResource {
      * @return The server administrator Sid (Secure ID).
      * 
      */
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
     /**
@@ -98,7 +98,7 @@ public class ServerAdministrator extends com.pulumi.resources.CustomResource {
      * @return The server Active Directory Administrator tenant id.
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -112,7 +112,7 @@ public class ServerAdministrator extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

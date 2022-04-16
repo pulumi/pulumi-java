@@ -25,7 +25,7 @@ public final class AgentPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="cpu")
       private final @Nullable Integer cpu;
 
-    public Optional<Integer> getCpu() {
+    public Optional<Integer> cpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 

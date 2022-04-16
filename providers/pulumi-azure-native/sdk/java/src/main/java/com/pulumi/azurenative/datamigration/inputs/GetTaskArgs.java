@@ -21,7 +21,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -54,7 +54,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -65,7 +65,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="taskName", required=true)
       private final String taskName;
 
-    public String getTaskName() {
+    public String taskName() {
         return this.taskName;
     }
 

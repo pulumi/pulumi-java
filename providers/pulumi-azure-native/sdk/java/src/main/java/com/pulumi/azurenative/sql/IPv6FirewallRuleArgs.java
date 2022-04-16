@@ -22,7 +22,7 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endIPv6Address")
       private final @Nullable Output<String> endIPv6Address;
 
-    public Output<String> getEndIPv6Address() {
+    public Output<String> endIPv6Address() {
         return this.endIPv6Address == null ? Codegen.empty() : this.endIPv6Address;
     }
 
@@ -33,7 +33,7 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
-    public Output<String> getFirewallRuleName() {
+    public Output<String> firewallRuleName() {
         return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
@@ -44,7 +44,7 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -77,7 +77,7 @@ public final class IPv6FirewallRuleArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startIPv6Address")
       private final @Nullable Output<String> startIPv6Address;
 
-    public Output<String> getStartIPv6Address() {
+    public Output<String> startIPv6Address() {
         return this.startIPv6Address == null ? Codegen.empty() : this.startIPv6Address;
     }
 

@@ -19,7 +19,7 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="configStoreName", required=true)
       private final String configStoreName;
 
-    public String getConfigStoreName() {
+    public String configStoreName() {
         return this.configStoreName;
     }
 
@@ -30,7 +30,7 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyValueName", required=true)
       private final String keyValueName;
 
-    public String getKeyValueName() {
+    public String keyValueName() {
         return this.keyValueName;
     }
 
@@ -41,7 +41,7 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

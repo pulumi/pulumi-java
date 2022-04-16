@@ -97,35 +97,35 @@ public final class GetADLSGen1FileDataSetResult {
      * The ADLS account name.
      * 
     */
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
     /**
      * Unique id for identifying a data set resource
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * The file name in the ADLS account.
      * 
     */
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
     /**
      * The folder path within the ADLS account.
      * 
     */
-    public String getFolderPath() {
+    public String folderPath() {
         return this.folderPath;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -133,42 +133,42 @@ public final class GetADLSGen1FileDataSetResult {
      * Expected value is 'AdlsGen1File'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource group of ADLS account.
      * 
     */
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Subscription id of ADLS account.
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

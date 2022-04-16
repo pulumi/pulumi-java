@@ -24,7 +24,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="firstTimestamp", required=true)
       private final String firstTimestamp;
 
-    public String getFirstTimestamp() {
+    public String firstTimestamp() {
         return this.firstTimestamp;
     }
 
@@ -46,7 +46,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastTimestamp", required=true)
       private final String lastTimestamp;
 
-    public String getLastTimestamp() {
+    public String lastTimestamp() {
         return this.lastTimestamp;
     }
 
@@ -57,7 +57,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -68,7 +68,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

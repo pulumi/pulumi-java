@@ -25,7 +25,7 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
     @Import(name="appendRowFileName")
       private final @Nullable String appendRowFileName;
 
-    public Optional<String> getAppendRowFileName() {
+    public Optional<String> appendRowFileName() {
         return this.appendRowFileName == null ? Optional.empty() : Optional.ofNullable(this.appendRowFileName);
     }
 
@@ -36,7 +36,7 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
     @Import(name="outputAction")
       private final @Nullable String outputAction;
 
-    public Optional<String> getOutputAction() {
+    public Optional<String> outputAction() {
         return this.outputAction == null ? Optional.empty() : Optional.ofNullable(this.outputAction);
     }
 

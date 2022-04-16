@@ -24,7 +24,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
-    public Output<String> getDataSetName() {
+    public Output<String> dataSetName() {
         return this.dataSetName == null ? Codegen.empty() : this.dataSetName;
     }
 
@@ -46,7 +46,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,DataSetKind>> kind;
 
-    public Output<Either<String,DataSetKind>> getKind() {
+    public Output<Either<String,DataSetKind>> kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 

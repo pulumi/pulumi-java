@@ -19,7 +19,7 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends com.pulumi.r
     @Import(name="historyDefinitionId", required=true)
       private final String historyDefinitionId;
 
-    public String getHistoryDefinitionId() {
+    public String historyDefinitionId() {
         return this.historyDefinitionId;
     }
 

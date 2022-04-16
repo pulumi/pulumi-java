@@ -19,7 +19,7 @@ public final class GetManagedNetworkArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="managedNetworkName", required=true)
       private final String managedNetworkName;
 
-    public String getManagedNetworkName() {
+    public String managedNetworkName() {
         return this.managedNetworkName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagedNetworkArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

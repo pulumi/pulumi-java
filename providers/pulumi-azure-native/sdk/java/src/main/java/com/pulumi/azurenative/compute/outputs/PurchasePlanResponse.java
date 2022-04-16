@@ -48,28 +48,28 @@ public final class PurchasePlanResponse {
      * The plan ID.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
      * 
     */
-    public String getProduct() {
+    public String product() {
         return this.product;
     }
     /**
      * The Offer Promotion Code.
      * 
     */
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher ID.
      * 
     */
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
 

@@ -32,14 +32,14 @@ public final class TagResponse {
      * The tag name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The tag value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

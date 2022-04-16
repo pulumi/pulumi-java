@@ -26,7 +26,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -37,7 +37,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
     @Import(name="awsAccessKeyId", required=true)
       private final Output<String> awsAccessKeyId;
 
-    public Output<String> getAwsAccessKeyId() {
+    public Output<String> awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
 
@@ -48,7 +48,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends com.pulum
     @Import(name="awsSecretAccessKey", required=true)
       private final Output<String> awsSecretAccessKey;
 
-    public Output<String> getAwsSecretAccessKey() {
+    public Output<String> awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
 

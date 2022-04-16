@@ -28,7 +28,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessKey1", required=true)
       private final Output<String> accessKey1;
 
-    public Output<String> getAccessKey1() {
+    public Output<String> accessKey1() {
         return this.accessKey1;
     }
 
@@ -39,7 +39,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessKey2")
       private final @Nullable Output<String> accessKey2;
 
-    public Output<String> getAccessKey2() {
+    public Output<String> accessKey2() {
         return this.accessKey2 == null ? Codegen.empty() : this.accessKey2;
     }
 
@@ -50,7 +50,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -61,7 +61,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
-    public Output<String> getDeadLetterSecret() {
+    public Output<String> deadLetterSecret() {
         return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
     }
 
@@ -72,7 +72,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
-    public Output<String> getDeadLetterUri() {
+    public Output<String> deadLetterUri() {
         return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
     }
 
@@ -84,7 +84,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -95,7 +95,7 @@ public final class EventGridArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicEndpoint", required=true)
       private final Output<String> topicEndpoint;
 
-    public Output<String> getTopicEndpoint() {
+    public Output<String> topicEndpoint() {
         return this.topicEndpoint;
     }
 

@@ -24,7 +24,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
+    public Output<String> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 
@@ -46,7 +46,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -57,7 +57,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="mechanisms")
       private final @Nullable Output<String> mechanisms;
 
-    public Output<String> getMechanisms() {
+    public Output<String> mechanisms() {
         return this.mechanisms == null ? Codegen.empty() : this.mechanisms;
     }
 
@@ -68,7 +68,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="mongoUserDefinitionId")
       private final @Nullable Output<String> mongoUserDefinitionId;
 
-    public Output<String> getMongoUserDefinitionId() {
+    public Output<String> mongoUserDefinitionId() {
         return this.mongoUserDefinitionId == null ? Codegen.empty() : this.mongoUserDefinitionId;
     }
 
@@ -79,7 +79,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -90,7 +90,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +101,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> getRoles() {
+    public Output<List<RoleArgs>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 
@@ -112,7 +112,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends com.pulumi.res
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

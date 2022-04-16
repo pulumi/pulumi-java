@@ -41,21 +41,21 @@ public final class CustomRPResourceTypeRouteDefinitionResponse {
      * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The routing types that are supported for resource requests.
      * 
     */
-    public Optional<String> getRoutingType() {
+    public Optional<String> routingType() {
         return Optional.ofNullable(this.routingType);
     }
 

@@ -30,7 +30,7 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="endpoints")
       private final @Nullable Output<RoutingEndpointsArgs> endpoints;
 
-    public Output<RoutingEndpointsArgs> getEndpoints() {
+    public Output<RoutingEndpointsArgs> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -41,7 +41,7 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="enrichments")
       private final @Nullable Output<List<EnrichmentPropertiesArgs>> enrichments;
 
-    public Output<List<EnrichmentPropertiesArgs>> getEnrichments() {
+    public Output<List<EnrichmentPropertiesArgs>> enrichments() {
         return this.enrichments == null ? Codegen.empty() : this.enrichments;
     }
 
@@ -52,7 +52,7 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fallbackRoute")
       private final @Nullable Output<FallbackRoutePropertiesArgs> fallbackRoute;
 
-    public Output<FallbackRoutePropertiesArgs> getFallbackRoute() {
+    public Output<FallbackRoutePropertiesArgs> fallbackRoute() {
         return this.fallbackRoute == null ? Codegen.empty() : this.fallbackRoute;
     }
 
@@ -63,7 +63,7 @@ public final class RoutingPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routes")
       private final @Nullable Output<List<RoutePropertiesArgs>> routes;
 
-    public Output<List<RoutePropertiesArgs>> getRoutes() {
+    public Output<List<RoutePropertiesArgs>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 

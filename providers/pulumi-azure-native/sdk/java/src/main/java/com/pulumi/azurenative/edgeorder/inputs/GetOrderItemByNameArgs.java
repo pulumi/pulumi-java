@@ -21,7 +21,7 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
     @Import(name="orderItemName", required=true)
       private final String orderItemName;
 
-    public String getOrderItemName() {
+    public String orderItemName() {
         return this.orderItemName;
     }
 
@@ -43,7 +43,7 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

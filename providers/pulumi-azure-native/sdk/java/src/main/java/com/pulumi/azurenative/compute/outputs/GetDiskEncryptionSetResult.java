@@ -109,84 +109,84 @@ public final class GetDiskEncryptionSetResult {
      * The key vault key which is currently used by this disk encryption set.
      * 
     */
-    public Optional<KeyForDiskEncryptionSetResponse> getActiveKey() {
+    public Optional<KeyForDiskEncryptionSetResponse> activeKey() {
         return Optional.ofNullable(this.activeKey);
     }
     /**
      * The type of key used to encrypt the data of the disk.
      * 
     */
-    public Optional<String> getEncryptionType() {
+    public Optional<String> encryptionType() {
         return Optional.ofNullable(this.encryptionType);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
      * 
     */
-    public Optional<EncryptionSetIdentityResponse> getIdentity() {
+    public Optional<EncryptionSetIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The time when the active key of this disk encryption set was updated.
      * 
     */
-    public String getLastKeyRotationTimestamp() {
+    public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.
      * 
     */
-    public List<KeyForDiskEncryptionSetResponse> getPreviousKeys() {
+    public List<KeyForDiskEncryptionSetResponse> previousKeys() {
         return this.previousKeys;
     }
     /**
      * The disk encryption set provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
      * 
     */
-    public Optional<Boolean> getRotationToLatestKeyVersionEnabled() {
+    public Optional<Boolean> rotationToLatestKeyVersionEnabled() {
         return Optional.ofNullable(this.rotationToLatestKeyVersionEnabled);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

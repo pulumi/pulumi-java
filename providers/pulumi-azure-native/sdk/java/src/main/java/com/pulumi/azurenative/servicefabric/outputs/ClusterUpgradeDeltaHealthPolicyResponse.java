@@ -56,7 +56,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
      * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
      * 
     */
-    public Map<String,ApplicationDeltaHealthPolicyResponse> getApplicationDeltaHealthPolicies() {
+    public Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies() {
         return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;
     }
     /**
@@ -65,7 +65,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
      * 
     */
-    public Integer getMaxPercentDeltaUnhealthyApplications() {
+    public Integer maxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
     }
     /**
@@ -74,7 +74,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
      * 
     */
-    public Integer getMaxPercentDeltaUnhealthyNodes() {
+    public Integer maxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
     }
     /**
@@ -83,7 +83,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
      * The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
      * 
     */
-    public Integer getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {
+    public Integer maxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
 

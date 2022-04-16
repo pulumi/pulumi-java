@@ -27,7 +27,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
     @Import(name="baseDockerfile")
       private final @Nullable Output<String> baseDockerfile;
 
-    public Output<String> getBaseDockerfile() {
+    public Output<String> baseDockerfile() {
         return this.baseDockerfile == null ? Codegen.empty() : this.baseDockerfile;
     }
 
@@ -38,7 +38,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
     @Import(name="baseImage")
       private final @Nullable Output<String> baseImage;
 
-    public Output<String> getBaseImage() {
+    public Output<String> baseImage() {
         return this.baseImage == null ? Codegen.empty() : this.baseImage;
     }
 
@@ -49,7 +49,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends com.pulumi.resou
     @Import(name="baseImageRegistry")
       private final @Nullable Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
 
-    public Output<ModelDockerSectionBaseImageRegistryArgs> getBaseImageRegistry() {
+    public Output<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry() {
         return this.baseImageRegistry == null ? Codegen.empty() : this.baseImageRegistry;
     }
 

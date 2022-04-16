@@ -26,7 +26,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId;
     }
 
@@ -37,7 +37,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName;
     }
 
@@ -48,7 +48,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="schemaVersion", required=true)
       private final Output<String> schemaVersion;
 
-    public Output<String> getSchemaVersion() {
+    public Output<String> schemaVersion() {
         return this.schemaVersion;
     }
 
@@ -59,7 +59,7 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
 
-    public Output<String> getSenderApplicationId() {
+    public Output<String> senderApplicationId() {
         return this.senderApplicationId == null ? Codegen.empty() : this.senderApplicationId;
     }
 

@@ -30,7 +30,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionConfigurationArgs> encryption;
 
-    public Output<EncryptionConfigurationArgs> getEncryption() {
+    public Output<EncryptionConfigurationArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -41,7 +41,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName")
       private final @Nullable Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName == null ? Codegen.empty() : this.factoryName;
     }
 
@@ -52,7 +52,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalParameters")
       private final @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
-    public Output<Map<String,GlobalParameterSpecificationArgs>> getGlobalParameters() {
+    public Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters() {
         return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
     }
 
@@ -63,7 +63,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<FactoryIdentityArgs> identity;
 
-    public Output<FactoryIdentityArgs> getIdentity() {
+    public Output<FactoryIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -74,7 +74,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -85,7 +85,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -96,7 +96,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repoConfiguration")
       private final @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
-    public Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> getRepoConfiguration() {
+    public Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration() {
         return this.repoConfiguration == null ? Codegen.empty() : this.repoConfiguration;
     }
 
@@ -107,7 +107,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -118,7 +118,7 @@ public final class FactoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

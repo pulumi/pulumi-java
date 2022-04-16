@@ -62,42 +62,42 @@ public final class GetServerTrustCertificateResult {
      * The certificate name
      * 
     */
-    public String getCertificateName() {
+    public String certificateName() {
         return this.certificateName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The certificate public blob
      * 
     */
-    public Optional<String> getPublicBlob() {
+    public Optional<String> publicBlob() {
         return Optional.ofNullable(this.publicBlob);
     }
     /**
      * The certificate thumbprint
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

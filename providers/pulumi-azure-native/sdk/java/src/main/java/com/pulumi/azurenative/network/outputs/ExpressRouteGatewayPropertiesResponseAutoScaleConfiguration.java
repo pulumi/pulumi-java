@@ -26,7 +26,7 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
      * Minimum and maximum number of scale units to deploy.
      * 
     */
-    public Optional<ExpressRouteGatewayPropertiesResponseBounds> getBounds() {
+    public Optional<ExpressRouteGatewayPropertiesResponseBounds> bounds() {
         return Optional.ofNullable(this.bounds);
     }
 

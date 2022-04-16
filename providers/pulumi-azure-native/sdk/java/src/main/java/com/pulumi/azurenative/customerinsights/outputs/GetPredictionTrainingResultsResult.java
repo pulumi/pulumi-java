@@ -57,35 +57,35 @@ public final class GetPredictionTrainingResultsResult {
      * Canonical profiles.
      * 
     */
-    public List<CanonicalProfileDefinitionResponse> getCanonicalProfiles() {
+    public List<CanonicalProfileDefinitionResponse> canonicalProfiles() {
         return this.canonicalProfiles;
     }
     /**
      * Prediction distribution.
      * 
     */
-    public PredictionDistributionDefinitionResponse getPredictionDistribution() {
+    public PredictionDistributionDefinitionResponse predictionDistribution() {
         return this.predictionDistribution;
     }
     /**
      * Instance count of the primary profile.
      * 
     */
-    public Double getPrimaryProfileInstanceCount() {
+    public Double primaryProfileInstanceCount() {
         return this.primaryProfileInstanceCount;
     }
     /**
      * Score name.
      * 
     */
-    public String getScoreName() {
+    public String scoreName() {
         return this.scoreName;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

@@ -24,7 +24,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedSubscriptionId", required=true)
       private final Output<String> linkedSubscriptionId;
 
-    public Output<String> getLinkedSubscriptionId() {
+    public Output<String> linkedSubscriptionId() {
         return this.linkedSubscriptionId;
     }
 
@@ -35,7 +35,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedSubscriptionName")
       private final @Nullable Output<String> linkedSubscriptionName;
 
-    public Output<String> getLinkedSubscriptionName() {
+    public Output<String> linkedSubscriptionName() {
         return this.linkedSubscriptionName == null ? Codegen.empty() : this.linkedSubscriptionName;
     }
 
@@ -46,7 +46,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
 
-    public Output<Either<String,Location>> getLocation() {
+    public Output<Either<String,Location>> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="registrationResourceId", required=true)
       private final Output<String> registrationResourceId;
 
-    public Output<String> getRegistrationResourceId() {
+    public Output<String> registrationResourceId() {
         return this.registrationResourceId;
     }
 
@@ -68,7 +68,7 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 

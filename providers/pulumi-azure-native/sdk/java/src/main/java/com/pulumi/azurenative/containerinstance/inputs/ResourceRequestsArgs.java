@@ -27,7 +27,7 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cpu", required=true)
       private final Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="gpu")
       private final @Nullable Output<GpuResourceArgs> gpu;
 
-    public Output<GpuResourceArgs> getGpu() {
+    public Output<GpuResourceArgs> gpu() {
         return this.gpu == null ? Codegen.empty() : this.gpu;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 

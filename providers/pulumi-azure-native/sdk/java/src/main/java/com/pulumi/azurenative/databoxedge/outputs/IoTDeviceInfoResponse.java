@@ -49,28 +49,28 @@ public final class IoTDeviceInfoResponse {
      * Encrypted IoT device/IoT edge device connection string.
      * 
     */
-    public Optional<AuthenticationResponse> getAuthentication() {
+    public Optional<AuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * ID of the IoT device/edge device.
      * 
     */
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
     /**
      * Host name for the IoT hub associated to the device.
      * 
     */
-    public String getIoTHostHub() {
+    public String ioTHostHub() {
         return this.ioTHostHub;
     }
     /**
      * Id for the IoT hub associated to the device.
      * 
     */
-    public Optional<String> getIoTHostHubId() {
+    public Optional<String> ioTHostHubId() {
         return Optional.ofNullable(this.ioTHostHubId);
     }
 

@@ -27,7 +27,7 @@ public final class ServiceAcrConfigurationInfoArgs extends com.pulumi.resources.
     @Import(name="loginServers")
       private final @Nullable Output<List<String>> loginServers;
 
-    public Output<List<String>> getLoginServers() {
+    public Output<List<String>> loginServers() {
         return this.loginServers == null ? Codegen.empty() : this.loginServers;
     }
 

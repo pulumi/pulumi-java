@@ -56,14 +56,14 @@ public final class A2AProtectionContainerMappingDetailsResponse {
      * A value indicating whether the auto update is enabled.
      * 
     */
-    public Optional<String> getAgentAutoUpdateStatus() {
+    public Optional<String> agentAutoUpdateStatus() {
         return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
     /**
      * The automation account arm id.
      * 
     */
-    public Optional<String> getAutomationAccountArmId() {
+    public Optional<String> automationAccountArmId() {
         return Optional.ofNullable(this.automationAccountArmId);
     }
     /**
@@ -71,21 +71,21 @@ public final class A2AProtectionContainerMappingDetailsResponse {
      * Expected value is 'A2A'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The job schedule arm name.
      * 
     */
-    public Optional<String> getJobScheduleName() {
+    public Optional<String> jobScheduleName() {
         return Optional.ofNullable(this.jobScheduleName);
     }
     /**
      * The schedule arm name.
      * 
     */
-    public Optional<String> getScheduleName() {
+    public Optional<String> scheduleName() {
         return Optional.ofNullable(this.scheduleName);
     }
 

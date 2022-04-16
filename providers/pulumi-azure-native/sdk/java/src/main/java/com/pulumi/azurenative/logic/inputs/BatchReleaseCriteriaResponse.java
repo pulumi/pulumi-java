@@ -26,7 +26,7 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
     @Import(name="batchSize")
       private final @Nullable Integer batchSize;
 
-    public Optional<Integer> getBatchSize() {
+    public Optional<Integer> batchSize() {
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
     }
 
@@ -37,7 +37,7 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
     @Import(name="messageCount")
       private final @Nullable Integer messageCount;
 
-    public Optional<Integer> getMessageCount() {
+    public Optional<Integer> messageCount() {
         return this.messageCount == null ? Optional.empty() : Optional.ofNullable(this.messageCount);
     }
 
@@ -48,7 +48,7 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
     @Import(name="recurrence")
       private final @Nullable WorkflowTriggerRecurrenceResponse recurrence;
 
-    public Optional<WorkflowTriggerRecurrenceResponse> getRecurrence() {
+    public Optional<WorkflowTriggerRecurrenceResponse> recurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 

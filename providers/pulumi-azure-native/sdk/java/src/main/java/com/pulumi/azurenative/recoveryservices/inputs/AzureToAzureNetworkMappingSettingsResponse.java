@@ -26,7 +26,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -37,7 +37,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
     @Import(name="primaryFabricLocation")
       private final @Nullable String primaryFabricLocation;
 
-    public Optional<String> getPrimaryFabricLocation() {
+    public Optional<String> primaryFabricLocation() {
         return this.primaryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricLocation);
     }
 
@@ -48,7 +48,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
     @Import(name="recoveryFabricLocation")
       private final @Nullable String recoveryFabricLocation;
 
-    public Optional<String> getRecoveryFabricLocation() {
+    public Optional<String> recoveryFabricLocation() {
         return this.recoveryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricLocation);
     }
 

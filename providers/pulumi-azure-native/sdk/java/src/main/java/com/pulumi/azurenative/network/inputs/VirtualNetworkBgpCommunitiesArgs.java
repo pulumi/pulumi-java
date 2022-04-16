@@ -25,7 +25,7 @@ public final class VirtualNetworkBgpCommunitiesArgs extends com.pulumi.resources
     @Import(name="virtualNetworkCommunity", required=true)
       private final Output<String> virtualNetworkCommunity;
 
-    public Output<String> getVirtualNetworkCommunity() {
+    public Output<String> virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
 

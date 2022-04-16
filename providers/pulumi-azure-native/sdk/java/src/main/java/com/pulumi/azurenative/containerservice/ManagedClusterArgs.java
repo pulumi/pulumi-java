@@ -42,7 +42,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="aadProfile")
       private final @Nullable Output<ManagedClusterAADProfileArgs> aadProfile;
 
-    public Output<ManagedClusterAADProfileArgs> getAadProfile() {
+    public Output<ManagedClusterAADProfileArgs> aadProfile() {
         return this.aadProfile == null ? Codegen.empty() : this.aadProfile;
     }
 
@@ -53,7 +53,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="addonProfiles")
       private final @Nullable Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles;
 
-    public Output<Map<String,ManagedClusterAddonProfileArgs>> getAddonProfiles() {
+    public Output<Map<String,ManagedClusterAddonProfileArgs>> addonProfiles() {
         return this.addonProfiles == null ? Codegen.empty() : this.addonProfiles;
     }
 
@@ -64,7 +64,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="agentPoolProfiles")
       private final @Nullable Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles;
 
-    public Output<List<ManagedClusterAgentPoolProfileArgs>> getAgentPoolProfiles() {
+    public Output<List<ManagedClusterAgentPoolProfileArgs>> agentPoolProfiles() {
         return this.agentPoolProfiles == null ? Codegen.empty() : this.agentPoolProfiles;
     }
 
@@ -75,7 +75,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="apiServerAccessProfile")
       private final @Nullable Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile;
 
-    public Output<ManagedClusterAPIServerAccessProfileArgs> getApiServerAccessProfile() {
+    public Output<ManagedClusterAPIServerAccessProfileArgs> apiServerAccessProfile() {
         return this.apiServerAccessProfile == null ? Codegen.empty() : this.apiServerAccessProfile;
     }
 
@@ -86,7 +86,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoScalerProfile")
       private final @Nullable Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile;
 
-    public Output<ManagedClusterPropertiesAutoScalerProfileArgs> getAutoScalerProfile() {
+    public Output<ManagedClusterPropertiesAutoScalerProfileArgs> autoScalerProfile() {
         return this.autoScalerProfile == null ? Codegen.empty() : this.autoScalerProfile;
     }
 
@@ -97,7 +97,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="autoUpgradeProfile")
       private final @Nullable Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile;
 
-    public Output<ManagedClusterAutoUpgradeProfileArgs> getAutoUpgradeProfile() {
+    public Output<ManagedClusterAutoUpgradeProfileArgs> autoUpgradeProfile() {
         return this.autoUpgradeProfile == null ? Codegen.empty() : this.autoUpgradeProfile;
     }
 
@@ -108,7 +108,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disableLocalAccounts")
       private final @Nullable Output<Boolean> disableLocalAccounts;
 
-    public Output<Boolean> getDisableLocalAccounts() {
+    public Output<Boolean> disableLocalAccounts() {
         return this.disableLocalAccounts == null ? Codegen.empty() : this.disableLocalAccounts;
     }
 
@@ -119,7 +119,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="diskEncryptionSetID")
       private final @Nullable Output<String> diskEncryptionSetID;
 
-    public Output<String> getDiskEncryptionSetID() {
+    public Output<String> diskEncryptionSetID() {
         return this.diskEncryptionSetID == null ? Codegen.empty() : this.diskEncryptionSetID;
     }
 
@@ -130,7 +130,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnsPrefix")
       private final @Nullable Output<String> dnsPrefix;
 
-    public Output<String> getDnsPrefix() {
+    public Output<String> dnsPrefix() {
         return this.dnsPrefix == null ? Codegen.empty() : this.dnsPrefix;
     }
 
@@ -141,7 +141,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enablePodSecurityPolicy")
       private final @Nullable Output<Boolean> enablePodSecurityPolicy;
 
-    public Output<Boolean> getEnablePodSecurityPolicy() {
+    public Output<Boolean> enablePodSecurityPolicy() {
         return this.enablePodSecurityPolicy == null ? Codegen.empty() : this.enablePodSecurityPolicy;
     }
 
@@ -152,7 +152,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableRBAC")
       private final @Nullable Output<Boolean> enableRBAC;
 
-    public Output<Boolean> getEnableRBAC() {
+    public Output<Boolean> enableRBAC() {
         return this.enableRBAC == null ? Codegen.empty() : this.enableRBAC;
     }
 
@@ -163,7 +163,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -174,7 +174,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fqdnSubdomain")
       private final @Nullable Output<String> fqdnSubdomain;
 
-    public Output<String> getFqdnSubdomain() {
+    public Output<String> fqdnSubdomain() {
         return this.fqdnSubdomain == null ? Codegen.empty() : this.fqdnSubdomain;
     }
 
@@ -185,7 +185,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="httpProxyConfig")
       private final @Nullable Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig;
 
-    public Output<ManagedClusterHTTPProxyConfigArgs> getHttpProxyConfig() {
+    public Output<ManagedClusterHTTPProxyConfigArgs> httpProxyConfig() {
         return this.httpProxyConfig == null ? Codegen.empty() : this.httpProxyConfig;
     }
 
@@ -196,7 +196,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
       private final @Nullable Output<ManagedClusterIdentityArgs> identity;
 
-    public Output<ManagedClusterIdentityArgs> getIdentity() {
+    public Output<ManagedClusterIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -207,7 +207,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identityProfile")
       private final @Nullable Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile;
 
-    public Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> getIdentityProfile() {
+    public Output<Map<String,ManagedClusterPropertiesIdentityProfileArgs>> identityProfile() {
         return this.identityProfile == null ? Codegen.empty() : this.identityProfile;
     }
 
@@ -218,7 +218,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubernetesVersion")
       private final @Nullable Output<String> kubernetesVersion;
 
-    public Output<String> getKubernetesVersion() {
+    public Output<String> kubernetesVersion() {
         return this.kubernetesVersion == null ? Codegen.empty() : this.kubernetesVersion;
     }
 
@@ -229,7 +229,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linuxProfile")
       private final @Nullable Output<ContainerServiceLinuxProfileArgs> linuxProfile;
 
-    public Output<ContainerServiceLinuxProfileArgs> getLinuxProfile() {
+    public Output<ContainerServiceLinuxProfileArgs> linuxProfile() {
         return this.linuxProfile == null ? Codegen.empty() : this.linuxProfile;
     }
 
@@ -240,7 +240,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -251,7 +251,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkProfile")
       private final @Nullable Output<ContainerServiceNetworkProfileArgs> networkProfile;
 
-    public Output<ContainerServiceNetworkProfileArgs> getNetworkProfile() {
+    public Output<ContainerServiceNetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -262,7 +262,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="nodeResourceGroup")
       private final @Nullable Output<String> nodeResourceGroup;
 
-    public Output<String> getNodeResourceGroup() {
+    public Output<String> nodeResourceGroup() {
         return this.nodeResourceGroup == null ? Codegen.empty() : this.nodeResourceGroup;
     }
 
@@ -273,7 +273,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podIdentityProfile")
       private final @Nullable Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile;
 
-    public Output<ManagedClusterPodIdentityProfileArgs> getPodIdentityProfile() {
+    public Output<ManagedClusterPodIdentityProfileArgs> podIdentityProfile() {
         return this.podIdentityProfile == null ? Codegen.empty() : this.podIdentityProfile;
     }
 
@@ -284,7 +284,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="privateLinkResources")
       private final @Nullable Output<List<PrivateLinkResourceArgs>> privateLinkResources;
 
-    public Output<List<PrivateLinkResourceArgs>> getPrivateLinkResources() {
+    public Output<List<PrivateLinkResourceArgs>> privateLinkResources() {
         return this.privateLinkResources == null ? Codegen.empty() : this.privateLinkResources;
     }
 
@@ -295,7 +295,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -306,7 +306,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -317,7 +317,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="servicePrincipalProfile")
       private final @Nullable Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile;
 
-    public Output<ManagedClusterServicePrincipalProfileArgs> getServicePrincipalProfile() {
+    public Output<ManagedClusterServicePrincipalProfileArgs> servicePrincipalProfile() {
         return this.servicePrincipalProfile == null ? Codegen.empty() : this.servicePrincipalProfile;
     }
 
@@ -328,7 +328,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
       private final @Nullable Output<ManagedClusterSKUArgs> sku;
 
-    public Output<ManagedClusterSKUArgs> getSku() {
+    public Output<ManagedClusterSKUArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -339,7 +339,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -350,7 +350,7 @@ public final class ManagedClusterArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="windowsProfile")
       private final @Nullable Output<ManagedClusterWindowsProfileArgs> windowsProfile;
 
-    public Output<ManagedClusterWindowsProfileArgs> getWindowsProfile() {
+    public Output<ManagedClusterWindowsProfileArgs> windowsProfile() {
         return this.windowsProfile == null ? Codegen.empty() : this.windowsProfile;
     }
 

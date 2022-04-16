@@ -111,28 +111,28 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
      * Count of databases
      * 
     */
-    public Integer getDatabaseCount() {
+    public Integer databaseCount() {
         return this.databaseCount;
     }
     /**
      * Number of database level errors
      * 
     */
-    public Integer getDatabaseErrorCount() {
+    public Integer databaseErrorCount() {
         return this.databaseErrorCount;
     }
     /**
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -140,63 +140,63 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
      * Expected value is 'MigrationLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Source server brand version
      * 
     */
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Source server name
      * 
     */
-    public String getSourceServerName() {
+    public String sourceServerName() {
         return this.sourceServerName;
     }
     /**
      * Source server version
      * 
     */
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Target server brand version
      * 
     */
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server name
      * 
     */
-    public String getTargetServerName() {
+    public String targetServerName() {
         return this.targetServerName;
     }
     /**
      * Target server version
      * 
     */
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
 

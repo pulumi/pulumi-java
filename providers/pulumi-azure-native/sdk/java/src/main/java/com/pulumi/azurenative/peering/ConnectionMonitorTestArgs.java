@@ -23,7 +23,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="connectionMonitorTestName")
       private final @Nullable Output<String> connectionMonitorTestName;
 
-    public Output<String> getConnectionMonitorTestName() {
+    public Output<String> connectionMonitorTestName() {
         return this.connectionMonitorTestName == null ? Codegen.empty() : this.connectionMonitorTestName;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -45,7 +45,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
+    public Output<Integer> destinationPort() {
         return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
@@ -56,7 +56,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
 
-    public Output<String> getPeeringServiceName() {
+    public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -67,7 +67,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="sourceAgent")
       private final @Nullable Output<String> sourceAgent;
 
-    public Output<String> getSourceAgent() {
+    public Output<String> sourceAgent() {
         return this.sourceAgent == null ? Codegen.empty() : this.sourceAgent;
     }
 
@@ -89,7 +89,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="testFrequencyInSec")
       private final @Nullable Output<Integer> testFrequencyInSec;
 
-    public Output<Integer> getTestFrequencyInSec() {
+    public Output<Integer> testFrequencyInSec() {
         return this.testFrequencyInSec == null ? Codegen.empty() : this.testFrequencyInSec;
     }
 

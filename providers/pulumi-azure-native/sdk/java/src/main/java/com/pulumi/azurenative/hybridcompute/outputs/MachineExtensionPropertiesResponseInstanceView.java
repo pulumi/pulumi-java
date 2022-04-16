@@ -49,28 +49,28 @@ public final class MachineExtensionPropertiesResponseInstanceView {
      * The machine extension name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Instance view status.
      * 
     */
-    public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
+    public Optional<MachineExtensionInstanceViewResponseStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
      * 
     */
-    public String getTypeHandlerVersion() {
+    public String typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
 

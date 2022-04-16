@@ -31,7 +31,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
       private final @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
 
-    public Optional<FrontendIPConfigurationResponse> getDestinationLoadBalancerFrontEndIPConfiguration() {
+    public Optional<FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration() {
         return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
 
@@ -42,7 +42,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationNetworkInterfaceIPConfiguration")
       private final @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
 
-    public Optional<NetworkInterfaceIPConfigurationResponse> getDestinationNetworkInterfaceIPConfiguration() {
+    public Optional<NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration() {
         return this.destinationNetworkInterfaceIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
 
@@ -53,7 +53,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
 
-    public Optional<Integer> getDestinationPort() {
+    public Optional<Integer> destinationPort() {
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
     }
 
@@ -64,7 +64,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -75,7 +75,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -86,7 +86,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -97,7 +97,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -108,7 +108,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="networkInterfaceTapConfigurations", required=true)
       private final List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
 
-    public List<NetworkInterfaceTapConfigurationResponse> getNetworkInterfaceTapConfigurations() {
+    public List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations() {
         return this.networkInterfaceTapConfigurations;
     }
 
@@ -119,7 +119,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -130,7 +130,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
 
@@ -141,7 +141,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -152,7 +152,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

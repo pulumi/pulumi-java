@@ -26,7 +26,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -48,7 +48,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="shouldFeatureDisplayInPortal")
       private final @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
 
-    public Output<Boolean> getShouldFeatureDisplayInPortal() {
+    public Output<Boolean> shouldFeatureDisplayInPortal() {
         return this.shouldFeatureDisplayInPortal == null ? Codegen.empty() : this.shouldFeatureDisplayInPortal;
     }
 
@@ -59,7 +59,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends com.pul
     @Import(name="state")
       private final @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
 
-    public Output<Either<String,SubscriptionFeatureRegistrationState>> getState() {
+    public Output<Either<String,SubscriptionFeatureRegistrationState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

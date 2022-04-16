@@ -44,7 +44,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -58,7 +58,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return KeyVault location details of the namedValue.
      * 
      */
-    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> getKeyVault() {
+    public Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault() {
         return this.keyVault;
     }
     /**
@@ -72,7 +72,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSecret() {
+    public Output</* @Nullable */ Boolean> secret() {
         return this.secret;
     }
     /**
@@ -100,7 +100,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Optional tags that when provided can be used to filter the NamedValue list.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -128,7 +128,7 @@ public class NamedValue extends com.pulumi.resources.CustomResource {
      * @return Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 

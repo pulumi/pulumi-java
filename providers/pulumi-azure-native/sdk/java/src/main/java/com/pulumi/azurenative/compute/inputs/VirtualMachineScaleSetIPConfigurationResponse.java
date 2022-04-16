@@ -30,7 +30,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
-    public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
+    public List<SubResourceResponse> applicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="applicationSecurityGroups")
       private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
-    public List<SubResourceResponse> getApplicationSecurityGroups() {
+    public List<SubResourceResponse> applicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -63,7 +63,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
-    public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
+    public List<SubResourceResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
 
@@ -74,7 +74,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="loadBalancerInboundNatPools")
       private final @Nullable List<SubResourceResponse> loadBalancerInboundNatPools;
 
-    public List<SubResourceResponse> getLoadBalancerInboundNatPools() {
+    public List<SubResourceResponse> loadBalancerInboundNatPools() {
         return this.loadBalancerInboundNatPools == null ? List.of() : this.loadBalancerInboundNatPools;
     }
 
@@ -85,7 +85,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -96,7 +96,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
@@ -107,7 +107,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
@@ -118,7 +118,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="publicIPAddressConfiguration")
       private final @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
-    public Optional<VirtualMachineScaleSetPublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
+    public Optional<VirtualMachineScaleSetPublicIPAddressConfigurationResponse> publicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
     }
 
@@ -129,7 +129,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends com.pul
     @Import(name="subnet")
       private final @Nullable ApiEntityReferenceResponse subnet;
 
-    public Optional<ApiEntityReferenceResponse> getSubnet() {
+    public Optional<ApiEntityReferenceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

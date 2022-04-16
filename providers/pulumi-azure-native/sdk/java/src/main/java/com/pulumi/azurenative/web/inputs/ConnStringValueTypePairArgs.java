@@ -26,7 +26,7 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<ConnectionStringType> type;
 
-    public Output<ConnectionStringType> getType() {
+    public Output<ConnectionStringType> type() {
         return this.type;
     }
 
@@ -37,7 +37,7 @@ public final class ConnStringValueTypePairArgs extends com.pulumi.resources.Reso
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

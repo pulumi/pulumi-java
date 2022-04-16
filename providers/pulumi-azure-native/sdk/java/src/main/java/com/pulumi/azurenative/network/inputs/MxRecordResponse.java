@@ -26,7 +26,7 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exchange")
       private final @Nullable String exchange;
 
-    public Optional<String> getExchange() {
+    public Optional<String> exchange() {
         return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
     }
 
@@ -37,7 +37,7 @@ public final class MxRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="preference")
       private final @Nullable Integer preference;
 
-    public Optional<Integer> getPreference() {
+    public Optional<Integer> preference() {
         return this.preference == null ? Optional.empty() : Optional.ofNullable(this.preference);
     }
 

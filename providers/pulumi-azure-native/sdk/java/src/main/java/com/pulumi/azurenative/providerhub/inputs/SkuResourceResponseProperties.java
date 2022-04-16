@@ -19,14 +19,14 @@ public final class SkuResourceResponseProperties extends com.pulumi.resources.In
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="skuSettings", required=true)
       private final List<SkuSettingResponse> skuSettings;
 
-    public List<SkuSettingResponse> getSkuSettings() {
+    public List<SkuSettingResponse> skuSettings() {
         return this.skuSettings;
     }
 

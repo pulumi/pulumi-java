@@ -26,7 +26,7 @@ public final class TIDataConnectorDataTypesResponse {
      * Data type for indicators connection.
      * 
     */
-    public Optional<TIDataConnectorDataTypesResponseIndicators> getIndicators() {
+    public Optional<TIDataConnectorDataTypesResponseIndicators> indicators() {
         return Optional.ofNullable(this.indicators);
     }
 

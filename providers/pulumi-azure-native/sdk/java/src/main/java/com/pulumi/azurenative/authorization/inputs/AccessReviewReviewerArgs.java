@@ -26,7 +26,7 @@ public final class AccessReviewReviewerArgs extends com.pulumi.resources.Resourc
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 

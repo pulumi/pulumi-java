@@ -26,7 +26,7 @@ public final class AdditionalCapabilitiesArgs extends com.pulumi.resources.Resou
     @Import(name="ultraSSDEnabled")
       private final @Nullable Output<Boolean> ultraSSDEnabled;
 
-    public Output<Boolean> getUltraSSDEnabled() {
+    public Output<Boolean> ultraSSDEnabled() {
         return this.ultraSSDEnabled == null ? Codegen.empty() : this.ultraSSDEnabled;
     }
 

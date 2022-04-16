@@ -27,7 +27,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="propertyColumns")
       private final @Nullable Output<List<String>> propertyColumns;
 
-    public Output<List<String>> getPropertyColumns() {
+    public Output<List<String>> propertyColumns() {
         return this.propertyColumns == null ? Codegen.empty() : this.propertyColumns;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
+    public Output<String> serviceBusNamespace() {
         return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Output<String> getSharedAccessPolicyKey() {
+    public Output<String> sharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
     }
 
@@ -60,7 +60,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
+    public Output<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
     }
 
@@ -71,7 +71,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="topicName")
       private final @Nullable Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName == null ? Codegen.empty() : this.topicName;
     }
 
@@ -83,7 +83,7 @@ public final class ServiceBusTopicOutputDataSourceArgs extends com.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

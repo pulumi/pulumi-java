@@ -30,7 +30,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
     @Import(name="affinityType", required=true)
       private final Output<Either<String,AffinityType>> affinityType;
 
-    public Output<Either<String,AffinityType>> getAffinityType() {
+    public Output<Either<String,AffinityType>> affinityType() {
         return this.affinityType;
     }
 
@@ -41,7 +41,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -52,7 +52,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
     @Import(name="state")
       private final @Nullable Output<Either<String,PlacementPolicyState>> state;
 
-    public Output<Either<String,PlacementPolicyState>> getState() {
+    public Output<Either<String,PlacementPolicyState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -64,7 +64,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -75,7 +75,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends com.pulumi.resource
     @Import(name="vmMembers", required=true)
       private final Output<List<String>> vmMembers;
 
-    public Output<List<String>> getVmMembers() {
+    public Output<List<String>> vmMembers() {
         return this.vmMembers;
     }
 

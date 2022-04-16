@@ -25,7 +25,7 @@ public final class QuotaInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="coresUsed")
       private final @Nullable Integer coresUsed;
 
-    public Optional<Integer> getCoresUsed() {
+    public Optional<Integer> coresUsed() {
         return this.coresUsed == null ? Optional.empty() : Optional.ofNullable(this.coresUsed);
     }
 

@@ -86,63 +86,63 @@ public final class LedgerPropertiesResponse {
      * Array of all AAD based Security Principals.
      * 
     */
-    public List<AADBasedSecurityPrincipalResponse> getAadBasedSecurityPrincipals() {
+    public List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
     }
     /**
      * Array of all cert based Security Principals.
      * 
     */
-    public List<CertBasedSecurityPrincipalResponse> getCertBasedSecurityPrincipals() {
+    public List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
     }
     /**
      * Endpoint for accessing network identity.
      * 
     */
-    public String getIdentityServiceUri() {
+    public String identityServiceUri() {
         return this.identityServiceUri;
     }
     /**
      * Internal namespace for the Ledger
      * 
     */
-    public String getLedgerInternalNamespace() {
+    public String ledgerInternalNamespace() {
         return this.ledgerInternalNamespace;
     }
     /**
      * Unique name for the Confidential Ledger.
      * 
     */
-    public String getLedgerName() {
+    public String ledgerName() {
         return this.ledgerName;
     }
     /**
      * Name of the Blob Storage Account for saving ledger files
      * 
     */
-    public Optional<String> getLedgerStorageAccount() {
+    public Optional<String> ledgerStorageAccount() {
         return Optional.ofNullable(this.ledgerStorageAccount);
     }
     /**
      * Type of Confidential Ledger
      * 
     */
-    public Optional<String> getLedgerType() {
+    public Optional<String> ledgerType() {
         return Optional.ofNullable(this.ledgerType);
     }
     /**
      * Endpoint for calling Ledger Service.
      * 
     */
-    public String getLedgerUri() {
+    public String ledgerUri() {
         return this.ledgerUri;
     }
     /**
      * Provisioning state of Ledger Resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

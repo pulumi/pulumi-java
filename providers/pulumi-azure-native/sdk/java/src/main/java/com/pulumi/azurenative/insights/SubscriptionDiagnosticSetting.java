@@ -43,7 +43,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return The resource Id for the event hub authorization rule.
      * 
      */
-    public Output</* @Nullable */ String> getEventHubAuthorizationRuleId() {
+    public Output</* @Nullable */ String> eventHubAuthorizationRuleId() {
         return this.eventHubAuthorizationRuleId;
     }
     /**
@@ -57,7 +57,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return The name of the event hub. If none is specified, the default event hub will be selected.
      * 
      */
-    public Output</* @Nullable */ String> getEventHubName() {
+    public Output</* @Nullable */ String> eventHubName() {
         return this.eventHubName;
     }
     /**
@@ -71,7 +71,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return Location of the resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -85,7 +85,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return The list of logs settings.
      * 
      */
-    public Output</* @Nullable */ List<SubscriptionLogSettingsResponse>> getLogs() {
+    public Output</* @Nullable */ List<SubscriptionLogSettingsResponse>> logs() {
         return this.logs;
     }
     /**
@@ -99,7 +99,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
      * 
      */
-    public Output</* @Nullable */ String> getServiceBusRuleId() {
+    public Output</* @Nullable */ String> serviceBusRuleId() {
         return this.serviceBusRuleId;
     }
     /**
@@ -127,7 +127,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return The resource ID of the storage account to which you would like to send Diagnostic Logs.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountId() {
+    public Output</* @Nullable */ String> storageAccountId() {
         return this.storageAccountId;
     }
     /**
@@ -141,7 +141,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -155,7 +155,7 @@ public class SubscriptionDiagnosticSetting extends com.pulumi.resources.CustomRe
      * @return The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
      * 
      */
-    public Output</* @Nullable */ String> getWorkspaceId() {
+    public Output</* @Nullable */ String> workspaceId() {
         return this.workspaceId;
     }
 

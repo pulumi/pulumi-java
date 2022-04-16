@@ -17,14 +17,14 @@ public final class ServiceTreeInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="componentId")
       private final @Nullable String componentId;
 
-    public Optional<String> getComponentId() {
+    public Optional<String> componentId() {
         return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
     }
 
     @Import(name="serviceId")
       private final @Nullable String serviceId;
 
-    public Optional<String> getServiceId() {
+    public Optional<String> serviceId() {
         return this.serviceId == null ? Optional.empty() : Optional.ofNullable(this.serviceId);
     }
 

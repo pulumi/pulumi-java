@@ -25,7 +25,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
@@ -36,7 +36,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -47,7 +47,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="key")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> key;
 
-    public Output<KeyVaultKeyReferenceArgs> getKey() {
+    public Output<KeyVaultKeyReferenceArgs> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -58,7 +58,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -69,7 +69,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -80,7 +80,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;
 
-    public Output<String> getPublicCertificate() {
+    public Output<String> publicCertificate() {
         return this.publicCertificate == null ? Codegen.empty() : this.publicCertificate;
     }
 
@@ -91,7 +91,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class IntegrationAccountCertificateArgs extends com.pulumi.resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

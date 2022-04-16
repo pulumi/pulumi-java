@@ -27,7 +27,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="cabinetPodSecrets", required=true)
       private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
 
-    public List<DataBoxHeavySecretResponse> getCabinetPodSecrets() {
+    public List<DataBoxHeavySecretResponse> cabinetPodSecrets() {
         return this.cabinetPodSecrets;
     }
 
@@ -38,7 +38,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
-    public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
+    public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
 
@@ -49,7 +49,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="error", required=true)
       private final CloudErrorResponse error;
 
-    public CloudErrorResponse getError() {
+    public CloudErrorResponse error() {
         return this.error;
     }
 
@@ -61,7 +61,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
     @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
 
-    public String getJobSecretsType() {
+    public String jobSecretsType() {
         return this.jobSecretsType;
     }
 

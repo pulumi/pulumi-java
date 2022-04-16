@@ -45,7 +45,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
      * Waf associations
      * 
     */
-    public List<SecurityPolicyWebApplicationFirewallAssociationResponse> getAssociations() {
+    public List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations() {
         return this.associations == null ? List.of() : this.associations;
     }
     /**
@@ -53,14 +53,14 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
      * Expected value is 'WebApplicationFirewall'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<ResourceReferenceResponse> getWafPolicy() {
+    public Optional<ResourceReferenceResponse> wafPolicy() {
         return Optional.ofNullable(this.wafPolicy);
     }
 

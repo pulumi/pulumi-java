@@ -113,91 +113,91 @@ public final class GetVolumeResult {
      * The IDs of the access control records, associated with the volume.
      * 
     */
-    public List<String> getAccessControlRecordIds() {
+    public List<String> accessControlRecordIds() {
         return this.accessControlRecordIds;
     }
     /**
      * The IDs of the backup policies, in which this volume is part of.
      * 
     */
-    public List<String> getBackupPolicyIds() {
+    public List<String> backupPolicyIds() {
         return this.backupPolicyIds;
     }
     /**
      * The backup status of the volume.
      * 
     */
-    public String getBackupStatus() {
+    public String backupStatus() {
         return this.backupStatus;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The monitoring status of the volume.
      * 
     */
-    public String getMonitoringStatus() {
+    public String monitoringStatus() {
         return this.monitoringStatus;
     }
     /**
      * The name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The operation status on the volume.
      * 
     */
-    public String getOperationStatus() {
+    public String operationStatus() {
         return this.operationStatus;
     }
     /**
      * The size of the volume in bytes.
      * 
     */
-    public Double getSizeInBytes() {
+    public Double sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The ID of the volume container, in which this volume is created.
      * 
     */
-    public String getVolumeContainerId() {
+    public String volumeContainerId() {
         return this.volumeContainerId;
     }
     /**
      * The volume status.
      * 
     */
-    public String getVolumeStatus() {
+    public String volumeStatus() {
         return this.volumeStatus;
     }
     /**
      * The type of the volume.
      * 
     */
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

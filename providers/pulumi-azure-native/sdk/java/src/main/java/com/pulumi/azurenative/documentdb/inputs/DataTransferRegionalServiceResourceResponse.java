@@ -23,7 +23,7 @@ public final class DataTransferRegionalServiceResourceResponse extends com.pulum
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -34,7 +34,7 @@ public final class DataTransferRegionalServiceResourceResponse extends com.pulum
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class DataTransferRegionalServiceResourceResponse extends com.pulum
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

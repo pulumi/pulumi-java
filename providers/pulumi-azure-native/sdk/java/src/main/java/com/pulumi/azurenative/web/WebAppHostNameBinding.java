@@ -39,7 +39,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Azure resource name.
      * 
      */
-    public Output</* @Nullable */ String> getAzureResourceName() {
+    public Output</* @Nullable */ String> azureResourceName() {
         return this.azureResourceName;
     }
     /**
@@ -53,7 +53,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Azure resource type.
      * 
      */
-    public Output</* @Nullable */ String> getAzureResourceType() {
+    public Output</* @Nullable */ String> azureResourceType() {
         return this.azureResourceType;
     }
     /**
@@ -67,7 +67,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Custom DNS record type.
      * 
      */
-    public Output</* @Nullable */ String> getCustomHostNameDnsRecordType() {
+    public Output</* @Nullable */ String> customHostNameDnsRecordType() {
         return this.customHostNameDnsRecordType;
     }
     /**
@@ -81,7 +81,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Fully qualified ARM domain resource URI.
      * 
      */
-    public Output</* @Nullable */ String> getDomainId() {
+    public Output</* @Nullable */ String> domainId() {
         return this.domainId;
     }
     /**
@@ -95,7 +95,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Hostname type.
      * 
      */
-    public Output</* @Nullable */ String> getHostNameType() {
+    public Output</* @Nullable */ String> hostNameType() {
         return this.hostNameType;
     }
     /**
@@ -109,7 +109,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -123,7 +123,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +137,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return App Service app name.
      * 
      */
-    public Output</* @Nullable */ String> getSiteName() {
+    public Output</* @Nullable */ String> siteName() {
         return this.siteName;
     }
     /**
@@ -151,7 +151,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return SSL type
      * 
      */
-    public Output</* @Nullable */ String> getSslState() {
+    public Output</* @Nullable */ String> sslState() {
         return this.sslState;
     }
     /**
@@ -165,7 +165,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return SSL certificate thumbprint
      * 
      */
-    public Output</* @Nullable */ String> getThumbprint() {
+    public Output</* @Nullable */ String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -179,7 +179,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -193,7 +193,7 @@ public class WebAppHostNameBinding extends com.pulumi.resources.CustomResource {
      * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
      */
-    public Output<String> getVirtualIP() {
+    public Output<String> virtualIP() {
         return this.virtualIP;
     }
 

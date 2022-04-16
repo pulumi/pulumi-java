@@ -122,98 +122,98 @@ public final class GetNamespaceResult {
      * The time the Namespace was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Value that indicates whether AutoInflate is enabled for eventhub namespace.
      * 
     */
-    public Optional<Boolean> getIsAutoInflateEnabled() {
+    public Optional<Boolean> isAutoInflateEnabled() {
         return Optional.ofNullable(this.isAutoInflateEnabled);
     }
     /**
      * Value that indicates whether Kafka is enabled for eventhub namespace.
      * 
     */
-    public Optional<Boolean> getKafkaEnabled() {
+    public Optional<Boolean> kafkaEnabled() {
         return Optional.ofNullable(this.kafkaEnabled);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
      * 
     */
-    public Optional<Integer> getMaximumThroughputUnits() {
+    public Optional<Integer> maximumThroughputUnits() {
         return Optional.ofNullable(this.maximumThroughputUnits);
     }
     /**
      * Identifier for Azure Insights metrics.
      * 
     */
-    public String getMetricId() {
+    public String metricId() {
         return this.metricId;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the Namespace.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Endpoint you can use to perform Service Bus operations.
      * 
     */
-    public String getServiceBusEndpoint() {
+    public String serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
      * Properties of sku resource
      * 
     */
-    public Optional<SkuResponse> getSku() {
+    public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The time the Namespace was updated.
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
 

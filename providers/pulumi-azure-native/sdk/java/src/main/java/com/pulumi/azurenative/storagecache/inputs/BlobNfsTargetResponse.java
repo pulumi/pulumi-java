@@ -25,7 +25,7 @@ public final class BlobNfsTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -36,7 +36,7 @@ public final class BlobNfsTargetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="usageModel")
       private final @Nullable String usageModel;
 
-    public Optional<String> getUsageModel() {
+    public Optional<String> usageModel() {
         return this.usageModel == null ? Optional.empty() : Optional.ofNullable(this.usageModel);
     }
 

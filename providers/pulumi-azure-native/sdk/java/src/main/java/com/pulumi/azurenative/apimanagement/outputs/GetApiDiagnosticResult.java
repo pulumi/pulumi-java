@@ -107,84 +107,84 @@ public final class GetApiDiagnosticResult {
      * Specifies for what type of messages sampling settings should not apply.
      * 
     */
-    public Optional<String> getAlwaysLog() {
+    public Optional<String> alwaysLog() {
         return Optional.ofNullable(this.alwaysLog);
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
      * 
     */
-    public Optional<PipelineDiagnosticSettingsResponse> getBackend() {
+    public Optional<PipelineDiagnosticSettingsResponse> backend() {
         return Optional.ofNullable(this.backend);
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
      * 
     */
-    public Optional<PipelineDiagnosticSettingsResponse> getFrontend() {
+    public Optional<PipelineDiagnosticSettingsResponse> frontend() {
         return Optional.ofNullable(this.frontend);
     }
     /**
      * Sets correlation protocol to use for Application Insights diagnostics.
      * 
     */
-    public Optional<String> getHttpCorrelationProtocol() {
+    public Optional<String> httpCorrelationProtocol() {
         return Optional.ofNullable(this.httpCorrelationProtocol);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Log the ClientIP. Default is false.
      * 
     */
-    public Optional<Boolean> getLogClientIp() {
+    public Optional<Boolean> logClientIp() {
         return Optional.ofNullable(this.logClientIp);
     }
     /**
      * Resource Id of a target logger.
      * 
     */
-    public String getLoggerId() {
+    public String loggerId() {
         return this.loggerId;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The format of the Operation Name for Application Insights telemetries. Default is Name.
      * 
     */
-    public Optional<String> getOperationNameFormat() {
+    public Optional<String> operationNameFormat() {
         return Optional.ofNullable(this.operationNameFormat);
     }
     /**
      * Sampling settings for Diagnostic.
      * 
     */
-    public Optional<SamplingSettingsResponse> getSampling() {
+    public Optional<SamplingSettingsResponse> sampling() {
         return Optional.ofNullable(this.sampling);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The verbosity level applied to traces emitted by trace policies.
      * 
     */
-    public Optional<String> getVerbosity() {
+    public Optional<String> verbosity() {
         return Optional.ofNullable(this.verbosity);
     }
 

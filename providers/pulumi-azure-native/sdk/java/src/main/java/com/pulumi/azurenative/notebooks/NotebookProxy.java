@@ -43,7 +43,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The friendly string identifier of the creator of the NotebookProxy resource.
      * 
      */
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -57,7 +57,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The public DNS name
      * 
      */
-    public Output</* @Nullable */ String> getPublicDns() {
+    public Output</* @Nullable */ String> publicDns() {
         return this.publicDns;
     }
     /**
@@ -85,7 +85,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return Allow public network access on a V-Net locked notebook resource
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -99,7 +99,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The region of the NotebookProxy resource.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -113,7 +113,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The unique identifier (a GUID) generated for every resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -127,7 +127,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The alternate application ID used for auth token request in the data plane
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryAppId() {
+    public Output</* @Nullable */ String> secondaryAppId() {
         return this.secondaryAppId;
     }
     /**
@@ -141,7 +141,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return System data for notebook resource
      * 
      */
-    public Output</* @Nullable */ NotebookResourceSystemDataResponse> getSystemData() {
+    public Output</* @Nullable */ NotebookResourceSystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -155,7 +155,7 @@ public class NotebookProxy extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

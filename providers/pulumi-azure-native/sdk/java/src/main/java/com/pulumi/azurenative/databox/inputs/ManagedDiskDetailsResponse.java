@@ -24,7 +24,7 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -35,7 +35,7 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="resourceGroupId", required=true)
       private final String resourceGroupId;
 
-    public String getResourceGroupId() {
+    public String resourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -46,7 +46,7 @@ public final class ManagedDiskDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="stagingStorageAccountId", required=true)
       private final String stagingStorageAccountId;
 
-    public String getStagingStorageAccountId() {
+    public String stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
 

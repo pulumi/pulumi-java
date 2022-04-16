@@ -26,7 +26,7 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aofEnabled")
       private final @Nullable Boolean aofEnabled;
 
-    public Optional<Boolean> getAofEnabled() {
+    public Optional<Boolean> aofEnabled() {
         return this.aofEnabled == null ? Optional.empty() : Optional.ofNullable(this.aofEnabled);
     }
 
@@ -37,7 +37,7 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aofFrequency")
       private final @Nullable String aofFrequency;
 
-    public Optional<String> getAofFrequency() {
+    public Optional<String> aofFrequency() {
         return this.aofFrequency == null ? Optional.empty() : Optional.ofNullable(this.aofFrequency);
     }
 
@@ -48,7 +48,7 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rdbEnabled")
       private final @Nullable Boolean rdbEnabled;
 
-    public Optional<Boolean> getRdbEnabled() {
+    public Optional<Boolean> rdbEnabled() {
         return this.rdbEnabled == null ? Optional.empty() : Optional.ofNullable(this.rdbEnabled);
     }
 
@@ -59,7 +59,7 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rdbFrequency")
       private final @Nullable String rdbFrequency;
 
-    public Optional<String> getRdbFrequency() {
+    public Optional<String> rdbFrequency() {
         return this.rdbFrequency == null ? Optional.empty() : Optional.ofNullable(this.rdbFrequency);
     }
 

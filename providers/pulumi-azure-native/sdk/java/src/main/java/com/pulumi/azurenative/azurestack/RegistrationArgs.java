@@ -24,7 +24,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
 
-    public Output<Either<String,Location>> getLocation() {
+    public Output<Either<String,Location>> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -35,7 +35,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationName")
       private final @Nullable Output<String> registrationName;
 
-    public Output<String> getRegistrationName() {
+    public Output<String> registrationName() {
         return this.registrationName == null ? Codegen.empty() : this.registrationName;
     }
 
@@ -46,7 +46,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registrationToken", required=true)
       private final Output<String> registrationToken;
 
-    public Output<String> getRegistrationToken() {
+    public Output<String> registrationToken() {
         return this.registrationToken;
     }
 
@@ -57,7 +57,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 

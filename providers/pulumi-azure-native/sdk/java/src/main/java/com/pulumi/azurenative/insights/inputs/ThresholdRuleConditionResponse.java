@@ -29,7 +29,7 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
     @Import(name="dataSource")
       private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
-    public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> getDataSource() {
+    public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource() {
         return this.dataSource == null ? null : this.dataSource;
     }
 
@@ -41,7 +41,7 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -52,7 +52,7 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -63,7 +63,7 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
     @Import(name="threshold", required=true)
       private final Double threshold;
 
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 
@@ -74,7 +74,7 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
     @Import(name="timeAggregation")
       private final @Nullable String timeAggregation;
 
-    public Optional<String> getTimeAggregation() {
+    public Optional<String> timeAggregation() {
         return this.timeAggregation == null ? Optional.empty() : Optional.ofNullable(this.timeAggregation);
     }
 
@@ -85,7 +85,7 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
     @Import(name="windowSize")
       private final @Nullable String windowSize;
 
-    public Optional<String> getWindowSize() {
+    public Optional<String> windowSize() {
         return this.windowSize == null ? Optional.empty() : Optional.ofNullable(this.windowSize);
     }
 

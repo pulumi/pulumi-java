@@ -31,7 +31,7 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
     @Import(name="connections")
       private final @Nullable Output<List<DirectConnectionArgs>> connections;
 
-    public Output<List<DirectConnectionArgs>> getConnections() {
+    public Output<List<DirectConnectionArgs>> connections() {
         return this.connections == null ? Codegen.empty() : this.connections;
     }
 
@@ -42,7 +42,7 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
     @Import(name="directPeeringType")
       private final @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
 
-    public Output<Either<String,DirectPeeringType>> getDirectPeeringType() {
+    public Output<Either<String,DirectPeeringType>> directPeeringType() {
         return this.directPeeringType == null ? Codegen.empty() : this.directPeeringType;
     }
 
@@ -53,7 +53,7 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
     @Import(name="peerAsn")
       private final @Nullable Output<SubResourceArgs> peerAsn;
 
-    public Output<SubResourceArgs> getPeerAsn() {
+    public Output<SubResourceArgs> peerAsn() {
         return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 

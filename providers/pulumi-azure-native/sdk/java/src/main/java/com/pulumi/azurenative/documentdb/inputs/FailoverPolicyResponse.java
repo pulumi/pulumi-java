@@ -26,7 +26,7 @@ public final class FailoverPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="failoverPriority")
       private final @Nullable Integer failoverPriority;
 
-    public Optional<Integer> getFailoverPriority() {
+    public Optional<Integer> failoverPriority() {
         return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
     }
 
@@ -37,7 +37,7 @@ public final class FailoverPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -48,7 +48,7 @@ public final class FailoverPolicyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="locationName")
       private final @Nullable String locationName;
 
-    public Optional<String> getLocationName() {
+    public Optional<String> locationName() {
         return this.locationName == null ? Optional.empty() : Optional.ofNullable(this.locationName);
     }
 

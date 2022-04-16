@@ -31,7 +31,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> getKeyFrameInterval() {
+    public Output<String> keyFrameInterval() {
         return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
@@ -42,7 +42,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -53,7 +53,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="layers")
       private final @Nullable Output<List<PngLayerArgs>> layers;
 
-    public Output<List<PngLayerArgs>> getLayers() {
+    public Output<List<PngLayerArgs>> layers() {
         return this.layers == null ? Codegen.empty() : this.layers;
     }
 
@@ -65,7 +65,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -76,7 +76,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
+    public Output<String> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 
@@ -87,7 +87,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -98,7 +98,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="step")
       private final @Nullable Output<String> step;
 
-    public Output<String> getStep() {
+    public Output<String> step() {
         return this.step == null ? Codegen.empty() : this.step;
     }
 
@@ -109,7 +109,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> getStretchMode() {
+    public Output<Either<String,StretchMode>> stretchMode() {
         return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 
@@ -120,7 +120,7 @@ public final class PngImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> getSyncMode() {
+    public Output<Either<String,VideoSyncMode>> syncMode() {
         return this.syncMode == null ? Codegen.empty() : this.syncMode;
     }
 

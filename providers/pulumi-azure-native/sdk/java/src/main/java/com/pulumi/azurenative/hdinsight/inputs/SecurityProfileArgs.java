@@ -28,7 +28,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="aaddsResourceId")
       private final @Nullable Output<String> aaddsResourceId;
 
-    public Output<String> getAaddsResourceId() {
+    public Output<String> aaddsResourceId() {
         return this.aaddsResourceId == null ? Codegen.empty() : this.aaddsResourceId;
     }
 
@@ -39,7 +39,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterUsersGroupDNs")
       private final @Nullable Output<List<String>> clusterUsersGroupDNs;
 
-    public Output<List<String>> getClusterUsersGroupDNs() {
+    public Output<List<String>> clusterUsersGroupDNs() {
         return this.clusterUsersGroupDNs == null ? Codegen.empty() : this.clusterUsersGroupDNs;
     }
 
@@ -50,7 +50,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="directoryType")
       private final @Nullable Output<DirectoryType> directoryType;
 
-    public Output<DirectoryType> getDirectoryType() {
+    public Output<DirectoryType> directoryType() {
         return this.directoryType == null ? Codegen.empty() : this.directoryType;
     }
 
@@ -61,7 +61,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -72,7 +72,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="domainUserPassword")
       private final @Nullable Output<String> domainUserPassword;
 
-    public Output<String> getDomainUserPassword() {
+    public Output<String> domainUserPassword() {
         return this.domainUserPassword == null ? Codegen.empty() : this.domainUserPassword;
     }
 
@@ -83,7 +83,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="domainUsername")
       private final @Nullable Output<String> domainUsername;
 
-    public Output<String> getDomainUsername() {
+    public Output<String> domainUsername() {
         return this.domainUsername == null ? Codegen.empty() : this.domainUsername;
     }
 
@@ -94,7 +94,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ldapsUrls")
       private final @Nullable Output<List<String>> ldapsUrls;
 
-    public Output<List<String>> getLdapsUrls() {
+    public Output<List<String>> ldapsUrls() {
         return this.ldapsUrls == null ? Codegen.empty() : this.ldapsUrls;
     }
 
@@ -105,7 +105,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="msiResourceId")
       private final @Nullable Output<String> msiResourceId;
 
-    public Output<String> getMsiResourceId() {
+    public Output<String> msiResourceId() {
         return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
     }
 
@@ -116,7 +116,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="organizationalUnitDN")
       private final @Nullable Output<String> organizationalUnitDN;
 
-    public Output<String> getOrganizationalUnitDN() {
+    public Output<String> organizationalUnitDN() {
         return this.organizationalUnitDN == null ? Codegen.empty() : this.organizationalUnitDN;
     }
 

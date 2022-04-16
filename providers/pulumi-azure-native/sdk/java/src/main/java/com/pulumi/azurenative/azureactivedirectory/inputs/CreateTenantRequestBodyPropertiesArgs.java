@@ -22,7 +22,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
     @Import(name="countryCode")
       private final @Nullable Output<String> countryCode;
 
-    public Output<String> getCountryCode() {
+    public Output<String> countryCode() {
         return this.countryCode == null ? Codegen.empty() : this.countryCode;
     }
 
@@ -33,7 +33,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 

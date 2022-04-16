@@ -57,14 +57,14 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Migration Identifier
      * 
     */
-    public String getMigrationId() {
+    public String migrationId() {
         return this.migrationId;
     }
     /**
@@ -72,21 +72,21 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
      * Expected value is 'MigrationValidationOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Validation summary results for each database
      * 
     */
-    public Map<String,MigrationValidationDatabaseSummaryResultResponse> getSummaryResults() {
+    public Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults() {
         return this.summaryResults == null ? Map.of() : this.summaryResults;
     }
 

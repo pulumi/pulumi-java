@@ -26,7 +26,7 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="creationTime")
       private final @Nullable String creationTime;
 
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
@@ -37,7 +37,7 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="draftContentLink")
       private final @Nullable ContentLinkResponse draftContentLink;
 
-    public Optional<ContentLinkResponse> getDraftContentLink() {
+    public Optional<ContentLinkResponse> draftContentLink() {
         return this.draftContentLink == null ? Optional.empty() : Optional.ofNullable(this.draftContentLink);
     }
 
@@ -48,7 +48,7 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inEdit")
       private final @Nullable Boolean inEdit;
 
-    public Optional<Boolean> getInEdit() {
+    public Optional<Boolean> inEdit() {
         return this.inEdit == null ? Optional.empty() : Optional.ofNullable(this.inEdit);
     }
 
@@ -59,7 +59,7 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="lastModifiedTime")
       private final @Nullable String lastModifiedTime;
 
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
     }
 
@@ -70,7 +70,7 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="outputTypes")
       private final @Nullable List<String> outputTypes;
 
-    public List<String> getOutputTypes() {
+    public List<String> outputTypes() {
         return this.outputTypes == null ? List.of() : this.outputTypes;
     }
 
@@ -81,7 +81,7 @@ public final class RunbookDraftResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="parameters")
       private final @Nullable Map<String,RunbookParameterResponse> parameters;
 
-    public Map<String,RunbookParameterResponse> getParameters() {
+    public Map<String,RunbookParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 

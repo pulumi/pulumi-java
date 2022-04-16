@@ -76,56 +76,56 @@ public final class DeviceSecretsResponse {
      * Keyvault Id of BMCDefaultUserPassword
      * 
     */
-    public Optional<SecretResponse> getBmcDefaultUserPassword() {
+    public Optional<SecretResponse> bmcDefaultUserPassword() {
         return Optional.ofNullable(this.bmcDefaultUserPassword);
     }
     /**
      * Keyvault Id of HcsDataVolumeBitLockerExternalKey
      * 
     */
-    public Optional<SecretResponse> getHcsDataVolumeBitLockerExternalKey() {
+    public Optional<SecretResponse> hcsDataVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
     /**
      * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
      * 
     */
-    public Optional<SecretResponse> getHcsInternalVolumeBitLockerExternalKey() {
+    public Optional<SecretResponse> hcsInternalVolumeBitLockerExternalKey() {
         return Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
     /**
      * Keyvault Id of RotateKeyForDataVolumeBitlocker
      * 
     */
-    public Optional<SecretResponse> getRotateKeyForDataVolumeBitlocker() {
+    public Optional<SecretResponse> rotateKeyForDataVolumeBitlocker() {
         return Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
     /**
      * Keyvault Id of RotateKeysForSedDrivesSerialized
      * 
     */
-    public Optional<SecretResponse> getRotateKeysForSedDrivesSerialized() {
+    public Optional<SecretResponse> rotateKeysForSedDrivesSerialized() {
         return Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
     /**
      * Keyvault Id of SEDEncryptionExternalKey
      * 
     */
-    public Optional<SecretResponse> getSedEncryptionExternalKey() {
+    public Optional<SecretResponse> sedEncryptionExternalKey() {
         return Optional.ofNullable(this.sedEncryptionExternalKey);
     }
     /**
      * Keyvault Id of SEDEncryptionExternalKeyId
      * 
     */
-    public Optional<SecretResponse> getSedEncryptionExternalKeyId() {
+    public Optional<SecretResponse> sedEncryptionExternalKeyId() {
         return Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
     /**
      * Keyvault Id of SystemVolumeBitLockerRecoveryKey
      * 
     */
-    public Optional<SecretResponse> getSystemVolumeBitLockerRecoveryKey() {
+    public Optional<SecretResponse> systemVolumeBitLockerRecoveryKey() {
         return Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
     }
 

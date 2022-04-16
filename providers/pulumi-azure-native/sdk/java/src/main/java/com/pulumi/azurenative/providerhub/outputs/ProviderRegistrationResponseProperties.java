@@ -72,49 +72,49 @@ public final class ProviderRegistrationResponseProperties {
         this.templateDeploymentOptions = templateDeploymentOptions;
     }
 
-    public List<ResourceProviderCapabilitiesResponse> getCapabilities() {
+    public List<ResourceProviderCapabilitiesResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
-    public Optional<ResourceProviderManifestPropertiesResponseFeaturesRule> getFeaturesRule() {
+    public Optional<ResourceProviderManifestPropertiesResponseFeaturesRule> featuresRule() {
         return Optional.ofNullable(this.featuresRule);
     }
-    public Optional<ResourceProviderManifestPropertiesResponseManagement> getManagement() {
+    public Optional<ResourceProviderManifestPropertiesResponseManagement> management() {
         return Optional.ofNullable(this.management);
     }
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
-    public Optional<ResourceProviderManifestPropertiesResponseProviderAuthentication> getProviderAuthentication() {
+    public Optional<ResourceProviderManifestPropertiesResponseProviderAuthentication> providerAuthentication() {
         return Optional.ofNullable(this.providerAuthentication);
     }
-    public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
+    public List<ResourceProviderAuthorizationResponse> providerAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
-    public Optional<ProviderRegistrationPropertiesResponseProviderHubMetadata> getProviderHubMetadata() {
+    public Optional<ProviderRegistrationPropertiesResponseProviderHubMetadata> providerHubMetadata() {
         return Optional.ofNullable(this.providerHubMetadata);
     }
-    public Optional<String> getProviderType() {
+    public Optional<String> providerType() {
         return Optional.ofNullable(this.providerType);
     }
-    public Optional<String> getProviderVersion() {
+    public Optional<String> providerVersion() {
         return Optional.ofNullable(this.providerVersion);
     }
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
-    public Optional<ResourceProviderManifestPropertiesResponseRequestHeaderOptions> getRequestHeaderOptions() {
+    public Optional<ResourceProviderManifestPropertiesResponseRequestHeaderOptions> requestHeaderOptions() {
         return Optional.ofNullable(this.requestHeaderOptions);
     }
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
-    public Optional<ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> getSubscriptionLifecycleNotificationSpecifications() {
+    public Optional<ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> subscriptionLifecycleNotificationSpecifications() {
         return Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
-    public Optional<ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions> getTemplateDeploymentOptions() {
+    public Optional<ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions> templateDeploymentOptions() {
         return Optional.ofNullable(this.templateDeploymentOptions);
     }
 

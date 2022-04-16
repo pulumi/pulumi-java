@@ -63,42 +63,42 @@ public final class GetWebServiceResult {
      * Specifies the resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Specifies the name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Contains the property payload that describes the web service.
      * 
     */
-    public WebServicePropertiesForGraphResponse getProperties() {
+    public WebServicePropertiesForGraphResponse properties() {
         return this.properties;
     }
     /**
      * Contains resource tags defined as key/value pairs.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies the type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

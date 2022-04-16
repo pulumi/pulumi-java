@@ -32,7 +32,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
 
-    public Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> getLoadBalancerBackendAddressPools() {
+    public Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? Codegen.empty() : this.loadBalancerBackendAddressPools;
     }
 
@@ -43,7 +43,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="loadBalancerNatRules")
       private final @Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
 
-    public Output<List<LoadBalancerNatRuleReferenceArgs>> getLoadBalancerNatRules() {
+    public Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules() {
         return this.loadBalancerNatRules == null ? Codegen.empty() : this.loadBalancerNatRules;
     }
 
@@ -54,7 +54,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 
@@ -76,7 +76,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -87,7 +87,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="privateIpAllocationMethod")
       private final @Nullable Output<String> privateIpAllocationMethod;
 
-    public Output<String> getPrivateIpAllocationMethod() {
+    public Output<String> privateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Codegen.empty() : this.privateIpAllocationMethod;
     }
 
@@ -98,7 +98,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="publicIp")
       private final @Nullable Output<PublicIpReferenceArgs> publicIp;
 
-    public Output<PublicIpReferenceArgs> getPublicIp() {
+    public Output<PublicIpReferenceArgs> publicIp() {
         return this.publicIp == null ? Codegen.empty() : this.publicIp;
     }
 
@@ -109,7 +109,7 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
     @Import(name="subnet")
       private final @Nullable Output<SubnetReferenceArgs> subnet;
 
-    public Output<SubnetReferenceArgs> getSubnet() {
+    public Output<SubnetReferenceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

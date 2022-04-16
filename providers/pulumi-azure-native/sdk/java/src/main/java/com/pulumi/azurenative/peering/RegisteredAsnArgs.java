@@ -23,7 +23,7 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="asn")
       private final @Nullable Output<Integer> asn;
 
-    public Output<Integer> getAsn() {
+    public Output<Integer> asn() {
         return this.asn == null ? Codegen.empty() : this.asn;
     }
 
@@ -34,7 +34,7 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
 
-    public Output<String> getPeeringName() {
+    public Output<String> peeringName() {
         return this.peeringName;
     }
 
@@ -45,7 +45,7 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registeredAsnName")
       private final @Nullable Output<String> registeredAsnName;
 
-    public Output<String> getRegisteredAsnName() {
+    public Output<String> registeredAsnName() {
         return this.registeredAsnName == null ? Codegen.empty() : this.registeredAsnName;
     }
 
@@ -56,7 +56,7 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -31,7 +31,7 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="identity")
       private final @Nullable Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -43,7 +43,7 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="password")
       private final @Nullable Output<SecretObjectArgs> password;
 
-    public Output<SecretObjectArgs> getPassword() {
+    public Output<SecretObjectArgs> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -54,7 +54,7 @@ public final class CustomRegistryCredentialsArgs extends com.pulumi.resources.Re
     @Import(name="userName")
       private final @Nullable Output<SecretObjectArgs> userName;
 
-    public Output<SecretObjectArgs> getUserName() {
+    public Output<SecretObjectArgs> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

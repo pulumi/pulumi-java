@@ -27,7 +27,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -38,7 +38,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostPlatform", required=true)
       private final Output<Either<String,PlatformType>> hostPlatform;
 
-    public Output<Either<String,PlatformType>> getHostPlatform() {
+    public Output<Either<String,PlatformType>> hostPlatform() {
         return this.hostPlatform;
     }
 
@@ -50,7 +50,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -61,7 +61,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubernetesClusterInfo", required=true)
       private final Output<KubernetesClusterInfoArgs> kubernetesClusterInfo;
 
-    public Output<KubernetesClusterInfoArgs> getKubernetesClusterInfo() {
+    public Output<KubernetesClusterInfoArgs> kubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
 
@@ -72,7 +72,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="kubernetesRoleResources", required=true)
       private final Output<KubernetesRoleResourcesArgs> kubernetesRoleResources;
 
-    public Output<KubernetesRoleResourcesArgs> getKubernetesRoleResources() {
+    public Output<KubernetesRoleResourcesArgs> kubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
 
@@ -83,7 +83,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -94,7 +94,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class KubernetesRoleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Output<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
 

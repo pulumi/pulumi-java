@@ -28,7 +28,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hanaSids")
       private final @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
 
-    public Output<List<SAPSystemIDArgs>> getHanaSids() {
+    public Output<List<SAPSystemIDArgs>> hanaSids() {
         return this.hanaSids == null ? Codegen.empty() : this.hanaSids;
     }
 
@@ -39,7 +39,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osDisks")
       private final @Nullable Output<List<DiskArgs>> osDisks;
 
-    public Output<List<DiskArgs>> getOsDisks() {
+    public Output<List<DiskArgs>> osDisks() {
         return this.osDisks == null ? Codegen.empty() : this.osDisks;
     }
 

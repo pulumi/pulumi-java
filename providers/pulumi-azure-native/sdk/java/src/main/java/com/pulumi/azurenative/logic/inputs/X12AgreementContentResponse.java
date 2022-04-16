@@ -23,7 +23,7 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
     @Import(name="receiveAgreement", required=true)
       private final X12OneWayAgreementResponse receiveAgreement;
 
-    public X12OneWayAgreementResponse getReceiveAgreement() {
+    public X12OneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -34,7 +34,7 @@ public final class X12AgreementContentResponse extends com.pulumi.resources.Invo
     @Import(name="sendAgreement", required=true)
       private final X12OneWayAgreementResponse sendAgreement;
 
-    public X12OneWayAgreementResponse getSendAgreement() {
+    public X12OneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }
 

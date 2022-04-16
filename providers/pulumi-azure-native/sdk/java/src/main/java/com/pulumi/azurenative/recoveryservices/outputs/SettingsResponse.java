@@ -44,21 +44,21 @@ public final class SettingsResponse {
      * will be deprecated once clients upgrade to consider this flag.
      * 
     */
-    public Optional<Boolean> getIsCompression() {
+    public Optional<Boolean> isCompression() {
         return Optional.ofNullable(this.isCompression);
     }
     /**
      * SQL compression flag
      * 
     */
-    public Optional<Boolean> getIssqlcompression() {
+    public Optional<Boolean> issqlcompression() {
         return Optional.ofNullable(this.issqlcompression);
     }
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

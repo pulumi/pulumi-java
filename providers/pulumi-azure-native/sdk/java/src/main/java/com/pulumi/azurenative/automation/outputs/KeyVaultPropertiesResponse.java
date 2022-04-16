@@ -41,21 +41,21 @@ public final class KeyVaultPropertiesResponse {
      * The name of key used to encrypt data.
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * The key version of the key used to encrypt data.
      * 
     */
-    public Optional<String> getKeyVersion() {
+    public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * The URI of the key vault key used to encrypt data.
      * 
     */
-    public Optional<String> getKeyvaultUri() {
+    public Optional<String> keyvaultUri() {
         return Optional.ofNullable(this.keyvaultUri);
     }
 

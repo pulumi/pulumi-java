@@ -23,7 +23,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endPointName", required=true)
       private final String endPointName;
 
-    public String getEndPointName() {
+    public String endPointName() {
         return this.endPointName;
     }
 
@@ -34,7 +34,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -45,7 +45,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final String port;
 
-    public String getPort() {
+    public String port() {
         return this.port;
     }
 
@@ -56,7 +56,7 @@ public final class EndPointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

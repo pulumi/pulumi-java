@@ -132,28 +132,28 @@ public final class InMageRcmFabricSpecificDetailsResponse {
      * The list of agent details.
      * 
     */
-    public List<AgentDetailsResponse> getAgentDetails() {
+    public List<AgentDetailsResponse> agentDetails() {
         return this.agentDetails;
     }
     /**
      * The control plane Uri.
      * 
     */
-    public String getControlPlaneUri() {
+    public String controlPlaneUri() {
         return this.controlPlaneUri;
     }
     /**
      * The data plane Uri.
      * 
     */
-    public String getDataPlaneUri() {
+    public String dataPlaneUri() {
         return this.dataPlaneUri;
     }
     /**
      * The list of DRAs.
      * 
     */
-    public List<DraDetailsResponse> getDras() {
+    public List<DraDetailsResponse> dras() {
         return this.dras;
     }
     /**
@@ -161,77 +161,77 @@ public final class InMageRcmFabricSpecificDetailsResponse {
      * Expected value is 'InMageRcm'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The ARM Id of the physical site.
      * 
     */
-    public String getPhysicalSiteId() {
+    public String physicalSiteId() {
         return this.physicalSiteId;
     }
     /**
      * The list of process servers.
      * 
     */
-    public List<ProcessServerDetailsResponse> getProcessServers() {
+    public List<ProcessServerDetailsResponse> processServers() {
         return this.processServers;
     }
     /**
      * The list of push installers.
      * 
     */
-    public List<PushInstallerDetailsResponse> getPushInstallers() {
+    public List<PushInstallerDetailsResponse> pushInstallers() {
         return this.pushInstallers;
     }
     /**
      * The list of RCM proxies.
      * 
     */
-    public List<RcmProxyDetailsResponse> getRcmProxies() {
+    public List<RcmProxyDetailsResponse> rcmProxies() {
         return this.rcmProxies;
     }
     /**
      * The list of replication agents.
      * 
     */
-    public List<ReplicationAgentDetailsResponse> getReplicationAgents() {
+    public List<ReplicationAgentDetailsResponse> replicationAgents() {
         return this.replicationAgents;
     }
     /**
      * The list of reprotect agents.
      * 
     */
-    public List<ReprotectAgentDetailsResponse> getReprotectAgents() {
+    public List<ReprotectAgentDetailsResponse> reprotectAgents() {
         return this.reprotectAgents;
     }
     /**
      * The service container Id.
      * 
     */
-    public String getServiceContainerId() {
+    public String serviceContainerId() {
         return this.serviceContainerId;
     }
     /**
      * The service endpoint.
      * 
     */
-    public String getServiceEndpoint() {
+    public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
      * The service resource Id.
      * 
     */
-    public String getServiceResourceId() {
+    public String serviceResourceId() {
         return this.serviceResourceId;
     }
     /**
      * The ARM Id of the VMware site.
      * 
     */
-    public String getVmwareSiteId() {
+    public String vmwareSiteId() {
         return this.vmwareSiteId;
     }
 

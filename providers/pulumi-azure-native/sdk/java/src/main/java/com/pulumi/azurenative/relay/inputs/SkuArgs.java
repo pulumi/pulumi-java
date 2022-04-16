@@ -27,7 +27,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<SkuName> name;
 
-    public Output<SkuName> getName() {
+    public Output<SkuName> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;
 
-    public Output<SkuTier> getTier() {
+    public Output<SkuTier> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

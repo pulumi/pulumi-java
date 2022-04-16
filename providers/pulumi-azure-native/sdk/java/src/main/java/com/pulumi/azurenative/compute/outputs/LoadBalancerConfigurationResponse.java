@@ -42,21 +42,21 @@ public final class LoadBalancerConfigurationResponse {
      * Resource Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the Load balancer
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the load balancer configuration.
      * 
     */
-    public LoadBalancerConfigurationPropertiesResponse getProperties() {
+    public LoadBalancerConfigurationPropertiesResponse properties() {
         return this.properties;
     }
 

@@ -41,21 +41,21 @@ public final class MetadataAuthorResponse {
      * Email of author contact
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Link for author/vendor page
      * 
     */
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Name of the author. Company or person.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

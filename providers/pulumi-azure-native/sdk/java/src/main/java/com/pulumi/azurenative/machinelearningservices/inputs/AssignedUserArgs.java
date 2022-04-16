@@ -25,7 +25,7 @@ public final class AssignedUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -36,7 +36,7 @@ public final class AssignedUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 

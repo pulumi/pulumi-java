@@ -27,7 +27,7 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="functionAppResourceId", required=true)
       private final Output<String> functionAppResourceId;
 
-    public Output<String> getFunctionAppResourceId() {
+    public Output<String> functionAppResourceId() {
         return this.functionAppResourceId;
     }
 
@@ -38,7 +38,7 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -49,7 +49,7 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="httpTriggerUrl", required=true)
       private final Output<String> httpTriggerUrl;
 
-    public Output<String> getHttpTriggerUrl() {
+    public Output<String> httpTriggerUrl() {
         return this.httpTriggerUrl;
     }
 
@@ -60,7 +60,7 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -71,7 +71,7 @@ public final class AzureFunctionReceiverArgs extends com.pulumi.resources.Resour
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
+    public Output<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 

@@ -25,7 +25,7 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="cert")
       private final @Nullable String cert;
 
-    public Optional<String> getCert() {
+    public Optional<String> cert() {
         return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
     }
 
@@ -36,7 +36,7 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="cname")
       private final @Nullable String cname;
 
-    public Optional<String> getCname() {
+    public Optional<String> cname() {
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
     }
 
@@ -47,7 +47,7 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
@@ -58,7 +58,7 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

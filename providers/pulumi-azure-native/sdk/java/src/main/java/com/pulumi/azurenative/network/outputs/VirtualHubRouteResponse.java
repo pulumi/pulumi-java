@@ -35,14 +35,14 @@ public final class VirtualHubRouteResponse {
      * List of all addressPrefixes.
      * 
     */
-    public List<String> getAddressPrefixes() {
+    public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
      * NextHop ip address.
      * 
     */
-    public Optional<String> getNextHopIpAddress() {
+    public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
 

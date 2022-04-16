@@ -27,7 +27,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="agreementName")
       private final @Nullable Output<String> agreementName;
 
-    public Output<String> getAgreementName() {
+    public Output<String> agreementName() {
         return this.agreementName == null ? Codegen.empty() : this.agreementName;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="agreementType", required=true)
       private final Output<AgreementType> agreementType;
 
-    public Output<AgreementType> getAgreementType() {
+    public Output<AgreementType> agreementType() {
         return this.agreementType;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="content", required=true)
       private final Output<AgreementContentArgs> content;
 
-    public Output<AgreementContentArgs> getContent() {
+    public Output<AgreementContentArgs> content() {
         return this.content;
     }
 
@@ -60,7 +60,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="guestIdentity", required=true)
       private final Output<BusinessIdentityArgs> guestIdentity;
 
-    public Output<BusinessIdentityArgs> getGuestIdentity() {
+    public Output<BusinessIdentityArgs> guestIdentity() {
         return this.guestIdentity;
     }
 
@@ -71,7 +71,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="guestPartner", required=true)
       private final Output<String> guestPartner;
 
-    public Output<String> getGuestPartner() {
+    public Output<String> guestPartner() {
         return this.guestPartner;
     }
 
@@ -82,7 +82,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="hostIdentity", required=true)
       private final Output<BusinessIdentityArgs> hostIdentity;
 
-    public Output<BusinessIdentityArgs> getHostIdentity() {
+    public Output<BusinessIdentityArgs> hostIdentity() {
         return this.hostIdentity;
     }
 
@@ -93,7 +93,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="hostPartner", required=true)
       private final Output<String> hostPartner;
 
-    public Output<String> getHostPartner() {
+    public Output<String> hostPartner() {
         return this.hostPartner;
     }
 
@@ -104,7 +104,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -115,7 +115,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -126,7 +126,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -137,7 +137,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -148,7 +148,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

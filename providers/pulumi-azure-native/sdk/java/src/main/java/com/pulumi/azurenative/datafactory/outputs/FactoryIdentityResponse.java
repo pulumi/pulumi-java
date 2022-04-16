@@ -49,28 +49,28 @@ public final class FactoryIdentityResponse {
      * The principal id of the identity.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The client tenant id of the identity.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The identity type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * List of user assigned identities for the factory.
      * 
     */
-    public Map<String,Object> getUserAssignedIdentities() {
+    public Map<String,Object> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

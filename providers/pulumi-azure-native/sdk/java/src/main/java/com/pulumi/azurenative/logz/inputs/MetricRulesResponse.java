@@ -27,7 +27,7 @@ public final class MetricRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="filteringTags")
       private final @Nullable List<FilteringTagResponse> filteringTags;
 
-    public List<FilteringTagResponse> getFilteringTags() {
+    public List<FilteringTagResponse> filteringTags() {
         return this.filteringTags == null ? List.of() : this.filteringTags;
     }
 
@@ -38,7 +38,7 @@ public final class MetricRulesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 

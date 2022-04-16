@@ -25,7 +25,7 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
     @Import(name="initialReplicationProgressPercentage")
       private final @Nullable String initialReplicationProgressPercentage;
 
-    public Optional<String> getInitialReplicationProgressPercentage() {
+    public Optional<String> initialReplicationProgressPercentage() {
         return this.initialReplicationProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationProgressPercentage);
     }
 
@@ -36,7 +36,7 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
     @Import(name="initialReplicationType")
       private final @Nullable String initialReplicationType;
 
-    public Optional<String> getInitialReplicationType() {
+    public Optional<String> initialReplicationType() {
         return this.initialReplicationType == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationType);
     }
 

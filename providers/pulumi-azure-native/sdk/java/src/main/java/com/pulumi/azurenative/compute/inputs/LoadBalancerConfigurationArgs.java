@@ -27,7 +27,7 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class LoadBalancerConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="properties", required=true)
       private final Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
-    public Output<LoadBalancerConfigurationPropertiesArgs> getProperties() {
+    public Output<LoadBalancerConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
 

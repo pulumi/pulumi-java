@@ -30,7 +30,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
     @Import(name="destinationPortBehavior")
       private final @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
-    public Output<Either<String,DestinationPortBehavior>> getDestinationPortBehavior() {
+    public Output<Either<String,DestinationPortBehavior>> destinationPortBehavior() {
         return this.destinationPortBehavior == null ? Codegen.empty() : this.destinationPortBehavior;
     }
 
@@ -41,7 +41,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
     @Import(name="disableTraceRoute")
       private final @Nullable Output<Boolean> disableTraceRoute;
 
-    public Output<Boolean> getDisableTraceRoute() {
+    public Output<Boolean> disableTraceRoute() {
         return this.disableTraceRoute == null ? Codegen.empty() : this.disableTraceRoute;
     }
 
@@ -52,7 +52,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends com.pulumi.reso
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

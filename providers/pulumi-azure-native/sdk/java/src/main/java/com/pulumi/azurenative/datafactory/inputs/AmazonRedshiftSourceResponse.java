@@ -27,7 +27,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
@@ -38,7 +38,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -49,7 +49,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -60,7 +60,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="query")
       private final @Nullable Object query;
 
-    public Optional<Object> getQuery() {
+    public Optional<Object> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
@@ -71,7 +71,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
-    public Optional<Object> getQueryTimeout() {
+    public Optional<Object> queryTimeout() {
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
@@ -82,7 +82,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="redshiftUnloadSettings")
       private final @Nullable RedshiftUnloadSettingsResponse redshiftUnloadSettings;
 
-    public Optional<RedshiftUnloadSettingsResponse> getRedshiftUnloadSettings() {
+    public Optional<RedshiftUnloadSettingsResponse> redshiftUnloadSettings() {
         return this.redshiftUnloadSettings == null ? Optional.empty() : Optional.ofNullable(this.redshiftUnloadSettings);
     }
 
@@ -93,7 +93,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
@@ -104,7 +104,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
@@ -116,7 +116,7 @@ public final class AmazonRedshiftSourceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

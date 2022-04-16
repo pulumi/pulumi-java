@@ -27,7 +27,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends com.pulumi.resourc
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -39,7 +39,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends com.pulumi.resourc
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
 
-    public Output<String> getOperatorType() {
+    public Output<String> operatorType() {
         return this.operatorType;
     }
 
@@ -50,7 +50,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends com.pulumi.resourc
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

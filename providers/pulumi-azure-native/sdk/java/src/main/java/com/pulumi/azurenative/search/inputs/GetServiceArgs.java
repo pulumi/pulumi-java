@@ -19,7 +19,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="searchServiceName", required=true)
       private final String searchServiceName;
 
-    public String getSearchServiceName() {
+    public String searchServiceName() {
         return this.searchServiceName;
     }
 

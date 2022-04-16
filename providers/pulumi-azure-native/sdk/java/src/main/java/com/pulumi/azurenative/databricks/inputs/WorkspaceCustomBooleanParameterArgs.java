@@ -25,7 +25,7 @@ public final class WorkspaceCustomBooleanParameterArgs extends com.pulumi.resour
     @Import(name="value", required=true)
       private final Output<Boolean> value;
 
-    public Output<Boolean> getValue() {
+    public Output<Boolean> value() {
         return this.value;
     }
 

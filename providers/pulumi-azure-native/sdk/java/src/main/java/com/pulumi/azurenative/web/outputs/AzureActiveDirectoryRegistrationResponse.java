@@ -74,7 +74,7 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
@@ -82,7 +82,7 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
      * 
     */
-    public Optional<String> getClientSecretCertificateIssuer() {
+    public Optional<String> clientSecretCertificateIssuer() {
         return Optional.ofNullable(this.clientSecretCertificateIssuer);
     }
     /**
@@ -90,7 +90,7 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
      * 
     */
-    public Optional<String> getClientSecretCertificateSubjectAlternativeName() {
+    public Optional<String> clientSecretCertificateSubjectAlternativeName() {
         return Optional.ofNullable(this.clientSecretCertificateSubjectAlternativeName);
     }
     /**
@@ -98,14 +98,14 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * a replacement for the Client Secret. It is also optional.
      * 
     */
-    public Optional<String> getClientSecretCertificateThumbprint() {
+    public Optional<String> clientSecretCertificateThumbprint() {
         return Optional.ofNullable(this.clientSecretCertificateThumbprint);
     }
     /**
      * The app setting name that contains the client secret of the relying party application.
      * 
     */
-    public Optional<String> getClientSecretSettingName() {
+    public Optional<String> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
     /**
@@ -115,7 +115,7 @@ public final class AzureActiveDirectoryRegistrationResponse {
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
     */
-    public Optional<String> getOpenIdIssuer() {
+    public Optional<String> openIdIssuer() {
         return Optional.ofNullable(this.openIdIssuer);
     }
 

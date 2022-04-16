@@ -25,7 +25,7 @@ public final class UserIdentityContractResponse extends com.pulumi.resources.Inv
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class UserIdentityContractResponse extends com.pulumi.resources.Inv
     @Import(name="provider")
       private final @Nullable String provider;
 
-    public Optional<String> getProvider() {
+    public Optional<String> provider() {
         return this.provider == null ? Optional.empty() : Optional.ofNullable(this.provider);
     }
 

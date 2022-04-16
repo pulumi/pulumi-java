@@ -25,7 +25,7 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxDiskSizeInMb")
       private final @Nullable Double maxDiskSizeInMb;
 
-    public Optional<Double> getMaxDiskSizeInMb() {
+    public Optional<Double> maxDiskSizeInMb() {
         return this.maxDiskSizeInMb == null ? Optional.empty() : Optional.ofNullable(this.maxDiskSizeInMb);
     }
 
@@ -36,7 +36,7 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxMemoryInMb")
       private final @Nullable Double maxMemoryInMb;
 
-    public Optional<Double> getMaxMemoryInMb() {
+    public Optional<Double> maxMemoryInMb() {
         return this.maxMemoryInMb == null ? Optional.empty() : Optional.ofNullable(this.maxMemoryInMb);
     }
 
@@ -47,7 +47,7 @@ public final class SiteLimitsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxPercentageCpu")
       private final @Nullable Double maxPercentageCpu;
 
-    public Optional<Double> getMaxPercentageCpu() {
+    public Optional<Double> maxPercentageCpu() {
         return this.maxPercentageCpu == null ? Optional.empty() : Optional.ofNullable(this.maxPercentageCpu);
     }
 

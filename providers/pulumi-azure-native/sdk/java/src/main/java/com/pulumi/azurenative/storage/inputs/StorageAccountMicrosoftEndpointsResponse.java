@@ -23,7 +23,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
     @Import(name="blob", required=true)
       private final String blob;
 
-    public String getBlob() {
+    public String blob() {
         return this.blob;
     }
 
@@ -34,7 +34,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
     @Import(name="dfs", required=true)
       private final String dfs;
 
-    public String getDfs() {
+    public String dfs() {
         return this.dfs;
     }
 
@@ -45,7 +45,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
     @Import(name="file", required=true)
       private final String file;
 
-    public String getFile() {
+    public String file() {
         return this.file;
     }
 
@@ -56,7 +56,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
     @Import(name="queue", required=true)
       private final String queue;
 
-    public String getQueue() {
+    public String queue() {
         return this.queue;
     }
 
@@ -67,7 +67,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
     @Import(name="table", required=true)
       private final String table;
 
-    public String getTable() {
+    public String table() {
         return this.table;
     }
 
@@ -78,7 +78,7 @@ public final class StorageAccountMicrosoftEndpointsResponse extends com.pulumi.r
     @Import(name="web", required=true)
       private final String web;
 
-    public String getWeb() {
+    public String web() {
         return this.web;
     }
 

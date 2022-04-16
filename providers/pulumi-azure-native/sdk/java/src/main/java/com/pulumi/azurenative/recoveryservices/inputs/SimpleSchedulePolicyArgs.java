@@ -32,7 +32,7 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;
 
-    public Output<String> getSchedulePolicyType() {
+    public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
 
@@ -43,7 +43,7 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleRunDays")
       private final @Nullable Output<List<DayOfWeek>> scheduleRunDays;
 
-    public Output<List<DayOfWeek>> getScheduleRunDays() {
+    public Output<List<DayOfWeek>> scheduleRunDays() {
         return this.scheduleRunDays == null ? Codegen.empty() : this.scheduleRunDays;
     }
 
@@ -54,7 +54,7 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleRunFrequency")
       private final @Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency;
 
-    public Output<Either<String,ScheduleRunType>> getScheduleRunFrequency() {
+    public Output<Either<String,ScheduleRunType>> scheduleRunFrequency() {
         return this.scheduleRunFrequency == null ? Codegen.empty() : this.scheduleRunFrequency;
     }
 
@@ -65,7 +65,7 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleRunTimes")
       private final @Nullable Output<List<String>> scheduleRunTimes;
 
-    public Output<List<String>> getScheduleRunTimes() {
+    public Output<List<String>> scheduleRunTimes() {
         return this.scheduleRunTimes == null ? Codegen.empty() : this.scheduleRunTimes;
     }
 
@@ -76,7 +76,7 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleWeeklyFrequency")
       private final @Nullable Output<Integer> scheduleWeeklyFrequency;
 
-    public Output<Integer> getScheduleWeeklyFrequency() {
+    public Output<Integer> scheduleWeeklyFrequency() {
         return this.scheduleWeeklyFrequency == null ? Codegen.empty() : this.scheduleWeeklyFrequency;
     }
 

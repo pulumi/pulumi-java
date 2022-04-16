@@ -137,105 +137,105 @@ public final class ContainerCodePackagePropertiesResponse {
      * Command array to execute within the container in exec form.
      * 
     */
-    public List<String> getCommands() {
+    public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
      * Reference to sinks in DiagnosticsDescription.
      * 
     */
-    public Optional<DiagnosticsRefResponse> getDiagnostics() {
+    public Optional<DiagnosticsRefResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
      * The endpoints exposed by this container.
      * 
     */
-    public List<EndpointPropertiesResponse> getEndpoints() {
+    public List<EndpointPropertiesResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Override for the default entry point in the container.
      * 
     */
-    public Optional<String> getEntrypoint() {
+    public Optional<String> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
     /**
      * The environment variables to set in this container
      * 
     */
-    public List<EnvironmentVariableResponse> getEnvironmentVariables() {
+    public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * The Container image to use.
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
      * Image registry credential.
      * 
     */
-    public Optional<ImageRegistryCredentialResponse> getImageRegistryCredential() {
+    public Optional<ImageRegistryCredentialResponse> imageRegistryCredential() {
         return Optional.ofNullable(this.imageRegistryCredential);
     }
     /**
      * Runtime information of a container instance.
      * 
     */
-    public ContainerInstanceViewResponse getInstanceView() {
+    public ContainerInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
      * The labels to set in this container.
      * 
     */
-    public List<ContainerLabelResponse> getLabels() {
+    public List<ContainerLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The name of the code package.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
      * 
     */
-    public List<ReliableCollectionsRefResponse> getReliableCollectionsRefs() {
+    public List<ReliableCollectionsRefResponse> reliableCollectionsRefs() {
         return this.reliableCollectionsRefs == null ? List.of() : this.reliableCollectionsRefs;
     }
     /**
      * The resources required by this container.
      * 
     */
-    public ResourceRequirementsResponse getResources() {
+    public ResourceRequirementsResponse resources() {
         return this.resources;
     }
     /**
      * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
      * 
     */
-    public List<SettingResponse> getSettings() {
+    public List<SettingResponse> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
     /**
      * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
      * 
     */
-    public List<VolumeReferenceResponse> getVolumeRefs() {
+    public List<VolumeReferenceResponse> volumeRefs() {
         return this.volumeRefs == null ? List.of() : this.volumeRefs;
     }
     /**
      * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
      * 
     */
-    public List<ApplicationScopedVolumeResponse> getVolumes() {
+    public List<ApplicationScopedVolumeResponse> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

@@ -30,7 +30,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowPublicAccessWhenBehindVnet")
       private final @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
 
-    public Output<Boolean> getAllowPublicAccessWhenBehindVnet() {
+    public Output<Boolean> allowPublicAccessWhenBehindVnet() {
         return this.allowPublicAccessWhenBehindVnet == null ? Codegen.empty() : this.allowPublicAccessWhenBehindVnet;
     }
 
@@ -41,7 +41,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationInsights")
       private final @Nullable Output<String> applicationInsights;
 
-    public Output<String> getApplicationInsights() {
+    public Output<String> applicationInsights() {
         return this.applicationInsights == null ? Codegen.empty() : this.applicationInsights;
     }
 
@@ -52,7 +52,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerRegistry")
       private final @Nullable Output<String> containerRegistry;
 
-    public Output<String> getContainerRegistry() {
+    public Output<String> containerRegistry() {
         return this.containerRegistry == null ? Codegen.empty() : this.containerRegistry;
     }
 
@@ -63,7 +63,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -74,7 +74,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="discoveryUrl")
       private final @Nullable Output<String> discoveryUrl;
 
-    public Output<String> getDiscoveryUrl() {
+    public Output<String> discoveryUrl() {
         return this.discoveryUrl == null ? Codegen.empty() : this.discoveryUrl;
     }
 
@@ -85,7 +85,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertyArgs> encryption;
 
-    public Output<EncryptionPropertyArgs> getEncryption() {
+    public Output<EncryptionPropertyArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -96,7 +96,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -107,7 +107,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hbiWorkspace")
       private final @Nullable Output<Boolean> hbiWorkspace;
 
-    public Output<Boolean> getHbiWorkspace() {
+    public Output<Boolean> hbiWorkspace() {
         return this.hbiWorkspace == null ? Codegen.empty() : this.hbiWorkspace;
     }
 
@@ -118,7 +118,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -129,7 +129,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageBuildCompute")
       private final @Nullable Output<String> imageBuildCompute;
 
-    public Output<String> getImageBuildCompute() {
+    public Output<String> imageBuildCompute() {
         return this.imageBuildCompute == null ? Codegen.empty() : this.imageBuildCompute;
     }
 
@@ -140,7 +140,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVault")
       private final @Nullable Output<String> keyVault;
 
-    public Output<String> getKeyVault() {
+    public Output<String> keyVault() {
         return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
@@ -151,7 +151,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -162,7 +162,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryUserAssignedIdentity")
       private final @Nullable Output<String> primaryUserAssignedIdentity;
 
-    public Output<String> getPrimaryUserAssignedIdentity() {
+    public Output<String> primaryUserAssignedIdentity() {
         return this.primaryUserAssignedIdentity == null ? Codegen.empty() : this.primaryUserAssignedIdentity;
     }
 
@@ -173,7 +173,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -184,7 +184,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceManagedResourcesSettings")
       private final @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
 
-    public Output<ServiceManagedResourcesSettingsArgs> getServiceManagedResourcesSettings() {
+    public Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings() {
         return this.serviceManagedResourcesSettings == null ? Codegen.empty() : this.serviceManagedResourcesSettings;
     }
 
@@ -195,7 +195,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharedPrivateLinkResources")
       private final @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
 
-    public Output<List<SharedPrivateLinkResourceArgs>> getSharedPrivateLinkResources() {
+    public Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources == null ? Codegen.empty() : this.sharedPrivateLinkResources;
     }
 
@@ -206,7 +206,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -217,7 +217,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
+    public Output<String> storageAccount() {
         return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
@@ -228,7 +228,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -239,7 +239,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 

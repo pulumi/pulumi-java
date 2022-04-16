@@ -28,7 +28,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -39,7 +39,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -50,7 +50,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="imagePaths")
       private final @Nullable List<String> imagePaths;
 
-    public List<String> getImagePaths() {
+    public List<String> imagePaths() {
         return this.imagePaths == null ? List.of() : this.imagePaths;
     }
 
@@ -61,7 +61,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -72,7 +72,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -83,7 +83,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="supportedResourceTypes")
       private final @Nullable List<String> supportedResourceTypes;
 
-    public List<String> getSupportedResourceTypes() {
+    public List<String> supportedResourceTypes() {
         return this.supportedResourceTypes == null ? List.of() : this.supportedResourceTypes;
     }
 

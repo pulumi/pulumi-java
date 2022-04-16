@@ -19,7 +19,7 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
     @Import(name="applicationGatewayName", required=true)
       private final String applicationGatewayName;
 
-    public String getApplicationGatewayName() {
+    public String applicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApplicationGatewayArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

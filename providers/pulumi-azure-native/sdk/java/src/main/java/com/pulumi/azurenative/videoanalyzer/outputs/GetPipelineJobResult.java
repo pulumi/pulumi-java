@@ -94,70 +94,70 @@ public final class GetPipelineJobResult {
      * An optional description for the pipeline.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Details about the error, in case the pipeline job fails.
      * 
     */
-    public PipelineJobErrorResponse getError() {
+    public PipelineJobErrorResponse error() {
         return this.error;
     }
     /**
      * The date-time by when this pipeline job will be automatically deleted from your account.
      * 
     */
-    public String getExpiration() {
+    public String expiration() {
         return this.expiration;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
     */
-    public List<ParameterDefinitionResponse> getParameters() {
+    public List<ParameterDefinitionResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Current state of the pipeline (read-only).
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
      * 
     */
-    public String getTopologyName() {
+    public String topologyName() {
         return this.topologyName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class AKSReplicaStatusResponseError extends com.pulumi.resources.In
     @Import(name="error", required=true)
       private final ErrorResponseResponse error;
 
-    public ErrorResponseResponse getError() {
+    public ErrorResponseResponse error() {
         return this.error;
     }
 

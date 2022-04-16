@@ -23,7 +23,7 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
     @Import(name="backupType", required=true)
       private final String backupType;
 
-    public String getBackupType() {
+    public String backupType() {
         return this.backupType;
     }
 
@@ -35,7 +35,7 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

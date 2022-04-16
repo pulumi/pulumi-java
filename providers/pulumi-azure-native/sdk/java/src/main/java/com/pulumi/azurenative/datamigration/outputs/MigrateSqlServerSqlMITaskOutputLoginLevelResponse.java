@@ -84,35 +84,35 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
      * Login migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Login migration errors and warnings per login
      * 
     */
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Login name.
      * 
     */
-    public String getLoginName() {
+    public String loginName() {
         return this.loginName;
     }
     /**
      * Login migration progress message
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
@@ -120,28 +120,28 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
      * Expected value is 'LoginLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Current stage of login
      * 
     */
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * Login migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of login
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

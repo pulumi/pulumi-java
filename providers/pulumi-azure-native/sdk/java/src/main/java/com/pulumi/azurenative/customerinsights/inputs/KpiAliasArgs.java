@@ -25,7 +25,7 @@ public final class KpiAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliasName", required=true)
       private final Output<String> aliasName;
 
-    public Output<String> getAliasName() {
+    public Output<String> aliasName() {
         return this.aliasName;
     }
 
@@ -36,7 +36,7 @@ public final class KpiAliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 

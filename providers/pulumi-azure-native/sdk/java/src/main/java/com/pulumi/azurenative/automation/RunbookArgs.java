@@ -29,7 +29,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -40,7 +40,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="draft")
       private final @Nullable Output<RunbookDraftArgs> draft;
 
-    public Output<RunbookDraftArgs> getDraft() {
+    public Output<RunbookDraftArgs> draft() {
         return this.draft == null ? Codegen.empty() : this.draft;
     }
 
@@ -62,7 +62,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logActivityTrace")
       private final @Nullable Output<Integer> logActivityTrace;
 
-    public Output<Integer> getLogActivityTrace() {
+    public Output<Integer> logActivityTrace() {
         return this.logActivityTrace == null ? Codegen.empty() : this.logActivityTrace;
     }
 
@@ -84,7 +84,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logProgress")
       private final @Nullable Output<Boolean> logProgress;
 
-    public Output<Boolean> getLogProgress() {
+    public Output<Boolean> logProgress() {
         return this.logProgress == null ? Codegen.empty() : this.logProgress;
     }
 
@@ -95,7 +95,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logVerbose")
       private final @Nullable Output<Boolean> logVerbose;
 
-    public Output<Boolean> getLogVerbose() {
+    public Output<Boolean> logVerbose() {
         return this.logVerbose == null ? Codegen.empty() : this.logVerbose;
     }
 
@@ -106,7 +106,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -117,7 +117,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publishContentLink")
       private final @Nullable Output<ContentLinkArgs> publishContentLink;
 
-    public Output<ContentLinkArgs> getPublishContentLink() {
+    public Output<ContentLinkArgs> publishContentLink() {
         return this.publishContentLink == null ? Codegen.empty() : this.publishContentLink;
     }
 
@@ -128,7 +128,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,7 +139,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runbookName")
       private final @Nullable Output<String> runbookName;
 
-    public Output<String> getRunbookName() {
+    public Output<String> runbookName() {
         return this.runbookName == null ? Codegen.empty() : this.runbookName;
     }
 
@@ -150,7 +150,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runbookType", required=true)
       private final Output<Either<String,RunbookTypeEnum>> runbookType;
 
-    public Output<Either<String,RunbookTypeEnum>> getRunbookType() {
+    public Output<Either<String,RunbookTypeEnum>> runbookType() {
         return this.runbookType;
     }
 
@@ -161,7 +161,7 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -25,7 +25,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="associationAssignedCode")
       private final @Nullable String associationAssignedCode;
 
-    public Optional<String> getAssociationAssignedCode() {
+    public Optional<String> associationAssignedCode() {
         return this.associationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.associationAssignedCode);
     }
 
@@ -36,7 +36,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="messageId", required=true)
       private final String messageId;
 
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 
@@ -47,7 +47,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="messageRelease", required=true)
       private final String messageRelease;
 
-    public String getMessageRelease() {
+    public String messageRelease() {
         return this.messageRelease;
     }
 
@@ -58,7 +58,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="messageVersion", required=true)
       private final String messageVersion;
 
-    public String getMessageVersion() {
+    public String messageVersion() {
         return this.messageVersion;
     }
 
@@ -69,7 +69,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="schemaName", required=true)
       private final String schemaName;
 
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
 
@@ -80,7 +80,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="senderApplicationId")
       private final @Nullable String senderApplicationId;
 
-    public Optional<String> getSenderApplicationId() {
+    public Optional<String> senderApplicationId() {
         return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);
     }
 
@@ -91,7 +91,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
     @Import(name="senderApplicationQualifier")
       private final @Nullable String senderApplicationQualifier;
 
-    public Optional<String> getSenderApplicationQualifier() {
+    public Optional<String> senderApplicationQualifier() {
         return this.senderApplicationQualifier == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationQualifier);
     }
 

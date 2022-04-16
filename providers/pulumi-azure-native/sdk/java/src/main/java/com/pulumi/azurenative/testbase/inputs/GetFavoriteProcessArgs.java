@@ -19,7 +19,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
     @Import(name="favoriteProcessResourceName", required=true)
       private final String favoriteProcessResourceName;
 
-    public String getFavoriteProcessResourceName() {
+    public String favoriteProcessResourceName() {
         return this.favoriteProcessResourceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
     @Import(name="packageName", required=true)
       private final String packageName;
 
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
 
@@ -41,7 +41,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetFavoriteProcessArgs extends com.pulumi.resources.InvokeArg
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
-    public String getTestBaseAccountName() {
+    public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 

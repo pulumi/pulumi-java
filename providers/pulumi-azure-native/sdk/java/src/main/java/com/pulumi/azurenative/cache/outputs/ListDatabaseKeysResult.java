@@ -32,14 +32,14 @@ public final class ListDatabaseKeysResult {
      * The current primary key that clients can use to authenticate
      * 
     */
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
     /**
      * The current secondary key that clients can use to authenticate
      * 
     */
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

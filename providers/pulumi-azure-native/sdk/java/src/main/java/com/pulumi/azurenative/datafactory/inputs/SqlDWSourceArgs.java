@@ -28,7 +28,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> getAdditionalColumns() {
+    public Output<Object> additionalColumns() {
         return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
@@ -39,7 +39,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -50,7 +50,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -61,7 +61,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionOption")
       private final @Nullable Output<Object> partitionOption;
 
-    public Output<Object> getPartitionOption() {
+    public Output<Object> partitionOption() {
         return this.partitionOption == null ? Codegen.empty() : this.partitionOption;
     }
 
@@ -72,7 +72,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionSettings")
       private final @Nullable Output<SqlPartitionSettingsArgs> partitionSettings;
 
-    public Output<SqlPartitionSettingsArgs> getPartitionSettings() {
+    public Output<SqlPartitionSettingsArgs> partitionSettings() {
         return this.partitionSettings == null ? Codegen.empty() : this.partitionSettings;
     }
 
@@ -83,7 +83,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> getQueryTimeout() {
+    public Output<Object> queryTimeout() {
         return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
     }
 
@@ -94,7 +94,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
+    public Output<Object> sourceRetryCount() {
         return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
@@ -105,7 +105,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
+    public Output<Object> sourceRetryWait() {
         return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
@@ -116,7 +116,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlReaderQuery")
       private final @Nullable Output<Object> sqlReaderQuery;
 
-    public Output<Object> getSqlReaderQuery() {
+    public Output<Object> sqlReaderQuery() {
         return this.sqlReaderQuery == null ? Codegen.empty() : this.sqlReaderQuery;
     }
 
@@ -127,7 +127,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sqlReaderStoredProcedureName")
       private final @Nullable Output<Object> sqlReaderStoredProcedureName;
 
-    public Output<Object> getSqlReaderStoredProcedureName() {
+    public Output<Object> sqlReaderStoredProcedureName() {
         return this.sqlReaderStoredProcedureName == null ? Codegen.empty() : this.sqlReaderStoredProcedureName;
     }
 
@@ -138,7 +138,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storedProcedureParameters")
       private final @Nullable Output<Object> storedProcedureParameters;
 
-    public Output<Object> getStoredProcedureParameters() {
+    public Output<Object> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Codegen.empty() : this.storedProcedureParameters;
     }
 
@@ -150,7 +150,7 @@ public final class SqlDWSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

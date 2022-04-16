@@ -25,7 +25,7 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters")
       private final @Nullable String parameters;
 
-    public Optional<String> getParameters() {
+    public Optional<String> parameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
     @Import(name="policyDefinitionId")
       private final @Nullable String policyDefinitionId;
 
-    public Optional<String> getPolicyDefinitionId() {
+    public Optional<String> policyDefinitionId() {
         return this.policyDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionId);
     }
 

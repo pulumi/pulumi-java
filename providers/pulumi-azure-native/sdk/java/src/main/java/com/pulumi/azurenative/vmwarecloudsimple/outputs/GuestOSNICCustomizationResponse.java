@@ -70,49 +70,49 @@ public final class GuestOSNICCustomizationResponse {
      * IP address allocation method
      * 
     */
-    public Optional<String> getAllocation() {
+    public Optional<String> allocation() {
         return Optional.ofNullable(this.allocation);
     }
     /**
      * List of dns servers to use
      * 
     */
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * Gateway addresses assigned to nic
      * 
     */
-    public List<String> getGateway() {
+    public List<String> gateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
     /**
      * Static ip address for nic
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Network mask for nic
      * 
     */
-    public Optional<String> getMask() {
+    public Optional<String> mask() {
         return Optional.ofNullable(this.mask);
     }
     /**
      * primary WINS server for Windows
      * 
     */
-    public Optional<String> getPrimaryWinsServer() {
+    public Optional<String> primaryWinsServer() {
         return Optional.ofNullable(this.primaryWinsServer);
     }
     /**
      * secondary WINS server for Windows
      * 
     */
-    public Optional<String> getSecondaryWinsServer() {
+    public Optional<String> secondaryWinsServer() {
         return Optional.ofNullable(this.secondaryWinsServer);
     }
 

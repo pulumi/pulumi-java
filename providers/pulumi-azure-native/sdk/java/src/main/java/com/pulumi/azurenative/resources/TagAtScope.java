@@ -43,7 +43,7 @@ public class TagAtScope extends com.pulumi.resources.CustomResource {
      * @return The name of the tags wrapper resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class TagAtScope extends com.pulumi.resources.CustomResource {
      * @return The set of tags.
      * 
      */
-    public Output<TagsResponse> getProperties() {
+    public Output<TagsResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class TagAtScope extends com.pulumi.resources.CustomResource {
      * @return The type of the tags wrapper resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

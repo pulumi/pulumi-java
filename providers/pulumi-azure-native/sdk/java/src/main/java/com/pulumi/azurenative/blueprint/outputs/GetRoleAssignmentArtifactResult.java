@@ -93,28 +93,28 @@ public final class GetRoleAssignmentArtifactResult {
      * Artifacts which need to be deployed before the specified artifact.
      * 
     */
-    public List<String> getDependsOn() {
+    public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -122,42 +122,42 @@ public final class GetRoleAssignmentArtifactResult {
      * Expected value is 'roleAssignment'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
      * 
     */
-    public Object getPrincipalIds() {
+    public Object principalIds() {
         return this.principalIds;
     }
     /**
      * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Azure resource ID of the RoleDefinition.
      * 
     */
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
     @Import(name="primaryKey", required=true)
       private final String primaryKey;
 
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
 
@@ -34,7 +34,7 @@ public final class RedisAccessKeysResponse extends com.pulumi.resources.InvokeAr
     @Import(name="secondaryKey", required=true)
       private final String secondaryKey;
 
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

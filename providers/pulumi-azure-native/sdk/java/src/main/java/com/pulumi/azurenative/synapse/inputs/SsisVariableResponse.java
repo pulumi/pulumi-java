@@ -27,7 +27,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dataType")
       private final @Nullable String dataType;
 
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
@@ -38,7 +38,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -49,7 +49,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
       private final @Nullable Double id;
 
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -60,7 +60,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sensitive")
       private final @Nullable Boolean sensitive;
 
-    public Optional<Boolean> getSensitive() {
+    public Optional<Boolean> sensitive() {
         return this.sensitive == null ? Optional.empty() : Optional.ofNullable(this.sensitive);
     }
 
@@ -82,7 +82,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sensitiveValue")
       private final @Nullable String sensitiveValue;
 
-    public Optional<String> getSensitiveValue() {
+    public Optional<String> sensitiveValue() {
         return this.sensitiveValue == null ? Optional.empty() : Optional.ofNullable(this.sensitiveValue);
     }
 
@@ -93,7 +93,7 @@ public final class SsisVariableResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

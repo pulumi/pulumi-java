@@ -29,7 +29,7 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -40,7 +40,7 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -51,7 +51,7 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="triggerOperation")
       private final @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
 
-    public Output<Either<String,TriggerOperation>> getTriggerOperation() {
+    public Output<Either<String,TriggerOperation>> triggerOperation() {
         return this.triggerOperation == null ? Codegen.empty() : this.triggerOperation;
     }
 
@@ -62,7 +62,7 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="triggerType")
       private final @Nullable Output<Either<String,TriggerType>> triggerType;
 
-    public Output<Either<String,TriggerType>> getTriggerType() {
+    public Output<Either<String,TriggerType>> triggerType() {
         return this.triggerType == null ? Codegen.empty() : this.triggerType;
     }
 

@@ -72,49 +72,49 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
      * A list of container network interfaces created from this container network interface configuration.
      * 
     */
-    public List<SubResourceResponse> getContainerNetworkInterfaces() {
+    public List<SubResourceResponse> containerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A list of ip configurations of the container network interface configuration.
      * 
     */
-    public List<IPConfigurationProfileResponse> getIpConfigurations() {
+    public List<IPConfigurationProfileResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * The name of the resource. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the container network interface configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Sub Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

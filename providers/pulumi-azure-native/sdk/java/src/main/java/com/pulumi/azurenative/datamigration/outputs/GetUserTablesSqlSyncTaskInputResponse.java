@@ -48,28 +48,28 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
      * List of source database names to collect tables for
      * 
     */
-    public List<String> getSelectedSourceDatabases() {
+    public List<String> selectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
     /**
      * List of target database names to collect tables for
      * 
     */
-    public List<String> getSelectedTargetDatabases() {
+    public List<String> selectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
     /**
      * Connection information for SQL Server
      * 
     */
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for SQL DB
      * 
     */
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

@@ -36,7 +36,7 @@ public final class ZipDeflateReadSettingsResponse {
      * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getPreserveZipFileNameAsFolder() {
+    public Optional<Object> preserveZipFileNameAsFolder() {
         return Optional.ofNullable(this.preserveZipFileNameAsFolder);
     }
     /**
@@ -44,7 +44,7 @@ public final class ZipDeflateReadSettingsResponse {
      * Expected value is 'ZipDeflateReadSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
+    public Output<String> authorizationKey() {
         return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
@@ -37,7 +37,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -48,7 +48,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Output<Boolean> getEnableInternetSecurity() {
+    public Output<Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
     }
 
@@ -59,7 +59,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="expressRouteCircuitPeering", required=true)
       private final Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering;
 
-    public Output<ExpressRouteCircuitPeeringIdArgs> getExpressRouteCircuitPeering() {
+    public Output<ExpressRouteCircuitPeeringIdArgs> expressRouteCircuitPeering() {
         return this.expressRouteCircuitPeering;
     }
 
@@ -70,7 +70,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="expressRouteGatewayBypass")
       private final @Nullable Output<Boolean> expressRouteGatewayBypass;
 
-    public Output<Boolean> getExpressRouteGatewayBypass() {
+    public Output<Boolean> expressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass == null ? Codegen.empty() : this.expressRouteGatewayBypass;
     }
 
@@ -81,7 +81,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="expressRouteGatewayName", required=true)
       private final Output<String> expressRouteGatewayName;
 
-    public Output<String> getExpressRouteGatewayName() {
+    public Output<String> expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
 
@@ -92,7 +92,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -103,7 +103,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -114,7 +114,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,7 +125,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
+    public Output<RoutingConfigurationArgs> routingConfiguration() {
         return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
     }
 
@@ -136,7 +136,7 @@ public final class ExpressRouteConnectionArgs extends com.pulumi.resources.Resou
     @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;
 
-    public Output<Integer> getRoutingWeight() {
+    public Output<Integer> routingWeight() {
         return this.routingWeight == null ? Codegen.empty() : this.routingWeight;
     }
 

@@ -25,7 +25,7 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="branch")
       private final @Nullable String branch;
 
-    public Optional<String> getBranch() {
+    public Optional<String> branch() {
         return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
     }
 
@@ -36,7 +36,7 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="commit")
       private final @Nullable String commit;
 
-    public Optional<String> getCommit() {
+    public Optional<String> commit() {
         return this.commit == null ? Optional.empty() : Optional.ofNullable(this.commit);
     }
 
@@ -47,7 +47,7 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="semver")
       private final @Nullable String semver;
 
-    public Optional<String> getSemver() {
+    public Optional<String> semver() {
         return this.semver == null ? Optional.empty() : Optional.ofNullable(this.semver);
     }
 
@@ -58,7 +58,7 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
     @Import(name="tag")
       private final @Nullable String tag;
 
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 

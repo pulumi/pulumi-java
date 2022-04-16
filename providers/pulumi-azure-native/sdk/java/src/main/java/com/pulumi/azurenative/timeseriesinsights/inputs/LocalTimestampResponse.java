@@ -26,7 +26,7 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
     @Import(name="format")
       private final @Nullable String format;
 
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -37,7 +37,7 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeZoneOffset")
       private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
-    public Optional<LocalTimestampResponseTimeZoneOffset> getTimeZoneOffset() {
+    public Optional<LocalTimestampResponseTimeZoneOffset> timeZoneOffset() {
         return this.timeZoneOffset == null ? Optional.empty() : Optional.ofNullable(this.timeZoneOffset);
     }
 

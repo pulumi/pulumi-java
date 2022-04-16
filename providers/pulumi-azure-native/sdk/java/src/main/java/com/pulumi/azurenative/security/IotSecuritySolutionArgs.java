@@ -32,7 +32,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="additionalWorkspaces")
       private final @Nullable Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
 
-    public Output<List<AdditionalWorkspacesPropertiesArgs>> getAdditionalWorkspaces() {
+    public Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces() {
         return this.additionalWorkspaces == null ? Codegen.empty() : this.additionalWorkspaces;
     }
 
@@ -43,7 +43,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="disabledDataSources")
       private final @Nullable Output<List<Either<String,DataSource>>> disabledDataSources;
 
-    public Output<List<Either<String,DataSource>>> getDisabledDataSources() {
+    public Output<List<Either<String,DataSource>>> disabledDataSources() {
         return this.disabledDataSources == null ? Codegen.empty() : this.disabledDataSources;
     }
 
@@ -54,7 +54,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -65,7 +65,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="export")
       private final @Nullable Output<List<Either<String,ExportData>>> export;
 
-    public Output<List<Either<String,ExportData>>> getExport() {
+    public Output<List<Either<String,ExportData>>> export() {
         return this.export == null ? Codegen.empty() : this.export;
     }
 
@@ -76,7 +76,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="iotHubs", required=true)
       private final Output<List<String>> iotHubs;
 
-    public Output<List<String>> getIotHubs() {
+    public Output<List<String>> iotHubs() {
         return this.iotHubs;
     }
 
@@ -87,7 +87,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -98,7 +98,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="recommendationsConfiguration")
       private final @Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
 
-    public Output<List<RecommendationConfigurationPropertiesArgs>> getRecommendationsConfiguration() {
+    public Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration() {
         return this.recommendationsConfiguration == null ? Codegen.empty() : this.recommendationsConfiguration;
     }
 
@@ -109,7 +109,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -120,7 +120,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
 
-    public Output<String> getSolutionName() {
+    public Output<String> solutionName() {
         return this.solutionName == null ? Codegen.empty() : this.solutionName;
     }
 
@@ -131,7 +131,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="status")
       private final @Nullable Output<Either<String,SecuritySolutionStatus>> status;
 
-    public Output<Either<String,SecuritySolutionStatus>> getStatus() {
+    public Output<Either<String,SecuritySolutionStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -142,7 +142,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -153,7 +153,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="unmaskedIpLoggingStatus")
       private final @Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
 
-    public Output<Either<String,UnmaskedIpLoggingStatus>> getUnmaskedIpLoggingStatus() {
+    public Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus() {
         return this.unmaskedIpLoggingStatus == null ? Codegen.empty() : this.unmaskedIpLoggingStatus;
     }
 
@@ -164,7 +164,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="userDefinedResources")
       private final @Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources;
 
-    public Output<UserDefinedResourcesPropertiesArgs> getUserDefinedResources() {
+    public Output<UserDefinedResourcesPropertiesArgs> userDefinedResources() {
         return this.userDefinedResources == null ? Codegen.empty() : this.userDefinedResources;
     }
 
@@ -175,7 +175,7 @@ public final class IotSecuritySolutionArgs extends com.pulumi.resources.Resource
     @Import(name="workspace")
       private final @Nullable Output<String> workspace;
 
-    public Output<String> getWorkspace() {
+    public Output<String> workspace() {
         return this.workspace == null ? Codegen.empty() : this.workspace;
     }
 

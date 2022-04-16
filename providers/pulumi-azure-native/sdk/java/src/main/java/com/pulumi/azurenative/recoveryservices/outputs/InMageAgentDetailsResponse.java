@@ -48,28 +48,28 @@ public final class InMageAgentDetailsResponse {
      * Agent expiry date.
      * 
     */
-    public Optional<String> getAgentExpiryDate() {
+    public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
      * A value indicating whether installed agent needs to be updated.
      * 
     */
-    public Optional<String> getAgentUpdateStatus() {
+    public Optional<String> agentUpdateStatus() {
         return Optional.ofNullable(this.agentUpdateStatus);
     }
     /**
      * The agent version.
      * 
     */
-    public Optional<String> getAgentVersion() {
+    public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * A value indicating whether reboot is required after update is applied.
      * 
     */
-    public Optional<String> getPostUpdateRebootStatus() {
+    public Optional<String> postUpdateRebootStatus() {
         return Optional.ofNullable(this.postUpdateRebootStatus);
     }
 

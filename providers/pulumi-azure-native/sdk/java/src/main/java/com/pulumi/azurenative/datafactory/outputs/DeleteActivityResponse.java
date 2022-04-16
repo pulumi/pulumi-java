@@ -134,77 +134,77 @@ public final class DeleteActivityResponse {
      * Delete activity dataset reference.
      * 
     */
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getEnableLogging() {
+    public Optional<Object> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Log storage settings customer need to provide when enableLogging is true.
      * 
     */
-    public Optional<LogStorageSettingsResponse> getLogStorageSettings() {
+    public Optional<LogStorageSettingsResponse> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
     /**
      * The max concurrent connections to connect data source at the same time.
      * 
     */
-    public Optional<Integer> getMaxConcurrentConnections() {
+    public Optional<Integer> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
     */
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getRecursive() {
+    public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
      * Delete activity store settings.
      * 
     */
-    public Optional<Object> getStoreSettings() {
+    public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
     /**
@@ -212,14 +212,14 @@ public final class DeleteActivityResponse {
      * Expected value is 'Delete'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

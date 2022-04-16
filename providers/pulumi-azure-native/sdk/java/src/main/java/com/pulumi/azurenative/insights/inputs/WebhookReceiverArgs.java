@@ -27,7 +27,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identifierUri")
       private final @Nullable Output<String> identifierUri;
 
-    public Output<String> getIdentifierUri() {
+    public Output<String> identifierUri() {
         return this.identifierUri == null ? Codegen.empty() : this.identifierUri;
     }
 
@@ -38,7 +38,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -60,7 +60,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceUri", required=true)
       private final Output<String> serviceUri;
 
-    public Output<String> getServiceUri() {
+    public Output<String> serviceUri() {
         return this.serviceUri;
     }
 
@@ -71,7 +71,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -82,7 +82,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useAadAuth")
       private final @Nullable Output<Boolean> useAadAuth;
 
-    public Output<Boolean> getUseAadAuth() {
+    public Output<Boolean> useAadAuth() {
         return this.useAadAuth == null ? Codegen.empty() : this.useAadAuth;
     }
 
@@ -93,7 +93,7 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
+    public Output<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 

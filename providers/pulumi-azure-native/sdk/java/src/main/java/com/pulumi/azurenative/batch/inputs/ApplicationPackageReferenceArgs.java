@@ -18,7 +18,7 @@ public final class ApplicationPackageReferenceArgs extends com.pulumi.resources.
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -29,7 +29,7 @@ public final class ApplicationPackageReferenceArgs extends com.pulumi.resources.
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

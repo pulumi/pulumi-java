@@ -27,7 +27,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="microsoftPeeringConfig")
       private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
-    public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
+    public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return this.microsoftPeeringConfig == null ? Optional.empty() : Optional.ofNullable(this.microsoftPeeringConfig);
     }
 
@@ -38,7 +38,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="primaryPeerAddressPrefix")
       private final @Nullable String primaryPeerAddressPrefix;
 
-    public Optional<String> getPrimaryPeerAddressPrefix() {
+    public Optional<String> primaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
 
@@ -49,7 +49,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="routeFilter")
       private final @Nullable SubResourceResponse routeFilter;
 
-    public Optional<SubResourceResponse> getRouteFilter() {
+    public Optional<SubResourceResponse> routeFilter() {
         return this.routeFilter == null ? Optional.empty() : Optional.ofNullable(this.routeFilter);
     }
 
@@ -60,7 +60,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable String secondaryPeerAddressPrefix;
 
-    public Optional<String> getSecondaryPeerAddressPrefix() {
+    public Optional<String> secondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
 
@@ -71,7 +71,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends com.pulu
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

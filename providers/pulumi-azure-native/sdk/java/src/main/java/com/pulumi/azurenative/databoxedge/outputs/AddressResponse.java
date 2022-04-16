@@ -69,49 +69,49 @@ public final class AddressResponse {
      * The address line1.
      * 
     */
-    public Optional<String> getAddressLine1() {
+    public Optional<String> addressLine1() {
         return Optional.ofNullable(this.addressLine1);
     }
     /**
      * The address line2.
      * 
     */
-    public Optional<String> getAddressLine2() {
+    public Optional<String> addressLine2() {
         return Optional.ofNullable(this.addressLine2);
     }
     /**
      * The address line3.
      * 
     */
-    public Optional<String> getAddressLine3() {
+    public Optional<String> addressLine3() {
         return Optional.ofNullable(this.addressLine3);
     }
     /**
      * The city name.
      * 
     */
-    public Optional<String> getCity() {
+    public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
      * The country name.
      * 
     */
-    public String getCountry() {
+    public String country() {
         return this.country;
     }
     /**
      * The postal code.
      * 
     */
-    public Optional<String> getPostalCode() {
+    public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The state name.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

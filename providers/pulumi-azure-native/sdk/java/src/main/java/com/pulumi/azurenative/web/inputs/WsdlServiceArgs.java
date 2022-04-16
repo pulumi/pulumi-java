@@ -27,7 +27,7 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointQualifiedNames")
       private final @Nullable Output<List<String>> endpointQualifiedNames;
 
-    public Output<List<String>> getEndpointQualifiedNames() {
+    public Output<List<String>> endpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? Codegen.empty() : this.endpointQualifiedNames;
     }
 
@@ -38,7 +38,7 @@ public final class WsdlServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="qualifiedName", required=true)
       private final Output<String> qualifiedName;
 
-    public Output<String> getQualifiedName() {
+    public Output<String> qualifiedName() {
         return this.qualifiedName;
     }
 

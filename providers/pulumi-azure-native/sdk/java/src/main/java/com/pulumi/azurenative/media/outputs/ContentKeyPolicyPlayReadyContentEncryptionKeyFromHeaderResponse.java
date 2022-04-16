@@ -26,7 +26,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

@@ -29,7 +29,7 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="globalParameters")
       private final @Nullable Output<Map<String,Object>> globalParameters;
 
-    public Output<Map<String,Object>> getGlobalParameters() {
+    public Output<Map<String,Object>> globalParameters() {
         return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
     }
 
@@ -40,7 +40,7 @@ public final class ExampleRequestArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="inputs")
       private final @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
-    public Output<Map<String,List<List<Object>>>> getInputs() {
+    public Output<Map<String,List<List<Object>>>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 

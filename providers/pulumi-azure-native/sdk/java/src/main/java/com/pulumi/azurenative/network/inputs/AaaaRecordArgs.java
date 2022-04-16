@@ -26,7 +26,7 @@ public final class AaaaRecordArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 

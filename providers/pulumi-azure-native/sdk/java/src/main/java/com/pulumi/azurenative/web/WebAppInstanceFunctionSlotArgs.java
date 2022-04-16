@@ -25,7 +25,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="config")
       private final @Nullable Output<Object> config;
 
-    public Output<Object> getConfig() {
+    public Output<Object> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -36,7 +36,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="configHref")
       private final @Nullable Output<String> configHref;
 
-    public Output<String> getConfigHref() {
+    public Output<String> configHref() {
         return this.configHref == null ? Codegen.empty() : this.configHref;
     }
 
@@ -47,7 +47,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
 
-    public Output<Map<String,String>> getFiles() {
+    public Output<Map<String,String>> files() {
         return this.files == null ? Codegen.empty() : this.files;
     }
 
@@ -58,7 +58,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="functionAppId")
       private final @Nullable Output<String> functionAppId;
 
-    public Output<String> getFunctionAppId() {
+    public Output<String> functionAppId() {
         return this.functionAppId == null ? Codegen.empty() : this.functionAppId;
     }
 
@@ -69,7 +69,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
@@ -80,7 +80,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="href")
       private final @Nullable Output<String> href;
 
-    public Output<String> getHref() {
+    public Output<String> href() {
         return this.href == null ? Codegen.empty() : this.href;
     }
 
@@ -91,7 +91,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="invokeUrlTemplate")
       private final @Nullable Output<String> invokeUrlTemplate;
 
-    public Output<String> getInvokeUrlTemplate() {
+    public Output<String> invokeUrlTemplate() {
         return this.invokeUrlTemplate == null ? Codegen.empty() : this.invokeUrlTemplate;
     }
 
@@ -102,7 +102,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
 
-    public Output<Boolean> getIsDisabled() {
+    public Output<Boolean> isDisabled() {
         return this.isDisabled == null ? Codegen.empty() : this.isDisabled;
     }
 
@@ -113,7 +113,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -124,7 +124,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
+    public Output<String> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -135,7 +135,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -146,7 +146,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -157,7 +157,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="scriptHref")
       private final @Nullable Output<String> scriptHref;
 
-    public Output<String> getScriptHref() {
+    public Output<String> scriptHref() {
         return this.scriptHref == null ? Codegen.empty() : this.scriptHref;
     }
 
@@ -168,7 +168,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="scriptRootPathHref")
       private final @Nullable Output<String> scriptRootPathHref;
 
-    public Output<String> getScriptRootPathHref() {
+    public Output<String> scriptRootPathHref() {
         return this.scriptRootPathHref == null ? Codegen.empty() : this.scriptRootPathHref;
     }
 
@@ -179,7 +179,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="secretsFileHref")
       private final @Nullable Output<String> secretsFileHref;
 
-    public Output<String> getSecretsFileHref() {
+    public Output<String> secretsFileHref() {
         return this.secretsFileHref == null ? Codegen.empty() : this.secretsFileHref;
     }
 
@@ -190,7 +190,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -201,7 +201,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="testData")
       private final @Nullable Output<String> testData;
 
-    public Output<String> getTestData() {
+    public Output<String> testData() {
         return this.testData == null ? Codegen.empty() : this.testData;
     }
 
@@ -212,7 +212,7 @@ public final class WebAppInstanceFunctionSlotArgs extends com.pulumi.resources.R
     @Import(name="testDataHref")
       private final @Nullable Output<String> testDataHref;
 
-    public Output<String> getTestDataHref() {
+    public Output<String> testDataHref() {
         return this.testDataHref == null ? Codegen.empty() : this.testDataHref;
     }
 

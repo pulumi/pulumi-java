@@ -25,7 +25,7 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
     @Import(name="endDate")
       private final @Nullable String endDate;
 
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
     }
 
@@ -36,7 +36,7 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
     @Import(name="startDate")
       private final @Nullable String startDate;
 
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
     }
 
@@ -47,7 +47,7 @@ public final class SaasPropertiesResponseTerm extends com.pulumi.resources.Invok
     @Import(name="termUnit")
       private final @Nullable String termUnit;
 
-    public Optional<String> getTermUnit() {
+    public Optional<String> termUnit() {
         return this.termUnit == null ? Optional.empty() : Optional.ofNullable(this.termUnit);
     }
 

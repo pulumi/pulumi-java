@@ -25,7 +25,7 @@ public final class ManagerIntrinsicSettingsArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<ManagerType> type;
 
-    public Output<ManagerType> getType() {
+    public Output<ManagerType> type() {
         return this.type;
     }
 

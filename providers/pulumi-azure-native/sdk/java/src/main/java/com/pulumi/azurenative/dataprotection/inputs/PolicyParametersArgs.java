@@ -27,7 +27,7 @@ public final class PolicyParametersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataStoreParametersList")
       private final @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
-    public Output<List<AzureOperationalStoreParametersArgs>> getDataStoreParametersList() {
+    public Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList() {
         return this.dataStoreParametersList == null ? Codegen.empty() : this.dataStoreParametersList;
     }
 

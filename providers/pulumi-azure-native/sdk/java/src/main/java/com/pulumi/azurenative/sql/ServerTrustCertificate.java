@@ -42,7 +42,7 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
      * @return The certificate name
      * 
      */
-    public Output<String> getCertificateName() {
+    public Output<String> certificateName() {
         return this.certificateName;
     }
     /**
@@ -56,7 +56,7 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
      * @return The certificate public blob
      * 
      */
-    public Output</* @Nullable */ String> getPublicBlob() {
+    public Output</* @Nullable */ String> publicBlob() {
         return this.publicBlob;
     }
     /**
@@ -84,7 +84,7 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
      * @return The certificate thumbprint
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -98,7 +98,7 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

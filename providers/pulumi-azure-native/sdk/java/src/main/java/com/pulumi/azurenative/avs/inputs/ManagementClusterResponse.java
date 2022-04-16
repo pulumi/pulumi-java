@@ -25,7 +25,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterId", required=true)
       private final Integer clusterId;
 
-    public Integer getClusterId() {
+    public Integer clusterId() {
         return this.clusterId;
     }
 
@@ -36,7 +36,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterSize", required=true)
       private final Integer clusterSize;
 
-    public Integer getClusterSize() {
+    public Integer clusterSize() {
         return this.clusterSize;
     }
 
@@ -47,7 +47,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="hosts", required=true)
       private final List<String> hosts;
 
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
 
@@ -58,7 +58,7 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

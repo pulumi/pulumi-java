@@ -42,14 +42,14 @@ public final class ScriptSecureStringExecutionParameterResponse {
      * The parameter name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A secure value for the passed parameter, not to be stored in logs
      * 
     */
-    public Optional<String> getSecureValue() {
+    public Optional<String> secureValue() {
         return Optional.ofNullable(this.secureValue);
     }
     /**
@@ -57,7 +57,7 @@ public final class ScriptSecureStringExecutionParameterResponse {
      * Expected value is 'SecureValue'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

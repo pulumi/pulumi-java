@@ -26,7 +26,7 @@ public final class WorkspaceCappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dailyQuotaGb")
       private final @Nullable Output<Double> dailyQuotaGb;
 
-    public Output<Double> getDailyQuotaGb() {
+    public Output<Double> dailyQuotaGb() {
         return this.dailyQuotaGb == null ? Codegen.empty() : this.dailyQuotaGb;
     }
 

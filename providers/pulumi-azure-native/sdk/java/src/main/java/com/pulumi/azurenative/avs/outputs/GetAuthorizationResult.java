@@ -60,42 +60,42 @@ public final class GetAuthorizationResult {
      * The ID of the ExpressRoute Circuit Authorization
      * 
     */
-    public String getExpressRouteAuthorizationId() {
+    public String expressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
      * The key of the ExpressRoute Circuit Authorization
      * 
     */
-    public String getExpressRouteAuthorizationKey() {
+    public String expressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -48,28 +48,28 @@ public final class ConnectionProfileResponse {
      * The enabled access level for Client Access over RDP.
      * 
     */
-    public Optional<String> getClientRdpAccess() {
+    public Optional<String> clientRdpAccess() {
         return Optional.ofNullable(this.clientRdpAccess);
     }
     /**
      * The enabled access level for Client Access over SSH.
      * 
     */
-    public Optional<String> getClientSshAccess() {
+    public Optional<String> clientSshAccess() {
         return Optional.ofNullable(this.clientSshAccess);
     }
     /**
      * The enabled access level for Web Access over RDP.
      * 
     */
-    public Optional<String> getWebRdpAccess() {
+    public Optional<String> webRdpAccess() {
         return Optional.ofNullable(this.webRdpAccess);
     }
     /**
      * The enabled access level for Web Access over SSH.
      * 
     */
-    public Optional<String> getWebSshAccess() {
+    public Optional<String> webSshAccess() {
         return Optional.ofNullable(this.webSshAccess);
     }
 

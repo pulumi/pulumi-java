@@ -26,7 +26,7 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="bucketName", required=true)
       private final Output<Object> bucketName;
 
-    public Output<Object> getBucketName() {
+    public Output<Object> bucketName() {
         return this.bucketName;
     }
 
@@ -37,7 +37,7 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="s3LinkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getS3LinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> s3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }
 

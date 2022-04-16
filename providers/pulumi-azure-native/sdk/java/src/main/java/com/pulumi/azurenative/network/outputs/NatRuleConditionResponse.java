@@ -78,35 +78,35 @@ public final class NatRuleConditionResponse {
      * Description of the rule condition.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
     */
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination ports.
      * 
     */
-    public List<String> getDestinationPorts() {
+    public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Array of FirewallPolicyRuleConditionNetworkProtocols.
      * 
     */
-    public List<String> getIpProtocols() {
+    public List<String> ipProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
     /**
      * Name of the rule condition.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -114,21 +114,21 @@ public final class NatRuleConditionResponse {
      * Expected value is 'NatRuleCondition'.
      * 
     */
-    public String getRuleConditionType() {
+    public String ruleConditionType() {
         return this.ruleConditionType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
     */
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
     */
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 

@@ -47,28 +47,28 @@ public final class GetAliasResult {
      * Fully qualified ID for the alias resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Alias ID.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Put Alias response properties.
      * 
     */
-    public PutAliasResponsePropertiesResponse getProperties() {
+    public PutAliasResponsePropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource type, Microsoft.Subscription/aliases.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

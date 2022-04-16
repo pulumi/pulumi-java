@@ -27,7 +27,7 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="deploymentSettings")
       private final @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
 
-    public Output<DeploymentSettingsArgs> getDeploymentSettings() {
+    public Output<DeploymentSettingsArgs> deploymentSettings() {
         return this.deploymentSettings == null ? Codegen.empty() : this.deploymentSettings;
     }
 
@@ -38,7 +38,7 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
     @Import(name="source")
       private final @Nullable Output<UserSourceInfoArgs> source;
 
-    public Output<UserSourceInfoArgs> getSource() {
+    public Output<UserSourceInfoArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

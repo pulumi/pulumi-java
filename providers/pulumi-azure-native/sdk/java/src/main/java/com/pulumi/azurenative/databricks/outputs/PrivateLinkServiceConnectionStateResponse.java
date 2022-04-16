@@ -41,21 +41,21 @@ public final class PrivateLinkServiceConnectionStateResponse {
      * Actions required for a private endpoint connection
      * 
     */
-    public Optional<String> getActionRequired() {
+    public Optional<String> actionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
     /**
      * The description for the current state of a private endpoint connection
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The status of a private endpoint connection
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

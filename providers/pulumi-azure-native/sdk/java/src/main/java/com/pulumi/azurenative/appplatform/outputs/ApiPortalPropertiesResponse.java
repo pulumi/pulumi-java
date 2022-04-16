@@ -88,63 +88,63 @@ public final class ApiPortalPropertiesResponse {
      * The array of resource Ids of gateway to integrate with API portal.
      * 
     */
-    public List<String> getGatewayIds() {
+    public List<String> gatewayIds() {
         return this.gatewayIds == null ? List.of() : this.gatewayIds;
     }
     /**
      * Indicate if only https is allowed.
      * 
     */
-    public Optional<Boolean> getHttpsOnly() {
+    public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Collection of instances belong to API portal.
      * 
     */
-    public List<ApiPortalInstanceResponse> getInstances() {
+    public List<ApiPortalInstanceResponse> instances() {
         return this.instances;
     }
     /**
      * State of the API portal.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether the API portal exposes endpoint.
      * 
     */
-    public Optional<Boolean> getPublic_() {
+    public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
     */
-    public ApiPortalResourceRequestsResponse getResourceRequests() {
+    public ApiPortalResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
     /**
      * Collection of OpenAPI source URL locations.
      * 
     */
-    public List<String> getSourceUrls() {
+    public List<String> sourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
     }
     /**
      * Single sign-on related configuration
      * 
     */
-    public Optional<SsoPropertiesResponse> getSsoProperties() {
+    public Optional<SsoPropertiesResponse> ssoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
      * URL of the API portal, exposed when 'public' is true.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

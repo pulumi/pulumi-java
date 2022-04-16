@@ -41,21 +41,21 @@ public final class CustomImagePropertiesFromPlanResponse {
      * The id of the plan, equivalent to name of the plan
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The offer for the plan from the marketplace image the custom image is derived from
      * 
     */
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The publisher for the plan from the marketplace image the custom image is derived from
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
 

@@ -25,7 +25,7 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="credentials")
       private final @Nullable String credentials;
 
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -36,7 +36,7 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

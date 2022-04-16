@@ -25,7 +25,7 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="duration")
       private final @Nullable String duration;
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 
@@ -37,7 +37,7 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="objectType", required=true)
       private final String objectType;
 
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

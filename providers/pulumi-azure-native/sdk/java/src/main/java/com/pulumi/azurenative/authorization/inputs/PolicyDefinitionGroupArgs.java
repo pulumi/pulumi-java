@@ -26,7 +26,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="additionalMetadataId")
       private final @Nullable Output<String> additionalMetadataId;
 
-    public Output<String> getAdditionalMetadataId() {
+    public Output<String> additionalMetadataId() {
         return this.additionalMetadataId == null ? Codegen.empty() : this.additionalMetadataId;
     }
 
@@ -37,7 +37,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -48,7 +48,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -70,7 +70,7 @@ public final class PolicyDefinitionGroupArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -26,7 +26,7 @@ public final class DockerImagePlatformResponse {
      * The OS type the Environment.
      * 
     */
-    public Optional<String> getOperatingSystemType() {
+    public Optional<String> operatingSystemType() {
         return Optional.ofNullable(this.operatingSystemType);
     }
 

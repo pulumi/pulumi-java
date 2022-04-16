@@ -44,7 +44,7 @@ public class RegistrationDefinition extends com.pulumi.resources.CustomResource 
      * @return Name of the registration definition.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class RegistrationDefinition extends com.pulumi.resources.CustomResource 
      * @return Plan details for the managed services.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> getPlan() {
+    public Output</* @Nullable */ PlanResponse> plan() {
         return this.plan;
     }
     /**
@@ -72,7 +72,7 @@ public class RegistrationDefinition extends com.pulumi.resources.CustomResource 
      * @return Properties of a registration definition.
      * 
      */
-    public Output<RegistrationDefinitionPropertiesResponse> getProperties() {
+    public Output<RegistrationDefinitionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class RegistrationDefinition extends com.pulumi.resources.CustomResource 
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

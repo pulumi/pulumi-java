@@ -106,84 +106,84 @@ public final class GetPoolResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * UUID v4 used to identify the Pool
      * 
     */
-    public String getPoolId() {
+    public String poolId() {
         return this.poolId;
     }
     /**
      * Azure lifecycle management
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The qos type of the pool
      * 
     */
-    public Optional<String> getQosType() {
+    public Optional<String> qosType() {
         return Optional.ofNullable(this.qosType);
     }
     /**
      * The service level of the file system
      * 
     */
-    public String getServiceLevel() {
+    public String serviceLevel() {
         return this.serviceLevel;
     }
     /**
      * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
      * 
     */
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Total throughput of pool in Mibps
      * 
     */
-    public Double getTotalThroughputMibps() {
+    public Double totalThroughputMibps() {
         return this.totalThroughputMibps;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Utilized throughput of pool in Mibps
      * 
     */
-    public Double getUtilizedThroughputMibps() {
+    public Double utilizedThroughputMibps() {
         return this.utilizedThroughputMibps;
     }
 

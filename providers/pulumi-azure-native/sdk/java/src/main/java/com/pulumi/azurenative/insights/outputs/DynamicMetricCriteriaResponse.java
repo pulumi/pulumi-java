@@ -102,7 +102,7 @@ public final class DynamicMetricCriteriaResponse {
      * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
      * 
     */
-    public String getAlertSensitivity() {
+    public String alertSensitivity() {
         return this.alertSensitivity;
     }
     /**
@@ -110,70 +110,70 @@ public final class DynamicMetricCriteriaResponse {
      * Expected value is 'DynamicThresholdCriterion'.
      * 
     */
-    public String getCriterionType() {
+    public String criterionType() {
         return this.criterionType;
     }
     /**
      * List of dimension conditions.
      * 
     */
-    public List<MetricDimensionResponse> getDimensions() {
+    public List<MetricDimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
      * The minimum number of violations required within the selected lookback time window required to raise an alert.
      * 
     */
-    public DynamicThresholdFailingPeriodsResponse getFailingPeriods() {
+    public DynamicThresholdFailingPeriodsResponse failingPeriods() {
         return this.failingPeriods;
     }
     /**
      * Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)
      * 
     */
-    public Optional<String> getIgnoreDataBefore() {
+    public Optional<String> ignoreDataBefore() {
         return Optional.ofNullable(this.ignoreDataBefore);
     }
     /**
      * Name of the metric.
      * 
     */
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
     /**
      * Namespace of the metric.
      * 
     */
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
      * Name of the criteria.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The operator used to compare the metric value against the threshold.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
      * 
     */
-    public Optional<Boolean> getSkipMetricValidation() {
+    public Optional<Boolean> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
     /**
      * the criteria time aggregation types.
      * 
     */
-    public String getTimeAggregation() {
+    public String timeAggregation() {
         return this.timeAggregation;
     }
 

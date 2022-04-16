@@ -42,21 +42,21 @@ public final class OnlineRequestSettingsResponse {
      * The number of requests allowed to queue at once for this deployment.
      * 
     */
-    public Optional<Integer> getMaxConcurrentRequestsPerInstance() {
+    public Optional<Integer> maxConcurrentRequestsPerInstance() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
     }
     /**
      * The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
      * 
     */
-    public Optional<String> getMaxQueueWait() {
+    public Optional<String> maxQueueWait() {
         return Optional.ofNullable(this.maxQueueWait);
     }
     /**
      * The request timeout in ISO 8601 format. Supports millisecond precision.
      * 
     */
-    public Optional<String> getRequestTimeout() {
+    public Optional<String> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
 

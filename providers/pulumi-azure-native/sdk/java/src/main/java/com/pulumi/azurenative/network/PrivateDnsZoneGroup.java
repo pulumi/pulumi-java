@@ -43,7 +43,7 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of private dns zone configurations of the private dns zone group.
      * 
      */
-    public Output</* @Nullable */ List<PrivateDnsZoneConfigResponse>> getPrivateDnsZoneConfigs() {
+    public Output</* @Nullable */ List<PrivateDnsZoneConfigResponse>> privateDnsZoneConfigs() {
         return this.privateDnsZoneConfigs;
     }
     /**
@@ -85,7 +85,7 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the private dns zone group resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
 

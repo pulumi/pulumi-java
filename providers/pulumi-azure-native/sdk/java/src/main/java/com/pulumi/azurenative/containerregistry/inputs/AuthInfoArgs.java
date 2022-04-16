@@ -29,7 +29,7 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiresIn")
       private final @Nullable Output<Integer> expiresIn;
 
-    public Output<Integer> getExpiresIn() {
+    public Output<Integer> expiresIn() {
         return this.expiresIn == null ? Codegen.empty() : this.expiresIn;
     }
 
@@ -40,7 +40,7 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
@@ -51,7 +51,7 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -62,7 +62,7 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="token", required=true)
       private final Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token;
     }
 
@@ -73,7 +73,7 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenType", required=true)
       private final Output<Either<String,TokenType>> tokenType;
 
-    public Output<Either<String,TokenType>> getTokenType() {
+    public Output<Either<String,TokenType>> tokenType() {
         return this.tokenType;
     }
 

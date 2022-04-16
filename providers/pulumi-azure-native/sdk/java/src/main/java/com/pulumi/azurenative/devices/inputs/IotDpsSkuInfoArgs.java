@@ -29,7 +29,7 @@ public final class IotDpsSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
-    public Output<Double> getCapacity() {
+    public Output<Double> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class IotDpsSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,IotDpsSku>> name;
 
-    public Output<Either<String,IotDpsSku>> getName() {
+    public Output<Either<String,IotDpsSku>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

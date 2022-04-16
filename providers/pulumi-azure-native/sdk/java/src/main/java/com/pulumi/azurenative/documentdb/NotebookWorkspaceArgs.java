@@ -22,7 +22,7 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="notebookWorkspaceName")
       private final @Nullable Output<String> notebookWorkspaceName;
 
-    public Output<String> getNotebookWorkspaceName() {
+    public Output<String> notebookWorkspaceName() {
         return this.notebookWorkspaceName == null ? Codegen.empty() : this.notebookWorkspaceName;
     }
 
@@ -44,7 +44,7 @@ public final class NotebookWorkspaceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

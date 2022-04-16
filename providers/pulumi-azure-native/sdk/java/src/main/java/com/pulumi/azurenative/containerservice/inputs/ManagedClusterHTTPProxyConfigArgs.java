@@ -27,7 +27,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="httpProxy")
       private final @Nullable Output<String> httpProxy;
 
-    public Output<String> getHttpProxy() {
+    public Output<String> httpProxy() {
         return this.httpProxy == null ? Codegen.empty() : this.httpProxy;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
-    public Output<String> getHttpsProxy() {
+    public Output<String> httpsProxy() {
         return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="noProxy")
       private final @Nullable Output<List<String>> noProxy;
 
-    public Output<List<String>> getNoProxy() {
+    public Output<List<String>> noProxy() {
         return this.noProxy == null ? Codegen.empty() : this.noProxy;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="trustedCa")
       private final @Nullable Output<String> trustedCa;
 
-    public Output<String> getTrustedCa() {
+    public Output<String> trustedCa() {
         return this.trustedCa == null ? Codegen.empty() : this.trustedCa;
     }
 

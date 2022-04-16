@@ -23,7 +23,7 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
     @Import(name="primaryKey", required=true)
       private final String primaryKey;
 
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
 
@@ -34,7 +34,7 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -45,7 +45,7 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
     @Import(name="secondaryKey", required=true)
       private final String secondaryKey;
 
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

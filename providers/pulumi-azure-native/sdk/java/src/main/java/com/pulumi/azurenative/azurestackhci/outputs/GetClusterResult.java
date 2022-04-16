@@ -177,154 +177,154 @@ public final class GetClusterResult {
      * App id of cluster AAD identity.
      * 
     */
-    public String getAadClientId() {
+    public String aadClientId() {
         return this.aadClientId;
     }
     /**
      * Tenant id of cluster AAD identity.
      * 
     */
-    public String getAadTenantId() {
+    public String aadTenantId() {
         return this.aadTenantId;
     }
     /**
      * Type of billing applied to the resource.
      * 
     */
-    public String getBillingModel() {
+    public String billingModel() {
         return this.billingModel;
     }
     /**
      * Unique, immutable resource id.
      * 
     */
-    public String getCloudId() {
+    public String cloudId() {
         return this.cloudId;
     }
     /**
      * The timestamp of resource creation (UTC).
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The identity that created the resource.
      * 
     */
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
      * 
     */
-    public Optional<String> getCreatedByType() {
+    public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Most recent billing meter timestamp.
      * 
     */
-    public String getLastBillingTimestamp() {
+    public String lastBillingTimestamp() {
         return this.lastBillingTimestamp;
     }
     /**
      * The timestamp of resource last modification (UTC)
      * 
     */
-    public Optional<String> getLastModifiedAt() {
+    public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
      * 
     */
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
      * 
     */
-    public Optional<String> getLastModifiedByType() {
+    public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
      * Most recent cluster sync timestamp.
      * 
     */
-    public String getLastSyncTimestamp() {
+    public String lastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * First cluster sync timestamp.
      * 
     */
-    public String getRegistrationTimestamp() {
+    public String registrationTimestamp() {
         return this.registrationTimestamp;
     }
     /**
      * Properties reported by cluster agent.
      * 
     */
-    public Optional<ClusterReportedPropertiesResponse> getReportedProperties() {
+    public Optional<ClusterReportedPropertiesResponse> reportedProperties() {
         return Optional.ofNullable(this.reportedProperties);
     }
     /**
      * Status of the cluster agent.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Number of days remaining in the trial period.
      * 
     */
-    public Double getTrialDaysRemaining() {
+    public Double trialDaysRemaining() {
         return this.trialDaysRemaining;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

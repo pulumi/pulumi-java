@@ -36,7 +36,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="accessKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
@@ -47,7 +47,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="accountName", required=true)
       private final Output<Object> accountName;
 
-    public Output<Object> getAccountName() {
+    public Output<Object> accountName() {
         return this.accountName;
     }
 
@@ -58,7 +58,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -69,7 +69,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="batchUri", required=true)
       private final Output<Object> batchUri;
 
-    public Output<Object> getBatchUri() {
+    public Output<Object> batchUri() {
         return this.batchUri;
     }
 
@@ -80,7 +80,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -91,7 +91,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -102,7 +102,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -113,7 +113,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -124,7 +124,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -135,7 +135,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -146,7 +146,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="poolName", required=true)
       private final Output<Object> poolName;
 
-    public Output<Object> getPoolName() {
+    public Output<Object> poolName() {
         return this.poolName;
     }
 
@@ -158,7 +158,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

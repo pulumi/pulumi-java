@@ -26,7 +26,7 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFlowName")
       private final @Nullable Output<String> dataFlowName;
 
-    public Output<String> getDataFlowName() {
+    public Output<String> dataFlowName() {
         return this.dataFlowName == null ? Codegen.empty() : this.dataFlowName;
     }
 
@@ -37,7 +37,7 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -48,7 +48,7 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -59,7 +59,7 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

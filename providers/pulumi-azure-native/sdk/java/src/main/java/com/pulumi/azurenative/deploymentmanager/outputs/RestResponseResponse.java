@@ -36,14 +36,14 @@ public final class RestResponseResponse {
      * The regular expressions to match the response content with.
      * 
     */
-    public Optional<RestResponseResponseRegex> getRegex() {
+    public Optional<RestResponseResponseRegex> regex() {
         return Optional.ofNullable(this.regex);
     }
     /**
      * The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
      * 
     */
-    public List<String> getSuccessStatusCodes() {
+    public List<String> successStatusCodes() {
         return this.successStatusCodes == null ? List.of() : this.successStatusCodes;
     }
 

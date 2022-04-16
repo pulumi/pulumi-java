@@ -23,7 +23,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
+    public Output<String> deploymentName() {
         return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
@@ -45,7 +45,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<DeploymentPropertiesArgs> properties;
 
-    public Output<DeploymentPropertiesArgs> getProperties() {
+    public Output<DeploymentPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

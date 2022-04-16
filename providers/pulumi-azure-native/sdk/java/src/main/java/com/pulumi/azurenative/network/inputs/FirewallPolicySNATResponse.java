@@ -26,7 +26,7 @@ public final class FirewallPolicySNATResponse extends com.pulumi.resources.Invok
     @Import(name="privateRanges")
       private final @Nullable List<String> privateRanges;
 
-    public List<String> getPrivateRanges() {
+    public List<String> privateRanges() {
         return this.privateRanges == null ? List.of() : this.privateRanges;
     }
 

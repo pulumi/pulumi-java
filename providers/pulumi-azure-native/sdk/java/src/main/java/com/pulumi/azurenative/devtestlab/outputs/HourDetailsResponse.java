@@ -26,7 +26,7 @@ public final class HourDetailsResponse {
      * Minutes of the hour the schedule will run.
      * 
     */
-    public Optional<Integer> getMinute() {
+    public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }
 

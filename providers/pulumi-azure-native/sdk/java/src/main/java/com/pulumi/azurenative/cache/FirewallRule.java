@@ -42,7 +42,7 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return highest IP address included in the range
      * 
      */
-    public Output<String> getEndIP() {
+    public Output<String> endIP() {
         return this.endIP;
     }
     /**
@@ -56,7 +56,7 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return lowest IP address included in the range
      * 
      */
-    public Output<String> getStartIP() {
+    public Output<String> startIP() {
         return this.startIP;
     }
     /**
@@ -84,7 +84,7 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

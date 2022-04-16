@@ -29,7 +29,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="maxPrice", required=true)
       private final Double maxPrice;
 
-    public Double getMaxPrice() {
+    public Double maxPrice() {
         return this.maxPrice;
     }
 
@@ -40,7 +40,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="minMemory", required=true)
       private final Double minMemory;
 
-    public Double getMinMemory() {
+    public Double minMemory() {
         return this.minMemory;
     }
 
@@ -51,7 +51,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="minNumberOfCores", required=true)
       private final Integer minNumberOfCores;
 
-    public Integer getMinNumberOfCores() {
+    public Integer minNumberOfCores() {
         return this.minNumberOfCores;
     }
 
@@ -62,7 +62,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -73,7 +73,7 @@ public final class EnvironmentSizeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="vmSizes")
       private final @Nullable List<SizeInfoResponse> vmSizes;
 
-    public List<SizeInfoResponse> getVmSizes() {
+    public List<SizeInfoResponse> vmSizes() {
         return this.vmSizes == null ? List.of() : this.vmSizes;
     }
 

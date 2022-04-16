@@ -25,7 +25,7 @@ public final class SelectVideoTrackByIdResponse extends com.pulumi.resources.Inv
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -36,7 +36,7 @@ public final class SelectVideoTrackByIdResponse extends com.pulumi.resources.Inv
     @Import(name="trackId", required=true)
       private final Double trackId;
 
-    public Double getTrackId() {
+    public Double trackId() {
         return this.trackId;
     }
 

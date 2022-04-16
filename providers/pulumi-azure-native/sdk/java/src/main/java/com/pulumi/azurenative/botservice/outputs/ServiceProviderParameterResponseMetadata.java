@@ -26,7 +26,7 @@ public final class ServiceProviderParameterResponseMetadata {
      * the constraints of the bot meta data.
      * 
     */
-    public Optional<ServiceProviderParameterResponseConstraints> getConstraints() {
+    public Optional<ServiceProviderParameterResponseConstraints> constraints() {
         return Optional.ofNullable(this.constraints);
     }
 

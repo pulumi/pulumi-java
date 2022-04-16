@@ -31,7 +31,7 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
-    public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
+    public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
     }
 
@@ -42,7 +42,7 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
 
-    public Optional<Object> getK8sRaw() {
+    public Optional<Object> k8sRaw() {
         return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
     }
 
@@ -53,7 +53,7 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;
 
-    public Optional<String> getLastUploadedDate() {
+    public Optional<String> lastUploadedDate() {
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
     }
 
@@ -64,7 +64,7 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="logAnalyticsWorkspaceConfig")
       private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
 
-    public Optional<LogAnalyticsWorkspaceConfigResponse> getLogAnalyticsWorkspaceConfig() {
+    public Optional<LogAnalyticsWorkspaceConfigResponse> logAnalyticsWorkspaceConfig() {
         return this.logAnalyticsWorkspaceConfig == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
 
@@ -75,14 +75,14 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="onPremiseProperty")
       private final @Nullable OnPremisePropertyResponse onPremiseProperty;
 
-    public Optional<OnPremisePropertyResponse> getOnPremiseProperty() {
+    public Optional<OnPremisePropertyResponse> onPremiseProperty() {
         return this.onPremiseProperty == null ? Optional.empty() : Optional.ofNullable(this.onPremiseProperty);
     }
 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -93,7 +93,7 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="uploadServicePrincipal")
       private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
 
-    public Optional<UploadServicePrincipalResponse> getUploadServicePrincipal() {
+    public Optional<UploadServicePrincipalResponse> uploadServicePrincipal() {
         return this.uploadServicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.uploadServicePrincipal);
     }
 
@@ -104,7 +104,7 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="uploadWatermark")
       private final @Nullable UploadWatermarkResponse uploadWatermark;
 
-    public Optional<UploadWatermarkResponse> getUploadWatermark() {
+    public Optional<UploadWatermarkResponse> uploadWatermark() {
         return this.uploadWatermark == null ? Optional.empty() : Optional.ofNullable(this.uploadWatermark);
     }
 

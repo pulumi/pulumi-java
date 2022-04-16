@@ -25,7 +25,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -40,7 +40,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -51,7 +51,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -62,7 +62,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
@@ -73,7 +73,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 
@@ -84,7 +84,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
@@ -95,7 +95,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="virtualMachineId")
       private final @Nullable String virtualMachineId;
 
-    public Optional<String> getVirtualMachineId() {
+    public Optional<String> virtualMachineId() {
         return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
     }
 
@@ -106,7 +106,7 @@ public final class AzureIaaSComputeVMContainerResponse extends com.pulumi.resour
     @Import(name="virtualMachineVersion")
       private final @Nullable String virtualMachineVersion;
 
-    public Optional<String> getVirtualMachineVersion() {
+    public Optional<String> virtualMachineVersion() {
         return this.virtualMachineVersion == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineVersion);
     }
 

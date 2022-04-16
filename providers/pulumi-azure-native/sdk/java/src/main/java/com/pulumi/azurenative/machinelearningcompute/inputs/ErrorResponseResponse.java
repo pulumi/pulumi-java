@@ -27,7 +27,7 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -38,7 +38,7 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="details")
       private final @Nullable List<ErrorDetailResponse> details;
 
-    public List<ErrorDetailResponse> getDetails() {
+    public List<ErrorDetailResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
 
@@ -49,7 +49,7 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

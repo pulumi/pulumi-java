@@ -25,7 +25,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputName")
       private final @Nullable Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName == null ? Codegen.empty() : this.inputName;
     }
 
@@ -36,7 +36,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -47,7 +47,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
-    public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {
+    public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -69,7 +69,7 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -98,77 +98,77 @@ public final class GetPartnerResult {
      * This is the DateTime when the partner was created.
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Type of the partner
      * 
     */
-    public Optional<Integer> getEtag() {
+    public Optional<Integer> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Identifier of the partner
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the partner
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * This is the object id.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * This is the partner id
      * 
     */
-    public Optional<String> getPartnerId() {
+    public Optional<String> partnerId() {
         return Optional.ofNullable(this.partnerId);
     }
     /**
      * This is the partner name
      * 
     */
-    public Optional<String> getPartnerName() {
+    public Optional<String> partnerName() {
         return Optional.ofNullable(this.partnerName);
     }
     /**
      * This is the tenant id.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of resource. "Microsoft.ManagementPartner/partners"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * This is the DateTime when the partner was updated.
      * 
     */
-    public Optional<String> getUpdatedTime() {
+    public Optional<String> updatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
     /**
      * This is the version.
      * 
     */
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -27,7 +27,7 @@ public final class ComputeBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="computeId")
       private final @Nullable Output<String> computeId;
 
-    public Output<String> getComputeId() {
+    public Output<String> computeId() {
         return this.computeId == null ? Codegen.empty() : this.computeId;
     }
 
@@ -38,7 +38,7 @@ public final class ComputeBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 

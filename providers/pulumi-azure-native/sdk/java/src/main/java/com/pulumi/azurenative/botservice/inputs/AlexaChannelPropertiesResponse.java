@@ -24,7 +24,7 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="alexaSkillId", required=true)
       private final String alexaSkillId;
 
-    public String getAlexaSkillId() {
+    public String alexaSkillId() {
         return this.alexaSkillId;
     }
 
@@ -35,7 +35,7 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -46,7 +46,7 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="serviceEndpointUri", required=true)
       private final String serviceEndpointUri;
 
-    public String getServiceEndpointUri() {
+    public String serviceEndpointUri() {
         return this.serviceEndpointUri;
     }
 
@@ -57,7 +57,7 @@ public final class AlexaChannelPropertiesResponse extends com.pulumi.resources.I
     @Import(name="urlFragment", required=true)
       private final String urlFragment;
 
-    public String getUrlFragment() {
+    public String urlFragment() {
         return this.urlFragment;
     }
 

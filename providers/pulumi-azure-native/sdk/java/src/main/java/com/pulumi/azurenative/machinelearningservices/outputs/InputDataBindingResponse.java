@@ -41,21 +41,21 @@ public final class InputDataBindingResponse {
      * ARM resource ID of the registered dataVersion.
      * 
     */
-    public Optional<String> getDataId() {
+    public Optional<String> dataId() {
         return Optional.ofNullable(this.dataId);
     }
     /**
      * Mechanism for accessing the data artifact.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Location of data inside the container process.
      * 
     */
-    public Optional<String> getPathOnCompute() {
+    public Optional<String> pathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
 

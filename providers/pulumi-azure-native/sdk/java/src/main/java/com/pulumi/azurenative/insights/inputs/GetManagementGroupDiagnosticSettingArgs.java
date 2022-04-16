@@ -19,7 +19,7 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
     @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
 
-    public String getManagementGroupId() {
+    public String managementGroupId() {
         return this.managementGroupId;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

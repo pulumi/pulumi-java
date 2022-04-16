@@ -29,7 +29,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="allowProtectedAppendWrites")
       private final @Nullable Boolean allowProtectedAppendWrites;
 
-    public Optional<Boolean> getAllowProtectedAppendWrites() {
+    public Optional<Boolean> allowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites == null ? Optional.empty() : Optional.ofNullable(this.allowProtectedAppendWrites);
     }
 
@@ -40,7 +40,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -51,7 +51,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="immutabilityPeriodSinceCreationInDays")
       private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
 
-    public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
+    public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays == null ? Optional.empty() : Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
 
@@ -62,7 +62,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -73,7 +73,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends com.pulumi.resou
     @Import(name="updateHistory", required=true)
       private final List<UpdateHistoryPropertyResponse> updateHistory;
 
-    public List<UpdateHistoryPropertyResponse> getUpdateHistory() {
+    public List<UpdateHistoryPropertyResponse> updateHistory() {
         return this.updateHistory;
     }
 

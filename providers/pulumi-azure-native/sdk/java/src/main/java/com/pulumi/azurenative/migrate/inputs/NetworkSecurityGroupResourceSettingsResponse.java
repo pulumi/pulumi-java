@@ -28,7 +28,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
     @Import(name="securityRules")
       private final @Nullable List<NsgSecurityRuleResponse> securityRules;
 
-    public List<NsgSecurityRuleResponse> getSecurityRules() {
+    public List<NsgSecurityRuleResponse> securityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
     @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 

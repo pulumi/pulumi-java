@@ -23,7 +23,7 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
     @Import(name="catalog", required=true)
       private final String catalog;
 
-    public String getCatalog() {
+    public String catalog() {
         return this.catalog;
     }
 
@@ -34,7 +34,7 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
     @Import(name="guardian", required=true)
       private final String guardian;
 
-    public String getGuardian() {
+    public String guardian() {
         return this.guardian;
     }
 
@@ -45,7 +45,7 @@ public final class AccountPropertiesResponseEndpoints extends com.pulumi.resourc
     @Import(name="scan", required=true)
       private final String scan;
 
-    public String getScan() {
+    public String scan() {
         return this.scan;
     }
 

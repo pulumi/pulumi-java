@@ -43,7 +43,7 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
      * @return Determines whether certificate authority is trusted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsTrusted() {
+    public Output</* @Nullable */ Boolean> isTrusted() {
         return this.isTrusted;
     }
     /**
@@ -57,7 +57,7 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class GatewayCertificateAuthority extends com.pulumi.resources.CustomReso
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

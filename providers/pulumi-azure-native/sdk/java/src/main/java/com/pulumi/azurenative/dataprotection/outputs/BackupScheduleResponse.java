@@ -25,7 +25,7 @@ public final class BackupScheduleResponse {
      * ISO 8601 repeating time interval format
      * 
     */
-    public List<String> getRepeatingTimeIntervals() {
+    public List<String> repeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
 

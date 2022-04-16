@@ -17,7 +17,7 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
     @Import(name="optInHeaders")
       private final @Nullable String optInHeaders;
 
-    public Optional<String> getOptInHeaders() {
+    public Optional<String> optInHeaders() {
         return this.optInHeaders == null ? Optional.empty() : Optional.ofNullable(this.optInHeaders);
     }
 

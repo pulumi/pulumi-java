@@ -26,7 +26,7 @@ public final class WsdlServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointQualifiedNames")
       private final @Nullable List<String> endpointQualifiedNames;
 
-    public List<String> getEndpointQualifiedNames() {
+    public List<String> endpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
     }
 
@@ -37,7 +37,7 @@ public final class WsdlServiceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="qualifiedName")
       private final @Nullable String qualifiedName;
 
-    public Optional<String> getQualifiedName() {
+    public Optional<String> qualifiedName() {
         return this.qualifiedName == null ? Optional.empty() : Optional.ofNullable(this.qualifiedName);
     }
 

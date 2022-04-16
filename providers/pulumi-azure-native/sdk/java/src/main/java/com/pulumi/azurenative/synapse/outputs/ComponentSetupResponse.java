@@ -43,14 +43,14 @@ public final class ComponentSetupResponse {
      * The name of the 3rd party component.
      * 
     */
-    public String getComponentName() {
+    public String componentName() {
         return this.componentName;
     }
     /**
      * The license key to activate the component.
      * 
     */
-    public Optional<SecureStringResponse> getLicenseKey() {
+    public Optional<SecureStringResponse> licenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
     /**
@@ -58,7 +58,7 @@ public final class ComponentSetupResponse {
      * Expected value is 'ComponentSetup'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

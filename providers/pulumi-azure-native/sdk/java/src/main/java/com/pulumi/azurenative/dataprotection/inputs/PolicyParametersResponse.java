@@ -26,7 +26,7 @@ public final class PolicyParametersResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataStoreParametersList")
       private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 
-    public List<AzureOperationalStoreParametersResponse> getDataStoreParametersList() {
+    public List<AzureOperationalStoreParametersResponse> dataStoreParametersList() {
         return this.dataStoreParametersList == null ? List.of() : this.dataStoreParametersList;
     }
 

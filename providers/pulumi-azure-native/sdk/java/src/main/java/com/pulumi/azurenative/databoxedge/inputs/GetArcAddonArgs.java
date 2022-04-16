@@ -19,7 +19,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="addonName", required=true)
       private final String addonName;
 
-    public String getAddonName() {
+    public String addonName() {
         return this.addonName;
     }
 
@@ -30,7 +30,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetArcAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="roleName", required=true)
       private final String roleName;
 
-    public String getRoleName() {
+    public String roleName() {
         return this.roleName;
     }
 

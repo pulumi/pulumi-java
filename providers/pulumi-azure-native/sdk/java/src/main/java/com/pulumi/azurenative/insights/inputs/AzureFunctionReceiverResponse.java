@@ -26,7 +26,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="functionAppResourceId", required=true)
       private final String functionAppResourceId;
 
-    public String getFunctionAppResourceId() {
+    public String functionAppResourceId() {
         return this.functionAppResourceId;
     }
 
@@ -37,7 +37,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="functionName", required=true)
       private final String functionName;
 
-    public String getFunctionName() {
+    public String functionName() {
         return this.functionName;
     }
 
@@ -48,7 +48,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="httpTriggerUrl", required=true)
       private final String httpTriggerUrl;
 
-    public String getHttpTriggerUrl() {
+    public String httpTriggerUrl() {
         return this.httpTriggerUrl;
     }
 
@@ -59,7 +59,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -70,7 +70,7 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
     }
 

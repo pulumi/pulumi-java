@@ -31,7 +31,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentCount")
       private final @Nullable Output<Integer> agentCount;
 
-    public Output<Integer> getAgentCount() {
+    public Output<Integer> agentCount() {
         return this.agentCount == null ? Codegen.empty() : this.agentCount;
     }
 
@@ -42,7 +42,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentVmSize")
       private final @Nullable Output<String> agentVmSize;
 
-    public Output<String> getAgentVmSize() {
+    public Output<String> agentVmSize() {
         return this.agentVmSize == null ? Codegen.empty() : this.agentVmSize;
     }
 
@@ -53,7 +53,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aksNetworkingConfiguration")
       private final @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
-    public Output<AksNetworkingConfigurationArgs> getAksNetworkingConfiguration() {
+    public Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration() {
         return this.aksNetworkingConfiguration == null ? Codegen.empty() : this.aksNetworkingConfiguration;
     }
 
@@ -64,7 +64,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterFqdn")
       private final @Nullable Output<String> clusterFqdn;
 
-    public Output<String> getClusterFqdn() {
+    public Output<String> clusterFqdn() {
         return this.clusterFqdn == null ? Codegen.empty() : this.clusterFqdn;
     }
 
@@ -75,7 +75,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterPurpose")
       private final @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
 
-    public Output<Either<String,ClusterPurpose>> getClusterPurpose() {
+    public Output<Either<String,ClusterPurpose>> clusterPurpose() {
         return this.clusterPurpose == null ? Codegen.empty() : this.clusterPurpose;
     }
 
@@ -86,7 +86,7 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sslConfiguration")
       private final @Nullable Output<SslConfigurationArgs> sslConfiguration;
 
-    public Output<SslConfigurationArgs> getSslConfiguration() {
+    public Output<SslConfigurationArgs> sslConfiguration() {
         return this.sslConfiguration == null ? Codegen.empty() : this.sslConfiguration;
     }
 

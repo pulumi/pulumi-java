@@ -43,21 +43,21 @@ public final class AdvancedScheduleResponse {
      * Days of the month that the job should execute on. Must be between 1 and 31.
      * 
     */
-    public List<Integer> getMonthDays() {
+    public List<Integer> monthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
      * Occurrences of days within a month.
      * 
     */
-    public List<AdvancedScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
+    public List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
      * Days of the week that the job should execute on.
      * 
     */
-    public List<String> getWeekDays() {
+    public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }
 

@@ -25,7 +25,7 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
     @Import(name="role")
       private final @Nullable String role;
 
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 
@@ -36,7 +36,7 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
@@ -47,7 +47,7 @@ public final class SubscriptionReceiverValueResponse extends com.pulumi.resource
     @Import(name="subscriptionName")
       private final @Nullable String subscriptionName;
 
-    public Optional<String> getSubscriptionName() {
+    public Optional<String> subscriptionName() {
         return this.subscriptionName == null ? Optional.empty() : Optional.ofNullable(this.subscriptionName);
     }
 

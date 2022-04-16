@@ -27,7 +27,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="certificateSource", required=true)
       private final String certificateSource;
 
-    public String getCertificateSource() {
+    public String certificateSource() {
         return this.certificateSource;
     }
 
@@ -38,7 +38,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="certificateSourceParameters", required=true)
       private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
 
-    public KeyVaultCertificateSourceParametersResponse getCertificateSourceParameters() {
+    public KeyVaultCertificateSourceParametersResponse certificateSourceParameters() {
         return this.certificateSourceParameters;
     }
 
@@ -49,7 +49,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="minimumTlsVersion")
       private final @Nullable String minimumTlsVersion;
 
-    public Optional<String> getMinimumTlsVersion() {
+    public Optional<String> minimumTlsVersion() {
         return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
     }
 
@@ -60,7 +60,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="protocolType", required=true)
       private final String protocolType;
 
-    public String getProtocolType() {
+    public String protocolType() {
         return this.protocolType;
     }
 

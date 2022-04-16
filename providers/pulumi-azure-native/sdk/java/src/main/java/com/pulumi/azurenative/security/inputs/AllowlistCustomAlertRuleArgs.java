@@ -27,7 +27,7 @@ public final class AllowlistCustomAlertRuleArgs extends com.pulumi.resources.Res
     @Import(name="allowlistValues", required=true)
       private final Output<List<String>> allowlistValues;
 
-    public Output<List<String>> getAllowlistValues() {
+    public Output<List<String>> allowlistValues() {
         return this.allowlistValues;
     }
 
@@ -38,7 +38,7 @@ public final class AllowlistCustomAlertRuleArgs extends com.pulumi.resources.Res
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class AllowlistCustomAlertRuleArgs extends com.pulumi.resources.Res
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 

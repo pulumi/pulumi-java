@@ -31,7 +31,7 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateBytesInKB")
       private final @Nullable Output<Integer> privateBytesInKB;
 
-    public Output<Integer> getPrivateBytesInKB() {
+    public Output<Integer> privateBytesInKB() {
         return this.privateBytesInKB == null ? Codegen.empty() : this.privateBytesInKB;
     }
 
@@ -42,7 +42,7 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requests")
       private final @Nullable Output<RequestsBasedTriggerArgs> requests;
 
-    public Output<RequestsBasedTriggerArgs> getRequests() {
+    public Output<RequestsBasedTriggerArgs> requests() {
         return this.requests == null ? Codegen.empty() : this.requests;
     }
 
@@ -53,7 +53,7 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="slowRequests")
       private final @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
 
-    public Output<SlowRequestsBasedTriggerArgs> getSlowRequests() {
+    public Output<SlowRequestsBasedTriggerArgs> slowRequests() {
         return this.slowRequests == null ? Codegen.empty() : this.slowRequests;
     }
 
@@ -64,7 +64,7 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="slowRequestsWithPath")
       private final @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
-    public Output<List<SlowRequestsBasedTriggerArgs>> getSlowRequestsWithPath() {
+    public Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? Codegen.empty() : this.slowRequestsWithPath;
     }
 
@@ -75,7 +75,7 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="statusCodes")
       private final @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
-    public Output<List<StatusCodesBasedTriggerArgs>> getStatusCodes() {
+    public Output<List<StatusCodesBasedTriggerArgs>> statusCodes() {
         return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
     }
 
@@ -86,7 +86,7 @@ public final class AutoHealTriggersArgs extends com.pulumi.resources.ResourceArg
     @Import(name="statusCodesRange")
       private final @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
-    public Output<List<StatusCodesRangeBasedTriggerArgs>> getStatusCodesRange() {
+    public Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange() {
         return this.statusCodesRange == null ? Codegen.empty() : this.statusCodesRange;
     }
 

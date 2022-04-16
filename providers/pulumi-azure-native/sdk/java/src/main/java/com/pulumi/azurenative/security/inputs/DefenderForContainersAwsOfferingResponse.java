@@ -29,7 +29,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="cloudWatchToKinesis")
       private final @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
 
-    public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> getCloudWatchToKinesis() {
+    public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> cloudWatchToKinesis() {
         return this.cloudWatchToKinesis == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchToKinesis);
     }
 
@@ -40,7 +40,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -51,7 +51,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="kinesisToS3")
       private final @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
 
-    public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> getKinesisToS3() {
+    public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> kinesisToS3() {
         return this.kinesisToS3 == null ? Optional.empty() : Optional.ofNullable(this.kinesisToS3);
     }
 
@@ -62,7 +62,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="kubernetesScubaReader")
       private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
 
-    public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> getKubernetesScubaReader() {
+    public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> kubernetesScubaReader() {
         return this.kubernetesScubaReader == null ? Optional.empty() : Optional.ofNullable(this.kubernetesScubaReader);
     }
 
@@ -73,7 +73,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="kubernetesService")
       private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
 
-    public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> getKubernetesService() {
+    public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> kubernetesService() {
         return this.kubernetesService == null ? Optional.empty() : Optional.ofNullable(this.kubernetesService);
     }
 
@@ -85,7 +85,7 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="offeringType", required=true)
       private final String offeringType;
 
-    public String getOfferingType() {
+    public String offeringType() {
         return this.offeringType;
     }
 

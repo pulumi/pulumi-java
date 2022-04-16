@@ -44,7 +44,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return For optimistic concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -58,7 +58,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Azure location in which project is created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +72,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Name of the project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Properties of the project.
      * 
      */
-    public Output<ProjectPropertiesResponse> getProperties() {
+    public Output<ProjectPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -100,7 +100,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Tags provided by Azure Tagging service.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

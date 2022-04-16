@@ -50,28 +50,28 @@ public final class ExportDefinitionResponse {
      * The definition for data in the export.
      * 
     */
-    public Optional<ExportDatasetResponse> getDataSet() {
+    public Optional<ExportDatasetResponse> dataSet() {
         return Optional.ofNullable(this.dataSet);
     }
     /**
      * Has time period for pulling data for the export.
      * 
     */
-    public Optional<ExportTimePeriodResponse> getTimePeriod() {
+    public Optional<ExportTimePeriodResponse> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the export. If custom, then a specific time period must be provided.
      * 
     */
-    public String getTimeframe() {
+    public String timeframe() {
         return this.timeframe;
     }
     /**
      * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class ListHybridConnectionKeysArgs extends com.pulumi.resources.Inv
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
 
-    public String getAuthorizationRuleName() {
+    public String authorizationRuleName() {
         return this.authorizationRuleName;
     }
 
@@ -30,7 +30,7 @@ public final class ListHybridConnectionKeysArgs extends com.pulumi.resources.Inv
     @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
 
-    public String getHybridConnectionName() {
+    public String hybridConnectionName() {
         return this.hybridConnectionName;
     }
 
@@ -41,7 +41,7 @@ public final class ListHybridConnectionKeysArgs extends com.pulumi.resources.Inv
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -52,7 +52,7 @@ public final class ListHybridConnectionKeysArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -91,70 +91,70 @@ public final class GetSecurityUserConfigurationResult {
      * Flag if need to delete existing network security groups.
      * 
     */
-    public Optional<String> getDeleteExistingNSGs() {
+    public Optional<String> deleteExistingNSGs() {
         return Optional.ofNullable(this.deleteExistingNSGs);
     }
     /**
      * A description of the security configuration.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A display name of the security configuration.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Security Type.
      * 
     */
-    public Optional<String> getSecurityType() {
+    public Optional<String> securityType() {
         return Optional.ofNullable(this.securityType);
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

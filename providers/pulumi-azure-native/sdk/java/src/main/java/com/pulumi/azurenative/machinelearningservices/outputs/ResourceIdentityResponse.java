@@ -50,28 +50,28 @@ public final class ResourceIdentityResponse {
      * Client ID that is used when authenticating.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * AAD Tenant where this identity lives.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Defines values for a ResourceIdentity's type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
      * 
     */
-    public Map<String,UserAssignedIdentityMetaResponse> getUserAssignedIdentities() {
+    public Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

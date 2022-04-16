@@ -52,28 +52,28 @@ public final class PrivateLinkServiceProxyResponse {
      * Group connectivity information.
      * 
     */
-    public List<GroupConnectivityInformationResponse> getGroupConnectivityInformation() {
+    public List<GroupConnectivityInformationResponse> groupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
     }
     /**
      * NRP resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Remote private endpoint connection details.
      * 
     */
-    public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> getRemotePrivateEndpointConnection() {
+    public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> remotePrivateEndpointConnection() {
         return Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
     /**
      * Remote private link service connection state
      * 
     */
-    public Optional<PrivateLinkServiceConnectionStateResponse> getRemotePrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> remotePrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }
 

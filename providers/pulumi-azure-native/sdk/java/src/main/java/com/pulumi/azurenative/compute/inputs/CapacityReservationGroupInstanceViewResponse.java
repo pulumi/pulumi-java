@@ -20,7 +20,7 @@ public final class CapacityReservationGroupInstanceViewResponse extends com.pulu
     @Import(name="capacityReservations", required=true)
       private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
-    public List<CapacityReservationInstanceViewWithNameResponse> getCapacityReservations() {
+    public List<CapacityReservationInstanceViewWithNameResponse> capacityReservations() {
         return this.capacityReservations;
     }
 

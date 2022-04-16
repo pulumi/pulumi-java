@@ -71,49 +71,49 @@ public final class ApplicableScheduleResponse {
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
      * 
     */
-    public Optional<ScheduleResponse> getLabVmsShutdown() {
+    public Optional<ScheduleResponse> labVmsShutdown() {
         return Optional.ofNullable(this.labVmsShutdown);
     }
     /**
      * The auto-startup schedule, if one has been set at the lab or lab resource level.
      * 
     */
-    public Optional<ScheduleResponse> getLabVmsStartup() {
+    public Optional<ScheduleResponse> labVmsStartup() {
         return Optional.ofNullable(this.labVmsStartup);
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

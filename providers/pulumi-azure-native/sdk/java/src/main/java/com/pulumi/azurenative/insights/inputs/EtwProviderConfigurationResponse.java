@@ -17,14 +17,14 @@ public final class EtwProviderConfigurationResponse extends com.pulumi.resources
     @Import(name="events", required=true)
       private final List<EtwEventConfigurationResponse> events;
 
-    public List<EtwEventConfigurationResponse> getEvents() {
+    public List<EtwEventConfigurationResponse> events() {
         return this.events;
     }
 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

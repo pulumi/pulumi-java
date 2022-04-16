@@ -43,21 +43,21 @@ public final class AzureQueryPropertiesResponse {
      * List of locations to scope the query to.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * List of Subscription or Resource Group ARM Ids.
      * 
     */
-    public List<String> getScope() {
+    public List<String> scope() {
         return this.scope == null ? List.of() : this.scope;
     }
     /**
      * Tag settings for the VM.
      * 
     */
-    public Optional<TagSettingsPropertiesResponse> getTagSettings() {
+    public Optional<TagSettingsPropertiesResponse> tagSettings() {
         return Optional.ofNullable(this.tagSettings);
     }
 

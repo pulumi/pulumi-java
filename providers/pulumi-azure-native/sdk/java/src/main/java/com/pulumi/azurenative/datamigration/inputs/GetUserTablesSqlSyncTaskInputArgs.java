@@ -27,7 +27,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="selectedSourceDatabases", required=true)
       private final Output<List<String>> selectedSourceDatabases;
 
-    public Output<List<String>> getSelectedSourceDatabases() {
+    public Output<List<String>> selectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
 
@@ -38,7 +38,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="selectedTargetDatabases", required=true)
       private final Output<List<String>> selectedTargetDatabases;
 
-    public Output<List<String>> getSelectedTargetDatabases() {
+    public Output<List<String>> selectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
 
@@ -49,7 +49,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -60,7 +60,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

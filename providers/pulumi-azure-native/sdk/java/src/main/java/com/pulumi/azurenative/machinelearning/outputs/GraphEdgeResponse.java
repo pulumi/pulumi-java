@@ -48,28 +48,28 @@ public final class GraphEdgeResponse {
      * The source graph node's identifier.
      * 
     */
-    public Optional<String> getSourceNodeId() {
+    public Optional<String> sourceNodeId() {
         return Optional.ofNullable(this.sourceNodeId);
     }
     /**
      * The identifier of the source node's port that the edge connects from.
      * 
     */
-    public Optional<String> getSourcePortId() {
+    public Optional<String> sourcePortId() {
         return Optional.ofNullable(this.sourcePortId);
     }
     /**
      * The destination graph node's identifier.
      * 
     */
-    public Optional<String> getTargetNodeId() {
+    public Optional<String> targetNodeId() {
         return Optional.ofNullable(this.targetNodeId);
     }
     /**
      * The identifier of the destination node's port that the edge connects into.
      * 
     */
-    public Optional<String> getTargetPortId() {
+    public Optional<String> targetPortId() {
         return Optional.ofNullable(this.targetPortId);
     }
 

@@ -26,7 +26,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="container")
       private final @Nullable String container;
 
-    public Optional<String> getContainer() {
+    public Optional<String> container() {
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
     }
 
@@ -37,7 +37,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileSystem")
       private final @Nullable String fileSystem;
 
-    public Optional<String> getFileSystem() {
+    public Optional<String> fileSystem() {
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
     }
 
@@ -48,7 +48,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileshare")
       private final @Nullable String fileshare;
 
-    public Optional<String> getFileshare() {
+    public Optional<String> fileshare() {
         return this.fileshare == null ? Optional.empty() : Optional.ofNullable(this.fileshare);
     }
 
@@ -59,7 +59,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
 
-    public Optional<Boolean> getIsDefault() {
+    public Optional<Boolean> isDefault() {
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
     }
 
@@ -70,7 +70,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
@@ -81,7 +81,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="msiResourceId")
       private final @Nullable String msiResourceId;
 
-    public Optional<String> getMsiResourceId() {
+    public Optional<String> msiResourceId() {
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
     }
 
@@ -92,7 +92,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -103,7 +103,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -114,7 +114,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="saskey")
       private final @Nullable String saskey;
 
-    public Optional<String> getSaskey() {
+    public Optional<String> saskey() {
         return this.saskey == null ? Optional.empty() : Optional.ofNullable(this.saskey);
     }
 

@@ -23,7 +23,7 @@ public final class BastionShareableLink extends com.pulumi.resources.InvokeArgs 
     @Import(name="vm", required=true)
       private final VM vm;
 
-    public VM getVm() {
+    public VM vm() {
         return this.vm;
     }
 

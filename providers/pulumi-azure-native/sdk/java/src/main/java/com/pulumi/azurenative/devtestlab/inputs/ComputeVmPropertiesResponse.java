@@ -28,7 +28,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="dataDiskIds")
       private final @Nullable List<String> dataDiskIds;
 
-    public List<String> getDataDiskIds() {
+    public List<String> dataDiskIds() {
         return this.dataDiskIds == null ? List.of() : this.dataDiskIds;
     }
 
@@ -39,7 +39,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="dataDisks")
       private final @Nullable List<ComputeDataDiskResponse> dataDisks;
 
-    public List<ComputeDataDiskResponse> getDataDisks() {
+    public List<ComputeDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
@@ -50,7 +50,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
-    public Optional<String> getNetworkInterfaceId() {
+    public Optional<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
@@ -61,7 +61,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="osDiskId")
       private final @Nullable String osDiskId;
 
-    public Optional<String> getOsDiskId() {
+    public Optional<String> osDiskId() {
         return this.osDiskId == null ? Optional.empty() : Optional.ofNullable(this.osDiskId);
     }
 
@@ -72,7 +72,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -83,7 +83,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="statuses")
       private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
 
-    public List<ComputeVmInstanceViewStatusResponse> getStatuses() {
+    public List<ComputeVmInstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 
@@ -94,7 +94,7 @@ public final class ComputeVmPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="vmSize")
       private final @Nullable String vmSize;
 
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
     }
 

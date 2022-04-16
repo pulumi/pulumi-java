@@ -42,7 +42,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return The date and time on which the function app was registered with the static site.
      * 
      */
-    public Output<String> getCreatedOn() {
+    public Output<String> createdOn() {
         return this.createdOn;
     }
     /**
@@ -56,7 +56,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return The region of the function app registered with the static site
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAppRegion() {
+    public Output</* @Nullable */ String> functionAppRegion() {
         return this.functionAppRegion;
     }
     /**
@@ -70,7 +70,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return The resource id of the function app registered with the static site
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAppResourceId() {
+    public Output</* @Nullable */ String> functionAppResourceId() {
         return this.functionAppResourceId;
     }
     /**
@@ -84,7 +84,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -98,7 +98,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSiteBuild extends com.pul
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

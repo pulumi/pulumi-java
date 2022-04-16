@@ -128,49 +128,49 @@ public final class ForEachActivityResponse {
      * List of activities to execute .
      * 
     */
-    public List<Object> getActivities() {
+    public List<Object> activities() {
         return this.activities;
     }
     /**
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
      * 
     */
-    public Optional<Integer> getBatchCount() {
+    public Optional<Integer> batchCount() {
         return Optional.ofNullable(this.batchCount);
     }
     /**
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Should the loop be executed in sequence or in parallel (max 50)
      * 
     */
-    public Optional<Boolean> getIsSequential() {
+    public Optional<Boolean> isSequential() {
         return Optional.ofNullable(this.isSequential);
     }
     /**
      * Collection to iterate.
      * 
     */
-    public ExpressionResponse getItems() {
+    public ExpressionResponse items() {
         return this.items;
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -178,14 +178,14 @@ public final class ForEachActivityResponse {
      * Expected value is 'ForEach'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

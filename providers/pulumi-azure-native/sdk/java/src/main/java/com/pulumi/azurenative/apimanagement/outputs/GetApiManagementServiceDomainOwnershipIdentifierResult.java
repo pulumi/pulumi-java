@@ -24,7 +24,7 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
      * The domain ownership identifier value.
      * 
     */
-    public String getDomainOwnershipIdentifier() {
+    public String domainOwnershipIdentifier() {
         return this.domainOwnershipIdentifier;
     }
 

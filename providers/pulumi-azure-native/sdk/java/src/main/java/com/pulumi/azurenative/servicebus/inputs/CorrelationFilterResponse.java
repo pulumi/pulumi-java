@@ -27,7 +27,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -38,7 +38,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="correlationId")
       private final @Nullable String correlationId;
 
-    public Optional<String> getCorrelationId() {
+    public Optional<String> correlationId() {
         return this.correlationId == null ? Optional.empty() : Optional.ofNullable(this.correlationId);
     }
 
@@ -49,7 +49,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -60,7 +60,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="messageId")
       private final @Nullable String messageId;
 
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
@@ -71,7 +71,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -82,7 +82,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="replyTo")
       private final @Nullable String replyTo;
 
-    public Optional<String> getReplyTo() {
+    public Optional<String> replyTo() {
         return this.replyTo == null ? Optional.empty() : Optional.ofNullable(this.replyTo);
     }
 
@@ -93,7 +93,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="replyToSessionId")
       private final @Nullable String replyToSessionId;
 
-    public Optional<String> getReplyToSessionId() {
+    public Optional<String> replyToSessionId() {
         return this.replyToSessionId == null ? Optional.empty() : Optional.ofNullable(this.replyToSessionId);
     }
 
@@ -104,7 +104,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="requiresPreprocessing")
       private final @Nullable Boolean requiresPreprocessing;
 
-    public Optional<Boolean> getRequiresPreprocessing() {
+    public Optional<Boolean> requiresPreprocessing() {
         return this.requiresPreprocessing == null ? Optional.empty() : Optional.ofNullable(this.requiresPreprocessing);
     }
 
@@ -115,7 +115,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="sessionId")
       private final @Nullable String sessionId;
 
-    public Optional<String> getSessionId() {
+    public Optional<String> sessionId() {
         return this.sessionId == null ? Optional.empty() : Optional.ofNullable(this.sessionId);
     }
 
@@ -126,7 +126,7 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
     @Import(name="to")
       private final @Nullable String to;
 
-    public Optional<String> getTo() {
+    public Optional<String> to() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
     }
 

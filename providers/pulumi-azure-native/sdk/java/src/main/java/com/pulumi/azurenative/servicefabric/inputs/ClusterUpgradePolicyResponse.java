@@ -28,7 +28,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="deltaHealthPolicy")
       private final @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy;
 
-    public Optional<ClusterUpgradeDeltaHealthPolicyResponse> getDeltaHealthPolicy() {
+    public Optional<ClusterUpgradeDeltaHealthPolicyResponse> deltaHealthPolicy() {
         return this.deltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.deltaHealthPolicy);
     }
 
@@ -39,7 +39,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="forceRestart")
       private final @Nullable Boolean forceRestart;
 
-    public Optional<Boolean> getForceRestart() {
+    public Optional<Boolean> forceRestart() {
         return this.forceRestart == null ? Optional.empty() : Optional.ofNullable(this.forceRestart);
     }
 
@@ -50,7 +50,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="healthCheckRetryTimeout", required=true)
       private final String healthCheckRetryTimeout;
 
-    public String getHealthCheckRetryTimeout() {
+    public String healthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout;
     }
 
@@ -61,7 +61,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="healthCheckStableDuration", required=true)
       private final String healthCheckStableDuration;
 
-    public String getHealthCheckStableDuration() {
+    public String healthCheckStableDuration() {
         return this.healthCheckStableDuration;
     }
 
@@ -72,7 +72,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="healthCheckWaitDuration", required=true)
       private final String healthCheckWaitDuration;
 
-    public String getHealthCheckWaitDuration() {
+    public String healthCheckWaitDuration() {
         return this.healthCheckWaitDuration;
     }
 
@@ -83,7 +83,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="healthPolicy", required=true)
       private final ClusterHealthPolicyResponse healthPolicy;
 
-    public ClusterHealthPolicyResponse getHealthPolicy() {
+    public ClusterHealthPolicyResponse healthPolicy() {
         return this.healthPolicy;
     }
 
@@ -94,7 +94,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="upgradeDomainTimeout", required=true)
       private final String upgradeDomainTimeout;
 
-    public String getUpgradeDomainTimeout() {
+    public String upgradeDomainTimeout() {
         return this.upgradeDomainTimeout;
     }
 
@@ -105,7 +105,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="upgradeReplicaSetCheckTimeout", required=true)
       private final String upgradeReplicaSetCheckTimeout;
 
-    public String getUpgradeReplicaSetCheckTimeout() {
+    public String upgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout;
     }
 
@@ -116,7 +116,7 @@ public final class ClusterUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="upgradeTimeout", required=true)
       private final String upgradeTimeout;
 
-    public String getUpgradeTimeout() {
+    public String upgradeTimeout() {
         return this.upgradeTimeout;
     }
 

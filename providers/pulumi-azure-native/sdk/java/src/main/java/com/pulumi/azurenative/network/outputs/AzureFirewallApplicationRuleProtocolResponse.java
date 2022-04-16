@@ -35,14 +35,14 @@ public final class AzureFirewallApplicationRuleProtocolResponse {
      * Port number for the protocol, cannot be greater than 64000. This field is optional.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Protocol type.
      * 
     */
-    public Optional<String> getProtocolType() {
+    public Optional<String> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }
 

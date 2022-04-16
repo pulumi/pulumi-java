@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends com.pulumi.re
     @Import(name="input")
       private final @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input;
 
-    public Output<MigrateSqlServerSqlMITaskInputArgs> getInput() {
+    public Output<MigrateSqlServerSqlMITaskInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends com.pulumi.re
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 

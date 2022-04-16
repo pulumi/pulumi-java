@@ -26,7 +26,7 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="and")
       private final @Nullable List<ReportConfigFilterResponse> and;
 
-    public List<ReportConfigFilterResponse> getAnd() {
+    public List<ReportConfigFilterResponse> and() {
         return this.and == null ? List.of() : this.and;
     }
 
@@ -37,7 +37,7 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="dimensions")
       private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
 
-    public Optional<ReportConfigComparisonExpressionResponse> getDimensions() {
+    public Optional<ReportConfigComparisonExpressionResponse> dimensions() {
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
     }
 
@@ -48,7 +48,7 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="or")
       private final @Nullable List<ReportConfigFilterResponse> or;
 
-    public List<ReportConfigFilterResponse> getOr() {
+    public List<ReportConfigFilterResponse> or() {
         return this.or == null ? List.of() : this.or;
     }
 
@@ -59,7 +59,7 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="tagKey")
       private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
 
-    public Optional<ReportConfigComparisonExpressionResponse> getTagKey() {
+    public Optional<ReportConfigComparisonExpressionResponse> tagKey() {
         return this.tagKey == null ? Optional.empty() : Optional.ofNullable(this.tagKey);
     }
 
@@ -70,7 +70,7 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="tagValue")
       private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
 
-    public Optional<ReportConfigComparisonExpressionResponse> getTagValue() {
+    public Optional<ReportConfigComparisonExpressionResponse> tagValue() {
         return this.tagValue == null ? Optional.empty() : Optional.ofNullable(this.tagValue);
     }
 
@@ -81,7 +81,7 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
     @Import(name="tags")
       private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
-    public Optional<ReportConfigComparisonExpressionResponse> getTags() {
+    public Optional<ReportConfigComparisonExpressionResponse> tags() {
         return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
     }
 

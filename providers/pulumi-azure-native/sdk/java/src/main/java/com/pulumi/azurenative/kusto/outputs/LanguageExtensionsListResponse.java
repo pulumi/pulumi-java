@@ -26,7 +26,7 @@ public final class LanguageExtensionsListResponse {
      * The list of language extensions.
      * 
     */
-    public List<LanguageExtensionResponse> getValue() {
+    public List<LanguageExtensionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

@@ -22,7 +22,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="externalDocsDescription")
       private final @Nullable Output<String> externalDocsDescription;
 
-    public Output<String> getExternalDocsDescription() {
+    public Output<String> externalDocsDescription() {
         return this.externalDocsDescription == null ? Codegen.empty() : this.externalDocsDescription;
     }
 
@@ -55,7 +55,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="externalDocsUrl")
       private final @Nullable Output<String> externalDocsUrl;
 
-    public Output<String> getExternalDocsUrl() {
+    public Output<String> externalDocsUrl() {
         return this.externalDocsUrl == null ? Codegen.empty() : this.externalDocsUrl;
     }
 
@@ -66,7 +66,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -88,7 +88,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tagDescriptionId")
       private final @Nullable Output<String> tagDescriptionId;
 
-    public Output<String> getTagDescriptionId() {
+    public Output<String> tagDescriptionId() {
         return this.tagDescriptionId == null ? Codegen.empty() : this.tagDescriptionId;
     }
 

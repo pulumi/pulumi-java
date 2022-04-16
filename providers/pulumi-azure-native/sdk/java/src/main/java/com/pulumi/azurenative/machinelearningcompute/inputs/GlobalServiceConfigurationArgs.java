@@ -29,7 +29,7 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="autoScale")
       private final @Nullable Output<AutoScaleConfigurationArgs> autoScale;
 
-    public Output<AutoScaleConfigurationArgs> getAutoScale() {
+    public Output<AutoScaleConfigurationArgs> autoScale() {
         return this.autoScale == null ? Codegen.empty() : this.autoScale;
     }
 
@@ -40,7 +40,7 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -51,7 +51,7 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="serviceAuth")
       private final @Nullable Output<ServiceAuthConfigurationArgs> serviceAuth;
 
-    public Output<ServiceAuthConfigurationArgs> getServiceAuth() {
+    public Output<ServiceAuthConfigurationArgs> serviceAuth() {
         return this.serviceAuth == null ? Codegen.empty() : this.serviceAuth;
     }
 
@@ -62,7 +62,7 @@ public final class GlobalServiceConfigurationArgs extends com.pulumi.resources.R
     @Import(name="ssl")
       private final @Nullable Output<SslConfigurationArgs> ssl;
 
-    public Output<SslConfigurationArgs> getSsl() {
+    public Output<SslConfigurationArgs> ssl() {
         return this.ssl == null ? Codegen.empty() : this.ssl;
     }
 

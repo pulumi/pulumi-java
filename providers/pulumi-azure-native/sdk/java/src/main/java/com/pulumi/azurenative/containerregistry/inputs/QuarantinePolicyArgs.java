@@ -28,7 +28,7 @@ public final class QuarantinePolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
+    public Output<Either<String,PolicyStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

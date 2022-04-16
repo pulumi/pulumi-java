@@ -28,7 +28,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="enableInternetSecurity")
       private final @Nullable Boolean enableInternetSecurity;
 
-    public Optional<Boolean> getEnableInternetSecurity() {
+    public Optional<Boolean> enableInternetSecurity() {
         return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
     }
 
@@ -39,7 +39,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -50,7 +50,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -61,7 +61,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -72,7 +72,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -83,7 +83,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="routingConfiguration")
       private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
-    public Optional<RoutingConfigurationResponse> getRoutingConfiguration() {
+    public Optional<RoutingConfigurationResponse> routingConfiguration() {
         return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
     }
 
@@ -94,7 +94,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
     @Import(name="vpnClientAddressPool")
       private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 
-    public Optional<AddressSpaceResponse> getVpnClientAddressPool() {
+    public Optional<AddressSpaceResponse> vpnClientAddressPool() {
         return this.vpnClientAddressPool == null ? Optional.empty() : Optional.ofNullable(this.vpnClientAddressPool);
     }
 

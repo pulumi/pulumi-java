@@ -26,7 +26,7 @@ public final class HttpErrorRangeParametersArgs extends com.pulumi.resources.Res
     @Import(name="begin")
       private final @Nullable Output<Integer> begin;
 
-    public Output<Integer> getBegin() {
+    public Output<Integer> begin() {
         return this.begin == null ? Codegen.empty() : this.begin;
     }
 
@@ -37,7 +37,7 @@ public final class HttpErrorRangeParametersArgs extends com.pulumi.resources.Res
     @Import(name="end")
       private final @Nullable Output<Integer> end;
 
-    public Output<Integer> getEnd() {
+    public Output<Integer> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 

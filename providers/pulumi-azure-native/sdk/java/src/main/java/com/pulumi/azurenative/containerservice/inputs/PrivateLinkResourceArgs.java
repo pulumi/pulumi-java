@@ -27,7 +27,7 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="requiredMembers")
       private final @Nullable Output<List<String>> requiredMembers;
 
-    public Output<List<String>> getRequiredMembers() {
+    public Output<List<String>> requiredMembers() {
         return this.requiredMembers == null ? Codegen.empty() : this.requiredMembers;
     }
 
@@ -71,7 +71,7 @@ public final class PrivateLinkResourceArgs extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

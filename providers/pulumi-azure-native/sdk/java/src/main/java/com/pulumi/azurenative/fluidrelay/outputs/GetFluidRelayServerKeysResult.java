@@ -32,14 +32,14 @@ public final class GetFluidRelayServerKeysResult {
      * The primary key for this server
      * 
     */
-    public String getKey1() {
+    public String key1() {
         return this.key1;
     }
     /**
      * The secondary key for this server
      * 
     */
-    public String getKey2() {
+    public String key2() {
         return this.key2;
     }
 

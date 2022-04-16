@@ -25,7 +25,7 @@ public final class WebServiceKeysResponse extends com.pulumi.resources.InvokeArg
     @Import(name="primary")
       private final @Nullable String primary;
 
-    public Optional<String> getPrimary() {
+    public Optional<String> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
@@ -36,7 +36,7 @@ public final class WebServiceKeysResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secondary")
       private final @Nullable String secondary;
 
-    public Optional<String> getSecondary() {
+    public Optional<String> secondary() {
         return this.secondary == null ? Optional.empty() : Optional.ofNullable(this.secondary);
     }
 

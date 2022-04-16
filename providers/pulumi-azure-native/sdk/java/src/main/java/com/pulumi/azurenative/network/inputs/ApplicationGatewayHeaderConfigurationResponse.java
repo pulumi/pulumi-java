@@ -25,7 +25,7 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
     @Import(name="headerName")
       private final @Nullable String headerName;
 
-    public Optional<String> getHeaderName() {
+    public Optional<String> headerName() {
         return this.headerName == null ? Optional.empty() : Optional.ofNullable(this.headerName);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationGatewayHeaderConfigurationResponse extends com.pul
     @Import(name="headerValue")
       private final @Nullable String headerValue;
 
-    public Optional<String> getHeaderValue() {
+    public Optional<String> headerValue() {
         return this.headerValue == null ? Optional.empty() : Optional.ofNullable(this.headerValue);
     }
 

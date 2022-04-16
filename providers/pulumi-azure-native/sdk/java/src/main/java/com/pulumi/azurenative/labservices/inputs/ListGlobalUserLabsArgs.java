@@ -19,7 +19,7 @@ public final class ListGlobalUserLabsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

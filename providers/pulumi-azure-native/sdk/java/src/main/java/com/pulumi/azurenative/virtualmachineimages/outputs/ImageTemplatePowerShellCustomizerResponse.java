@@ -80,42 +80,42 @@ public final class ImageTemplatePowerShellCustomizerResponse {
      * Array of PowerShell commands to execute
      * 
     */
-    public List<String> getInline() {
+    public List<String> inline() {
         return this.inline == null ? List.of() : this.inline;
     }
     /**
      * Friendly Name to provide context on what this customization step does
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
      * 
     */
-    public Optional<Boolean> getRunAsSystem() {
+    public Optional<Boolean> runAsSystem() {
         return Optional.ofNullable(this.runAsSystem);
     }
     /**
      * If specified, the PowerShell script will be run with elevated privileges
      * 
     */
-    public Optional<Boolean> getRunElevated() {
+    public Optional<Boolean> runElevated() {
         return Optional.ofNullable(this.runElevated);
     }
     /**
      * URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
     */
-    public Optional<String> getScriptUri() {
+    public Optional<String> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
     /**
      * SHA256 checksum of the power shell script provided in the scriptUri field above
      * 
     */
-    public Optional<String> getSha256Checksum() {
+    public Optional<String> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
@@ -123,14 +123,14 @@ public final class ImageTemplatePowerShellCustomizerResponse {
      * Expected value is 'PowerShell'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Valid exit codes for the PowerShell script. [Default: 0]
      * 
     */
-    public List<Integer> getValidExitCodes() {
+    public List<Integer> validExitCodes() {
         return this.validExitCodes == null ? List.of() : this.validExitCodes;
     }
 

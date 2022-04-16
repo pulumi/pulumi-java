@@ -86,63 +86,63 @@ public final class GetGalleryResult {
      * The description of this Shared Image Gallery resource. This property is updatable.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Describes the gallery unique name.
      * 
     */
-    public Optional<GalleryIdentifierResponse> getIdentifier() {
+    public Optional<GalleryIdentifierResponse> identifier() {
         return Optional.ofNullable(this.identifier);
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Profile for gallery sharing to subscription or tenant
      * 
     */
-    public Optional<SharingProfileResponse> getSharingProfile() {
+    public Optional<SharingProfileResponse> sharingProfile() {
         return Optional.ofNullable(this.sharingProfile);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

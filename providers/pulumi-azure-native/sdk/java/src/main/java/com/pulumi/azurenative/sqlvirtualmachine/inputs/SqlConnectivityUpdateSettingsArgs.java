@@ -29,7 +29,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="connectivityType")
       private final @Nullable Output<Either<String,ConnectivityType>> connectivityType;
 
-    public Output<Either<String,ConnectivityType>> getConnectivityType() {
+    public Output<Either<String,ConnectivityType>> connectivityType() {
         return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
     }
 
@@ -40,7 +40,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -51,7 +51,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="sqlAuthUpdatePassword")
       private final @Nullable Output<String> sqlAuthUpdatePassword;
 
-    public Output<String> getSqlAuthUpdatePassword() {
+    public Output<String> sqlAuthUpdatePassword() {
         return this.sqlAuthUpdatePassword == null ? Codegen.empty() : this.sqlAuthUpdatePassword;
     }
 
@@ -62,7 +62,7 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="sqlAuthUpdateUserName")
       private final @Nullable Output<String> sqlAuthUpdateUserName;
 
-    public Output<String> getSqlAuthUpdateUserName() {
+    public Output<String> sqlAuthUpdateUserName() {
         return this.sqlAuthUpdateUserName == null ? Codegen.empty() : this.sqlAuthUpdateUserName;
     }
 

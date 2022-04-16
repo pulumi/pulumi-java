@@ -22,7 +22,7 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -33,7 +33,7 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -44,7 +44,7 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -55,7 +55,7 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
@@ -67,7 +67,7 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

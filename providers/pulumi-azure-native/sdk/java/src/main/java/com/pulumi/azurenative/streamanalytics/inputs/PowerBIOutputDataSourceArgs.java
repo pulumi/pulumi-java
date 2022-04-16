@@ -26,7 +26,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -37,7 +37,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -48,7 +48,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -59,7 +59,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
@@ -70,7 +70,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 
@@ -81,7 +81,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="tokenUserDisplayName")
       private final @Nullable Output<String> tokenUserDisplayName;
 
-    public Output<String> getTokenUserDisplayName() {
+    public Output<String> tokenUserDisplayName() {
         return this.tokenUserDisplayName == null ? Codegen.empty() : this.tokenUserDisplayName;
     }
 
@@ -92,7 +92,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="tokenUserPrincipalName")
       private final @Nullable Output<String> tokenUserPrincipalName;
 
-    public Output<String> getTokenUserPrincipalName() {
+    public Output<String> tokenUserPrincipalName() {
         return this.tokenUserPrincipalName == null ? Codegen.empty() : this.tokenUserPrincipalName;
     }
 
@@ -104,7 +104,7 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

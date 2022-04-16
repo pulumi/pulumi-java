@@ -28,7 +28,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="activeKey")
       private final @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
 
-    public Output<KeyForDiskEncryptionSetArgs> getActiveKey() {
+    public Output<KeyForDiskEncryptionSetArgs> activeKey() {
         return this.activeKey == null ? Codegen.empty() : this.activeKey;
     }
 
@@ -39,7 +39,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="diskEncryptionSetName")
       private final @Nullable Output<String> diskEncryptionSetName;
 
-    public Output<String> getDiskEncryptionSetName() {
+    public Output<String> diskEncryptionSetName() {
         return this.diskEncryptionSetName == null ? Codegen.empty() : this.diskEncryptionSetName;
     }
 
@@ -50,7 +50,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryptionType")
       private final @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
 
-    public Output<Either<String,DiskEncryptionSetType>> getEncryptionType() {
+    public Output<Either<String,DiskEncryptionSetType>> encryptionType() {
         return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
     }
 
@@ -61,7 +61,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="identity")
       private final @Nullable Output<EncryptionSetIdentityArgs> identity;
 
-    public Output<EncryptionSetIdentityArgs> getIdentity() {
+    public Output<EncryptionSetIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -72,7 +72,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -83,7 +83,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rotationToLatestKeyVersionEnabled")
       private final @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
 
-    public Output<Boolean> getRotationToLatestKeyVersionEnabled() {
+    public Output<Boolean> rotationToLatestKeyVersionEnabled() {
         return this.rotationToLatestKeyVersionEnabled == null ? Codegen.empty() : this.rotationToLatestKeyVersionEnabled;
     }
 
@@ -105,7 +105,7 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

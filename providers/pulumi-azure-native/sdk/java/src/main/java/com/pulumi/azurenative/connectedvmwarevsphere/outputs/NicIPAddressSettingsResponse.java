@@ -39,21 +39,21 @@ public final class NicIPAddressSettingsResponse {
      * Gets the ip address allocation method.
      * 
     */
-    public String getAllocationMethod() {
+    public String allocationMethod() {
         return this.allocationMethod;
     }
     /**
      * Gets the ip address for the nic.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * Gets the mask.
      * 
     */
-    public String getSubnetMask() {
+    public String subnetMask() {
         return this.subnetMask;
     }
 

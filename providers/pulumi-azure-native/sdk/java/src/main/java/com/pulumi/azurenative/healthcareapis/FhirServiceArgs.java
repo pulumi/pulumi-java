@@ -32,7 +32,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies")
       private final @Nullable Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies;
 
-    public Output<List<FhirServiceAccessPolicyEntryArgs>> getAccessPolicies() {
+    public Output<List<FhirServiceAccessPolicyEntryArgs>> accessPolicies() {
         return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
@@ -43,7 +43,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acrConfiguration")
       private final @Nullable Output<FhirServiceAcrConfigurationArgs> acrConfiguration;
 
-    public Output<FhirServiceAcrConfigurationArgs> getAcrConfiguration() {
+    public Output<FhirServiceAcrConfigurationArgs> acrConfiguration() {
         return this.acrConfiguration == null ? Codegen.empty() : this.acrConfiguration;
     }
 
@@ -54,7 +54,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationConfiguration")
       private final @Nullable Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<FhirServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
+    public Output<FhirServiceAuthenticationConfigurationArgs> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
     }
 
@@ -65,7 +65,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="corsConfiguration")
       private final @Nullable Output<FhirServiceCorsConfigurationArgs> corsConfiguration;
 
-    public Output<FhirServiceCorsConfigurationArgs> getCorsConfiguration() {
+    public Output<FhirServiceCorsConfigurationArgs> corsConfiguration() {
         return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
     }
 
@@ -76,7 +76,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exportConfiguration")
       private final @Nullable Output<FhirServiceExportConfigurationArgs> exportConfiguration;
 
-    public Output<FhirServiceExportConfigurationArgs> getExportConfiguration() {
+    public Output<FhirServiceExportConfigurationArgs> exportConfiguration() {
         return this.exportConfiguration == null ? Codegen.empty() : this.exportConfiguration;
     }
 
@@ -87,7 +87,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fhirServiceName")
       private final @Nullable Output<String> fhirServiceName;
 
-    public Output<String> getFhirServiceName() {
+    public Output<String> fhirServiceName() {
         return this.fhirServiceName == null ? Codegen.empty() : this.fhirServiceName;
     }
 
@@ -98,7 +98,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
-    public Output<ServiceManagedIdentityIdentityArgs> getIdentity() {
+    public Output<ServiceManagedIdentityIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -109,7 +109,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Either<String,FhirServiceKind>> kind;
 
-    public Output<Either<String,FhirServiceKind>> getKind() {
+    public Output<Either<String,FhirServiceKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -120,7 +120,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -131,7 +131,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -142,7 +142,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -153,7 +153,7 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

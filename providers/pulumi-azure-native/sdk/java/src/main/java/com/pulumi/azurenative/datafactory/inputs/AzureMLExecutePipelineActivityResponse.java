@@ -31,7 +31,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="continueOnStepFailure")
       private final @Nullable Object continueOnStepFailure;
 
-    public Optional<Object> getContinueOnStepFailure() {
+    public Optional<Object> continueOnStepFailure() {
         return this.continueOnStepFailure == null ? Optional.empty() : Optional.ofNullable(this.continueOnStepFailure);
     }
 
@@ -42,7 +42,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="dataPathAssignments")
       private final @Nullable Object dataPathAssignments;
 
-    public Optional<Object> getDataPathAssignments() {
+    public Optional<Object> dataPathAssignments() {
         return this.dataPathAssignments == null ? Optional.empty() : Optional.ofNullable(this.dataPathAssignments);
     }
 
@@ -53,7 +53,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -64,7 +64,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -75,7 +75,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="experimentName")
       private final @Nullable Object experimentName;
 
-    public Optional<Object> getExperimentName() {
+    public Optional<Object> experimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
     }
 
@@ -86,7 +86,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
-    public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
+    public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
@@ -97,7 +97,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="mlParentRunId")
       private final @Nullable Object mlParentRunId;
 
-    public Optional<Object> getMlParentRunId() {
+    public Optional<Object> mlParentRunId() {
         return this.mlParentRunId == null ? Optional.empty() : Optional.ofNullable(this.mlParentRunId);
     }
 
@@ -108,7 +108,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="mlPipelineEndpointId")
       private final @Nullable Object mlPipelineEndpointId;
 
-    public Optional<Object> getMlPipelineEndpointId() {
+    public Optional<Object> mlPipelineEndpointId() {
         return this.mlPipelineEndpointId == null ? Optional.empty() : Optional.ofNullable(this.mlPipelineEndpointId);
     }
 
@@ -119,7 +119,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="mlPipelineId")
       private final @Nullable Object mlPipelineId;
 
-    public Optional<Object> getMlPipelineId() {
+    public Optional<Object> mlPipelineId() {
         return this.mlPipelineId == null ? Optional.empty() : Optional.ofNullable(this.mlPipelineId);
     }
 
@@ -130,7 +130,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="mlPipelineParameters")
       private final @Nullable Object mlPipelineParameters;
 
-    public Optional<Object> getMlPipelineParameters() {
+    public Optional<Object> mlPipelineParameters() {
         return this.mlPipelineParameters == null ? Optional.empty() : Optional.ofNullable(this.mlPipelineParameters);
     }
 
@@ -141,7 +141,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -152,7 +152,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
-    public Optional<ActivityPolicyResponse> getPolicy() {
+    public Optional<ActivityPolicyResponse> policy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
@@ -164,7 +164,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -175,7 +175,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
@@ -186,7 +186,7 @@ public final class AzureMLExecutePipelineActivityResponse extends com.pulumi.res
     @Import(name="version")
       private final @Nullable Object version;
 
-    public Optional<Object> getVersion() {
+    public Optional<Object> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

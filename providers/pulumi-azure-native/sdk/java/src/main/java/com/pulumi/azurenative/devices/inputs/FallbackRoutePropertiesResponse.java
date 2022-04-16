@@ -27,7 +27,7 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="condition")
       private final @Nullable String condition;
 
-    public Optional<String> getCondition() {
+    public Optional<String> condition() {
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
     }
 
@@ -38,7 +38,7 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="endpointNames", required=true)
       private final List<String> endpointNames;
 
-    public List<String> getEndpointNames() {
+    public List<String> endpointNames() {
         return this.endpointNames;
     }
 
@@ -49,7 +49,7 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
 
@@ -60,7 +60,7 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class FallbackRoutePropertiesResponse extends com.pulumi.resources.
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

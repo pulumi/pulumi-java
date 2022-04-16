@@ -25,7 +25,7 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
     @Import(name="operation")
       private final @Nullable String operation;
 
-    public Optional<String> getOperation() {
+    public Optional<String> operation() {
         return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
     }
 
@@ -36,7 +36,7 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
     @Import(name="property")
       private final @Nullable String property;
 
-    public Optional<String> getProperty() {
+    public Optional<String> property() {
         return this.property == null ? Optional.empty() : Optional.ofNullable(this.property);
     }
 
@@ -47,7 +47,7 @@ public final class LiveEventInputTrackSelectionResponse extends com.pulumi.resou
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

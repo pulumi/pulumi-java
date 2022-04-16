@@ -85,63 +85,63 @@ public final class PrivateLinkServiceConnectionResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
      * 
     */
-    public List<String> getGroupIds() {
+    public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A collection of read-only information about the state of the connection to the remote resource.
      * 
     */
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * The resource id of private link service.
      * 
     */
-    public Optional<String> getPrivateLinkServiceId() {
+    public Optional<String> privateLinkServiceId() {
         return Optional.ofNullable(this.privateLinkServiceId);
     }
     /**
      * The provisioning state of the private link service connection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
      * 
     */
-    public Optional<String> getRequestMessage() {
+    public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

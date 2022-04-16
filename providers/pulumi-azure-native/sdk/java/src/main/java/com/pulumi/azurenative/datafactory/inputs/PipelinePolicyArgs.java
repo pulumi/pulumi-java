@@ -26,7 +26,7 @@ public final class PipelinePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="elapsedTimeMetric")
       private final @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
-    public Output<PipelineElapsedTimeMetricPolicyArgs> getElapsedTimeMetric() {
+    public Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric() {
         return this.elapsedTimeMetric == null ? Codegen.empty() : this.elapsedTimeMetric;
     }
 

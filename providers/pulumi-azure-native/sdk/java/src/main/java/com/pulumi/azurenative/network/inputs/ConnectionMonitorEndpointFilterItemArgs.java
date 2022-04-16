@@ -28,7 +28,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.re
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -39,7 +39,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.re
     @Import(name="type")
       private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
 
-    public Output<Either<String,ConnectionMonitorEndpointFilterItemType>> getType() {
+    public Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

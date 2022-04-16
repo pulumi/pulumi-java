@@ -35,14 +35,14 @@ public final class DayResponse {
      * Date of the month
      * 
     */
-    public Optional<Integer> getDate() {
+    public Optional<Integer> date() {
         return Optional.ofNullable(this.date);
     }
     /**
      * Whether Date is last date of month
      * 
     */
-    public Optional<Boolean> getIsLast() {
+    public Optional<Boolean> isLast() {
         return Optional.ofNullable(this.isLast);
     }
 

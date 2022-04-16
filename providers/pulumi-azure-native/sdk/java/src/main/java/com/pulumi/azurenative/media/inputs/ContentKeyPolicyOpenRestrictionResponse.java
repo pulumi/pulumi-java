@@ -24,7 +24,7 @@ public final class ContentKeyPolicyOpenRestrictionResponse extends com.pulumi.re
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

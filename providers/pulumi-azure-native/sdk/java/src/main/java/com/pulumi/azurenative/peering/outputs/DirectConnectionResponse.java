@@ -93,70 +93,70 @@ public final class DirectConnectionResponse {
      * The bandwidth of the connection.
      * 
     */
-    public Optional<Integer> getBandwidthInMbps() {
+    public Optional<Integer> bandwidthInMbps() {
         return Optional.ofNullable(this.bandwidthInMbps);
     }
     /**
      * The BGP session associated with the connection.
      * 
     */
-    public Optional<BgpSessionResponse> getBgpSession() {
+    public Optional<BgpSessionResponse> bgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
     /**
      * The unique identifier (GUID) for the connection.
      * 
     */
-    public Optional<String> getConnectionIdentifier() {
+    public Optional<String> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
     /**
      * The state of the connection.
      * 
     */
-    public String getConnectionState() {
+    public String connectionState() {
         return this.connectionState;
     }
     /**
      * The error message related to the connection state, if any.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * The ID used within Microsoft's peering provisioning system to track the connection
      * 
     */
-    public String getMicrosoftTrackingId() {
+    public String microsoftTrackingId() {
         return this.microsoftTrackingId;
     }
     /**
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
     */
-    public Optional<Integer> getPeeringDBFacilityId() {
+    public Optional<Integer> peeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
     /**
      * The bandwidth that is actually provisioned.
      * 
     */
-    public Integer getProvisionedBandwidthInMbps() {
+    public Integer provisionedBandwidthInMbps() {
         return this.provisionedBandwidthInMbps;
     }
     /**
      * The field indicating if Microsoft provides session ip addresses.
      * 
     */
-    public Optional<String> getSessionAddressProvider() {
+    public Optional<String> sessionAddressProvider() {
         return Optional.ofNullable(this.sessionAddressProvider);
     }
     /**
      * The flag that indicates whether or not the connection is used for peering service.
      * 
     */
-    public Optional<Boolean> getUseForPeeringService() {
+    public Optional<Boolean> useForPeeringService() {
         return Optional.ofNullable(this.useForPeeringService);
     }
 

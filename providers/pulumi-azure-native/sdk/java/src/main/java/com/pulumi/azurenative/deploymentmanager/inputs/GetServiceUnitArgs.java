@@ -19,7 +19,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceTopologyName", required=true)
       private final String serviceTopologyName;
 
-    public String getServiceTopologyName() {
+    public String serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
@@ -52,7 +52,7 @@ public final class GetServiceUnitArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceUnitName", required=true)
       private final String serviceUnitName;
 
-    public String getServiceUnitName() {
+    public String serviceUnitName() {
         return this.serviceUnitName;
     }
 

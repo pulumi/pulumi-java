@@ -26,7 +26,7 @@ public final class GetOnlineDeploymentLogsResult {
      * The retrieved online deployment logs.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
 

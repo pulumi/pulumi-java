@@ -26,7 +26,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dynamicTagsJson")
       private final @Nullable String dynamicTagsJson;
 
-    public Optional<String> getDynamicTagsJson() {
+    public Optional<String> dynamicTagsJson() {
         return this.dynamicTagsJson == null ? Optional.empty() : Optional.ofNullable(this.dynamicTagsJson);
     }
 
@@ -37,7 +37,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -48,7 +48,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="isPushEnabled", required=true)
       private final Boolean isPushEnabled;
 
-    public Boolean getIsPushEnabled() {
+    public Boolean isPushEnabled() {
         return this.isPushEnabled;
     }
 
@@ -59,7 +59,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -70,7 +70,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -81,7 +81,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tagWhitelistJson")
       private final @Nullable String tagWhitelistJson;
 
-    public Optional<String> getTagWhitelistJson() {
+    public Optional<String> tagWhitelistJson() {
         return this.tagWhitelistJson == null ? Optional.empty() : Optional.ofNullable(this.tagWhitelistJson);
     }
 
@@ -95,7 +95,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tagsRequiringAuth")
       private final @Nullable String tagsRequiringAuth;
 
-    public Optional<String> getTagsRequiringAuth() {
+    public Optional<String> tagsRequiringAuth() {
         return this.tagsRequiringAuth == null ? Optional.empty() : Optional.ofNullable(this.tagsRequiringAuth);
     }
 
@@ -106,7 +106,7 @@ public final class PushSettingsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

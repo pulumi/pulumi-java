@@ -35,14 +35,14 @@ public final class ListStreamingLocatorPathsResult {
      * Download Paths supported by current Streaming Locator
      * 
     */
-    public List<String> getDownloadPaths() {
+    public List<String> downloadPaths() {
         return this.downloadPaths == null ? List.of() : this.downloadPaths;
     }
     /**
      * Streaming Paths supported by current Streaming Locator
      * 
     */
-    public List<StreamingPathResponse> getStreamingPaths() {
+    public List<StreamingPathResponse> streamingPaths() {
         return this.streamingPaths == null ? List.of() : this.streamingPaths;
     }
 

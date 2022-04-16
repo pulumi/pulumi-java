@@ -26,7 +26,7 @@ public final class WebTestPropertiesResponseConfiguration {
      * The XML specification of a WebTest to run against an application.
      * 
     */
-    public Optional<String> getWebTest() {
+    public Optional<String> webTest() {
         return Optional.ofNullable(this.webTest);
     }
 

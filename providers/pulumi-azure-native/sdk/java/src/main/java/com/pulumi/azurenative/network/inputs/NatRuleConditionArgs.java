@@ -29,7 +29,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
+    public Output<List<String>> destinationAddresses() {
         return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
@@ -51,7 +51,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
+    public Output<List<String>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
@@ -62,7 +62,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipProtocols")
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
 
-    public Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> getIpProtocols() {
+    public Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols() {
         return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
     }
 
@@ -73,7 +73,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ruleConditionType", required=true)
       private final Output<String> ruleConditionType;
 
-    public Output<String> getRuleConditionType() {
+    public Output<String> ruleConditionType() {
         return this.ruleConditionType;
     }
 
@@ -96,7 +96,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
@@ -107,7 +107,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
+    public Output<List<String>> sourceIpGroups() {
         return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 

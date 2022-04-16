@@ -24,7 +24,7 @@ public final class FilterTrackSelectionResponse extends com.pulumi.resources.Inv
     @Import(name="trackSelections", required=true)
       private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
-    public List<FilterTrackPropertyConditionResponse> getTrackSelections() {
+    public List<FilterTrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections;
     }
 

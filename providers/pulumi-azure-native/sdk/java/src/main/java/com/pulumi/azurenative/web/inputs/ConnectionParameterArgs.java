@@ -27,7 +27,7 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
     @Import(name="oAuthSettings")
       private final @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
 
-    public Output<ApiOAuthSettingsArgs> getOAuthSettings() {
+    public Output<ApiOAuthSettingsArgs> oAuthSettings() {
         return this.oAuthSettings == null ? Codegen.empty() : this.oAuthSettings;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<ConnectionParameterType> type;
 
-    public Output<ConnectionParameterType> getType() {
+    public Output<ConnectionParameterType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

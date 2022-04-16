@@ -41,21 +41,21 @@ public final class ServiceBusAuthenticationResponse {
      * Gets or sets the SAS key.
      * 
     */
-    public Optional<String> getSasKey() {
+    public Optional<String> sasKey() {
         return Optional.ofNullable(this.sasKey);
     }
     /**
      * Gets or sets the SAS key name.
      * 
     */
-    public Optional<String> getSasKeyName() {
+    public Optional<String> sasKeyName() {
         return Optional.ofNullable(this.sasKeyName);
     }
     /**
      * Gets or sets the authentication type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

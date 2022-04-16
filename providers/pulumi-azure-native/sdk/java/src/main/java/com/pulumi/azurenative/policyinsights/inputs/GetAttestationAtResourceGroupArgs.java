@@ -19,7 +19,7 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
     @Import(name="attestationName", required=true)
       private final String attestationName;
 
-    public String getAttestationName() {
+    public String attestationName() {
         return this.attestationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAttestationAtResourceGroupArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

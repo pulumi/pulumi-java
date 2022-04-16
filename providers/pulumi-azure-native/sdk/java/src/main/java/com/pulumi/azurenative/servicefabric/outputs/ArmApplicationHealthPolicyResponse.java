@@ -55,14 +55,14 @@ public final class ArmApplicationHealthPolicyResponse {
      * Indicates whether warnings are treated with the same severity as errors.
      * 
     */
-    public Optional<Boolean> getConsiderWarningAsError() {
+    public Optional<Boolean> considerWarningAsError() {
         return Optional.ofNullable(this.considerWarningAsError);
     }
     /**
      * The health policy used by default to evaluate the health of a service type.
      * 
     */
-    public Optional<ArmServiceTypeHealthPolicyResponse> getDefaultServiceTypeHealthPolicy() {
+    public Optional<ArmServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
     /**
@@ -72,14 +72,14 @@ public final class ArmApplicationHealthPolicyResponse {
      * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyDeployedApplications() {
+    public Optional<Integer> maxPercentUnhealthyDeployedApplications() {
         return Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
     }
     /**
      * The map with service type health policy per service type name. The map is empty by default.
      * 
     */
-    public Map<String,ArmServiceTypeHealthPolicyResponse> getServiceTypeHealthPolicyMap() {
+    public Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap() {
         return this.serviceTypeHealthPolicyMap == null ? Map.of() : this.serviceTypeHealthPolicyMap;
     }
 

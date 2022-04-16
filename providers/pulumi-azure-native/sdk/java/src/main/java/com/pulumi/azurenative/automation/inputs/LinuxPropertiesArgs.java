@@ -29,7 +29,7 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="excludedPackageNameMasks")
       private final @Nullable Output<List<String>> excludedPackageNameMasks;
 
-    public Output<List<String>> getExcludedPackageNameMasks() {
+    public Output<List<String>> excludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? Codegen.empty() : this.excludedPackageNameMasks;
     }
 
@@ -40,7 +40,7 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="includedPackageClassifications")
       private final @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
-    public Output<Either<String,LinuxUpdateClasses>> getIncludedPackageClassifications() {
+    public Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications() {
         return this.includedPackageClassifications == null ? Codegen.empty() : this.includedPackageClassifications;
     }
 
@@ -51,7 +51,7 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="includedPackageNameMasks")
       private final @Nullable Output<List<String>> includedPackageNameMasks;
 
-    public Output<List<String>> getIncludedPackageNameMasks() {
+    public Output<List<String>> includedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? Codegen.empty() : this.includedPackageNameMasks;
     }
 
@@ -62,7 +62,7 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;
 
-    public Output<String> getRebootSetting() {
+    public Output<String> rebootSetting() {
         return this.rebootSetting == null ? Codegen.empty() : this.rebootSetting;
     }
 

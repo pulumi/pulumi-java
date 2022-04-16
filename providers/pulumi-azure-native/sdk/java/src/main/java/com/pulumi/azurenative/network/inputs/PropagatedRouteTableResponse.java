@@ -27,7 +27,7 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
     @Import(name="ids")
       private final @Nullable List<SubResourceResponse> ids;
 
-    public List<SubResourceResponse> getIds() {
+    public List<SubResourceResponse> ids() {
         return this.ids == null ? List.of() : this.ids;
     }
 
@@ -38,7 +38,7 @@ public final class PropagatedRouteTableResponse extends com.pulumi.resources.Inv
     @Import(name="labels")
       private final @Nullable List<String> labels;
 
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
 

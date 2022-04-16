@@ -23,7 +23,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="authenticationName")
       private final @Nullable Output<String> authenticationName;
 
-    public Output<String> getAuthenticationName() {
+    public Output<String> authenticationName() {
         return this.authenticationName == null ? Codegen.empty() : this.authenticationName;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="azureADOnlyAuthentication", required=true)
       private final Output<Boolean> azureADOnlyAuthentication;
 
-    public Output<Boolean> getAzureADOnlyAuthentication() {
+    public Output<Boolean> azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -56,7 +56,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -24,7 +24,7 @@ public final class SingletonPartitionSchemeDescriptionResponse extends com.pulum
     @Import(name="partitionScheme", required=true)
       private final String partitionScheme;
 
-    public String getPartitionScheme() {
+    public String partitionScheme() {
         return this.partitionScheme;
     }
 

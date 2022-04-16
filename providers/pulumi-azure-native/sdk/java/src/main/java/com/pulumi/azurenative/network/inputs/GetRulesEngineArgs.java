@@ -19,7 +19,7 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="frontDoorName", required=true)
       private final String frontDoorName;
 
-    public String getFrontDoorName() {
+    public String frontDoorName() {
         return this.frontDoorName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetRulesEngineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="rulesEngineName", required=true)
       private final String rulesEngineName;
 
-    public String getRulesEngineName() {
+    public String rulesEngineName() {
         return this.rulesEngineName;
     }
 

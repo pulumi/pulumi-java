@@ -25,7 +25,7 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends c
     @Import(name="cloudRoleArn")
       private final @Nullable String cloudRoleArn;
 
-    public Optional<String> getCloudRoleArn() {
+    public Optional<String> cloudRoleArn() {
         return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
     }
 

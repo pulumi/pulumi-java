@@ -35,14 +35,14 @@ public final class UpstreamAuthSettingsResponse {
      * Managed identity settings for upstream.
      * 
     */
-    public Optional<ManagedIdentitySettingsResponse> getManagedIdentity() {
+    public Optional<ManagedIdentitySettingsResponse> managedIdentity() {
         return Optional.ofNullable(this.managedIdentity);
     }
     /**
      * Upstream auth type enum.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

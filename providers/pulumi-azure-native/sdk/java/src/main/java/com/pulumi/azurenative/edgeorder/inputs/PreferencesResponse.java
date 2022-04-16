@@ -29,7 +29,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionPreferences")
       private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
-    public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
+    public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return this.encryptionPreferences == null ? Optional.empty() : Optional.ofNullable(this.encryptionPreferences);
     }
 
@@ -40,7 +40,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="managementResourcePreferences")
       private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
 
-    public Optional<ManagementResourcePreferencesResponse> getManagementResourcePreferences() {
+    public Optional<ManagementResourcePreferencesResponse> managementResourcePreferences() {
         return this.managementResourcePreferences == null ? Optional.empty() : Optional.ofNullable(this.managementResourcePreferences);
     }
 
@@ -51,7 +51,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notificationPreferences")
       private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
 
-    public List<NotificationPreferenceResponse> getNotificationPreferences() {
+    public List<NotificationPreferenceResponse> notificationPreferences() {
         return this.notificationPreferences == null ? List.of() : this.notificationPreferences;
     }
 
@@ -62,7 +62,7 @@ public final class PreferencesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transportPreferences")
       private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    public Optional<TransportPreferencesResponse> getTransportPreferences() {
+    public Optional<TransportPreferencesResponse> transportPreferences() {
         return this.transportPreferences == null ? Optional.empty() : Optional.ofNullable(this.transportPreferences);
     }
 

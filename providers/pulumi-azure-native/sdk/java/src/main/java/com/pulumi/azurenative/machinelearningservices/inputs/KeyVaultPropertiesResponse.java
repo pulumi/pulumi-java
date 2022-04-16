@@ -21,7 +21,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="identityClientId")
       private final @Nullable String identityClientId;
 
-    public Optional<String> getIdentityClientId() {
+    public Optional<String> identityClientId() {
         return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
     }
 
@@ -32,7 +32,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyIdentifier", required=true)
       private final String keyIdentifier;
 
-    public String getKeyIdentifier() {
+    public String keyIdentifier() {
         return this.keyIdentifier;
     }
 
@@ -43,7 +43,7 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultArmId", required=true)
       private final String keyVaultArmId;
 
-    public String getKeyVaultArmId() {
+    public String keyVaultArmId() {
         return this.keyVaultArmId;
     }
 

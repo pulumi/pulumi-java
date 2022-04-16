@@ -25,7 +25,7 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="directory")
       private final @Nullable String directory;
 
-    public Optional<String> getDirectory() {
+    public Optional<String> directory() {
         return this.directory == null ? Optional.empty() : Optional.ofNullable(this.directory);
     }
 
@@ -36,7 +36,7 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="repository", required=true)
       private final String repository;
 
-    public String getRepository() {
+    public String repository() {
         return this.repository;
     }
 
@@ -47,7 +47,7 @@ public final class GitRepoVolumeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="revision")
       private final @Nullable String revision;
 
-    public Optional<String> getRevision() {
+    public Optional<String> revision() {
         return this.revision == null ? Optional.empty() : Optional.ofNullable(this.revision);
     }
 

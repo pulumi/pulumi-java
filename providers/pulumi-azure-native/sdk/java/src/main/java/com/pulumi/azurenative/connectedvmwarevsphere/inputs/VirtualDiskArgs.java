@@ -30,7 +30,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="controllerKey")
       private final @Nullable Output<Integer> controllerKey;
 
-    public Output<Integer> getControllerKey() {
+    public Output<Integer> controllerKey() {
         return this.controllerKey == null ? Codegen.empty() : this.controllerKey;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceKey")
       private final @Nullable Output<Integer> deviceKey;
 
-    public Output<Integer> getDeviceKey() {
+    public Output<Integer> deviceKey() {
         return this.deviceKey == null ? Codegen.empty() : this.deviceKey;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -63,7 +63,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskMode")
       private final @Nullable Output<Either<String,DiskMode>> diskMode;
 
-    public Output<Either<String,DiskMode>> getDiskMode() {
+    public Output<Either<String,DiskMode>> diskMode() {
         return this.diskMode == null ? Codegen.empty() : this.diskMode;
     }
 
@@ -74,7 +74,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -85,7 +85,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskType>> diskType;
 
-    public Output<Either<String,DiskType>> getDiskType() {
+    public Output<Either<String,DiskType>> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -96,7 +96,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class VirtualDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unitNumber")
       private final @Nullable Output<Integer> unitNumber;
 
-    public Output<Integer> getUnitNumber() {
+    public Output<Integer> unitNumber() {
         return this.unitNumber == null ? Codegen.empty() : this.unitNumber;
     }
 

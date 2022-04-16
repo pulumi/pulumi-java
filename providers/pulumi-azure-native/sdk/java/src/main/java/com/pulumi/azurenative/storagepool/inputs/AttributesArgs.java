@@ -25,7 +25,7 @@ public final class AttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication", required=true)
       private final Output<Boolean> authentication;
 
-    public Output<Boolean> getAuthentication() {
+    public Output<Boolean> authentication() {
         return this.authentication;
     }
 
@@ -36,7 +36,7 @@ public final class AttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prodModeWriteProtect", required=true)
       private final Output<Boolean> prodModeWriteProtect;
 
-    public Output<Boolean> getProdModeWriteProtect() {
+    public Output<Boolean> prodModeWriteProtect() {
         return this.prodModeWriteProtect;
     }
 

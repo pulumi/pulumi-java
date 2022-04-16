@@ -24,7 +24,7 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="migrationProgress", required=true)
       private final MigrationProgressResponse migrationProgress;
 
-    public MigrationProgressResponse getMigrationProgress() {
+    public MigrationProgressResponse migrationProgress() {
         return this.migrationProgress;
     }
 
@@ -35,7 +35,7 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="oldSubnetId", required=true)
       private final String oldSubnetId;
 
-    public String getOldSubnetId() {
+    public String oldSubnetId() {
         return this.oldSubnetId;
     }
 
@@ -46,7 +46,7 @@ public final class MigrationPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="oldVnetSiteId", required=true)
       private final String oldVnetSiteId;
 
-    public String getOldVnetSiteId() {
+    public String oldVnetSiteId() {
         return this.oldVnetSiteId;
     }
 

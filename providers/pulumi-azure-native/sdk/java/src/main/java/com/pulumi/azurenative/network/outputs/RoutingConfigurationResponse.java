@@ -43,21 +43,21 @@ public final class RoutingConfigurationResponse {
      * The resource id RouteTable associated with this RoutingConfiguration.
      * 
     */
-    public Optional<SubResourceResponse> getAssociatedRouteTable() {
+    public Optional<SubResourceResponse> associatedRouteTable() {
         return Optional.ofNullable(this.associatedRouteTable);
     }
     /**
      * The list of RouteTables to advertise the routes to.
      * 
     */
-    public Optional<PropagatedRouteTableResponse> getPropagatedRouteTables() {
+    public Optional<PropagatedRouteTableResponse> propagatedRouteTables() {
         return Optional.ofNullable(this.propagatedRouteTables);
     }
     /**
      * List of routes that control routing from VirtualHub into a virtual network connection.
      * 
     */
-    public Optional<VnetRouteResponse> getVnetRoutes() {
+    public Optional<VnetRouteResponse> vnetRoutes() {
         return Optional.ofNullable(this.vnetRoutes);
     }
 

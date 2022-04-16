@@ -28,7 +28,7 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="context")
       private final @Nullable String context;
 
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
     }
 
@@ -40,7 +40,7 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dockerSpecificationType", required=true)
       private final String dockerSpecificationType;
 
-    public String getDockerSpecificationType() {
+    public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
 
@@ -52,7 +52,7 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dockerfile", required=true)
       private final String dockerfile;
 
-    public String getDockerfile() {
+    public String dockerfile() {
         return this.dockerfile;
     }
 
@@ -63,7 +63,7 @@ public final class DockerBuildResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="platform")
       private final @Nullable DockerImagePlatformResponse platform;
 
-    public Optional<DockerImagePlatformResponse> getPlatform() {
+    public Optional<DockerImagePlatformResponse> platform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
     }
 

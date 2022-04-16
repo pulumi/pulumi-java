@@ -26,7 +26,7 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualNetworkProfileArgs extends com.pulumi.resources.Resour
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

@@ -120,35 +120,35 @@ public final class GetADLSGen2FileDataSetMappingResult {
      * The id of the source data set.
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
     */
-    public String getDataSetMappingStatus() {
+    public String dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * File path within the file system.
      * 
     */
-    public String getFilePath() {
+    public String filePath() {
         return this.filePath;
     }
     /**
      * File system to which the file belongs.
      * 
     */
-    public String getFileSystem() {
+    public String fileSystem() {
         return this.fileSystem;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -156,63 +156,63 @@ public final class GetADLSGen2FileDataSetMappingResult {
      * Expected value is 'AdlsGen2File'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Type of output file
      * 
     */
-    public Optional<String> getOutputType() {
+    public Optional<String> outputType() {
         return Optional.ofNullable(this.outputType);
     }
     /**
      * Provisioning state of the data set mapping.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource group of storage account.
      * 
     */
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set.
      * 
     */
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account.
      * 
     */
-    public String getSubscriptionId() {
+    public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

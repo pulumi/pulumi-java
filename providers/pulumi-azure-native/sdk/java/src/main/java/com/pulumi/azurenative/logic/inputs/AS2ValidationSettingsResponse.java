@@ -27,7 +27,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="checkCertificateRevocationListOnReceive", required=true)
       private final Boolean checkCertificateRevocationListOnReceive;
 
-    public Boolean getCheckCertificateRevocationListOnReceive() {
+    public Boolean checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
 
@@ -38,7 +38,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="checkCertificateRevocationListOnSend", required=true)
       private final Boolean checkCertificateRevocationListOnSend;
 
-    public Boolean getCheckCertificateRevocationListOnSend() {
+    public Boolean checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
 
@@ -49,7 +49,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="checkDuplicateMessage", required=true)
       private final Boolean checkDuplicateMessage;
 
-    public Boolean getCheckDuplicateMessage() {
+    public Boolean checkDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
 
@@ -60,7 +60,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="compressMessage", required=true)
       private final Boolean compressMessage;
 
-    public Boolean getCompressMessage() {
+    public Boolean compressMessage() {
         return this.compressMessage;
     }
 
@@ -71,7 +71,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="encryptMessage", required=true)
       private final Boolean encryptMessage;
 
-    public Boolean getEncryptMessage() {
+    public Boolean encryptMessage() {
         return this.encryptMessage;
     }
 
@@ -82,7 +82,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
 
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -93,7 +93,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="interchangeDuplicatesValidityDays", required=true)
       private final Integer interchangeDuplicatesValidityDays;
 
-    public Integer getInterchangeDuplicatesValidityDays() {
+    public Integer interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
 
@@ -104,7 +104,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="overrideMessageProperties", required=true)
       private final Boolean overrideMessageProperties;
 
-    public Boolean getOverrideMessageProperties() {
+    public Boolean overrideMessageProperties() {
         return this.overrideMessageProperties;
     }
 
@@ -115,7 +115,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="signMessage", required=true)
       private final Boolean signMessage;
 
-    public Boolean getSignMessage() {
+    public Boolean signMessage() {
         return this.signMessage;
     }
 
@@ -126,7 +126,7 @@ public final class AS2ValidationSettingsResponse extends com.pulumi.resources.In
     @Import(name="signingAlgorithm")
       private final @Nullable String signingAlgorithm;
 
-    public Optional<String> getSigningAlgorithm() {
+    public Optional<String> signingAlgorithm() {
         return this.signingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.signingAlgorithm);
     }
 

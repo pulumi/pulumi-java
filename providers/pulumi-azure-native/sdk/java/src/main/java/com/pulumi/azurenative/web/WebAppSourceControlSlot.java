@@ -41,7 +41,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return Name of branch to use for deployment.
      * 
      */
-    public Output</* @Nullable */ String> getBranch() {
+    public Output</* @Nullable */ String> branch() {
         return this.branch;
     }
     /**
@@ -55,7 +55,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeploymentRollbackEnabled() {
+    public Output</* @Nullable */ Boolean> deploymentRollbackEnabled() {
         return this.deploymentRollbackEnabled;
     }
     /**
@@ -69,7 +69,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return If GitHub Action is selected, than the associated configuration.
      * 
      */
-    public Output</* @Nullable */ GitHubActionConfigurationResponse> getGitHubActionConfiguration() {
+    public Output</* @Nullable */ GitHubActionConfigurationResponse> gitHubActionConfiguration() {
         return this.gitHubActionConfiguration;
     }
     /**
@@ -83,7 +83,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return <code>true</code> if this is deployed via GitHub action.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsGitHubAction() {
+    public Output</* @Nullable */ Boolean> isGitHubAction() {
         return this.isGitHubAction;
     }
     /**
@@ -97,7 +97,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsManualIntegration() {
+    public Output</* @Nullable */ Boolean> isManualIntegration() {
         return this.isManualIntegration;
     }
     /**
@@ -111,7 +111,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsMercurial() {
+    public Output</* @Nullable */ Boolean> isMercurial() {
         return this.isMercurial;
     }
     /**
@@ -125,7 +125,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -139,7 +139,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -153,7 +153,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return Repository or source control URL.
      * 
      */
-    public Output</* @Nullable */ String> getRepoUrl() {
+    public Output</* @Nullable */ String> repoUrl() {
         return this.repoUrl;
     }
     /**
@@ -167,7 +167,7 @@ public class WebAppSourceControlSlot extends com.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

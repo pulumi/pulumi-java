@@ -26,7 +26,7 @@ public final class OfficeDataConnectorDataTypesResponseSharePoint {
      * Describe whether this data type connection is enabled or not.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

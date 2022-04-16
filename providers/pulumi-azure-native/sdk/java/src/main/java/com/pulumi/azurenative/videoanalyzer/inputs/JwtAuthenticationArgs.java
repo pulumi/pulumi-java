@@ -31,7 +31,7 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> getAudiences() {
+    public Output<List<String>> audiences() {
         return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
@@ -42,7 +42,7 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="claims")
       private final @Nullable Output<List<TokenClaimArgs>> claims;
 
-    public Output<List<TokenClaimArgs>> getClaims() {
+    public Output<List<TokenClaimArgs>> claims() {
         return this.claims == null ? Codegen.empty() : this.claims;
     }
 
@@ -53,7 +53,7 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="issuers")
       private final @Nullable Output<List<String>> issuers;
 
-    public Output<List<String>> getIssuers() {
+    public Output<List<String>> issuers() {
         return this.issuers == null ? Codegen.empty() : this.issuers;
     }
 
@@ -64,7 +64,7 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keys")
       private final @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
 
-    public Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> getKeys() {
+    public Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 
@@ -76,7 +76,7 @@ public final class JwtAuthenticationArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

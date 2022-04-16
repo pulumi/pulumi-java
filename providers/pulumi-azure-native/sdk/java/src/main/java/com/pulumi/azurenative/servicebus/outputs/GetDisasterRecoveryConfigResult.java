@@ -77,56 +77,56 @@ public final class GetDisasterRecoveryConfigResult {
      * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
     */
-    public Optional<String> getAlternateName() {
+    public Optional<String> alternateName() {
         return Optional.ofNullable(this.alternateName);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
     */
-    public Optional<String> getPartnerNamespace() {
+    public Optional<String> partnerNamespace() {
         return Optional.ofNullable(this.partnerNamespace);
     }
     /**
      * Number of entities pending to be replicated.
      * 
     */
-    public Double getPendingReplicationOperationsCount() {
+    public Double pendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
      * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

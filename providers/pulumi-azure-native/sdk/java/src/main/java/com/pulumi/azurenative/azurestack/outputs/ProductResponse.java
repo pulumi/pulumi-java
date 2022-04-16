@@ -180,154 +180,154 @@ public final class ProductResponse {
      * The part number used for billing purposes.
      * 
     */
-    public Optional<String> getBillingPartNumber() {
+    public Optional<String> billingPartNumber() {
         return Optional.ofNullable(this.billingPartNumber);
     }
     /**
      * Product compatibility with current device.
      * 
     */
-    public Optional<CompatibilityResponse> getCompatibility() {
+    public Optional<CompatibilityResponse> compatibility() {
         return Optional.ofNullable(this.compatibility);
     }
     /**
      * The description of the product.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the product.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The identifier of the gallery item corresponding to the product.
      * 
     */
-    public Optional<String> getGalleryItemIdentity() {
+    public Optional<String> galleryItemIdentity() {
         return Optional.ofNullable(this.galleryItemIdentity);
     }
     /**
      * Additional links available for this product.
      * 
     */
-    public Optional<IconUrisResponse> getIconUris() {
+    public Optional<IconUrisResponse> iconUris() {
         return Optional.ofNullable(this.iconUris);
     }
     /**
      * ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The legal terms.
      * 
     */
-    public Optional<String> getLegalTerms() {
+    public Optional<String> legalTerms() {
         return Optional.ofNullable(this.legalTerms);
     }
     /**
      * Additional links available for this product.
      * 
     */
-    public List<ProductLinkResponse> getLinks() {
+    public List<ProductLinkResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The offer representing the product.
      * 
     */
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
      * The version of the product offer.
      * 
     */
-    public Optional<String> getOfferVersion() {
+    public Optional<String> offerVersion() {
         return Optional.ofNullable(this.offerVersion);
     }
     /**
      * The length of product content.
      * 
     */
-    public Optional<Double> getPayloadLength() {
+    public Optional<Double> payloadLength() {
         return Optional.ofNullable(this.payloadLength);
     }
     /**
      * The privacy policy.
      * 
     */
-    public Optional<String> getPrivacyPolicy() {
+    public Optional<String> privacyPolicy() {
         return Optional.ofNullable(this.privacyPolicy);
     }
     /**
      * The kind of the product (virtualMachine or virtualMachineExtension)
      * 
     */
-    public Optional<String> getProductKind() {
+    public Optional<String> productKind() {
         return Optional.ofNullable(this.productKind);
     }
     /**
      * Additional properties for the product.
      * 
     */
-    public Optional<ProductPropertiesResponse> getProductProperties() {
+    public Optional<ProductPropertiesResponse> productProperties() {
         return Optional.ofNullable(this.productProperties);
     }
     /**
      * The user-friendly name of the product publisher.
      * 
     */
-    public Optional<String> getPublisherDisplayName() {
+    public Optional<String> publisherDisplayName() {
         return Optional.ofNullable(this.publisherDisplayName);
     }
     /**
      * Publisher identifier.
      * 
     */
-    public Optional<String> getPublisherIdentifier() {
+    public Optional<String> publisherIdentifier() {
         return Optional.ofNullable(this.publisherIdentifier);
     }
     /**
      * The product SKU.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Type of Resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The type of the Virtual Machine Extension.
      * 
     */
-    public Optional<String> getVmExtensionType() {
+    public Optional<String> vmExtensionType() {
         return Optional.ofNullable(this.vmExtensionType);
     }
 

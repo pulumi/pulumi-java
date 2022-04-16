@@ -106,56 +106,56 @@ public final class GetWebAppHybridConnectionSlotResult {
      * The hostname of the endpoint.
      * 
     */
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The port of the endpoint.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The ARM URI to the Service Bus relay.
      * 
     */
-    public Optional<String> getRelayArmUri() {
+    public Optional<String> relayArmUri() {
         return Optional.ofNullable(this.relayArmUri);
     }
     /**
      * The name of the Service Bus relay.
      * 
     */
-    public Optional<String> getRelayName() {
+    public Optional<String> relayName() {
         return Optional.ofNullable(this.relayName);
     }
     /**
      * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
     */
-    public Optional<String> getSendKeyName() {
+    public Optional<String> sendKeyName() {
         return Optional.ofNullable(this.sendKeyName);
     }
     /**
@@ -163,28 +163,28 @@ public final class GetWebAppHybridConnectionSlotResult {
      * normally, use the POST /listKeys API instead.
      * 
     */
-    public Optional<String> getSendKeyValue() {
+    public Optional<String> sendKeyValue() {
         return Optional.ofNullable(this.sendKeyValue);
     }
     /**
      * The name of the Service Bus namespace.
      * 
     */
-    public Optional<String> getServiceBusNamespace() {
+    public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
      * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
     */
-    public Optional<String> getServiceBusSuffix() {
+    public Optional<String> serviceBusSuffix() {
         return Optional.ofNullable(this.serviceBusSuffix);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

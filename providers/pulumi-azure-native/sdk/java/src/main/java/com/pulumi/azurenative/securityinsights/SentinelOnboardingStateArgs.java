@@ -23,7 +23,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="customerManagedKey")
       private final @Nullable Output<Boolean> customerManagedKey;
 
-    public Output<Boolean> getCustomerManagedKey() {
+    public Output<Boolean> customerManagedKey() {
         return this.customerManagedKey == null ? Codegen.empty() : this.customerManagedKey;
     }
 
@@ -34,7 +34,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -45,7 +45,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="sentinelOnboardingStateName")
       private final @Nullable Output<String> sentinelOnboardingStateName;
 
-    public Output<String> getSentinelOnboardingStateName() {
+    public Output<String> sentinelOnboardingStateName() {
         return this.sentinelOnboardingStateName == null ? Codegen.empty() : this.sentinelOnboardingStateName;
     }
 
@@ -67,7 +67,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

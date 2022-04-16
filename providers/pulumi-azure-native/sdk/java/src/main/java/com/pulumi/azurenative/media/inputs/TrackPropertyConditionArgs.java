@@ -29,7 +29,7 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
     @Import(name="operation", required=true)
       private final Output<Either<String,TrackPropertyCompareOperation>> operation;
 
-    public Output<Either<String,TrackPropertyCompareOperation>> getOperation() {
+    public Output<Either<String,TrackPropertyCompareOperation>> operation() {
         return this.operation;
     }
 
@@ -40,7 +40,7 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
     @Import(name="property", required=true)
       private final Output<Either<String,TrackPropertyType>> property;
 
-    public Output<Either<String,TrackPropertyType>> getProperty() {
+    public Output<Either<String,TrackPropertyType>> property() {
         return this.property;
     }
 
@@ -51,7 +51,7 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

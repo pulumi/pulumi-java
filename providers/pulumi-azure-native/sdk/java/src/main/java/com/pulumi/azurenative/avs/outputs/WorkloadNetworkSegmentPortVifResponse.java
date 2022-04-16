@@ -26,7 +26,7 @@ public final class WorkloadNetworkSegmentPortVifResponse {
      * Name of port or VIF attached to segment.
      * 
     */
-    public Optional<String> getPortName() {
+    public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }
 

@@ -21,21 +21,21 @@ public final class ResourceTypeExtensionArgs extends com.pulumi.resources.Resour
     @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
-    public Output<String> getEndpointUri() {
+    public Output<String> endpointUri() {
         return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
     @Import(name="extensionCategories")
       private final @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
 
-    public Output<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
+    public Output<List<Either<String,ExtensionCategory>>> extensionCategories() {
         return this.extensionCategories == null ? Codegen.empty() : this.extensionCategories;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

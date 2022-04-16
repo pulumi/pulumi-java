@@ -29,7 +29,7 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="groupNames")
       private final @Nullable Output<List<String>> groupNames;
 
-    public Output<List<String>> getGroupNames() {
+    public Output<List<String>> groupNames() {
         return this.groupNames == null ? Codegen.empty() : this.groupNames;
     }
 
@@ -40,7 +40,7 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
-    public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
+    public Output<Map<String,ParameterValuesValueArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -51,7 +51,7 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="policyDefinitionId", required=true)
       private final Output<String> policyDefinitionId;
 
-    public Output<String> getPolicyDefinitionId() {
+    public Output<String> policyDefinitionId() {
         return this.policyDefinitionId;
     }
 
@@ -62,7 +62,7 @@ public final class PolicyDefinitionReferenceArgs extends com.pulumi.resources.Re
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> getPolicyDefinitionReferenceId() {
+    public Output<String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
     }
 

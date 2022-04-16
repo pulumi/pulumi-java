@@ -24,7 +24,7 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
     @Import(name="ordererEndpoints", required=true)
       private final List<String> ordererEndpoints;
 
-    public List<String> getOrdererEndpoints() {
+    public List<String> ordererEndpoints() {
         return this.ordererEndpoints;
     }
 
@@ -35,7 +35,7 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
     @Import(name="storageEndpoints", required=true)
       private final List<String> storageEndpoints;
 
-    public List<String> getStorageEndpoints() {
+    public List<String> storageEndpoints() {
         return this.storageEndpoints;
     }
 

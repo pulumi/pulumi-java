@@ -48,28 +48,28 @@ public final class ExpressRouteLinkMacSecConfigResponse {
      * Keyvault Secret Identifier URL containing Mac security CAK key.
      * 
     */
-    public Optional<String> getCakSecretIdentifier() {
+    public Optional<String> cakSecretIdentifier() {
         return Optional.ofNullable(this.cakSecretIdentifier);
     }
     /**
      * Mac security cipher.
      * 
     */
-    public Optional<String> getCipher() {
+    public Optional<String> cipher() {
         return Optional.ofNullable(this.cipher);
     }
     /**
      * Keyvault Secret Identifier URL containing Mac security CKN key.
      * 
     */
-    public Optional<String> getCknSecretIdentifier() {
+    public Optional<String> cknSecretIdentifier() {
         return Optional.ofNullable(this.cknSecretIdentifier);
     }
     /**
      * Sci mode enabled/disabled.
      * 
     */
-    public Optional<String> getSciState() {
+    public Optional<String> sciState() {
         return Optional.ofNullable(this.sciState);
     }
 

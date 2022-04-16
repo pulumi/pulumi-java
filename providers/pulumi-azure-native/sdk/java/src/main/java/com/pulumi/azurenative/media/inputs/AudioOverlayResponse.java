@@ -26,7 +26,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="audioGainLevel")
       private final @Nullable Double audioGainLevel;
 
-    public Optional<Double> getAudioGainLevel() {
+    public Optional<Double> audioGainLevel() {
         return this.audioGainLevel == null ? Optional.empty() : Optional.ofNullable(this.audioGainLevel);
     }
 
@@ -37,7 +37,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="end")
       private final @Nullable String end;
 
-    public Optional<String> getEnd() {
+    public Optional<String> end() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
     }
 
@@ -48,7 +48,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fadeInDuration")
       private final @Nullable String fadeInDuration;
 
-    public Optional<String> getFadeInDuration() {
+    public Optional<String> fadeInDuration() {
         return this.fadeInDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeInDuration);
     }
 
@@ -59,7 +59,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fadeOutDuration")
       private final @Nullable String fadeOutDuration;
 
-    public Optional<String> getFadeOutDuration() {
+    public Optional<String> fadeOutDuration() {
         return this.fadeOutDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeOutDuration);
     }
 
@@ -70,7 +70,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="inputLabel", required=true)
       private final String inputLabel;
 
-    public String getInputLabel() {
+    public String inputLabel() {
         return this.inputLabel;
     }
 
@@ -82,7 +82,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -93,7 +93,7 @@ public final class AudioOverlayResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="start")
       private final @Nullable String start;
 
-    public Optional<String> getStart() {
+    public Optional<String> start() {
         return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
     }
 

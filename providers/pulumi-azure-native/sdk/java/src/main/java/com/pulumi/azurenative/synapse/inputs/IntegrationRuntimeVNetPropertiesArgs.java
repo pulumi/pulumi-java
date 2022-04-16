@@ -27,7 +27,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends com.pulumi.resou
     @Import(name="publicIPs")
       private final @Nullable Output<List<String>> publicIPs;
 
-    public Output<List<String>> getPublicIPs() {
+    public Output<List<String>> publicIPs() {
         return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends com.pulumi.resou
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends com.pulumi.resou
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -60,7 +60,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends com.pulumi.resou
     @Import(name="vNetId")
       private final @Nullable Output<String> vNetId;
 
-    public Output<String> getVNetId() {
+    public Output<String> vNetId() {
         return this.vNetId == null ? Codegen.empty() : this.vNetId;
     }
 

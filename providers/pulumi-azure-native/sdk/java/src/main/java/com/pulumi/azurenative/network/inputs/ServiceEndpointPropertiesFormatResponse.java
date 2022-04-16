@@ -26,7 +26,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends com.pulumi.re
     @Import(name="service")
       private final @Nullable String service;
 
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
     }
 

@@ -69,49 +69,49 @@ public final class X12FramingSettingsResponse {
      * The X12 character set.
      * 
     */
-    public String getCharacterSet() {
+    public String characterSet() {
         return this.characterSet;
     }
     /**
      * The component separator.
      * 
     */
-    public Integer getComponentSeparator() {
+    public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
     */
-    public Integer getDataElementSeparator() {
+    public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The replacement character.
      * 
     */
-    public Integer getReplaceCharacter() {
+    public Integer replaceCharacter() {
         return this.replaceCharacter;
     }
     /**
      * The value indicating whether to replace separators in payload.
      * 
     */
-    public Boolean getReplaceSeparatorsInPayload() {
+    public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
     /**
      * The segment terminator.
      * 
     */
-    public Integer getSegmentTerminator() {
+    public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The segment terminator suffix.
      * 
     */
-    public String getSegmentTerminatorSuffix() {
+    public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 

@@ -83,14 +83,14 @@ public final class GetKustoClusterDataSetResult {
      * Unique id for identifying a data set resource
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -98,49 +98,49 @@ public final class GetKustoClusterDataSetResult {
      * Expected value is 'KustoCluster'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource id of the kusto cluster.
      * 
     */
-    public String getKustoClusterResourceId() {
+    public String kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
      * Location of the kusto cluster.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the kusto cluster data set.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

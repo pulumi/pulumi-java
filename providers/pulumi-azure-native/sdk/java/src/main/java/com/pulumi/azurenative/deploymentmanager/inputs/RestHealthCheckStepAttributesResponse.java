@@ -27,7 +27,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="healthChecks", required=true)
       private final List<RestHealthCheckResponse> healthChecks;
 
-    public List<RestHealthCheckResponse> getHealthChecks() {
+    public List<RestHealthCheckResponse> healthChecks() {
         return this.healthChecks;
     }
 
@@ -38,7 +38,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="healthyStateDuration", required=true)
       private final String healthyStateDuration;
 
-    public String getHealthyStateDuration() {
+    public String healthyStateDuration() {
         return this.healthyStateDuration;
     }
 
@@ -49,7 +49,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="maxElasticDuration")
       private final @Nullable String maxElasticDuration;
 
-    public Optional<String> getMaxElasticDuration() {
+    public Optional<String> maxElasticDuration() {
         return this.maxElasticDuration == null ? Optional.empty() : Optional.ofNullable(this.maxElasticDuration);
     }
 
@@ -61,7 +61,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -72,7 +72,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="waitDuration")
       private final @Nullable String waitDuration;
 
-    public Optional<String> getWaitDuration() {
+    public Optional<String> waitDuration() {
         return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);
     }
 

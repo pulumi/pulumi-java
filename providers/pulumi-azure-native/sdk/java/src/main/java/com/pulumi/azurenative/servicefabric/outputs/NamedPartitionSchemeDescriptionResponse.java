@@ -42,14 +42,14 @@ public final class NamedPartitionSchemeDescriptionResponse {
      * The number of partitions.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * Array of size specified by the ‘count’ parameter, for the names of the partitions.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
     /**
@@ -57,7 +57,7 @@ public final class NamedPartitionSchemeDescriptionResponse {
      * Expected value is 'Named'.
      * 
     */
-    public String getPartitionScheme() {
+    public String partitionScheme() {
         return this.partitionScheme;
     }
 

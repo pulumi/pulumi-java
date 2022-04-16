@@ -26,7 +26,7 @@ public final class FaceDetectorPresetResponse extends com.pulumi.resources.Invok
     @Import(name="blurType")
       private final @Nullable String blurType;
 
-    public Optional<String> getBlurType() {
+    public Optional<String> blurType() {
         return this.blurType == null ? Optional.empty() : Optional.ofNullable(this.blurType);
     }
 
@@ -37,7 +37,7 @@ public final class FaceDetectorPresetResponse extends com.pulumi.resources.Invok
     @Import(name="experimentalOptions")
       private final @Nullable Map<String,String> experimentalOptions;
 
-    public Map<String,String> getExperimentalOptions() {
+    public Map<String,String> experimentalOptions() {
         return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
     }
 
@@ -48,7 +48,7 @@ public final class FaceDetectorPresetResponse extends com.pulumi.resources.Invok
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -60,7 +60,7 @@ public final class FaceDetectorPresetResponse extends com.pulumi.resources.Invok
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -71,7 +71,7 @@ public final class FaceDetectorPresetResponse extends com.pulumi.resources.Invok
     @Import(name="resolution")
       private final @Nullable String resolution;
 
-    public Optional<String> getResolution() {
+    public Optional<String> resolution() {
         return this.resolution == null ? Optional.empty() : Optional.ofNullable(this.resolution);
     }
 

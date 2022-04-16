@@ -24,7 +24,7 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
      * LogAnalyticsOutput
      * 
     */
-    public LogAnalyticsOutputResponse getProperties() {
+    public LogAnalyticsOutputResponse properties() {
         return this.properties;
     }
 

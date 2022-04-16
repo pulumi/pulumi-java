@@ -23,7 +23,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

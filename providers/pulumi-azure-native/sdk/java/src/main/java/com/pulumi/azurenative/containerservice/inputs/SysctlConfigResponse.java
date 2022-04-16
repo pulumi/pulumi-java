@@ -27,7 +27,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsAioMaxNr")
       private final @Nullable Integer fsAioMaxNr;
 
-    public Optional<Integer> getFsAioMaxNr() {
+    public Optional<Integer> fsAioMaxNr() {
         return this.fsAioMaxNr == null ? Optional.empty() : Optional.ofNullable(this.fsAioMaxNr);
     }
 
@@ -38,7 +38,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsFileMax")
       private final @Nullable Integer fsFileMax;
 
-    public Optional<Integer> getFsFileMax() {
+    public Optional<Integer> fsFileMax() {
         return this.fsFileMax == null ? Optional.empty() : Optional.ofNullable(this.fsFileMax);
     }
 
@@ -49,7 +49,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsInotifyMaxUserWatches")
       private final @Nullable Integer fsInotifyMaxUserWatches;
 
-    public Optional<Integer> getFsInotifyMaxUserWatches() {
+    public Optional<Integer> fsInotifyMaxUserWatches() {
         return this.fsInotifyMaxUserWatches == null ? Optional.empty() : Optional.ofNullable(this.fsInotifyMaxUserWatches);
     }
 
@@ -60,7 +60,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fsNrOpen")
       private final @Nullable Integer fsNrOpen;
 
-    public Optional<Integer> getFsNrOpen() {
+    public Optional<Integer> fsNrOpen() {
         return this.fsNrOpen == null ? Optional.empty() : Optional.ofNullable(this.fsNrOpen);
     }
 
@@ -71,7 +71,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="kernelThreadsMax")
       private final @Nullable Integer kernelThreadsMax;
 
-    public Optional<Integer> getKernelThreadsMax() {
+    public Optional<Integer> kernelThreadsMax() {
         return this.kernelThreadsMax == null ? Optional.empty() : Optional.ofNullable(this.kernelThreadsMax);
     }
 
@@ -82,7 +82,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreNetdevMaxBacklog")
       private final @Nullable Integer netCoreNetdevMaxBacklog;
 
-    public Optional<Integer> getNetCoreNetdevMaxBacklog() {
+    public Optional<Integer> netCoreNetdevMaxBacklog() {
         return this.netCoreNetdevMaxBacklog == null ? Optional.empty() : Optional.ofNullable(this.netCoreNetdevMaxBacklog);
     }
 
@@ -93,7 +93,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreOptmemMax")
       private final @Nullable Integer netCoreOptmemMax;
 
-    public Optional<Integer> getNetCoreOptmemMax() {
+    public Optional<Integer> netCoreOptmemMax() {
         return this.netCoreOptmemMax == null ? Optional.empty() : Optional.ofNullable(this.netCoreOptmemMax);
     }
 
@@ -104,7 +104,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreRmemDefault")
       private final @Nullable Integer netCoreRmemDefault;
 
-    public Optional<Integer> getNetCoreRmemDefault() {
+    public Optional<Integer> netCoreRmemDefault() {
         return this.netCoreRmemDefault == null ? Optional.empty() : Optional.ofNullable(this.netCoreRmemDefault);
     }
 
@@ -115,7 +115,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreRmemMax")
       private final @Nullable Integer netCoreRmemMax;
 
-    public Optional<Integer> getNetCoreRmemMax() {
+    public Optional<Integer> netCoreRmemMax() {
         return this.netCoreRmemMax == null ? Optional.empty() : Optional.ofNullable(this.netCoreRmemMax);
     }
 
@@ -126,7 +126,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreSomaxconn")
       private final @Nullable Integer netCoreSomaxconn;
 
-    public Optional<Integer> getNetCoreSomaxconn() {
+    public Optional<Integer> netCoreSomaxconn() {
         return this.netCoreSomaxconn == null ? Optional.empty() : Optional.ofNullable(this.netCoreSomaxconn);
     }
 
@@ -137,7 +137,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreWmemDefault")
       private final @Nullable Integer netCoreWmemDefault;
 
-    public Optional<Integer> getNetCoreWmemDefault() {
+    public Optional<Integer> netCoreWmemDefault() {
         return this.netCoreWmemDefault == null ? Optional.empty() : Optional.ofNullable(this.netCoreWmemDefault);
     }
 
@@ -148,7 +148,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netCoreWmemMax")
       private final @Nullable Integer netCoreWmemMax;
 
-    public Optional<Integer> getNetCoreWmemMax() {
+    public Optional<Integer> netCoreWmemMax() {
         return this.netCoreWmemMax == null ? Optional.empty() : Optional.ofNullable(this.netCoreWmemMax);
     }
 
@@ -159,7 +159,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4IpLocalPortRange")
       private final @Nullable String netIpv4IpLocalPortRange;
 
-    public Optional<String> getNetIpv4IpLocalPortRange() {
+    public Optional<String> netIpv4IpLocalPortRange() {
         return this.netIpv4IpLocalPortRange == null ? Optional.empty() : Optional.ofNullable(this.netIpv4IpLocalPortRange);
     }
 
@@ -170,7 +170,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4NeighDefaultGcThresh1")
       private final @Nullable Integer netIpv4NeighDefaultGcThresh1;
 
-    public Optional<Integer> getNetIpv4NeighDefaultGcThresh1() {
+    public Optional<Integer> netIpv4NeighDefaultGcThresh1() {
         return this.netIpv4NeighDefaultGcThresh1 == null ? Optional.empty() : Optional.ofNullable(this.netIpv4NeighDefaultGcThresh1);
     }
 
@@ -181,7 +181,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4NeighDefaultGcThresh2")
       private final @Nullable Integer netIpv4NeighDefaultGcThresh2;
 
-    public Optional<Integer> getNetIpv4NeighDefaultGcThresh2() {
+    public Optional<Integer> netIpv4NeighDefaultGcThresh2() {
         return this.netIpv4NeighDefaultGcThresh2 == null ? Optional.empty() : Optional.ofNullable(this.netIpv4NeighDefaultGcThresh2);
     }
 
@@ -192,7 +192,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4NeighDefaultGcThresh3")
       private final @Nullable Integer netIpv4NeighDefaultGcThresh3;
 
-    public Optional<Integer> getNetIpv4NeighDefaultGcThresh3() {
+    public Optional<Integer> netIpv4NeighDefaultGcThresh3() {
         return this.netIpv4NeighDefaultGcThresh3 == null ? Optional.empty() : Optional.ofNullable(this.netIpv4NeighDefaultGcThresh3);
     }
 
@@ -203,7 +203,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpFinTimeout")
       private final @Nullable Integer netIpv4TcpFinTimeout;
 
-    public Optional<Integer> getNetIpv4TcpFinTimeout() {
+    public Optional<Integer> netIpv4TcpFinTimeout() {
         return this.netIpv4TcpFinTimeout == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpFinTimeout);
     }
 
@@ -214,7 +214,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpKeepaliveProbes")
       private final @Nullable Integer netIpv4TcpKeepaliveProbes;
 
-    public Optional<Integer> getNetIpv4TcpKeepaliveProbes() {
+    public Optional<Integer> netIpv4TcpKeepaliveProbes() {
         return this.netIpv4TcpKeepaliveProbes == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpKeepaliveProbes);
     }
 
@@ -225,7 +225,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpKeepaliveTime")
       private final @Nullable Integer netIpv4TcpKeepaliveTime;
 
-    public Optional<Integer> getNetIpv4TcpKeepaliveTime() {
+    public Optional<Integer> netIpv4TcpKeepaliveTime() {
         return this.netIpv4TcpKeepaliveTime == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpKeepaliveTime);
     }
 
@@ -236,7 +236,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpMaxSynBacklog")
       private final @Nullable Integer netIpv4TcpMaxSynBacklog;
 
-    public Optional<Integer> getNetIpv4TcpMaxSynBacklog() {
+    public Optional<Integer> netIpv4TcpMaxSynBacklog() {
         return this.netIpv4TcpMaxSynBacklog == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpMaxSynBacklog);
     }
 
@@ -247,7 +247,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpMaxTwBuckets")
       private final @Nullable Integer netIpv4TcpMaxTwBuckets;
 
-    public Optional<Integer> getNetIpv4TcpMaxTwBuckets() {
+    public Optional<Integer> netIpv4TcpMaxTwBuckets() {
         return this.netIpv4TcpMaxTwBuckets == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpMaxTwBuckets);
     }
 
@@ -258,7 +258,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpTwReuse")
       private final @Nullable Boolean netIpv4TcpTwReuse;
 
-    public Optional<Boolean> getNetIpv4TcpTwReuse() {
+    public Optional<Boolean> netIpv4TcpTwReuse() {
         return this.netIpv4TcpTwReuse == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpTwReuse);
     }
 
@@ -269,7 +269,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netIpv4TcpkeepaliveIntvl")
       private final @Nullable Integer netIpv4TcpkeepaliveIntvl;
 
-    public Optional<Integer> getNetIpv4TcpkeepaliveIntvl() {
+    public Optional<Integer> netIpv4TcpkeepaliveIntvl() {
         return this.netIpv4TcpkeepaliveIntvl == null ? Optional.empty() : Optional.ofNullable(this.netIpv4TcpkeepaliveIntvl);
     }
 
@@ -280,7 +280,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netNetfilterNfConntrackBuckets")
       private final @Nullable Integer netNetfilterNfConntrackBuckets;
 
-    public Optional<Integer> getNetNetfilterNfConntrackBuckets() {
+    public Optional<Integer> netNetfilterNfConntrackBuckets() {
         return this.netNetfilterNfConntrackBuckets == null ? Optional.empty() : Optional.ofNullable(this.netNetfilterNfConntrackBuckets);
     }
 
@@ -291,7 +291,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="netNetfilterNfConntrackMax")
       private final @Nullable Integer netNetfilterNfConntrackMax;
 
-    public Optional<Integer> getNetNetfilterNfConntrackMax() {
+    public Optional<Integer> netNetfilterNfConntrackMax() {
         return this.netNetfilterNfConntrackMax == null ? Optional.empty() : Optional.ofNullable(this.netNetfilterNfConntrackMax);
     }
 
@@ -302,7 +302,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vmMaxMapCount")
       private final @Nullable Integer vmMaxMapCount;
 
-    public Optional<Integer> getVmMaxMapCount() {
+    public Optional<Integer> vmMaxMapCount() {
         return this.vmMaxMapCount == null ? Optional.empty() : Optional.ofNullable(this.vmMaxMapCount);
     }
 
@@ -313,7 +313,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vmSwappiness")
       private final @Nullable Integer vmSwappiness;
 
-    public Optional<Integer> getVmSwappiness() {
+    public Optional<Integer> vmSwappiness() {
         return this.vmSwappiness == null ? Optional.empty() : Optional.ofNullable(this.vmSwappiness);
     }
 
@@ -324,7 +324,7 @@ public final class SysctlConfigResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vmVfsCachePressure")
       private final @Nullable Integer vmVfsCachePressure;
 
-    public Optional<Integer> getVmVfsCachePressure() {
+    public Optional<Integer> vmVfsCachePressure() {
         return this.vmVfsCachePressure == null ? Optional.empty() : Optional.ofNullable(this.vmVfsCachePressure);
     }
 

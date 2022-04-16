@@ -26,7 +26,7 @@ public final class ImmediateCopyOptionArgs extends com.pulumi.resources.Resource
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 

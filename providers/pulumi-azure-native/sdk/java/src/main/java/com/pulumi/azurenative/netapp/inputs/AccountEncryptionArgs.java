@@ -26,7 +26,7 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keySource")
       private final @Nullable Output<String> keySource;
 
-    public Output<String> getKeySource() {
+    public Output<String> keySource() {
         return this.keySource == null ? Codegen.empty() : this.keySource;
     }
 

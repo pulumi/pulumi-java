@@ -68,49 +68,49 @@ public final class GatewayRouteResponse {
      * The route's AS path sequence.
      * 
     */
-    public String getAsPath() {
+    public String asPath() {
         return this.asPath;
     }
     /**
      * The gateway's local address.
      * 
     */
-    public String getLocalAddress() {
+    public String localAddress() {
         return this.localAddress;
     }
     /**
      * The route's network prefix.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * The route's next hop.
      * 
     */
-    public String getNextHop() {
+    public String nextHop() {
         return this.nextHop;
     }
     /**
      * The source this route was learned from.
      * 
     */
-    public String getOrigin() {
+    public String origin() {
         return this.origin;
     }
     /**
      * The peer this route was learned from.
      * 
     */
-    public String getSourcePeer() {
+    public String sourcePeer() {
         return this.sourcePeer;
     }
     /**
      * The route's weight.
      * 
     */
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

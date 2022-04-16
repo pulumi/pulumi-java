@@ -26,7 +26,7 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="groupConnectivity")
       private final @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
 
-    public Output<Either<String,GroupConnectivity>> getGroupConnectivity() {
+    public Output<Either<String,GroupConnectivity>> groupConnectivity() {
         return this.groupConnectivity == null ? Codegen.empty() : this.groupConnectivity;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="isGlobal")
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
-    public Output<Either<String,IsGlobal>> getIsGlobal() {
+    public Output<Either<String,IsGlobal>> isGlobal() {
         return this.isGlobal == null ? Codegen.empty() : this.isGlobal;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="networkGroupId")
       private final @Nullable Output<String> networkGroupId;
 
-    public Output<String> getNetworkGroupId() {
+    public Output<String> networkGroupId() {
         return this.networkGroupId == null ? Codegen.empty() : this.networkGroupId;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="useHubGateway")
       private final @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
-    public Output<Either<String,UseHubGateway>> getUseHubGateway() {
+    public Output<Either<String,UseHubGateway>> useHubGateway() {
         return this.useHubGateway == null ? Codegen.empty() : this.useHubGateway;
     }
 

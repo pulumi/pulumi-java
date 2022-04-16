@@ -33,7 +33,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databasesInfo")
       private final @Nullable Output<List<DatabaseInfoArgs>> databasesInfo;
 
-    public Output<List<DatabaseInfoArgs>> getDatabasesInfo() {
+    public Output<List<DatabaseInfoArgs>> databasesInfo() {
         return this.databasesInfo == null ? Codegen.empty() : this.databasesInfo;
     }
 
@@ -44,7 +44,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -55,7 +55,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -66,7 +66,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
@@ -77,7 +77,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -88,7 +88,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceConnectionInfo")
       private final @Nullable Output<Object> sourceConnectionInfo;
 
-    public Output<Object> getSourceConnectionInfo() {
+    public Output<Object> sourceConnectionInfo() {
         return this.sourceConnectionInfo == null ? Codegen.empty() : this.sourceConnectionInfo;
     }
 
@@ -99,7 +99,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourcePlatform", required=true)
       private final Output<Either<String,ProjectSourcePlatform>> sourcePlatform;
 
-    public Output<Either<String,ProjectSourcePlatform>> getSourcePlatform() {
+    public Output<Either<String,ProjectSourcePlatform>> sourcePlatform() {
         return this.sourcePlatform;
     }
 
@@ -110,7 +110,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -121,7 +121,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetConnectionInfo")
       private final @Nullable Output<Object> targetConnectionInfo;
 
-    public Output<Object> getTargetConnectionInfo() {
+    public Output<Object> targetConnectionInfo() {
         return this.targetConnectionInfo == null ? Codegen.empty() : this.targetConnectionInfo;
     }
 
@@ -132,7 +132,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetPlatform", required=true)
       private final Output<Either<String,ProjectTargetPlatform>> targetPlatform;
 
-    public Output<Either<String,ProjectTargetPlatform>> getTargetPlatform() {
+    public Output<Either<String,ProjectTargetPlatform>> targetPlatform() {
         return this.targetPlatform;
     }
 

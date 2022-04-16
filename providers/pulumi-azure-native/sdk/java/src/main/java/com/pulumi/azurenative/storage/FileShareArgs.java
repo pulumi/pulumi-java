@@ -28,7 +28,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessTier")
       private final @Nullable Output<Either<String,ShareAccessTier>> accessTier;
 
-    public Output<Either<String,ShareAccessTier>> getAccessTier() {
+    public Output<Either<String,ShareAccessTier>> accessTier() {
         return this.accessTier == null ? Codegen.empty() : this.accessTier;
     }
 
@@ -39,7 +39,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -50,7 +50,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabledProtocols")
       private final @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
 
-    public Output<Either<String,EnabledProtocols>> getEnabledProtocols() {
+    public Output<Either<String,EnabledProtocols>> enabledProtocols() {
         return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 
@@ -61,7 +61,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expand")
       private final @Nullable Output<String> expand;
 
-    public Output<String> getExpand() {
+    public Output<String> expand() {
         return this.expand == null ? Codegen.empty() : this.expand;
     }
 
@@ -72,7 +72,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -83,7 +83,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,7 +94,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rootSquash")
       private final @Nullable Output<Either<String,RootSquashType>> rootSquash;
 
-    public Output<Either<String,RootSquashType>> getRootSquash() {
+    public Output<Either<String,RootSquashType>> rootSquash() {
         return this.rootSquash == null ? Codegen.empty() : this.rootSquash;
     }
 
@@ -105,7 +105,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
@@ -116,7 +116,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareQuota")
       private final @Nullable Output<Integer> shareQuota;
 
-    public Output<Integer> getShareQuota() {
+    public Output<Integer> shareQuota() {
         return this.shareQuota == null ? Codegen.empty() : this.shareQuota;
     }
 

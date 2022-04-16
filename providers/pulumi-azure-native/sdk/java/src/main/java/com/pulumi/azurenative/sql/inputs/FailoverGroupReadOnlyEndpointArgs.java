@@ -28,7 +28,7 @@ public final class FailoverGroupReadOnlyEndpointArgs extends com.pulumi.resource
     @Import(name="failoverPolicy")
       private final @Nullable Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy;
 
-    public Output<Either<String,ReadOnlyEndpointFailoverPolicy>> getFailoverPolicy() {
+    public Output<Either<String,ReadOnlyEndpointFailoverPolicy>> failoverPolicy() {
         return this.failoverPolicy == null ? Codegen.empty() : this.failoverPolicy;
     }
 

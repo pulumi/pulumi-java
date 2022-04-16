@@ -64,42 +64,42 @@ public final class StreamingLocatorContentKeyResponse {
      * ID of Content Key
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Label of Content Key as specified in the Streaming Policy
      * 
     */
-    public Optional<String> getLabelReferenceInStreamingPolicy() {
+    public Optional<String> labelReferenceInStreamingPolicy() {
         return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
     /**
      * ContentKeyPolicy used by Content Key
      * 
     */
-    public String getPolicyName() {
+    public String policyName() {
         return this.policyName;
     }
     /**
      * Tracks which use this Content Key
      * 
     */
-    public List<TrackSelectionResponse> getTracks() {
+    public List<TrackSelectionResponse> tracks() {
         return this.tracks;
     }
     /**
      * Encryption type of Content Key
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value of Content Key
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

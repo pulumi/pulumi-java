@@ -26,13 +26,13 @@ public final class RegistryListCredentialsResultResponse {
         this.username = username;
     }
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public List<PasswordResponse> getPasswords() {
+    public List<PasswordResponse> passwords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

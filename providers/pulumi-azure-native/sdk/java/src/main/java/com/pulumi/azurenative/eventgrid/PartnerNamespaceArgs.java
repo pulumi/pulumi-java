@@ -28,7 +28,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Output<Boolean> getDisableLocalAuth() {
+    public Output<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
@@ -39,7 +39,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
-    public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
+    public Output<List<InboundIpRuleArgs>> inboundIpRules() {
         return this.inboundIpRules == null ? Codegen.empty() : this.inboundIpRules;
     }
 
@@ -50,7 +50,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -61,7 +61,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="partnerNamespaceName")
       private final @Nullable Output<String> partnerNamespaceName;
 
-    public Output<String> getPartnerNamespaceName() {
+    public Output<String> partnerNamespaceName() {
         return this.partnerNamespaceName == null ? Codegen.empty() : this.partnerNamespaceName;
     }
 
@@ -73,7 +73,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="partnerRegistrationFullyQualifiedId")
       private final @Nullable Output<String> partnerRegistrationFullyQualifiedId;
 
-    public Output<String> getPartnerRegistrationFullyQualifiedId() {
+    public Output<String> partnerRegistrationFullyQualifiedId() {
         return this.partnerRegistrationFullyQualifiedId == null ? Codegen.empty() : this.partnerRegistrationFullyQualifiedId;
     }
 
@@ -85,7 +85,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -96,7 +96,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,7 +107,7 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

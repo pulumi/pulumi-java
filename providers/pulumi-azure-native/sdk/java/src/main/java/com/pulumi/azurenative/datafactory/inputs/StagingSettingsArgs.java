@@ -27,7 +27,7 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="enableCompression")
       private final @Nullable Output<Object> enableCompression;
 
-    public Output<Object> getEnableCompression() {
+    public Output<Object> enableCompression() {
         return this.enableCompression == null ? Codegen.empty() : this.enableCompression;
     }
 
@@ -38,7 +38,7 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -49,7 +49,7 @@ public final class StagingSettingsArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<Object> path;
 
-    public Output<Object> getPath() {
+    public Output<Object> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

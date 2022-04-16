@@ -26,7 +26,7 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="diskSizeGiB")
       private final @Nullable Integer diskSizeGiB;
 
-    public Optional<Integer> getDiskSizeGiB() {
+    public Optional<Integer> diskSizeGiB() {
         return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
     }
 
@@ -37,7 +37,7 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="diskUri")
       private final @Nullable String diskUri;
 
-    public Optional<String> getDiskUri() {
+    public Optional<String> diskUri() {
         return this.diskUri == null ? Optional.empty() : Optional.ofNullable(this.diskUri);
     }
 
@@ -48,7 +48,7 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="managedDiskId")
       private final @Nullable String managedDiskId;
 
-    public Optional<String> getManagedDiskId() {
+    public Optional<String> managedDiskId() {
         return this.managedDiskId == null ? Optional.empty() : Optional.ofNullable(this.managedDiskId);
     }
 
@@ -59,7 +59,7 @@ public final class ComputeDataDiskResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

@@ -25,7 +25,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -36,7 +36,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -47,7 +47,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -59,7 +59,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -70,7 +70,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="sourceComputerId", required=true)
       private final Output<String> sourceComputerId;
 
-    public Output<String> getSourceComputerId() {
+    public Output<String> sourceComputerId() {
         return this.sourceComputerId;
     }
 
@@ -81,7 +81,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="vmuuid", required=true)
       private final Output<String> vmuuid;
 
-    public Output<String> getVmuuid() {
+    public Output<String> vmuuid() {
         return this.vmuuid;
     }
 
@@ -92,7 +92,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends com.pulumi.resources.
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 

@@ -45,7 +45,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the configuration of the node.
      * 
      */
-    public Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> getConfiguration() {
+    public Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> configuration() {
         return this.configuration;
     }
     /**
@@ -59,7 +59,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -73,7 +73,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return If a new build version of NodeConfiguration is required.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIncrementNodeConfigurationBuild() {
+    public Output</* @Nullable */ Boolean> incrementNodeConfigurationBuild() {
         return this.incrementNodeConfigurationBuild;
     }
     /**
@@ -87,7 +87,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -101,7 +101,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Number of nodes with this node configuration assigned
      * 
      */
-    public Output</* @Nullable */ Double> getNodeCount() {
+    public Output</* @Nullable */ Double> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -129,7 +129,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Source of node configuration.
      * 
      */
-    public Output</* @Nullable */ String> getSource() {
+    public Output</* @Nullable */ String> source() {
         return this.source;
     }
     /**
@@ -143,7 +143,7 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

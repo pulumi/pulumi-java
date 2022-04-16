@@ -32,19 +32,19 @@ public final class GetHyperVCollectorResult {
         this.type = type;
     }
 
-    public Optional<String> getETag() {
+    public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public CollectorPropertiesResponse getProperties() {
+    public CollectorPropertiesResponse properties() {
         return this.properties;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

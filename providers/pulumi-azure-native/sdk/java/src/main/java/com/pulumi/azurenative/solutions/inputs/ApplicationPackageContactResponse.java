@@ -25,7 +25,7 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
     @Import(name="contactName")
       private final @Nullable String contactName;
 
-    public Optional<String> getContactName() {
+    public Optional<String> contactName() {
         return this.contactName == null ? Optional.empty() : Optional.ofNullable(this.contactName);
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
     @Import(name="phone", required=true)
       private final String phone;
 
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 

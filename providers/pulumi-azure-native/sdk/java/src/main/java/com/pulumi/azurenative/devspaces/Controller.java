@@ -43,7 +43,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return DNS name for accessing DataPlane services
      * 
      */
-    public Output<String> getDataPlaneFqdn() {
+    public Output<String> dataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
     /**
@@ -57,7 +57,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
      * 
      */
-    public Output<String> getHostSuffix() {
+    public Output<String> hostSuffix() {
         return this.hostSuffix;
     }
     /**
@@ -71,7 +71,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return Region where the Azure resource is located.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -85,7 +85,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return Provisioning state of the Azure Dev Spaces Controller.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return Model representing SKU for Azure Dev Spaces Controller.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -127,7 +127,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return Tags for the Azure resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return DNS of the target container host's API server
      * 
      */
-    public Output<String> getTargetContainerHostApiServerFqdn() {
+    public Output<String> targetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
     /**
@@ -155,7 +155,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return Resource ID of the target container host
      * 
      */
-    public Output<String> getTargetContainerHostResourceId() {
+    public Output<String> targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
     /**
@@ -169,7 +169,7 @@ public class Controller extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

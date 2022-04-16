@@ -33,19 +33,19 @@ public final class SkuLocationInfoResponse {
         this.zones = zones;
     }
 
-    public List<String> getExtendedLocations() {
+    public List<String> extendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
-    public List<SkuZoneDetailResponse> getZoneDetails() {
+    public List<SkuZoneDetailResponse> zoneDetails() {
         return this.zoneDetails == null ? List.of() : this.zoneDetails;
     }
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

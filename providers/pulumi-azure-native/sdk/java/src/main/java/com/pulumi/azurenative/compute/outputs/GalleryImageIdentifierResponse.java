@@ -39,21 +39,21 @@ public final class GalleryImageIdentifierResponse {
      * The name of the gallery image definition offer.
      * 
     */
-    public String getOffer() {
+    public String offer() {
         return this.offer;
     }
     /**
      * The name of the gallery image definition publisher.
      * 
     */
-    public String getPublisher() {
+    public String publisher() {
         return this.publisher;
     }
     /**
      * The name of the gallery image definition SKU.
      * 
     */
-    public String getSku() {
+    public String sku() {
         return this.sku;
     }
 

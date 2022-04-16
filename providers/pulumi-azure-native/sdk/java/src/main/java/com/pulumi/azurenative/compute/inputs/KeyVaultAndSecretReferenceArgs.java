@@ -26,7 +26,7 @@ public final class KeyVaultAndSecretReferenceArgs extends com.pulumi.resources.R
     @Import(name="secretUrl", required=true)
       private final Output<String> secretUrl;
 
-    public Output<String> getSecretUrl() {
+    public Output<String> secretUrl() {
         return this.secretUrl;
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultAndSecretReferenceArgs extends com.pulumi.resources.R
     @Import(name="sourceVault", required=true)
       private final Output<SourceVaultArgs> sourceVault;
 
-    public Output<SourceVaultArgs> getSourceVault() {
+    public Output<SourceVaultArgs> sourceVault() {
         return this.sourceVault;
     }
 

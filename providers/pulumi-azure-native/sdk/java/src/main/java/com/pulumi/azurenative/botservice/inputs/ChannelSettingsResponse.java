@@ -28,7 +28,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="botIconUrl")
       private final @Nullable String botIconUrl;
 
-    public Optional<String> getBotIconUrl() {
+    public Optional<String> botIconUrl() {
         return this.botIconUrl == null ? Optional.empty() : Optional.ofNullable(this.botIconUrl);
     }
 
@@ -39,7 +39,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="botId")
       private final @Nullable String botId;
 
-    public Optional<String> getBotId() {
+    public Optional<String> botId() {
         return this.botId == null ? Optional.empty() : Optional.ofNullable(this.botId);
     }
 
@@ -50,7 +50,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="channelDisplayName")
       private final @Nullable String channelDisplayName;
 
-    public Optional<String> getChannelDisplayName() {
+    public Optional<String> channelDisplayName() {
         return this.channelDisplayName == null ? Optional.empty() : Optional.ofNullable(this.channelDisplayName);
     }
 
@@ -61,7 +61,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="channelId")
       private final @Nullable String channelId;
 
-    public Optional<String> getChannelId() {
+    public Optional<String> channelId() {
         return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
     }
 
@@ -72,7 +72,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
 
-    public Optional<Boolean> getDisableLocalAuth() {
+    public Optional<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
     }
 
@@ -83,7 +83,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extensionKey1")
       private final @Nullable String extensionKey1;
 
-    public Optional<String> getExtensionKey1() {
+    public Optional<String> extensionKey1() {
         return this.extensionKey1 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey1);
     }
 
@@ -94,7 +94,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extensionKey2")
       private final @Nullable String extensionKey2;
 
-    public Optional<String> getExtensionKey2() {
+    public Optional<String> extensionKey2() {
         return this.extensionKey2 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey2);
     }
 
@@ -105,7 +105,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
 
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
     }
 
@@ -116,7 +116,7 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="sites")
       private final @Nullable List<SiteResponse> sites;
 
-    public List<SiteResponse> getSites() {
+    public List<SiteResponse> sites() {
         return this.sites == null ? List.of() : this.sites;
     }
 

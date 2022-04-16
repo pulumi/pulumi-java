@@ -76,56 +76,56 @@ public final class GetApiVersionSetResult {
      * Description of API Version Set.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Name of API Version Set
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
     */
-    public Optional<String> getVersionHeaderName() {
+    public Optional<String> versionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
     /**
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
     */
-    public Optional<String> getVersionQueryName() {
+    public Optional<String> versionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
     /**
      * An value that determines where the API Version identifier will be located in a HTTP request.
      * 
     */
-    public String getVersioningScheme() {
+    public String versioningScheme() {
         return this.versioningScheme;
     }
 

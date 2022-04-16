@@ -26,7 +26,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="applicationPassword")
       private final @Nullable Output<String> applicationPassword;
 
-    public Output<String> getApplicationPassword() {
+    public Output<String> applicationPassword() {
         return this.applicationPassword == null ? Codegen.empty() : this.applicationPassword;
     }
 
@@ -37,7 +37,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="associationAssignedCode")
       private final @Nullable Output<String> associationAssignedCode;
 
-    public Output<String> getAssociationAssignedCode() {
+    public Output<String> associationAssignedCode() {
         return this.associationAssignedCode == null ? Codegen.empty() : this.associationAssignedCode;
     }
 
@@ -48,7 +48,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="controllingAgencyCode")
       private final @Nullable Output<String> controllingAgencyCode;
 
-    public Output<String> getControllingAgencyCode() {
+    public Output<String> controllingAgencyCode() {
         return this.controllingAgencyCode == null ? Codegen.empty() : this.controllingAgencyCode;
     }
 
@@ -59,7 +59,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="functionalGroupId")
       private final @Nullable Output<String> functionalGroupId;
 
-    public Output<String> getFunctionalGroupId() {
+    public Output<String> functionalGroupId() {
         return this.functionalGroupId == null ? Codegen.empty() : this.functionalGroupId;
     }
 
@@ -70,7 +70,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="groupHeaderMessageRelease")
       private final @Nullable Output<String> groupHeaderMessageRelease;
 
-    public Output<String> getGroupHeaderMessageRelease() {
+    public Output<String> groupHeaderMessageRelease() {
         return this.groupHeaderMessageRelease == null ? Codegen.empty() : this.groupHeaderMessageRelease;
     }
 
@@ -81,7 +81,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="groupHeaderMessageVersion")
       private final @Nullable Output<String> groupHeaderMessageVersion;
 
-    public Output<String> getGroupHeaderMessageVersion() {
+    public Output<String> groupHeaderMessageVersion() {
         return this.groupHeaderMessageVersion == null ? Codegen.empty() : this.groupHeaderMessageVersion;
     }
 
@@ -92,7 +92,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="messageAssociationAssignedCode")
       private final @Nullable Output<String> messageAssociationAssignedCode;
 
-    public Output<String> getMessageAssociationAssignedCode() {
+    public Output<String> messageAssociationAssignedCode() {
         return this.messageAssociationAssignedCode == null ? Codegen.empty() : this.messageAssociationAssignedCode;
     }
 
@@ -103,7 +103,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
+    public Output<String> messageId() {
         return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
@@ -114,7 +114,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="messageRelease")
       private final @Nullable Output<String> messageRelease;
 
-    public Output<String> getMessageRelease() {
+    public Output<String> messageRelease() {
         return this.messageRelease == null ? Codegen.empty() : this.messageRelease;
     }
 
@@ -125,7 +125,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="messageVersion")
       private final @Nullable Output<String> messageVersion;
 
-    public Output<String> getMessageVersion() {
+    public Output<String> messageVersion() {
         return this.messageVersion == null ? Codegen.empty() : this.messageVersion;
     }
 
@@ -136,7 +136,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="receiverApplicationId")
       private final @Nullable Output<String> receiverApplicationId;
 
-    public Output<String> getReceiverApplicationId() {
+    public Output<String> receiverApplicationId() {
         return this.receiverApplicationId == null ? Codegen.empty() : this.receiverApplicationId;
     }
 
@@ -147,7 +147,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="receiverApplicationQualifier")
       private final @Nullable Output<String> receiverApplicationQualifier;
 
-    public Output<String> getReceiverApplicationQualifier() {
+    public Output<String> receiverApplicationQualifier() {
         return this.receiverApplicationQualifier == null ? Codegen.empty() : this.receiverApplicationQualifier;
     }
 
@@ -158,7 +158,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
 
-    public Output<String> getSenderApplicationId() {
+    public Output<String> senderApplicationId() {
         return this.senderApplicationId == null ? Codegen.empty() : this.senderApplicationId;
     }
 
@@ -169,7 +169,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="senderApplicationQualifier")
       private final @Nullable Output<String> senderApplicationQualifier;
 
-    public Output<String> getSenderApplicationQualifier() {
+    public Output<String> senderApplicationQualifier() {
         return this.senderApplicationQualifier == null ? Codegen.empty() : this.senderApplicationQualifier;
     }
 
@@ -180,7 +180,7 @@ public final class EdifactEnvelopeOverrideArgs extends com.pulumi.resources.Reso
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
+    public Output<String> targetNamespace() {
         return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 

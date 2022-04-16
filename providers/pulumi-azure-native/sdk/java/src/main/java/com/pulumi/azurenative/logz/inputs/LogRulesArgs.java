@@ -28,7 +28,7 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filteringTags")
       private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
-    public Output<List<FilteringTagArgs>> getFilteringTags() {
+    public Output<List<FilteringTagArgs>> filteringTags() {
         return this.filteringTags == null ? Codegen.empty() : this.filteringTags;
     }
 
@@ -39,7 +39,7 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendAadLogs")
       private final @Nullable Output<Boolean> sendAadLogs;
 
-    public Output<Boolean> getSendAadLogs() {
+    public Output<Boolean> sendAadLogs() {
         return this.sendAadLogs == null ? Codegen.empty() : this.sendAadLogs;
     }
 
@@ -50,7 +50,7 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendActivityLogs")
       private final @Nullable Output<Boolean> sendActivityLogs;
 
-    public Output<Boolean> getSendActivityLogs() {
+    public Output<Boolean> sendActivityLogs() {
         return this.sendActivityLogs == null ? Codegen.empty() : this.sendActivityLogs;
     }
 
@@ -61,7 +61,7 @@ public final class LogRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sendSubscriptionLogs")
       private final @Nullable Output<Boolean> sendSubscriptionLogs;
 
-    public Output<Boolean> getSendSubscriptionLogs() {
+    public Output<Boolean> sendSubscriptionLogs() {
         return this.sendSubscriptionLogs == null ? Codegen.empty() : this.sendSubscriptionLogs;
     }
 

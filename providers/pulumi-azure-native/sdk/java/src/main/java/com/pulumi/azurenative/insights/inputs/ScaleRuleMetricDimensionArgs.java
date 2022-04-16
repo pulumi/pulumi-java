@@ -28,7 +28,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     @Import(name="dimensionName", required=true)
       private final Output<String> dimensionName;
 
-    public Output<String> getDimensionName() {
+    public Output<String> dimensionName() {
         return this.dimensionName;
     }
 
@@ -39,7 +39,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     @Import(name="operator", required=true)
       private final Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
 
-    public Output<Either<String,ScaleRuleMetricDimensionOperationType>> getOperator() {
+    public Output<Either<String,ScaleRuleMetricDimensionOperationType>> operator() {
         return this.operator;
     }
 
@@ -50,7 +50,7 @@ public final class ScaleRuleMetricDimensionArgs extends com.pulumi.resources.Res
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

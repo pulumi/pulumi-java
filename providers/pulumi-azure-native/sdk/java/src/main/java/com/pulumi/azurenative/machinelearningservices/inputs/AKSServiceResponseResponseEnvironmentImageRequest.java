@@ -30,7 +30,7 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="assets")
       private final @Nullable List<ImageAssetResponse> assets;
 
-    public List<ImageAssetResponse> getAssets() {
+    public List<ImageAssetResponse> assets() {
         return this.assets == null ? List.of() : this.assets;
     }
 
@@ -41,7 +41,7 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="driverProgram")
       private final @Nullable String driverProgram;
 
-    public Optional<String> getDriverProgram() {
+    public Optional<String> driverProgram() {
         return this.driverProgram == null ? Optional.empty() : Optional.ofNullable(this.driverProgram);
     }
 
@@ -52,7 +52,7 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="environment")
       private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
 
-    public Optional<EnvironmentImageResponseResponseEnvironment> getEnvironment() {
+    public Optional<EnvironmentImageResponseResponseEnvironment> environment() {
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
     }
 
@@ -63,7 +63,7 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="environmentReference")
       private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
 
-    public Optional<EnvironmentImageResponseResponseEnvironmentReference> getEnvironmentReference() {
+    public Optional<EnvironmentImageResponseResponseEnvironmentReference> environmentReference() {
         return this.environmentReference == null ? Optional.empty() : Optional.ofNullable(this.environmentReference);
     }
 
@@ -74,7 +74,7 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="modelIds")
       private final @Nullable List<String> modelIds;
 
-    public List<String> getModelIds() {
+    public List<String> modelIds() {
         return this.modelIds == null ? List.of() : this.modelIds;
     }
 
@@ -85,7 +85,7 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="models")
       private final @Nullable List<ModelResponse> models;
 
-    public List<ModelResponse> getModels() {
+    public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
 

@@ -67,49 +67,49 @@ public final class HealthAlertResponse {
      * Health Alert Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Health Alert Issue
      * 
     */
-    public String getIssue() {
+    public String issue() {
         return this.issue;
     }
     /**
      * Health Alert Last Detected DateTime
      * 
     */
-    public String getLastDetected() {
+    public String lastDetected() {
         return this.lastDetected;
     }
     /**
      * Health Alert Name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Health Alert Raised DateTime
      * 
     */
-    public String getRaised() {
+    public String raised() {
         return this.raised;
     }
     /**
      * Health Alert TSG Link
      * 
     */
-    public String getResolutionUri() {
+    public String resolutionUri() {
         return this.resolutionUri;
     }
     /**
      * Health Alert Severity
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 

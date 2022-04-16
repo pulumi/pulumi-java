@@ -24,7 +24,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -35,7 +35,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="keyVaultId", required=true)
       private final String keyVaultId;
 
-    public String getKeyVaultId() {
+    public String keyVaultId() {
         return this.keyVaultId;
     }
 
@@ -46,7 +46,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="keyVaultUri", required=true)
       private final String keyVaultUri;
 
-    public String getKeyVaultUri() {
+    public String keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -57,7 +57,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="serviceBusConnectionStringSecretName", required=true)
       private final String serviceBusConnectionStringSecretName;
 
-    public String getServiceBusConnectionStringSecretName() {
+    public String serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
 
@@ -68,7 +68,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 
@@ -79,7 +79,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="storageAccountSasSecretName", required=true)
       private final String storageAccountSasSecretName;
 
-    public String getStorageAccountSasSecretName() {
+    public String storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
 
@@ -90,7 +90,7 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse extends co
     @Import(name="targetLocation", required=true)
       private final String targetLocation;
 
-    public String getTargetLocation() {
+    public String targetLocation() {
         return this.targetLocation;
     }
 

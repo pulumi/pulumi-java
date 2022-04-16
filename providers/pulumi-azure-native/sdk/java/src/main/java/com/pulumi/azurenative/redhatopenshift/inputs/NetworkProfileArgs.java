@@ -26,7 +26,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podCidr")
       private final @Nullable Output<String> podCidr;
 
-    public Output<String> getPodCidr() {
+    public Output<String> podCidr() {
         return this.podCidr == null ? Codegen.empty() : this.podCidr;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
-    public Output<String> getServiceCidr() {
+    public Output<String> serviceCidr() {
         return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
     }
 

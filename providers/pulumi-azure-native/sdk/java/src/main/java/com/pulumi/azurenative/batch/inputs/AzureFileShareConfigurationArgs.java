@@ -18,14 +18,14 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="accountKey", required=true)
       private final Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey;
     }
 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="azureFileUrl", required=true)
       private final Output<String> azureFileUrl;
 
-    public Output<String> getAzureFileUrl() {
+    public Output<String> azureFileUrl() {
         return this.azureFileUrl;
     }
 
@@ -47,7 +47,7 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
 
-    public Output<String> getMountOptions() {
+    public Output<String> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
@@ -58,7 +58,7 @@ public final class AzureFileShareConfigurationArgs extends com.pulumi.resources.
     @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
 
-    public Output<String> getRelativeMountPath() {
+    public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
 

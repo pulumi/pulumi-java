@@ -201,112 +201,112 @@ public final class GetLabResult {
      * The properties of any lab announcement associated with this lab
      * 
     */
-    public Optional<LabAnnouncementPropertiesResponse> getAnnouncement() {
+    public Optional<LabAnnouncementPropertiesResponse> announcement() {
         return Optional.ofNullable(this.announcement);
     }
     /**
      * The lab's artifact storage account.
      * 
     */
-    public String getArtifactsStorageAccount() {
+    public String artifactsStorageAccount() {
         return this.artifactsStorageAccount;
     }
     /**
      * The creation date of the lab.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The lab's default premium storage account.
      * 
     */
-    public String getDefaultPremiumStorageAccount() {
+    public String defaultPremiumStorageAccount() {
         return this.defaultPremiumStorageAccount;
     }
     /**
      * The lab's default storage account.
      * 
     */
-    public String getDefaultStorageAccount() {
+    public String defaultStorageAccount() {
         return this.defaultStorageAccount;
     }
     /**
      * The access rights to be granted to the user when provisioning an environment
      * 
     */
-    public Optional<String> getEnvironmentPermission() {
+    public Optional<String> environmentPermission() {
         return Optional.ofNullable(this.environmentPermission);
     }
     /**
      * Extended properties of the lab used for experimental features
      * 
     */
-    public Map<String,String> getExtendedProperties() {
+    public Map<String,String> extendedProperties() {
         return this.extendedProperties == null ? Map.of() : this.extendedProperties;
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
     */
-    public Optional<String> getLabStorageType() {
+    public Optional<String> labStorageType() {
         return Optional.ofNullable(this.labStorageType);
     }
     /**
      * The load balancer used to for lab VMs that use shared IP address.
      * 
     */
-    public String getLoadBalancerId() {
+    public String loadBalancerId() {
         return this.loadBalancerId;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
     */
-    public List<String> getMandatoryArtifactsResourceIdsLinux() {
+    public List<String> mandatoryArtifactsResourceIdsLinux() {
         return this.mandatoryArtifactsResourceIdsLinux == null ? List.of() : this.mandatoryArtifactsResourceIdsLinux;
     }
     /**
      * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
     */
-    public List<String> getMandatoryArtifactsResourceIdsWindows() {
+    public List<String> mandatoryArtifactsResourceIdsWindows() {
         return this.mandatoryArtifactsResourceIdsWindows == null ? List.of() : this.mandatoryArtifactsResourceIdsWindows;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
      * 
     */
-    public String getNetworkSecurityGroupId() {
+    public String networkSecurityGroupId() {
         return this.networkSecurityGroupId;
     }
     /**
      * The lab's premium data disk storage account.
      * 
     */
-    public String getPremiumDataDiskStorageAccount() {
+    public String premiumDataDiskStorageAccount() {
         return this.premiumDataDiskStorageAccount;
     }
     /**
@@ -315,63 +315,63 @@ public final class GetLabResult {
      * When its value is 'Disabled', only creation of standard data disks is allowed.
      * 
     */
-    public Optional<String> getPremiumDataDisks() {
+    public Optional<String> premiumDataDisks() {
         return Optional.ofNullable(this.premiumDataDisks);
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The public IP address for the lab's load balancer.
      * 
     */
-    public String getPublicIpId() {
+    public String publicIpId() {
         return this.publicIpId;
     }
     /**
      * The properties of any lab support message associated with this lab
      * 
     */
-    public Optional<LabSupportPropertiesResponse> getSupport() {
+    public Optional<LabSupportPropertiesResponse> support() {
         return Optional.ofNullable(this.support);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public String getUniqueIdentifier() {
+    public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The lab's Key vault.
      * 
     */
-    public String getVaultName() {
+    public String vaultName() {
         return this.vaultName;
     }
     /**
      * The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
      * 
     */
-    public String getVmCreationResourceGroup() {
+    public String vmCreationResourceGroup() {
         return this.vmCreationResourceGroup;
     }
 

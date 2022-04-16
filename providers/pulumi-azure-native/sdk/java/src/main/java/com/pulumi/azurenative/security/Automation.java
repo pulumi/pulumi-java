@@ -50,7 +50,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
      */
-    public Output</* @Nullable */ List<Object>> getActions() {
+    public Output</* @Nullable */ List<Object>> actions() {
         return this.actions;
     }
     /**
@@ -64,7 +64,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return The security automation description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -78,7 +78,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -92,7 +92,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the security automation is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -106,7 +106,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -120,7 +120,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Location where the resource is stored
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -134,7 +134,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +148,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
      */
-    public Output</* @Nullable */ List<AutomationScopeResponse>> getScopes() {
+    public Output</* @Nullable */ List<AutomationScopeResponse>> scopes() {
         return this.scopes;
     }
     /**
@@ -162,7 +162,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A collection of the source event types which evaluate the security automation set of rules.
      * 
      */
-    public Output</* @Nullable */ List<AutomationSourceResponse>> getSources() {
+    public Output</* @Nullable */ List<AutomationSourceResponse>> sources() {
         return this.sources;
     }
     /**
@@ -176,7 +176,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return A list of key value pairs that describe the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -190,7 +190,7 @@ public class Automation extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

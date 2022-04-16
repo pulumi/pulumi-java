@@ -45,7 +45,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Date time when history definition was created
      * 
      */
-    public Output<String> getCreatedDateTime() {
+    public Output<String> createdDateTime() {
         return this.createdDateTime;
     }
     /**
@@ -59,7 +59,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDecisions() {
+    public Output</* @Nullable */ List<String>> decisions() {
         return this.decisions;
     }
     /**
@@ -73,7 +73,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The display name for the history definition.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -87,7 +87,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The DateTime when the review is scheduled to end. Required if type is endDate
      * 
      */
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     /**
@@ -101,7 +101,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Set of access review history instances for this history definition.
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewHistoryInstanceResponse>> getInstances() {
+    public Output</* @Nullable */ List<AccessReviewHistoryInstanceResponse>> instances() {
         return this.instances;
     }
     /**
@@ -115,7 +115,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
      */
-    public Output</* @Nullable */ Integer> getInterval() {
+    public Output</* @Nullable */ Integer> interval() {
         return this.interval;
     }
     /**
@@ -129,7 +129,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The access review history definition unique id.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfOccurrences() {
+    public Output</* @Nullable */ Integer> numberOfOccurrences() {
         return this.numberOfOccurrences;
     }
     /**
@@ -157,7 +157,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The identity id
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -171,7 +171,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The identity display name
      * 
      */
-    public Output<String> getPrincipalName() {
+    public Output<String> principalName() {
         return this.principalName;
     }
     /**
@@ -185,7 +185,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The identity type : user/servicePrincipal
      * 
      */
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType;
     }
     /**
@@ -199,7 +199,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
      * 
      */
-    public Output<String> getReviewHistoryPeriodEndDateTime() {
+    public Output<String> reviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime;
     }
     /**
@@ -213,7 +213,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
      * 
      */
-    public Output<String> getReviewHistoryPeriodStartDateTime() {
+    public Output<String> reviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime;
     }
     /**
@@ -227,7 +227,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return A collection of scopes used when selecting review history data
      * 
      */
-    public Output</* @Nullable */ List<AccessReviewScopeResponse>> getScopes() {
+    public Output</* @Nullable */ List<AccessReviewScopeResponse>> scopes() {
         return this.scopes;
     }
     /**
@@ -241,7 +241,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
      */
-    public Output</* @Nullable */ String> getStartDate() {
+    public Output</* @Nullable */ String> startDate() {
         return this.startDate;
     }
     /**
@@ -255,7 +255,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -269,7 +269,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -283,7 +283,7 @@ public class AccessReviewHistoryDefinitionById extends com.pulumi.resources.Cust
      * @return The user principal name(if valid)
      * 
      */
-    public Output<String> getUserPrincipalName() {
+    public Output<String> userPrincipalName() {
         return this.userPrincipalName;
     }
 

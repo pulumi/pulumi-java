@@ -29,7 +29,7 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="parent")
       private final @Nullable ParentGroupInfoResponse parent;
 
-    public Optional<ParentGroupInfoResponse> getParent() {
+    public Optional<ParentGroupInfoResponse> parent() {
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
     }
 
@@ -40,7 +40,7 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="path")
       private final @Nullable List<ManagementGroupPathElementResponse> path;
 
-    public List<ManagementGroupPathElementResponse> getPath() {
+    public List<ManagementGroupPathElementResponse> path() {
         return this.path == null ? List.of() : this.path;
     }
 
@@ -51,7 +51,7 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="updatedBy")
       private final @Nullable String updatedBy;
 
-    public Optional<String> getUpdatedBy() {
+    public Optional<String> updatedBy() {
         return this.updatedBy == null ? Optional.empty() : Optional.ofNullable(this.updatedBy);
     }
 
@@ -62,7 +62,7 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="updatedTime")
       private final @Nullable String updatedTime;
 
-    public Optional<String> getUpdatedTime() {
+    public Optional<String> updatedTime() {
         return this.updatedTime == null ? Optional.empty() : Optional.ofNullable(this.updatedTime);
     }
 
@@ -73,7 +73,7 @@ public final class ManagementGroupDetailsResponse extends com.pulumi.resources.I
     @Import(name="version")
       private final @Nullable Double version;
 
-    public Optional<Double> getVersion() {
+    public Optional<Double> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

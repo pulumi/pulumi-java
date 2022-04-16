@@ -53,7 +53,7 @@ public final class TokenStoreResponse {
      * The configuration settings of the storage of the tokens if blob storage is used.
      * 
     */
-    public Optional<BlobStorageTokenStoreResponse> getAzureBlobStorage() {
+    public Optional<BlobStorageTokenStoreResponse> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
@@ -61,14 +61,14 @@ public final class TokenStoreResponse {
      *  The default is <code>false</code>.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the storage of the tokens if a file system is used.
      * 
     */
-    public Optional<FileSystemTokenStoreResponse> getFileSystem() {
+    public Optional<FileSystemTokenStoreResponse> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
@@ -76,7 +76,7 @@ public final class TokenStoreResponse {
      * call the token refresh API. The default is 72 hours.
      * 
     */
-    public Optional<Double> getTokenRefreshExtensionHours() {
+    public Optional<Double> tokenRefreshExtensionHours() {
         return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }
 

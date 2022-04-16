@@ -26,7 +26,7 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<String> credentials;
 
-    public Output<String> getCredentials() {
+    public Output<String> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -37,7 +37,7 @@ public final class BlobLocationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

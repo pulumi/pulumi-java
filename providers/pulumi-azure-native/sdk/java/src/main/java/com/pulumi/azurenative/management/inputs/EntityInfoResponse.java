@@ -28,7 +28,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -39,7 +39,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -50,7 +50,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inheritedPermissions")
       private final @Nullable String inheritedPermissions;
 
-    public Optional<String> getInheritedPermissions() {
+    public Optional<String> inheritedPermissions() {
         return this.inheritedPermissions == null ? Optional.empty() : Optional.ofNullable(this.inheritedPermissions);
     }
 
@@ -61,7 +61,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numberOfChildGroups")
       private final @Nullable Integer numberOfChildGroups;
 
-    public Optional<Integer> getNumberOfChildGroups() {
+    public Optional<Integer> numberOfChildGroups() {
         return this.numberOfChildGroups == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildGroups);
     }
 
@@ -83,14 +83,14 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="numberOfChildren")
       private final @Nullable Integer numberOfChildren;
 
-    public Optional<Integer> getNumberOfChildren() {
+    public Optional<Integer> numberOfChildren() {
         return this.numberOfChildren == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildren);
     }
 
     @Import(name="numberOfDescendants")
       private final @Nullable Integer numberOfDescendants;
 
-    public Optional<Integer> getNumberOfDescendants() {
+    public Optional<Integer> numberOfDescendants() {
         return this.numberOfDescendants == null ? Optional.empty() : Optional.ofNullable(this.numberOfDescendants);
     }
 
@@ -101,7 +101,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parent")
       private final @Nullable EntityParentGroupInfoResponse parent;
 
-    public Optional<EntityParentGroupInfoResponse> getParent() {
+    public Optional<EntityParentGroupInfoResponse> parent() {
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
     }
 
@@ -112,7 +112,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentDisplayNameChain")
       private final @Nullable List<String> parentDisplayNameChain;
 
-    public List<String> getParentDisplayNameChain() {
+    public List<String> parentDisplayNameChain() {
         return this.parentDisplayNameChain == null ? List.of() : this.parentDisplayNameChain;
     }
 
@@ -123,7 +123,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentNameChain")
       private final @Nullable List<String> parentNameChain;
 
-    public List<String> getParentNameChain() {
+    public List<String> parentNameChain() {
         return this.parentNameChain == null ? List.of() : this.parentNameChain;
     }
 
@@ -134,7 +134,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="permissions")
       private final @Nullable String permissions;
 
-    public Optional<String> getPermissions() {
+    public Optional<String> permissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
     }
 
@@ -145,7 +145,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -156,7 +156,7 @@ public final class EntityInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

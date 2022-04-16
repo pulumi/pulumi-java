@@ -172,147 +172,147 @@ public final class GetIncidentResult {
      * Additional data on the incident
      * 
     */
-    public IncidentAdditionalDataResponse getAdditionalData() {
+    public IncidentAdditionalDataResponse additionalData() {
         return this.additionalData;
     }
     /**
      * The reason the incident was closed
      * 
     */
-    public Optional<String> getClassification() {
+    public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
     /**
      * Describes the reason the incident was closed
      * 
     */
-    public Optional<String> getClassificationComment() {
+    public Optional<String> classificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
     /**
      * The classification reason the incident was closed with
      * 
     */
-    public Optional<String> getClassificationReason() {
+    public Optional<String> classificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
     /**
      * The time the incident was created
      * 
     */
-    public String getCreatedTimeUtc() {
+    public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * The description of the incident
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Etag of the azure resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The time of the first activity in the incident
      * 
     */
-    public Optional<String> getFirstActivityTimeUtc() {
+    public Optional<String> firstActivityTimeUtc() {
         return Optional.ofNullable(this.firstActivityTimeUtc);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A sequential number
      * 
     */
-    public Integer getIncidentNumber() {
+    public Integer incidentNumber() {
         return this.incidentNumber;
     }
     /**
      * The deep-link url to the incident in Azure portal
      * 
     */
-    public String getIncidentUrl() {
+    public String incidentUrl() {
         return this.incidentUrl;
     }
     /**
      * List of labels relevant to this incident
      * 
     */
-    public List<IncidentLabelResponse> getLabels() {
+    public List<IncidentLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The time of the last activity in the incident
      * 
     */
-    public Optional<String> getLastActivityTimeUtc() {
+    public Optional<String> lastActivityTimeUtc() {
         return Optional.ofNullable(this.lastActivityTimeUtc);
     }
     /**
      * The last time the incident was updated
      * 
     */
-    public String getLastModifiedTimeUtc() {
+    public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Describes a user that the incident is assigned to
      * 
     */
-    public Optional<IncidentOwnerInfoResponse> getOwner() {
+    public Optional<IncidentOwnerInfoResponse> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * List of resource ids of Analytic rules related to the incident
      * 
     */
-    public List<String> getRelatedAnalyticRuleIds() {
+    public List<String> relatedAnalyticRuleIds() {
         return this.relatedAnalyticRuleIds;
     }
     /**
      * The severity of the incident
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * The status of the incident
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The title of the incident
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

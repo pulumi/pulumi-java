@@ -50,14 +50,14 @@ public final class VmwareCbtPolicyDetailsResponse {
      * The app consistent snapshot frequency in minutes.
      * 
     */
-    public Optional<Integer> getAppConsistentFrequencyInMinutes() {
+    public Optional<Integer> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
      * The crash consistent snapshot frequency in minutes.
      * 
     */
-    public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
+    public Optional<Integer> crashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
     /**
@@ -65,14 +65,14 @@ public final class VmwareCbtPolicyDetailsResponse {
      * Expected value is 'VMwareCbt'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
      * 
     */
-    public Optional<Integer> getRecoveryPointHistoryInMinutes() {
+    public Optional<Integer> recoveryPointHistoryInMinutes() {
         return Optional.ofNullable(this.recoveryPointHistoryInMinutes);
     }
 

@@ -28,7 +28,7 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
     @Import(name="columnNames")
       private final @Nullable Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
-    public Output<List<AzureMachineLearningWebServiceInputColumnArgs>> getColumnNames() {
+    public Output<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames() {
         return this.columnNames == null ? Codegen.empty() : this.columnNames;
     }
 
@@ -39,7 +39,7 @@ public final class AzureMachineLearningWebServiceInputsArgs extends com.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

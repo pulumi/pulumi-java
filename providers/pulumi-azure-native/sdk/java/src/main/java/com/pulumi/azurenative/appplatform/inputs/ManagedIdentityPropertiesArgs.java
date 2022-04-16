@@ -28,7 +28,7 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedIdentityPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
 
-    public Output<Either<String,ManagedIdentityType>> getType() {
+    public Output<Either<String,ManagedIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

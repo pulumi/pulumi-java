@@ -43,21 +43,21 @@ public final class RestHealthCheckResponse {
      * A unique name for this check.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The request to the health provider.
      * 
     */
-    public RestRequestResponse getRequest() {
+    public RestRequestResponse request() {
         return this.request;
     }
     /**
      * The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
      * 
     */
-    public Optional<RestResponseResponse> getResponse() {
+    public Optional<RestResponseResponse> response() {
         return Optional.ofNullable(this.response);
     }
 

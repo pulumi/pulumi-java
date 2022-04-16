@@ -26,7 +26,7 @@ public final class ManagementPolicyVersionArgs extends com.pulumi.resources.Reso
     @Import(name="delete")
       private final @Nullable Output<DateAfterCreationArgs> delete;
 
-    public Output<DateAfterCreationArgs> getDelete() {
+    public Output<DateAfterCreationArgs> delete() {
         return this.delete == null ? Codegen.empty() : this.delete;
     }
 
@@ -37,7 +37,7 @@ public final class ManagementPolicyVersionArgs extends com.pulumi.resources.Reso
     @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterCreationArgs> tierToArchive;
 
-    public Output<DateAfterCreationArgs> getTierToArchive() {
+    public Output<DateAfterCreationArgs> tierToArchive() {
         return this.tierToArchive == null ? Codegen.empty() : this.tierToArchive;
     }
 
@@ -48,7 +48,7 @@ public final class ManagementPolicyVersionArgs extends com.pulumi.resources.Reso
     @Import(name="tierToCool")
       private final @Nullable Output<DateAfterCreationArgs> tierToCool;
 
-    public Output<DateAfterCreationArgs> getTierToCool() {
+    public Output<DateAfterCreationArgs> tierToCool() {
         return this.tierToCool == null ? Codegen.empty() : this.tierToCool;
     }
 

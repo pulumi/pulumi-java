@@ -26,7 +26,7 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
     @Import(name="passwordSecretRef")
       private final @Nullable Output<String> passwordSecretRef;
 
-    public Output<String> getPasswordSecretRef() {
+    public Output<String> passwordSecretRef() {
         return this.passwordSecretRef == null ? Codegen.empty() : this.passwordSecretRef;
     }
 
@@ -37,7 +37,7 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
     @Import(name="server")
       private final @Nullable Output<String> server;
 
-    public Output<String> getServer() {
+    public Output<String> server() {
         return this.server == null ? Codegen.empty() : this.server;
     }
 
@@ -48,7 +48,7 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

@@ -26,7 +26,7 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="functionAlias")
       private final @Nullable Output<String> functionAlias;
 
-    public Output<String> getFunctionAlias() {
+    public Output<String> functionAlias() {
         return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
     }
 
@@ -37,7 +37,7 @@ public final class NonAzureQueryPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 

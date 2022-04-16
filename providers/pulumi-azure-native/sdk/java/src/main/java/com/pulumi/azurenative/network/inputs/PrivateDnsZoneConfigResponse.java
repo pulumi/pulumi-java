@@ -27,7 +27,7 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -38,7 +38,7 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
     @Import(name="privateDnsZoneId")
       private final @Nullable String privateDnsZoneId;
 
-    public Optional<String> getPrivateDnsZoneId() {
+    public Optional<String> privateDnsZoneId() {
         return this.privateDnsZoneId == null ? Optional.empty() : Optional.ofNullable(this.privateDnsZoneId);
     }
 
@@ -49,7 +49,7 @@ public final class PrivateDnsZoneConfigResponse extends com.pulumi.resources.Inv
     @Import(name="recordSets", required=true)
       private final List<RecordSetResponse> recordSets;
 
-    public List<RecordSetResponse> getRecordSets() {
+    public List<RecordSetResponse> recordSets() {
         return this.recordSets;
     }
 

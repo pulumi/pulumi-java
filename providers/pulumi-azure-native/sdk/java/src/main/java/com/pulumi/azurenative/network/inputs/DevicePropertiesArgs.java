@@ -27,7 +27,7 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deviceModel")
       private final @Nullable Output<String> deviceModel;
 
-    public Output<String> getDeviceModel() {
+    public Output<String> deviceModel() {
         return this.deviceModel == null ? Codegen.empty() : this.deviceModel;
     }
 
@@ -38,7 +38,7 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="deviceVendor")
       private final @Nullable Output<String> deviceVendor;
 
-    public Output<String> getDeviceVendor() {
+    public Output<String> deviceVendor() {
         return this.deviceVendor == null ? Codegen.empty() : this.deviceVendor;
     }
 
@@ -49,7 +49,7 @@ public final class DevicePropertiesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="linkSpeedInMbps")
       private final @Nullable Output<Integer> linkSpeedInMbps;
 
-    public Output<Integer> getLinkSpeedInMbps() {
+    public Output<Integer> linkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Codegen.empty() : this.linkSpeedInMbps;
     }
 

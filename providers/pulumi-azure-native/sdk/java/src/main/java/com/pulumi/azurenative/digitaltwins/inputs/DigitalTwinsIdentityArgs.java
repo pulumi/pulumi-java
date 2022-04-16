@@ -28,7 +28,7 @@ public final class DigitalTwinsIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
 
-    public Output<Either<String,DigitalTwinsIdentityType>> getType() {
+    public Output<Either<String,DigitalTwinsIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -26,7 +26,7 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -37,7 +37,7 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="maximum", required=true)
       private final Output<Integer> maximum;
 
-    public Output<Integer> getMaximum() {
+    public Output<Integer> maximum() {
         return this.maximum;
     }
 
@@ -48,7 +48,7 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="minimum", required=true)
       private final Output<Integer> minimum;
 
-    public Output<Integer> getMinimum() {
+    public Output<Integer> minimum() {
         return this.minimum;
     }
 
@@ -59,7 +59,7 @@ public final class OptimizedAutoscaleArgs extends com.pulumi.resources.ResourceA
     @Import(name="version", required=true)
       private final Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

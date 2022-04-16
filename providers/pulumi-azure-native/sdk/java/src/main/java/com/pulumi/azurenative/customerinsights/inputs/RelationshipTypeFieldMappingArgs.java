@@ -25,7 +25,7 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
     @Import(name="profileFieldName", required=true)
       private final Output<String> profileFieldName;
 
-    public Output<String> getProfileFieldName() {
+    public Output<String> profileFieldName() {
         return this.profileFieldName;
     }
 
@@ -36,7 +36,7 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
     @Import(name="relatedProfileKeyProperty", required=true)
       private final Output<String> relatedProfileKeyProperty;
 
-    public Output<String> getRelatedProfileKeyProperty() {
+    public Output<String> relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 

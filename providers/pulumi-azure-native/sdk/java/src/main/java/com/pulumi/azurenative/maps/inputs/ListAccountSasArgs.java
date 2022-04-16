@@ -25,7 +25,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expiry", required=true)
       private final String expiry;
 
-    public String getExpiry() {
+    public String expiry() {
         return this.expiry;
     }
 
@@ -47,7 +47,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxRatePerSecond", required=true)
       private final Integer maxRatePerSecond;
 
-    public Integer getMaxRatePerSecond() {
+    public Integer maxRatePerSecond() {
         return this.maxRatePerSecond;
     }
 
@@ -58,7 +58,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -69,7 +69,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="regions")
       private final @Nullable List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
@@ -80,7 +80,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="signingKey", required=true)
       private final Either<String,SigningKey> signingKey;
 
-    public Either<String,SigningKey> getSigningKey() {
+    public Either<String,SigningKey> signingKey() {
         return this.signingKey;
     }
 
@@ -102,7 +102,7 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="start", required=true)
       private final String start;
 
-    public String getStart() {
+    public String start() {
         return this.start;
     }
 

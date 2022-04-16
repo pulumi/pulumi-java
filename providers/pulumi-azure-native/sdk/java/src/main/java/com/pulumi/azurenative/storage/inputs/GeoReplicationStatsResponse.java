@@ -24,7 +24,7 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
     @Import(name="canFailover", required=true)
       private final Boolean canFailover;
 
-    public Boolean getCanFailover() {
+    public Boolean canFailover() {
         return this.canFailover;
     }
 
@@ -35,7 +35,7 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
     @Import(name="lastSyncTime", required=true)
       private final String lastSyncTime;
 
-    public String getLastSyncTime() {
+    public String lastSyncTime() {
         return this.lastSyncTime;
     }
 
@@ -46,7 +46,7 @@ public final class GeoReplicationStatsResponse extends com.pulumi.resources.Invo
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

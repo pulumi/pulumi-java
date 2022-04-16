@@ -27,7 +27,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileDisplayName", required=true)
       private final String billingProfileDisplayName;
 
-    public String getBillingProfileDisplayName() {
+    public String billingProfileDisplayName() {
         return this.billingProfileDisplayName;
     }
 
@@ -38,7 +38,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileId", required=true)
       private final String billingProfileId;
 
-    public String getBillingProfileId() {
+    public String billingProfileId() {
         return this.billingProfileId;
     }
 
@@ -49,7 +49,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileSpendingLimit", required=true)
       private final String billingProfileSpendingLimit;
 
-    public String getBillingProfileSpendingLimit() {
+    public String billingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
     }
 
@@ -60,7 +60,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileStatus", required=true)
       private final String billingProfileStatus;
 
-    public String getBillingProfileStatus() {
+    public String billingProfileStatus() {
         return this.billingProfileStatus;
     }
 
@@ -71,7 +71,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileStatusReasonCode", required=true)
       private final String billingProfileStatusReasonCode;
 
-    public String getBillingProfileStatusReasonCode() {
+    public String billingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
     }
 
@@ -82,7 +82,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileSystemId", required=true)
       private final String billingProfileSystemId;
 
-    public String getBillingProfileSystemId() {
+    public String billingProfileSystemId() {
         return this.billingProfileSystemId;
     }
 
@@ -93,7 +93,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="enabledAzurePlans")
       private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
 
-    public List<AzurePlanResponse> getEnabledAzurePlans() {
+    public List<AzurePlanResponse> enabledAzurePlans() {
         return this.enabledAzurePlans == null ? List.of() : this.enabledAzurePlans;
     }
 
@@ -104,7 +104,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="invoiceSectionDisplayName", required=true)
       private final String invoiceSectionDisplayName;
 
-    public String getInvoiceSectionDisplayName() {
+    public String invoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
     }
 
@@ -115,7 +115,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="invoiceSectionId", required=true)
       private final String invoiceSectionId;
 
-    public String getInvoiceSectionId() {
+    public String invoiceSectionId() {
         return this.invoiceSectionId;
     }
 
@@ -126,7 +126,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="invoiceSectionSystemId", required=true)
       private final String invoiceSectionSystemId;
 
-    public String getInvoiceSectionSystemId() {
+    public String invoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
     }
 

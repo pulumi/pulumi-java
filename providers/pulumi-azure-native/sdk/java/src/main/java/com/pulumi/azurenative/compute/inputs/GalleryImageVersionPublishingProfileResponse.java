@@ -29,7 +29,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
     @Import(name="endOfLifeDate")
       private final @Nullable String endOfLifeDate;
 
-    public Optional<String> getEndOfLifeDate() {
+    public Optional<String> endOfLifeDate() {
         return this.endOfLifeDate == null ? Optional.empty() : Optional.ofNullable(this.endOfLifeDate);
     }
 
@@ -40,7 +40,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
     @Import(name="excludeFromLatest")
       private final @Nullable Boolean excludeFromLatest;
 
-    public Optional<Boolean> getExcludeFromLatest() {
+    public Optional<Boolean> excludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
     }
 
@@ -51,7 +51,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
     @Import(name="publishedDate", required=true)
       private final String publishedDate;
 
-    public String getPublishedDate() {
+    public String publishedDate() {
         return this.publishedDate;
     }
 
@@ -62,7 +62,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
     @Import(name="replicaCount")
       private final @Nullable Integer replicaCount;
 
-    public Optional<Integer> getReplicaCount() {
+    public Optional<Integer> replicaCount() {
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
     }
 
@@ -73,7 +73,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
     @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
-    public Optional<String> getStorageAccountType() {
+    public Optional<String> storageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
     }
 
@@ -84,7 +84,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
     @Import(name="targetRegions")
       private final @Nullable List<TargetRegionResponse> targetRegions;
 
-    public List<TargetRegionResponse> getTargetRegions() {
+    public List<TargetRegionResponse> targetRegions() {
         return this.targetRegions == null ? List.of() : this.targetRegions;
     }
 

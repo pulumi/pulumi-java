@@ -92,49 +92,49 @@ public final class NetworkRuleResponse {
      * Description of the rule.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
     */
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination FQDNs.
      * 
     */
-    public List<String> getDestinationFqdns() {
+    public List<String> destinationFqdns() {
         return this.destinationFqdns == null ? List.of() : this.destinationFqdns;
     }
     /**
      * List of destination IpGroups for this rule.
      * 
     */
-    public List<String> getDestinationIpGroups() {
+    public List<String> destinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
     /**
      * List of destination ports.
      * 
     */
-    public List<String> getDestinationPorts() {
+    public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Array of FirewallPolicyRuleNetworkProtocols.
      * 
     */
-    public List<String> getIpProtocols() {
+    public List<String> ipProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
     /**
      * Name of the rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -142,21 +142,21 @@ public final class NetworkRuleResponse {
      * Expected value is 'NetworkRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
     */
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
     */
-    public List<String> getSourceIpGroups() {
+    public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 

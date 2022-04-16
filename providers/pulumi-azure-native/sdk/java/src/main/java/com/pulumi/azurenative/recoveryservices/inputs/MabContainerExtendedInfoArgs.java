@@ -29,7 +29,7 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="backupItemType")
       private final @Nullable Output<Either<String,BackupItemType>> backupItemType;
 
-    public Output<Either<String,BackupItemType>> getBackupItemType() {
+    public Output<Either<String,BackupItemType>> backupItemType() {
         return this.backupItemType == null ? Codegen.empty() : this.backupItemType;
     }
 
@@ -40,7 +40,7 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="backupItems")
       private final @Nullable Output<List<String>> backupItems;
 
-    public Output<List<String>> getBackupItems() {
+    public Output<List<String>> backupItems() {
         return this.backupItems == null ? Codegen.empty() : this.backupItems;
     }
 
@@ -51,7 +51,7 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
 
-    public Output<String> getLastBackupStatus() {
+    public Output<String> lastBackupStatus() {
         return this.lastBackupStatus == null ? Codegen.empty() : this.lastBackupStatus;
     }
 
@@ -62,7 +62,7 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
-    public Output<String> getLastRefreshedAt() {
+    public Output<String> lastRefreshedAt() {
         return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 
@@ -73,7 +73,7 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 

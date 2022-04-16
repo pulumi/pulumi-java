@@ -45,7 +45,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets the creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -59,7 +59,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets the field definitions of the connection type.
      * 
      */
-    public Output<Map<String,FieldDefinitionResponse>> getFieldDefinitions() {
+    public Output<Map<String,FieldDefinitionResponse>> fieldDefinitions() {
         return this.fieldDefinitions;
     }
     /**
@@ -87,7 +87,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets or sets a Boolean value to indicate if the connection type is global.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsGlobal() {
+    public Output</* @Nullable */ Boolean> isGlobal() {
         return this.isGlobal;
     }
     /**
@@ -101,7 +101,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -115,7 +115,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Gets the name of the connection type.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class ConnectionType extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

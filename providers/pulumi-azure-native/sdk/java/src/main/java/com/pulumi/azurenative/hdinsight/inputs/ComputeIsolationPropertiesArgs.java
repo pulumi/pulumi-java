@@ -27,7 +27,7 @@ public final class ComputeIsolationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="enableComputeIsolation")
       private final @Nullable Output<Boolean> enableComputeIsolation;
 
-    public Output<Boolean> getEnableComputeIsolation() {
+    public Output<Boolean> enableComputeIsolation() {
         return this.enableComputeIsolation == null ? Codegen.empty() : this.enableComputeIsolation;
     }
 
@@ -38,7 +38,7 @@ public final class ComputeIsolationPropertiesArgs extends com.pulumi.resources.R
     @Import(name="hostSku")
       private final @Nullable Output<String> hostSku;
 
-    public Output<String> getHostSku() {
+    public Output<String> hostSku() {
         return this.hostSku == null ? Codegen.empty() : this.hostSku;
     }
 

@@ -27,7 +27,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -49,7 +49,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -60,7 +60,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="primary")
       private final @Nullable Boolean primary;
 
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
@@ -71,7 +71,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -82,7 +82,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
@@ -93,7 +93,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
@@ -104,7 +104,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -115,7 +115,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
-    public Optional<SubnetResponse> getSubnet() {
+    public Optional<SubnetResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -126,7 +126,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends com.pulumi.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

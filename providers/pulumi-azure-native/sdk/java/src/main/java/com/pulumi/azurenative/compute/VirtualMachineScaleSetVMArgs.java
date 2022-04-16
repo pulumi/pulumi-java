@@ -34,7 +34,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="additionalCapabilities")
       private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
-    public Output<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
+    public Output<AdditionalCapabilitiesArgs> additionalCapabilities() {
         return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="availabilitySet")
       private final @Nullable Output<SubResourceArgs> availabilitySet;
 
-    public Output<SubResourceArgs> getAvailabilitySet() {
+    public Output<SubResourceArgs> availabilitySet() {
         return this.availabilitySet == null ? Codegen.empty() : this.availabilitySet;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="diagnosticsProfile")
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
+    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
         return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
     }
 
@@ -67,7 +67,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> getHardwareProfile() {
+    public Output<HardwareProfileArgs> hardwareProfile() {
         return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
     }
 
@@ -78,7 +78,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -89,7 +89,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -100,7 +100,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -111,7 +111,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
+    public Output<NetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -122,7 +122,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="networkProfileConfiguration")
       private final @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
 
-    public Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> getNetworkProfileConfiguration() {
+    public Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration() {
         return this.networkProfileConfiguration == null ? Codegen.empty() : this.networkProfileConfiguration;
     }
 
@@ -133,7 +133,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> getOsProfile() {
+    public Output<OSProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -144,7 +144,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> getPlan() {
+    public Output<PlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -155,7 +155,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="protectionPolicy")
       private final @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
 
-    public Output<VirtualMachineScaleSetVMProtectionPolicyArgs> getProtectionPolicy() {
+    public Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy() {
         return this.protectionPolicy == null ? Codegen.empty() : this.protectionPolicy;
     }
 
@@ -166,7 +166,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -177,7 +177,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> getSecurityProfile() {
+    public Output<SecurityProfileArgs> securityProfile() {
         return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
@@ -188,7 +188,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -199,7 +199,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -210,7 +210,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
@@ -221,7 +221,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
     @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;
 
-    public Output<String> getVmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 

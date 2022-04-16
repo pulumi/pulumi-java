@@ -23,7 +23,7 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class VMInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uuid", required=true)
       private final String uuid;
 
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
 

@@ -19,7 +19,7 @@ public final class GetIntegrationAccountAssemblyArgs extends com.pulumi.resource
     @Import(name="assemblyArtifactName", required=true)
       private final String assemblyArtifactName;
 
-    public String getAssemblyArtifactName() {
+    public String assemblyArtifactName() {
         return this.assemblyArtifactName;
     }
 
@@ -30,7 +30,7 @@ public final class GetIntegrationAccountAssemblyArgs extends com.pulumi.resource
     @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
-    public String getIntegrationAccountName() {
+    public String integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -41,7 +41,7 @@ public final class GetIntegrationAccountAssemblyArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -43,7 +43,7 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
      * @return State of the operation on the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -71,7 +71,7 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
      * @return Operational status of the iSCSI target.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -85,7 +85,7 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
      * @return iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
      * 
      */
-    public Output<String> getTargetIqn() {
+    public Output<String> targetIqn() {
         return this.targetIqn;
     }
     /**
@@ -99,7 +99,7 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
      * @return List of iSCSI target portal groups. Can have 1 portal group at most.
      * 
      */
-    public Output<List<TargetPortalGroupResponse>> getTpgs() {
+    public Output<List<TargetPortalGroupResponse>> tpgs() {
         return this.tpgs;
     }
     /**
@@ -113,7 +113,7 @@ public class IscsiTarget extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

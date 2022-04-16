@@ -31,7 +31,7 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="datasource")
       private final @Nullable Output<BlobReferenceInputDataSourceArgs> datasource;
 
-    public Output<BlobReferenceInputDataSourceArgs> getDatasource() {
+    public Output<BlobReferenceInputDataSourceArgs> datasource() {
         return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
@@ -42,7 +42,7 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
-    public Output<Object> getSerialization() {
+    public Output<Object> serialization() {
         return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 
@@ -54,7 +54,7 @@ public final class ReferenceInputPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -22,7 +22,7 @@ public final class SupportPlanTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="planTypeName")
       private final @Nullable Output<String> planTypeName;
 
-    public Output<String> getPlanTypeName() {
+    public Output<String> planTypeName() {
         return this.planTypeName == null ? Codegen.empty() : this.planTypeName;
     }
 
@@ -33,7 +33,7 @@ public final class SupportPlanTypeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 

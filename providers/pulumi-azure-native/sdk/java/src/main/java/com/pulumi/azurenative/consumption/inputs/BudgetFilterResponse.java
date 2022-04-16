@@ -27,7 +27,7 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="and")
       private final @Nullable List<BudgetFilterPropertiesResponse> and;
 
-    public List<BudgetFilterPropertiesResponse> getAnd() {
+    public List<BudgetFilterPropertiesResponse> and() {
         return this.and == null ? List.of() : this.and;
     }
 
@@ -38,7 +38,7 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dimensions")
       private final @Nullable BudgetComparisonExpressionResponse dimensions;
 
-    public Optional<BudgetComparisonExpressionResponse> getDimensions() {
+    public Optional<BudgetComparisonExpressionResponse> dimensions() {
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
     }
 
@@ -49,7 +49,7 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="not")
       private final @Nullable BudgetFilterPropertiesResponse not;
 
-    public Optional<BudgetFilterPropertiesResponse> getNot() {
+    public Optional<BudgetFilterPropertiesResponse> not() {
         return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
     }
 
@@ -60,7 +60,7 @@ public final class BudgetFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tags")
       private final @Nullable BudgetComparisonExpressionResponse tags;
 
-    public Optional<BudgetComparisonExpressionResponse> getTags() {
+    public Optional<BudgetComparisonExpressionResponse> tags() {
         return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
     }
 

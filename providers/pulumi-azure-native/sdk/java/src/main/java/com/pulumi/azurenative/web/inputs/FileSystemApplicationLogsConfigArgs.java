@@ -26,7 +26,7 @@ public final class FileSystemApplicationLogsConfigArgs extends com.pulumi.resour
     @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> getLevel() {
+    public Output<LogLevel> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 

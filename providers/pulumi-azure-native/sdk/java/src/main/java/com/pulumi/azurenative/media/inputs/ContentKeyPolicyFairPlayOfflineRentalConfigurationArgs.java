@@ -21,7 +21,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     @Import(name="playbackDurationSeconds", required=true)
       private final Output<Double> playbackDurationSeconds;
 
-    public Output<Double> getPlaybackDurationSeconds() {
+    public Output<Double> playbackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
 
@@ -32,7 +32,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     @Import(name="storageDurationSeconds", required=true)
       private final Output<Double> storageDurationSeconds;
 
-    public Output<Double> getStorageDurationSeconds() {
+    public Output<Double> storageDurationSeconds() {
         return this.storageDurationSeconds;
     }
 

@@ -23,7 +23,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="appPackageUrl", required=true)
       private final Output<String> appPackageUrl;
 
-    public Output<String> getAppPackageUrl() {
+    public Output<String> appPackageUrl() {
         return this.appPackageUrl;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="applicationTypeName", required=true)
       private final Output<String> applicationTypeName;
 
-    public Output<String> getApplicationTypeName() {
+    public Output<String> applicationTypeName() {
         return this.applicationTypeName;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -67,7 +67,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -89,7 +89,7 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

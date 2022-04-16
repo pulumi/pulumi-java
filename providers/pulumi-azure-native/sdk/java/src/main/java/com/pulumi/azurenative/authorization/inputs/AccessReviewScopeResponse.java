@@ -26,7 +26,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="assignmentState", required=true)
       private final String assignmentState;
 
-    public String getAssignmentState() {
+    public String assignmentState() {
         return this.assignmentState;
     }
 
@@ -37,7 +37,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="expandNestedMemberships")
       private final @Nullable Boolean expandNestedMemberships;
 
-    public Optional<Boolean> getExpandNestedMemberships() {
+    public Optional<Boolean> expandNestedMemberships() {
         return this.expandNestedMemberships == null ? Optional.empty() : Optional.ofNullable(this.expandNestedMemberships);
     }
 
@@ -48,7 +48,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="inactiveDuration")
       private final @Nullable String inactiveDuration;
 
-    public Optional<String> getInactiveDuration() {
+    public Optional<String> inactiveDuration() {
         return this.inactiveDuration == null ? Optional.empty() : Optional.ofNullable(this.inactiveDuration);
     }
 
@@ -59,7 +59,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="principalType", required=true)
       private final String principalType;
 
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
 
@@ -70,7 +70,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 
@@ -81,7 +81,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

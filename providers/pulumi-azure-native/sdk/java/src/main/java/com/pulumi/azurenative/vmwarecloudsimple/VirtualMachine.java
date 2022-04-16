@@ -50,7 +50,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The amount of memory
      * 
      */
-    public Output<Integer> getAmountOfRam() {
+    public Output<Integer> amountOfRam() {
         return this.amountOfRam;
     }
     /**
@@ -64,7 +64,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual Disks' Controllers
      * 
      */
-    public Output<List<VirtualDiskControllerResponse>> getControllers() {
+    public Output<List<VirtualDiskControllerResponse>> controllers() {
         return this.controllers;
     }
     /**
@@ -78,7 +78,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual machine properties
      * 
      */
-    public Output</* @Nullable */ GuestOSCustomizationResponse> getCustomization() {
+    public Output</* @Nullable */ GuestOSCustomizationResponse> customization() {
         return this.customization;
     }
     /**
@@ -92,7 +92,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual Disks
      * 
      */
-    public Output</* @Nullable */ List<VirtualDiskResponse>> getDisks() {
+    public Output</* @Nullable */ List<VirtualDiskResponse>> disks() {
         return this.disks;
     }
     /**
@@ -106,7 +106,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The DNS name of Virtual Machine in VCenter
      * 
      */
-    public Output<String> getDnsname() {
+    public Output<String> dnsname() {
         return this.dnsname;
     }
     /**
@@ -120,7 +120,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Expose Guest OS or not
      * 
      */
-    public Output</* @Nullable */ Boolean> getExposeToGuestVM() {
+    public Output</* @Nullable */ Boolean> exposeToGuestVM() {
         return this.exposeToGuestVM;
     }
     /**
@@ -134,7 +134,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The path to virtual machine folder in VCenter
      * 
      */
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -148,7 +148,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The name of Guest OS
      * 
      */
-    public Output<String> getGuestOS() {
+    public Output<String> guestOS() {
         return this.guestOS;
     }
     /**
@@ -162,7 +162,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The Guest OS type
      * 
      */
-    public Output<String> getGuestOSType() {
+    public Output<String> guestOSType() {
         return this.guestOSType;
     }
     /**
@@ -176,7 +176,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Azure region
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -190,7 +190,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return {virtualMachineName}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -204,7 +204,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual NICs
      * 
      */
-    public Output</* @Nullable */ List<VirtualNicResponse>> getNics() {
+    public Output</* @Nullable */ List<VirtualNicResponse>> nics() {
         return this.nics;
     }
     /**
@@ -218,7 +218,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The number of CPU cores
      * 
      */
-    public Output<Integer> getNumberOfCores() {
+    public Output<Integer> numberOfCores() {
         return this.numberOfCores;
     }
     /**
@@ -232,7 +232,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Password for login. Deprecated - use customization property
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -246,7 +246,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Private Cloud Id
      * 
      */
-    public Output<String> getPrivateCloudId() {
+    public Output<String> privateCloudId() {
         return this.privateCloudId;
     }
     /**
@@ -260,7 +260,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -274,7 +274,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The public ip of Virtual Machine
      * 
      */
-    public Output<String> getPublicIP() {
+    public Output<String> publicIP() {
         return this.publicIP;
     }
     /**
@@ -288,7 +288,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual Machines Resource Pool
      * 
      */
-    public Output</* @Nullable */ ResourcePoolResponse> getResourcePool() {
+    public Output</* @Nullable */ ResourcePoolResponse> resourcePool() {
         return this.resourcePool;
     }
     /**
@@ -302,7 +302,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The status of Virtual machine
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -316,7 +316,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -330,7 +330,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Virtual Machine Template Id
      * 
      */
-    public Output</* @Nullable */ String> getTemplateId() {
+    public Output</* @Nullable */ String> templateId() {
         return this.templateId;
     }
     /**
@@ -344,7 +344,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return {resourceProviderNamespace}/{resourceType}
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -358,7 +358,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return Username for login. Deprecated - use customization property
      * 
      */
-    public Output</* @Nullable */ String> getUsername() {
+    public Output</* @Nullable */ String> username() {
         return this.username;
     }
     /**
@@ -372,7 +372,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The list of Virtual VSphere Networks
      * 
      */
-    public Output</* @Nullable */ List<String>> getVSphereNetworks() {
+    public Output</* @Nullable */ List<String>> vSphereNetworks() {
         return this.vSphereNetworks;
     }
     /**
@@ -386,7 +386,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return The internal id of Virtual Machine in VCenter
      * 
      */
-    public Output<String> getVmId() {
+    public Output<String> vmId() {
         return this.vmId;
     }
     /**
@@ -400,7 +400,7 @@ public class VirtualMachine extends com.pulumi.resources.CustomResource {
      * @return VMware tools version
      * 
      */
-    public Output<String> getVmwaretools() {
+    public Output<String> vmwaretools() {
         return this.vmwaretools;
     }
 

@@ -26,7 +26,7 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="oldestRecoveryPoint")
       private final @Nullable String oldestRecoveryPoint;
 
-    public Optional<String> getOldestRecoveryPoint() {
+    public Optional<String> oldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
@@ -37,7 +37,7 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="policyState")
       private final @Nullable String policyState;
 
-    public Optional<String> getPolicyState() {
+    public Optional<String> policyState() {
         return this.policyState == null ? Optional.empty() : Optional.ofNullable(this.policyState);
     }
 
@@ -48,7 +48,7 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="recoveryPointCount")
       private final @Nullable Integer recoveryPointCount;
 
-    public Optional<Integer> getRecoveryPointCount() {
+    public Optional<Integer> recoveryPointCount() {
         return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
     }
 
@@ -59,7 +59,7 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="resourceState", required=true)
       private final String resourceState;
 
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
 
@@ -70,7 +70,7 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="resourceStateSyncTime", required=true)
       private final String resourceStateSyncTime;
 
-    public String getResourceStateSyncTime() {
+    public String resourceStateSyncTime() {
         return this.resourceStateSyncTime;
     }
 

@@ -63,28 +63,28 @@ public final class DenylistCustomAlertRuleResponse {
      * The values to deny. The format of the values depends on the rule type.
      * 
     */
-    public List<String> getDenylistValues() {
+    public List<String> denylistValues() {
         return this.denylistValues;
     }
     /**
      * The description of the custom alert.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name of the custom alert.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Status of the custom alert.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -92,14 +92,14 @@ public final class DenylistCustomAlertRuleResponse {
      * Expected value is 'DenylistCustomAlertRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
      * The value type of the items in the list.
      * 
     */
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

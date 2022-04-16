@@ -193,168 +193,168 @@ public final class GetAccountResult {
      * The unique identifier associated with this Data Lake Store account.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * The account creation time.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * The commitment tier in use for the current month.
      * 
     */
-    public String getCurrentTier() {
+    public String currentTier() {
         return this.currentTier;
     }
     /**
      * The default owner group for all new folders and files created in the Data Lake Store account.
      * 
     */
-    public String getDefaultGroup() {
+    public String defaultGroup() {
         return this.defaultGroup;
     }
     /**
      * The Key Vault encryption configuration.
      * 
     */
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * The current state of encryption provisioning for this Data Lake Store account.
      * 
     */
-    public String getEncryptionProvisioningState() {
+    public String encryptionProvisioningState() {
         return this.encryptionProvisioningState;
     }
     /**
      * The current state of encryption for this Data Lake Store account.
      * 
     */
-    public String getEncryptionState() {
+    public String encryptionState() {
         return this.encryptionState;
     }
     /**
      * The full CName endpoint for this account.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
     */
-    public String getFirewallAllowAzureIps() {
+    public String firewallAllowAzureIps() {
         return this.firewallAllowAzureIps;
     }
     /**
      * The list of firewall rules associated with this Data Lake Store account.
      * 
     */
-    public List<FirewallRuleResponse> getFirewallRules() {
+    public List<FirewallRuleResponse> firewallRules() {
         return this.firewallRules;
     }
     /**
      * The current state of the IP address firewall for this Data Lake Store account.
      * 
     */
-    public String getFirewallState() {
+    public String firewallState() {
         return this.firewallState;
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Key Vault encryption identity, if any.
      * 
     */
-    public EncryptionIdentityResponse getIdentity() {
+    public EncryptionIdentityResponse identity() {
         return this.identity;
     }
     /**
      * The account last modified time.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The commitment tier to use for next month.
      * 
     */
-    public String getNewTier() {
+    public String newTier() {
         return this.newTier;
     }
     /**
      * The provisioning status of the Data Lake Store account.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The state of the Data Lake Store account.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The current state of the trusted identity provider feature for this Data Lake Store account.
      * 
     */
-    public String getTrustedIdProviderState() {
+    public String trustedIdProviderState() {
         return this.trustedIdProviderState;
     }
     /**
      * The list of trusted identity providers associated with this Data Lake Store account.
      * 
     */
-    public List<TrustedIdProviderResponse> getTrustedIdProviders() {
+    public List<TrustedIdProviderResponse> trustedIdProviders() {
         return this.trustedIdProviders;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The list of virtual network rules associated with this Data Lake Store account.
      * 
     */
-    public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules;
     }
 

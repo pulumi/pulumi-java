@@ -46,7 +46,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -60,7 +60,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -88,7 +88,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return The publishing profile of a gallery image Version.
      * 
      */
-    public Output</* @Nullable */ GalleryImageVersionPublishingProfileResponse> getPublishingProfile() {
+    public Output</* @Nullable */ GalleryImageVersionPublishingProfileResponse> publishingProfile() {
         return this.publishingProfile;
     }
     /**
@@ -102,7 +102,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return This is the replication status of the gallery image version.
      * 
      */
-    public Output<ReplicationStatusResponse> getReplicationStatus() {
+    public Output<ReplicationStatusResponse> replicationStatus() {
         return this.replicationStatus;
     }
     /**
@@ -116,7 +116,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return This is the storage profile of a Gallery Image Version.
      * 
      */
-    public Output<GalleryImageVersionStorageProfileResponse> getStorageProfile() {
+    public Output<GalleryImageVersionStorageProfileResponse> storageProfile() {
         return this.storageProfile;
     }
     /**
@@ -130,7 +130,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +144,7 @@ public class GalleryImageVersion extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

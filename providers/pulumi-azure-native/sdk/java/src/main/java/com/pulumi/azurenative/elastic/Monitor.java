@@ -47,7 +47,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return Identity properties of the monitor resource.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -61,7 +61,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return The location of the monitor resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -75,7 +75,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return Name of the monitor resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return Properties of the monitor resource.
      * 
      */
-    public Output<MonitorPropertiesResponse> getProperties() {
+    public Output<MonitorPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -103,7 +103,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return SKU of the monitor resource.
      * 
      */
-    public Output</* @Nullable */ ResourceSkuResponse> getSku() {
+    public Output</* @Nullable */ ResourceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -117,7 +117,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -131,7 +131,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return The tags of the monitor resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -145,7 +145,7 @@ public class Monitor extends com.pulumi.resources.CustomResource {
      * @return The type of the monitor resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

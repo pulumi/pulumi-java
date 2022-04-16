@@ -19,7 +19,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="webhookName", required=true)
       private final String webhookName;
 
-    public String getWebhookName() {
+    public String webhookName() {
         return this.webhookName;
     }
 

@@ -24,7 +24,7 @@ public final class KeyVaultReferenceResponse {
      * Azure resource ID of the Key Vault.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

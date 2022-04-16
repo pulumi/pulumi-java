@@ -28,7 +28,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="assessmentSolutionId")
       private final @Nullable String assessmentSolutionId;
 
-    public Optional<String> getAssessmentSolutionId() {
+    public Optional<String> assessmentSolutionId() {
         return this.assessmentSolutionId == null ? Optional.empty() : Optional.ofNullable(this.assessmentSolutionId);
     }
 
@@ -39,7 +39,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
-    public String getCreatedTimestamp() {
+    public String createdTimestamp() {
         return this.createdTimestamp;
     }
 
@@ -50,7 +50,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="customerStorageAccountArmId")
       private final @Nullable String customerStorageAccountArmId;
 
-    public Optional<String> getCustomerStorageAccountArmId() {
+    public Optional<String> customerStorageAccountArmId() {
         return this.customerStorageAccountArmId == null ? Optional.empty() : Optional.ofNullable(this.customerStorageAccountArmId);
     }
 
@@ -61,7 +61,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="customerWorkspaceId")
       private final @Nullable String customerWorkspaceId;
 
-    public Optional<String> getCustomerWorkspaceId() {
+    public Optional<String> customerWorkspaceId() {
         return this.customerWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceId);
     }
 
@@ -72,7 +72,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="customerWorkspaceLocation")
       private final @Nullable String customerWorkspaceLocation;
 
-    public Optional<String> getCustomerWorkspaceLocation() {
+    public Optional<String> customerWorkspaceLocation() {
         return this.customerWorkspaceLocation == null ? Optional.empty() : Optional.ofNullable(this.customerWorkspaceLocation);
     }
 
@@ -83,7 +83,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="lastAssessmentTimestamp", required=true)
       private final String lastAssessmentTimestamp;
 
-    public String getLastAssessmentTimestamp() {
+    public String lastAssessmentTimestamp() {
         return this.lastAssessmentTimestamp;
     }
 
@@ -94,7 +94,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="numberOfAssessments", required=true)
       private final Integer numberOfAssessments;
 
-    public Integer getNumberOfAssessments() {
+    public Integer numberOfAssessments() {
         return this.numberOfAssessments;
     }
 
@@ -105,7 +105,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="numberOfGroups", required=true)
       private final Integer numberOfGroups;
 
-    public Integer getNumberOfGroups() {
+    public Integer numberOfGroups() {
         return this.numberOfGroups;
     }
 
@@ -116,7 +116,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="numberOfMachines", required=true)
       private final Integer numberOfMachines;
 
-    public Integer getNumberOfMachines() {
+    public Integer numberOfMachines() {
         return this.numberOfMachines;
     }
 
@@ -127,7 +127,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="privateEndpointConnections", required=true)
       private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
 
@@ -138,7 +138,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="projectStatus")
       private final @Nullable String projectStatus;
 
-    public Optional<String> getProjectStatus() {
+    public Optional<String> projectStatus() {
         return this.projectStatus == null ? Optional.empty() : Optional.ofNullable(this.projectStatus);
     }
 
@@ -149,7 +149,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -160,7 +160,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
@@ -171,7 +171,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
-    public String getServiceEndpoint() {
+    public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
 
@@ -182,7 +182,7 @@ public final class ProjectPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
-    public String getUpdatedTimestamp() {
+    public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 

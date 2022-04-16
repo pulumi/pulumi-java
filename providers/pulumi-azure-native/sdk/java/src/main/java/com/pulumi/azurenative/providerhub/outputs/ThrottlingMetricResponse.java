@@ -26,13 +26,13 @@ public final class ThrottlingMetricResponse {
         this.type = type;
     }
 
-    public Optional<String> getInterval() {
+    public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
-    public Double getLimit() {
+    public Double limit() {
         return this.limit;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

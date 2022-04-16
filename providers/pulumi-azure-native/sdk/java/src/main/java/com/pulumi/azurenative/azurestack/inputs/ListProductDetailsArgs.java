@@ -19,7 +19,7 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="productName", required=true)
       private final String productName;
 
-    public String getProductName() {
+    public String productName() {
         return this.productName;
     }
 
@@ -30,7 +30,7 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="registrationName", required=true)
       private final String registrationName;
 
-    public String getRegistrationName() {
+    public String registrationName() {
         return this.registrationName;
     }
 
@@ -41,7 +41,7 @@ public final class ListProductDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
 

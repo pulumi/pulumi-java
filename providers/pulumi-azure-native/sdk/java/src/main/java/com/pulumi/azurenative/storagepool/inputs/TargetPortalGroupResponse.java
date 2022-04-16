@@ -28,7 +28,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="acls", required=true)
       private final List<AclResponse> acls;
 
-    public List<AclResponse> getAcls() {
+    public List<AclResponse> acls() {
         return this.acls;
     }
 
@@ -39,7 +39,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="attributes", required=true)
       private final AttributesResponse attributes;
 
-    public AttributesResponse getAttributes() {
+    public AttributesResponse attributes() {
         return this.attributes;
     }
 
@@ -50,7 +50,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="endpoints", required=true)
       private final List<String> endpoints;
 
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints;
     }
 
@@ -61,7 +61,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="luns", required=true)
       private final List<IscsiLunResponse> luns;
 
-    public List<IscsiLunResponse> getLuns() {
+    public List<IscsiLunResponse> luns() {
         return this.luns;
     }
 
@@ -72,7 +72,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -83,7 +83,7 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="tag", required=true)
       private final Integer tag;
 
-    public Integer getTag() {
+    public Integer tag() {
         return this.tag;
     }
 

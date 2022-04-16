@@ -28,7 +28,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
-    public Output<String> getFailureReason() {
+    public Output<String> failureReason() {
         return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
@@ -39,7 +39,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="hiddenParameters")
       private final @Nullable Output<List<Object>> hiddenParameters;
 
-    public Output<List<Object>> getHiddenParameters() {
+    public Output<List<Object>> hiddenParameters() {
         return this.hiddenParameters == null ? Codegen.empty() : this.hiddenParameters;
     }
 
@@ -50,7 +50,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namedOutputs")
       private final @Nullable Output<Map<String,Object>> namedOutputs;
 
-    public Output<Map<String,Object>> getNamedOutputs() {
+    public Output<Map<String,Object>> namedOutputs() {
         return this.namedOutputs == null ? Codegen.empty() : this.namedOutputs;
     }
 
@@ -61,7 +61,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="output")
       private final @Nullable Output<List<String>> output;
 
-    public Output<List<String>> getOutput() {
+    public Output<List<String>> output() {
         return this.output == null ? Codegen.empty() : this.output;
     }
 
@@ -72,7 +72,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<List<Object>> parameters;
 
-    public Output<List<Object>> getParameters() {
+    public Output<List<Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -83,7 +83,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -94,7 +94,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="retention")
       private final @Nullable Output<String> retention;
 
-    public Output<String> getRetention() {
+    public Output<String> retention() {
         return this.retention == null ? Codegen.empty() : this.retention;
     }
 
@@ -116,7 +116,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptCmdletId")
       private final @Nullable Output<String> scriptCmdletId;
 
-    public Output<String> getScriptCmdletId() {
+    public Output<String> scriptCmdletId() {
         return this.scriptCmdletId == null ? Codegen.empty() : this.scriptCmdletId;
     }
 
@@ -127,7 +127,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptExecutionName")
       private final @Nullable Output<String> scriptExecutionName;
 
-    public Output<String> getScriptExecutionName() {
+    public Output<String> scriptExecutionName() {
         return this.scriptExecutionName == null ? Codegen.empty() : this.scriptExecutionName;
     }
 
@@ -138,7 +138,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeout", required=true)
       private final Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout;
     }
 

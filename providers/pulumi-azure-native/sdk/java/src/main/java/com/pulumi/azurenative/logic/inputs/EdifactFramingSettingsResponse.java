@@ -26,7 +26,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="characterEncoding")
       private final @Nullable String characterEncoding;
 
-    public Optional<String> getCharacterEncoding() {
+    public Optional<String> characterEncoding() {
         return this.characterEncoding == null ? Optional.empty() : Optional.ofNullable(this.characterEncoding);
     }
 
@@ -37,7 +37,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="characterSet", required=true)
       private final String characterSet;
 
-    public String getCharacterSet() {
+    public String characterSet() {
         return this.characterSet;
     }
 
@@ -48,7 +48,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
 
-    public Integer getComponentSeparator() {
+    public Integer componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -59,7 +59,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
 
-    public Integer getDataElementSeparator() {
+    public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -70,7 +70,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="decimalPointIndicator", required=true)
       private final String decimalPointIndicator;
 
-    public String getDecimalPointIndicator() {
+    public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -81,7 +81,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="protocolVersion", required=true)
       private final Integer protocolVersion;
 
-    public Integer getProtocolVersion() {
+    public Integer protocolVersion() {
         return this.protocolVersion;
     }
 
@@ -92,7 +92,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="releaseIndicator", required=true)
       private final Integer releaseIndicator;
 
-    public Integer getReleaseIndicator() {
+    public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -103,7 +103,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="repetitionSeparator", required=true)
       private final Integer repetitionSeparator;
 
-    public Integer getRepetitionSeparator() {
+    public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -114,7 +114,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
 
-    public Integer getSegmentTerminator() {
+    public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -125,7 +125,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
 
-    public String getSegmentTerminatorSuffix() {
+    public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -136,7 +136,7 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="serviceCodeListDirectoryVersion")
       private final @Nullable String serviceCodeListDirectoryVersion;
 
-    public Optional<String> getServiceCodeListDirectoryVersion() {
+    public Optional<String> serviceCodeListDirectoryVersion() {
         return this.serviceCodeListDirectoryVersion == null ? Optional.empty() : Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }
 

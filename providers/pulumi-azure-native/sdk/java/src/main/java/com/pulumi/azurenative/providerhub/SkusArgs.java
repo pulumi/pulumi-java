@@ -19,7 +19,7 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<SkuResourcePropertiesArgs> properties;
 
-    public Output<SkuResourcePropertiesArgs> getProperties() {
+    public Output<SkuResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -30,7 +30,7 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
+    public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -41,7 +41,7 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -52,7 +52,7 @@ public final class SkusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 

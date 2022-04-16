@@ -93,70 +93,70 @@ public final class GetPolicyDefinitionResult {
      * The policy definition description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy definition.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ID of the policy definition.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
     */
-    public Optional<Object> getMetadata() {
+    public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of the policy definition.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
     */
-    public Map<String,ParameterDefinitionsValueResponse> getParameters() {
+    public Map<String,ParameterDefinitionsValueResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The policy rule.
      * 
     */
-    public Optional<Object> getPolicyRule() {
+    public Optional<Object> policyRule() {
         return Optional.ofNullable(this.policyRule);
     }
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
     */
-    public Optional<String> getPolicyType() {
+    public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
      * The type of the resource (Microsoft.Authorization/policyDefinitions).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -39,7 +39,7 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -50,7 +50,7 @@ public final class StreamingPolicyContentKeyArgs extends com.pulumi.resources.Re
     @Import(name="tracks")
       private final @Nullable Output<List<TrackSelectionArgs>> tracks;
 
-    public Output<List<TrackSelectionArgs>> getTracks() {
+    public Output<List<TrackSelectionArgs>> tracks() {
         return this.tracks == null ? Codegen.empty() : this.tracks;
     }
 

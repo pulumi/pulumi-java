@@ -26,7 +26,7 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -37,7 +37,7 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
-    public Output<String> getDatastoreId() {
+    public Output<String> datastoreId() {
         return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
     }
 
@@ -48,7 +48,7 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
-    public Output<String> getHostId() {
+    public Output<String> hostId() {
         return this.hostId == null ? Codegen.empty() : this.hostId;
     }
 
@@ -59,7 +59,7 @@ public final class PlacementProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourcePoolId")
       private final @Nullable Output<String> resourcePoolId;
 
-    public Output<String> getResourcePoolId() {
+    public Output<String> resourcePoolId() {
         return this.resourcePoolId == null ? Codegen.empty() : this.resourcePoolId;
     }
 

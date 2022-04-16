@@ -28,7 +28,7 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="contentType")
       private final @Nullable Output<Either<String,ContentType>> contentType;
 
-    public Output<Either<String,ContentType>> getContentType() {
+    public Output<Either<String,ContentType>> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -39,7 +39,7 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

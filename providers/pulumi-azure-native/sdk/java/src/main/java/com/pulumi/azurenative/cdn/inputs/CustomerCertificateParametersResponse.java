@@ -28,7 +28,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
     @Import(name="certificateAuthority")
       private final @Nullable String certificateAuthority;
 
-    public Optional<String> getCertificateAuthority() {
+    public Optional<String> certificateAuthority() {
         return this.certificateAuthority == null ? Optional.empty() : Optional.ofNullable(this.certificateAuthority);
     }
 
@@ -39,7 +39,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
     @Import(name="secretSource", required=true)
       private final ResourceReferenceResponse secretSource;
 
-    public ResourceReferenceResponse getSecretSource() {
+    public ResourceReferenceResponse secretSource() {
         return this.secretSource;
     }
 
@@ -50,7 +50,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
     @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
-    public Optional<String> getSecretVersion() {
+    public Optional<String> secretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
     }
 
@@ -61,7 +61,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
     @Import(name="subjectAlternativeNames")
       private final @Nullable List<String> subjectAlternativeNames;
 
-    public List<String> getSubjectAlternativeNames() {
+    public List<String> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
     }
 
@@ -73,7 +73,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -84,7 +84,7 @@ public final class CustomerCertificateParametersResponse extends com.pulumi.reso
     @Import(name="useLatestVersion")
       private final @Nullable Boolean useLatestVersion;
 
-    public Optional<Boolean> getUseLatestVersion() {
+    public Optional<Boolean> useLatestVersion() {
         return this.useLatestVersion == null ? Optional.empty() : Optional.ofNullable(this.useLatestVersion);
     }
 

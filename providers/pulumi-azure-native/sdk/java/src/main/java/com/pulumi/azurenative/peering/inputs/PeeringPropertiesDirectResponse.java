@@ -29,7 +29,7 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="connections")
       private final @Nullable List<DirectConnectionResponse> connections;
 
-    public List<DirectConnectionResponse> getConnections() {
+    public List<DirectConnectionResponse> connections() {
         return this.connections == null ? List.of() : this.connections;
     }
 
@@ -40,7 +40,7 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="directPeeringType")
       private final @Nullable String directPeeringType;
 
-    public Optional<String> getDirectPeeringType() {
+    public Optional<String> directPeeringType() {
         return this.directPeeringType == null ? Optional.empty() : Optional.ofNullable(this.directPeeringType);
     }
 
@@ -51,7 +51,7 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="peerAsn")
       private final @Nullable SubResourceResponse peerAsn;
 
-    public Optional<SubResourceResponse> getPeerAsn() {
+    public Optional<SubResourceResponse> peerAsn() {
         return this.peerAsn == null ? Optional.empty() : Optional.ofNullable(this.peerAsn);
     }
 
@@ -62,7 +62,7 @@ public final class PeeringPropertiesDirectResponse extends com.pulumi.resources.
     @Import(name="useForPeeringService", required=true)
       private final Boolean useForPeeringService;
 
-    public Boolean getUseForPeeringService() {
+    public Boolean useForPeeringService() {
         return this.useForPeeringService;
     }
 

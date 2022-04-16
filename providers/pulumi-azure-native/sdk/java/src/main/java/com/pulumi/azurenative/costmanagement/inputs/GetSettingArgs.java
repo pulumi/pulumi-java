@@ -19,7 +19,7 @@ public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="settingName", required=true)
       private final String settingName;
 
-    public String getSettingName() {
+    public String settingName() {
         return this.settingName;
     }
 

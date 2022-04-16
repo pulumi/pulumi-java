@@ -34,14 +34,14 @@ public final class StorageSettingResponse {
      * Gets or sets the type of the datastore.
      * 
     */
-    public Optional<String> getDatastoreType() {
+    public Optional<String> datastoreType() {
         return Optional.ofNullable(this.datastoreType);
     }
     /**
      * Gets or sets the type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

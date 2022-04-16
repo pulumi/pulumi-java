@@ -27,7 +27,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="claims")
       private final @Nullable Output<RuleManagementEventClaimsDataSourceArgs> claims;
 
-    public Output<RuleManagementEventClaimsDataSourceArgs> getClaims() {
+    public Output<RuleManagementEventClaimsDataSourceArgs> claims() {
         return this.claims == null ? Codegen.empty() : this.claims;
     }
 
@@ -38,7 +38,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="eventName")
       private final @Nullable Output<String> eventName;
 
-    public Output<String> getEventName() {
+    public Output<String> eventName() {
         return this.eventName == null ? Codegen.empty() : this.eventName;
     }
 
@@ -49,7 +49,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="eventSource")
       private final @Nullable Output<String> eventSource;
 
-    public Output<String> getEventSource() {
+    public Output<String> eventSource() {
         return this.eventSource == null ? Codegen.empty() : this.eventSource;
     }
 
@@ -60,7 +60,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="legacyResourceId")
       private final @Nullable Output<String> legacyResourceId;
 
-    public Output<String> getLegacyResourceId() {
+    public Output<String> legacyResourceId() {
         return this.legacyResourceId == null ? Codegen.empty() : this.legacyResourceId;
     }
 
@@ -71,7 +71,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -82,7 +82,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
@@ -94,7 +94,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -105,7 +105,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="operationName")
       private final @Nullable Output<String> operationName;
 
-    public Output<String> getOperationName() {
+    public Output<String> operationName() {
         return this.operationName == null ? Codegen.empty() : this.operationName;
     }
 
@@ -116,7 +116,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="resourceGroupName")
       private final @Nullable Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
@@ -127,7 +127,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="resourceLocation")
       private final @Nullable Output<String> resourceLocation;
 
-    public Output<String> getResourceLocation() {
+    public Output<String> resourceLocation() {
         return this.resourceLocation == null ? Codegen.empty() : this.resourceLocation;
     }
 
@@ -138,7 +138,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="resourceProviderName")
       private final @Nullable Output<String> resourceProviderName;
 
-    public Output<String> getResourceProviderName() {
+    public Output<String> resourceProviderName() {
         return this.resourceProviderName == null ? Codegen.empty() : this.resourceProviderName;
     }
 
@@ -149,7 +149,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
@@ -160,7 +160,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -171,7 +171,7 @@ public final class RuleManagementEventDataSourceArgs extends com.pulumi.resource
     @Import(name="subStatus")
       private final @Nullable Output<String> subStatus;
 
-    public Output<String> getSubStatus() {
+    public Output<String> subStatus() {
         return this.subStatus == null ? Codegen.empty() : this.subStatus;
     }
 

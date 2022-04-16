@@ -25,7 +25,7 @@ public final class PublicIpReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceArmResourceId", required=true)
       private final Output<String> sourceArmResourceId;
 
-    public Output<String> getSourceArmResourceId() {
+    public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 

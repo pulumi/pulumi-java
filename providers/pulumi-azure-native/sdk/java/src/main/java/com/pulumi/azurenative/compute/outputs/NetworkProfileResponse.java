@@ -44,21 +44,21 @@ public final class NetworkProfileResponse {
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
      * 
     */
-    public Optional<String> getNetworkApiVersion() {
+    public Optional<String> networkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
     /**
      * Specifies the networking configurations that will be used to create the virtual machine networking resources.
      * 
     */
-    public List<VirtualMachineNetworkInterfaceConfigurationResponse> getNetworkInterfaceConfigurations() {
+    public List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }
     /**
      * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
      * 
     */
-    public List<NetworkInterfaceReferenceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceReferenceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 

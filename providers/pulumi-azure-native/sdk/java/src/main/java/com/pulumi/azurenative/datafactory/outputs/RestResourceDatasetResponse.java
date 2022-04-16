@@ -118,84 +118,84 @@ public final class RestResourceDatasetResponse {
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAdditionalHeaders() {
+    public Optional<Object> additionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
     /**
      * List of tags that can be used for describing the Dataset.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Dataset description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
     */
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Linked service reference.
      * 
     */
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPaginationRules() {
+    public Optional<Object> paginationRules() {
         return Optional.ofNullable(this.paginationRules);
     }
     /**
      * Parameters for dataset.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRelativeUrl() {
+    public Optional<Object> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
     /**
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRequestBody() {
+    public Optional<Object> requestBody() {
         return Optional.ofNullable(this.requestBody);
     }
     /**
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getRequestMethod() {
+    public Optional<Object> requestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
     */
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
     */
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
@@ -203,7 +203,7 @@ public final class RestResourceDatasetResponse {
      * Expected value is 'RestResource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

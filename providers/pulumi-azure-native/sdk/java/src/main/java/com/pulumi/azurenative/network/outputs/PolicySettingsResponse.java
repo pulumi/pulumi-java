@@ -57,35 +57,35 @@ public final class PolicySettingsResponse {
      * Maximum file upload size in Mb for WAF.
      * 
     */
-    public Optional<Integer> getFileUploadLimitInMb() {
+    public Optional<Integer> fileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
     /**
      * Maximum request body size in Kb for WAF.
      * 
     */
-    public Optional<Integer> getMaxRequestBodySizeInKb() {
+    public Optional<Integer> maxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
     /**
      * The mode of the policy.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Whether to allow WAF to check request Body.
      * 
     */
-    public Optional<Boolean> getRequestBodyCheck() {
+    public Optional<Boolean> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
     /**
      * The state of the policy.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

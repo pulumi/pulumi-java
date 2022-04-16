@@ -30,7 +30,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classification")
       private final @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Output<Either<String,IncidentClassification>> getClassification() {
+    public Output<Either<String,IncidentClassification>> classification() {
         return this.classification == null ? Codegen.empty() : this.classification;
     }
 
@@ -41,7 +41,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classificationComment")
       private final @Nullable Output<String> classificationComment;
 
-    public Output<String> getClassificationComment() {
+    public Output<String> classificationComment() {
         return this.classificationComment == null ? Codegen.empty() : this.classificationComment;
     }
 
@@ -52,7 +52,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classificationReason")
       private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Output<Either<String,IncidentClassificationReason>> getClassificationReason() {
+    public Output<Either<String,IncidentClassificationReason>> classificationReason() {
         return this.classificationReason == null ? Codegen.empty() : this.classificationReason;
     }
 
@@ -63,7 +63,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -74,7 +74,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstActivityTimeUtc")
       private final @Nullable Output<String> firstActivityTimeUtc;
 
-    public Output<String> getFirstActivityTimeUtc() {
+    public Output<String> firstActivityTimeUtc() {
         return this.firstActivityTimeUtc == null ? Codegen.empty() : this.firstActivityTimeUtc;
     }
 
@@ -85,7 +85,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
 
-    public Output<String> getIncidentId() {
+    public Output<String> incidentId() {
         return this.incidentId == null ? Codegen.empty() : this.incidentId;
     }
 
@@ -96,7 +96,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Output<List<IncidentLabelArgs>> getLabels() {
+    public Output<List<IncidentLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -107,7 +107,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastActivityTimeUtc")
       private final @Nullable Output<String> lastActivityTimeUtc;
 
-    public Output<String> getLastActivityTimeUtc() {
+    public Output<String> lastActivityTimeUtc() {
         return this.lastActivityTimeUtc == null ? Codegen.empty() : this.lastActivityTimeUtc;
     }
 
@@ -118,7 +118,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Output<IncidentOwnerInfoArgs> getOwner() {
+    public Output<IncidentOwnerInfoArgs> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -129,7 +129,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -140,7 +140,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> getSeverity() {
+    public Output<Either<String,IncidentSeverity>> severity() {
         return this.severity;
     }
 
@@ -151,7 +151,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<Either<String,IncidentStatus>> status;
 
-    public Output<Either<String,IncidentStatus>> getStatus() {
+    public Output<Either<String,IncidentStatus>> status() {
         return this.status;
     }
 
@@ -162,7 +162,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -173,7 +173,7 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -36,7 +36,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="acknowledgementSettings", required=true)
       private final EdifactAcknowledgementSettingsResponse acknowledgementSettings;
 
-    public EdifactAcknowledgementSettingsResponse getAcknowledgementSettings() {
+    public EdifactAcknowledgementSettingsResponse acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
 
@@ -47,7 +47,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="edifactDelimiterOverrides")
       private final @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
 
-    public List<EdifactDelimiterOverrideResponse> getEdifactDelimiterOverrides() {
+    public List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides() {
         return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
     }
 
@@ -58,7 +58,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="envelopeOverrides")
       private final @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
 
-    public List<EdifactEnvelopeOverrideResponse> getEnvelopeOverrides() {
+    public List<EdifactEnvelopeOverrideResponse> envelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
 
@@ -69,7 +69,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="envelopeSettings", required=true)
       private final EdifactEnvelopeSettingsResponse envelopeSettings;
 
-    public EdifactEnvelopeSettingsResponse getEnvelopeSettings() {
+    public EdifactEnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -80,7 +80,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="framingSettings", required=true)
       private final EdifactFramingSettingsResponse framingSettings;
 
-    public EdifactFramingSettingsResponse getFramingSettings() {
+    public EdifactFramingSettingsResponse framingSettings() {
         return this.framingSettings;
     }
 
@@ -91,7 +91,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="messageFilter", required=true)
       private final EdifactMessageFilterResponse messageFilter;
 
-    public EdifactMessageFilterResponse getMessageFilter() {
+    public EdifactMessageFilterResponse messageFilter() {
         return this.messageFilter;
     }
 
@@ -102,7 +102,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="messageFilterList")
       private final @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
 
-    public List<EdifactMessageIdentifierResponse> getMessageFilterList() {
+    public List<EdifactMessageIdentifierResponse> messageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
 
@@ -113,7 +113,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="processingSettings", required=true)
       private final EdifactProcessingSettingsResponse processingSettings;
 
-    public EdifactProcessingSettingsResponse getProcessingSettings() {
+    public EdifactProcessingSettingsResponse processingSettings() {
         return this.processingSettings;
     }
 
@@ -124,7 +124,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="schemaReferences", required=true)
       private final List<EdifactSchemaReferenceResponse> schemaReferences;
 
-    public List<EdifactSchemaReferenceResponse> getSchemaReferences() {
+    public List<EdifactSchemaReferenceResponse> schemaReferences() {
         return this.schemaReferences;
     }
 
@@ -135,7 +135,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="validationOverrides")
       private final @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
 
-    public List<EdifactValidationOverrideResponse> getValidationOverrides() {
+    public List<EdifactValidationOverrideResponse> validationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
 
@@ -146,7 +146,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
     @Import(name="validationSettings", required=true)
       private final EdifactValidationSettingsResponse validationSettings;
 
-    public EdifactValidationSettingsResponse getValidationSettings() {
+    public EdifactValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
 

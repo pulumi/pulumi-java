@@ -40,21 +40,21 @@ public final class SSISExecutionCredentialResponse {
      * Domain for windows authentication.
      * 
     */
-    public Object getDomain() {
+    public Object domain() {
         return this.domain;
     }
     /**
      * Password for windows authentication.
      * 
     */
-    public SecureStringResponse getPassword() {
+    public SecureStringResponse password() {
         return this.password;
     }
     /**
      * UseName for windows authentication.
      * 
     */
-    public Object getUserName() {
+    public Object userName() {
         return this.userName;
     }
 

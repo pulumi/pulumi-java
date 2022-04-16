@@ -23,7 +23,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="managementPolicyName")
       private final @Nullable Output<String> managementPolicyName;
 
-    public Output<String> getManagementPolicyName() {
+    public Output<String> managementPolicyName() {
         return this.managementPolicyName == null ? Codegen.empty() : this.managementPolicyName;
     }
 
@@ -45,7 +45,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policy", required=true)
       private final Output<ManagementPolicySchemaArgs> policy;
 
-    public Output<ManagementPolicySchemaArgs> getPolicy() {
+    public Output<ManagementPolicySchemaArgs> policy() {
         return this.policy;
     }
 
@@ -56,7 +56,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

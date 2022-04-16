@@ -47,28 +47,28 @@ public final class ProgressMetricsResponse {
      * The completed datapoint count.
      * 
     */
-    public Double getCompletedDatapointCount() {
+    public Double completedDatapointCount() {
         return this.completedDatapointCount;
     }
     /**
      * The time of last successful incremental dataset refresh in UTC.
      * 
     */
-    public String getIncrementalDatasetLastRefreshTime() {
+    public String incrementalDatasetLastRefreshTime() {
         return this.incrementalDatasetLastRefreshTime;
     }
     /**
      * The skipped datapoint count.
      * 
     */
-    public Double getSkippedDatapointCount() {
+    public Double skippedDatapointCount() {
         return this.skippedDatapointCount;
     }
     /**
      * The total datapoint count.
      * 
     */
-    public Double getTotalDatapointCount() {
+    public Double totalDatapointCount() {
         return this.totalDatapointCount;
     }
 

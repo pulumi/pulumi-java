@@ -28,7 +28,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="cap")
       private final @Nullable Output<Double> cap;
 
-    public Output<Double> getCap() {
+    public Output<Double> cap() {
         return this.cap == null ? Codegen.empty() : this.cap;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="stopSendNotificationWhenHitCap")
       private final @Nullable Output<Boolean> stopSendNotificationWhenHitCap;
 
-    public Output<Boolean> getStopSendNotificationWhenHitCap() {
+    public Output<Boolean> stopSendNotificationWhenHitCap() {
         return this.stopSendNotificationWhenHitCap == null ? Codegen.empty() : this.stopSendNotificationWhenHitCap;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="stopSendNotificationWhenHitThreshold")
       private final @Nullable Output<Boolean> stopSendNotificationWhenHitThreshold;
 
-    public Output<Boolean> getStopSendNotificationWhenHitThreshold() {
+    public Output<Boolean> stopSendNotificationWhenHitThreshold() {
         return this.stopSendNotificationWhenHitThreshold == null ? Codegen.empty() : this.stopSendNotificationWhenHitThreshold;
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends com.pul
     @Import(name="warningThreshold")
       private final @Nullable Output<Integer> warningThreshold;
 
-    public Output<Integer> getWarningThreshold() {
+    public Output<Integer> warningThreshold() {
         return this.warningThreshold == null ? Codegen.empty() : this.warningThreshold;
     }
 

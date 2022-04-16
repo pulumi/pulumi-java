@@ -48,28 +48,28 @@ public final class ScaleActionResponse {
      * the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.
      * 
     */
-    public String getCooldown() {
+    public String cooldown() {
         return this.cooldown;
     }
     /**
      * the scale direction. Whether the scaling action increases or decreases the number of instances.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * the type of action that should occur when the scale rule fires.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

@@ -42,21 +42,21 @@ public final class AutoscaleTimeAndCapacityResponse {
      * The maximum instance count of the cluster
      * 
     */
-    public Optional<Integer> getMaxInstanceCount() {
+    public Optional<Integer> maxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
     /**
      * The minimum instance count of the cluster
      * 
     */
-    public Optional<Integer> getMinInstanceCount() {
+    public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }
     /**
      * 24-hour time in the form xx:xx
      * 
     */
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
 

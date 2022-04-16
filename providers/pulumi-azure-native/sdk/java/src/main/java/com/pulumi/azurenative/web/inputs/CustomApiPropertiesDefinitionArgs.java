@@ -35,7 +35,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="apiDefinitions")
       private final @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions;
 
-    public Output<ApiResourceDefinitionsArgs> getApiDefinitions() {
+    public Output<ApiResourceDefinitionsArgs> apiDefinitions() {
         return this.apiDefinitions == null ? Codegen.empty() : this.apiDefinitions;
     }
 
@@ -46,7 +46,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="apiType")
       private final @Nullable Output<Either<String,ApiType>> apiType;
 
-    public Output<Either<String,ApiType>> getApiType() {
+    public Output<Either<String,ApiType>> apiType() {
         return this.apiType == null ? Codegen.empty() : this.apiType;
     }
 
@@ -57,7 +57,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="backendService")
       private final @Nullable Output<ApiResourceBackendServiceArgs> backendService;
 
-    public Output<ApiResourceBackendServiceArgs> getBackendService() {
+    public Output<ApiResourceBackendServiceArgs> backendService() {
         return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 
@@ -68,7 +68,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="brandColor")
       private final @Nullable Output<String> brandColor;
 
-    public Output<String> getBrandColor() {
+    public Output<String> brandColor() {
         return this.brandColor == null ? Codegen.empty() : this.brandColor;
     }
 
@@ -79,7 +79,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -90,7 +90,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="connectionParameters")
       private final @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters;
 
-    public Output<Map<String,ConnectionParameterArgs>> getConnectionParameters() {
+    public Output<Map<String,ConnectionParameterArgs>> connectionParameters() {
         return this.connectionParameters == null ? Codegen.empty() : this.connectionParameters;
     }
 
@@ -101,7 +101,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -112,7 +112,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -123,7 +123,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="iconUri")
       private final @Nullable Output<String> iconUri;
 
-    public Output<String> getIconUri() {
+    public Output<String> iconUri() {
         return this.iconUri == null ? Codegen.empty() : this.iconUri;
     }
 
@@ -134,7 +134,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="runtimeUrls")
       private final @Nullable Output<List<String>> runtimeUrls;
 
-    public Output<List<String>> getRuntimeUrls() {
+    public Output<List<String>> runtimeUrls() {
         return this.runtimeUrls == null ? Codegen.empty() : this.runtimeUrls;
     }
 
@@ -145,7 +145,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="swagger")
       private final @Nullable Output<Object> swagger;
 
-    public Output<Object> getSwagger() {
+    public Output<Object> swagger() {
         return this.swagger == null ? Codegen.empty() : this.swagger;
     }
 
@@ -156,7 +156,7 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="wsdlDefinition")
       private final @Nullable Output<WsdlDefinitionArgs> wsdlDefinition;
 
-    public Output<WsdlDefinitionArgs> getWsdlDefinition() {
+    public Output<WsdlDefinitionArgs> wsdlDefinition() {
         return this.wsdlDefinition == null ? Codegen.empty() : this.wsdlDefinition;
     }
 

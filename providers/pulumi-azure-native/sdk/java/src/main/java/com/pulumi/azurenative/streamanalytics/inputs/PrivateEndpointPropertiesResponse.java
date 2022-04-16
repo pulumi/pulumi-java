@@ -27,7 +27,7 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="createdDate", required=true)
       private final String createdDate;
 
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
+    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
 

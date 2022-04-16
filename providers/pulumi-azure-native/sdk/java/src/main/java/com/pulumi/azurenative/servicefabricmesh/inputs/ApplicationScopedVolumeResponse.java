@@ -27,7 +27,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="creationParameters", required=true)
       private final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
 
-    public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse getCreationParameters() {
+    public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters() {
         return this.creationParameters;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="destinationPath", required=true)
       private final String destinationPath;
 
-    public String getDestinationPath() {
+    public String destinationPath() {
         return this.destinationPath;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
     @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
     }
 

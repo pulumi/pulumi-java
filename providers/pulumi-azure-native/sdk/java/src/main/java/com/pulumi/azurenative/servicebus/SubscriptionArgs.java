@@ -25,7 +25,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoDeleteOnIdle")
       private final @Nullable Output<String> autoDeleteOnIdle;
 
-    public Output<String> getAutoDeleteOnIdle() {
+    public Output<String> autoDeleteOnIdle() {
         return this.autoDeleteOnIdle == null ? Codegen.empty() : this.autoDeleteOnIdle;
     }
 
@@ -36,7 +36,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetteringOnFilterEvaluationExceptions")
       private final @Nullable Output<Boolean> deadLetteringOnFilterEvaluationExceptions;
 
-    public Output<Boolean> getDeadLetteringOnFilterEvaluationExceptions() {
+    public Output<Boolean> deadLetteringOnFilterEvaluationExceptions() {
         return this.deadLetteringOnFilterEvaluationExceptions == null ? Codegen.empty() : this.deadLetteringOnFilterEvaluationExceptions;
     }
 
@@ -47,7 +47,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetteringOnMessageExpiration")
       private final @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
 
-    public Output<Boolean> getDeadLetteringOnMessageExpiration() {
+    public Output<Boolean> deadLetteringOnMessageExpiration() {
         return this.deadLetteringOnMessageExpiration == null ? Codegen.empty() : this.deadLetteringOnMessageExpiration;
     }
 
@@ -58,7 +58,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMessageTimeToLive")
       private final @Nullable Output<String> defaultMessageTimeToLive;
 
-    public Output<String> getDefaultMessageTimeToLive() {
+    public Output<String> defaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive == null ? Codegen.empty() : this.defaultMessageTimeToLive;
     }
 
@@ -69,7 +69,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="duplicateDetectionHistoryTimeWindow")
       private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
-    public Output<String> getDuplicateDetectionHistoryTimeWindow() {
+    public Output<String> duplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow == null ? Codegen.empty() : this.duplicateDetectionHistoryTimeWindow;
     }
 
@@ -80,7 +80,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableBatchedOperations")
       private final @Nullable Output<Boolean> enableBatchedOperations;
 
-    public Output<Boolean> getEnableBatchedOperations() {
+    public Output<Boolean> enableBatchedOperations() {
         return this.enableBatchedOperations == null ? Codegen.empty() : this.enableBatchedOperations;
     }
 
@@ -91,7 +91,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardDeadLetteredMessagesTo")
       private final @Nullable Output<String> forwardDeadLetteredMessagesTo;
 
-    public Output<String> getForwardDeadLetteredMessagesTo() {
+    public Output<String> forwardDeadLetteredMessagesTo() {
         return this.forwardDeadLetteredMessagesTo == null ? Codegen.empty() : this.forwardDeadLetteredMessagesTo;
     }
 
@@ -102,7 +102,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardTo")
       private final @Nullable Output<String> forwardTo;
 
-    public Output<String> getForwardTo() {
+    public Output<String> forwardTo() {
         return this.forwardTo == null ? Codegen.empty() : this.forwardTo;
     }
 
@@ -113,7 +113,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lockDuration")
       private final @Nullable Output<String> lockDuration;
 
-    public Output<String> getLockDuration() {
+    public Output<String> lockDuration() {
         return this.lockDuration == null ? Codegen.empty() : this.lockDuration;
     }
 
@@ -124,7 +124,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> getMaxDeliveryCount() {
+    public Output<Integer> maxDeliveryCount() {
         return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 
@@ -135,7 +135,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -146,7 +146,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requiresSession")
       private final @Nullable Output<Boolean> requiresSession;
 
-    public Output<Boolean> getRequiresSession() {
+    public Output<Boolean> requiresSession() {
         return this.requiresSession == null ? Codegen.empty() : this.requiresSession;
     }
 
@@ -157,7 +157,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -168,7 +168,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<EntityStatus> status;
 
-    public Output<EntityStatus> getStatus() {
+    public Output<EntityStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -179,7 +179,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionName")
       private final @Nullable Output<String> subscriptionName;
 
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName == null ? Codegen.empty() : this.subscriptionName;
     }
 
@@ -190,7 +190,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
-    public Output<String> getTopicName() {
+    public Output<String> topicName() {
         return this.topicName;
     }
 

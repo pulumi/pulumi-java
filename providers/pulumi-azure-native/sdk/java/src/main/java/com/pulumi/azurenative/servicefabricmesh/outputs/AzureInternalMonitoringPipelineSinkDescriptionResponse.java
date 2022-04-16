@@ -78,28 +78,28 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
      * Azure Internal monitoring pipeline account.
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * Azure Internal monitoring pipeline autokey associated with the certificate.
      * 
     */
-    public Optional<String> getAutoKeyConfigUrl() {
+    public Optional<String> autoKeyConfigUrl() {
         return Optional.ofNullable(this.autoKeyConfigUrl);
     }
     /**
      * A description of the sink.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Azure Internal monitoring agent fluentd configuration.
      * 
     */
-    public Optional<Object> getFluentdConfigUrl() {
+    public Optional<Object> fluentdConfigUrl() {
         return Optional.ofNullable(this.fluentdConfigUrl);
     }
     /**
@@ -107,28 +107,28 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
      * Expected value is 'AzureInternalMonitoringPipeline'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Azure Internal monitoring agent configuration.
      * 
     */
-    public Optional<String> getMaConfigUrl() {
+    public Optional<String> maConfigUrl() {
         return Optional.ofNullable(this.maConfigUrl);
     }
     /**
      * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Azure Internal monitoring pipeline account namespace.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 

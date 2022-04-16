@@ -42,21 +42,21 @@ public final class VirtualNetworkGatewaySkuResponse {
      * The capacity.
      * 
     */
-    public Integer getCapacity() {
+    public Integer capacity() {
         return this.capacity;
     }
     /**
      * Gateway SKU name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gateway SKU tier.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

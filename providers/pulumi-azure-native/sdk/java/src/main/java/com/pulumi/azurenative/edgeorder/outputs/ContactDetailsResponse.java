@@ -56,35 +56,35 @@ public final class ContactDetailsResponse {
      * Contact name of the person.
      * 
     */
-    public String getContactName() {
+    public String contactName() {
         return this.contactName;
     }
     /**
      * List of Email-ids to be notified about job progress.
      * 
     */
-    public List<String> getEmailList() {
+    public List<String> emailList() {
         return this.emailList;
     }
     /**
      * Mobile number of the contact person.
      * 
     */
-    public Optional<String> getMobile() {
+    public Optional<String> mobile() {
         return Optional.ofNullable(this.mobile);
     }
     /**
      * Phone number of the contact person.
      * 
     */
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
     /**
      * Phone extension number of the contact person.
      * 
     */
-    public Optional<String> getPhoneExtension() {
+    public Optional<String> phoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }
 

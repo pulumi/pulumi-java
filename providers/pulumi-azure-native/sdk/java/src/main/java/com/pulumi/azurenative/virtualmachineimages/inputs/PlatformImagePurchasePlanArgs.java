@@ -25,7 +25,7 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
     @Import(name="planName", required=true)
       private final Output<String> planName;
 
-    public Output<String> getPlanName() {
+    public Output<String> planName() {
         return this.planName;
     }
 
@@ -36,7 +36,7 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
     @Import(name="planProduct", required=true)
       private final Output<String> planProduct;
 
-    public Output<String> getPlanProduct() {
+    public Output<String> planProduct() {
         return this.planProduct;
     }
 
@@ -47,7 +47,7 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
     @Import(name="planPublisher", required=true)
       private final Output<String> planPublisher;
 
-    public Output<String> getPlanPublisher() {
+    public Output<String> planPublisher() {
         return this.planPublisher;
     }
 

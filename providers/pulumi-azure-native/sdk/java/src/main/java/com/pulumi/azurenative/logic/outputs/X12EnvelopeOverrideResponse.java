@@ -90,70 +90,70 @@ public final class X12EnvelopeOverrideResponse {
      * The date format.
      * 
     */
-    public String getDateFormat() {
+    public String dateFormat() {
         return this.dateFormat;
     }
     /**
      * The functional identifier code.
      * 
     */
-    public Optional<String> getFunctionalIdentifierCode() {
+    public Optional<String> functionalIdentifierCode() {
         return Optional.ofNullable(this.functionalIdentifierCode);
     }
     /**
      * The header version.
      * 
     */
-    public String getHeaderVersion() {
+    public String headerVersion() {
         return this.headerVersion;
     }
     /**
      * The message id on which this envelope settings has to be applied.
      * 
     */
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
     /**
      * The protocol version on which this envelope settings has to be applied.
      * 
     */
-    public String getProtocolVersion() {
+    public String protocolVersion() {
         return this.protocolVersion;
     }
     /**
      * The receiver application id.
      * 
     */
-    public String getReceiverApplicationId() {
+    public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
     /**
      * The responsible agency code.
      * 
     */
-    public String getResponsibleAgencyCode() {
+    public String responsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
     /**
      * The sender application id.
      * 
     */
-    public String getSenderApplicationId() {
+    public String senderApplicationId() {
         return this.senderApplicationId;
     }
     /**
      * The target namespace on which this envelope settings has to be applied.
      * 
     */
-    public String getTargetNamespace() {
+    public String targetNamespace() {
         return this.targetNamespace;
     }
     /**
      * The time format.
      * 
     */
-    public String getTimeFormat() {
+    public String timeFormat() {
         return this.timeFormat;
     }
 

@@ -26,7 +26,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -37,7 +37,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="error", required=true)
       private final CloudErrorBodyResponse error;
 
-    public CloudErrorBodyResponse getError() {
+    public CloudErrorBodyResponse error() {
         return this.error;
     }
 
@@ -48,7 +48,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="retryAttempt", required=true)
       private final Integer retryAttempt;
 
-    public Integer getRetryAttempt() {
+    public Integer retryAttempt() {
         return this.retryAttempt;
     }
 
@@ -59,7 +59,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="skipSucceededOnRetry", required=true)
       private final Boolean skipSucceededOnRetry;
 
-    public Boolean getSkipSucceededOnRetry() {
+    public Boolean skipSucceededOnRetry() {
         return this.skipSucceededOnRetry;
     }
 
@@ -70,7 +70,7 @@ public final class RolloutOperationInfoResponse extends com.pulumi.resources.Inv
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

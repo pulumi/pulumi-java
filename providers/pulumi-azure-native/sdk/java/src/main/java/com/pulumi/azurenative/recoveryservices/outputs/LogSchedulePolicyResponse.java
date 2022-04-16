@@ -36,7 +36,7 @@ public final class LogSchedulePolicyResponse {
      * Frequency of the log schedule operation of this policy in minutes.
      * 
     */
-    public Optional<Integer> getScheduleFrequencyInMins() {
+    public Optional<Integer> scheduleFrequencyInMins() {
         return Optional.ofNullable(this.scheduleFrequencyInMins);
     }
     /**
@@ -44,7 +44,7 @@ public final class LogSchedulePolicyResponse {
      * Expected value is 'LogSchedulePolicy'.
      * 
     */
-    public String getSchedulePolicyType() {
+    public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 

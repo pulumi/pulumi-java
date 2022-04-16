@@ -33,7 +33,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="compilationMode")
       private final @Nullable Output<Object> compilationMode;
 
-    public Output<Object> getCompilationMode() {
+    public Output<Object> compilationMode() {
         return this.compilationMode == null ? Codegen.empty() : this.compilationMode;
     }
 
@@ -44,7 +44,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="degreeOfParallelism")
       private final @Nullable Output<Object> degreeOfParallelism;
 
-    public Output<Object> getDegreeOfParallelism() {
+    public Output<Object> degreeOfParallelism() {
         return this.degreeOfParallelism == null ? Codegen.empty() : this.degreeOfParallelism;
     }
 
@@ -55,7 +55,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -66,7 +66,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -77,7 +77,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -88,7 +88,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -99,7 +99,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
+    public Output<Map<String,Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -110,7 +110,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -121,7 +121,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="priority")
       private final @Nullable Output<Object> priority;
 
-    public Output<Object> getPriority() {
+    public Output<Object> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -132,7 +132,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="runtimeVersion")
       private final @Nullable Output<Object> runtimeVersion;
 
-    public Output<Object> getRuntimeVersion() {
+    public Output<Object> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
@@ -143,7 +143,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="scriptLinkedService", required=true)
       private final Output<LinkedServiceReferenceArgs> scriptLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> getScriptLinkedService() {
+    public Output<LinkedServiceReferenceArgs> scriptLinkedService() {
         return this.scriptLinkedService;
     }
 
@@ -154,7 +154,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="scriptPath", required=true)
       private final Output<Object> scriptPath;
 
-    public Output<Object> getScriptPath() {
+    public Output<Object> scriptPath() {
         return this.scriptPath;
     }
 
@@ -166,7 +166,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -177,7 +177,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends com.pulumi.resource
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

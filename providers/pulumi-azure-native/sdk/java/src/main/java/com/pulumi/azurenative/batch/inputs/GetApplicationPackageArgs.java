@@ -19,7 +19,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
     @Import(name="applicationName", required=true)
       private final String applicationName;
 
-    public String getApplicationName() {
+    public String applicationName() {
         return this.applicationName;
     }
 
@@ -41,7 +41,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
     @Import(name="versionName", required=true)
       private final String versionName;
 
-    public String getVersionName() {
+    public String versionName() {
         return this.versionName;
     }
 

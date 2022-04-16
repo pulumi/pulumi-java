@@ -47,21 +47,21 @@ public final class WebPubSubFeatureResponse {
      *  - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
      * 
     */
-    public String getFlag() {
+    public String flag() {
         return this.flag;
     }
     /**
      * Optional properties related to this feature.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

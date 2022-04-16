@@ -29,7 +29,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -40,7 +40,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -51,7 +51,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="itemId")
       private final @Nullable Output<String> itemId;
 
-    public Output<String> getItemId() {
+    public Output<String> itemId() {
         return this.itemId == null ? Codegen.empty() : this.itemId;
     }
 
@@ -62,7 +62,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
@@ -74,7 +74,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="protectionIntentItemType", required=true)
       private final Output<String> protectionIntentItemType;
 
-    public Output<String> getProtectionIntentItemType() {
+    public Output<String> protectionIntentItemType() {
         return this.protectionIntentItemType;
     }
 
@@ -85,7 +85,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
 
-    public Output<Either<String,ProtectionStatus>> getProtectionState() {
+    public Output<Either<String,ProtectionStatus>> protectionState() {
         return this.protectionState == null ? Codegen.empty() : this.protectionState;
     }
 
@@ -96,7 +96,7 @@ public final class AzureResourceProtectionIntentArgs extends com.pulumi.resource
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 

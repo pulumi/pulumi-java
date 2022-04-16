@@ -29,7 +29,7 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="networkInterfaces")
       private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="osProfile")
       private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
 
-    public Optional<NetworkFunctionUserConfigurationResponseOsProfile> getOsProfile() {
+    public Optional<NetworkFunctionUserConfigurationResponseOsProfile> osProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
@@ -51,7 +51,7 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="roleName")
       private final @Nullable String roleName;
 
-    public Optional<String> getRoleName() {
+    public Optional<String> roleName() {
         return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
     }
 
@@ -62,7 +62,7 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="userDataParameters")
       private final @Nullable Object userDataParameters;
 
-    public Optional<Object> getUserDataParameters() {
+    public Optional<Object> userDataParameters() {
         return this.userDataParameters == null ? Optional.empty() : Optional.ofNullable(this.userDataParameters);
     }
 

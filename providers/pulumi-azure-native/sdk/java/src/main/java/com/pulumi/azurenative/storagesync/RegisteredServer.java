@@ -43,7 +43,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Agent Version
      * 
      */
-    public Output</* @Nullable */ String> getAgentVersion() {
+    public Output</* @Nullable */ String> agentVersion() {
         return this.agentVersion;
     }
     /**
@@ -57,7 +57,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Agent Version Expiration Date
      * 
      */
-    public Output<String> getAgentVersionExpirationDate() {
+    public Output<String> agentVersionExpirationDate() {
         return this.agentVersionExpirationDate;
     }
     /**
@@ -71,7 +71,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Agent Version Status
      * 
      */
-    public Output<String> getAgentVersionStatus() {
+    public Output<String> agentVersionStatus() {
         return this.agentVersionStatus;
     }
     /**
@@ -85,7 +85,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server clusterId
      * 
      */
-    public Output</* @Nullable */ String> getClusterId() {
+    public Output</* @Nullable */ String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -99,7 +99,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server clusterName
      * 
      */
-    public Output</* @Nullable */ String> getClusterName() {
+    public Output</* @Nullable */ String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -113,7 +113,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Resource discoveryEndpointUri
      * 
      */
-    public Output</* @Nullable */ String> getDiscoveryEndpointUri() {
+    public Output</* @Nullable */ String> discoveryEndpointUri() {
         return this.discoveryEndpointUri;
     }
     /**
@@ -127,7 +127,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Friendly Name
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -141,7 +141,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server last heart beat
      * 
      */
-    public Output</* @Nullable */ String> getLastHeartBeat() {
+    public Output</* @Nullable */ String> lastHeartBeat() {
         return this.lastHeartBeat;
     }
     /**
@@ -155,7 +155,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Resource Last Operation Name
      * 
      */
-    public Output</* @Nullable */ String> getLastOperationName() {
+    public Output</* @Nullable */ String> lastOperationName() {
         return this.lastOperationName;
     }
     /**
@@ -169,7 +169,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server lastWorkflowId
      * 
      */
-    public Output</* @Nullable */ String> getLastWorkflowId() {
+    public Output</* @Nullable */ String> lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
@@ -183,7 +183,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Management Endpoint Uri
      * 
      */
-    public Output</* @Nullable */ String> getManagementEndpointUri() {
+    public Output</* @Nullable */ String> managementEndpointUri() {
         return this.managementEndpointUri;
     }
     /**
@@ -197,7 +197,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Monitoring Configuration
      * 
      */
-    public Output</* @Nullable */ String> getMonitoringConfiguration() {
+    public Output</* @Nullable */ String> monitoringConfiguration() {
         return this.monitoringConfiguration;
     }
     /**
@@ -211,7 +211,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Telemetry Endpoint Uri
      * 
      */
-    public Output</* @Nullable */ String> getMonitoringEndpointUri() {
+    public Output</* @Nullable */ String> monitoringEndpointUri() {
         return this.monitoringEndpointUri;
     }
     /**
@@ -225,7 +225,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -239,7 +239,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Provisioning State
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -253,7 +253,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getResourceLocation() {
+    public Output</* @Nullable */ String> resourceLocation() {
         return this.resourceLocation;
     }
     /**
@@ -267,7 +267,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Certificate
      * 
      */
-    public Output</* @Nullable */ String> getServerCertificate() {
+    public Output</* @Nullable */ String> serverCertificate() {
         return this.serverCertificate;
     }
     /**
@@ -281,7 +281,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server serverId
      * 
      */
-    public Output</* @Nullable */ String> getServerId() {
+    public Output</* @Nullable */ String> serverId() {
         return this.serverId;
     }
     /**
@@ -295,7 +295,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server Management Error Code
      * 
      */
-    public Output</* @Nullable */ Integer> getServerManagementErrorCode() {
+    public Output</* @Nullable */ Integer> serverManagementErrorCode() {
         return this.serverManagementErrorCode;
     }
     /**
@@ -309,7 +309,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server OS Version
      * 
      */
-    public Output</* @Nullable */ String> getServerOSVersion() {
+    public Output</* @Nullable */ String> serverOSVersion() {
         return this.serverOSVersion;
     }
     /**
@@ -323,7 +323,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server serverRole
      * 
      */
-    public Output</* @Nullable */ String> getServerRole() {
+    public Output</* @Nullable */ String> serverRole() {
         return this.serverRole;
     }
     /**
@@ -337,7 +337,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Service Location
      * 
      */
-    public Output</* @Nullable */ String> getServiceLocation() {
+    public Output</* @Nullable */ String> serviceLocation() {
         return this.serviceLocation;
     }
     /**
@@ -351,7 +351,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return Registered Server storageSyncServiceUid
      * 
      */
-    public Output</* @Nullable */ String> getStorageSyncServiceUid() {
+    public Output</* @Nullable */ String> storageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
     /**
@@ -365,7 +365,7 @@ public class RegisteredServer extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -19,7 +19,7 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -30,7 +30,7 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
     @Import(name="userSettingsName", required=true)
       private final String userSettingsName;
 
-    public String getUserSettingsName() {
+    public String userSettingsName() {
         return this.userSettingsName;
     }
 

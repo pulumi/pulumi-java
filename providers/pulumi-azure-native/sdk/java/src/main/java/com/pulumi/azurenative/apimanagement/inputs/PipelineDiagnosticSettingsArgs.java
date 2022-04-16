@@ -26,7 +26,7 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
     @Import(name="request")
       private final @Nullable Output<HttpMessageDiagnosticArgs> request;
 
-    public Output<HttpMessageDiagnosticArgs> getRequest() {
+    public Output<HttpMessageDiagnosticArgs> request() {
         return this.request == null ? Codegen.empty() : this.request;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineDiagnosticSettingsArgs extends com.pulumi.resources.R
     @Import(name="response")
       private final @Nullable Output<HttpMessageDiagnosticArgs> response;
 
-    public Output<HttpMessageDiagnosticArgs> getResponse() {
+    public Output<HttpMessageDiagnosticArgs> response() {
         return this.response == null ? Codegen.empty() : this.response;
     }
 

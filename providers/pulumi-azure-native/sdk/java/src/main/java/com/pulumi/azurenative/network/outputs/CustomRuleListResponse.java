@@ -26,7 +26,7 @@ public final class CustomRuleListResponse {
      * List of rules
      * 
     */
-    public List<CustomRuleResponse> getRules() {
+    public List<CustomRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

@@ -43,7 +43,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Time at which the synchronization setting was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -59,7 +59,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * Expected value is 'ScheduleBased'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -73,7 +73,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Gets or sets the provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -101,7 +101,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Recurrence Interval
      * 
      */
-    public Output<String> getRecurrenceInterval() {
+    public Output<String> recurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
@@ -115,7 +115,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Synchronization time
      * 
      */
-    public Output<String> getSynchronizationTime() {
+    public Output<String> synchronizationTime() {
         return this.synchronizationTime;
     }
     /**
@@ -129,7 +129,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -143,7 +143,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -157,7 +157,7 @@ public class ScheduledSynchronizationSetting extends com.pulumi.resources.Custom
      * @return Name of the user who created the synchronization setting.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 

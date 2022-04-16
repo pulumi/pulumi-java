@@ -78,35 +78,35 @@ public final class JobInputHttpResponse {
      * Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.
      * 
     */
-    public Optional<String> getBaseUri() {
+    public Optional<String> baseUri() {
         return Optional.ofNullable(this.baseUri);
     }
     /**
      * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
      * 
     */
-    public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> getEnd() {
+    public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> end() {
         return Optional.ofNullable(this.end);
     }
     /**
      * List of files. Required for JobInputHttp. Maximum of 4000 characters each.
      * 
     */
-    public List<String> getFiles() {
+    public List<String> files() {
         return this.files == null ? List.of() : this.files;
     }
     /**
      * Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
      * 
     */
-    public List<Object> getInputDefinitions() {
+    public List<Object> inputDefinitions() {
         return this.inputDefinitions == null ? List.of() : this.inputDefinitions;
     }
     /**
      * A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
@@ -114,14 +114,14 @@ public final class JobInputHttpResponse {
      * Expected value is '#Microsoft.Media.JobInputHttp'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
      * 
     */
-    public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> getStart() {
+    public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> start() {
         return Optional.ofNullable(this.start);
     }
 

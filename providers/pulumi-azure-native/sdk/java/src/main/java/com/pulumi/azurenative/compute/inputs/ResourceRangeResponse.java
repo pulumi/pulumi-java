@@ -25,7 +25,7 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="max")
       private final @Nullable Integer max;
 
-    public Optional<Integer> getMax() {
+    public Optional<Integer> max() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceRangeResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="min")
       private final @Nullable Integer min;
 
-    public Optional<Integer> getMin() {
+    public Optional<Integer> min() {
         return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
     }
 

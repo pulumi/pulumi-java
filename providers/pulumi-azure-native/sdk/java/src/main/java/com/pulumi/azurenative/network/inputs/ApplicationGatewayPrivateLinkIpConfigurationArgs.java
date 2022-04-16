@@ -30,7 +30,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 
@@ -63,7 +63,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -74,7 +74,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends com.
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
+    public Output<SubResourceArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

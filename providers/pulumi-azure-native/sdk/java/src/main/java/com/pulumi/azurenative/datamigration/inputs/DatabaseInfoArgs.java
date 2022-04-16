@@ -25,7 +25,7 @@ public final class DatabaseInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabaseName", required=true)
       private final Output<String> sourceDatabaseName;
 
-    public Output<String> getSourceDatabaseName() {
+    public Output<String> sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 

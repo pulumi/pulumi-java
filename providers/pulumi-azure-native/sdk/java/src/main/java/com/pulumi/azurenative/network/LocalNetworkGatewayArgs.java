@@ -25,7 +25,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="bgpSettings")
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
-    public Output<BgpSettingsArgs> getBgpSettings() {
+    public Output<BgpSettingsArgs> bgpSettings() {
         return this.bgpSettings == null ? Codegen.empty() : this.bgpSettings;
     }
 
@@ -36,7 +36,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -47,7 +47,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="gatewayIpAddress")
       private final @Nullable Output<String> gatewayIpAddress;
 
-    public Output<String> getGatewayIpAddress() {
+    public Output<String> gatewayIpAddress() {
         return this.gatewayIpAddress == null ? Codegen.empty() : this.gatewayIpAddress;
     }
 
@@ -58,7 +58,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -69,7 +69,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="localNetworkAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
 
-    public Output<AddressSpaceArgs> getLocalNetworkAddressSpace() {
+    public Output<AddressSpaceArgs> localNetworkAddressSpace() {
         return this.localNetworkAddressSpace == null ? Codegen.empty() : this.localNetworkAddressSpace;
     }
 
@@ -80,7 +80,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="localNetworkGatewayName")
       private final @Nullable Output<String> localNetworkGatewayName;
 
-    public Output<String> getLocalNetworkGatewayName() {
+    public Output<String> localNetworkGatewayName() {
         return this.localNetworkGatewayName == null ? Codegen.empty() : this.localNetworkGatewayName;
     }
 
@@ -91,7 +91,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -102,7 +102,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class LocalNetworkGatewayArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

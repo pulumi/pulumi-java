@@ -70,49 +70,49 @@ public final class GetWorkloadNetworkPublicIPResult {
      * Display name of the Public IP Block.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Number of Public IPs requested.
      * 
     */
-    public Optional<Double> getNumberOfPublicIPs() {
+    public Optional<Double> numberOfPublicIPs() {
         return Optional.ofNullable(this.numberOfPublicIPs);
     }
     /**
      * The provisioning state
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * CIDR Block of the Public IP Block.
      * 
     */
-    public String getPublicIPBlock() {
+    public String publicIPBlock() {
         return this.publicIPBlock;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

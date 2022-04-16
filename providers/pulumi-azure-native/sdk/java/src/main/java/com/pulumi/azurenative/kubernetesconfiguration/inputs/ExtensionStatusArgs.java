@@ -28,7 +28,7 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -39,7 +39,7 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayStatus")
       private final @Nullable Output<String> displayStatus;
 
-    public Output<String> getDisplayStatus() {
+    public Output<String> displayStatus() {
         return this.displayStatus == null ? Codegen.empty() : this.displayStatus;
     }
 
@@ -50,7 +50,7 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="level")
       private final @Nullable Output<Either<String,LevelType>> level;
 
-    public Output<Either<String,LevelType>> getLevel() {
+    public Output<Either<String,LevelType>> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -61,7 +61,7 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -72,7 +72,7 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time == null ? Codegen.empty() : this.time;
     }
 

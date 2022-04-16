@@ -26,7 +26,7 @@ public final class GetSolutionConfigResult {
      * Gets or sets the publisher sas uri for the solution.
      * 
     */
-    public Optional<String> getPublisherSasUri() {
+    public Optional<String> publisherSasUri() {
         return Optional.ofNullable(this.publisherSasUri);
     }
 

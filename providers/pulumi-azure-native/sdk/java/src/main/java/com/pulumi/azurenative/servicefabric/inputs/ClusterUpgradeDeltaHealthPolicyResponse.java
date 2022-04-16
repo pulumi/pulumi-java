@@ -28,7 +28,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="applicationDeltaHealthPolicies")
       private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
 
-    public Map<String,ApplicationDeltaHealthPolicyResponse> getApplicationDeltaHealthPolicies() {
+    public Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies() {
         return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;
     }
 
@@ -41,7 +41,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="maxPercentDeltaUnhealthyApplications", required=true)
       private final Integer maxPercentDeltaUnhealthyApplications;
 
-    public Integer getMaxPercentDeltaUnhealthyApplications() {
+    public Integer maxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
     }
 
@@ -54,7 +54,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="maxPercentDeltaUnhealthyNodes", required=true)
       private final Integer maxPercentDeltaUnhealthyNodes;
 
-    public Integer getMaxPercentDeltaUnhealthyNodes() {
+    public Integer maxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
     }
 
@@ -67,7 +67,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
     @Import(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
       private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
-    public Integer getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {
+    public Integer maxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
 

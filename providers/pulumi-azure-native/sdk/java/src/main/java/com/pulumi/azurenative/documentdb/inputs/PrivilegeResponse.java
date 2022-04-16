@@ -27,7 +27,7 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions")
       private final @Nullable List<String> actions;
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resource")
       private final @Nullable PrivilegeResponseResource resource;
 
-    public Optional<PrivilegeResponseResource> getResource() {
+    public Optional<PrivilegeResponseResource> resource() {
         return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
     }
 

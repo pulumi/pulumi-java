@@ -28,7 +28,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
     @Import(name="failureAction")
       private final @Nullable Output<Either<String,ArmUpgradeFailureAction>> failureAction;
 
-    public Output<Either<String,ArmUpgradeFailureAction>> getFailureAction() {
+    public Output<Either<String,ArmUpgradeFailureAction>> failureAction() {
         return this.failureAction == null ? Codegen.empty() : this.failureAction;
     }
 
@@ -39,7 +39,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
     @Import(name="healthCheckRetryTimeout")
       private final @Nullable Output<String> healthCheckRetryTimeout;
 
-    public Output<String> getHealthCheckRetryTimeout() {
+    public Output<String> healthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout == null ? Codegen.empty() : this.healthCheckRetryTimeout;
     }
 
@@ -50,7 +50,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
     @Import(name="healthCheckStableDuration")
       private final @Nullable Output<String> healthCheckStableDuration;
 
-    public Output<String> getHealthCheckStableDuration() {
+    public Output<String> healthCheckStableDuration() {
         return this.healthCheckStableDuration == null ? Codegen.empty() : this.healthCheckStableDuration;
     }
 
@@ -61,7 +61,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
     @Import(name="healthCheckWaitDuration")
       private final @Nullable Output<String> healthCheckWaitDuration;
 
-    public Output<String> getHealthCheckWaitDuration() {
+    public Output<String> healthCheckWaitDuration() {
         return this.healthCheckWaitDuration == null ? Codegen.empty() : this.healthCheckWaitDuration;
     }
 
@@ -72,7 +72,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
     @Import(name="upgradeDomainTimeout")
       private final @Nullable Output<String> upgradeDomainTimeout;
 
-    public Output<String> getUpgradeDomainTimeout() {
+    public Output<String> upgradeDomainTimeout() {
         return this.upgradeDomainTimeout == null ? Codegen.empty() : this.upgradeDomainTimeout;
     }
 
@@ -83,7 +83,7 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
     @Import(name="upgradeTimeout")
       private final @Nullable Output<String> upgradeTimeout;
 
-    public Output<String> getUpgradeTimeout() {
+    public Output<String> upgradeTimeout() {
         return this.upgradeTimeout == null ? Codegen.empty() : this.upgradeTimeout;
     }
 

@@ -41,7 +41,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="additionalCapabilities")
       private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
-    public Output<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
+    public Output<AdditionalCapabilitiesArgs> additionalCapabilities() {
         return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="availabilitySet")
       private final @Nullable Output<SubResourceArgs> availabilitySet;
 
-    public Output<SubResourceArgs> getAvailabilitySet() {
+    public Output<SubResourceArgs> availabilitySet() {
         return this.availabilitySet == null ? Codegen.empty() : this.availabilitySet;
     }
 
@@ -63,7 +63,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="billingProfile")
       private final @Nullable Output<BillingProfileArgs> billingProfile;
 
-    public Output<BillingProfileArgs> getBillingProfile() {
+    public Output<BillingProfileArgs> billingProfile() {
         return this.billingProfile == null ? Codegen.empty() : this.billingProfile;
     }
 
@@ -74,7 +74,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="diagnosticsProfile")
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
+    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
         return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
     }
 
@@ -85,7 +85,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="evictionPolicy")
       private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
-    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
+    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy() {
         return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
     }
 
@@ -96,7 +96,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -107,7 +107,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extensionsTimeBudget")
       private final @Nullable Output<String> extensionsTimeBudget;
 
-    public Output<String> getExtensionsTimeBudget() {
+    public Output<String> extensionsTimeBudget() {
         return this.extensionsTimeBudget == null ? Codegen.empty() : this.extensionsTimeBudget;
     }
 
@@ -118,7 +118,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> getHardwareProfile() {
+    public Output<HardwareProfileArgs> hardwareProfile() {
         return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
     }
 
@@ -129,7 +129,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="host")
       private final @Nullable Output<SubResourceArgs> host;
 
-    public Output<SubResourceArgs> getHost() {
+    public Output<SubResourceArgs> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -140,7 +140,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hostGroup")
       private final @Nullable Output<SubResourceArgs> hostGroup;
 
-    public Output<SubResourceArgs> getHostGroup() {
+    public Output<SubResourceArgs> hostGroup() {
         return this.hostGroup == null ? Codegen.empty() : this.hostGroup;
     }
 
@@ -151,7 +151,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
       private final @Nullable Output<VirtualMachineIdentityArgs> identity;
 
-    public Output<VirtualMachineIdentityArgs> getIdentity() {
+    public Output<VirtualMachineIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -162,7 +162,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -173,7 +173,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -184,7 +184,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
+    public Output<NetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -195,7 +195,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> getOsProfile() {
+    public Output<OSProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -206,7 +206,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> getPlan() {
+    public Output<PlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -217,7 +217,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="platformFaultDomain")
       private final @Nullable Output<Integer> platformFaultDomain;
 
-    public Output<Integer> getPlatformFaultDomain() {
+    public Output<Integer> platformFaultDomain() {
         return this.platformFaultDomain == null ? Codegen.empty() : this.platformFaultDomain;
     }
 
@@ -228,7 +228,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="priority")
       private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
-    public Output<Either<String,VirtualMachinePriorityTypes>> getPriority() {
+    public Output<Either<String,VirtualMachinePriorityTypes>> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -239,7 +239,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="proximityPlacementGroup")
       private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
-    public Output<SubResourceArgs> getProximityPlacementGroup() {
+    public Output<SubResourceArgs> proximityPlacementGroup() {
         return this.proximityPlacementGroup == null ? Codegen.empty() : this.proximityPlacementGroup;
     }
 
@@ -250,7 +250,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -261,7 +261,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="scheduledEventsProfile")
       private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
-    public Output<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
+    public Output<ScheduledEventsProfileArgs> scheduledEventsProfile() {
         return this.scheduledEventsProfile == null ? Codegen.empty() : this.scheduledEventsProfile;
     }
 
@@ -272,7 +272,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> getSecurityProfile() {
+    public Output<SecurityProfileArgs> securityProfile() {
         return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
@@ -283,7 +283,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -294,7 +294,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -305,7 +305,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
@@ -316,7 +316,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualMachineScaleSet")
       private final @Nullable Output<SubResourceArgs> virtualMachineScaleSet;
 
-    public Output<SubResourceArgs> getVirtualMachineScaleSet() {
+    public Output<SubResourceArgs> virtualMachineScaleSet() {
         return this.virtualMachineScaleSet == null ? Codegen.empty() : this.virtualMachineScaleSet;
     }
 
@@ -327,7 +327,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vmName")
       private final @Nullable Output<String> vmName;
 
-    public Output<String> getVmName() {
+    public Output<String> vmName() {
         return this.vmName == null ? Codegen.empty() : this.vmName;
     }
 
@@ -338,7 +338,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

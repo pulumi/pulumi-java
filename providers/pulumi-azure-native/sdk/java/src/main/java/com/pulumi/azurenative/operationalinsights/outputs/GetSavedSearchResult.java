@@ -100,77 +100,77 @@ public final class GetSavedSearchResult {
      * The category of the saved search. This helps the user to find a saved search faster.
      * 
     */
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
     /**
      * Saved search display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The function alias if query serves as a function.
      * 
     */
-    public Optional<String> getFunctionAlias() {
+    public Optional<String> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
     /**
      * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
     */
-    public Optional<String> getFunctionParameters() {
+    public Optional<String> functionParameters() {
         return Optional.ofNullable(this.functionParameters);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The query expression for the saved search.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
      * The tags attached to the saved search.
      * 
     */
-    public List<TagResponse> getTags() {
+    public List<TagResponse> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The version number of the query language. The current version is 2 and is the default.
      * 
     */
-    public Optional<Double> getVersion() {
+    public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }
 

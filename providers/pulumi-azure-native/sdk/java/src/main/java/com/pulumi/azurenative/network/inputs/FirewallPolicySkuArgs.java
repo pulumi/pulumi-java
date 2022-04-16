@@ -28,7 +28,7 @@ public final class FirewallPolicySkuArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
       private final @Nullable Output<Either<String,FirewallPolicySkuTier>> tier;
 
-    public Output<Either<String,FirewallPolicySkuTier>> getTier() {
+    public Output<Either<String,FirewallPolicySkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

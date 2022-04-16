@@ -26,7 +26,7 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
     @Import(name="columnName")
       private final @Nullable Output<Object> columnName;
 
-    public Output<Object> getColumnName() {
+    public Output<Object> columnName() {
         return this.columnName == null ? Codegen.empty() : this.columnName;
     }
 
@@ -37,7 +37,7 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
+    public Output<Object> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 

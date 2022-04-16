@@ -25,7 +25,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
     @Import(name="parameter", required=true)
       private final Output<String> parameter;
 
-    public Output<String> getParameter() {
+    public Output<String> parameter() {
         return this.parameter;
     }
 
@@ -36,7 +36,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
     @Import(name="scheme", required=true)
       private final Output<String> scheme;
 
-    public Output<String> getScheme() {
+    public Output<String> scheme() {
         return this.scheme;
     }
 

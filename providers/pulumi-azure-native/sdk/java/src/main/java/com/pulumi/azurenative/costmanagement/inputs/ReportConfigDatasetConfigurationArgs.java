@@ -27,7 +27,7 @@ public final class ReportConfigDatasetConfigurationArgs extends com.pulumi.resou
     @Import(name="columns")
       private final @Nullable Output<List<String>> columns;
 
-    public Output<List<String>> getColumns() {
+    public Output<List<String>> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 

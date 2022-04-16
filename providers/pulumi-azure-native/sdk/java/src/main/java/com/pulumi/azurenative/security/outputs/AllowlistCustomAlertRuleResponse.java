@@ -63,28 +63,28 @@ public final class AllowlistCustomAlertRuleResponse {
      * The values to allow. The format of the values depends on the rule type.
      * 
     */
-    public List<String> getAllowlistValues() {
+    public List<String> allowlistValues() {
         return this.allowlistValues;
     }
     /**
      * The description of the custom alert.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name of the custom alert.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Status of the custom alert.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -92,14 +92,14 @@ public final class AllowlistCustomAlertRuleResponse {
      * Expected value is 'AllowlistCustomAlertRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
      * The value type of the items in the list.
      * 
     */
-    public String getValueType() {
+    public String valueType() {
         return this.valueType;
     }
 

@@ -19,7 +19,7 @@ public final class ListPrivateCloudAdminCredentialsArgs extends com.pulumi.resou
     @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
-    public String getPrivateCloudName() {
+    public String privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -30,7 +30,7 @@ public final class ListPrivateCloudAdminCredentialsArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -23,7 +23,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="currentFirmwareVersion", required=true)
       private final String currentFirmwareVersion;
 
-    public String getCurrentFirmwareVersion() {
+    public String currentFirmwareVersion() {
         return this.currentFirmwareVersion;
     }
 
@@ -34,7 +34,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="firmwareUpdateDeadline", required=true)
       private final String firmwareUpdateDeadline;
 
-    public String getFirmwareUpdateDeadline() {
+    public String firmwareUpdateDeadline() {
         return this.firmwareUpdateDeadline;
     }
 
@@ -45,7 +45,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="firmwareUpdateStatus", required=true)
       private final String firmwareUpdateStatus;
 
-    public String getFirmwareUpdateStatus() {
+    public String firmwareUpdateStatus() {
         return this.firmwareUpdateStatus;
     }
 
@@ -56,7 +56,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="lastFirmwareUpdate", required=true)
       private final String lastFirmwareUpdate;
 
-    public String getLastFirmwareUpdate() {
+    public String lastFirmwareUpdate() {
         return this.lastFirmwareUpdate;
     }
 
@@ -67,7 +67,7 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="pendingFirmwareVersion", required=true)
       private final String pendingFirmwareVersion;
 
-    public String getPendingFirmwareVersion() {
+    public String pendingFirmwareVersion() {
         return this.pendingFirmwareVersion;
     }
 

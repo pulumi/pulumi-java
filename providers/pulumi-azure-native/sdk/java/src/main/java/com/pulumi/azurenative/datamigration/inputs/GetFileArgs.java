@@ -19,7 +19,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileName", required=true)
       private final String fileName;
 
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 
@@ -30,7 +30,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -52,7 +52,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

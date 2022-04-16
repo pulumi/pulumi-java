@@ -29,7 +29,7 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
     @Import(name="encryptionSettings")
       private final @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
-    public Output<List<EncryptionSettingsElementArgs>> getEncryptionSettings() {
+    public Output<List<EncryptionSettingsElementArgs>> encryptionSettings() {
         return this.encryptionSettings == null ? Codegen.empty() : this.encryptionSettings;
     }
 
@@ -51,7 +51,7 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
     @Import(name="encryptionSettingsVersion")
       private final @Nullable Output<String> encryptionSettingsVersion;
 
-    public Output<String> getEncryptionSettingsVersion() {
+    public Output<String> encryptionSettingsVersion() {
         return this.encryptionSettingsVersion == null ? Codegen.empty() : this.encryptionSettingsVersion;
     }
 

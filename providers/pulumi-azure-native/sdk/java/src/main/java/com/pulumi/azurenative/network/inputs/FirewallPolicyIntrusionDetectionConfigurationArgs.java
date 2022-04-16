@@ -28,7 +28,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends com
     @Import(name="bypassTrafficSettings")
       private final @Nullable Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
 
-    public Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> getBypassTrafficSettings() {
+    public Output<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings() {
         return this.bypassTrafficSettings == null ? Codegen.empty() : this.bypassTrafficSettings;
     }
 
@@ -39,7 +39,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends com
     @Import(name="signatureOverrides")
       private final @Nullable Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;
 
-    public Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> getSignatureOverrides() {
+    public Output<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides() {
         return this.signatureOverrides == null ? Codegen.empty() : this.signatureOverrides;
     }
 

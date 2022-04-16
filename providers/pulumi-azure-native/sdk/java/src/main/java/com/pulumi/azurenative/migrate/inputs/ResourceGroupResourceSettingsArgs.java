@@ -26,7 +26,7 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceGroupResourceSettingsArgs extends com.pulumi.resource
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 

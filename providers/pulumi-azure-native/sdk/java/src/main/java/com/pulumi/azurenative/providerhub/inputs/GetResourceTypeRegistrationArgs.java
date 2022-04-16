@@ -19,7 +19,7 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
     @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
-    public String getProviderNamespace() {
+    public String providerNamespace() {
         return this.providerNamespace;
     }
 
@@ -30,7 +30,7 @@ public final class GetResourceTypeRegistrationArgs extends com.pulumi.resources.
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

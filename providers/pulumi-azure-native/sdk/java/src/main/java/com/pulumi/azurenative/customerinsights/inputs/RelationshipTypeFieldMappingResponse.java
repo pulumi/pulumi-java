@@ -23,7 +23,7 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
     @Import(name="profileFieldName", required=true)
       private final String profileFieldName;
 
-    public String getProfileFieldName() {
+    public String profileFieldName() {
         return this.profileFieldName;
     }
 
@@ -34,7 +34,7 @@ public final class RelationshipTypeFieldMappingResponse extends com.pulumi.resou
     @Import(name="relatedProfileKeyProperty", required=true)
       private final String relatedProfileKeyProperty;
 
-    public String getRelatedProfileKeyProperty() {
+    public String relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 

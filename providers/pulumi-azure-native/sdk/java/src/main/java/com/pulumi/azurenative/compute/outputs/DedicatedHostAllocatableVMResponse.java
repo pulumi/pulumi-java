@@ -35,14 +35,14 @@ public final class DedicatedHostAllocatableVMResponse {
      * Maximum number of VMs of size vmSize that can fit in the dedicated host's remaining capacity.
      * 
     */
-    public Optional<Double> getCount() {
+    public Optional<Double> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * VM size in terms of which the unutilized capacity is represented.
      * 
     */
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
 

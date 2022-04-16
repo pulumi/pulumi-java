@@ -43,7 +43,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Entity Tag
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The location of the private endpoint connection
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Resource properties.
      * 
      */
-    public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +99,7 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -34,14 +34,14 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
      * Header name of the header configuration.
      * 
     */
-    public Optional<String> getHeaderName() {
+    public Optional<String> headerName() {
         return Optional.ofNullable(this.headerName);
     }
     /**
      * Header value of the header configuration.
      * 
     */
-    public Optional<String> getHeaderValue() {
+    public Optional<String> headerValue() {
         return Optional.ofNullable(this.headerValue);
     }
 

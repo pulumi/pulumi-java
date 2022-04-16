@@ -19,7 +19,7 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="jitRequestName", required=true)
       private final String jitRequestName;
 
-    public String getJitRequestName() {
+    public String jitRequestName() {
         return this.jitRequestName;
     }
 
@@ -30,7 +30,7 @@ public final class GetJitRequestArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

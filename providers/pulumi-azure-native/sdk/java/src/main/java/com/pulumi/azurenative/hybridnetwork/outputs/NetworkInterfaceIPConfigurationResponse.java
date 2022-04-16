@@ -63,42 +63,42 @@ public final class NetworkInterfaceIPConfigurationResponse {
      * The list of DNS servers IP addresses.
      * 
     */
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
      * The value of the gateway.
      * 
     */
-    public Optional<String> getGateway() {
+    public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
     }
     /**
      * The value of the IP address.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * IP address allocation method.
      * 
     */
-    public Optional<String> getIpAllocationMethod() {
+    public Optional<String> ipAllocationMethod() {
         return Optional.ofNullable(this.ipAllocationMethod);
     }
     /**
      * IP address version.
      * 
     */
-    public Optional<String> getIpVersion() {
+    public Optional<String> ipVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
     /**
      * The value of the subnet.
      * 
     */
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
 

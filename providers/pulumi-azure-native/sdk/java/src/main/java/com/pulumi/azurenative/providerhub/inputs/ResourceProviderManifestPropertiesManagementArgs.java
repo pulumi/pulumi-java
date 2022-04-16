@@ -21,56 +21,56 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends com.
     @Import(name="incidentContactEmail")
       private final @Nullable Output<String> incidentContactEmail;
 
-    public Output<String> getIncidentContactEmail() {
+    public Output<String> incidentContactEmail() {
         return this.incidentContactEmail == null ? Codegen.empty() : this.incidentContactEmail;
     }
 
     @Import(name="incidentRoutingService")
       private final @Nullable Output<String> incidentRoutingService;
 
-    public Output<String> getIncidentRoutingService() {
+    public Output<String> incidentRoutingService() {
         return this.incidentRoutingService == null ? Codegen.empty() : this.incidentRoutingService;
     }
 
     @Import(name="incidentRoutingTeam")
       private final @Nullable Output<String> incidentRoutingTeam;
 
-    public Output<String> getIncidentRoutingTeam() {
+    public Output<String> incidentRoutingTeam() {
         return this.incidentRoutingTeam == null ? Codegen.empty() : this.incidentRoutingTeam;
     }
 
     @Import(name="manifestOwners")
       private final @Nullable Output<List<String>> manifestOwners;
 
-    public Output<List<String>> getManifestOwners() {
+    public Output<List<String>> manifestOwners() {
         return this.manifestOwners == null ? Codegen.empty() : this.manifestOwners;
     }
 
     @Import(name="resourceAccessPolicy")
       private final @Nullable Output<String> resourceAccessPolicy;
 
-    public Output<String> getResourceAccessPolicy() {
+    public Output<String> resourceAccessPolicy() {
         return this.resourceAccessPolicy == null ? Codegen.empty() : this.resourceAccessPolicy;
     }
 
     @Import(name="resourceAccessRoles")
       private final @Nullable Output<List<Object>> resourceAccessRoles;
 
-    public Output<List<Object>> getResourceAccessRoles() {
+    public Output<List<Object>> resourceAccessRoles() {
         return this.resourceAccessRoles == null ? Codegen.empty() : this.resourceAccessRoles;
     }
 
     @Import(name="schemaOwners")
       private final @Nullable Output<List<String>> schemaOwners;
 
-    public Output<List<String>> getSchemaOwners() {
+    public Output<List<String>> schemaOwners() {
         return this.schemaOwners == null ? Codegen.empty() : this.schemaOwners;
     }
 
     @Import(name="serviceTreeInfos")
       private final @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
-    public Output<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
+    public Output<List<ServiceTreeInfoArgs>> serviceTreeInfos() {
         return this.serviceTreeInfos == null ? Codegen.empty() : this.serviceTreeInfos;
     }
 

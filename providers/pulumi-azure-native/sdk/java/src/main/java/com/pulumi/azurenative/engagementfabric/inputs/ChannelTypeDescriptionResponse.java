@@ -26,7 +26,7 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
     @Import(name="channelDescription")
       private final @Nullable String channelDescription;
 
-    public Optional<String> getChannelDescription() {
+    public Optional<String> channelDescription() {
         return this.channelDescription == null ? Optional.empty() : Optional.ofNullable(this.channelDescription);
     }
 
@@ -37,7 +37,7 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
     @Import(name="channelFunctions")
       private final @Nullable List<String> channelFunctions;
 
-    public List<String> getChannelFunctions() {
+    public List<String> channelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
 
@@ -48,7 +48,7 @@ public final class ChannelTypeDescriptionResponse extends com.pulumi.resources.I
     @Import(name="channelType")
       private final @Nullable String channelType;
 
-    public Optional<String> getChannelType() {
+    public Optional<String> channelType() {
         return this.channelType == null ? Optional.empty() : Optional.ofNullable(this.channelType);
     }
 

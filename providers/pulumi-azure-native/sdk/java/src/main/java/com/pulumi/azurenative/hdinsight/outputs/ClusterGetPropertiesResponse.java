@@ -188,154 +188,154 @@ public final class ClusterGetPropertiesResponse {
      * The cluster definition.
      * 
     */
-    public ClusterDefinitionResponse getClusterDefinition() {
+    public ClusterDefinitionResponse clusterDefinition() {
         return this.clusterDefinition;
     }
     /**
      * The hdp version of the cluster.
      * 
     */
-    public Optional<String> getClusterHdpVersion() {
+    public Optional<String> clusterHdpVersion() {
         return Optional.ofNullable(this.clusterHdpVersion);
     }
     /**
      * The cluster id.
      * 
     */
-    public Optional<String> getClusterId() {
+    public Optional<String> clusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * The state of the cluster.
      * 
     */
-    public Optional<String> getClusterState() {
+    public Optional<String> clusterState() {
         return Optional.ofNullable(this.clusterState);
     }
     /**
      * The version of the cluster.
      * 
     */
-    public Optional<String> getClusterVersion() {
+    public Optional<String> clusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
     /**
      * The compute isolation properties.
      * 
     */
-    public Optional<ComputeIsolationPropertiesResponse> getComputeIsolationProperties() {
+    public Optional<ComputeIsolationPropertiesResponse> computeIsolationProperties() {
         return Optional.ofNullable(this.computeIsolationProperties);
     }
     /**
      * The compute profile.
      * 
     */
-    public Optional<ComputeProfileResponse> getComputeProfile() {
+    public Optional<ComputeProfileResponse> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
     /**
      * The list of connectivity endpoints.
      * 
     */
-    public List<ConnectivityEndpointResponse> getConnectivityEndpoints() {
+    public List<ConnectivityEndpointResponse> connectivityEndpoints() {
         return this.connectivityEndpoints == null ? List.of() : this.connectivityEndpoints;
     }
     /**
      * The date on which the cluster was created.
      * 
     */
-    public Optional<String> getCreatedDate() {
+    public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
      * The disk encryption properties.
      * 
     */
-    public Optional<DiskEncryptionPropertiesResponse> getDiskEncryptionProperties() {
+    public Optional<DiskEncryptionPropertiesResponse> diskEncryptionProperties() {
         return Optional.ofNullable(this.diskEncryptionProperties);
     }
     /**
      * The encryption-in-transit properties.
      * 
     */
-    public Optional<EncryptionInTransitPropertiesResponse> getEncryptionInTransitProperties() {
+    public Optional<EncryptionInTransitPropertiesResponse> encryptionInTransitProperties() {
         return Optional.ofNullable(this.encryptionInTransitProperties);
     }
     /**
      * The list of errors.
      * 
     */
-    public List<ErrorsResponse> getErrors() {
+    public List<ErrorsResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The excluded services config.
      * 
     */
-    public Optional<ExcludedServicesConfigResponse> getExcludedServicesConfig() {
+    public Optional<ExcludedServicesConfigResponse> excludedServicesConfig() {
         return Optional.ofNullable(this.excludedServicesConfig);
     }
     /**
      * The cluster kafka rest proxy configuration.
      * 
     */
-    public Optional<KafkaRestPropertiesResponse> getKafkaRestProperties() {
+    public Optional<KafkaRestPropertiesResponse> kafkaRestProperties() {
         return Optional.ofNullable(this.kafkaRestProperties);
     }
     /**
      * The minimal supported tls version.
      * 
     */
-    public Optional<String> getMinSupportedTlsVersion() {
+    public Optional<String> minSupportedTlsVersion() {
         return Optional.ofNullable(this.minSupportedTlsVersion);
     }
     /**
      * The network properties.
      * 
     */
-    public Optional<NetworkPropertiesResponse> getNetworkProperties() {
+    public Optional<NetworkPropertiesResponse> networkProperties() {
         return Optional.ofNullable(this.networkProperties);
     }
     /**
      * The type of operating system.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The quota information.
      * 
     */
-    public Optional<QuotaInfoResponse> getQuotaInfo() {
+    public Optional<QuotaInfoResponse> quotaInfo() {
         return Optional.ofNullable(this.quotaInfo);
     }
     /**
      * The security profile.
      * 
     */
-    public Optional<SecurityProfileResponse> getSecurityProfile() {
+    public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
      * The storage profile.
      * 
     */
-    public Optional<StorageProfileResponse> getStorageProfile() {
+    public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * The cluster tier.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

@@ -26,7 +26,7 @@ public final class ActorResponse {
      * The subject or username associated with the request context that generated the event.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

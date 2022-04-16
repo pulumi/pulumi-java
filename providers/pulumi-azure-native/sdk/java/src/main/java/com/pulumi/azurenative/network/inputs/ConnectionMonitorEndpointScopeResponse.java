@@ -26,7 +26,7 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
     @Import(name="exclude")
       private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
 
-    public List<ConnectionMonitorEndpointScopeItemResponse> getExclude() {
+    public List<ConnectionMonitorEndpointScopeItemResponse> exclude() {
         return this.exclude == null ? List.of() : this.exclude;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
     @Import(name="include")
       private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
-    public List<ConnectionMonitorEndpointScopeItemResponse> getInclude() {
+    public List<ConnectionMonitorEndpointScopeItemResponse> include() {
         return this.include == null ? List.of() : this.include;
     }
 

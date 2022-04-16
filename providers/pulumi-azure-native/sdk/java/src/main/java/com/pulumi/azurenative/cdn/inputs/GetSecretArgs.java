@@ -19,7 +19,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretName", required=true)
       private final String secretName;
 
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 

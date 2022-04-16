@@ -28,7 +28,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="additionalFeaturesServerConfigurations")
       private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
 
-    public Optional<AdditionalFeaturesServerConfigurationsResponse> getAdditionalFeaturesServerConfigurations() {
+    public Optional<AdditionalFeaturesServerConfigurationsResponse> additionalFeaturesServerConfigurations() {
         return this.additionalFeaturesServerConfigurations == null ? Optional.empty() : Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
 
@@ -39,7 +39,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="sqlConnectivityUpdateSettings")
       private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
 
-    public Optional<SqlConnectivityUpdateSettingsResponse> getSqlConnectivityUpdateSettings() {
+    public Optional<SqlConnectivityUpdateSettingsResponse> sqlConnectivityUpdateSettings() {
         return this.sqlConnectivityUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
 
@@ -50,7 +50,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="sqlStorageUpdateSettings")
       private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
 
-    public Optional<SqlStorageUpdateSettingsResponse> getSqlStorageUpdateSettings() {
+    public Optional<SqlStorageUpdateSettingsResponse> sqlStorageUpdateSettings() {
         return this.sqlStorageUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
 
@@ -61,7 +61,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends com.pu
     @Import(name="sqlWorkloadTypeUpdateSettings")
       private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
-    public Optional<SqlWorkloadTypeUpdateSettingsResponse> getSqlWorkloadTypeUpdateSettings() {
+    public Optional<SqlWorkloadTypeUpdateSettingsResponse> sqlWorkloadTypeUpdateSettings() {
         return this.sqlWorkloadTypeUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }
 

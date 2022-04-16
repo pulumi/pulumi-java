@@ -31,7 +31,7 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notificationEmailList")
       private final @Nullable Output<List<String>> notificationEmailList;
 
-    public Output<List<String>> getNotificationEmailList() {
+    public Output<List<String>> notificationEmailList() {
         return this.notificationEmailList == null ? Codegen.empty() : this.notificationEmailList;
     }
 
@@ -42,7 +42,7 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="orderItemType", required=true)
       private final Output<Either<String,OrderItemType>> orderItemType;
 
-    public Output<Either<String,OrderItemType>> getOrderItemType() {
+    public Output<Either<String,OrderItemType>> orderItemType() {
         return this.orderItemType;
     }
 
@@ -53,7 +53,7 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
 
-    public Output<PreferencesArgs> getPreferences() {
+    public Output<PreferencesArgs> preferences() {
         return this.preferences == null ? Codegen.empty() : this.preferences;
     }
 
@@ -64,7 +64,7 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="productDetails", required=true)
       private final Output<ProductDetailsArgs> productDetails;
 
-    public Output<ProductDetailsArgs> getProductDetails() {
+    public Output<ProductDetailsArgs> productDetails() {
         return this.productDetails;
     }
 

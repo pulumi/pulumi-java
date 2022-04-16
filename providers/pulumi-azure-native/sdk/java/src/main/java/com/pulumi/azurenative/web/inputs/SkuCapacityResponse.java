@@ -26,7 +26,7 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="default")
       private final @Nullable Integer default_;
 
-    public Optional<Integer> getDefault_() {
+    public Optional<Integer> default_() {
         return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
@@ -37,7 +37,7 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elasticMaximum")
       private final @Nullable Integer elasticMaximum;
 
-    public Optional<Integer> getElasticMaximum() {
+    public Optional<Integer> elasticMaximum() {
         return this.elasticMaximum == null ? Optional.empty() : Optional.ofNullable(this.elasticMaximum);
     }
 
@@ -48,7 +48,7 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maximum")
       private final @Nullable Integer maximum;
 
-    public Optional<Integer> getMaximum() {
+    public Optional<Integer> maximum() {
         return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
     }
 
@@ -59,7 +59,7 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minimum")
       private final @Nullable Integer minimum;
 
-    public Optional<Integer> getMinimum() {
+    public Optional<Integer> minimum() {
         return this.minimum == null ? Optional.empty() : Optional.ofNullable(this.minimum);
     }
 
@@ -70,7 +70,7 @@ public final class SkuCapacityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scaleType")
       private final @Nullable String scaleType;
 
-    public Optional<String> getScaleType() {
+    public Optional<String> scaleType() {
         return this.scaleType == null ? Optional.empty() : Optional.ofNullable(this.scaleType);
     }
 

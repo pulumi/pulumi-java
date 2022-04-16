@@ -25,7 +25,7 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
-    public Optional<String> getKeyVaultId() {
+    public Optional<String> keyVaultId() {
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
     }
 
@@ -36,7 +36,7 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
     @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 

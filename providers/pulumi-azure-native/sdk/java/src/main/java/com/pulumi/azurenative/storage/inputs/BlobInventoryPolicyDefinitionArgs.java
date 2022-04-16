@@ -25,7 +25,7 @@ public final class BlobInventoryPolicyDefinitionArgs extends com.pulumi.resource
     @Import(name="filters", required=true)
       private final Output<BlobInventoryPolicyFilterArgs> filters;
 
-    public Output<BlobInventoryPolicyFilterArgs> getFilters() {
+    public Output<BlobInventoryPolicyFilterArgs> filters() {
         return this.filters;
     }
 

@@ -21,7 +21,7 @@ public final class GetPublicIPPrefixArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetPublicIPPrefixArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="publicIpPrefixName", required=true)
       private final String publicIpPrefixName;
 
-    public String getPublicIpPrefixName() {
+    public String publicIpPrefixName() {
         return this.publicIpPrefixName;
     }
 
@@ -43,7 +43,7 @@ public final class GetPublicIPPrefixArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

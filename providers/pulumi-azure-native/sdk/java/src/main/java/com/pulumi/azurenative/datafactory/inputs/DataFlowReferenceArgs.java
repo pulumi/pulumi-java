@@ -28,7 +28,7 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="datasetParameters")
       private final @Nullable Output<Object> datasetParameters;
 
-    public Output<Object> getDatasetParameters() {
+    public Output<Object> datasetParameters() {
         return this.datasetParameters == null ? Codegen.empty() : this.datasetParameters;
     }
 
@@ -39,7 +39,7 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
+    public Output<Map<String,Object>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -50,7 +50,7 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName;
     }
 
@@ -61,7 +61,7 @@ public final class DataFlowReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

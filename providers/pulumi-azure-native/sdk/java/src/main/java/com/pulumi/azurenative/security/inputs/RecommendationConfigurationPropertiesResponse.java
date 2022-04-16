@@ -19,7 +19,7 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
     @Import(name="recommendationType", required=true)
       private final String recommendationType;
 
-    public String getRecommendationType() {
+    public String recommendationType() {
         return this.recommendationType;
     }
 
@@ -41,7 +41,7 @@ public final class RecommendationConfigurationPropertiesResponse extends com.pul
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

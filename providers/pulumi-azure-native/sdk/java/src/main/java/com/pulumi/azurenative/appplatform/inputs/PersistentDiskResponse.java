@@ -26,7 +26,7 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mountPath")
       private final @Nullable String mountPath;
 
-    public Optional<String> getMountPath() {
+    public Optional<String> mountPath() {
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
     }
 
@@ -37,7 +37,7 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sizeInGB")
       private final @Nullable Integer sizeInGB;
 
-    public Optional<Integer> getSizeInGB() {
+    public Optional<Integer> sizeInGB() {
         return this.sizeInGB == null ? Optional.empty() : Optional.ofNullable(this.sizeInGB);
     }
 
@@ -48,7 +48,7 @@ public final class PersistentDiskResponse extends com.pulumi.resources.InvokeArg
     @Import(name="usedInGB", required=true)
       private final Integer usedInGB;
 
-    public Integer getUsedInGB() {
+    public Integer usedInGB() {
         return this.usedInGB;
     }
 

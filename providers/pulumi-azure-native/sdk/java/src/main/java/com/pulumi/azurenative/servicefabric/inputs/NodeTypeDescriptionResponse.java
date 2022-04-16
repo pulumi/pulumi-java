@@ -29,7 +29,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="applicationPorts")
       private final @Nullable EndpointRangeDescriptionResponse applicationPorts;
 
-    public Optional<EndpointRangeDescriptionResponse> getApplicationPorts() {
+    public Optional<EndpointRangeDescriptionResponse> applicationPorts() {
         return this.applicationPorts == null ? Optional.empty() : Optional.ofNullable(this.applicationPorts);
     }
 
@@ -40,7 +40,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="capacities")
       private final @Nullable Map<String,String> capacities;
 
-    public Map<String,String> getCapacities() {
+    public Map<String,String> capacities() {
         return this.capacities == null ? Map.of() : this.capacities;
     }
 
@@ -51,7 +51,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="clientConnectionEndpointPort", required=true)
       private final Integer clientConnectionEndpointPort;
 
-    public Integer getClientConnectionEndpointPort() {
+    public Integer clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
     }
 
@@ -66,7 +66,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="durabilityLevel")
       private final @Nullable String durabilityLevel;
 
-    public Optional<String> getDurabilityLevel() {
+    public Optional<String> durabilityLevel() {
         return this.durabilityLevel == null ? Optional.empty() : Optional.ofNullable(this.durabilityLevel);
     }
 
@@ -77,7 +77,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="ephemeralPorts")
       private final @Nullable EndpointRangeDescriptionResponse ephemeralPorts;
 
-    public Optional<EndpointRangeDescriptionResponse> getEphemeralPorts() {
+    public Optional<EndpointRangeDescriptionResponse> ephemeralPorts() {
         return this.ephemeralPorts == null ? Optional.empty() : Optional.ofNullable(this.ephemeralPorts);
     }
 
@@ -88,7 +88,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="httpGatewayEndpointPort", required=true)
       private final Integer httpGatewayEndpointPort;
 
-    public Integer getHttpGatewayEndpointPort() {
+    public Integer httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
 
@@ -99,7 +99,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="isPrimary", required=true)
       private final Boolean isPrimary;
 
-    public Boolean getIsPrimary() {
+    public Boolean isPrimary() {
         return this.isPrimary;
     }
 
@@ -110,7 +110,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -121,7 +121,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="placementProperties")
       private final @Nullable Map<String,String> placementProperties;
 
-    public Map<String,String> getPlacementProperties() {
+    public Map<String,String> placementProperties() {
         return this.placementProperties == null ? Map.of() : this.placementProperties;
     }
 
@@ -132,7 +132,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="reverseProxyEndpointPort")
       private final @Nullable Integer reverseProxyEndpointPort;
 
-    public Optional<Integer> getReverseProxyEndpointPort() {
+    public Optional<Integer> reverseProxyEndpointPort() {
         return this.reverseProxyEndpointPort == null ? Optional.empty() : Optional.ofNullable(this.reverseProxyEndpointPort);
     }
 
@@ -143,7 +143,7 @@ public final class NodeTypeDescriptionResponse extends com.pulumi.resources.Invo
     @Import(name="vmInstanceCount", required=true)
       private final Integer vmInstanceCount;
 
-    public Integer getVmInstanceCount() {
+    public Integer vmInstanceCount() {
         return this.vmInstanceCount;
     }
 

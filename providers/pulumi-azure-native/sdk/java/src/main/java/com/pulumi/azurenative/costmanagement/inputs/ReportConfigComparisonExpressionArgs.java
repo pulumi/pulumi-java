@@ -28,7 +28,7 @@ public final class ReportConfigComparisonExpressionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -39,7 +39,7 @@ public final class ReportConfigComparisonExpressionArgs extends com.pulumi.resou
     @Import(name="operator", required=true)
       private final Output<Either<String,OperatorType>> operator;
 
-    public Output<Either<String,OperatorType>> getOperator() {
+    public Output<Either<String,OperatorType>> operator() {
         return this.operator;
     }
 
@@ -50,7 +50,7 @@ public final class ReportConfigComparisonExpressionArgs extends com.pulumi.resou
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

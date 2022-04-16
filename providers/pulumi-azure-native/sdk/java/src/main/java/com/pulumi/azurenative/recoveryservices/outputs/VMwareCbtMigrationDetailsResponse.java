@@ -143,7 +143,7 @@ public final class VMwareCbtMigrationDetailsResponse {
      * The data mover RunAs account Id.
      * 
     */
-    public String getDataMoverRunAsAccountId() {
+    public String dataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
     }
     /**
@@ -151,112 +151,112 @@ public final class VMwareCbtMigrationDetailsResponse {
      * Expected value is 'VMwareCbt'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The last recovery point received time.
      * 
     */
-    public String getLastRecoveryPointReceived() {
+    public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
     /**
      * License Type of the VM to be used.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * The recovery point Id to which the VM was migrated.
      * 
     */
-    public String getMigrationRecoveryPointId() {
+    public String migrationRecoveryPointId() {
         return this.migrationRecoveryPointId;
     }
     /**
      * The type of the OS on the VM.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * The list of protected disks.
      * 
     */
-    public List<VMwareCbtProtectedDiskDetailsResponse> getProtectedDisks() {
+    public List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
     /**
      * The snapshot RunAs account Id.
      * 
     */
-    public String getSnapshotRunAsAccountId() {
+    public String snapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
     }
     /**
      * The target availability set Id.
      * 
     */
-    public Optional<String> getTargetAvailabilitySetId() {
+    public Optional<String> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
     /**
      * The target boot diagnostics storage account ARM Id.
      * 
     */
-    public Optional<String> getTargetBootDiagnosticsStorageAccountId() {
+    public Optional<String> targetBootDiagnosticsStorageAccountId() {
         return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
     /**
      * The target location.
      * 
     */
-    public String getTargetLocation() {
+    public String targetLocation() {
         return this.targetLocation;
     }
     /**
      * The target network Id.
      * 
     */
-    public Optional<String> getTargetNetworkId() {
+    public Optional<String> targetNetworkId() {
         return Optional.ofNullable(this.targetNetworkId);
     }
     /**
      * The target resource group Id.
      * 
     */
-    public Optional<String> getTargetResourceGroupId() {
+    public Optional<String> targetResourceGroupId() {
         return Optional.ofNullable(this.targetResourceGroupId);
     }
     /**
      * Target VM name.
      * 
     */
-    public Optional<String> getTargetVmName() {
+    public Optional<String> targetVmName() {
         return Optional.ofNullable(this.targetVmName);
     }
     /**
      * The target VM size.
      * 
     */
-    public Optional<String> getTargetVmSize() {
+    public Optional<String> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
     /**
      * The network details.
      * 
     */
-    public List<VMwareCbtNicDetailsResponse> getVmNics() {
+    public List<VMwareCbtNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The ARM Id of the VM discovered in VMware.
      * 
     */
-    public String getVmwareMachineId() {
+    public String vmwareMachineId() {
         return this.vmwareMachineId;
     }
 

@@ -22,7 +22,7 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
 
-    public Output<String> getPeeringServiceName() {
+    public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -33,7 +33,7 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peeringServicePrefixKey")
       private final @Nullable Output<String> peeringServicePrefixKey;
 
-    public Output<String> getPeeringServicePrefixKey() {
+    public Output<String> peeringServicePrefixKey() {
         return this.peeringServicePrefixKey == null ? Codegen.empty() : this.peeringServicePrefixKey;
     }
 
@@ -44,7 +44,7 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -55,7 +55,7 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="prefixName")
       private final @Nullable Output<String> prefixName;
 
-    public Output<String> getPrefixName() {
+    public Output<String> prefixName() {
         return this.prefixName == null ? Codegen.empty() : this.prefixName;
     }
 
@@ -66,7 +66,7 @@ public final class PrefixArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

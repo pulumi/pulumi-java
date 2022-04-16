@@ -77,56 +77,56 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
      * Unique identifier for database
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Migration settings which tune the migration behavior
      * 
     */
-    public Map<String,String> getMigrationSetting() {
+    public Map<String,String> migrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
     /**
      * Name of database
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Schema name to be migrated
      * 
     */
-    public Optional<String> getSchemaName() {
+    public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
     /**
      * Source settings to tune source endpoint migration behavior
      * 
     */
-    public Map<String,String> getSourceSetting() {
+    public Map<String,String> sourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
     /**
      * Mapping of source to target tables
      * 
     */
-    public Map<String,String> getTableMap() {
+    public Map<String,String> tableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
     /**
      * Target database name
      * 
     */
-    public Optional<String> getTargetDatabaseName() {
+    public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
     /**
      * Target settings to tune target endpoint migration behavior
      * 
     */
-    public Map<String,String> getTargetSetting() {
+    public Map<String,String> targetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }
 

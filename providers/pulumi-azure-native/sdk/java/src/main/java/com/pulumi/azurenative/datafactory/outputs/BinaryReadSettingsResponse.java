@@ -39,7 +39,7 @@ public final class BinaryReadSettingsResponse {
      * Compression settings.
      * 
     */
-    public Optional<Object> getCompressionProperties() {
+    public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
     /**
@@ -47,7 +47,7 @@ public final class BinaryReadSettingsResponse {
      * Expected value is 'BinaryReadSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

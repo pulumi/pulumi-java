@@ -25,7 +25,7 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
     @Import(name="level")
       private final @Nullable Object level;
 
-    public Optional<Object> getLevel() {
+    public Optional<Object> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
@@ -36,7 +36,7 @@ public final class DatasetCompressionResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final Object type;
 
-    public Object getType() {
+    public Object type() {
         return this.type;
     }
 

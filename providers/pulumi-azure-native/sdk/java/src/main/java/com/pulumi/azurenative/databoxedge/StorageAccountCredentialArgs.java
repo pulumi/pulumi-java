@@ -26,7 +26,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="accountKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accountKey;
 
-    public Output<AsymmetricEncryptedSecretArgs> getAccountKey() {
+    public Output<AsymmetricEncryptedSecretArgs> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -37,7 +37,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="accountType", required=true)
       private final Output<Either<String,AccountType>> accountType;
 
-    public Output<Either<String,AccountType>> getAccountType() {
+    public Output<Either<String,AccountType>> accountType() {
         return this.accountType;
     }
 
@@ -48,7 +48,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="alias", required=true)
       private final Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
 
@@ -59,7 +59,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="blobDomainName")
       private final @Nullable Output<String> blobDomainName;
 
-    public Output<String> getBlobDomainName() {
+    public Output<String> blobDomainName() {
         return this.blobDomainName == null ? Codegen.empty() : this.blobDomainName;
     }
 
@@ -70,7 +70,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -81,7 +81,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -92,7 +92,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="sslStatus", required=true)
       private final Output<Either<String,SSLStatus>> sslStatus;
 
-    public Output<Either<String,SSLStatus>> getSslStatus() {
+    public Output<Either<String,SSLStatus>> sslStatus() {
         return this.sslStatus;
     }
 
@@ -125,7 +125,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
@@ -136,7 +136,7 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

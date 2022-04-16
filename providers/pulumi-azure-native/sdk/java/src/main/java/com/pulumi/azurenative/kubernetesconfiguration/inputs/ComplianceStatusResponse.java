@@ -25,7 +25,7 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="complianceState", required=true)
       private final String complianceState;
 
-    public String getComplianceState() {
+    public String complianceState() {
         return this.complianceState;
     }
 
@@ -36,7 +36,7 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="lastConfigApplied")
       private final @Nullable String lastConfigApplied;
 
-    public Optional<String> getLastConfigApplied() {
+    public Optional<String> lastConfigApplied() {
         return this.lastConfigApplied == null ? Optional.empty() : Optional.ofNullable(this.lastConfigApplied);
     }
 
@@ -47,7 +47,7 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -58,7 +58,7 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="messageLevel")
       private final @Nullable String messageLevel;
 
-    public Optional<String> getMessageLevel() {
+    public Optional<String> messageLevel() {
         return this.messageLevel == null ? Optional.empty() : Optional.ofNullable(this.messageLevel);
     }
 

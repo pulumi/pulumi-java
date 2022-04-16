@@ -113,7 +113,7 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * Azure-AsyncOperation Error info.
      * 
     */
-    public Optional<ErrorEntityResponse> getError() {
+    public Optional<ErrorEntityResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
@@ -122,77 +122,77 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/providers/Microsoft.Web/sites/{sitename}
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * MSI resource
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Geographical region resource belongs to e.g. SouthCentralUS, SouthEastAsia.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Azure resource manager plan.
      * 
     */
-    public Optional<ArmPlanResponse> getPlan() {
+    public Optional<ArmPlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Resource specific properties.
      * 
     */
-    public Optional<RemotePrivateEndpointConnectionResponse> getProperties() {
+    public Optional<RemotePrivateEndpointConnectionResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * SKU description of the resource.
      * 
     */
-    public Optional<SkuDescriptionResponse> getSku() {
+    public Optional<SkuDescriptionResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Azure-AsyncOperation Status info.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Tags associated with resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of resource e.g "Microsoft.Web/sites".
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Logical Availability Zones the service is hosted in
      * 
     */
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

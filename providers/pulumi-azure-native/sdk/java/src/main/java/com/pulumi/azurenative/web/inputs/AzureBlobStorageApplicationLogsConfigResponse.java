@@ -26,7 +26,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
     @Import(name="level")
       private final @Nullable String level;
 
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
@@ -39,7 +39,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
     @Import(name="retentionInDays")
       private final @Nullable Integer retentionInDays;
 
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
     }
 
@@ -50,7 +50,7 @@ public final class AzureBlobStorageApplicationLogsConfigResponse extends com.pul
     @Import(name="sasUrl")
       private final @Nullable String sasUrl;
 
-    public Optional<String> getSasUrl() {
+    public Optional<String> sasUrl() {
         return this.sasUrl == null ? Optional.empty() : Optional.ofNullable(this.sasUrl);
     }
 

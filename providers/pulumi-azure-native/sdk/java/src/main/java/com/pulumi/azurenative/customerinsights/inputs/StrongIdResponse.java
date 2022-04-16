@@ -27,7 +27,7 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable Map<String,String> description;
 
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable Map<String,String> displayName;
 
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyPropertyNames", required=true)
       private final List<String> keyPropertyNames;
 
-    public List<String> getKeyPropertyNames() {
+    public List<String> keyPropertyNames() {
         return this.keyPropertyNames;
     }
 
@@ -60,7 +60,7 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="strongIdName", required=true)
       private final String strongIdName;
 
-    public String getStrongIdName() {
+    public String strongIdName() {
         return this.strongIdName;
     }
 

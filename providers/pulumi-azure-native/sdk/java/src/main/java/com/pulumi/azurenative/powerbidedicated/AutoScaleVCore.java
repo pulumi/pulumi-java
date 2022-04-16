@@ -46,7 +46,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The maximum capacity of an auto scale v-core resource.
      * 
      */
-    public Output</* @Nullable */ Integer> getCapacityLimit() {
+    public Output</* @Nullable */ Integer> capacityLimit() {
         return this.capacityLimit;
     }
     /**
@@ -60,7 +60,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
      */
-    public Output</* @Nullable */ String> getCapacityObjectId() {
+    public Output</* @Nullable */ String> capacityObjectId() {
         return this.capacityObjectId;
     }
     /**
@@ -74,7 +74,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return Location of the PowerBI Dedicated resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -88,7 +88,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The name of the PowerBI Dedicated resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -116,7 +116,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The SKU of the auto scale v-core resource.
      * 
      */
-    public Output<AutoScaleVCoreSkuResponse> getSku() {
+    public Output<AutoScaleVCoreSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -130,7 +130,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> getSystemData() {
+    public Output</* @Nullable */ SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -144,7 +144,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -158,7 +158,7 @@ public class AutoScaleVCore extends com.pulumi.resources.CustomResource {
      * @return The type of the PowerBI Dedicated resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

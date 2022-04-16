@@ -25,7 +25,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -36,7 +36,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="integrationRuntimeName")
       private final @Nullable Output<String> integrationRuntimeName;
 
-    public Output<String> getIntegrationRuntimeName() {
+    public Output<String> integrationRuntimeName() {
         return this.integrationRuntimeName == null ? Codegen.empty() : this.integrationRuntimeName;
     }
 
@@ -47,7 +47,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="properties", required=true)
       private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
-    public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
+    public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties() {
         return this.properties;
     }
 
@@ -58,7 +58,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -39,21 +39,21 @@ public final class ServerPrivateLinkServiceConnectionStatePropertyResponse {
      * The actions required for private link service connection.
      * 
     */
-    public String getActionsRequired() {
+    public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The private link service connection description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The private link service connection status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

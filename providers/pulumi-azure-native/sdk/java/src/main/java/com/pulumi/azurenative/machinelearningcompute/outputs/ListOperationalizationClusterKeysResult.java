@@ -67,42 +67,42 @@ public final class ListOperationalizationClusterKeysResult {
      * Credentials for Azure AppInsights.
      * 
     */
-    public Optional<AppInsightsCredentialsResponse> getAppInsights() {
+    public Optional<AppInsightsCredentialsResponse> appInsights() {
         return Optional.ofNullable(this.appInsights);
     }
     /**
      * Credentials for Azure Container Registry.
      * 
     */
-    public Optional<ContainerRegistryCredentialsResponse> getContainerRegistry() {
+    public Optional<ContainerRegistryCredentialsResponse> containerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
      * Credentials for Azure Container Service.
      * 
     */
-    public Optional<ContainerServiceCredentialsResponse> getContainerService() {
+    public Optional<ContainerServiceCredentialsResponse> containerService() {
         return Optional.ofNullable(this.containerService);
     }
     /**
      * Global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
      * 
     */
-    public Optional<ServiceAuthConfigurationResponse> getServiceAuthConfiguration() {
+    public Optional<ServiceAuthConfigurationResponse> serviceAuthConfiguration() {
         return Optional.ofNullable(this.serviceAuthConfiguration);
     }
     /**
      * The SSL configuration for the services.
      * 
     */
-    public Optional<SslConfigurationResponse> getSslConfiguration() {
+    public Optional<SslConfigurationResponse> sslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
     /**
      * Credentials for the Storage Account.
      * 
     */
-    public Optional<StorageAccountCredentialsResponse> getStorageAccount() {
+    public Optional<StorageAccountCredentialsResponse> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
 

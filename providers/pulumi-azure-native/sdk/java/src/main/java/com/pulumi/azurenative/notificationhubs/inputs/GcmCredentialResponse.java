@@ -25,7 +25,7 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gcmEndpoint")
       private final @Nullable String gcmEndpoint;
 
-    public Optional<String> getGcmEndpoint() {
+    public Optional<String> gcmEndpoint() {
         return this.gcmEndpoint == null ? Optional.empty() : Optional.ofNullable(this.gcmEndpoint);
     }
 
@@ -36,7 +36,7 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="googleApiKey")
       private final @Nullable String googleApiKey;
 
-    public Optional<String> getGoogleApiKey() {
+    public Optional<String> googleApiKey() {
         return this.googleApiKey == null ? Optional.empty() : Optional.ofNullable(this.googleApiKey);
     }
 

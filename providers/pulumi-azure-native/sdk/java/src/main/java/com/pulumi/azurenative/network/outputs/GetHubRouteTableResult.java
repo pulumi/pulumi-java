@@ -85,63 +85,63 @@ public final class GetHubRouteTableResult {
      * List of all connections associated with this route table.
      * 
     */
-    public List<String> getAssociatedConnections() {
+    public List<String> associatedConnections() {
         return this.associatedConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of labels associated with this route table.
      * 
     */
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * List of all connections that advertise to this route table.
      * 
     */
-    public List<String> getPropagatingConnections() {
+    public List<String> propagatingConnections() {
         return this.propagatingConnections;
     }
     /**
      * The provisioning state of the RouteTable resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * List of all routes.
      * 
     */
-    public List<HubRouteResponse> getRoutes() {
+    public List<HubRouteResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ApiResourceBackendServiceArgs extends com.pulumi.resources.Re
     @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
 
-    public Output<String> getServiceUrl() {
+    public Output<String> serviceUrl() {
         return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
     }
 

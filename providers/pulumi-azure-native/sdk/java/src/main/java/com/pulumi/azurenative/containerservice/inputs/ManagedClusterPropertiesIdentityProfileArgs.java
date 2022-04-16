@@ -22,7 +22,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends com.pulum
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -33,7 +33,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends com.pulum
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedClusterPropertiesIdentityProfileArgs extends com.pulum
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

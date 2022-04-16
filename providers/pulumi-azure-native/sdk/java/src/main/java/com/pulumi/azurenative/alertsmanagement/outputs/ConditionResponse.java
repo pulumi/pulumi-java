@@ -35,14 +35,14 @@ public final class ConditionResponse {
      * operator for a given condition
      * 
     */
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * list of values to match for a given condition.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

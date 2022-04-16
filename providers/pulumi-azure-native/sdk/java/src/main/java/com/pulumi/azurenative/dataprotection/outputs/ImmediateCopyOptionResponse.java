@@ -26,7 +26,7 @@ public final class ImmediateCopyOptionResponse {
      * Expected value is 'ImmediateCopyOption'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
 

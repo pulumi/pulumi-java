@@ -25,7 +25,7 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="height")
       private final @Nullable String height;
 
-    public Optional<String> getHeight() {
+    public Optional<String> height() {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
     }
 
@@ -36,7 +36,7 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -47,7 +47,7 @@ public final class VideoScaleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="width")
       private final @Nullable String width;
 
-    public Optional<String> getWidth() {
+    public Optional<String> width() {
         return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
     }
 

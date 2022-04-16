@@ -67,49 +67,49 @@ public final class GetSnapshotResult {
      * The creation date of the snapshot
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * UUID v4 used to identify the Snapshot
      * 
     */
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

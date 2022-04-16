@@ -27,7 +27,7 @@ public final class TrackSelectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trackSelections")
       private final @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
 
-    public Output<List<TrackPropertyConditionArgs>> getTrackSelections() {
+    public Output<List<TrackPropertyConditionArgs>> trackSelections() {
         return this.trackSelections == null ? Codegen.empty() : this.trackSelections;
     }
 

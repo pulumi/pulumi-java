@@ -26,7 +26,7 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="activationState")
       private final @Nullable String activationState;
 
-    public Optional<String> getActivationState() {
+    public Optional<String> activationState() {
         return this.activationState == null ? Optional.empty() : Optional.ofNullable(this.activationState);
     }
 
@@ -37,7 +37,7 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="azureMonitorWorkspaceProperties")
       private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
-    public Optional<AzureMonitorWorkspacePropertiesResponse> getAzureMonitorWorkspaceProperties() {
+    public Optional<AzureMonitorWorkspacePropertiesResponse> azureMonitorWorkspaceProperties() {
         return this.azureMonitorWorkspaceProperties == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorWorkspaceProperties);
     }
 

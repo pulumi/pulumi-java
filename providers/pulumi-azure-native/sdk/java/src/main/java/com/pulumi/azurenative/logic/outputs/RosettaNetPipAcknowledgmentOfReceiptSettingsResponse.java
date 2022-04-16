@@ -33,14 +33,14 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
      * The non-repudiation is required or not.
      * 
     */
-    public Boolean getIsNonRepudiationRequired() {
+    public Boolean isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
     /**
      * The time to acknowledge in seconds.
      * 
     */
-    public Integer getTimeToAcknowledgeInSeconds() {
+    public Integer timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
 

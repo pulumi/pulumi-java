@@ -26,7 +26,7 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
     @Import(name="actionType", required=true)
       private final String actionType;
 
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
     @Import(name="logicAppResourceId")
       private final @Nullable String logicAppResourceId;
 
-    public Optional<String> getLogicAppResourceId() {
+    public Optional<String> logicAppResourceId() {
         return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
     }
 
@@ -48,7 +48,7 @@ public final class AutomationActionLogicAppResponse extends com.pulumi.resources
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

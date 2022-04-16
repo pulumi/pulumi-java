@@ -21,7 +21,7 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryName", required=true)
       private final String galleryName;
 
-    public String getGalleryName() {
+    public String galleryName() {
         return this.galleryName;
     }
 
@@ -32,7 +32,7 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetGalleryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="select")
       private final @Nullable String select;
 
-    public Optional<String> getSelect() {
+    public Optional<String> select() {
         return this.select == null ? Optional.empty() : Optional.ofNullable(this.select);
     }
 

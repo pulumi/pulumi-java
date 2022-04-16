@@ -21,7 +21,7 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="created")
       private final @Nullable String created;
 
-    public Optional<String> getCreated() {
+    public Optional<String> created() {
         return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
     }
 
@@ -32,7 +32,7 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="createdBy")
       private final @Nullable String createdBy;
 
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
@@ -43,7 +43,7 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -54,7 +54,7 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

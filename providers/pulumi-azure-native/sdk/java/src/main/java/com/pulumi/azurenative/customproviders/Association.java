@@ -42,7 +42,7 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The association name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +56,7 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the association.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -70,7 +70,7 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The REST resource instance of the target resource for this association.
      * 
      */
-    public Output</* @Nullable */ String> getTargetResourceId() {
+    public Output</* @Nullable */ String> targetResourceId() {
         return this.targetResourceId;
     }
     /**
@@ -84,7 +84,7 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The association type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

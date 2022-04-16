@@ -43,7 +43,7 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -57,7 +57,7 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Location where the resource is stored
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,13 +85,13 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Gets the provisioning state of the Just-in-Time policy.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     @Export(name="requests", type=List.class, parameters={JitNetworkAccessRequestResponse.class})
     private Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests;
 
-    public Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> getRequests() {
+    public Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests() {
         return this.requests;
     }
     /**
@@ -105,7 +105,7 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -119,7 +119,7 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
      */
-    public Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> getVirtualMachines() {
+    public Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> virtualMachines() {
         return this.virtualMachines;
     }
 

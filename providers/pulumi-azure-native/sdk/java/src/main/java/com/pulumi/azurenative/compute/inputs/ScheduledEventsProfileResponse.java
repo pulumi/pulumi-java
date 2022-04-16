@@ -21,7 +21,7 @@ public final class ScheduledEventsProfileResponse extends com.pulumi.resources.I
     @Import(name="terminateNotificationProfile")
       private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 
-    public Optional<TerminateNotificationProfileResponse> getTerminateNotificationProfile() {
+    public Optional<TerminateNotificationProfileResponse> terminateNotificationProfile() {
         return this.terminateNotificationProfile == null ? Optional.empty() : Optional.ofNullable(this.terminateNotificationProfile);
     }
 

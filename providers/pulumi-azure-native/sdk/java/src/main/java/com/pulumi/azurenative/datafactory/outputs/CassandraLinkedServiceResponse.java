@@ -106,63 +106,63 @@ public final class CassandraLinkedServiceResponse {
      * List of tags that can be used for describing the linked service.
      * 
     */
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getAuthenticationType() {
+    public Optional<Object> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * The integration runtime reference.
      * 
     */
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Host name for connection. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getHost() {
+    public Object host() {
         return this.host;
     }
     /**
      * Parameters for linked service.
      * 
     */
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password for authentication.
      * 
     */
-    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The port for the connection. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getPort() {
+    public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
@@ -170,14 +170,14 @@ public final class CassandraLinkedServiceResponse {
      * Expected value is 'Cassandra'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Username for authentication. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
 

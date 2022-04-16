@@ -23,7 +23,7 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="details", required=true)
       private final String details;
 
-    public String getDetails() {
+    public String details() {
         return this.details;
     }
 
@@ -34,7 +34,7 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -45,7 +45,7 @@ public final class HealthMonitorResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

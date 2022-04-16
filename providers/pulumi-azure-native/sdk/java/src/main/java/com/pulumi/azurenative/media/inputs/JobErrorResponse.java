@@ -25,7 +25,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="category", required=true)
       private final String category;
 
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
 
@@ -36,7 +36,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -47,7 +47,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
       private final List<JobErrorDetailResponse> details;
 
-    public List<JobErrorDetailResponse> getDetails() {
+    public List<JobErrorDetailResponse> details() {
         return this.details;
     }
 
@@ -58,7 +58,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -69,7 +69,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retry", required=true)
       private final String retry;
 
-    public String getRetry() {
+    public String retry() {
         return this.retry;
     }
 

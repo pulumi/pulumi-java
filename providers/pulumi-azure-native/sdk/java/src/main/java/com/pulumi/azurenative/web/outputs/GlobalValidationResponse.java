@@ -52,7 +52,7 @@ public final class GlobalValidationResponse {
      * The paths for which unauthenticated flow would not be redirected to the login page.
      * 
     */
-    public List<String> getExcludedPaths() {
+    public List<String> excludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
     /**
@@ -61,21 +61,21 @@ public final class GlobalValidationResponse {
      * action is set to "RedirectToLoginPage".
      * 
     */
-    public Optional<String> getRedirectToProvider() {
+    public Optional<String> redirectToProvider() {
         return Optional.ofNullable(this.redirectToProvider);
     }
     /**
      * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getRequireAuthentication() {
+    public Optional<Boolean> requireAuthentication() {
         return Optional.ofNullable(this.requireAuthentication);
     }
     /**
      * The action to take when an unauthenticated client attempts to access the app.
      * 
     */
-    public Optional<String> getUnauthenticatedClientAction() {
+    public Optional<String> unauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }
 

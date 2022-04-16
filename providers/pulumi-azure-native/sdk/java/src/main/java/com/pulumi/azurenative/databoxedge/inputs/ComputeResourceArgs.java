@@ -26,7 +26,7 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 
@@ -37,7 +37,7 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="processorCount", required=true)
       private final Output<Integer> processorCount;
 
-    public Output<Integer> getProcessorCount() {
+    public Output<Integer> processorCount() {
         return this.processorCount;
     }
 

@@ -54,7 +54,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The fully qualified path of managed application definition Id.
      * 
      */
-    public Output</* @Nullable */ String> getApplicationDefinitionId() {
+    public Output</* @Nullable */ String> applicationDefinitionId() {
         return this.applicationDefinitionId;
     }
     /**
@@ -68,7 +68,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The collection of managed application artifacts.
      * 
      */
-    public Output<List<ApplicationArtifactResponse>> getArtifacts() {
+    public Output<List<ApplicationArtifactResponse>> artifacts() {
         return this.artifacts;
     }
     /**
@@ -82,7 +82,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The  read-only authorizations property that is retrieved from the application package.
      * 
      */
-    public Output<List<ApplicationAuthorizationResponse>> getAuthorizations() {
+    public Output<List<ApplicationAuthorizationResponse>> authorizations() {
         return this.authorizations;
     }
     /**
@@ -96,7 +96,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed application billing details.
      * 
      */
-    public Output<ApplicationBillingDetailsDefinitionResponse> getBillingDetails() {
+    public Output<ApplicationBillingDetailsDefinitionResponse> billingDetails() {
         return this.billingDetails;
     }
     /**
@@ -110,7 +110,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The client entity that created the JIT request.
      * 
      */
-    public Output<ApplicationClientDetailsResponse> getCreatedBy() {
+    public Output<ApplicationClientDetailsResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -124,7 +124,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The read-only customer support property that is retrieved from the application package.
      * 
      */
-    public Output<ApplicationPackageContactResponse> getCustomerSupport() {
+    public Output<ApplicationPackageContactResponse> customerSupport() {
         return this.customerSupport;
     }
     /**
@@ -138,7 +138,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -152,7 +152,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed application Jit access policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationJitAccessPolicyResponse> getJitAccessPolicy() {
+    public Output</* @Nullable */ ApplicationJitAccessPolicyResponse> jitAccessPolicy() {
         return this.jitAccessPolicy;
     }
     /**
@@ -166,7 +166,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -180,7 +180,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -194,7 +194,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return ID of the resource that manages this resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedBy() {
+    public Output</* @Nullable */ String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -208,7 +208,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed resource group Id.
      * 
      */
-    public Output</* @Nullable */ String> getManagedResourceGroupId() {
+    public Output</* @Nullable */ String> managedResourceGroupId() {
         return this.managedResourceGroupId;
     }
     /**
@@ -222,7 +222,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed application management mode.
      * 
      */
-    public Output<String> getManagementMode() {
+    public Output<String> managementMode() {
         return this.managementMode;
     }
     /**
@@ -236,7 +236,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -250,7 +250,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Name and value pairs that define the managed application outputs.
      * 
      */
-    public Output<Object> getOutputs() {
+    public Output<Object> outputs() {
         return this.outputs;
     }
     /**
@@ -264,7 +264,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
      */
-    public Output</* @Nullable */ Object> getParameters() {
+    public Output</* @Nullable */ Object> parameters() {
         return this.parameters;
     }
     /**
@@ -278,7 +278,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The plan information.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> getPlan() {
+    public Output</* @Nullable */ PlanResponse> plan() {
         return this.plan;
     }
     /**
@@ -292,7 +292,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The managed application provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -306,7 +306,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The publisher tenant Id.
      * 
      */
-    public Output<String> getPublisherTenantId() {
+    public Output<String> publisherTenantId() {
         return this.publisherTenantId;
     }
     /**
@@ -320,7 +320,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -334,7 +334,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The read-only support URLs property that is retrieved from the application package.
      * 
      */
-    public Output<ApplicationPackageSupportUrlsResponse> getSupportUrls() {
+    public Output<ApplicationPackageSupportUrlsResponse> supportUrls() {
         return this.supportUrls;
     }
     /**
@@ -348,7 +348,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -362,7 +362,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -376,7 +376,7 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The client entity that last updated the JIT request.
      * 
      */
-    public Output<ApplicationClientDetailsResponse> getUpdatedBy() {
+    public Output<ApplicationClientDetailsResponse> updatedBy() {
         return this.updatedBy;
     }
 

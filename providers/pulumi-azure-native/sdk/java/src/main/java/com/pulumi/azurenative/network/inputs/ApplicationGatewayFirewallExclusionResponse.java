@@ -23,7 +23,7 @@ public final class ApplicationGatewayFirewallExclusionResponse extends com.pulum
     @Import(name="matchVariable", required=true)
       private final String matchVariable;
 
-    public String getMatchVariable() {
+    public String matchVariable() {
         return this.matchVariable;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationGatewayFirewallExclusionResponse extends com.pulum
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationGatewayFirewallExclusionResponse extends com.pulum
     @Import(name="selectorMatchOperator", required=true)
       private final String selectorMatchOperator;
 
-    public String getSelectorMatchOperator() {
+    public String selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 

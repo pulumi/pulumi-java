@@ -29,7 +29,7 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="physicalPath")
       private final @Nullable Output<String> physicalPath;
 
-    public Output<String> getPhysicalPath() {
+    public Output<String> physicalPath() {
         return this.physicalPath == null ? Codegen.empty() : this.physicalPath;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="preloadEnabled")
       private final @Nullable Output<Boolean> preloadEnabled;
 
-    public Output<Boolean> getPreloadEnabled() {
+    public Output<Boolean> preloadEnabled() {
         return this.preloadEnabled == null ? Codegen.empty() : this.preloadEnabled;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualDirectories")
       private final @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
 
-    public Output<List<VirtualDirectoryArgs>> getVirtualDirectories() {
+    public Output<List<VirtualDirectoryArgs>> virtualDirectories() {
         return this.virtualDirectories == null ? Codegen.empty() : this.virtualDirectories;
     }
 
@@ -62,7 +62,7 @@ public final class VirtualApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="virtualPath")
       private final @Nullable Output<String> virtualPath;
 
-    public Output<String> getVirtualPath() {
+    public Output<String> virtualPath() {
         return this.virtualPath == null ? Codegen.empty() : this.virtualPath;
     }
 

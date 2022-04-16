@@ -115,91 +115,91 @@ public final class GetConnectivityConfigurationResult {
      * Groups for configuration
      * 
     */
-    public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
+    public List<ConnectivityGroupItemResponse> appliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
     /**
      * Connectivity topology type.
      * 
     */
-    public String getConnectivityTopology() {
+    public String connectivityTopology() {
         return this.connectivityTopology;
     }
     /**
      * Flag if need to remove current existing peerings.
      * 
     */
-    public Optional<String> getDeleteExistingPeering() {
+    public Optional<String> deleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
     /**
      * A description of the connectivity configuration.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A friendly name for the resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * List of hubItems
      * 
     */
-    public List<HubResponse> getHubs() {
+    public List<HubResponse> hubs() {
         return this.hubs == null ? List.of() : this.hubs;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Flag if global mesh is supported.
      * 
     */
-    public Optional<String> getIsGlobal() {
+    public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the connectivity configuration resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The system metadata related to this resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

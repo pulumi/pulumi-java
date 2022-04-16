@@ -26,7 +26,7 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="familySequenceNumber")
       private final @Nullable Integer familySequenceNumber;
 
-    public Optional<Integer> getFamilySequenceNumber() {
+    public Optional<Integer> familySequenceNumber() {
         return this.familySequenceNumber == null ? Optional.empty() : Optional.ofNullable(this.familySequenceNumber);
     }
 
@@ -37,7 +37,7 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileLocation")
       private final @Nullable String fileLocation;
 
-    public Optional<String> getFileLocation() {
+    public Optional<String> fileLocation() {
         return this.fileLocation == null ? Optional.empty() : Optional.ofNullable(this.fileLocation);
     }
 
@@ -48,7 +48,7 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

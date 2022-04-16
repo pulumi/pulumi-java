@@ -27,7 +27,7 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="httpHeaders")
       private final @Nullable HttpHeadersResponse httpHeaders;
 
-    public Optional<HttpHeadersResponse> getHttpHeaders() {
+    public Optional<HttpHeadersResponse> httpHeaders() {
         return this.httpHeaders == null ? Optional.empty() : Optional.ofNullable(this.httpHeaders);
     }
 
@@ -38,7 +38,7 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -49,7 +49,7 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -60,7 +60,7 @@ public final class ContainerHttpGetResponse extends com.pulumi.resources.InvokeA
     @Import(name="scheme")
       private final @Nullable String scheme;
 
-    public Optional<String> getScheme() {
+    public Optional<String> scheme() {
         return this.scheme == null ? Optional.empty() : Optional.ofNullable(this.scheme);
     }
 

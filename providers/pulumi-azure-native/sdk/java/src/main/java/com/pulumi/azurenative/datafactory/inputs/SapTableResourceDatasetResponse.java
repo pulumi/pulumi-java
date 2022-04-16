@@ -31,7 +31,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -42,7 +42,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -53,7 +53,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
@@ -64,7 +64,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -75,7 +75,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -86,7 +86,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="schema")
       private final @Nullable Object schema;
 
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
@@ -97,7 +97,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="structure")
       private final @Nullable Object structure;
 
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
@@ -108,7 +108,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="tableName", required=true)
       private final Object tableName;
 
-    public Object getTableName() {
+    public Object tableName() {
         return this.tableName;
     }
 
@@ -120,7 +120,7 @@ public final class SapTableResourceDatasetResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="certificateKey")
       private final @Nullable String certificateKey;
 
-    public Optional<String> getCertificateKey() {
+    public Optional<String> certificateKey() {
         return this.certificateKey == null ? Optional.empty() : Optional.ofNullable(this.certificateKey);
     }
 
@@ -36,7 +36,7 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="mpnsCertificate")
       private final @Nullable String mpnsCertificate;
 
-    public Optional<String> getMpnsCertificate() {
+    public Optional<String> mpnsCertificate() {
         return this.mpnsCertificate == null ? Optional.empty() : Optional.ofNullable(this.mpnsCertificate);
     }
 
@@ -47,7 +47,7 @@ public final class MpnsCredentialResponse extends com.pulumi.resources.InvokeArg
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 

@@ -26,7 +26,7 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
     @Import(name="audience")
       private final @Nullable String audience;
 
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
@@ -37,7 +37,7 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
     @Import(name="authority")
       private final @Nullable String authority;
 
-    public Optional<String> getAuthority() {
+    public Optional<String> authority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
@@ -48,7 +48,7 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
     @Import(name="smartProxyEnabled")
       private final @Nullable Boolean smartProxyEnabled;
 
-    public Optional<Boolean> getSmartProxyEnabled() {
+    public Optional<Boolean> smartProxyEnabled() {
         return this.smartProxyEnabled == null ? Optional.empty() : Optional.ofNullable(this.smartProxyEnabled);
     }
 

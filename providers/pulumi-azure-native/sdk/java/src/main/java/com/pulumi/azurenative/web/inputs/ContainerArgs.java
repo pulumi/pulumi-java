@@ -29,7 +29,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -40,7 +40,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -51,7 +51,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<EnvironmentVarArgs>> env;
 
-    public Output<List<EnvironmentVarArgs>> getEnv() {
+    public Output<List<EnvironmentVarArgs>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -62,7 +62,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -73,7 +73,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<ContainerResourcesArgs> resources;
 
-    public Output<ContainerResourcesArgs> getResources() {
+    public Output<ContainerResourcesArgs> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 

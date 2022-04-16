@@ -26,7 +26,7 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
     @Import(name="expiresIn")
       private final @Nullable Integer expiresIn;
 
-    public Optional<Integer> getExpiresIn() {
+    public Optional<Integer> expiresIn() {
         return this.expiresIn == null ? Optional.empty() : Optional.ofNullable(this.expiresIn);
     }
 
@@ -37,7 +37,7 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
     @Import(name="refreshToken")
       private final @Nullable String refreshToken;
 
-    public Optional<String> getRefreshToken() {
+    public Optional<String> refreshToken() {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
     }
 
@@ -48,7 +48,7 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
     @Import(name="scope")
       private final @Nullable String scope;
 
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
@@ -59,7 +59,7 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
     @Import(name="token", required=true)
       private final String token;
 
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 
@@ -70,7 +70,7 @@ public final class SourceControlAuthInfoResponse extends com.pulumi.resources.In
     @Import(name="tokenType")
       private final @Nullable String tokenType;
 
-    public Optional<String> getTokenType() {
+    public Optional<String> tokenType() {
         return this.tokenType == null ? Optional.empty() : Optional.ofNullable(this.tokenType);
     }
 

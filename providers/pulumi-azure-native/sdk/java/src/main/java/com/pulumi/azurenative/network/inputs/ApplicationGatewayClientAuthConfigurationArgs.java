@@ -26,7 +26,7 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends com.pul
     @Import(name="verifyClientCertIssuerDN")
       private final @Nullable Output<Boolean> verifyClientCertIssuerDN;
 
-    public Output<Boolean> getVerifyClientCertIssuerDN() {
+    public Output<Boolean> verifyClientCertIssuerDN() {
         return this.verifyClientCertIssuerDN == null ? Codegen.empty() : this.verifyClientCertIssuerDN;
     }
 

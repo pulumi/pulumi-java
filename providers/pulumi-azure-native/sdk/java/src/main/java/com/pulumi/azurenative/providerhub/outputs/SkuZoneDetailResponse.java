@@ -23,10 +23,10 @@ public final class SkuZoneDetailResponse {
         this.name = name;
     }
 
-    public List<SkuCapabilityResponse> getCapabilities() {
+    public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
-    public List<String> getName() {
+    public List<String> name() {
         return this.name == null ? List.of() : this.name;
     }
 

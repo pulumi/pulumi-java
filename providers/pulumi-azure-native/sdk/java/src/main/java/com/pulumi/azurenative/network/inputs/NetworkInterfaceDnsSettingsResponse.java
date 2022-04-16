@@ -26,7 +26,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="appliedDnsServers", required=true)
       private final List<String> appliedDnsServers;
 
-    public List<String> getAppliedDnsServers() {
+    public List<String> appliedDnsServers() {
         return this.appliedDnsServers;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="internalDnsNameLabel")
       private final @Nullable String internalDnsNameLabel;
 
-    public Optional<String> getInternalDnsNameLabel() {
+    public Optional<String> internalDnsNameLabel() {
         return this.internalDnsNameLabel == null ? Optional.empty() : Optional.ofNullable(this.internalDnsNameLabel);
     }
 
@@ -59,7 +59,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="internalDomainNameSuffix", required=true)
       private final String internalDomainNameSuffix;
 
-    public String getInternalDomainNameSuffix() {
+    public String internalDomainNameSuffix() {
         return this.internalDomainNameSuffix;
     }
 
@@ -70,7 +70,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="internalFqdn", required=true)
       private final String internalFqdn;
 
-    public String getInternalFqdn() {
+    public String internalFqdn() {
         return this.internalFqdn;
     }
 

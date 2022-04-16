@@ -23,7 +23,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="guestConfigurationAssignmentName")
       private final @Nullable Output<String> guestConfigurationAssignmentName;
 
-    public Output<String> getGuestConfigurationAssignmentName() {
+    public Output<String> guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName == null ? Codegen.empty() : this.guestConfigurationAssignmentName;
     }
 
@@ -34,7 +34,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,7 +45,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
-    public Output<String> getMachineName() {
+    public Output<String> machineName() {
         return this.machineName;
     }
 
@@ -56,7 +56,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="properties")
       private final @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
 
-    public Output<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
+    public Output<GuestConfigurationAssignmentPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -78,7 +78,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

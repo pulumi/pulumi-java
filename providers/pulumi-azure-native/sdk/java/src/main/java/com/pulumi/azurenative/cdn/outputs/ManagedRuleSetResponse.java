@@ -51,28 +51,28 @@ public final class ManagedRuleSetResponse {
      * Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
      * 
     */
-    public Optional<Integer> getAnomalyScore() {
+    public Optional<Integer> anomalyScore() {
         return Optional.ofNullable(this.anomalyScore);
     }
     /**
      * Defines the rule overrides to apply to the rule set.
      * 
     */
-    public List<ManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
+    public List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
     /**
      * Defines the rule set type to use.
      * 
     */
-    public String getRuleSetType() {
+    public String ruleSetType() {
         return this.ruleSetType;
     }
     /**
      * Defines the version of the rule set to use.
      * 
     */
-    public String getRuleSetVersion() {
+    public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
 

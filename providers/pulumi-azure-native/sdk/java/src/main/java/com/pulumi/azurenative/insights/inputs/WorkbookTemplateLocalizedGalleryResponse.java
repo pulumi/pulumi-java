@@ -27,7 +27,7 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
     @Import(name="galleries")
       private final @Nullable List<WorkbookTemplateGalleryResponse> galleries;
 
-    public List<WorkbookTemplateGalleryResponse> getGalleries() {
+    public List<WorkbookTemplateGalleryResponse> galleries() {
         return this.galleries == null ? List.of() : this.galleries;
     }
 
@@ -38,7 +38,7 @@ public final class WorkbookTemplateLocalizedGalleryResponse extends com.pulumi.r
     @Import(name="templateData")
       private final @Nullable Object templateData;
 
-    public Optional<Object> getTemplateData() {
+    public Optional<Object> templateData() {
         return this.templateData == null ? Optional.empty() : Optional.ofNullable(this.templateData);
     }
 

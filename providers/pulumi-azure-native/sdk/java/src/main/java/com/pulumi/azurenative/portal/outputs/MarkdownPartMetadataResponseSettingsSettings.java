@@ -56,35 +56,35 @@ public final class MarkdownPartMetadataResponseSettingsSettings {
      * The content of the markdown part.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The source of the content of the markdown part.
      * 
     */
-    public Optional<Integer> getMarkdownSource() {
+    public Optional<Integer> markdownSource() {
         return Optional.ofNullable(this.markdownSource);
     }
     /**
      * The uri of markdown content.
      * 
     */
-    public Optional<String> getMarkdownUri() {
+    public Optional<String> markdownUri() {
         return Optional.ofNullable(this.markdownUri);
     }
     /**
      * The subtitle of the markdown part.
      * 
     */
-    public Optional<String> getSubtitle() {
+    public Optional<String> subtitle() {
         return Optional.ofNullable(this.subtitle);
     }
     /**
      * The title of the markdown part.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 

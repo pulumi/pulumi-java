@@ -27,7 +27,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyList")
       private final @Nullable Output<List<String>> policyList;
 
-    public Output<List<String>> getPolicyList() {
+    public Output<List<String>> policyList() {
         return this.policyList == null ? Codegen.empty() : this.policyList;
     }
 

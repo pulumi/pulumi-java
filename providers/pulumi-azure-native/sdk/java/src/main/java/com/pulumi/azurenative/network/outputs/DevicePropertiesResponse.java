@@ -42,21 +42,21 @@ public final class DevicePropertiesResponse {
      * Model of the device.
      * 
     */
-    public Optional<String> getDeviceModel() {
+    public Optional<String> deviceModel() {
         return Optional.ofNullable(this.deviceModel);
     }
     /**
      * Name of the device Vendor.
      * 
     */
-    public Optional<String> getDeviceVendor() {
+    public Optional<String> deviceVendor() {
         return Optional.ofNullable(this.deviceVendor);
     }
     /**
      * Link speed.
      * 
     */
-    public Optional<Integer> getLinkSpeedInMbps() {
+    public Optional<Integer> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }
 

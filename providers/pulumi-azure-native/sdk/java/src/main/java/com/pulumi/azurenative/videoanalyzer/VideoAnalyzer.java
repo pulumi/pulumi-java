@@ -48,7 +48,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The account encryption properties.
      * 
      */
-    public Output<AccountEncryptionResponse> getEncryption() {
+    public Output<AccountEncryptionResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -62,7 +62,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The list of endpoints associated with this resource.
      * 
      */
-    public Output<List<EndpointResponse>> getEndpoints() {
+    public Output<List<EndpointResponse>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -76,7 +76,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The set of managed identities associated with the Video Analyzer resource.
      * 
      */
-    public Output</* @Nullable */ VideoAnalyzerIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ VideoAnalyzerIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -90,7 +90,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -104,7 +104,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The storage accounts for this resource.
      * 
      */
-    public Output<List<StorageAccountResponse>> getStorageAccounts() {
+    public Output<List<StorageAccountResponse>> storageAccounts() {
         return this.storageAccounts;
     }
     /**
@@ -132,7 +132,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The system data of the Video Analyzer account.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -146,7 +146,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -160,7 +160,7 @@ public class VideoAnalyzer extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

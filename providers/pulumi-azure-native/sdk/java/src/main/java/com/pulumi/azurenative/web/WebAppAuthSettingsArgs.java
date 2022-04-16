@@ -27,7 +27,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="aadClaimsAuthorization")
       private final @Nullable Output<String> aadClaimsAuthorization;
 
-    public Output<String> getAadClaimsAuthorization() {
+    public Output<String> aadClaimsAuthorization() {
         return this.aadClaimsAuthorization == null ? Codegen.empty() : this.aadClaimsAuthorization;
     }
 
@@ -39,7 +39,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="additionalLoginParams")
       private final @Nullable Output<List<String>> additionalLoginParams;
 
-    public Output<List<String>> getAdditionalLoginParams() {
+    public Output<List<String>> additionalLoginParams() {
         return this.additionalLoginParams == null ? Codegen.empty() : this.additionalLoginParams;
     }
 
@@ -52,7 +52,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> getAllowedAudiences() {
+    public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
@@ -65,7 +65,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="allowedExternalRedirectUrls")
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
-    public Output<List<String>> getAllowedExternalRedirectUrls() {
+    public Output<List<String>> allowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? Codegen.empty() : this.allowedExternalRedirectUrls;
     }
 
@@ -77,7 +77,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="authFilePath")
       private final @Nullable Output<String> authFilePath;
 
-    public Output<String> getAuthFilePath() {
+    public Output<String> authFilePath() {
         return this.authFilePath == null ? Codegen.empty() : this.authFilePath;
     }
 
@@ -91,7 +91,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -105,7 +105,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -117,7 +117,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientSecretCertificateThumbprint")
       private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
-    public Output<String> getClientSecretCertificateThumbprint() {
+    public Output<String> clientSecretCertificateThumbprint() {
         return this.clientSecretCertificateThumbprint == null ? Codegen.empty() : this.clientSecretCertificateThumbprint;
     }
 
@@ -128,7 +128,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
-    public Output<String> getClientSecretSettingName() {
+    public Output<String> clientSecretSettingName() {
         return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 
@@ -140,7 +140,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="configVersion")
       private final @Nullable Output<String> configVersion;
 
-    public Output<String> getConfigVersion() {
+    public Output<String> configVersion() {
         return this.configVersion == null ? Codegen.empty() : this.configVersion;
     }
 
@@ -153,7 +153,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultProvider")
       private final @Nullable Output<BuiltInAuthenticationProvider> defaultProvider;
 
-    public Output<BuiltInAuthenticationProvider> getDefaultProvider() {
+    public Output<BuiltInAuthenticationProvider> defaultProvider() {
         return this.defaultProvider == null ? Codegen.empty() : this.defaultProvider;
     }
 
@@ -164,7 +164,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -177,7 +177,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="facebookAppId")
       private final @Nullable Output<String> facebookAppId;
 
-    public Output<String> getFacebookAppId() {
+    public Output<String> facebookAppId() {
         return this.facebookAppId == null ? Codegen.empty() : this.facebookAppId;
     }
 
@@ -190,7 +190,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="facebookAppSecret")
       private final @Nullable Output<String> facebookAppSecret;
 
-    public Output<String> getFacebookAppSecret() {
+    public Output<String> facebookAppSecret() {
         return this.facebookAppSecret == null ? Codegen.empty() : this.facebookAppSecret;
     }
 
@@ -201,7 +201,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="facebookAppSecretSettingName")
       private final @Nullable Output<String> facebookAppSecretSettingName;
 
-    public Output<String> getFacebookAppSecretSettingName() {
+    public Output<String> facebookAppSecretSettingName() {
         return this.facebookAppSecretSettingName == null ? Codegen.empty() : this.facebookAppSecretSettingName;
     }
 
@@ -214,7 +214,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="facebookOAuthScopes")
       private final @Nullable Output<List<String>> facebookOAuthScopes;
 
-    public Output<List<String>> getFacebookOAuthScopes() {
+    public Output<List<String>> facebookOAuthScopes() {
         return this.facebookOAuthScopes == null ? Codegen.empty() : this.facebookOAuthScopes;
     }
 
@@ -226,7 +226,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="gitHubClientId")
       private final @Nullable Output<String> gitHubClientId;
 
-    public Output<String> getGitHubClientId() {
+    public Output<String> gitHubClientId() {
         return this.gitHubClientId == null ? Codegen.empty() : this.gitHubClientId;
     }
 
@@ -238,7 +238,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="gitHubClientSecret")
       private final @Nullable Output<String> gitHubClientSecret;
 
-    public Output<String> getGitHubClientSecret() {
+    public Output<String> gitHubClientSecret() {
         return this.gitHubClientSecret == null ? Codegen.empty() : this.gitHubClientSecret;
     }
 
@@ -250,7 +250,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="gitHubClientSecretSettingName")
       private final @Nullable Output<String> gitHubClientSecretSettingName;
 
-    public Output<String> getGitHubClientSecretSettingName() {
+    public Output<String> gitHubClientSecretSettingName() {
         return this.gitHubClientSecretSettingName == null ? Codegen.empty() : this.gitHubClientSecretSettingName;
     }
 
@@ -262,7 +262,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="gitHubOAuthScopes")
       private final @Nullable Output<List<String>> gitHubOAuthScopes;
 
-    public Output<List<String>> getGitHubOAuthScopes() {
+    public Output<List<String>> gitHubOAuthScopes() {
         return this.gitHubOAuthScopes == null ? Codegen.empty() : this.gitHubOAuthScopes;
     }
 
@@ -275,7 +275,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="googleClientId")
       private final @Nullable Output<String> googleClientId;
 
-    public Output<String> getGoogleClientId() {
+    public Output<String> googleClientId() {
         return this.googleClientId == null ? Codegen.empty() : this.googleClientId;
     }
 
@@ -288,7 +288,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="googleClientSecret")
       private final @Nullable Output<String> googleClientSecret;
 
-    public Output<String> getGoogleClientSecret() {
+    public Output<String> googleClientSecret() {
         return this.googleClientSecret == null ? Codegen.empty() : this.googleClientSecret;
     }
 
@@ -300,7 +300,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="googleClientSecretSettingName")
       private final @Nullable Output<String> googleClientSecretSettingName;
 
-    public Output<String> getGoogleClientSecretSettingName() {
+    public Output<String> googleClientSecretSettingName() {
         return this.googleClientSecretSettingName == null ? Codegen.empty() : this.googleClientSecretSettingName;
     }
 
@@ -313,7 +313,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="googleOAuthScopes")
       private final @Nullable Output<List<String>> googleOAuthScopes;
 
-    public Output<List<String>> getGoogleOAuthScopes() {
+    public Output<List<String>> googleOAuthScopes() {
         return this.googleOAuthScopes == null ? Codegen.empty() : this.googleOAuthScopes;
     }
 
@@ -325,7 +325,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="isAuthFromFile")
       private final @Nullable Output<String> isAuthFromFile;
 
-    public Output<String> getIsAuthFromFile() {
+    public Output<String> isAuthFromFile() {
         return this.isAuthFromFile == null ? Codegen.empty() : this.isAuthFromFile;
     }
 
@@ -339,7 +339,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
@@ -350,7 +350,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -363,7 +363,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="microsoftAccountClientId")
       private final @Nullable Output<String> microsoftAccountClientId;
 
-    public Output<String> getMicrosoftAccountClientId() {
+    public Output<String> microsoftAccountClientId() {
         return this.microsoftAccountClientId == null ? Codegen.empty() : this.microsoftAccountClientId;
     }
 
@@ -376,7 +376,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="microsoftAccountClientSecret")
       private final @Nullable Output<String> microsoftAccountClientSecret;
 
-    public Output<String> getMicrosoftAccountClientSecret() {
+    public Output<String> microsoftAccountClientSecret() {
         return this.microsoftAccountClientSecret == null ? Codegen.empty() : this.microsoftAccountClientSecret;
     }
 
@@ -388,7 +388,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="microsoftAccountClientSecretSettingName")
       private final @Nullable Output<String> microsoftAccountClientSecretSettingName;
 
-    public Output<String> getMicrosoftAccountClientSecretSettingName() {
+    public Output<String> microsoftAccountClientSecretSettingName() {
         return this.microsoftAccountClientSecretSettingName == null ? Codegen.empty() : this.microsoftAccountClientSecretSettingName;
     }
 
@@ -401,7 +401,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="microsoftAccountOAuthScopes")
       private final @Nullable Output<List<String>> microsoftAccountOAuthScopes;
 
-    public Output<List<String>> getMicrosoftAccountOAuthScopes() {
+    public Output<List<String>> microsoftAccountOAuthScopes() {
         return this.microsoftAccountOAuthScopes == null ? Codegen.empty() : this.microsoftAccountOAuthScopes;
     }
 
@@ -412,7 +412,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -423,7 +423,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -435,7 +435,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
@@ -447,7 +447,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="tokenRefreshExtensionHours")
       private final @Nullable Output<Double> tokenRefreshExtensionHours;
 
-    public Output<Double> getTokenRefreshExtensionHours() {
+    public Output<Double> tokenRefreshExtensionHours() {
         return this.tokenRefreshExtensionHours == null ? Codegen.empty() : this.tokenRefreshExtensionHours;
     }
 
@@ -459,7 +459,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="tokenStoreEnabled")
       private final @Nullable Output<Boolean> tokenStoreEnabled;
 
-    public Output<Boolean> getTokenStoreEnabled() {
+    public Output<Boolean> tokenStoreEnabled() {
         return this.tokenStoreEnabled == null ? Codegen.empty() : this.tokenStoreEnabled;
     }
 
@@ -472,7 +472,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="twitterConsumerKey")
       private final @Nullable Output<String> twitterConsumerKey;
 
-    public Output<String> getTwitterConsumerKey() {
+    public Output<String> twitterConsumerKey() {
         return this.twitterConsumerKey == null ? Codegen.empty() : this.twitterConsumerKey;
     }
 
@@ -485,7 +485,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="twitterConsumerSecret")
       private final @Nullable Output<String> twitterConsumerSecret;
 
-    public Output<String> getTwitterConsumerSecret() {
+    public Output<String> twitterConsumerSecret() {
         return this.twitterConsumerSecret == null ? Codegen.empty() : this.twitterConsumerSecret;
     }
 
@@ -497,7 +497,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="twitterConsumerSecretSettingName")
       private final @Nullable Output<String> twitterConsumerSecretSettingName;
 
-    public Output<String> getTwitterConsumerSecretSettingName() {
+    public Output<String> twitterConsumerSecretSettingName() {
         return this.twitterConsumerSecretSettingName == null ? Codegen.empty() : this.twitterConsumerSecretSettingName;
     }
 
@@ -508,7 +508,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="unauthenticatedClientAction")
       private final @Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction;
 
-    public Output<UnauthenticatedClientAction> getUnauthenticatedClientAction() {
+    public Output<UnauthenticatedClientAction> unauthenticatedClientAction() {
         return this.unauthenticatedClientAction == null ? Codegen.empty() : this.unauthenticatedClientAction;
     }
 
@@ -519,7 +519,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="validateIssuer")
       private final @Nullable Output<Boolean> validateIssuer;
 
-    public Output<Boolean> getValidateIssuer() {
+    public Output<Boolean> validateIssuer() {
         return this.validateIssuer == null ? Codegen.empty() : this.validateIssuer;
     }
 

@@ -31,7 +31,7 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="actionAfterReboot")
       private final @Nullable Output<Either<String,ActionAfterReboot>> actionAfterReboot;
 
-    public Output<Either<String,ActionAfterReboot>> getActionAfterReboot() {
+    public Output<Either<String,ActionAfterReboot>> actionAfterReboot() {
         return this.actionAfterReboot == null ? Codegen.empty() : this.actionAfterReboot;
     }
 
@@ -42,7 +42,7 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="allowModuleOverwrite")
       private final @Nullable Output<Boolean> allowModuleOverwrite;
 
-    public Output<Boolean> getAllowModuleOverwrite() {
+    public Output<Boolean> allowModuleOverwrite() {
         return this.allowModuleOverwrite == null ? Codegen.empty() : this.allowModuleOverwrite;
     }
 
@@ -53,7 +53,7 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationMode")
       private final @Nullable Output<Either<String,ConfigurationMode>> configurationMode;
 
-    public Output<Either<String,ConfigurationMode>> getConfigurationMode() {
+    public Output<Either<String,ConfigurationMode>> configurationMode() {
         return this.configurationMode == null ? Codegen.empty() : this.configurationMode;
     }
 
@@ -64,7 +64,7 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="configurationModeFrequencyMins")
       private final @Nullable Output<Double> configurationModeFrequencyMins;
 
-    public Output<Double> getConfigurationModeFrequencyMins() {
+    public Output<Double> configurationModeFrequencyMins() {
         return this.configurationModeFrequencyMins == null ? Codegen.empty() : this.configurationModeFrequencyMins;
     }
 
@@ -75,7 +75,7 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="rebootIfNeeded")
       private final @Nullable Output<Boolean> rebootIfNeeded;
 
-    public Output<Boolean> getRebootIfNeeded() {
+    public Output<Boolean> rebootIfNeeded() {
         return this.rebootIfNeeded == null ? Codegen.empty() : this.rebootIfNeeded;
     }
 
@@ -86,7 +86,7 @@ public final class ConfigurationSettingArgs extends com.pulumi.resources.Resourc
     @Import(name="refreshFrequencyMins")
       private final @Nullable Output<Double> refreshFrequencyMins;
 
-    public Output<Double> getRefreshFrequencyMins() {
+    public Output<Double> refreshFrequencyMins() {
         return this.refreshFrequencyMins == null ? Codegen.empty() : this.refreshFrequencyMins;
     }
 

@@ -56,35 +56,35 @@ public final class GetReplicationProtectionContainerMappingResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource Location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The custom data.
      * 
     */
-    public ProtectionContainerMappingPropertiesResponse getProperties() {
+    public ProtectionContainerMappingPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

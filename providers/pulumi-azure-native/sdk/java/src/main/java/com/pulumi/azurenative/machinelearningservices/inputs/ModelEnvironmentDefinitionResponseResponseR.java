@@ -29,7 +29,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="bioConductorPackages")
       private final @Nullable List<String> bioConductorPackages;
 
-    public List<String> getBioConductorPackages() {
+    public List<String> bioConductorPackages() {
         return this.bioConductorPackages == null ? List.of() : this.bioConductorPackages;
     }
 
@@ -40,7 +40,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="cranPackages")
       private final @Nullable List<RCranPackageResponse> cranPackages;
 
-    public List<RCranPackageResponse> getCranPackages() {
+    public List<RCranPackageResponse> cranPackages() {
         return this.cranPackages == null ? List.of() : this.cranPackages;
     }
 
@@ -51,7 +51,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="customUrlPackages")
       private final @Nullable List<String> customUrlPackages;
 
-    public List<String> getCustomUrlPackages() {
+    public List<String> customUrlPackages() {
         return this.customUrlPackages == null ? List.of() : this.customUrlPackages;
     }
 
@@ -62,7 +62,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="gitHubPackages")
       private final @Nullable List<RGitHubPackageResponseResponse> gitHubPackages;
 
-    public List<RGitHubPackageResponseResponse> getGitHubPackages() {
+    public List<RGitHubPackageResponseResponse> gitHubPackages() {
         return this.gitHubPackages == null ? List.of() : this.gitHubPackages;
     }
 
@@ -73,7 +73,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="rVersion")
       private final @Nullable String rVersion;
 
-    public Optional<String> getRVersion() {
+    public Optional<String> rVersion() {
         return this.rVersion == null ? Optional.empty() : Optional.ofNullable(this.rVersion);
     }
 
@@ -85,7 +85,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="rscriptPath")
       private final @Nullable String rscriptPath;
 
-    public Optional<String> getRscriptPath() {
+    public Optional<String> rscriptPath() {
         return this.rscriptPath == null ? Optional.empty() : Optional.ofNullable(this.rscriptPath);
     }
 
@@ -96,7 +96,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="snapshotDate")
       private final @Nullable String snapshotDate;
 
-    public Optional<String> getSnapshotDate() {
+    public Optional<String> snapshotDate() {
         return this.snapshotDate == null ? Optional.empty() : Optional.ofNullable(this.snapshotDate);
     }
 
@@ -107,7 +107,7 @@ public final class ModelEnvironmentDefinitionResponseResponseR extends com.pulum
     @Import(name="userManaged")
       private final @Nullable Boolean userManaged;
 
-    public Optional<Boolean> getUserManaged() {
+    public Optional<Boolean> userManaged() {
         return this.userManaged == null ? Optional.empty() : Optional.ofNullable(this.userManaged);
     }
 

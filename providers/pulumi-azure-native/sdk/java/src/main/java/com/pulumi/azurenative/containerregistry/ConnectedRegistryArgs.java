@@ -27,7 +27,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clientTokenIds")
       private final @Nullable Output<List<String>> clientTokenIds;
 
-    public Output<List<String>> getClientTokenIds() {
+    public Output<List<String>> clientTokenIds() {
         return this.clientTokenIds == null ? Codegen.empty() : this.clientTokenIds;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectedRegistryName")
       private final @Nullable Output<String> connectedRegistryName;
 
-    public Output<String> getConnectedRegistryName() {
+    public Output<String> connectedRegistryName() {
         return this.connectedRegistryName == null ? Codegen.empty() : this.connectedRegistryName;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="logging")
       private final @Nullable Output<LoggingPropertiesArgs> logging;
 
-    public Output<LoggingPropertiesArgs> getLogging() {
+    public Output<LoggingPropertiesArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -60,7 +60,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mode", required=true)
       private final Output<Either<String,ConnectedRegistryMode>> mode;
 
-    public Output<Either<String,ConnectedRegistryMode>> getMode() {
+    public Output<Either<String,ConnectedRegistryMode>> mode() {
         return this.mode;
     }
 
@@ -71,7 +71,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parent", required=true)
       private final Output<ParentPropertiesArgs> parent;
 
-    public Output<ParentPropertiesArgs> getParent() {
+    public Output<ParentPropertiesArgs> parent() {
         return this.parent;
     }
 
@@ -82,7 +82,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -93,7 +93,7 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

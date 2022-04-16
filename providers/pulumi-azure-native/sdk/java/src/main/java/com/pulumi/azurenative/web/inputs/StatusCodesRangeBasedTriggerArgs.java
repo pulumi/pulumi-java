@@ -27,14 +27,14 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -45,7 +45,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
     @Import(name="statusCodes")
       private final @Nullable Output<String> statusCodes;
 
-    public Output<String> getStatusCodes() {
+    public Output<String> statusCodes() {
         return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
     }
 
@@ -56,7 +56,7 @@ public final class StatusCodesRangeBasedTriggerArgs extends com.pulumi.resources
     @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
-    public Output<String> getTimeInterval() {
+    public Output<String> timeInterval() {
         return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 

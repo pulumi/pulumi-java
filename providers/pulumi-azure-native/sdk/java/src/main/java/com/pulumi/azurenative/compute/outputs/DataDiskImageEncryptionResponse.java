@@ -35,14 +35,14 @@ public final class DataDiskImageEncryptionResponse {
      * A relative URI containing the resource ID of the disk encryption set.
      * 
     */
-    public Optional<String> getDiskEncryptionSetId() {
+    public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
     */
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
 

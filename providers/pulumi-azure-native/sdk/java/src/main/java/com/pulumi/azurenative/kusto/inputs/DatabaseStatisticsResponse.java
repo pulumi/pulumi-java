@@ -25,7 +25,7 @@ public final class DatabaseStatisticsResponse extends com.pulumi.resources.Invok
     @Import(name="size")
       private final @Nullable Double size;
 
-    public Optional<Double> getSize() {
+    public Optional<Double> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 

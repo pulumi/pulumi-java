@@ -19,7 +19,7 @@ public final class GetPredictionModelStatusArgs extends com.pulumi.resources.Inv
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPredictionModelStatusArgs extends com.pulumi.resources.Inv
     @Import(name="predictionName", required=true)
       private final String predictionName;
 
-    public String getPredictionName() {
+    public String predictionName() {
         return this.predictionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPredictionModelStatusArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

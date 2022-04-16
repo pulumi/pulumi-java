@@ -31,7 +31,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> getAutoRenew() {
+    public Output<Boolean> autoRenew() {
         return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
@@ -42,7 +42,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="offerId")
       private final @Nullable Output<String> offerId;
 
-    public Output<String> getOfferId() {
+    public Output<String> offerId() {
         return this.offerId == null ? Codegen.empty() : this.offerId;
     }
 
@@ -53,7 +53,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="paymentChannelMetadata")
       private final @Nullable Output<Map<String,String>> paymentChannelMetadata;
 
-    public Output<Map<String,String>> getPaymentChannelMetadata() {
+    public Output<Map<String,String>> paymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Codegen.empty() : this.paymentChannelMetadata;
     }
 
@@ -64,7 +64,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="paymentChannelType")
       private final @Nullable Output<Either<String,PaymentChannelType>> paymentChannelType;
 
-    public Output<Either<String,PaymentChannelType>> getPaymentChannelType() {
+    public Output<Either<String,PaymentChannelType>> paymentChannelType() {
         return this.paymentChannelType == null ? Codegen.empty() : this.paymentChannelType;
     }
 
@@ -75,7 +75,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="publisherId")
       private final @Nullable Output<String> publisherId;
 
-    public Output<String> getPublisherId() {
+    public Output<String> publisherId() {
         return this.publisherId == null ? Codegen.empty() : this.publisherId;
     }
 
@@ -86,7 +86,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="publisherTestEnvironment")
       private final @Nullable Output<String> publisherTestEnvironment;
 
-    public Output<String> getPublisherTestEnvironment() {
+    public Output<String> publisherTestEnvironment() {
         return this.publisherTestEnvironment == null ? Codegen.empty() : this.publisherTestEnvironment;
     }
 
@@ -97,7 +97,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="quantity")
       private final @Nullable Output<Double> quantity;
 
-    public Output<Double> getQuantity() {
+    public Output<Double> quantity() {
         return this.quantity == null ? Codegen.empty() : this.quantity;
     }
 
@@ -108,7 +108,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="saasResourceName")
       private final @Nullable Output<String> saasResourceName;
 
-    public Output<String> getSaasResourceName() {
+    public Output<String> saasResourceName() {
         return this.saasResourceName == null ? Codegen.empty() : this.saasResourceName;
     }
 
@@ -119,7 +119,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="saasSessionId")
       private final @Nullable Output<String> saasSessionId;
 
-    public Output<String> getSaasSessionId() {
+    public Output<String> saasSessionId() {
         return this.saasSessionId == null ? Codegen.empty() : this.saasSessionId;
     }
 
@@ -130,7 +130,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="saasSubscriptionId")
       private final @Nullable Output<String> saasSubscriptionId;
 
-    public Output<String> getSaasSubscriptionId() {
+    public Output<String> saasSubscriptionId() {
         return this.saasSubscriptionId == null ? Codegen.empty() : this.saasSubscriptionId;
     }
 
@@ -141,7 +141,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="skuId")
       private final @Nullable Output<String> skuId;
 
-    public Output<String> getSkuId() {
+    public Output<String> skuId() {
         return this.skuId == null ? Codegen.empty() : this.skuId;
     }
 
@@ -152,7 +152,7 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="termId")
       private final @Nullable Output<String> termId;
 
-    public Output<String> getTermId() {
+    public Output<String> termId() {
         return this.termId == null ? Codegen.empty() : this.termId;
     }
 

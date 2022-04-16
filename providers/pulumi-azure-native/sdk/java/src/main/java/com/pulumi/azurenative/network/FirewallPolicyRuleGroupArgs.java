@@ -27,7 +27,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="firewallPolicyName", required=true)
       private final Output<String> firewallPolicyName;
 
-    public Output<String> getFirewallPolicyName() {
+    public Output<String> firewallPolicyName() {
         return this.firewallPolicyName;
     }
 
@@ -38,7 +38,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -71,7 +71,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -82,7 +82,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="ruleGroupName")
       private final @Nullable Output<String> ruleGroupName;
 
-    public Output<String> getRuleGroupName() {
+    public Output<String> ruleGroupName() {
         return this.ruleGroupName == null ? Codegen.empty() : this.ruleGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class FirewallPolicyRuleGroupArgs extends com.pulumi.resources.Reso
     @Import(name="rules")
       private final @Nullable Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules;
 
-    public Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> getRules() {
+    public Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

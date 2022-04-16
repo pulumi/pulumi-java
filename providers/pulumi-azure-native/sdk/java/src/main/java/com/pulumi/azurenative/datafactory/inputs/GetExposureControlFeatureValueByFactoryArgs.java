@@ -21,7 +21,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
     @Import(name="factoryName", required=true)
       private final String factoryName;
 
-    public String getFactoryName() {
+    public String factoryName() {
         return this.factoryName;
     }
 
@@ -32,7 +32,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
     @Import(name="featureName")
       private final @Nullable String featureName;
 
-    public Optional<String> getFeatureName() {
+    public Optional<String> featureName() {
         return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
     }
 
@@ -43,7 +43,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
     @Import(name="featureType")
       private final @Nullable String featureType;
 
-    public Optional<String> getFeatureType() {
+    public Optional<String> featureType() {
         return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
     }
 
@@ -54,7 +54,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

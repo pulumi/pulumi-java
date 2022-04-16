@@ -27,7 +27,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="disks")
       private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
-    public Output<List<VirtualDiskArgs>> getDisks() {
+    public Output<List<VirtualDiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 

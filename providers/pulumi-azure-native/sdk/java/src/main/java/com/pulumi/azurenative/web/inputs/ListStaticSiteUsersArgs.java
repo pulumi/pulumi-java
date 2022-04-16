@@ -19,7 +19,7 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
     @Import(name="authprovider", required=true)
       private final String authprovider;
 
-    public String getAuthprovider() {
+    public String authprovider() {
         return this.authprovider;
     }
 
@@ -30,7 +30,7 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class ListStaticSiteUsersArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

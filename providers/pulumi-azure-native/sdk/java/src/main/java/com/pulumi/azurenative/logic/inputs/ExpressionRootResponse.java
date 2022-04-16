@@ -29,7 +29,7 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
     @Import(name="error")
       private final @Nullable AzureResourceErrorInfoResponse error;
 
-    public Optional<AzureResourceErrorInfoResponse> getError() {
+    public Optional<AzureResourceErrorInfoResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -40,7 +40,7 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -51,7 +51,7 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
     @Import(name="subexpressions")
       private final @Nullable List<ExpressionResponse> subexpressions;
 
-    public List<ExpressionResponse> getSubexpressions() {
+    public List<ExpressionResponse> subexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
 
@@ -62,14 +62,14 @@ public final class ExpressionRootResponse extends com.pulumi.resources.InvokeArg
     @Import(name="text")
       private final @Nullable String text;
 
-    public Optional<String> getText() {
+    public Optional<String> text() {
         return this.text == null ? Optional.empty() : Optional.ofNullable(this.text);
     }
 
     @Import(name="value")
       private final @Nullable Object value;
 
-    public Optional<Object> getValue() {
+    public Optional<Object> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

@@ -123,98 +123,98 @@ public final class GetGatewayResult {
      * User readable description of the gateway.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Network that the Application is using.
      * 
     */
-    public NetworkRefResponse getDestinationNetwork() {
+    public NetworkRefResponse destinationNetwork() {
         return this.destinationNetwork;
     }
     /**
      * Configuration for http connectivity for this gateway.
      * 
     */
-    public List<HttpConfigResponse> getHttp() {
+    public List<HttpConfigResponse> http() {
         return this.http == null ? List.of() : this.http;
     }
     /**
      * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * IP address of the gateway. This is populated in the response and is ignored for incoming requests.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Network the gateway should listen on for requests.
      * 
     */
-    public NetworkRefResponse getSourceNetwork() {
+    public NetworkRefResponse sourceNetwork() {
         return this.sourceNetwork;
     }
     /**
      * Status of the resource.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the gateway.
      * 
     */
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Configuration for tcp connectivity for this gateway.
      * 
     */
-    public List<TcpConfigResponse> getTcp() {
+    public List<TcpConfigResponse> tcp() {
         return this.tcp == null ? List.of() : this.tcp;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

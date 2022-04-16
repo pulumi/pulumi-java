@@ -19,7 +19,7 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="standardId", required=true)
       private final String standardId;
 
-    public String getStandardId() {
+    public String standardId() {
         return this.standardId;
     }
 

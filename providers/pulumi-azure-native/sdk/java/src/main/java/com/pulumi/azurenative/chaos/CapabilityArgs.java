@@ -22,7 +22,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capabilityName")
       private final @Nullable Output<String> capabilityName;
 
-    public Output<String> getCapabilityName() {
+    public Output<String> capabilityName() {
         return this.capabilityName == null ? Codegen.empty() : this.capabilityName;
     }
 
@@ -33,7 +33,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentProviderNamespace", required=true)
       private final Output<String> parentProviderNamespace;
 
-    public Output<String> getParentProviderNamespace() {
+    public Output<String> parentProviderNamespace() {
         return this.parentProviderNamespace;
     }
 
@@ -44,7 +44,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceName", required=true)
       private final Output<String> parentResourceName;
 
-    public Output<String> getParentResourceName() {
+    public Output<String> parentResourceName() {
         return this.parentResourceName;
     }
 
@@ -55,7 +55,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
-    public Output<String> getParentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -66,7 +66,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +77,7 @@ public final class CapabilityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
-    public Output<String> getTargetName() {
+    public Output<String> targetName() {
         return this.targetName;
     }
 

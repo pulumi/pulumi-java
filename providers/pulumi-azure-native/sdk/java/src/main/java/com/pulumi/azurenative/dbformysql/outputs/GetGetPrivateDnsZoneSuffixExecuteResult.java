@@ -26,7 +26,7 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
      * Represents the private DNS zone suffix.
      * 
     */
-    public Optional<String> getPrivateDnsZoneSuffix() {
+    public Optional<String> privateDnsZoneSuffix() {
         return Optional.ofNullable(this.privateDnsZoneSuffix);
     }
 

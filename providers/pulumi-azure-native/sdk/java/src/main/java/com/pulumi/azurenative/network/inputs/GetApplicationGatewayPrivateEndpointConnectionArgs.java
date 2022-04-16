@@ -19,7 +19,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
     @Import(name="applicationGatewayName", required=true)
       private final String applicationGatewayName;
 
-    public String getApplicationGatewayName() {
+    public String applicationGatewayName() {
         return this.applicationGatewayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
     @Import(name="connectionName", required=true)
       private final String connectionName;
 
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
 
@@ -41,7 +41,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends co
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

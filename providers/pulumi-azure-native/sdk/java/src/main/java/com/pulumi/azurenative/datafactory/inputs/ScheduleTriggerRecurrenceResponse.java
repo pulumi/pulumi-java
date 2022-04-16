@@ -27,7 +27,7 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -38,7 +38,7 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="frequency")
       private final @Nullable String frequency;
 
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
@@ -49,7 +49,7 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="interval")
       private final @Nullable Integer interval;
 
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
@@ -60,7 +60,7 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="schedule")
       private final @Nullable RecurrenceScheduleResponse schedule;
 
-    public Optional<RecurrenceScheduleResponse> getSchedule() {
+    public Optional<RecurrenceScheduleResponse> schedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
     }
 
@@ -71,7 +71,7 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -82,7 +82,7 @@ public final class ScheduleTriggerRecurrenceResponse extends com.pulumi.resource
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

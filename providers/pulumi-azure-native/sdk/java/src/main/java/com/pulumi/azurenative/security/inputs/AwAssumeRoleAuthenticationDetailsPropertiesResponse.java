@@ -24,7 +24,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
@@ -35,7 +35,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
     @Import(name="authenticationProvisioningState", required=true)
       private final String authenticationProvisioningState;
 
-    public String getAuthenticationProvisioningState() {
+    public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
 
@@ -58,7 +58,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
     @Import(name="awsAssumeRoleArn", required=true)
       private final String awsAssumeRoleArn;
 
-    public String getAwsAssumeRoleArn() {
+    public String awsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
     }
 
@@ -69,7 +69,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
     @Import(name="awsExternalId", required=true)
       private final String awsExternalId;
 
-    public String getAwsExternalId() {
+    public String awsExternalId() {
         return this.awsExternalId;
     }
 
@@ -80,7 +80,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends c
     @Import(name="grantedPermissions", required=true)
       private final List<String> grantedPermissions;
 
-    public List<String> getGrantedPermissions() {
+    public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
 

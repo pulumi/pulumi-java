@@ -25,7 +25,7 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
     @Import(name="receiveAgreement", required=true)
       private final Output<EdifactOneWayAgreementArgs> receiveAgreement;
 
-    public Output<EdifactOneWayAgreementArgs> getReceiveAgreement() {
+    public Output<EdifactOneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
     }
 
@@ -36,7 +36,7 @@ public final class EdifactAgreementContentArgs extends com.pulumi.resources.Reso
     @Import(name="sendAgreement", required=true)
       private final Output<EdifactOneWayAgreementArgs> sendAgreement;
 
-    public Output<EdifactOneWayAgreementArgs> getSendAgreement() {
+    public Output<EdifactOneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
 

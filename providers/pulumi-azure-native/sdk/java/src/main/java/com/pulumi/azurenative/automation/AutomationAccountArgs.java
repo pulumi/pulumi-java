@@ -27,7 +27,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="automationAccountName")
       private final @Nullable Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName == null ? Codegen.empty() : this.automationAccountName;
     }
 
@@ -38,7 +38,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="disableLocalAuth")
       private final @Nullable Output<Boolean> disableLocalAuth;
 
-    public Output<Boolean> getDisableLocalAuth() {
+    public Output<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
@@ -49,7 +49,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
-    public Output<EncryptionPropertiesArgs> getEncryption() {
+    public Output<EncryptionPropertiesArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -60,7 +60,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -71,7 +71,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Boolean> publicNetworkAccess;
 
-    public Output<Boolean> getPublicNetworkAccess() {
+    public Output<Boolean> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -104,7 +104,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,7 +115,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -126,7 +126,7 @@ public final class AutomationAccountArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

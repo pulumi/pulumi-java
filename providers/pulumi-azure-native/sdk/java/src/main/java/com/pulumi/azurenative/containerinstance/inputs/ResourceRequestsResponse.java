@@ -26,7 +26,7 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cpu", required=true)
       private final Double cpu;
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="gpu")
       private final @Nullable GpuResourceResponse gpu;
 
-    public Optional<GpuResourceResponse> getGpu() {
+    public Optional<GpuResourceResponse> gpu() {
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
     }
 
@@ -48,7 +48,7 @@ public final class ResourceRequestsResponse extends com.pulumi.resources.InvokeA
     @Import(name="memoryInGB", required=true)
       private final Double memoryInGB;
 
-    public Double getMemoryInGB() {
+    public Double memoryInGB() {
         return this.memoryInGB;
     }
 

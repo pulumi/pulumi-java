@@ -26,7 +26,7 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="maxNodeCount", required=true)
       private final Integer maxNodeCount;
 
-    public Integer getMaxNodeCount() {
+    public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
 
@@ -37,7 +37,7 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="minNodeCount")
       private final @Nullable Integer minNodeCount;
 
-    public Optional<Integer> getMinNodeCount() {
+    public Optional<Integer> minNodeCount() {
         return this.minNodeCount == null ? Optional.empty() : Optional.ofNullable(this.minNodeCount);
     }
 
@@ -48,7 +48,7 @@ public final class ScaleSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="nodeIdleTimeBeforeScaleDown")
       private final @Nullable String nodeIdleTimeBeforeScaleDown;
 
-    public Optional<String> getNodeIdleTimeBeforeScaleDown() {
+    public Optional<String> nodeIdleTimeBeforeScaleDown() {
         return this.nodeIdleTimeBeforeScaleDown == null ? Optional.empty() : Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }
 

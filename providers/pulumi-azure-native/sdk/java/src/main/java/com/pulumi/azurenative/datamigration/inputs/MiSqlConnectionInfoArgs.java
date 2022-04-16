@@ -26,7 +26,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="managedInstanceResourceId", required=true)
       private final Output<String> managedInstanceResourceId;
 
-    public Output<String> getManagedInstanceResourceId() {
+    public Output<String> managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
 
@@ -37,7 +37,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -49,7 +49,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -60,7 +60,7 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

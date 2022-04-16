@@ -84,63 +84,63 @@ public final class GetDedicatedCloudServiceResult {
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
      * 
     */
-    public String getGatewaySubnet() {
+    public String gatewaySubnet() {
         return this.gatewaySubnet;
     }
     /**
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/dedicatedCloudServices/{dedicatedCloudServiceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * indicates whether account onboarded or not in a given region
      * 
     */
-    public String getIsAccountOnboarded() {
+    public String isAccountOnboarded() {
         return this.isAccountOnboarded;
     }
     /**
      * Azure region
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * {dedicatedCloudServiceName}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * total nodes purchased
      * 
     */
-    public Integer getNodes() {
+    public Integer nodes() {
         return this.nodes;
     }
     /**
      * link to a service management web portal
      * 
     */
-    public String getServiceURL() {
+    public String serviceURL() {
         return this.serviceURL;
     }
     /**
      * The list of tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

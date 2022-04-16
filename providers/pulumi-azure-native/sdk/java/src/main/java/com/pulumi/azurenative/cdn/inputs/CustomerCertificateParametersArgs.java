@@ -29,7 +29,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="certificateAuthority")
       private final @Nullable Output<String> certificateAuthority;
 
-    public Output<String> getCertificateAuthority() {
+    public Output<String> certificateAuthority() {
         return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
     }
 
@@ -40,7 +40,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="secretSource", required=true)
       private final Output<ResourceReferenceArgs> secretSource;
 
-    public Output<ResourceReferenceArgs> getSecretSource() {
+    public Output<ResourceReferenceArgs> secretSource() {
         return this.secretSource;
     }
 
@@ -51,7 +51,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
@@ -62,7 +62,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Output<List<String>> getSubjectAlternativeNames() {
+    public Output<List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -74,7 +74,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -85,7 +85,7 @@ public final class CustomerCertificateParametersArgs extends com.pulumi.resource
     @Import(name="useLatestVersion")
       private final @Nullable Output<Boolean> useLatestVersion;
 
-    public Output<Boolean> getUseLatestVersion() {
+    public Output<Boolean> useLatestVersion() {
         return this.useLatestVersion == null ? Codegen.empty() : this.useLatestVersion;
     }
 

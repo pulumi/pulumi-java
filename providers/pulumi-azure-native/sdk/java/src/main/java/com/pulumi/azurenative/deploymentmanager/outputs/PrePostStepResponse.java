@@ -24,7 +24,7 @@ public final class PrePostStepResponse {
      * The resource Id of the step to be run.
      * 
     */
-    public String getStepId() {
+    public String stepId() {
         return this.stepId;
     }
 

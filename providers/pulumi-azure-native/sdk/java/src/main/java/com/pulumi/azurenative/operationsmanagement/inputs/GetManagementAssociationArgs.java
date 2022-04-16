@@ -19,7 +19,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="managementAssociationName", required=true)
       private final String managementAssociationName;
 
-    public String getManagementAssociationName() {
+    public String managementAssociationName() {
         return this.managementAssociationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="providerName", required=true)
       private final String providerName;
 
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
 
@@ -41,7 +41,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -63,7 +63,7 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

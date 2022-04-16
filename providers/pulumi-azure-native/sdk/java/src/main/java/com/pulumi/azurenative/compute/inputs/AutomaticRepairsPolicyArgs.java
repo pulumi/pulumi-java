@@ -27,7 +27,7 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class AutomaticRepairsPolicyArgs extends com.pulumi.resources.Resou
     @Import(name="gracePeriod")
       private final @Nullable Output<String> gracePeriod;
 
-    public Output<String> getGracePeriod() {
+    public Output<String> gracePeriod() {
         return this.gracePeriod == null ? Codegen.empty() : this.gracePeriod;
     }
 

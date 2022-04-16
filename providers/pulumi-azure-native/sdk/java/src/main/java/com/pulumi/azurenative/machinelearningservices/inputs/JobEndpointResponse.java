@@ -27,7 +27,7 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
@@ -38,7 +38,7 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobEndpointType")
       private final @Nullable String jobEndpointType;
 
-    public Optional<String> getJobEndpointType() {
+    public Optional<String> jobEndpointType() {
         return this.jobEndpointType == null ? Optional.empty() : Optional.ofNullable(this.jobEndpointType);
     }
 
@@ -49,7 +49,7 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -60,7 +60,7 @@ public final class JobEndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 

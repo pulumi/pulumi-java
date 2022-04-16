@@ -26,7 +26,7 @@ public final class CloudServiceVaultCertificateArgs extends com.pulumi.resources
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
+    public Output<String> certificateUrl() {
         return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
     }
 

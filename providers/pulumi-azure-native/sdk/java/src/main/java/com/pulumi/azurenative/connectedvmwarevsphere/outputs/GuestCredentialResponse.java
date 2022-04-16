@@ -26,7 +26,7 @@ public final class GuestCredentialResponse {
      * Gets or sets username to connect with the guest.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

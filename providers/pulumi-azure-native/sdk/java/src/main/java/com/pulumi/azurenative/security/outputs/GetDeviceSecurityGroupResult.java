@@ -73,49 +73,49 @@ public final class GetDeviceSecurityGroupResult {
      * The allow-list custom alert rules.
      * 
     */
-    public List<AllowlistCustomAlertRuleResponse> getAllowlistRules() {
+    public List<AllowlistCustomAlertRuleResponse> allowlistRules() {
         return this.allowlistRules == null ? List.of() : this.allowlistRules;
     }
     /**
      * The deny-list custom alert rules.
      * 
     */
-    public List<DenylistCustomAlertRuleResponse> getDenylistRules() {
+    public List<DenylistCustomAlertRuleResponse> denylistRules() {
         return this.denylistRules == null ? List.of() : this.denylistRules;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of custom alert threshold rules.
      * 
     */
-    public List<ThresholdCustomAlertRuleResponse> getThresholdRules() {
+    public List<ThresholdCustomAlertRuleResponse> thresholdRules() {
         return this.thresholdRules == null ? List.of() : this.thresholdRules;
     }
     /**
      * The list of custom alert time-window rules.
      * 
     */
-    public List<TimeWindowCustomAlertRuleResponse> getTimeWindowRules() {
+    public List<TimeWindowCustomAlertRuleResponse> timeWindowRules() {
         return this.timeWindowRules == null ? List.of() : this.timeWindowRules;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -81,63 +81,63 @@ public final class HiveMetastoreResponse {
      * The databaseName for the Hive MetaStore
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of the NestedResource
      * 
     */
-    public String getNestedResourceProvisioningState() {
+    public String nestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
     }
     /**
      * The password for the Hive MetaStore
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The runtimeVersion for the Hive MetaStore
      * 
     */
-    public String getRuntimeVersion() {
+    public String runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
      * The serverUri for the Hive MetaStore
      * 
     */
-    public String getServerUri() {
+    public String serverUri() {
         return this.serverUri;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The userName for the Hive MetaStore
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

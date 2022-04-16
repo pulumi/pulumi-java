@@ -43,21 +43,21 @@ public final class AddressPropertiesResponse {
      * Status of address validation
      * 
     */
-    public String getAddressValidationStatus() {
+    public String addressValidationStatus() {
         return this.addressValidationStatus;
     }
     /**
      * Contact details for the address
      * 
     */
-    public ContactDetailsResponse getContactDetails() {
+    public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
     /**
      * Shipping details for the address
      * 
     */
-    public Optional<ShippingAddressResponse> getShippingAddress() {
+    public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
 

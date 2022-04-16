@@ -55,35 +55,35 @@ public final class GetTagRuleResult {
      * The id of the rule set.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the rule set.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties of the monitoring tag rules.
      * 
     */
-    public MonitoringTagRulesPropertiesResponse getProperties() {
+    public MonitoringTagRulesPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the rule set.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

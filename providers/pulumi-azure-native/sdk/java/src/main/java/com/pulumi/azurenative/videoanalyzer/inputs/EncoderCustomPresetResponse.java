@@ -27,7 +27,7 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
     @Import(name="audioEncoder")
       private final @Nullable AudioEncoderAacResponse audioEncoder;
 
-    public Optional<AudioEncoderAacResponse> getAudioEncoder() {
+    public Optional<AudioEncoderAacResponse> audioEncoder() {
         return this.audioEncoder == null ? Optional.empty() : Optional.ofNullable(this.audioEncoder);
     }
 
@@ -39,7 +39,7 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -50,7 +50,7 @@ public final class EncoderCustomPresetResponse extends com.pulumi.resources.Invo
     @Import(name="videoEncoder")
       private final @Nullable VideoEncoderH264Response videoEncoder;
 
-    public Optional<VideoEncoderH264Response> getVideoEncoder() {
+    public Optional<VideoEncoderH264Response> videoEncoder() {
         return this.videoEncoder == null ? Optional.empty() : Optional.ofNullable(this.videoEncoder);
     }
 

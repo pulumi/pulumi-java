@@ -25,7 +25,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="fileSystemId", required=true)
       private final String fileSystemId;
 
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -36,7 +36,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -47,7 +47,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="mountTargetId", required=true)
       private final String mountTargetId;
 
-    public String getMountTargetId() {
+    public String mountTargetId() {
         return this.mountTargetId;
     }
 
@@ -58,7 +58,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     @Import(name="smbServerFqdn")
       private final @Nullable String smbServerFqdn;
 
-    public Optional<String> getSmbServerFqdn() {
+    public Optional<String> smbServerFqdn() {
         return this.smbServerFqdn == null ? Optional.empty() : Optional.ofNullable(this.smbServerFqdn);
     }
 

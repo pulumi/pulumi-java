@@ -70,21 +70,21 @@ public final class PublicIPAddressResourceSettingsResponse {
      * Gets or sets the domain name label.
      * 
     */
-    public Optional<String> getDomainNameLabel() {
+    public Optional<String> domainNameLabel() {
         return Optional.ofNullable(this.domainNameLabel);
     }
     /**
      * Gets or sets the fully qualified domain name.
      * 
     */
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * Gets or sets public IP allocation method.
      * 
     */
-    public Optional<String> getPublicIpAllocationMethod() {
+    public Optional<String> publicIpAllocationMethod() {
         return Optional.ofNullable(this.publicIpAllocationMethod);
     }
     /**
@@ -92,28 +92,28 @@ public final class PublicIPAddressResourceSettingsResponse {
      * Expected value is 'Microsoft.Network/publicIPAddresses'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets public IP sku.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Gets or sets public IP zones.
      * 
     */
-    public Optional<String> getZones() {
+    public Optional<String> zones() {
         return Optional.ofNullable(this.zones);
     }
 

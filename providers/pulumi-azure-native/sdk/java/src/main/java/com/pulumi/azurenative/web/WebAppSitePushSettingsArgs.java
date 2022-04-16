@@ -23,7 +23,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="dynamicTagsJson")
       private final @Nullable Output<String> dynamicTagsJson;
 
-    public Output<String> getDynamicTagsJson() {
+    public Output<String> dynamicTagsJson() {
         return this.dynamicTagsJson == null ? Codegen.empty() : this.dynamicTagsJson;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="isPushEnabled", required=true)
       private final Output<Boolean> isPushEnabled;
 
-    public Output<Boolean> getIsPushEnabled() {
+    public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,7 +78,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="tagWhitelistJson")
       private final @Nullable Output<String> tagWhitelistJson;
 
-    public Output<String> getTagWhitelistJson() {
+    public Output<String> tagWhitelistJson() {
         return this.tagWhitelistJson == null ? Codegen.empty() : this.tagWhitelistJson;
     }
 
@@ -92,7 +92,7 @@ public final class WebAppSitePushSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="tagsRequiringAuth")
       private final @Nullable Output<String> tagsRequiringAuth;
 
-    public Output<String> getTagsRequiringAuth() {
+    public Output<String> tagsRequiringAuth() {
         return this.tagsRequiringAuth == null ? Codegen.empty() : this.tagsRequiringAuth;
     }
 

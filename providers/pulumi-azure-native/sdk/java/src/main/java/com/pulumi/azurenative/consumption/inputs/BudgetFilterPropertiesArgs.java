@@ -26,7 +26,7 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="dimensions")
       private final @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
-    public Output<BudgetComparisonExpressionArgs> getDimensions() {
+    public Output<BudgetComparisonExpressionArgs> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -37,7 +37,7 @@ public final class BudgetFilterPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
-    public Output<BudgetComparisonExpressionArgs> getTags() {
+    public Output<BudgetComparisonExpressionArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

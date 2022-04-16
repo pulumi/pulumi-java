@@ -42,21 +42,21 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
      * The self-hosted integration runtime reference.
      * 
     */
-    public Optional<EntityReferenceResponse> getConnectVia() {
+    public Optional<EntityReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The path to contain the staged data in the Blob storage.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The staging linked service reference.
      * 
     */
-    public Optional<EntityReferenceResponse> getStagingLinkedService() {
+    public Optional<EntityReferenceResponse> stagingLinkedService() {
         return Optional.ofNullable(this.stagingLinkedService);
     }
 

@@ -26,7 +26,7 @@ public final class BodyDiagnosticSettingsResponse {
      * Number of request body bytes to log.
      * 
     */
-    public Optional<Integer> getBytes() {
+    public Optional<Integer> bytes() {
         return Optional.ofNullable(this.bytes);
     }
 

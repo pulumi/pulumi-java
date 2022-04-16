@@ -28,7 +28,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
     @Import(name="backupFileShare", required=true)
       private final Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
+    public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare;
     }
 
@@ -39,7 +39,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
     @Import(name="connectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> connectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
     }
 
@@ -50,7 +50,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
     @Import(name="selectedCertificates", required=true)
       private final Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
-    public Output<List<SelectedCertificateInputArgs>> getSelectedCertificates() {
+    public Output<List<SelectedCertificateInputArgs>> selectedCertificates() {
         return this.selectedCertificates;
     }
 

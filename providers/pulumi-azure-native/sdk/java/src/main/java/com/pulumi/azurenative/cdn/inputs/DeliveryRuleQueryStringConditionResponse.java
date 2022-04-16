@@ -25,7 +25,7 @@ public final class DeliveryRuleQueryStringConditionResponse extends com.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleQueryStringConditionResponse extends com.pulumi.r
     @Import(name="parameters", required=true)
       private final QueryStringMatchConditionParametersResponse parameters;
 
-    public QueryStringMatchConditionParametersResponse getParameters() {
+    public QueryStringMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

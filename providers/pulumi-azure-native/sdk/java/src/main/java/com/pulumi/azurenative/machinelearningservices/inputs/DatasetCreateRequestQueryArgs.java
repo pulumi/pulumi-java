@@ -22,7 +22,7 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 

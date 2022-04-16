@@ -78,56 +78,56 @@ public final class BindingResourcePropertiesResponse {
      * Binding parameters of the Binding resource
      * 
     */
-    public Map<String,Object> getBindingParameters() {
+    public Map<String,Object> bindingParameters() {
         return this.bindingParameters == null ? Map.of() : this.bindingParameters;
     }
     /**
      * Creation time of the Binding resource
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * The generated Spring Boot property file for this binding. The secret will be deducted.
      * 
     */
-    public String getGeneratedProperties() {
+    public String generatedProperties() {
         return this.generatedProperties;
     }
     /**
      * The key of the bound resource
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The Azure resource id of the bound resource
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * The name of the bound resource
      * 
     */
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
     /**
      * The standard Azure resource type of the bound resource
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Update time of the Binding resource
      * 
     */
-    public String getUpdatedAt() {
+    public String updatedAt() {
         return this.updatedAt;
     }
 

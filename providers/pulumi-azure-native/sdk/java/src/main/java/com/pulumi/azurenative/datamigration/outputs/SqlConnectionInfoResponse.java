@@ -85,49 +85,49 @@ public final class SqlConnectionInfoResponse {
      * Additional connection settings
      * 
     */
-    public Optional<String> getAdditionalSettings() {
+    public Optional<String> additionalSettings() {
         return Optional.ofNullable(this.additionalSettings);
     }
     /**
      * Authentication type to use for connection
      * 
     */
-    public Optional<String> getAuthentication() {
+    public Optional<String> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
      * 
     */
-    public String getDataSource() {
+    public String dataSource() {
         return this.dataSource;
     }
     /**
      * Whether to encrypt the connection
      * 
     */
-    public Optional<Boolean> getEncryptConnection() {
+    public Optional<Boolean> encryptConnection() {
         return Optional.ofNullable(this.encryptConnection);
     }
     /**
      * Password credential.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Server platform type for connection
      * 
     */
-    public Optional<String> getPlatform() {
+    public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
     /**
      * Whether to trust the server certificate
      * 
     */
-    public Optional<Boolean> getTrustServerCertificate() {
+    public Optional<Boolean> trustServerCertificate() {
         return Optional.ofNullable(this.trustServerCertificate);
     }
     /**
@@ -135,14 +135,14 @@ public final class SqlConnectionInfoResponse {
      * Expected value is 'SqlConnectionInfo'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * User name
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

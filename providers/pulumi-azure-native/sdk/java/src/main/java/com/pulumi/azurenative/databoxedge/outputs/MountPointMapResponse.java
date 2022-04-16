@@ -53,35 +53,35 @@ public final class MountPointMapResponse {
      * Mount point for the share.
      * 
     */
-    public String getMountPoint() {
+    public String mountPoint() {
         return this.mountPoint;
     }
     /**
      * Mounting type.
      * 
     */
-    public String getMountType() {
+    public String mountType() {
         return this.mountType;
     }
     /**
      * ID of the role to which share is mounted.
      * 
     */
-    public String getRoleId() {
+    public String roleId() {
         return this.roleId;
     }
     /**
      * Role type.
      * 
     */
-    public String getRoleType() {
+    public String roleType() {
         return this.roleType;
     }
     /**
      * ID of the share mounted to the role VM.
      * 
     */
-    public String getShareId() {
+    public String shareId() {
         return this.shareId;
     }
 

@@ -44,24 +44,24 @@ public final class HeaderActionParametersResponse {
      * Action to perform
      * 
     */
-    public String getHeaderAction() {
+    public String headerAction() {
         return this.headerAction;
     }
     /**
      * Name of the header to modify
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Value for the specified action
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

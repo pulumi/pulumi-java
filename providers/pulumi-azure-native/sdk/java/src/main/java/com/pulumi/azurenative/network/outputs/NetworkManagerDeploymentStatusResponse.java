@@ -63,42 +63,42 @@ public final class NetworkManagerDeploymentStatusResponse {
      * Commit Time.
      * 
     */
-    public Optional<String> getCommitTime() {
+    public Optional<String> commitTime() {
         return Optional.ofNullable(this.commitTime);
     }
     /**
      * List of configuration ids.
      * 
     */
-    public List<String> getConfigurationIds() {
+    public List<String> configurationIds() {
         return this.configurationIds == null ? List.of() : this.configurationIds;
     }
     /**
      * Deployment Status.
      * 
     */
-    public Optional<String> getDeploymentStatus() {
+    public Optional<String> deploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
      * Configuration Deployment Type.
      * 
     */
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * Error Message.
      * 
     */
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Region Name.
      * 
     */
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 

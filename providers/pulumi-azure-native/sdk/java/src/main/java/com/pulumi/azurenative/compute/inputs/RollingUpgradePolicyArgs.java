@@ -28,7 +28,7 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="enableCrossZoneUpgrade")
       private final @Nullable Output<Boolean> enableCrossZoneUpgrade;
 
-    public Output<Boolean> getEnableCrossZoneUpgrade() {
+    public Output<Boolean> enableCrossZoneUpgrade() {
         return this.enableCrossZoneUpgrade == null ? Codegen.empty() : this.enableCrossZoneUpgrade;
     }
 
@@ -39,7 +39,7 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="maxBatchInstancePercent")
       private final @Nullable Output<Integer> maxBatchInstancePercent;
 
-    public Output<Integer> getMaxBatchInstancePercent() {
+    public Output<Integer> maxBatchInstancePercent() {
         return this.maxBatchInstancePercent == null ? Codegen.empty() : this.maxBatchInstancePercent;
     }
 
@@ -50,7 +50,7 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="maxUnhealthyInstancePercent")
       private final @Nullable Output<Integer> maxUnhealthyInstancePercent;
 
-    public Output<Integer> getMaxUnhealthyInstancePercent() {
+    public Output<Integer> maxUnhealthyInstancePercent() {
         return this.maxUnhealthyInstancePercent == null ? Codegen.empty() : this.maxUnhealthyInstancePercent;
     }
 
@@ -61,7 +61,7 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="maxUnhealthyUpgradedInstancePercent")
       private final @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
 
-    public Output<Integer> getMaxUnhealthyUpgradedInstancePercent() {
+    public Output<Integer> maxUnhealthyUpgradedInstancePercent() {
         return this.maxUnhealthyUpgradedInstancePercent == null ? Codegen.empty() : this.maxUnhealthyUpgradedInstancePercent;
     }
 
@@ -72,7 +72,7 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="pauseTimeBetweenBatches")
       private final @Nullable Output<String> pauseTimeBetweenBatches;
 
-    public Output<String> getPauseTimeBetweenBatches() {
+    public Output<String> pauseTimeBetweenBatches() {
         return this.pauseTimeBetweenBatches == null ? Codegen.empty() : this.pauseTimeBetweenBatches;
     }
 
@@ -83,7 +83,7 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="prioritizeUnhealthyInstances")
       private final @Nullable Output<Boolean> prioritizeUnhealthyInstances;
 
-    public Output<Boolean> getPrioritizeUnhealthyInstances() {
+    public Output<Boolean> prioritizeUnhealthyInstances() {
         return this.prioritizeUnhealthyInstances == null ? Codegen.empty() : this.prioritizeUnhealthyInstances;
     }
 

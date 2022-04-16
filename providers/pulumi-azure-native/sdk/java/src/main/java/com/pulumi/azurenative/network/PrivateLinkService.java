@@ -51,7 +51,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The alias of the private link service.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -65,7 +65,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The auto-approval list of the private link service.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
+    public Output</* @Nullable */ PrivateLinkServicePropertiesResponseAutoApproval> autoApproval() {
         return this.autoApproval;
     }
     /**
@@ -79,7 +79,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Whether the private link service is enabled for proxy protocol or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableProxyProtocol() {
+    public Output</* @Nullable */ Boolean> enableProxyProtocol() {
         return this.enableProxyProtocol;
     }
     /**
@@ -93,7 +93,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -107,7 +107,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The extended location of the load balancer.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -121,7 +121,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The list of Fqdn.
      * 
      */
-    public Output</* @Nullable */ List<String>> getFqdns() {
+    public Output</* @Nullable */ List<String>> fqdns() {
         return this.fqdns;
     }
     /**
@@ -135,7 +135,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return An array of private link service IP configurations.
      * 
      */
-    public Output</* @Nullable */ List<PrivateLinkServiceIpConfigurationResponse>> getIpConfigurations() {
+    public Output</* @Nullable */ List<PrivateLinkServiceIpConfigurationResponse>> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
@@ -149,7 +149,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return An array of references to the load balancer IP configurations.
      * 
      */
-    public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> getLoadBalancerFrontendIpConfigurations() {
+    public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> loadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations;
     }
     /**
@@ -163,7 +163,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -177,7 +177,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -191,7 +191,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return An array of references to the network interfaces created for this private link service.
      * 
      */
-    public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceResponse>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -205,7 +205,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return An array of list about connections to the private endpoint.
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -219,7 +219,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the private link service resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -233,7 +233,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -247,7 +247,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -261,7 +261,7 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
      * @return The visibility list of the private link service.
      * 
      */
-    public Output</* @Nullable */ PrivateLinkServicePropertiesResponseVisibility> getVisibility() {
+    public Output</* @Nullable */ PrivateLinkServicePropertiesResponseVisibility> visibility() {
         return this.visibility;
     }
 

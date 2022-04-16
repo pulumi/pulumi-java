@@ -43,28 +43,28 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
         this.serviceTreeInfos = serviceTreeInfos;
     }
 
-    public Optional<String> getIncidentContactEmail() {
+    public Optional<String> incidentContactEmail() {
         return Optional.ofNullable(this.incidentContactEmail);
     }
-    public Optional<String> getIncidentRoutingService() {
+    public Optional<String> incidentRoutingService() {
         return Optional.ofNullable(this.incidentRoutingService);
     }
-    public Optional<String> getIncidentRoutingTeam() {
+    public Optional<String> incidentRoutingTeam() {
         return Optional.ofNullable(this.incidentRoutingTeam);
     }
-    public List<String> getManifestOwners() {
+    public List<String> manifestOwners() {
         return this.manifestOwners == null ? List.of() : this.manifestOwners;
     }
-    public Optional<String> getResourceAccessPolicy() {
+    public Optional<String> resourceAccessPolicy() {
         return Optional.ofNullable(this.resourceAccessPolicy);
     }
-    public List<Object> getResourceAccessRoles() {
+    public List<Object> resourceAccessRoles() {
         return this.resourceAccessRoles == null ? List.of() : this.resourceAccessRoles;
     }
-    public List<String> getSchemaOwners() {
+    public List<String> schemaOwners() {
         return this.schemaOwners == null ? List.of() : this.schemaOwners;
     }
-    public List<ServiceTreeInfoResponse> getServiceTreeInfos() {
+    public List<ServiceTreeInfoResponse> serviceTreeInfos() {
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;
     }
 

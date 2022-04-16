@@ -24,7 +24,7 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
     @Import(name="attributes", required=true)
       private final RestHealthCheckStepAttributesResponse attributes;
 
-    public RestHealthCheckStepAttributesResponse getAttributes() {
+    public RestHealthCheckStepAttributesResponse attributes() {
         return this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
     @Import(name="stepType", required=true)
       private final String stepType;
 
-    public String getStepType() {
+    public String stepType() {
         return this.stepType;
     }
 

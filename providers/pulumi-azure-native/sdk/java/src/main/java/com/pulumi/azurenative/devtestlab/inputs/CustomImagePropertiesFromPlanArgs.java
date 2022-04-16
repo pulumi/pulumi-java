@@ -26,7 +26,7 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -37,7 +37,7 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
     @Import(name="offer")
       private final @Nullable Output<String> offer;
 
-    public Output<String> getOffer() {
+    public Output<String> offer() {
         return this.offer == null ? Codegen.empty() : this.offer;
     }
 
@@ -48,7 +48,7 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 

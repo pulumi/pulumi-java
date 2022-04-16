@@ -26,7 +26,7 @@ public final class ConfigurationServiceGitPropertyResponse {
      * Repositories of Application Configuration Service git property.
      * 
     */
-    public List<ConfigurationServiceGitRepositoryResponse> getRepositories() {
+    public List<ConfigurationServiceGitRepositoryResponse> repositories() {
         return this.repositories == null ? List.of() : this.repositories;
     }
 

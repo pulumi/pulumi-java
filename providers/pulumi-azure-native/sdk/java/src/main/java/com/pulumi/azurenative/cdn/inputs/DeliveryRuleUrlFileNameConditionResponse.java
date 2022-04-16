@@ -25,7 +25,7 @@ public final class DeliveryRuleUrlFileNameConditionResponse extends com.pulumi.r
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DeliveryRuleUrlFileNameConditionResponse extends com.pulumi.r
     @Import(name="parameters", required=true)
       private final UrlFileNameMatchConditionParametersResponse parameters;
 
-    public UrlFileNameMatchConditionParametersResponse getParameters() {
+    public UrlFileNameMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

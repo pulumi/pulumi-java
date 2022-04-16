@@ -25,7 +25,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationName")
       private final @Nullable String applicationName;
 
-    public Optional<String> getApplicationName() {
+    public Optional<String> applicationName() {
         return this.applicationName == null ? Optional.empty() : Optional.ofNullable(this.applicationName);
     }
 
@@ -36,7 +36,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceUri")
       private final @Nullable String instanceUri;
 
-    public Optional<String> getInstanceUri() {
+    public Optional<String> instanceUri() {
         return this.instanceUri == null ? Optional.empty() : Optional.ofNullable(this.instanceUri);
     }
 
@@ -47,7 +47,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="providerId")
       private final @Nullable String providerId;
 
-    public Optional<String> getProviderId() {
+    public Optional<String> providerId() {
         return this.providerId == null ? Optional.empty() : Optional.ofNullable(this.providerId);
     }
 
@@ -58,7 +58,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="providerSku")
       private final @Nullable String providerSku;
 
-    public Optional<String> getProviderSku() {
+    public Optional<String> providerSku() {
         return this.providerSku == null ? Optional.empty() : Optional.ofNullable(this.providerSku);
     }
 
@@ -69,7 +69,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -80,7 +80,7 @@ public final class ProviderResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceUsageId")
       private final @Nullable String resourceUsageId;
 
-    public Optional<String> getResourceUsageId() {
+    public Optional<String> resourceUsageId() {
         return this.resourceUsageId == null ? Optional.empty() : Optional.ofNullable(this.resourceUsageId);
     }
 

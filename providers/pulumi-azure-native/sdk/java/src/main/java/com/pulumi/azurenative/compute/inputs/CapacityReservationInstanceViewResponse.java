@@ -27,7 +27,7 @@ public final class CapacityReservationInstanceViewResponse extends com.pulumi.re
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 
@@ -38,7 +38,7 @@ public final class CapacityReservationInstanceViewResponse extends com.pulumi.re
     @Import(name="utilizationInfo")
       private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
-    public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {
+    public Optional<CapacityReservationUtilizationResponse> utilizationInfo() {
         return this.utilizationInfo == null ? Optional.empty() : Optional.ofNullable(this.utilizationInfo);
     }
 

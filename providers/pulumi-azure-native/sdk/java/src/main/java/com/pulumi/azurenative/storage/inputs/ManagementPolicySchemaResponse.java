@@ -24,7 +24,7 @@ public final class ManagementPolicySchemaResponse extends com.pulumi.resources.I
     @Import(name="rules", required=true)
       private final List<ManagementPolicyRuleResponse> rules;
 
-    public List<ManagementPolicyRuleResponse> getRules() {
+    public List<ManagementPolicyRuleResponse> rules() {
         return this.rules;
     }
 

@@ -29,7 +29,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="fabricSpecificSettings")
       private final @Nullable Object fabricSpecificSettings;
 
-    public Object getFabricSpecificSettings() {
+    public Object fabricSpecificSettings() {
         return this.fabricSpecificSettings == null ? null : this.fabricSpecificSettings;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
 
-    public Optional<String> getPrimaryFabricFriendlyName() {
+    public Optional<String> primaryFabricFriendlyName() {
         return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
@@ -51,7 +51,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="primaryNetworkFriendlyName")
       private final @Nullable String primaryNetworkFriendlyName;
 
-    public Optional<String> getPrimaryNetworkFriendlyName() {
+    public Optional<String> primaryNetworkFriendlyName() {
         return this.primaryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
 
@@ -62,7 +62,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="primaryNetworkId")
       private final @Nullable String primaryNetworkId;
 
-    public Optional<String> getPrimaryNetworkId() {
+    public Optional<String> primaryNetworkId() {
         return this.primaryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.primaryNetworkId);
     }
 
@@ -73,7 +73,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryFabricArmId")
       private final @Nullable String recoveryFabricArmId;
 
-    public Optional<String> getRecoveryFabricArmId() {
+    public Optional<String> recoveryFabricArmId() {
         return this.recoveryFabricArmId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricArmId);
     }
 
@@ -84,7 +84,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
 
-    public Optional<String> getRecoveryFabricFriendlyName() {
+    public Optional<String> recoveryFabricFriendlyName() {
         return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
@@ -95,7 +95,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryNetworkFriendlyName")
       private final @Nullable String recoveryNetworkFriendlyName;
 
-    public Optional<String> getRecoveryNetworkFriendlyName() {
+    public Optional<String> recoveryNetworkFriendlyName() {
         return this.recoveryNetworkFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
 
@@ -106,7 +106,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="recoveryNetworkId")
       private final @Nullable String recoveryNetworkId;
 
-    public Optional<String> getRecoveryNetworkId() {
+    public Optional<String> recoveryNetworkId() {
         return this.recoveryNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkId);
     }
 
@@ -117,7 +117,7 @@ public final class NetworkMappingPropertiesResponse extends com.pulumi.resources
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

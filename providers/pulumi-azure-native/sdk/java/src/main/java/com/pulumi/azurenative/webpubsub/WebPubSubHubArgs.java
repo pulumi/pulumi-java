@@ -23,7 +23,7 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName")
       private final @Nullable Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName == null ? Codegen.empty() : this.hubName;
     }
 
@@ -34,7 +34,7 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<WebPubSubHubPropertiesArgs> properties;
 
-    public Output<WebPubSubHubPropertiesArgs> getProperties() {
+    public Output<WebPubSubHubPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -45,7 +45,7 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 

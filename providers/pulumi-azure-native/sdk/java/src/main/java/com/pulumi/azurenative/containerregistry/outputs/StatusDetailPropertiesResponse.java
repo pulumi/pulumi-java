@@ -53,35 +53,35 @@ public final class StatusDetailPropertiesResponse {
      * The code of the status.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * The correlation ID of the status.
      * 
     */
-    public String getCorrelationId() {
+    public String correlationId() {
         return this.correlationId;
     }
     /**
      * The description of the status.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The timestamp of the status.
      * 
     */
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
     /**
      * The component of the connected registry corresponding to the status.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

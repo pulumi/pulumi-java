@@ -125,105 +125,105 @@ public final class SynchronizationDetailsResponse {
      * Id of data set
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * Type of the data set
      * 
     */
-    public String getDataSetType() {
+    public String dataSetType() {
         return this.dataSetType;
     }
     /**
      * Duration of data set level copy
      * 
     */
-    public Integer getDurationMs() {
+    public Integer durationMs() {
         return this.durationMs;
     }
     /**
      * End time of data set level copy
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The number of files read from the source data set
      * 
     */
-    public Double getFilesRead() {
+    public Double filesRead() {
         return this.filesRead;
     }
     /**
      * The number of files written into the sink data set
      * 
     */
-    public Double getFilesWritten() {
+    public Double filesWritten() {
         return this.filesWritten;
     }
     /**
      * Error message if any
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Name of the data set
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The number of files copied into the sink data set
      * 
     */
-    public Double getRowsCopied() {
+    public Double rowsCopied() {
         return this.rowsCopied;
     }
     /**
      * The number of rows read from the source data set.
      * 
     */
-    public Double getRowsRead() {
+    public Double rowsRead() {
         return this.rowsRead;
     }
     /**
      * The size of the data read from the source data set in bytes
      * 
     */
-    public Double getSizeRead() {
+    public Double sizeRead() {
         return this.sizeRead;
     }
     /**
      * The size of the data written into the sink data set in bytes
      * 
     */
-    public Double getSizeWritten() {
+    public Double sizeWritten() {
         return this.sizeWritten;
     }
     /**
      * Start time of data set level copy
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Raw Status
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The vCore units consumed for the data set synchronization
      * 
     */
-    public Double getVCore() {
+    public Double vCore() {
         return this.vCore;
     }
 

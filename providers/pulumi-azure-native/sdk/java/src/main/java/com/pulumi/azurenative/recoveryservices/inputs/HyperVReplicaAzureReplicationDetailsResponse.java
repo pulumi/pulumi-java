@@ -32,7 +32,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="azureVmDiskDetails")
       private final @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
 
-    public List<AzureVmDiskDetailsResponse> getAzureVmDiskDetails() {
+    public List<AzureVmDiskDetailsResponse> azureVmDiskDetails() {
         return this.azureVmDiskDetails == null ? List.of() : this.azureVmDiskDetails;
     }
 
@@ -43,7 +43,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="enableRdpOnTargetOption")
       private final @Nullable String enableRdpOnTargetOption;
 
-    public Optional<String> getEnableRdpOnTargetOption() {
+    public Optional<String> enableRdpOnTargetOption() {
         return this.enableRdpOnTargetOption == null ? Optional.empty() : Optional.ofNullable(this.enableRdpOnTargetOption);
     }
 
@@ -54,7 +54,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="encryption")
       private final @Nullable String encryption;
 
-    public Optional<String> getEncryption() {
+    public Optional<String> encryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
@@ -65,7 +65,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="initialReplicationDetails")
       private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
-    public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
+    public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
     }
 
@@ -77,7 +77,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -88,7 +88,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="lastReplicatedTime")
       private final @Nullable String lastReplicatedTime;
 
-    public Optional<String> getLastReplicatedTime() {
+    public Optional<String> lastReplicatedTime() {
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
     }
 
@@ -99,7 +99,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
 
-    public Optional<String> getLastRpoCalculatedTime() {
+    public Optional<String> lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
@@ -110,7 +110,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="licenseType")
       private final @Nullable String licenseType;
 
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
@@ -121,7 +121,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="oSDetails")
       private final @Nullable OSDetailsResponse oSDetails;
 
-    public Optional<OSDetailsResponse> getOSDetails() {
+    public Optional<OSDetailsResponse> oSDetails() {
         return this.oSDetails == null ? Optional.empty() : Optional.ofNullable(this.oSDetails);
     }
 
@@ -132,7 +132,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAvailabilitySetId")
       private final @Nullable String recoveryAvailabilitySetId;
 
-    public Optional<String> getRecoveryAvailabilitySetId() {
+    public Optional<String> recoveryAvailabilitySetId() {
         return this.recoveryAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
 
@@ -143,7 +143,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureLogStorageAccountId")
       private final @Nullable String recoveryAzureLogStorageAccountId;
 
-    public Optional<String> getRecoveryAzureLogStorageAccountId() {
+    public Optional<String> recoveryAzureLogStorageAccountId() {
         return this.recoveryAzureLogStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
 
@@ -154,7 +154,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureResourceGroupId")
       private final @Nullable String recoveryAzureResourceGroupId;
 
-    public Optional<String> getRecoveryAzureResourceGroupId() {
+    public Optional<String> recoveryAzureResourceGroupId() {
         return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
@@ -165,7 +165,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureStorageAccount")
       private final @Nullable String recoveryAzureStorageAccount;
 
-    public Optional<String> getRecoveryAzureStorageAccount() {
+    public Optional<String> recoveryAzureStorageAccount() {
         return this.recoveryAzureStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
 
@@ -176,7 +176,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureVMSize")
       private final @Nullable String recoveryAzureVMSize;
 
-    public Optional<String> getRecoveryAzureVMSize() {
+    public Optional<String> recoveryAzureVMSize() {
         return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
@@ -187,7 +187,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="recoveryAzureVmName")
       private final @Nullable String recoveryAzureVmName;
 
-    public Optional<String> getRecoveryAzureVmName() {
+    public Optional<String> recoveryAzureVmName() {
         return this.recoveryAzureVmName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVmName);
     }
 
@@ -198,7 +198,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
 
-    public Optional<Double> getRpoInSeconds() {
+    public Optional<Double> rpoInSeconds() {
         return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
     }
 
@@ -209,7 +209,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="selectedRecoveryAzureNetworkId")
       private final @Nullable String selectedRecoveryAzureNetworkId;
 
-    public Optional<String> getSelectedRecoveryAzureNetworkId() {
+    public Optional<String> selectedRecoveryAzureNetworkId() {
         return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
@@ -220,7 +220,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="selectedSourceNicId")
       private final @Nullable String selectedSourceNicId;
 
-    public Optional<String> getSelectedSourceNicId() {
+    public Optional<String> selectedSourceNicId() {
         return this.selectedSourceNicId == null ? Optional.empty() : Optional.ofNullable(this.selectedSourceNicId);
     }
 
@@ -231,7 +231,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="sourceVmCpuCount")
       private final @Nullable Integer sourceVmCpuCount;
 
-    public Optional<Integer> getSourceVmCpuCount() {
+    public Optional<Integer> sourceVmCpuCount() {
         return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
     }
 
@@ -242,7 +242,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="sourceVmRamSizeInMB")
       private final @Nullable Integer sourceVmRamSizeInMB;
 
-    public Optional<Integer> getSourceVmRamSizeInMB() {
+    public Optional<Integer> sourceVmRamSizeInMB() {
         return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
 
@@ -253,7 +253,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="targetAvailabilityZone")
       private final @Nullable String targetAvailabilityZone;
 
-    public Optional<String> getTargetAvailabilityZone() {
+    public Optional<String> targetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
     }
 
@@ -264,7 +264,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="targetProximityPlacementGroupId")
       private final @Nullable String targetProximityPlacementGroupId;
 
-    public Optional<String> getTargetProximityPlacementGroupId() {
+    public Optional<String> targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
 
@@ -275,7 +275,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="useManagedDisks")
       private final @Nullable String useManagedDisks;
 
-    public Optional<String> getUseManagedDisks() {
+    public Optional<String> useManagedDisks() {
         return this.useManagedDisks == null ? Optional.empty() : Optional.ofNullable(this.useManagedDisks);
     }
 
@@ -286,7 +286,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmId")
       private final @Nullable String vmId;
 
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
     }
 
@@ -297,7 +297,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> getVmNics() {
+    public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
@@ -308,7 +308,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
 
-    public Optional<String> getVmProtectionState() {
+    public Optional<String> vmProtectionState() {
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
     }
 
@@ -319,7 +319,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
     @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;
 
-    public Optional<String> getVmProtectionStateDescription() {
+    public Optional<String> vmProtectionStateDescription() {
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
     }
 

@@ -25,7 +25,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
     @Import(name="encryptionKeyReference")
       private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
-    public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> getEncryptionKeyReference() {
+    public Optional<IntegrationServiceEnvironmenEncryptionKeyReferenceResponse> encryptionKeyReference() {
         return this.encryptionKeyReference == null ? Optional.empty() : Optional.ofNullable(this.encryptionKeyReference);
     }
 

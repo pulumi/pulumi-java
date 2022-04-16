@@ -35,14 +35,14 @@ public final class UserIdentityResponse {
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
      * 
     */
-    public Optional<AutoUserSpecificationResponse> getAutoUser() {
+    public Optional<AutoUserSpecificationResponse> autoUser() {
         return Optional.ofNullable(this.autoUser);
     }
     /**
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
      * 
     */
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
 

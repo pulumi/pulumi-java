@@ -29,7 +29,7 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="deleteAfter", required=true)
       private final Output<AbsoluteDeleteOptionArgs> deleteAfter;
 
-    public Output<AbsoluteDeleteOptionArgs> getDeleteAfter() {
+    public Output<AbsoluteDeleteOptionArgs> deleteAfter() {
         return this.deleteAfter;
     }
 
@@ -40,14 +40,14 @@ public final class SourceLifeCycleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceDataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> sourceDataStore;
 
-    public Output<DataStoreInfoBaseArgs> getSourceDataStore() {
+    public Output<DataStoreInfoBaseArgs> sourceDataStore() {
         return this.sourceDataStore;
     }
 
     @Import(name="targetDataStoreCopySettings")
       private final @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
-    public Output<List<TargetCopySettingArgs>> getTargetDataStoreCopySettings() {
+    public Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings() {
         return this.targetDataStoreCopySettings == null ? Codegen.empty() : this.targetDataStoreCopySettings;
     }
 

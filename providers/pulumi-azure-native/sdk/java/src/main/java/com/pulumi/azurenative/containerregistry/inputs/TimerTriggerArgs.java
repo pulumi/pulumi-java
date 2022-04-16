@@ -28,7 +28,7 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -39,7 +39,7 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 
@@ -50,7 +50,7 @@ public final class TimerTriggerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
-    public Output<Either<String,TriggerStatus>> getStatus() {
+    public Output<Either<String,TriggerStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

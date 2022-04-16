@@ -24,7 +24,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="connectionStatus", required=true)
       private final String connectionStatus;
 
-    public String getConnectionStatus() {
+    public String connectionStatus() {
         return this.connectionStatus;
     }
 
@@ -35,7 +35,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="egressBytesTransferred", required=true)
       private final Double egressBytesTransferred;
 
-    public Double getEgressBytesTransferred() {
+    public Double egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
 
@@ -46,7 +46,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="ingressBytesTransferred", required=true)
       private final Double ingressBytesTransferred;
 
-    public Double getIngressBytesTransferred() {
+    public Double ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
 
@@ -57,7 +57,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="lastConnectionEstablishedUtcTime", required=true)
       private final String lastConnectionEstablishedUtcTime;
 
-    public String getLastConnectionEstablishedUtcTime() {
+    public String lastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
     }
 
@@ -68,7 +68,7 @@ public final class TunnelConnectionHealthResponse extends com.pulumi.resources.I
     @Import(name="tunnel", required=true)
       private final String tunnel;
 
-    public String getTunnel() {
+    public String tunnel() {
         return this.tunnel;
     }
 

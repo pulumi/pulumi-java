@@ -28,7 +28,7 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -39,7 +39,7 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -50,7 +50,7 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serviceUri")
       private final @Nullable Output<String> serviceUri;
 
-    public Output<String> getServiceUri() {
+    public Output<String> serviceUri() {
         return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
     }
 

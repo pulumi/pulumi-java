@@ -23,7 +23,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
     @Import(name="interactionPropertyName", required=true)
       private final String interactionPropertyName;
 
-    public String getInteractionPropertyName() {
+    public String interactionPropertyName() {
         return this.interactionPropertyName;
     }
 
@@ -34,7 +34,7 @@ public final class ParticipantProfilePropertyReferenceResponse extends com.pulum
     @Import(name="profilePropertyName", required=true)
       private final String profilePropertyName;
 
-    public String getProfilePropertyName() {
+    public String profilePropertyName() {
         return this.profilePropertyName;
     }
 

@@ -27,7 +27,7 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
     @Import(name="distributions")
       private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
 
-    public List<PredictionDistributionDefinitionResponseDistributions> getDistributions() {
+    public List<PredictionDistributionDefinitionResponseDistributions> distributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
 
@@ -38,7 +38,7 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
     @Import(name="totalNegatives")
       private final @Nullable Double totalNegatives;
 
-    public Optional<Double> getTotalNegatives() {
+    public Optional<Double> totalNegatives() {
         return this.totalNegatives == null ? Optional.empty() : Optional.ofNullable(this.totalNegatives);
     }
 
@@ -49,7 +49,7 @@ public final class PredictionDistributionDefinitionResponse extends com.pulumi.r
     @Import(name="totalPositives")
       private final @Nullable Double totalPositives;
 
-    public Optional<Double> getTotalPositives() {
+    public Optional<Double> totalPositives() {
         return this.totalPositives == null ? Optional.empty() : Optional.ofNullable(this.totalPositives);
     }
 

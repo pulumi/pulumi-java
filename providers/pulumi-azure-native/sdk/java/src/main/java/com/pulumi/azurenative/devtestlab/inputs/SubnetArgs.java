@@ -28,7 +28,7 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowPublicIp")
       private final @Nullable Output<Either<String,UsagePermissionType>> allowPublicIp;
 
-    public Output<Either<String,UsagePermissionType>> getAllowPublicIp() {
+    public Output<Either<String,UsagePermissionType>> allowPublicIp() {
         return this.allowPublicIp == null ? Codegen.empty() : this.allowPublicIp;
     }
 
@@ -39,7 +39,7 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
-    public Output<String> getLabSubnetName() {
+    public Output<String> labSubnetName() {
         return this.labSubnetName == null ? Codegen.empty() : this.labSubnetName;
     }
 
@@ -50,7 +50,7 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

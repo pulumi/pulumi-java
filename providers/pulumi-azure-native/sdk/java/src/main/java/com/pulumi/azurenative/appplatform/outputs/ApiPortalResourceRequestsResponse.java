@@ -32,14 +32,14 @@ public final class ApiPortalResourceRequestsResponse {
      * Cpu allocated to each API portal instance
      * 
     */
-    public String getCpu() {
+    public String cpu() {
         return this.cpu;
     }
     /**
      * Memory allocated to each API portal instance
      * 
     */
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

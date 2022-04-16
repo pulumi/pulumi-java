@@ -23,7 +23,7 @@ public final class PublicIpReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="sourceArmResourceId", required=true)
       private final String sourceArmResourceId;
 
-    public String getSourceArmResourceId() {
+    public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 

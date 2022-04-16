@@ -26,7 +26,7 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="identityClientId")
       private final @Nullable Output<String> identityClientId;
 
-    public Output<String> getIdentityClientId() {
+    public Output<String> identityClientId() {
         return this.identityClientId == null ? Codegen.empty() : this.identityClientId;
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
+    public Output<String> keyIdentifier() {
         return this.keyIdentifier == null ? Codegen.empty() : this.keyIdentifier;
     }
 

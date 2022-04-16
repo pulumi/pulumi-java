@@ -32,7 +32,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="datasetConfiguration", required=true)
       private final Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
-    public Output<LabelingDatasetConfigurationArgs> getDatasetConfiguration() {
+    public Output<LabelingDatasetConfigurationArgs> datasetConfiguration() {
         return this.datasetConfiguration;
     }
 
@@ -43,7 +43,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="jobInstructions", required=true)
       private final Output<LabelingJobInstructionsArgs> jobInstructions;
 
-    public Output<LabelingJobInstructionsArgs> getJobInstructions() {
+    public Output<LabelingJobInstructionsArgs> jobInstructions() {
         return this.jobInstructions;
     }
 
@@ -54,7 +54,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="labelCategories", required=true)
       private final Output<Map<String,LabelCategoryArgs>> labelCategories;
 
-    public Output<Map<String,LabelCategoryArgs>> getLabelCategories() {
+    public Output<Map<String,LabelCategoryArgs>> labelCategories() {
         return this.labelCategories;
     }
 
@@ -65,7 +65,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="labelingJobMediaProperties", required=true)
       private final Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
-    public Output<LabelingJobImagePropertiesArgs> getLabelingJobMediaProperties() {
+    public Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
     }
 
@@ -76,7 +76,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="mlAssistConfiguration")
       private final @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
 
-    public Output<MLAssistConfigurationArgs> getMlAssistConfiguration() {
+    public Output<MLAssistConfigurationArgs> mlAssistConfiguration() {
         return this.mlAssistConfiguration == null ? Codegen.empty() : this.mlAssistConfiguration;
     }
 
@@ -87,7 +87,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -98,7 +98,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

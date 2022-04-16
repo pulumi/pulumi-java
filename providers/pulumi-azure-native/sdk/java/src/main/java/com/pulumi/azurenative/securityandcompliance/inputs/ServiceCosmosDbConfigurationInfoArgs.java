@@ -27,7 +27,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
     @Import(name="keyVaultKeyUri")
       private final @Nullable Output<String> keyVaultKeyUri;
 
-    public Output<String> getKeyVaultKeyUri() {
+    public Output<String> keyVaultKeyUri() {
         return this.keyVaultKeyUri == null ? Codegen.empty() : this.keyVaultKeyUri;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends com.pulumi.resou
     @Import(name="offerThroughput")
       private final @Nullable Output<Double> offerThroughput;
 
-    public Output<Double> getOfferThroughput() {
+    public Output<Double> offerThroughput() {
         return this.offerThroughput == null ? Codegen.empty() : this.offerThroughput;
     }
 

@@ -28,7 +28,7 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<Either<String,MsiIdentityType>> type;
 
-    public Output<Either<String,MsiIdentityType>> getType() {
+    public Output<Either<String,MsiIdentityType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

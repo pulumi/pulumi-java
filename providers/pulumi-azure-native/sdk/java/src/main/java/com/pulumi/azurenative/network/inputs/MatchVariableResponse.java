@@ -25,7 +25,7 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="selector")
       private final @Nullable String selector;
 
-    public Optional<String> getSelector() {
+    public Optional<String> selector() {
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
@@ -36,7 +36,7 @@ public final class MatchVariableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="variableName", required=true)
       private final String variableName;
 
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
 

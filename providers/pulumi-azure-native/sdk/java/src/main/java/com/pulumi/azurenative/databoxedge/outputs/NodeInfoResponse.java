@@ -42,21 +42,21 @@ public final class NodeInfoResponse {
      * IP Configuration of the Kubernetes node.
      * 
     */
-    public List<KubernetesIPConfigurationResponse> getIpConfiguration() {
+    public List<KubernetesIPConfigurationResponse> ipConfiguration() {
         return this.ipConfiguration == null ? List.of() : this.ipConfiguration;
     }
     /**
      * Node name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Node type - Master/Worker
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

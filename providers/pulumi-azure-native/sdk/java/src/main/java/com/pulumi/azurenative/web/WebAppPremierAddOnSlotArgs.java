@@ -23,7 +23,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,7 +45,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="marketplaceOffer")
       private final @Nullable Output<String> marketplaceOffer;
 
-    public Output<String> getMarketplaceOffer() {
+    public Output<String> marketplaceOffer() {
         return this.marketplaceOffer == null ? Codegen.empty() : this.marketplaceOffer;
     }
 
@@ -56,7 +56,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="marketplacePublisher")
       private final @Nullable Output<String> marketplacePublisher;
 
-    public Output<String> getMarketplacePublisher() {
+    public Output<String> marketplacePublisher() {
         return this.marketplacePublisher == null ? Codegen.empty() : this.marketplacePublisher;
     }
 
@@ -67,7 +67,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -78,7 +78,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="premierAddOnName")
       private final @Nullable Output<String> premierAddOnName;
 
-    public Output<String> getPremierAddOnName() {
+    public Output<String> premierAddOnName() {
         return this.premierAddOnName == null ? Codegen.empty() : this.premierAddOnName;
     }
 
@@ -89,7 +89,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="product")
       private final @Nullable Output<String> product;
 
-    public Output<String> getProduct() {
+    public Output<String> product() {
         return this.product == null ? Codegen.empty() : this.product;
     }
 
@@ -100,7 +100,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,7 +111,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
+    public Output<String> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -122,7 +122,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -133,7 +133,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -144,7 +144,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
-    public Output<String> getVendor() {
+    public Output<String> vendor() {
         return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 

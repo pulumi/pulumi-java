@@ -25,7 +25,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
     @Import(name="imageVersionId", required=true)
       private final Output<String> imageVersionId;
 
-    public Output<String> getImageVersionId() {
+    public Output<String> imageVersionId() {
         return this.imageVersionId;
     }
 
@@ -37,7 +37,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends com.pulumi.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

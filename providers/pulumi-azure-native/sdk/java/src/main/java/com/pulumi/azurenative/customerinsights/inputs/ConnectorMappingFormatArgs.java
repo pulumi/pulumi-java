@@ -27,7 +27,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="arraySeparator")
       private final @Nullable Output<String> arraySeparator;
 
-    public Output<String> getArraySeparator() {
+    public Output<String> arraySeparator() {
         return this.arraySeparator == null ? Codegen.empty() : this.arraySeparator;
     }
 
@@ -49,7 +49,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="columnDelimiter")
       private final @Nullable Output<String> columnDelimiter;
 
-    public Output<String> getColumnDelimiter() {
+    public Output<String> columnDelimiter() {
         return this.columnDelimiter == null ? Codegen.empty() : this.columnDelimiter;
     }
 
@@ -60,7 +60,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="formatType", required=true)
       private final Output<FormatTypes> formatType;
 
-    public Output<FormatTypes> getFormatType() {
+    public Output<FormatTypes> formatType() {
         return this.formatType;
     }
 
@@ -71,7 +71,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="quoteCharacter")
       private final @Nullable Output<String> quoteCharacter;
 
-    public Output<String> getQuoteCharacter() {
+    public Output<String> quoteCharacter() {
         return this.quoteCharacter == null ? Codegen.empty() : this.quoteCharacter;
     }
 
@@ -82,7 +82,7 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="quoteEscapeCharacter")
       private final @Nullable Output<String> quoteEscapeCharacter;
 
-    public Output<String> getQuoteEscapeCharacter() {
+    public Output<String> quoteEscapeCharacter() {
         return this.quoteEscapeCharacter == null ? Codegen.empty() : this.quoteEscapeCharacter;
     }
 

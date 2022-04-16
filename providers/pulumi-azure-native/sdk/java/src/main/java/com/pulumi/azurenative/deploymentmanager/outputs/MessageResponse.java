@@ -32,14 +32,14 @@ public final class MessageResponse {
      * The actual message text.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Time in UTC this message was provided.
      * 
     */
-    public String getTimeStamp() {
+    public String timeStamp() {
         return this.timeStamp;
     }
 

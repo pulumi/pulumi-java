@@ -28,7 +28,7 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
     @Import(name="accessControl")
       private final @Nullable LiveEventPreviewAccessControlResponse accessControl;
 
-    public Optional<LiveEventPreviewAccessControlResponse> getAccessControl() {
+    public Optional<LiveEventPreviewAccessControlResponse> accessControl() {
         return this.accessControl == null ? Optional.empty() : Optional.ofNullable(this.accessControl);
     }
 
@@ -39,7 +39,7 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
     @Import(name="alternativeMediaId")
       private final @Nullable String alternativeMediaId;
 
-    public Optional<String> getAlternativeMediaId() {
+    public Optional<String> alternativeMediaId() {
         return this.alternativeMediaId == null ? Optional.empty() : Optional.ofNullable(this.alternativeMediaId);
     }
 
@@ -50,7 +50,7 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
     @Import(name="endpoints")
       private final @Nullable List<LiveEventEndpointResponse> endpoints;
 
-    public List<LiveEventEndpointResponse> getEndpoints() {
+    public List<LiveEventEndpointResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
@@ -61,7 +61,7 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
     @Import(name="previewLocator")
       private final @Nullable String previewLocator;
 
-    public Optional<String> getPreviewLocator() {
+    public Optional<String> previewLocator() {
         return this.previewLocator == null ? Optional.empty() : Optional.ofNullable(this.previewLocator);
     }
 
@@ -72,7 +72,7 @@ public final class LiveEventPreviewResponse extends com.pulumi.resources.InvokeA
     @Import(name="streamingPolicyName")
       private final @Nullable String streamingPolicyName;
 
-    public Optional<String> getStreamingPolicyName() {
+    public Optional<String> streamingPolicyName() {
         return this.streamingPolicyName == null ? Optional.empty() : Optional.ofNullable(this.streamingPolicyName);
     }
 

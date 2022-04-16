@@ -26,7 +26,7 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
     @Import(name="certificateType", required=true)
       private final String certificateType;
 
-    public String getCertificateType() {
+    public String certificateType() {
         return this.certificateType;
     }
 
@@ -37,7 +37,7 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
     @Import(name="minimumTlsVersion")
       private final @Nullable String minimumTlsVersion;
 
-    public Optional<String> getMinimumTlsVersion() {
+    public Optional<String> minimumTlsVersion() {
         return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
     }
 
@@ -48,7 +48,7 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
     @Import(name="secret")
       private final @Nullable ResourceReferenceResponse secret;
 
-    public Optional<ResourceReferenceResponse> getSecret() {
+    public Optional<ResourceReferenceResponse> secret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
     }
 

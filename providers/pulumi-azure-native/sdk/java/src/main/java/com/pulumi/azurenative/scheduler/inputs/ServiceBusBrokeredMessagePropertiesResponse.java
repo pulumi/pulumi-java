@@ -22,7 +22,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -33,7 +33,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="correlationId")
       private final @Nullable String correlationId;
 
-    public Optional<String> getCorrelationId() {
+    public Optional<String> correlationId() {
         return this.correlationId == null ? Optional.empty() : Optional.ofNullable(this.correlationId);
     }
 
@@ -44,7 +44,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="forcePersistence")
       private final @Nullable Boolean forcePersistence;
 
-    public Optional<Boolean> getForcePersistence() {
+    public Optional<Boolean> forcePersistence() {
         return this.forcePersistence == null ? Optional.empty() : Optional.ofNullable(this.forcePersistence);
     }
 
@@ -55,7 +55,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="label")
       private final @Nullable String label;
 
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
@@ -66,7 +66,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="messageId")
       private final @Nullable String messageId;
 
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
@@ -77,7 +77,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
-    public Optional<String> getPartitionKey() {
+    public Optional<String> partitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
@@ -88,7 +88,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="replyTo")
       private final @Nullable String replyTo;
 
-    public Optional<String> getReplyTo() {
+    public Optional<String> replyTo() {
         return this.replyTo == null ? Optional.empty() : Optional.ofNullable(this.replyTo);
     }
 
@@ -99,7 +99,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="replyToSessionId")
       private final @Nullable String replyToSessionId;
 
-    public Optional<String> getReplyToSessionId() {
+    public Optional<String> replyToSessionId() {
         return this.replyToSessionId == null ? Optional.empty() : Optional.ofNullable(this.replyToSessionId);
     }
 
@@ -110,7 +110,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="scheduledEnqueueTimeUtc")
       private final @Nullable String scheduledEnqueueTimeUtc;
 
-    public Optional<String> getScheduledEnqueueTimeUtc() {
+    public Optional<String> scheduledEnqueueTimeUtc() {
         return this.scheduledEnqueueTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.scheduledEnqueueTimeUtc);
     }
 
@@ -121,7 +121,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="sessionId")
       private final @Nullable String sessionId;
 
-    public Optional<String> getSessionId() {
+    public Optional<String> sessionId() {
         return this.sessionId == null ? Optional.empty() : Optional.ofNullable(this.sessionId);
     }
 
@@ -132,7 +132,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="timeToLive")
       private final @Nullable String timeToLive;
 
-    public Optional<String> getTimeToLive() {
+    public Optional<String> timeToLive() {
         return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
     }
 
@@ -143,7 +143,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="to")
       private final @Nullable String to;
 
-    public Optional<String> getTo() {
+    public Optional<String> to() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
     }
 
@@ -154,7 +154,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
     @Import(name="viaPartitionKey")
       private final @Nullable String viaPartitionKey;
 
-    public Optional<String> getViaPartitionKey() {
+    public Optional<String> viaPartitionKey() {
         return this.viaPartitionKey == null ? Optional.empty() : Optional.ofNullable(this.viaPartitionKey);
     }
 

@@ -35,14 +35,14 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
      * Expected value is 'CacheKeyQueryString'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
     */
-    public CacheKeyQueryStringActionParametersResponse getParameters() {
+    public CacheKeyQueryStringActionParametersResponse parameters() {
         return this.parameters;
     }
 

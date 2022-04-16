@@ -25,7 +25,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse extends com.pulumi.
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -36,7 +36,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse extends com.pulumi.
     @Import(name="itemId")
       private final @Nullable String itemId;
 
-    public Optional<String> getItemId() {
+    public Optional<String> itemId() {
         return this.itemId == null ? Optional.empty() : Optional.ofNullable(this.itemId);
     }
 
@@ -47,7 +47,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse extends com.pulumi.
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -59,7 +59,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse extends com.pulumi.
     @Import(name="protectionIntentItemType", required=true)
       private final String protectionIntentItemType;
 
-    public String getProtectionIntentItemType() {
+    public String protectionIntentItemType() {
         return this.protectionIntentItemType;
     }
 
@@ -70,7 +70,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse extends com.pulumi.
     @Import(name="protectionState")
       private final @Nullable String protectionState;
 
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
@@ -81,7 +81,7 @@ public final class AzureWorkloadAutoProtectionIntentResponse extends com.pulumi.
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 

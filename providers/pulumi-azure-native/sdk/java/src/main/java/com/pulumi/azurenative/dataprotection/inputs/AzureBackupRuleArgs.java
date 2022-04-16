@@ -31,7 +31,7 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="backupParameters")
       private final @Nullable Output<AzureBackupParamsArgs> backupParameters;
 
-    public Output<AzureBackupParamsArgs> getBackupParameters() {
+    public Output<AzureBackupParamsArgs> backupParameters() {
         return this.backupParameters == null ? Codegen.empty() : this.backupParameters;
     }
 
@@ -42,14 +42,14 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> dataStore;
 
-    public Output<DataStoreInfoBaseArgs> getDataStore() {
+    public Output<DataStoreInfoBaseArgs> dataStore() {
         return this.dataStore;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType;
     }
 
@@ -71,7 +71,7 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="trigger", required=true)
       private final Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 
-    public Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> getTrigger() {
+    public Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger() {
         return this.trigger;
     }
 

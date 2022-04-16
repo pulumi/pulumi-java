@@ -23,7 +23,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="lastKnownPowerState", required=true)
       private final String lastKnownPowerState;
 
-    public String getLastKnownPowerState() {
+    public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
 
-    public String getRdpAuthority() {
+    public String rdpAuthority() {
         return this.rdpAuthority;
     }
 
@@ -67,7 +67,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
 
-    public String getSshAuthority() {
+    public String sshAuthority() {
         return this.sshAuthority;
     }
 
@@ -78,7 +78,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

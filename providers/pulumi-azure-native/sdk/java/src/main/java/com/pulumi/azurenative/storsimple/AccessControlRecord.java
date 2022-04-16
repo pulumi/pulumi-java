@@ -43,7 +43,7 @@ public class AccessControlRecord extends com.pulumi.resources.CustomResource {
      * @return The iSCSI initiator name (IQN).
      * 
      */
-    public Output<String> getInitiatorName() {
+    public Output<String> initiatorName() {
         return this.initiatorName;
     }
     /**
@@ -57,7 +57,7 @@ public class AccessControlRecord extends com.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +71,7 @@ public class AccessControlRecord extends com.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class AccessControlRecord extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -99,7 +99,7 @@ public class AccessControlRecord extends com.pulumi.resources.CustomResource {
      * @return The number of volumes using the access control record.
      * 
      */
-    public Output<Integer> getVolumeCount() {
+    public Output<Integer> volumeCount() {
         return this.volumeCount;
     }
 

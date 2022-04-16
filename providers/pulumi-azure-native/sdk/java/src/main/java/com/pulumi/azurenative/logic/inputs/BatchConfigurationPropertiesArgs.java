@@ -28,7 +28,7 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="batchGroupName", required=true)
       private final Output<String> batchGroupName;
 
-    public Output<String> getBatchGroupName() {
+    public Output<String> batchGroupName() {
         return this.batchGroupName;
     }
 
@@ -39,7 +39,7 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime == null ? Codegen.empty() : this.changedTime;
     }
 
@@ -50,14 +50,14 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -68,7 +68,7 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="releaseCriteria", required=true)
       private final Output<BatchReleaseCriteriaArgs> releaseCriteria;
 
-    public Output<BatchReleaseCriteriaArgs> getReleaseCriteria() {
+    public Output<BatchReleaseCriteriaArgs> releaseCriteria() {
         return this.releaseCriteria;
     }
 

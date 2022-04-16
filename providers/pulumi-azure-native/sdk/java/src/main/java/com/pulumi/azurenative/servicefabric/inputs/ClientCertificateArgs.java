@@ -27,7 +27,7 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
@@ -38,7 +38,7 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="isAdmin", required=true)
       private final Output<Boolean> isAdmin;
 
-    public Output<Boolean> getIsAdmin() {
+    public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
 
@@ -49,7 +49,7 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="issuerThumbprint")
       private final @Nullable Output<String> issuerThumbprint;
 
-    public Output<String> getIssuerThumbprint() {
+    public Output<String> issuerThumbprint() {
         return this.issuerThumbprint == null ? Codegen.empty() : this.issuerThumbprint;
     }
 
@@ -60,7 +60,7 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

@@ -30,7 +30,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
-    public Optional<CredentialReferenceResponse> getCredential() {
+    public Optional<CredentialReferenceResponse> credential() {
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
@@ -41,7 +41,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -52,7 +52,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="pfx")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx() {
         return this.pfx == null ? null : this.pfx;
     }
 
@@ -63,7 +63,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="resource")
       private final @Nullable Object resource;
 
-    public Optional<Object> getResource() {
+    public Optional<Object> resource() {
         return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
     }
 
@@ -74,7 +74,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -85,7 +85,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="userTenant")
       private final @Nullable Object userTenant;
 
-    public Optional<Object> getUserTenant() {
+    public Optional<Object> userTenant() {
         return this.userTenant == null ? Optional.empty() : Optional.ofNullable(this.userTenant);
     }
 
@@ -96,7 +96,7 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
     @Import(name="username")
       private final @Nullable Object username;
 
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

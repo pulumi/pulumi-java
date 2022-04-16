@@ -55,35 +55,35 @@ public final class ImageTemplateLastRunStatusResponse {
      * End time of the last run (UTC)
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Verbose information about the last run state
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * State of the last run
      * 
     */
-    public Optional<String> getRunState() {
+    public Optional<String> runState() {
         return Optional.ofNullable(this.runState);
     }
     /**
      * Sub-state of the last run
      * 
     */
-    public Optional<String> getRunSubState() {
+    public Optional<String> runSubState() {
         return Optional.ofNullable(this.runSubState);
     }
     /**
      * Start time of the last run (UTC)
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

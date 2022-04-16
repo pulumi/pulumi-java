@@ -24,119 +24,119 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends com.pul
     @Import(name="balanceSimilarNodeGroups")
       private final @Nullable Output<String> balanceSimilarNodeGroups;
 
-    public Output<String> getBalanceSimilarNodeGroups() {
+    public Output<String> balanceSimilarNodeGroups() {
         return this.balanceSimilarNodeGroups == null ? Codegen.empty() : this.balanceSimilarNodeGroups;
     }
 
     @Import(name="expander")
       private final @Nullable Output<Either<String,Expander>> expander;
 
-    public Output<Either<String,Expander>> getExpander() {
+    public Output<Either<String,Expander>> expander() {
         return this.expander == null ? Codegen.empty() : this.expander;
     }
 
     @Import(name="maxEmptyBulkDelete")
       private final @Nullable Output<String> maxEmptyBulkDelete;
 
-    public Output<String> getMaxEmptyBulkDelete() {
+    public Output<String> maxEmptyBulkDelete() {
         return this.maxEmptyBulkDelete == null ? Codegen.empty() : this.maxEmptyBulkDelete;
     }
 
     @Import(name="maxGracefulTerminationSec")
       private final @Nullable Output<String> maxGracefulTerminationSec;
 
-    public Output<String> getMaxGracefulTerminationSec() {
+    public Output<String> maxGracefulTerminationSec() {
         return this.maxGracefulTerminationSec == null ? Codegen.empty() : this.maxGracefulTerminationSec;
     }
 
     @Import(name="maxNodeProvisionTime")
       private final @Nullable Output<String> maxNodeProvisionTime;
 
-    public Output<String> getMaxNodeProvisionTime() {
+    public Output<String> maxNodeProvisionTime() {
         return this.maxNodeProvisionTime == null ? Codegen.empty() : this.maxNodeProvisionTime;
     }
 
     @Import(name="maxTotalUnreadyPercentage")
       private final @Nullable Output<String> maxTotalUnreadyPercentage;
 
-    public Output<String> getMaxTotalUnreadyPercentage() {
+    public Output<String> maxTotalUnreadyPercentage() {
         return this.maxTotalUnreadyPercentage == null ? Codegen.empty() : this.maxTotalUnreadyPercentage;
     }
 
     @Import(name="newPodScaleUpDelay")
       private final @Nullable Output<String> newPodScaleUpDelay;
 
-    public Output<String> getNewPodScaleUpDelay() {
+    public Output<String> newPodScaleUpDelay() {
         return this.newPodScaleUpDelay == null ? Codegen.empty() : this.newPodScaleUpDelay;
     }
 
     @Import(name="okTotalUnreadyCount")
       private final @Nullable Output<String> okTotalUnreadyCount;
 
-    public Output<String> getOkTotalUnreadyCount() {
+    public Output<String> okTotalUnreadyCount() {
         return this.okTotalUnreadyCount == null ? Codegen.empty() : this.okTotalUnreadyCount;
     }
 
     @Import(name="scaleDownDelayAfterAdd")
       private final @Nullable Output<String> scaleDownDelayAfterAdd;
 
-    public Output<String> getScaleDownDelayAfterAdd() {
+    public Output<String> scaleDownDelayAfterAdd() {
         return this.scaleDownDelayAfterAdd == null ? Codegen.empty() : this.scaleDownDelayAfterAdd;
     }
 
     @Import(name="scaleDownDelayAfterDelete")
       private final @Nullable Output<String> scaleDownDelayAfterDelete;
 
-    public Output<String> getScaleDownDelayAfterDelete() {
+    public Output<String> scaleDownDelayAfterDelete() {
         return this.scaleDownDelayAfterDelete == null ? Codegen.empty() : this.scaleDownDelayAfterDelete;
     }
 
     @Import(name="scaleDownDelayAfterFailure")
       private final @Nullable Output<String> scaleDownDelayAfterFailure;
 
-    public Output<String> getScaleDownDelayAfterFailure() {
+    public Output<String> scaleDownDelayAfterFailure() {
         return this.scaleDownDelayAfterFailure == null ? Codegen.empty() : this.scaleDownDelayAfterFailure;
     }
 
     @Import(name="scaleDownUnneededTime")
       private final @Nullable Output<String> scaleDownUnneededTime;
 
-    public Output<String> getScaleDownUnneededTime() {
+    public Output<String> scaleDownUnneededTime() {
         return this.scaleDownUnneededTime == null ? Codegen.empty() : this.scaleDownUnneededTime;
     }
 
     @Import(name="scaleDownUnreadyTime")
       private final @Nullable Output<String> scaleDownUnreadyTime;
 
-    public Output<String> getScaleDownUnreadyTime() {
+    public Output<String> scaleDownUnreadyTime() {
         return this.scaleDownUnreadyTime == null ? Codegen.empty() : this.scaleDownUnreadyTime;
     }
 
     @Import(name="scaleDownUtilizationThreshold")
       private final @Nullable Output<String> scaleDownUtilizationThreshold;
 
-    public Output<String> getScaleDownUtilizationThreshold() {
+    public Output<String> scaleDownUtilizationThreshold() {
         return this.scaleDownUtilizationThreshold == null ? Codegen.empty() : this.scaleDownUtilizationThreshold;
     }
 
     @Import(name="scanInterval")
       private final @Nullable Output<String> scanInterval;
 
-    public Output<String> getScanInterval() {
+    public Output<String> scanInterval() {
         return this.scanInterval == null ? Codegen.empty() : this.scanInterval;
     }
 
     @Import(name="skipNodesWithLocalStorage")
       private final @Nullable Output<String> skipNodesWithLocalStorage;
 
-    public Output<String> getSkipNodesWithLocalStorage() {
+    public Output<String> skipNodesWithLocalStorage() {
         return this.skipNodesWithLocalStorage == null ? Codegen.empty() : this.skipNodesWithLocalStorage;
     }
 
     @Import(name="skipNodesWithSystemPods")
       private final @Nullable Output<String> skipNodesWithSystemPods;
 
-    public Output<String> getSkipNodesWithSystemPods() {
+    public Output<String> skipNodesWithSystemPods() {
         return this.skipNodesWithSystemPods == null ? Codegen.empty() : this.skipNodesWithSystemPods;
     }
 

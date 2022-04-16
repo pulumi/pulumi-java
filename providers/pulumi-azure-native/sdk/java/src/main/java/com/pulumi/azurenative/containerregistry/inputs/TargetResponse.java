@@ -26,7 +26,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="digest")
       private final @Nullable String digest;
 
-    public Optional<String> getDigest() {
+    public Optional<String> digest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
     }
 
@@ -37,7 +37,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="length")
       private final @Nullable Double length;
 
-    public Optional<Double> getLength() {
+    public Optional<Double> length() {
         return this.length == null ? Optional.empty() : Optional.ofNullable(this.length);
     }
 
@@ -48,7 +48,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mediaType")
       private final @Nullable String mediaType;
 
-    public Optional<String> getMediaType() {
+    public Optional<String> mediaType() {
         return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
     }
 
@@ -59,7 +59,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -70,7 +70,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="repository")
       private final @Nullable String repository;
 
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
     }
 
@@ -81,7 +81,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
       private final @Nullable Double size;
 
-    public Optional<Double> getSize() {
+    public Optional<Double> size() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
@@ -92,7 +92,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tag")
       private final @Nullable String tag;
 
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 
@@ -103,7 +103,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 
@@ -114,7 +114,7 @@ public final class TargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

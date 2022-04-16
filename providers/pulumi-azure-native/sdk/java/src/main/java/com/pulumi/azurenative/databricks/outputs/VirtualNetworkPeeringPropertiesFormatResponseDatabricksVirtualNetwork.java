@@ -26,7 +26,7 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtua
      * The Id of the databricks virtual network.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

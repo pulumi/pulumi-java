@@ -27,7 +27,7 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
     @Import(name="first")
       private final @Nullable Output<String> first;
 
-    public Output<String> getFirst() {
+    public Output<String> first() {
         return this.first == null ? Codegen.empty() : this.first;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
     @Import(name="last")
       private final @Nullable Output<String> last;
 
-    public Output<String> getLast() {
+    public Output<String> last() {
         return this.last == null ? Codegen.empty() : this.last;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
     @Import(name="scope")
       private final @Nullable Output<Integer> scope;
 
-    public Output<Integer> getScope() {
+    public Output<Integer> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

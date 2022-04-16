@@ -24,7 +24,7 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ledgerName")
       private final @Nullable Output<String> ledgerName;
 
-    public Output<String> getLedgerName() {
+    public Output<String> ledgerName() {
         return this.ledgerName == null ? Codegen.empty() : this.ledgerName;
     }
 
@@ -35,7 +35,7 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -46,7 +46,7 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<LedgerPropertiesArgs> properties;
 
-    public Output<LedgerPropertiesArgs> getProperties() {
+    public Output<LedgerPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -57,7 +57,7 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

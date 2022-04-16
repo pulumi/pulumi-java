@@ -22,7 +22,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
     @Import(name="targetResources")
       private final @Nullable List<SubResource> targetResources;
 
-    public List<SubResource> getTargetResources() {
+    public List<SubResource> targetResources() {
         return this.targetResources == null ? List.of() : this.targetResources;
     }
 

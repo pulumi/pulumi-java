@@ -19,7 +19,7 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="instanceName", required=true)
       private final String instanceName;
 
-    public String getInstanceName() {
+    public String instanceName() {
         return this.instanceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInstanceDetailsArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

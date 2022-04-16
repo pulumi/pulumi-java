@@ -24,10 +24,10 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
         this.managedByTenantId = managedByTenantId;
     }
 
-    public List<LightHouseAuthorizationResponse> getAuthorizations() {
+    public List<LightHouseAuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
-    public Optional<String> getManagedByTenantId() {
+    public Optional<String> managedByTenantId() {
         return Optional.ofNullable(this.managedByTenantId);
     }
 

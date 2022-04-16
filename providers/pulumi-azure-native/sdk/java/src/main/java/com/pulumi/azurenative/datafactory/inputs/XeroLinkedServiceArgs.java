@@ -34,7 +34,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -45,7 +45,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -56,7 +56,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> getConnectionProperties() {
+    public Output<Object> connectionProperties() {
         return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
@@ -67,7 +67,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="consumerKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey() {
         return this.consumerKey == null ? Codegen.empty() : this.consumerKey;
     }
 
@@ -78,7 +78,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -89,7 +89,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -100,7 +100,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="host")
       private final @Nullable Output<Object> host;
 
-    public Output<Object> getHost() {
+    public Output<Object> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -111,7 +111,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -123,7 +123,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="privateKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -135,7 +135,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -146,7 +146,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> getUseEncryptedEndpoints() {
+    public Output<Object> useEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
     }
 
@@ -157,7 +157,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
 
-    public Output<Object> getUseHostVerification() {
+    public Output<Object> useHostVerification() {
         return this.useHostVerification == null ? Codegen.empty() : this.useHostVerification;
     }
 
@@ -168,7 +168,7 @@ public final class XeroLinkedServiceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;
 
-    public Output<Object> getUsePeerVerification() {
+    public Output<Object> usePeerVerification() {
         return this.usePeerVerification == null ? Codegen.empty() : this.usePeerVerification;
     }
 

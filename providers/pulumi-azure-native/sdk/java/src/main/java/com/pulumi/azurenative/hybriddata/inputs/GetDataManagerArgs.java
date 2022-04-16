@@ -19,7 +19,7 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataManagerName", required=true)
       private final String dataManagerName;
 
-    public String getDataManagerName() {
+    public String dataManagerName() {
         return this.dataManagerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataManagerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -19,7 +19,7 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="addressName", required=true)
       private final String addressName;
 
-    public String getAddressName() {
+    public String addressName() {
         return this.addressName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

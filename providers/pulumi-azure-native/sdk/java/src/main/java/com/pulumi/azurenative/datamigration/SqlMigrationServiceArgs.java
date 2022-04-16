@@ -19,7 +19,7 @@ public final class SqlMigrationServiceArgs extends com.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -30,7 +30,7 @@ public final class SqlMigrationServiceArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,14 +41,14 @@ public final class SqlMigrationServiceArgs extends com.pulumi.resources.Resource
     @Import(name="sqlMigrationServiceName")
       private final @Nullable Output<String> sqlMigrationServiceName;
 
-    public Output<String> getSqlMigrationServiceName() {
+    public Output<String> sqlMigrationServiceName() {
         return this.sqlMigrationServiceName == null ? Codegen.empty() : this.sqlMigrationServiceName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

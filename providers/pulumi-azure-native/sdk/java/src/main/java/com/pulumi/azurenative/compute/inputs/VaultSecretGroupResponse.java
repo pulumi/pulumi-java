@@ -27,7 +27,7 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
     @Import(name="sourceVault")
       private final @Nullable SubResourceResponse sourceVault;
 
-    public Optional<SubResourceResponse> getSourceVault() {
+    public Optional<SubResourceResponse> sourceVault() {
         return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
     }
 
@@ -38,7 +38,7 @@ public final class VaultSecretGroupResponse extends com.pulumi.resources.InvokeA
     @Import(name="vaultCertificates")
       private final @Nullable List<VaultCertificateResponse> vaultCertificates;
 
-    public List<VaultCertificateResponse> getVaultCertificates() {
+    public List<VaultCertificateResponse> vaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
     }
 

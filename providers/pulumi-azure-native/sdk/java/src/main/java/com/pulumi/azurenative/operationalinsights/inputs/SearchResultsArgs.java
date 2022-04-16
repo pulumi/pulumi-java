@@ -27,7 +27,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endSearchTime")
       private final @Nullable Output<String> endSearchTime;
 
-    public Output<String> getEndSearchTime() {
+    public Output<String> endSearchTime() {
         return this.endSearchTime == null ? Codegen.empty() : this.endSearchTime;
     }
 
@@ -49,7 +49,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit == null ? Codegen.empty() : this.limit;
     }
 
@@ -60,7 +60,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -71,7 +71,7 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startSearchTime")
       private final @Nullable Output<String> startSearchTime;
 
-    public Output<String> getStartSearchTime() {
+    public Output<String> startSearchTime() {
         return this.startSearchTime == null ? Codegen.empty() : this.startSearchTime;
     }
 

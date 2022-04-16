@@ -49,7 +49,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    public Output<String> getCustomResourceName() {
+    public Output<String> customResourceName() {
         return this.customResourceName;
     }
     /**
@@ -63,7 +63,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the disks the template.
      * 
      */
-    public Output<List<VirtualDiskResponse>> getDisks() {
+    public Output<List<VirtualDiskResponse>> disks() {
         return this.disks;
     }
     /**
@@ -77,7 +77,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the extended location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -91,7 +91,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Firmware type
      * 
      */
-    public Output<String> getFirmwareType() {
+    public Output<String> firmwareType() {
         return this.firmwareType;
     }
     /**
@@ -105,7 +105,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the folder path of the template.
      * 
      */
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath;
     }
     /**
@@ -119,7 +119,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the inventory Item ID for the virtual machine template.
      * 
      */
-    public Output</* @Nullable */ String> getInventoryItemId() {
+    public Output</* @Nullable */ String> inventoryItemId() {
         return this.inventoryItemId;
     }
     /**
@@ -133,7 +133,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -147,7 +147,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -161,7 +161,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets memory size in MBs for the template.
      * 
      */
-    public Output<Integer> getMemorySizeMB() {
+    public Output<Integer> memorySizeMB() {
         return this.memorySizeMB;
     }
     /**
@@ -175,7 +175,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the vCenter Managed Object name for the virtual machine template.
      * 
      */
-    public Output<String> getMoName() {
+    public Output<String> moName() {
         return this.moName;
     }
     /**
@@ -191,7 +191,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * template.
      * 
      */
-    public Output</* @Nullable */ String> getMoRefId() {
+    public Output</* @Nullable */ String> moRefId() {
         return this.moRefId;
     }
     /**
@@ -205,7 +205,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -219,7 +219,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the network interfaces of the template.
      * 
      */
-    public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceResponse>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -233,7 +233,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the number of vCPUs for the template.
      * 
      */
-    public Output<Integer> getNumCPUs() {
+    public Output<Integer> numCPUs() {
         return this.numCPUs;
     }
     /**
@@ -249,7 +249,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * Defaults to 1 if unspecified.
      * 
      */
-    public Output<Integer> getNumCoresPerSocket() {
+    public Output<Integer> numCoresPerSocket() {
         return this.numCoresPerSocket;
     }
     /**
@@ -263,7 +263,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets os name.
      * 
      */
-    public Output<String> getOsName() {
+    public Output<String> osName() {
         return this.osName;
     }
     /**
@@ -277,7 +277,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the type of the os.
      * 
      */
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType;
     }
     /**
@@ -291,7 +291,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -305,7 +305,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return The resource status information.
      * 
      */
-    public Output<List<ResourceStatusResponse>> getStatuses() {
+    public Output<List<ResourceStatusResponse>> statuses() {
         return this.statuses;
     }
     /**
@@ -319,7 +319,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -333,7 +333,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -347,7 +347,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the current version of VMware Tools.
      * 
      */
-    public Output<String> getToolsVersion() {
+    public Output<String> toolsVersion() {
         return this.toolsVersion;
     }
     /**
@@ -361,7 +361,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
      */
-    public Output<String> getToolsVersionStatus() {
+    public Output<String> toolsVersionStatus() {
         return this.toolsVersionStatus;
     }
     /**
@@ -375,7 +375,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -389,7 +389,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets a unique identifier for this resource.
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
     /**
@@ -403,7 +403,7 @@ public class VirtualMachineTemplate extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the ARM Id of the vCenter resource in which this template resides.
      * 
      */
-    public Output</* @Nullable */ String> getVCenterId() {
+    public Output</* @Nullable */ String> vCenterId() {
         return this.vCenterId;
     }
 

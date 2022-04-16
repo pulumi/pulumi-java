@@ -153,126 +153,126 @@ public final class GetFluxConfigurationResult {
      * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
      * 
     */
-    public String getComplianceState() {
+    public String complianceState() {
         return this.complianceState;
     }
     /**
      * Key-value pairs of protected configuration settings for the configuration
      * 
     */
-    public Map<String,String> getConfigurationProtectedSettings() {
+    public Map<String,String> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Map.of() : this.configurationProtectedSettings;
     }
     /**
      * Error message returned to the user in the case of provisioning failure.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * Parameters to reconcile to the GitRepository source kind type.
      * 
     */
-    public Optional<GitRepositoryDefinitionResponse> getGitRepository() {
+    public Optional<GitRepositoryDefinitionResponse> gitRepository() {
         return Optional.ofNullable(this.gitRepository);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
     */
-    public Map<String,KustomizationDefinitionResponse> getKustomizations() {
+    public Map<String,KustomizationDefinitionResponse> kustomizations() {
         return this.kustomizations == null ? Map.of() : this.kustomizations;
     }
     /**
      * Datetime the fluxConfiguration last synced its source on the cluster.
      * 
     */
-    public String getLastSourceSyncedAt() {
+    public String lastSourceSyncedAt() {
         return this.lastSourceSyncedAt;
     }
     /**
      * Branch and SHA of the last source commit synced with the cluster.
      * 
     */
-    public String getLastSourceSyncedCommitId() {
+    public String lastSourceSyncedCommitId() {
         return this.lastSourceSyncedCommitId;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Status of the creation of the fluxConfiguration.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
      * 
     */
-    public String getRepositoryPublicKey() {
+    public String repositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
      * Scope at which the operator will be installed.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Source Kind to pull the configuration data from.
      * 
     */
-    public Optional<String> getSourceKind() {
+    public Optional<String> sourceKind() {
         return Optional.ofNullable(this.sourceKind);
     }
     /**
      * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
      * 
     */
-    public List<ObjectStatusDefinitionResponse> getStatuses() {
+    public List<ObjectStatusDefinitionResponse> statuses() {
         return this.statuses;
     }
     /**
      * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
     */
-    public Optional<Boolean> getSuspend() {
+    public Optional<Boolean> suspend() {
         return Optional.ofNullable(this.suspend);
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

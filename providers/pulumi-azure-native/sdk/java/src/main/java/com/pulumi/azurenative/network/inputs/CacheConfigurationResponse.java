@@ -25,7 +25,7 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="cacheDuration")
       private final @Nullable String cacheDuration;
 
-    public Optional<String> getCacheDuration() {
+    public Optional<String> cacheDuration() {
         return this.cacheDuration == null ? Optional.empty() : Optional.ofNullable(this.cacheDuration);
     }
 
@@ -36,7 +36,7 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="dynamicCompression")
       private final @Nullable String dynamicCompression;
 
-    public Optional<String> getDynamicCompression() {
+    public Optional<String> dynamicCompression() {
         return this.dynamicCompression == null ? Optional.empty() : Optional.ofNullable(this.dynamicCompression);
     }
 
@@ -47,7 +47,7 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="queryParameterStripDirective")
       private final @Nullable String queryParameterStripDirective;
 
-    public Optional<String> getQueryParameterStripDirective() {
+    public Optional<String> queryParameterStripDirective() {
         return this.queryParameterStripDirective == null ? Optional.empty() : Optional.ofNullable(this.queryParameterStripDirective);
     }
 
@@ -58,7 +58,7 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
     @Import(name="queryParameters")
       private final @Nullable String queryParameters;
 
-    public Optional<String> getQueryParameters() {
+    public Optional<String> queryParameters() {
         return this.queryParameters == null ? Optional.empty() : Optional.ofNullable(this.queryParameters);
     }
 

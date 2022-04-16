@@ -25,7 +25,7 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -36,7 +36,7 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

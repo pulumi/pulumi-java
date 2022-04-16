@@ -28,7 +28,7 @@ public final class GitHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class GitHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
 
-    public Output<LoginScopesArgs> getLogin() {
+    public Output<LoginScopesArgs> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -50,7 +50,7 @@ public final class GitHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registration")
       private final @Nullable Output<ClientRegistrationArgs> registration;
 
-    public Output<ClientRegistrationArgs> getRegistration() {
+    public Output<ClientRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 

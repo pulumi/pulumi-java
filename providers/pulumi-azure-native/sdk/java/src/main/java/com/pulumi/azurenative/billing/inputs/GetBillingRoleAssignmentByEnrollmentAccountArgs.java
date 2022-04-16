@@ -19,7 +19,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
     @Import(name="billingAccountName", required=true)
       private final String billingAccountName;
 
-    public String getBillingAccountName() {
+    public String billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
     @Import(name="billingRoleAssignmentName", required=true)
       private final String billingRoleAssignmentName;
 
-    public String getBillingRoleAssignmentName() {
+    public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
     @Import(name="enrollmentAccountName", required=true)
       private final String enrollmentAccountName;
 
-    public String getEnrollmentAccountName() {
+    public String enrollmentAccountName() {
         return this.enrollmentAccountName;
     }
 

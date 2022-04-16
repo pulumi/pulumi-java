@@ -24,7 +24,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="authType")
       private final @Nullable Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType == null ? Codegen.empty() : this.authType;
     }
 
@@ -35,7 +35,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -46,7 +46,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
@@ -57,7 +57,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +79,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -90,7 +90,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -101,7 +101,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="valueFormat")
       private final @Nullable Output<Either<String,ValueFormat>> valueFormat;
 
-    public Output<Either<String,ValueFormat>> getValueFormat() {
+    public Output<Either<String,ValueFormat>> valueFormat() {
         return this.valueFormat == null ? Codegen.empty() : this.valueFormat;
     }
 
@@ -112,7 +112,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

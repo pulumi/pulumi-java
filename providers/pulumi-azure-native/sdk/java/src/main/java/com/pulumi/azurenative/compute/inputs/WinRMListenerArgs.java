@@ -27,7 +27,7 @@ public final class WinRMListenerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
+    public Output<String> certificateUrl() {
         return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
     }
 
@@ -38,7 +38,7 @@ public final class WinRMListenerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<ProtocolTypes> protocol;
 
-    public Output<ProtocolTypes> getProtocol() {
+    public Output<ProtocolTypes> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

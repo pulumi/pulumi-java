@@ -26,7 +26,7 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataActions")
       private final @Nullable List<String> dataActions;
 
-    public List<String> getDataActions() {
+    public List<String> dataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
     }
 
@@ -37,7 +37,7 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notDataActions")
       private final @Nullable List<String> notDataActions;
 
-    public List<String> getNotDataActions() {
+    public List<String> notDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;
     }
 

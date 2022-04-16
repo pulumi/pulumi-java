@@ -24,7 +24,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
     @Import(name="countOfDowngrades", required=true)
       private final Double countOfDowngrades;
 
-    public Double getCountOfDowngrades() {
+    public Double countOfDowngrades() {
         return this.countOfDowngrades;
     }
 
@@ -35,7 +35,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
     @Import(name="countOfUpgradesAfterDowngrades", required=true)
       private final Double countOfUpgradesAfterDowngrades;
 
-    public Double getCountOfUpgradesAfterDowngrades() {
+    public Double countOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
     }
 
@@ -46,7 +46,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
     @Import(name="lastChangeDate", required=true)
       private final String lastChangeDate;
 
-    public String getLastChangeDate() {
+    public String lastChangeDate() {
         return this.lastChangeDate;
     }
 

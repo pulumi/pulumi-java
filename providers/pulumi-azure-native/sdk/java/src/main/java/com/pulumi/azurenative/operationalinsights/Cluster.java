@@ -49,7 +49,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The list of Log Analytics workspaces associated with the cluster
      * 
      */
-    public Output</* @Nullable */ List<AssociatedWorkspaceResponse>> getAssociatedWorkspaces() {
+    public Output</* @Nullable */ List<AssociatedWorkspaceResponse>> associatedWorkspaces() {
         return this.associatedWorkspaces;
     }
     /**
@@ -63,7 +63,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster's billing type.
      * 
      */
-    public Output</* @Nullable */ String> getBillingType() {
+    public Output</* @Nullable */ String> billingType() {
         return this.billingType;
     }
     /**
@@ -77,7 +77,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Additional properties for capacity reservation
      * 
      */
-    public Output</* @Nullable */ CapacityReservationPropertiesResponse> getCapacityReservationProperties() {
+    public Output</* @Nullable */ CapacityReservationPropertiesResponse> capacityReservationProperties() {
         return this.capacityReservationProperties;
     }
     /**
@@ -91,7 +91,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The ID associated with the cluster.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -105,7 +105,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The cluster creation time
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -119,7 +119,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -133,7 +133,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsAvailabilityZonesEnabled() {
+    public Output</* @Nullable */ Boolean> isAvailabilityZonesEnabled() {
         return this.isAvailabilityZonesEnabled;
     }
     /**
@@ -147,7 +147,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The associated key properties.
      * 
      */
-    public Output</* @Nullable */ KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties() {
         return this.keyVaultProperties;
     }
     /**
@@ -161,7 +161,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The last time the cluster was updated.
      * 
      */
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
@@ -175,7 +175,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -189,7 +189,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -203,7 +203,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the cluster.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -217,7 +217,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The sku properties.
      * 
      */
-    public Output</* @Nullable */ ClusterSkuResponse> getSku() {
+    public Output</* @Nullable */ ClusterSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -231,7 +231,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -245,7 +245,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -42,21 +42,21 @@ public final class ReportScheduleResponse {
      * The schedule recurrence.
      * 
     */
-    public String getRecurrence() {
+    public String recurrence() {
         return this.recurrence;
     }
     /**
      * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
     */
-    public Optional<ReportRecurrencePeriodResponse> getRecurrencePeriod() {
+    public Optional<ReportRecurrencePeriodResponse> recurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
      * The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

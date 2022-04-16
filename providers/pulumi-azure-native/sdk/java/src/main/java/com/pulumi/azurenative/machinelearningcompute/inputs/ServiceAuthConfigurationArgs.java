@@ -25,7 +25,7 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="primaryAuthKeyHash", required=true)
       private final Output<String> primaryAuthKeyHash;
 
-    public Output<String> getPrimaryAuthKeyHash() {
+    public Output<String> primaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="secondaryAuthKeyHash", required=true)
       private final Output<String> secondaryAuthKeyHash;
 
-    public Output<String> getSecondaryAuthKeyHash() {
+    public Output<String> secondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
 

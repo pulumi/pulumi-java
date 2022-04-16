@@ -35,14 +35,14 @@ public final class GetApplicationGatewayBackendHealthOnDemandResult {
      * Reference to an ApplicationGatewayBackendAddressPool resource.
      * 
     */
-    public Optional<ApplicationGatewayBackendAddressPoolResponse> getBackendAddressPool() {
+    public Optional<ApplicationGatewayBackendAddressPoolResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
      * Application gateway BackendHealthHttp settings.
      * 
     */
-    public Optional<ApplicationGatewayBackendHealthHttpSettingsResponse> getBackendHealthHttpSettings() {
+    public Optional<ApplicationGatewayBackendHealthHttpSettingsResponse> backendHealthHttpSettings() {
         return Optional.ofNullable(this.backendHealthHttpSettings);
     }
 

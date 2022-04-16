@@ -35,14 +35,14 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
      * The URI of the customer-managed key for the backing database.
      * 
     */
-    public Optional<String> getKeyVaultKeyUri() {
+    public Optional<String> keyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
     /**
      * The provisioned throughput for the backing database.
      * 
     */
-    public Optional<Double> getOfferThroughput() {
+    public Optional<Double> offerThroughput() {
         return Optional.ofNullable(this.offerThroughput);
     }
 

@@ -29,7 +29,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
     @Import(name="securityRules")
       private final @Nullable Output<List<NsgSecurityRuleArgs>> securityRules;
 
-    public Output<List<NsgSecurityRuleArgs>> getSecurityRules() {
+    public Output<List<NsgSecurityRuleArgs>> securityRules() {
         return this.securityRules == null ? Codegen.empty() : this.securityRules;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkSecurityGroupResourceSettingsArgs extends com.pulumi.r
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 

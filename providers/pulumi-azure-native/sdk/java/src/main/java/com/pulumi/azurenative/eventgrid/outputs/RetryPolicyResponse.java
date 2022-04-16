@@ -34,14 +34,14 @@ public final class RetryPolicyResponse {
      * Time To Live (in minutes) for events.
      * 
     */
-    public Optional<Integer> getEventTimeToLiveInMinutes() {
+    public Optional<Integer> eventTimeToLiveInMinutes() {
         return Optional.ofNullable(this.eventTimeToLiveInMinutes);
     }
     /**
      * Maximum number of delivery retry attempts for events.
      * 
     */
-    public Optional<Integer> getMaxDeliveryAttempts() {
+    public Optional<Integer> maxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }
 

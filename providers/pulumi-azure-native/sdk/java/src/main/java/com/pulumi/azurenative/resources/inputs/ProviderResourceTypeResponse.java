@@ -31,7 +31,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="aliases")
       private final @Nullable List<AliasResponse> aliases;
 
-    public List<AliasResponse> getAliases() {
+    public List<AliasResponse> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
 
@@ -42,7 +42,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="apiProfiles", required=true)
       private final List<ApiProfileResponse> apiProfiles;
 
-    public List<ApiProfileResponse> getApiProfiles() {
+    public List<ApiProfileResponse> apiProfiles() {
         return this.apiProfiles;
     }
 
@@ -53,7 +53,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
 
-    public List<String> getApiVersions() {
+    public List<String> apiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
 
@@ -64,7 +64,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="capabilities")
       private final @Nullable String capabilities;
 
-    public Optional<String> getCapabilities() {
+    public Optional<String> capabilities() {
         return this.capabilities == null ? Optional.empty() : Optional.ofNullable(this.capabilities);
     }
 
@@ -75,7 +75,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="defaultApiVersion", required=true)
       private final String defaultApiVersion;
 
-    public String getDefaultApiVersion() {
+    public String defaultApiVersion() {
         return this.defaultApiVersion;
     }
 
@@ -86,7 +86,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="locationMappings")
       private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
 
-    public List<ProviderExtendedLocationResponse> getLocationMappings() {
+    public List<ProviderExtendedLocationResponse> locationMappings() {
         return this.locationMappings == null ? List.of() : this.locationMappings;
     }
 
@@ -97,7 +97,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
@@ -108,7 +108,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -119,14 +119,14 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="resourceType")
       private final @Nullable String resourceType;
 
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="zoneMappings")
       private final @Nullable List<ZoneMappingResponse> zoneMappings;
 
-    public List<ZoneMappingResponse> getZoneMappings() {
+    public List<ZoneMappingResponse> zoneMappings() {
         return this.zoneMappings == null ? List.of() : this.zoneMappings;
     }
 

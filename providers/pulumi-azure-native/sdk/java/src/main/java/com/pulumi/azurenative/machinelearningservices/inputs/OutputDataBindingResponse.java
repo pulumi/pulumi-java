@@ -21,7 +21,7 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="datastoreId")
       private final @Nullable String datastoreId;
 
-    public Optional<String> getDatastoreId() {
+    public Optional<String> datastoreId() {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
@@ -32,7 +32,7 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -43,7 +43,7 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="pathOnCompute")
       private final @Nullable String pathOnCompute;
 
-    public Optional<String> getPathOnCompute() {
+    public Optional<String> pathOnCompute() {
         return this.pathOnCompute == null ? Optional.empty() : Optional.ofNullable(this.pathOnCompute);
     }
 
@@ -54,7 +54,7 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
     @Import(name="pathOnDatastore")
       private final @Nullable String pathOnDatastore;
 
-    public Optional<String> getPathOnDatastore() {
+    public Optional<String> pathOnDatastore() {
         return this.pathOnDatastore == null ? Optional.empty() : Optional.ofNullable(this.pathOnDatastore);
     }
 

@@ -28,7 +28,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -39,7 +39,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -50,7 +50,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
+    public Output<Integer> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
@@ -61,7 +61,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="columnsToRemove")
       private final @Nullable Output<List<String>> columnsToRemove;
 
-    public Output<List<String>> getColumnsToRemove() {
+    public Output<List<String>> columnsToRemove() {
         return this.columnsToRemove == null ? Codegen.empty() : this.columnsToRemove;
     }
 
@@ -72,7 +72,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
+    public Output<String> partitionKey() {
         return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
@@ -83,7 +83,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="rowKey")
       private final @Nullable Output<String> rowKey;
 
-    public Output<String> getRowKey() {
+    public Output<String> rowKey() {
         return this.rowKey == null ? Codegen.empty() : this.rowKey;
     }
 
@@ -94,7 +94,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 
@@ -106,7 +106,7 @@ public final class AzureTableOutputDataSourceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

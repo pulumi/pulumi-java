@@ -23,7 +23,7 @@ public final class SSISExecutionParameterResponse extends com.pulumi.resources.I
     @Import(name="value", required=true)
       private final Object value;
 
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

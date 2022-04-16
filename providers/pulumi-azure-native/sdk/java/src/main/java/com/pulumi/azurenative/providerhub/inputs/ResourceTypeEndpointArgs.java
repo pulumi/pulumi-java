@@ -22,49 +22,49 @@ public final class ResourceTypeEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="apiVersions")
       private final @Nullable Output<List<String>> apiVersions;
 
-    public Output<List<String>> getApiVersions() {
+    public Output<List<String>> apiVersions() {
         return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="extensions")
       private final @Nullable Output<List<ResourceTypeExtensionArgs>> extensions;
 
-    public Output<List<ResourceTypeExtensionArgs>> getExtensions() {
+    public Output<List<ResourceTypeExtensionArgs>> extensions() {
         return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="featuresRule")
       private final @Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
 
-    public Output<ResourceTypeEndpointFeaturesRuleArgs> getFeaturesRule() {
+    public Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule() {
         return this.featuresRule == null ? Codegen.empty() : this.featuresRule;
     }
 
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
+    public Output<List<String>> requiredFeatures() {
         return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

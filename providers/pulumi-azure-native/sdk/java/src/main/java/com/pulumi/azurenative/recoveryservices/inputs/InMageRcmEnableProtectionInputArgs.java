@@ -31,7 +31,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="disksDefault")
       private final @Nullable Output<InMageRcmDisksDefaultInputArgs> disksDefault;
 
-    public Output<InMageRcmDisksDefaultInputArgs> getDisksDefault() {
+    public Output<InMageRcmDisksDefaultInputArgs> disksDefault() {
         return this.disksDefault == null ? Codegen.empty() : this.disksDefault;
     }
 
@@ -42,7 +42,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="disksToInclude")
       private final @Nullable Output<List<InMageRcmDiskInputArgs>> disksToInclude;
 
-    public Output<List<InMageRcmDiskInputArgs>> getDisksToInclude() {
+    public Output<List<InMageRcmDiskInputArgs>> disksToInclude() {
         return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
     }
 
@@ -53,7 +53,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="fabricDiscoveryMachineId")
       private final @Nullable Output<String> fabricDiscoveryMachineId;
 
-    public Output<String> getFabricDiscoveryMachineId() {
+    public Output<String> fabricDiscoveryMachineId() {
         return this.fabricDiscoveryMachineId == null ? Codegen.empty() : this.fabricDiscoveryMachineId;
     }
 
@@ -65,7 +65,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -76,7 +76,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Output<Either<String,LicenseType>> getLicenseType() {
+    public Output<Either<String,LicenseType>> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -87,7 +87,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="multiVmGroupName")
       private final @Nullable Output<String> multiVmGroupName;
 
-    public Output<String> getMultiVmGroupName() {
+    public Output<String> multiVmGroupName() {
         return this.multiVmGroupName == null ? Codegen.empty() : this.multiVmGroupName;
     }
 
@@ -98,7 +98,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="processServerId")
       private final @Nullable Output<String> processServerId;
 
-    public Output<String> getProcessServerId() {
+    public Output<String> processServerId() {
         return this.processServerId == null ? Codegen.empty() : this.processServerId;
     }
 
@@ -109,7 +109,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
-    public Output<String> getRunAsAccountId() {
+    public Output<String> runAsAccountId() {
         return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
     }
 
@@ -120,7 +120,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> getTargetAvailabilitySetId() {
+    public Output<String> targetAvailabilitySetId() {
         return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
     }
 
@@ -131,7 +131,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetAvailabilityZone")
       private final @Nullable Output<String> targetAvailabilityZone;
 
-    public Output<String> getTargetAvailabilityZone() {
+    public Output<String> targetAvailabilityZone() {
         return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
     }
 
@@ -142,7 +142,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetBootDiagnosticsStorageAccountId")
       private final @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
 
-    public Output<String> getTargetBootDiagnosticsStorageAccountId() {
+    public Output<String> targetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId == null ? Codegen.empty() : this.targetBootDiagnosticsStorageAccountId;
     }
 
@@ -153,7 +153,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetNetworkId")
       private final @Nullable Output<String> targetNetworkId;
 
-    public Output<String> getTargetNetworkId() {
+    public Output<String> targetNetworkId() {
         return this.targetNetworkId == null ? Codegen.empty() : this.targetNetworkId;
     }
 
@@ -164,7 +164,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetProximityPlacementGroupId")
       private final @Nullable Output<String> targetProximityPlacementGroupId;
 
-    public Output<String> getTargetProximityPlacementGroupId() {
+    public Output<String> targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId == null ? Codegen.empty() : this.targetProximityPlacementGroupId;
     }
 
@@ -175,7 +175,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetResourceGroupId")
       private final @Nullable Output<String> targetResourceGroupId;
 
-    public Output<String> getTargetResourceGroupId() {
+    public Output<String> targetResourceGroupId() {
         return this.targetResourceGroupId == null ? Codegen.empty() : this.targetResourceGroupId;
     }
 
@@ -186,7 +186,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetSubnetName")
       private final @Nullable Output<String> targetSubnetName;
 
-    public Output<String> getTargetSubnetName() {
+    public Output<String> targetSubnetName() {
         return this.targetSubnetName == null ? Codegen.empty() : this.targetSubnetName;
     }
 
@@ -197,7 +197,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetVmName")
       private final @Nullable Output<String> targetVmName;
 
-    public Output<String> getTargetVmName() {
+    public Output<String> targetVmName() {
         return this.targetVmName == null ? Codegen.empty() : this.targetVmName;
     }
 
@@ -208,7 +208,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
-    public Output<String> getTargetVmSize() {
+    public Output<String> targetVmSize() {
         return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
     }
 
@@ -219,7 +219,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="testNetworkId")
       private final @Nullable Output<String> testNetworkId;
 
-    public Output<String> getTestNetworkId() {
+    public Output<String> testNetworkId() {
         return this.testNetworkId == null ? Codegen.empty() : this.testNetworkId;
     }
 
@@ -230,7 +230,7 @@ public final class InMageRcmEnableProtectionInputArgs extends com.pulumi.resourc
     @Import(name="testSubnetName")
       private final @Nullable Output<String> testSubnetName;
 
-    public Output<String> getTestSubnetName() {
+    public Output<String> testSubnetName() {
         return this.testSubnetName == null ? Codegen.empty() : this.testSubnetName;
     }
 

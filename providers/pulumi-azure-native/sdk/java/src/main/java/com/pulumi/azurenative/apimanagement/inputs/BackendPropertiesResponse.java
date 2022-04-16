@@ -25,7 +25,7 @@ public final class BackendPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="serviceFabricCluster")
       private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
 
-    public Optional<BackendServiceFabricClusterPropertiesResponse> getServiceFabricCluster() {
+    public Optional<BackendServiceFabricClusterPropertiesResponse> serviceFabricCluster() {
         return this.serviceFabricCluster == null ? Optional.empty() : Optional.ofNullable(this.serviceFabricCluster);
     }
 

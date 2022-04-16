@@ -26,7 +26,7 @@ public final class RecurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="frequency", required=true)
       private final Output<RecurrenceFrequency> frequency;
 
-    public Output<RecurrenceFrequency> getFrequency() {
+    public Output<RecurrenceFrequency> frequency() {
         return this.frequency;
     }
 
@@ -37,7 +37,7 @@ public final class RecurrenceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<RecurrentScheduleArgs> schedule;
 
-    public Output<RecurrentScheduleArgs> getSchedule() {
+    public Output<RecurrentScheduleArgs> schedule() {
         return this.schedule;
     }
 

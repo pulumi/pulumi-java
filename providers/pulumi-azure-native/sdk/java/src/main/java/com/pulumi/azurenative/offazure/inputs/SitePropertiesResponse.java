@@ -27,7 +27,7 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="agentDetails")
       private final @Nullable SiteAgentPropertiesResponse agentDetails;
 
-    public Optional<SiteAgentPropertiesResponse> getAgentDetails() {
+    public Optional<SiteAgentPropertiesResponse> agentDetails() {
         return this.agentDetails == null ? Optional.empty() : Optional.ofNullable(this.agentDetails);
     }
 
@@ -38,7 +38,7 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="applianceName")
       private final @Nullable String applianceName;
 
-    public Optional<String> getApplianceName() {
+    public Optional<String> applianceName() {
         return this.applianceName == null ? Optional.empty() : Optional.ofNullable(this.applianceName);
     }
 
@@ -49,7 +49,7 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="discoverySolutionId")
       private final @Nullable String discoverySolutionId;
 
-    public Optional<String> getDiscoverySolutionId() {
+    public Optional<String> discoverySolutionId() {
         return this.discoverySolutionId == null ? Optional.empty() : Optional.ofNullable(this.discoverySolutionId);
     }
 
@@ -60,7 +60,7 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceEndpoint", required=true)
       private final String serviceEndpoint;
 
-    public String getServiceEndpoint() {
+    public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
 
@@ -71,7 +71,7 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
     @Import(name="servicePrincipalIdentityDetails")
       private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
-    public Optional<SiteSpnPropertiesResponse> getServicePrincipalIdentityDetails() {
+    public Optional<SiteSpnPropertiesResponse> servicePrincipalIdentityDetails() {
         return this.servicePrincipalIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }
 

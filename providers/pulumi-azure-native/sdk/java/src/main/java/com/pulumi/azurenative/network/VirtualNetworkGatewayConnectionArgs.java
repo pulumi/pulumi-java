@@ -35,7 +35,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
-    public Output<String> getAuthorizationKey() {
+    public Output<String> authorizationKey() {
         return this.authorizationKey == null ? Codegen.empty() : this.authorizationKey;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="connectionMode")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode;
 
-    public Output<Either<String,VirtualNetworkGatewayConnectionMode>> getConnectionMode() {
+    public Output<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode() {
         return this.connectionMode == null ? Codegen.empty() : this.connectionMode;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="connectionProtocol")
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol;
 
-    public Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> getConnectionProtocol() {
+    public Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol() {
         return this.connectionProtocol == null ? Codegen.empty() : this.connectionProtocol;
     }
 
@@ -68,7 +68,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="connectionType", required=true)
       private final Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType;
 
-    public Output<Either<String,VirtualNetworkGatewayConnectionType>> getConnectionType() {
+    public Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType() {
         return this.connectionType;
     }
 
@@ -79,7 +79,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="dpdTimeoutSeconds")
       private final @Nullable Output<Integer> dpdTimeoutSeconds;
 
-    public Output<Integer> getDpdTimeoutSeconds() {
+    public Output<Integer> dpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds == null ? Codegen.empty() : this.dpdTimeoutSeconds;
     }
 
@@ -90,7 +90,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="enableBgp")
       private final @Nullable Output<Boolean> enableBgp;
 
-    public Output<Boolean> getEnableBgp() {
+    public Output<Boolean> enableBgp() {
         return this.enableBgp == null ? Codegen.empty() : this.enableBgp;
     }
 
@@ -101,7 +101,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="expressRouteGatewayBypass")
       private final @Nullable Output<Boolean> expressRouteGatewayBypass;
 
-    public Output<Boolean> getExpressRouteGatewayBypass() {
+    public Output<Boolean> expressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass == null ? Codegen.empty() : this.expressRouteGatewayBypass;
     }
 
@@ -112,7 +112,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -123,7 +123,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="ipsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
 
-    public Output<List<IpsecPolicyArgs>> getIpsecPolicies() {
+    public Output<List<IpsecPolicyArgs>> ipsecPolicies() {
         return this.ipsecPolicies == null ? Codegen.empty() : this.ipsecPolicies;
     }
 
@@ -134,7 +134,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="localNetworkGateway2")
       private final @Nullable Output<LocalNetworkGatewayArgs> localNetworkGateway2;
 
-    public Output<LocalNetworkGatewayArgs> getLocalNetworkGateway2() {
+    public Output<LocalNetworkGatewayArgs> localNetworkGateway2() {
         return this.localNetworkGateway2 == null ? Codegen.empty() : this.localNetworkGateway2;
     }
 
@@ -145,7 +145,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -156,7 +156,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="peer")
       private final @Nullable Output<SubResourceArgs> peer;
 
-    public Output<SubResourceArgs> getPeer() {
+    public Output<SubResourceArgs> peer() {
         return this.peer == null ? Codegen.empty() : this.peer;
     }
 
@@ -167,7 +167,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -178,7 +178,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="routingWeight")
       private final @Nullable Output<Integer> routingWeight;
 
-    public Output<Integer> getRoutingWeight() {
+    public Output<Integer> routingWeight() {
         return this.routingWeight == null ? Codegen.empty() : this.routingWeight;
     }
 
@@ -189,7 +189,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
-    public Output<String> getSharedKey() {
+    public Output<String> sharedKey() {
         return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 
@@ -200,7 +200,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -211,7 +211,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="trafficSelectorPolicies")
       private final @Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
 
-    public Output<List<TrafficSelectorPolicyArgs>> getTrafficSelectorPolicies() {
+    public Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies() {
         return this.trafficSelectorPolicies == null ? Codegen.empty() : this.trafficSelectorPolicies;
     }
 
@@ -222,7 +222,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="useLocalAzureIpAddress")
       private final @Nullable Output<Boolean> useLocalAzureIpAddress;
 
-    public Output<Boolean> getUseLocalAzureIpAddress() {
+    public Output<Boolean> useLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress == null ? Codegen.empty() : this.useLocalAzureIpAddress;
     }
 
@@ -233,7 +233,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="usePolicyBasedTrafficSelectors")
       private final @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
 
-    public Output<Boolean> getUsePolicyBasedTrafficSelectors() {
+    public Output<Boolean> usePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors == null ? Codegen.empty() : this.usePolicyBasedTrafficSelectors;
     }
 
@@ -244,7 +244,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGateway1", required=true)
       private final Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1;
 
-    public Output<VirtualNetworkGatewayArgs> getVirtualNetworkGateway1() {
+    public Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
     }
 
@@ -255,7 +255,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGateway2")
       private final @Nullable Output<VirtualNetworkGatewayArgs> virtualNetworkGateway2;
 
-    public Output<VirtualNetworkGatewayArgs> getVirtualNetworkGateway2() {
+    public Output<VirtualNetworkGatewayArgs> virtualNetworkGateway2() {
         return this.virtualNetworkGateway2 == null ? Codegen.empty() : this.virtualNetworkGateway2;
     }
 
@@ -266,7 +266,7 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGatewayConnectionName")
       private final @Nullable Output<String> virtualNetworkGatewayConnectionName;
 
-    public Output<String> getVirtualNetworkGatewayConnectionName() {
+    public Output<String> virtualNetworkGatewayConnectionName() {
         return this.virtualNetworkGatewayConnectionName == null ? Codegen.empty() : this.virtualNetworkGatewayConnectionName;
     }
 

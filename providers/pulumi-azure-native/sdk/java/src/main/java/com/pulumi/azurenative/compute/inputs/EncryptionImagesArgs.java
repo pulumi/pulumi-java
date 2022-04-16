@@ -28,7 +28,7 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataDiskImages")
       private final @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
 
-    public Output<List<DataDiskImageEncryptionArgs>> getDataDiskImages() {
+    public Output<List<DataDiskImageEncryptionArgs>> dataDiskImages() {
         return this.dataDiskImages == null ? Codegen.empty() : this.dataDiskImages;
     }
 
@@ -39,7 +39,7 @@ public final class EncryptionImagesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="osDiskImage")
       private final @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
 
-    public Output<OSDiskImageEncryptionArgs> getOsDiskImage() {
+    public Output<OSDiskImageEncryptionArgs> osDiskImage() {
         return this.osDiskImage == null ? Codegen.empty() : this.osDiskImage;
     }
 

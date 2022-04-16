@@ -35,7 +35,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="enableNodePublicIp")
       private final @Nullable Output<Boolean> enableNodePublicIp;
 
-    public Output<Boolean> getEnableNodePublicIp() {
+    public Output<Boolean> enableNodePublicIp() {
         return this.enableNodePublicIp == null ? Codegen.empty() : this.enableNodePublicIp;
     }
 
@@ -46,7 +46,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="isolatedNetwork")
       private final @Nullable Output<Boolean> isolatedNetwork;
 
-    public Output<Boolean> getIsolatedNetwork() {
+    public Output<Boolean> isolatedNetwork() {
         return this.isolatedNetwork == null ? Codegen.empty() : this.isolatedNetwork;
     }
 
@@ -57,7 +57,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> getOsType() {
+    public Output<Either<String,OsType>> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
@@ -68,7 +68,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="remoteLoginPortPublicAccess")
       private final @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
-    public Output<Either<String,RemoteLoginPortPublicAccess>> getRemoteLoginPortPublicAccess() {
+    public Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess() {
         return this.remoteLoginPortPublicAccess == null ? Codegen.empty() : this.remoteLoginPortPublicAccess;
     }
 
@@ -79,7 +79,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="scaleSettings")
       private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
-    public Output<ScaleSettingsArgs> getScaleSettings() {
+    public Output<ScaleSettingsArgs> scaleSettings() {
         return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 
@@ -90,7 +90,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="subnet")
       private final @Nullable Output<ResourceIdArgs> subnet;
 
-    public Output<ResourceIdArgs> getSubnet() {
+    public Output<ResourceIdArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
@@ -101,7 +101,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="userAccountCredentials")
       private final @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
 
-    public Output<UserAccountCredentialsArgs> getUserAccountCredentials() {
+    public Output<UserAccountCredentialsArgs> userAccountCredentials() {
         return this.userAccountCredentials == null ? Codegen.empty() : this.userAccountCredentials;
     }
 
@@ -112,7 +112,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="virtualMachineImage")
       private final @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
 
-    public Output<VirtualMachineImageArgs> getVirtualMachineImage() {
+    public Output<VirtualMachineImageArgs> virtualMachineImage() {
         return this.virtualMachineImage == null ? Codegen.empty() : this.virtualMachineImage;
     }
 
@@ -123,7 +123,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="vmPriority")
       private final @Nullable Output<Either<String,VmPriority>> vmPriority;
 
-    public Output<Either<String,VmPriority>> getVmPriority() {
+    public Output<Either<String,VmPriority>> vmPriority() {
         return this.vmPriority == null ? Codegen.empty() : this.vmPriority;
     }
 
@@ -134,7 +134,7 @@ public final class AmlComputePropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

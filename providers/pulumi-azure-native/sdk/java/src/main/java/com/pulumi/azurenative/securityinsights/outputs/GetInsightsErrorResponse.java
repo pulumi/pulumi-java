@@ -41,21 +41,21 @@ public final class GetInsightsErrorResponse {
      * the error message
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * the query kind
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * the query id
      * 
     */
-    public Optional<String> getQueryId() {
+    public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }
 

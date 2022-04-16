@@ -33,7 +33,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="codeId")
       private final @Nullable Output<String> codeId;
 
-    public Output<String> getCodeId() {
+    public Output<String> codeId() {
         return this.codeId == null ? Codegen.empty() : this.codeId;
     }
 
@@ -44,7 +44,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="command", required=true)
       private final Output<String> command;
 
-    public Output<String> getCommand() {
+    public Output<String> command() {
         return this.command;
     }
 
@@ -55,7 +55,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="distribution")
       private final @Nullable Output<Object> distribution;
 
-    public Output<Object> getDistribution() {
+    public Output<Object> distribution() {
         return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
@@ -66,7 +66,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -77,7 +77,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -88,7 +88,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="inputDataBindings")
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
-    public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
+    public Output<Map<String,InputDataBindingArgs>> inputDataBindings() {
         return this.inputDataBindings == null ? Codegen.empty() : this.inputDataBindings;
     }
 
@@ -99,7 +99,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="outputDataBindings")
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
-    public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
+    public Output<Map<String,OutputDataBindingArgs>> outputDataBindings() {
         return this.outputDataBindings == null ? Codegen.empty() : this.outputDataBindings;
     }
 
@@ -111,7 +111,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

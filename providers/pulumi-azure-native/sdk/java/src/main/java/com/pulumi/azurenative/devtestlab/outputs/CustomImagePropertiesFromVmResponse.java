@@ -43,21 +43,21 @@ public final class CustomImagePropertiesFromVmResponse {
      * The Linux OS information of the VM.
      * 
     */
-    public Optional<LinuxOsInfoResponse> getLinuxOsInfo() {
+    public Optional<LinuxOsInfoResponse> linuxOsInfo() {
         return Optional.ofNullable(this.linuxOsInfo);
     }
     /**
      * The source vm identifier.
      * 
     */
-    public Optional<String> getSourceVmId() {
+    public Optional<String> sourceVmId() {
         return Optional.ofNullable(this.sourceVmId);
     }
     /**
      * The Windows OS information of the VM.
      * 
     */
-    public Optional<WindowsOsInfoResponse> getWindowsOsInfo() {
+    public Optional<WindowsOsInfoResponse> windowsOsInfo() {
         return Optional.ofNullable(this.windowsOsInfo);
     }
 

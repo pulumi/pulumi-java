@@ -26,7 +26,7 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
      * SQL Server workload type.
      * 
     */
-    public Optional<String> getSqlWorkloadType() {
+    public Optional<String> sqlWorkloadType() {
         return Optional.ofNullable(this.sqlWorkloadType);
     }
 

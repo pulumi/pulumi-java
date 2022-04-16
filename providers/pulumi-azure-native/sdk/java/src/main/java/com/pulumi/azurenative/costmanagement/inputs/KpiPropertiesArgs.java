@@ -29,7 +29,7 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -51,7 +51,7 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,KpiTypeType>> type;
 
-    public Output<Either<String,KpiTypeType>> getType() {
+    public Output<Either<String,KpiTypeType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -39,7 +39,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="algorithm", required=true)
       private final Output<Either<String,SamplingAlgorithm>> algorithm;
 
-    public Output<Either<String,SamplingAlgorithm>> getAlgorithm() {
+    public Output<Either<String,SamplingAlgorithm>> algorithm() {
         return this.algorithm;
     }
 
@@ -50,7 +50,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="compute", required=true)
       private final Output<ComputeConfigurationArgs> compute;
 
-    public Output<ComputeConfigurationArgs> getCompute() {
+    public Output<ComputeConfigurationArgs> compute() {
         return this.compute;
     }
 
@@ -61,7 +61,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -72,7 +72,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="earlyTermination")
       private final @Nullable Output<Object> earlyTermination;
 
-    public Output<Object> getEarlyTermination() {
+    public Output<Object> earlyTermination() {
         return this.earlyTermination == null ? Codegen.empty() : this.earlyTermination;
     }
 
@@ -83,7 +83,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
-    public Output<String> getExperimentName() {
+    public Output<String> experimentName() {
         return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
@@ -95,7 +95,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
-    public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
+    public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -107,7 +107,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobType", required=true)
       private final Output<String> jobType;
 
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType;
     }
 
@@ -118,7 +118,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentTrials")
       private final @Nullable Output<Integer> maxConcurrentTrials;
 
-    public Output<Integer> getMaxConcurrentTrials() {
+    public Output<Integer> maxConcurrentTrials() {
         return this.maxConcurrentTrials == null ? Codegen.empty() : this.maxConcurrentTrials;
     }
 
@@ -129,7 +129,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxTotalTrials")
       private final @Nullable Output<Integer> maxTotalTrials;
 
-    public Output<Integer> getMaxTotalTrials() {
+    public Output<Integer> maxTotalTrials() {
         return this.maxTotalTrials == null ? Codegen.empty() : this.maxTotalTrials;
     }
 
@@ -140,7 +140,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objective", required=true)
       private final Output<ObjectiveArgs> objective;
 
-    public Output<ObjectiveArgs> getObjective() {
+    public Output<ObjectiveArgs> objective() {
         return this.objective;
     }
 
@@ -152,7 +152,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -163,7 +163,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -174,7 +174,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="searchSpace", required=true)
       private final Output<Map<String,Object>> searchSpace;
 
-    public Output<Map<String,Object>> getSearchSpace() {
+    public Output<Map<String,Object>> searchSpace() {
         return this.searchSpace;
     }
 
@@ -185,7 +185,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -196,7 +196,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -207,7 +207,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trial")
       private final @Nullable Output<TrialComponentArgs> trial;
 
-    public Output<TrialComponentArgs> getTrial() {
+    public Output<TrialComponentArgs> trial() {
         return this.trial == null ? Codegen.empty() : this.trial;
     }
 

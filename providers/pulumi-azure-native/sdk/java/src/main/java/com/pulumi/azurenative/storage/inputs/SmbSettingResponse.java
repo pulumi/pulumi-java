@@ -26,7 +26,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authenticationMethods")
       private final @Nullable String authenticationMethods;
 
-    public Optional<String> getAuthenticationMethods() {
+    public Optional<String> authenticationMethods() {
         return this.authenticationMethods == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethods);
     }
 
@@ -37,7 +37,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="channelEncryption")
       private final @Nullable String channelEncryption;
 
-    public Optional<String> getChannelEncryption() {
+    public Optional<String> channelEncryption() {
         return this.channelEncryption == null ? Optional.empty() : Optional.ofNullable(this.channelEncryption);
     }
 
@@ -48,7 +48,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kerberosTicketEncryption")
       private final @Nullable String kerberosTicketEncryption;
 
-    public Optional<String> getKerberosTicketEncryption() {
+    public Optional<String> kerberosTicketEncryption() {
         return this.kerberosTicketEncryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosTicketEncryption);
     }
 
@@ -59,7 +59,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="multichannel")
       private final @Nullable MultichannelResponse multichannel;
 
-    public Optional<MultichannelResponse> getMultichannel() {
+    public Optional<MultichannelResponse> multichannel() {
         return this.multichannel == null ? Optional.empty() : Optional.ofNullable(this.multichannel);
     }
 
@@ -70,7 +70,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="versions")
       private final @Nullable String versions;
 
-    public Optional<String> getVersions() {
+    public Optional<String> versions() {
         return this.versions == null ? Optional.empty() : Optional.ofNullable(this.versions);
     }
 

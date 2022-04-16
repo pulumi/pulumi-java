@@ -27,7 +27,7 @@ public final class TableLevelSharingPropertiesArgs extends com.pulumi.resources.
     @Import(name="externalTablesToExclude")
       private final @Nullable Output<List<String>> externalTablesToExclude;
 
-    public Output<List<String>> getExternalTablesToExclude() {
+    public Output<List<String>> externalTablesToExclude() {
         return this.externalTablesToExclude == null ? Codegen.empty() : this.externalTablesToExclude;
     }
 
@@ -38,7 +38,7 @@ public final class TableLevelSharingPropertiesArgs extends com.pulumi.resources.
     @Import(name="externalTablesToInclude")
       private final @Nullable Output<List<String>> externalTablesToInclude;
 
-    public Output<List<String>> getExternalTablesToInclude() {
+    public Output<List<String>> externalTablesToInclude() {
         return this.externalTablesToInclude == null ? Codegen.empty() : this.externalTablesToInclude;
     }
 
@@ -49,7 +49,7 @@ public final class TableLevelSharingPropertiesArgs extends com.pulumi.resources.
     @Import(name="materializedViewsToExclude")
       private final @Nullable Output<List<String>> materializedViewsToExclude;
 
-    public Output<List<String>> getMaterializedViewsToExclude() {
+    public Output<List<String>> materializedViewsToExclude() {
         return this.materializedViewsToExclude == null ? Codegen.empty() : this.materializedViewsToExclude;
     }
 
@@ -60,7 +60,7 @@ public final class TableLevelSharingPropertiesArgs extends com.pulumi.resources.
     @Import(name="materializedViewsToInclude")
       private final @Nullable Output<List<String>> materializedViewsToInclude;
 
-    public Output<List<String>> getMaterializedViewsToInclude() {
+    public Output<List<String>> materializedViewsToInclude() {
         return this.materializedViewsToInclude == null ? Codegen.empty() : this.materializedViewsToInclude;
     }
 
@@ -71,7 +71,7 @@ public final class TableLevelSharingPropertiesArgs extends com.pulumi.resources.
     @Import(name="tablesToExclude")
       private final @Nullable Output<List<String>> tablesToExclude;
 
-    public Output<List<String>> getTablesToExclude() {
+    public Output<List<String>> tablesToExclude() {
         return this.tablesToExclude == null ? Codegen.empty() : this.tablesToExclude;
     }
 
@@ -82,7 +82,7 @@ public final class TableLevelSharingPropertiesArgs extends com.pulumi.resources.
     @Import(name="tablesToInclude")
       private final @Nullable Output<List<String>> tablesToInclude;
 
-    public Output<List<String>> getTablesToInclude() {
+    public Output<List<String>> tablesToInclude() {
         return this.tablesToInclude == null ? Codegen.empty() : this.tablesToInclude;
     }
 

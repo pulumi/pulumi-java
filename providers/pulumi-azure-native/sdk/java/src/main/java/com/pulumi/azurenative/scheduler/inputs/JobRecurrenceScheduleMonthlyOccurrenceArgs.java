@@ -23,7 +23,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
     @Import(name="day")
       private final @Nullable Output<JobScheduleDay> day;
 
-    public Output<JobScheduleDay> getDay() {
+    public Output<JobScheduleDay> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -34,7 +34,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
     @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> getOccurrence() {
+    public Output<Integer> occurrence() {
         return this.occurrence == null ? Codegen.empty() : this.occurrence;
     }
 

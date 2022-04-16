@@ -43,7 +43,7 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
      * 
      */
-    public Output<Boolean> getBuiltIn() {
+    public Output<Boolean> builtIn() {
         return this.builtIn;
     }
     /**
@@ -57,7 +57,7 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return Group description. Can contain HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return Group name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +85,7 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
      * 
      */
-    public Output</* @Nullable */ String> getExternalId() {
+    public Output</* @Nullable */ String> externalId() {
         return this.externalId;
     }
     /**
@@ -99,7 +99,7 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class ProductGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

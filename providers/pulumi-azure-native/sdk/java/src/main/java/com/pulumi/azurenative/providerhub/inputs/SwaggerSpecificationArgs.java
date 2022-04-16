@@ -19,14 +19,14 @@ public final class SwaggerSpecificationArgs extends com.pulumi.resources.Resourc
     @Import(name="apiVersions")
       private final @Nullable Output<List<String>> apiVersions;
 
-    public Output<List<String>> getApiVersions() {
+    public Output<List<String>> apiVersions() {
         return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
     }
 
     @Import(name="swaggerSpecFolderUri")
       private final @Nullable Output<String> swaggerSpecFolderUri;
 
-    public Output<String> getSwaggerSpecFolderUri() {
+    public Output<String> swaggerSpecFolderUri() {
         return this.swaggerSpecFolderUri == null ? Codegen.empty() : this.swaggerSpecFolderUri;
     }
 

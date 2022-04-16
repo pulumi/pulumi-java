@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends com.pulu
     @Import(name="error", required=true)
       private final ReportableExceptionResponse error;
 
-    public ReportableExceptionResponse getError() {
+    public ReportableExceptionResponse error() {
         return this.error;
     }
 
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends com.pulu
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbTaskOutputErrorResponse extends com.pulu
     @Import(name="resultType", required=true)
       private final String resultType;
 
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

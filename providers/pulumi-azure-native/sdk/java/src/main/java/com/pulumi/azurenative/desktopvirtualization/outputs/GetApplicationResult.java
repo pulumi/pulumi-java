@@ -141,119 +141,119 @@ public final class GetApplicationResult {
      * Resource Type of Application.
      * 
     */
-    public Optional<String> getApplicationType() {
+    public Optional<String> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
     /**
      * Command Line Arguments for Application.
      * 
     */
-    public Optional<String> getCommandLineArguments() {
+    public Optional<String> commandLineArguments() {
         return Optional.ofNullable(this.commandLineArguments);
     }
     /**
      * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
      * 
     */
-    public String getCommandLineSetting() {
+    public String commandLineSetting() {
         return this.commandLineSetting;
     }
     /**
      * Description of Application.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies a path for the executable file for the application.
      * 
     */
-    public Optional<String> getFilePath() {
+    public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
      * Friendly name of Application.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * the icon a 64 bit string as a byte array.
      * 
     */
-    public String getIconContent() {
+    public String iconContent() {
         return this.iconContent;
     }
     /**
      * Hash of the icon.
      * 
     */
-    public String getIconHash() {
+    public String iconHash() {
         return this.iconHash;
     }
     /**
      * Index of the icon.
      * 
     */
-    public Optional<Integer> getIconIndex() {
+    public Optional<Integer> iconIndex() {
         return Optional.ofNullable(this.iconIndex);
     }
     /**
      * Path to icon.
      * 
     */
-    public Optional<String> getIconPath() {
+    public Optional<String> iconPath() {
         return Optional.ofNullable(this.iconPath);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the package application Id for MSIX applications
      * 
     */
-    public Optional<String> getMsixPackageApplicationId() {
+    public Optional<String> msixPackageApplicationId() {
         return Optional.ofNullable(this.msixPackageApplicationId);
     }
     /**
      * Specifies the package family name for MSIX applications
      * 
     */
-    public Optional<String> getMsixPackageFamilyName() {
+    public Optional<String> msixPackageFamilyName() {
         return Optional.ofNullable(this.msixPackageFamilyName);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * ObjectId of Application. (internal use)
      * 
     */
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
     /**
      * Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
     */
-    public Optional<Boolean> getShowInPortal() {
+    public Optional<Boolean> showInPortal() {
         return Optional.ofNullable(this.showInPortal);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

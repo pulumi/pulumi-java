@@ -42,7 +42,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> getCreatedAt() {
+    public Output</* @Nullable */ String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -56,7 +56,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedBy() {
+    public Output</* @Nullable */ String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -70,7 +70,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedByType() {
+    public Output</* @Nullable */ String> createdByType() {
         return this.createdByType;
     }
     /**
@@ -84,7 +84,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedAt() {
+    public Output</* @Nullable */ String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -98,7 +98,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -112,7 +112,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedByType() {
+    public Output</* @Nullable */ String> lastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
@@ -126,13 +126,13 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -146,7 +146,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The resource Id of the connectivity endpoint (optional).
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -160,7 +160,7 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

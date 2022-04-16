@@ -29,7 +29,7 @@ public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="daysOfTheWeek")
       private final @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
 
-    public Output<List<DayOfWeek>> getDaysOfTheWeek() {
+    public Output<List<DayOfWeek>> daysOfTheWeek() {
         return this.daysOfTheWeek == null ? Codegen.empty() : this.daysOfTheWeek;
     }
 
@@ -40,7 +40,7 @@ public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> getRetentionDuration() {
+    public Output<RetentionDurationArgs> retentionDuration() {
         return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
     }
 
@@ -51,7 +51,7 @@ public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.Reso
     @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;
 
-    public Output<List<String>> getRetentionTimes() {
+    public Output<List<String>> retentionTimes() {
         return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
     }
 

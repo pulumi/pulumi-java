@@ -27,7 +27,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="rewriteRules")
       private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
-    public List<ApplicationGatewayRewriteRuleResponse> getRewriteRules() {
+    public List<ApplicationGatewayRewriteRuleResponse> rewriteRules() {
         return this.rewriteRules == null ? List.of() : this.rewriteRules;
     }
 

@@ -27,7 +27,7 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="mechanism", required=true)
       private final Output<AddRemoveReplicaScalingMechanismArgs> mechanism;
 
-    public Output<AddRemoveReplicaScalingMechanismArgs> getMechanism() {
+    public Output<AddRemoveReplicaScalingMechanismArgs> mechanism() {
         return this.mechanism;
     }
 
@@ -38,7 +38,7 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class AutoScalingPolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="trigger", required=true)
       private final Output<AverageLoadScalingTriggerArgs> trigger;
 
-    public Output<AverageLoadScalingTriggerArgs> getTrigger() {
+    public Output<AverageLoadScalingTriggerArgs> trigger() {
         return this.trigger;
     }
 

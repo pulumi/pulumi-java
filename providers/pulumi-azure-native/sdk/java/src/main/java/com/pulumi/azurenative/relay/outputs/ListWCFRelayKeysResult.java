@@ -55,35 +55,35 @@ public final class ListWCFRelayKeysResult {
      * A string that describes the authorization rule.
      * 
     */
-    public Optional<String> getKeyName() {
+    public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Primary connection string of the created namespace authorization rule.
      * 
     */
-    public Optional<String> getPrimaryConnectionString() {
+    public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
     */
-    public Optional<String> getPrimaryKey() {
+    public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Secondary connection string of the created namespace authorization rule.
      * 
     */
-    public Optional<String> getSecondaryConnectionString() {
+    public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
      * A base64-encoded 256-bit secondary key for signing and validating the SAS token.
      * 
     */
-    public Optional<String> getSecondaryKey() {
+    public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
 

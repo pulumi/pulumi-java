@@ -27,7 +27,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -38,7 +38,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -49,7 +49,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends com.pulu
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MySqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MySqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MySqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

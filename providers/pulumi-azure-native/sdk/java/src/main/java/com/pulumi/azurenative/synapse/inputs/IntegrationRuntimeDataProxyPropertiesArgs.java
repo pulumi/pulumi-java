@@ -27,7 +27,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
     @Import(name="connectVia")
       private final @Nullable Output<EntityReferenceArgs> connectVia;
 
-    public Output<EntityReferenceArgs> getConnectVia() {
+    public Output<EntityReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
     @Import(name="stagingLinkedService")
       private final @Nullable Output<EntityReferenceArgs> stagingLinkedService;
 
-    public Output<EntityReferenceArgs> getStagingLinkedService() {
+    public Output<EntityReferenceArgs> stagingLinkedService() {
         return this.stagingLinkedService == null ? Codegen.empty() : this.stagingLinkedService;
     }
 

@@ -25,7 +25,7 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

@@ -35,14 +35,14 @@ public final class ElasticPropertiesResponse {
      * Details of the elastic cloud deployment.
      * 
     */
-    public Optional<ElasticCloudDeploymentResponse> getElasticCloudDeployment() {
+    public Optional<ElasticCloudDeploymentResponse> elasticCloudDeployment() {
         return Optional.ofNullable(this.elasticCloudDeployment);
     }
     /**
      * Details of the user's elastic account.
      * 
     */
-    public Optional<ElasticCloudUserResponse> getElasticCloudUser() {
+    public Optional<ElasticCloudUserResponse> elasticCloudUser() {
         return Optional.ofNullable(this.elasticCloudUser);
     }
 

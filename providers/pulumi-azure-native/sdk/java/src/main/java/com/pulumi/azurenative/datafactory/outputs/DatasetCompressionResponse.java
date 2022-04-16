@@ -34,14 +34,14 @@ public final class DatasetCompressionResponse {
      * The dataset compression level. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getLevel() {
+    public Optional<Object> level() {
         return Optional.ofNullable(this.level);
     }
     /**
      * Type of dataset compression. Type: string (or Expression with resultType string).
      * 
     */
-    public Object getType() {
+    public Object type() {
         return this.type;
     }
 

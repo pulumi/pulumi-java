@@ -28,7 +28,7 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="defaultFilePath")
       private final @Nullable Output<String> defaultFilePath;
 
-    public Output<String> getDefaultFilePath() {
+    public Output<String> defaultFilePath() {
         return this.defaultFilePath == null ? Codegen.empty() : this.defaultFilePath;
     }
 
@@ -39,7 +39,7 @@ public final class SQLStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="luns")
       private final @Nullable Output<List<Integer>> luns;
 
-    public Output<List<Integer>> getLuns() {
+    public Output<List<Integer>> luns() {
         return this.luns == null ? Codegen.empty() : this.luns;
     }
 

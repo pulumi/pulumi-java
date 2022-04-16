@@ -47,28 +47,28 @@ public final class PlanQuantityResponse {
      * The quantity added to the commitment plan at an interval specified by its allowance frequency.
      * 
     */
-    public Double getAllowance() {
+    public Double allowance() {
         return this.allowance;
     }
     /**
      * The quantity available to the plan the last time usage was calculated.
      * 
     */
-    public Double getAmount() {
+    public Double amount() {
         return this.amount;
     }
     /**
      * The Azure meter for usage against included quantities.
      * 
     */
-    public String getIncludedQuantityMeter() {
+    public String includedQuantityMeter() {
         return this.includedQuantityMeter;
     }
     /**
      * The Azure meter for usage which exceeds included quantities.
      * 
     */
-    public String getOverageMeter() {
+    public String overageMeter() {
         return this.overageMeter;
     }
 

@@ -44,7 +44,7 @@ public class ConfigurationProfilePreference extends com.pulumi.resources.CustomR
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class ConfigurationProfilePreference extends com.pulumi.resources.CustomR
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class ConfigurationProfilePreference extends com.pulumi.resources.CustomR
      * @return Properties of the configuration profile preference.
      * 
      */
-    public Output<ConfigurationProfilePreferencePropertiesResponse> getProperties() {
+    public Output<ConfigurationProfilePreferencePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class ConfigurationProfilePreference extends com.pulumi.resources.CustomR
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -100,7 +100,7 @@ public class ConfigurationProfilePreference extends com.pulumi.resources.CustomR
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

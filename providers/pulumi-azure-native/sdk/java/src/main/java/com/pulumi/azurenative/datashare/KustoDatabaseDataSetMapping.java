@@ -43,7 +43,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return The id of the source data set.
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -57,7 +57,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return Gets the status of the data set mapping.
      * 
      */
-    public Output<String> getDataSetMappingStatus() {
+    public Output<String> dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
@@ -73,7 +73,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * Expected value is 'KustoDatabase'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +87,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return Resource id of the sink kusto cluster.
      * 
      */
-    public Output<String> getKustoClusterResourceId() {
+    public Output<String> kustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
@@ -101,7 +101,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return Location of the sink kusto cluster.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return Provisioning state of the data set mapping.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +143,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -157,7 +157,7 @@ public class KustoDatabaseDataSetMapping extends com.pulumi.resources.CustomReso
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

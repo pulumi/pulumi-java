@@ -22,7 +22,7 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
+    public Output<String> endIpAddress() {
         return this.endIpAddress == null ? Codegen.empty() : this.endIpAddress;
     }
 
@@ -33,7 +33,7 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
@@ -55,7 +55,7 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
+    public Output<String> startIpAddress() {
         return this.startIpAddress == null ? Codegen.empty() : this.startIpAddress;
     }
 
@@ -66,7 +66,7 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -27,7 +27,7 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -38,7 +38,7 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetPrefixLength")
       private final @Nullable Output<Integer> subnetPrefixLength;
 
-    public Output<Integer> getSubnetPrefixLength() {
+    public Output<Integer> subnetPrefixLength() {
         return this.subnetPrefixLength == null ? Codegen.empty() : this.subnetPrefixLength;
     }
 

@@ -45,7 +45,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The ETag for the resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identity of the cluster, if configured.
      * 
      */
-    public Output</* @Nullable */ ClusterIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ClusterIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -73,7 +73,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The properties of the cluster.
      * 
      */
-    public Output<ClusterGetPropertiesResponse> getProperties() {
+    public Output<ClusterGetPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -115,7 +115,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

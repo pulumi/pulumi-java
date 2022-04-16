@@ -34,14 +34,14 @@ public final class ListWebAppSyncFunctionTriggersSlotResult {
      * Secret key.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Trigger URL.
      * 
     */
-    public Optional<String> getTriggerUrl() {
+    public Optional<String> triggerUrl() {
         return Optional.ofNullable(this.triggerUrl);
     }
 

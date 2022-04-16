@@ -26,7 +26,7 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesScubaReader
      * The cloud role ARN in AWS for this feature
      * 
     */
-    public Optional<String> getCloudRoleArn() {
+    public Optional<String> cloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }
 

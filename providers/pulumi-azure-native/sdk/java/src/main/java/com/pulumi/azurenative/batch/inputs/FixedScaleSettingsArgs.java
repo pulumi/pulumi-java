@@ -24,7 +24,7 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="nodeDeallocationOption")
       private final @Nullable Output<ComputeNodeDeallocationOption> nodeDeallocationOption;
 
-    public Output<ComputeNodeDeallocationOption> getNodeDeallocationOption() {
+    public Output<ComputeNodeDeallocationOption> nodeDeallocationOption() {
         return this.nodeDeallocationOption == null ? Codegen.empty() : this.nodeDeallocationOption;
     }
 
@@ -35,7 +35,7 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="resizeTimeout")
       private final @Nullable Output<String> resizeTimeout;
 
-    public Output<String> getResizeTimeout() {
+    public Output<String> resizeTimeout() {
         return this.resizeTimeout == null ? Codegen.empty() : this.resizeTimeout;
     }
 
@@ -46,7 +46,7 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetDedicatedNodes")
       private final @Nullable Output<Integer> targetDedicatedNodes;
 
-    public Output<Integer> getTargetDedicatedNodes() {
+    public Output<Integer> targetDedicatedNodes() {
         return this.targetDedicatedNodes == null ? Codegen.empty() : this.targetDedicatedNodes;
     }
 
@@ -57,7 +57,7 @@ public final class FixedScaleSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="targetLowPriorityNodes")
       private final @Nullable Output<Integer> targetLowPriorityNodes;
 
-    public Output<Integer> getTargetLowPriorityNodes() {
+    public Output<Integer> targetLowPriorityNodes() {
         return this.targetLowPriorityNodes == null ? Codegen.empty() : this.targetLowPriorityNodes;
     }
 

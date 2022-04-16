@@ -26,7 +26,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
     @Import(name="issue")
       private final @Nullable String issue;
 
-    public Optional<String> getIssue() {
+    public Optional<String> issue() {
         return this.issue == null ? Optional.empty() : Optional.ofNullable(this.issue);
     }
 
@@ -37,7 +37,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
     @Import(name="numberOfVms")
       private final @Nullable Double numberOfVms;
 
-    public Optional<Double> getNumberOfVms() {
+    public Optional<Double> numberOfVms() {
         return this.numberOfVms == null ? Optional.empty() : Optional.ofNullable(this.numberOfVms);
     }
 

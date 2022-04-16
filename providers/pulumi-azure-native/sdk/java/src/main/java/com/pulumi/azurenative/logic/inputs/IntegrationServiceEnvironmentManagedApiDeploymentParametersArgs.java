@@ -26,7 +26,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
     @Import(name="contentLinkDefinition")
       private final @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
-    public Output<ContentLinkArgs> getContentLinkDefinition() {
+    public Output<ContentLinkArgs> contentLinkDefinition() {
         return this.contentLinkDefinition == null ? Codegen.empty() : this.contentLinkDefinition;
     }
 

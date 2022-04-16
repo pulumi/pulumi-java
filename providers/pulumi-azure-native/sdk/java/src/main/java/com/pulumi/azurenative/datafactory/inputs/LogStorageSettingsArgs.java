@@ -27,7 +27,7 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableReliableLogging")
       private final @Nullable Output<Object> enableReliableLogging;
 
-    public Output<Object> getEnableReliableLogging() {
+    public Output<Object> enableReliableLogging() {
         return this.enableReliableLogging == null ? Codegen.empty() : this.enableReliableLogging;
     }
 
@@ -38,7 +38,7 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -49,7 +49,7 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="logLevel")
       private final @Nullable Output<Object> logLevel;
 
-    public Output<Object> getLogLevel() {
+    public Output<Object> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -60,7 +60,7 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="path")
       private final @Nullable Output<Object> path;
 
-    public Output<Object> getPath() {
+    public Output<Object> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

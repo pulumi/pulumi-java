@@ -25,7 +25,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cisIntrinsicSettings")
       private final @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
 
-    public Output<ManagerIntrinsicSettingsArgs> getCisIntrinsicSettings() {
+    public Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings() {
         return this.cisIntrinsicSettings == null ? Codegen.empty() : this.cisIntrinsicSettings;
     }
 
@@ -36,7 +36,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managerName")
       private final @Nullable Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName == null ? Codegen.empty() : this.managerName;
     }
 
@@ -58,7 +58,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -69,7 +69,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,7 +80,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ManagerSkuArgs> sku;
 
-    public Output<ManagerSkuArgs> getSku() {
+    public Output<ManagerSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -91,7 +91,7 @@ public final class ManagerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

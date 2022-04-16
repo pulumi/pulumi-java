@@ -43,7 +43,7 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return The provisioning state of the RoutingIntent resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -85,7 +85,7 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return List of routing policies.
      * 
      */
-    public Output</* @Nullable */ List<RoutingPolicyResponse>> getRoutingPolicies() {
+    public Output</* @Nullable */ List<RoutingPolicyResponse>> routingPolicies() {
         return this.routingPolicies;
     }
     /**
@@ -99,7 +99,7 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

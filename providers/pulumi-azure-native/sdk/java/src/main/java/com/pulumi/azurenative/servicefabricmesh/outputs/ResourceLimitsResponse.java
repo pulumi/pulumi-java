@@ -34,14 +34,14 @@ public final class ResourceLimitsResponse {
      * CPU limits in cores. At present, only full cores are supported.
      * 
     */
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * The memory limit in GB.
      * 
     */
-    public Optional<Double> getMemoryInGB() {
+    public Optional<Double> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
 

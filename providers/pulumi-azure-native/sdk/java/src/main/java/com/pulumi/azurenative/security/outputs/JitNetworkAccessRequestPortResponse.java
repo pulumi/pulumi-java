@@ -67,45 +67,45 @@ public final class JitNetworkAccessRequestPortResponse {
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
      * 
     */
-    public Optional<String> getAllowedSourceAddressPrefix() {
+    public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
      * 
     */
-    public List<String> getAllowedSourceAddressPrefixes() {
+    public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
      * The date & time at which the request ends in UTC
      * 
     */
-    public String getEndTimeUtc() {
+    public String endTimeUtc() {
         return this.endTimeUtc;
     }
     /**
      * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
      * 
     */
-    public Optional<Integer> getMappedPort() {
+    public Optional<Integer> mappedPort() {
         return Optional.ofNullable(this.mappedPort);
     }
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
     /**
      * The status of the port
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * A description of why the `status` has its value
      * 
     */
-    public String getStatusReason() {
+    public String statusReason() {
         return this.statusReason;
     }
 

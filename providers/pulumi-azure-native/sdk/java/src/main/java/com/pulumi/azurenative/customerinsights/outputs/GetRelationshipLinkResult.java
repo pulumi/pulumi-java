@@ -121,98 +121,98 @@ public final class GetRelationshipLinkResult {
      * Localized descriptions for the Relationship Link.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name for the Relationship Link.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The InteractionType associated with the Relationship Link.
      * 
     */
-    public String getInteractionType() {
+    public String interactionType() {
         return this.interactionType;
     }
     /**
      * The name of the Relationship Link.
      * 
     */
-    public String getLinkName() {
+    public String linkName() {
         return this.linkName;
     }
     /**
      * The mappings between Interaction and Relationship fields.
      * 
     */
-    public List<RelationshipLinkFieldMappingResponse> getMappings() {
+    public List<RelationshipLinkFieldMappingResponse> mappings() {
         return this.mappings == null ? List.of() : this.mappings;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The property references for the Profile of the Relationship.
      * 
     */
-    public List<ParticipantProfilePropertyReferenceResponse> getProfilePropertyReferences() {
+    public List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences() {
         return this.profilePropertyReferences;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The property references for the Related Profile of the Relationship.
      * 
     */
-    public List<ParticipantProfilePropertyReferenceResponse> getRelatedProfilePropertyReferences() {
+    public List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
     /**
      * The relationship guid id.
      * 
     */
-    public String getRelationshipGuidId() {
+    public String relationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
      * The Relationship associated with the Link.
      * 
     */
-    public String getRelationshipName() {
+    public String relationshipName() {
         return this.relationshipName;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

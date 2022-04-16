@@ -23,7 +23,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationData")
       private final @Nullable Output<ResourceLocationDataContractArgs> locationData;
 
-    public Output<ResourceLocationDataContractArgs> getLocationData() {
+    public Output<ResourceLocationDataContractArgs> locationData() {
         return this.locationData == null ? Codegen.empty() : this.locationData;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

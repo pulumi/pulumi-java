@@ -26,7 +26,7 @@ public final class AvroSerializationResponse {
      * Expected value is 'Avro'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

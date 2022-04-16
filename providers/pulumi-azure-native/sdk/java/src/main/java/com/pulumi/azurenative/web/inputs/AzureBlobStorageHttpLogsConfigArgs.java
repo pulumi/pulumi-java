@@ -28,7 +28,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -41,7 +41,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
+    public Output<Integer> retentionInDays() {
         return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
@@ -52,7 +52,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends com.pulumi.resourc
     @Import(name="sasUrl")
       private final @Nullable Output<String> sasUrl;
 
-    public Output<String> getSasUrl() {
+    public Output<String> sasUrl() {
         return this.sasUrl == null ? Codegen.empty() : this.sasUrl;
     }
 

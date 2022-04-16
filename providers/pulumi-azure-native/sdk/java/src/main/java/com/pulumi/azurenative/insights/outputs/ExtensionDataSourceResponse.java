@@ -59,21 +59,21 @@ public final class ExtensionDataSourceResponse {
      * The name of the VM extension.
      * 
     */
-    public String getExtensionName() {
+    public String extensionName() {
         return this.extensionName;
     }
     /**
      * The extension settings. The format is specific for particular extension.
      * 
     */
-    public Optional<Object> getExtensionSettings() {
+    public Optional<Object> extensionSettings() {
         return Optional.ofNullable(this.extensionSettings);
     }
     /**
      * The list of data sources this extension needs data from.
      * 
     */
-    public List<String> getInputDataSources() {
+    public List<String> inputDataSources() {
         return this.inputDataSources == null ? List.of() : this.inputDataSources;
     }
     /**
@@ -81,7 +81,7 @@ public final class ExtensionDataSourceResponse {
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -89,7 +89,7 @@ public final class ExtensionDataSourceResponse {
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
     */
-    public List<String> getStreams() {
+    public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
 

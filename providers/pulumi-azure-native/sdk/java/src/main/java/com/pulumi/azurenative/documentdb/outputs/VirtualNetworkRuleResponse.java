@@ -35,14 +35,14 @@ public final class VirtualNetworkRuleResponse {
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
     */
-    public Optional<Boolean> getIgnoreMissingVNetServiceEndpoint() {
+    public Optional<Boolean> ignoreMissingVNetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVNetServiceEndpoint);
     }
 

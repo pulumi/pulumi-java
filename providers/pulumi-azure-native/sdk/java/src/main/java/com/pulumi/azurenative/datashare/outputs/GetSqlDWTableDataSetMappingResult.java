@@ -104,28 +104,28 @@ public final class GetSqlDWTableDataSetMappingResult {
      * The id of the source data set.
      * 
     */
-    public String getDataSetId() {
+    public String dataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
     */
-    public String getDataSetMappingStatus() {
+    public String dataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * DataWarehouse name of the source data set
      * 
     */
-    public String getDataWarehouseName() {
+    public String dataWarehouseName() {
         return this.dataWarehouseName;
     }
     /**
      * The resource id of the azure resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -133,56 +133,56 @@ public final class GetSqlDWTableDataSetMappingResult {
      * Expected value is 'SqlDWTable'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Schema of the table. Default value is dbo.
      * 
     */
-    public String getSchemaName() {
+    public String schemaName() {
         return this.schemaName;
     }
     /**
      * Resource id of SQL server
      * 
     */
-    public String getSqlServerResourceId() {
+    public String sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
      * System Data of the Azure resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * SQL DW table name.
      * 
     */
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
     /**
      * Type of the azure resource
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

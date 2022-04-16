@@ -58,35 +58,35 @@ public final class ServiceUnitResponse {
      * The artifacts for the service unit.
      * 
     */
-    public Optional<ServiceUnitArtifactsResponse> getArtifacts() {
+    public Optional<ServiceUnitArtifactsResponse> artifacts() {
         return Optional.ofNullable(this.artifacts);
     }
     /**
      * Describes the type of ARM deployment to be performed on the resource.
      * 
     */
-    public String getDeploymentMode() {
+    public String deploymentMode() {
         return this.deploymentMode;
     }
     /**
      * Name of the service unit.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Detailed step information, if present.
      * 
     */
-    public List<RolloutStepResponse> getSteps() {
+    public List<RolloutStepResponse> steps() {
         return this.steps == null ? List.of() : this.steps;
     }
     /**
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
      * 
     */
-    public String getTargetResourceGroup() {
+    public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
 

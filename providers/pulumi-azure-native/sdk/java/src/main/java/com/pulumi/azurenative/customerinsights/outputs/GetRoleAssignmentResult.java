@@ -185,161 +185,161 @@ public final class GetRoleAssignmentResult {
      * The name of the metadata object.
      * 
     */
-    public String getAssignmentName() {
+    public String assignmentName() {
         return this.assignmentName;
     }
     /**
      * Widget types set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getConflationPolicies() {
+    public Optional<ResourceSetDescriptionResponse> conflationPolicies() {
         return Optional.ofNullable(this.conflationPolicies);
     }
     /**
      * Connectors set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getConnectors() {
+    public Optional<ResourceSetDescriptionResponse> connectors() {
         return Optional.ofNullable(this.connectors);
     }
     /**
      * Localized description for the metadata.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display names for the metadata.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Interactions set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getInteractions() {
+    public Optional<ResourceSetDescriptionResponse> interactions() {
         return Optional.ofNullable(this.interactions);
     }
     /**
      * Kpis set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getKpis() {
+    public Optional<ResourceSetDescriptionResponse> kpis() {
         return Optional.ofNullable(this.kpis);
     }
     /**
      * Links set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getLinks() {
+    public Optional<ResourceSetDescriptionResponse> links() {
         return Optional.ofNullable(this.links);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The principals being assigned to.
      * 
     */
-    public List<AssignmentPrincipalResponse> getPrincipals() {
+    public List<AssignmentPrincipalResponse> principals() {
         return this.principals;
     }
     /**
      * Profiles set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getProfiles() {
+    public Optional<ResourceSetDescriptionResponse> profiles() {
         return Optional.ofNullable(this.profiles);
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The Role assignments set for the relationship links.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getRelationshipLinks() {
+    public Optional<ResourceSetDescriptionResponse> relationshipLinks() {
         return Optional.ofNullable(this.relationshipLinks);
     }
     /**
      * The Role assignments set for the relationships.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getRelationships() {
+    public Optional<ResourceSetDescriptionResponse> relationships() {
         return Optional.ofNullable(this.relationships);
     }
     /**
      * Type of roles.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
     /**
      * The Role assignments set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getRoleAssignments() {
+    public Optional<ResourceSetDescriptionResponse> roleAssignments() {
         return Optional.ofNullable(this.roleAssignments);
     }
     /**
      * Sas Policies set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getSasPolicies() {
+    public Optional<ResourceSetDescriptionResponse> sasPolicies() {
         return Optional.ofNullable(this.sasPolicies);
     }
     /**
      * The Role assignments set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getSegments() {
+    public Optional<ResourceSetDescriptionResponse> segments() {
         return Optional.ofNullable(this.segments);
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Views set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getViews() {
+    public Optional<ResourceSetDescriptionResponse> views() {
         return Optional.ofNullable(this.views);
     }
     /**
      * Widget types set for the assignment.
      * 
     */
-    public Optional<ResourceSetDescriptionResponse> getWidgetTypes() {
+    public Optional<ResourceSetDescriptionResponse> widgetTypes() {
         return Optional.ofNullable(this.widgetTypes);
     }
 

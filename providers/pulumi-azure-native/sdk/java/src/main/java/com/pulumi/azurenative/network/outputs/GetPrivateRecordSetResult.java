@@ -144,112 +144,112 @@ public final class GetPrivateRecordSetResult {
      * The list of A records in the record set.
      * 
     */
-    public List<ARecordResponse> getARecords() {
+    public List<ARecordResponse> aRecords() {
         return this.aRecords == null ? List.of() : this.aRecords;
     }
     /**
      * The list of AAAA records in the record set.
      * 
     */
-    public List<AaaaRecordResponse> getAaaaRecords() {
+    public List<AaaaRecordResponse> aaaaRecords() {
         return this.aaaaRecords == null ? List.of() : this.aaaaRecords;
     }
     /**
      * The CNAME record in the record set.
      * 
     */
-    public Optional<CnameRecordResponse> getCnameRecord() {
+    public Optional<CnameRecordResponse> cnameRecord() {
         return Optional.ofNullable(this.cnameRecord);
     }
     /**
      * The ETag of the record set.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified domain name of the record set.
      * 
     */
-    public String getFqdn() {
+    public String fqdn() {
         return this.fqdn;
     }
     /**
      * Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Is the record set auto-registered in the Private DNS zone through a virtual network link?
      * 
     */
-    public Boolean getIsAutoRegistered() {
+    public Boolean isAutoRegistered() {
         return this.isAutoRegistered;
     }
     /**
      * The metadata attached to the record set.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The list of MX records in the record set.
      * 
     */
-    public List<MxRecordResponse> getMxRecords() {
+    public List<MxRecordResponse> mxRecords() {
         return this.mxRecords == null ? List.of() : this.mxRecords;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of PTR records in the record set.
      * 
     */
-    public List<PtrRecordResponse> getPtrRecords() {
+    public List<PtrRecordResponse> ptrRecords() {
         return this.ptrRecords == null ? List.of() : this.ptrRecords;
     }
     /**
      * The SOA record in the record set.
      * 
     */
-    public Optional<SoaRecordResponse> getSoaRecord() {
+    public Optional<SoaRecordResponse> soaRecord() {
         return Optional.ofNullable(this.soaRecord);
     }
     /**
      * The list of SRV records in the record set.
      * 
     */
-    public List<SrvRecordResponse> getSrvRecords() {
+    public List<SrvRecordResponse> srvRecords() {
         return this.srvRecords == null ? List.of() : this.srvRecords;
     }
     /**
      * The TTL (time-to-live) of the records in the record set.
      * 
     */
-    public Optional<Double> getTtl() {
+    public Optional<Double> ttl() {
         return Optional.ofNullable(this.ttl);
     }
     /**
      * The list of TXT records in the record set.
      * 
     */
-    public List<TxtRecordResponse> getTxtRecords() {
+    public List<TxtRecordResponse> txtRecords() {
         return this.txtRecords == null ? List.of() : this.txtRecords;
     }
     /**
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

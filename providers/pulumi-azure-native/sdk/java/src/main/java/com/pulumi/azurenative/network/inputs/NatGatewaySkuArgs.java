@@ -28,7 +28,7 @@ public final class NatGatewaySkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,NatGatewaySkuName>> name;
 
-    public Output<Either<String,NatGatewaySkuName>> getName() {
+    public Output<Either<String,NatGatewaySkuName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

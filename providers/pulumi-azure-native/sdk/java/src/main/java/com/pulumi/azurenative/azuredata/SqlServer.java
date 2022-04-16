@@ -43,7 +43,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Cores of the Sql Server.
      * 
      */
-    public Output</* @Nullable */ Integer> getCores() {
+    public Output</* @Nullable */ Integer> cores() {
         return this.cores;
     }
     /**
@@ -57,7 +57,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Sql Server Edition.
      * 
      */
-    public Output</* @Nullable */ String> getEdition() {
+    public Output</* @Nullable */ String> edition() {
         return this.edition;
     }
     /**
@@ -71,7 +71,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Sql Server Json Property Bag.
      * 
      */
-    public Output</* @Nullable */ String> getPropertyBag() {
+    public Output</* @Nullable */ String> propertyBag() {
         return this.propertyBag;
     }
     /**
@@ -99,7 +99,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return ID for Parent Sql Server Registration.
      * 
      */
-    public Output</* @Nullable */ String> getRegistrationID() {
+    public Output</* @Nullable */ String> registrationID() {
         return this.registrationID;
     }
     /**
@@ -113,7 +113,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -127,7 +127,7 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Version of the Sql Server.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 

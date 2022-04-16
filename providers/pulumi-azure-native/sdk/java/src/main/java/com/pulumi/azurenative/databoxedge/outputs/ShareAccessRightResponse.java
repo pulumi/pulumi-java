@@ -32,14 +32,14 @@ public final class ShareAccessRightResponse {
      * Type of access to be allowed on the share for this user.
      * 
     */
-    public String getAccessType() {
+    public String accessType() {
         return this.accessType;
     }
     /**
      * The share ID.
      * 
     */
-    public String getShareId() {
+    public String shareId() {
         return this.shareId;
     }
 

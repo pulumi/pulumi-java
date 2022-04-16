@@ -26,7 +26,7 @@ public final class HlsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fragmentsPerTsSegment")
       private final @Nullable Output<Integer> fragmentsPerTsSegment;
 
-    public Output<Integer> getFragmentsPerTsSegment() {
+    public Output<Integer> fragmentsPerTsSegment() {
         return this.fragmentsPerTsSegment == null ? Codegen.empty() : this.fragmentsPerTsSegment;
     }
 

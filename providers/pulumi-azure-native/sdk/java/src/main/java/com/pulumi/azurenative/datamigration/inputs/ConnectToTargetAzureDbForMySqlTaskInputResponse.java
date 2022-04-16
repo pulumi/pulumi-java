@@ -23,7 +23,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
     @Import(name="sourceConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
-    public MySqlConnectionInfoResponse getSourceConnectionInfo() {
+    public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -34,7 +34,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
     @Import(name="targetConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse targetConnectionInfo;
 
-    public MySqlConnectionInfoResponse getTargetConnectionInfo() {
+    public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

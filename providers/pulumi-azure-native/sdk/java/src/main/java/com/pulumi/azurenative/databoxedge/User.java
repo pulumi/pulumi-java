@@ -45,7 +45,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The password details.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getEncryptedPassword() {
+    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptedPassword() {
         return this.encryptedPassword;
     }
     /**
@@ -59,7 +59,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return List of shares that the user has rights on. This field should not be specified during user creation.
      * 
      */
-    public Output<List<ShareAccessRightResponse>> getShareAccessRights() {
+    public Output<List<ShareAccessRightResponse>> shareAccessRights() {
         return this.shareAccessRights;
     }
     /**
@@ -87,7 +87,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return User in DataBoxEdge Resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -101,7 +101,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -115,7 +115,7 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Type of the user.
      * 
      */
-    public Output<String> getUserType() {
+    public Output<String> userType() {
         return this.userType;
     }
 

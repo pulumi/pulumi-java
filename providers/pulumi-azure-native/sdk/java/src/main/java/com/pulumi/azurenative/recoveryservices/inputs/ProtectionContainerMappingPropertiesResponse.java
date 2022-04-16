@@ -30,7 +30,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="health")
       private final @Nullable String health;
 
-    public Optional<String> getHealth() {
+    public Optional<String> health() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
@@ -41,7 +41,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
-    public List<HealthErrorResponse> getHealthErrorDetails() {
+    public List<HealthErrorResponse> healthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
 
@@ -52,7 +52,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="policyFriendlyName")
       private final @Nullable String policyFriendlyName;
 
-    public Optional<String> getPolicyFriendlyName() {
+    public Optional<String> policyFriendlyName() {
         return this.policyFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.policyFriendlyName);
     }
 
@@ -63,7 +63,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="policyId")
       private final @Nullable String policyId;
 
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
@@ -74,7 +74,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="providerSpecificDetails")
       private final @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
 
-    public Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> getProviderSpecificDetails() {
+    public Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
     }
 
@@ -85,7 +85,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="sourceFabricFriendlyName")
       private final @Nullable String sourceFabricFriendlyName;
 
-    public Optional<String> getSourceFabricFriendlyName() {
+    public Optional<String> sourceFabricFriendlyName() {
         return this.sourceFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.sourceFabricFriendlyName);
     }
 
@@ -96,7 +96,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="sourceProtectionContainerFriendlyName")
       private final @Nullable String sourceProtectionContainerFriendlyName;
 
-    public Optional<String> getSourceProtectionContainerFriendlyName() {
+    public Optional<String> sourceProtectionContainerFriendlyName() {
         return this.sourceProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
     }
 
@@ -107,7 +107,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -118,7 +118,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="targetFabricFriendlyName")
       private final @Nullable String targetFabricFriendlyName;
 
-    public Optional<String> getTargetFabricFriendlyName() {
+    public Optional<String> targetFabricFriendlyName() {
         return this.targetFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.targetFabricFriendlyName);
     }
 
@@ -129,7 +129,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="targetProtectionContainerFriendlyName")
       private final @Nullable String targetProtectionContainerFriendlyName;
 
-    public Optional<String> getTargetProtectionContainerFriendlyName() {
+    public Optional<String> targetProtectionContainerFriendlyName() {
         return this.targetProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.targetProtectionContainerFriendlyName);
     }
 
@@ -140,7 +140,7 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
     @Import(name="targetProtectionContainerId")
       private final @Nullable String targetProtectionContainerId;
 
-    public Optional<String> getTargetProtectionContainerId() {
+    public Optional<String> targetProtectionContainerId() {
         return this.targetProtectionContainerId == null ? Optional.empty() : Optional.ofNullable(this.targetProtectionContainerId);
     }
 

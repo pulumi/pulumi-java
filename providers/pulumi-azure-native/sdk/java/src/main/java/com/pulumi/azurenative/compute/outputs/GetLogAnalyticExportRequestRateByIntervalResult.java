@@ -24,7 +24,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
      * LogAnalyticsOutput
      * 
     */
-    public LogAnalyticsOutputResponse getProperties() {
+    public LogAnalyticsOutputResponse properties() {
         return this.properties;
     }
 

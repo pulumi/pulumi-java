@@ -34,14 +34,14 @@ public final class ListPartnerNamespaceSharedAccessKeysResult {
      * Shared access key1 for the partner namespace.
      * 
     */
-    public Optional<String> getKey1() {
+    public Optional<String> key1() {
         return Optional.ofNullable(this.key1);
     }
     /**
      * Shared access key2 for the partner namespace.
      * 
     */
-    public Optional<String> getKey2() {
+    public Optional<String> key2() {
         return Optional.ofNullable(this.key2);
     }
 

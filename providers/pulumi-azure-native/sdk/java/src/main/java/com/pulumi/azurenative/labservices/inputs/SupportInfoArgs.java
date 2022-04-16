@@ -26,7 +26,7 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -37,7 +37,7 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instructions")
       private final @Nullable Output<String> instructions;
 
-    public Output<String> getInstructions() {
+    public Output<String> instructions() {
         return this.instructions == null ? Codegen.empty() : this.instructions;
     }
 
@@ -48,7 +48,7 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone == null ? Codegen.empty() : this.phone;
     }
 
@@ -59,7 +59,7 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

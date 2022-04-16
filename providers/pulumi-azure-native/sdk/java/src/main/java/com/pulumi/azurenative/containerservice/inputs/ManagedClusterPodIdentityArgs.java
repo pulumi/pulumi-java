@@ -23,7 +23,7 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="bindingSelector")
       private final @Nullable Output<String> bindingSelector;
 
-    public Output<String> getBindingSelector() {
+    public Output<String> bindingSelector() {
         return this.bindingSelector == null ? Codegen.empty() : this.bindingSelector;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="identity", required=true)
       private final Output<UserAssignedIdentityArgs> identity;
 
-    public Output<UserAssignedIdentityArgs> getIdentity() {
+    public Output<UserAssignedIdentityArgs> identity() {
         return this.identity;
     }
 
@@ -45,7 +45,7 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 

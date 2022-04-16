@@ -19,7 +19,7 @@ public final class GetTIDataConnectorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="dataConnectorId", required=true)
       private final String dataConnectorId;
 
-    public String getDataConnectorId() {
+    public String dataConnectorId() {
         return this.dataConnectorId;
     }
 
@@ -30,7 +30,7 @@ public final class GetTIDataConnectorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTIDataConnectorArgs extends com.pulumi.resources.InvokeArg
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

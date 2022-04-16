@@ -25,7 +25,7 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -36,7 +36,7 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="documentation")
       private final @Nullable String documentation;
 
-    public Optional<String> getDocumentation() {
+    public Optional<String> documentation() {
         return this.documentation == null ? Optional.empty() : Optional.ofNullable(this.documentation);
     }
 
@@ -47,7 +47,7 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="serverUrl")
       private final @Nullable String serverUrl;
 
-    public Optional<String> getServerUrl() {
+    public Optional<String> serverUrl() {
         return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
     }
 
@@ -58,7 +58,7 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 
@@ -69,7 +69,7 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

@@ -26,7 +26,7 @@ public final class BackupVaultArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageSettings", required=true)
       private final Output<List<StorageSettingArgs>> storageSettings;
 
-    public Output<List<StorageSettingArgs>> getStorageSettings() {
+    public Output<List<StorageSettingArgs>> storageSettings() {
         return this.storageSettings;
     }
 

@@ -27,7 +27,7 @@ public final class DisallowedArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskTypes")
       private final @Nullable Output<List<String>> diskTypes;
 
-    public Output<List<String>> getDiskTypes() {
+    public Output<List<String>> diskTypes() {
         return this.diskTypes == null ? Codegen.empty() : this.diskTypes;
     }
 

@@ -22,7 +22,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkGroupName", required=true)
       private final Output<String> networkGroupName;
 
-    public Output<String> getNetworkGroupName() {
+    public Output<String> networkGroupName() {
         return this.networkGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -44,7 +44,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -66,7 +66,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="staticMemberName")
       private final @Nullable Output<String> staticMemberName;
 
-    public Output<String> getStaticMemberName() {
+    public Output<String> staticMemberName() {
         return this.staticMemberName == null ? Codegen.empty() : this.staticMemberName;
     }
 

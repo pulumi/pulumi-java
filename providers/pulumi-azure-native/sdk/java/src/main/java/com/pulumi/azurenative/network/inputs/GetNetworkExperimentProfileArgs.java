@@ -19,7 +19,7 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
     @Import(name="profileName", required=true)
       private final String profileName;
 
-    public String getProfileName() {
+    public String profileName() {
         return this.profileName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

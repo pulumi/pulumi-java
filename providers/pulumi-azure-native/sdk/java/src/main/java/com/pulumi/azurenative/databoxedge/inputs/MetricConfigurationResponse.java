@@ -27,7 +27,7 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="counterSets", required=true)
       private final List<MetricCounterSetResponse> counterSets;
 
-    public List<MetricCounterSetResponse> getCounterSets() {
+    public List<MetricCounterSetResponse> counterSets() {
         return this.counterSets;
     }
 
@@ -38,7 +38,7 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="mdmAccount")
       private final @Nullable String mdmAccount;
 
-    public Optional<String> getMdmAccount() {
+    public Optional<String> mdmAccount() {
         return this.mdmAccount == null ? Optional.empty() : Optional.ofNullable(this.mdmAccount);
     }
 
@@ -49,7 +49,7 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="metricNameSpace")
       private final @Nullable String metricNameSpace;
 
-    public Optional<String> getMetricNameSpace() {
+    public Optional<String> metricNameSpace() {
         return this.metricNameSpace == null ? Optional.empty() : Optional.ofNullable(this.metricNameSpace);
     }
 
@@ -60,7 +60,7 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

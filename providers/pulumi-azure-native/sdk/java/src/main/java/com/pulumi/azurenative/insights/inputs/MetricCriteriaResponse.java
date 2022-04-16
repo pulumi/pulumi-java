@@ -30,7 +30,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="criterionType", required=true)
       private final String criterionType;
 
-    public String getCriterionType() {
+    public String criterionType() {
         return this.criterionType;
     }
 
@@ -41,7 +41,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dimensions")
       private final @Nullable List<MetricDimensionResponse> dimensions;
 
-    public List<MetricDimensionResponse> getDimensions() {
+    public List<MetricDimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
 
@@ -52,7 +52,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 
@@ -63,7 +63,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
 
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
@@ -74,7 +74,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -85,7 +85,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -96,7 +96,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="skipMetricValidation")
       private final @Nullable Boolean skipMetricValidation;
 
-    public Optional<Boolean> getSkipMetricValidation() {
+    public Optional<Boolean> skipMetricValidation() {
         return this.skipMetricValidation == null ? Optional.empty() : Optional.ofNullable(this.skipMetricValidation);
     }
 
@@ -107,7 +107,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="threshold", required=true)
       private final Double threshold;
 
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 
@@ -118,7 +118,7 @@ public final class MetricCriteriaResponse extends com.pulumi.resources.InvokeArg
     @Import(name="timeAggregation", required=true)
       private final String timeAggregation;
 
-    public String getTimeAggregation() {
+    public String timeAggregation() {
         return this.timeAggregation;
     }
 

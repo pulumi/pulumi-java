@@ -26,7 +26,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
@@ -37,7 +37,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hasBgpOverride")
       private final @Nullable Boolean hasBgpOverride;
 
-    public Optional<Boolean> getHasBgpOverride() {
+    public Optional<Boolean> hasBgpOverride() {
         return this.hasBgpOverride == null ? Optional.empty() : Optional.ofNullable(this.hasBgpOverride);
     }
 
@@ -59,7 +59,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -70,7 +70,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -81,7 +81,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
 
-    public Optional<String> getNextHopIpAddress() {
+    public Optional<String> nextHopIpAddress() {
         return this.nextHopIpAddress == null ? Optional.empty() : Optional.ofNullable(this.nextHopIpAddress);
     }
 
@@ -92,7 +92,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nextHopType", required=true)
       private final String nextHopType;
 
-    public String getNextHopType() {
+    public String nextHopType() {
         return this.nextHopType;
     }
 
@@ -103,7 +103,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -114,7 +114,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

@@ -23,7 +23,7 @@ public final class FileSourceInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="shareId", required=true)
       private final String shareId;
 
-    public String getShareId() {
+    public String shareId() {
         return this.shareId;
     }
 

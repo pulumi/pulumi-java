@@ -53,7 +53,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationDefinitionArtifactResponse>> getArtifacts() {
+    public Output</* @Nullable */ List<ApplicationDefinitionArtifactResponse>> artifacts() {
         return this.artifacts;
     }
     /**
@@ -67,7 +67,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application provider authorizations.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationAuthorizationResponse>> getAuthorizations() {
+    public Output</* @Nullable */ List<ApplicationAuthorizationResponse>> authorizations() {
         return this.authorizations;
     }
     /**
@@ -81,7 +81,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
      * 
      */
-    public Output</* @Nullable */ Object> getCreateUiDefinition() {
+    public Output</* @Nullable */ Object> createUiDefinition() {
         return this.createUiDefinition;
     }
     /**
@@ -95,7 +95,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application deployment policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationDeploymentPolicyResponse> getDeploymentPolicy() {
+    public Output</* @Nullable */ ApplicationDeploymentPolicyResponse> deploymentPolicy() {
         return this.deploymentPolicy;
     }
     /**
@@ -109,7 +109,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application definition description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -123,7 +123,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application definition display name.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -137,7 +137,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return A value indicating whether the package is enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -151,7 +151,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -165,7 +165,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application lock level.
      * 
      */
-    public Output<String> getLockLevel() {
+    public Output<String> lockLevel() {
         return this.lockLevel;
     }
     /**
@@ -179,7 +179,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application locking policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationPackageLockingPolicyDefinitionResponse> getLockingPolicy() {
+    public Output</* @Nullable */ ApplicationPackageLockingPolicyDefinitionResponse> lockingPolicy() {
         return this.lockingPolicy;
     }
     /**
@@ -193,7 +193,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
      * 
      */
-    public Output</* @Nullable */ Object> getMainTemplate() {
+    public Output</* @Nullable */ Object> mainTemplate() {
         return this.mainTemplate;
     }
     /**
@@ -207,7 +207,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return ID of the resource that manages this resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedBy() {
+    public Output</* @Nullable */ String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -221,7 +221,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application management policy that determines publisher's access to the managed resource group.
      * 
      */
-    public Output</* @Nullable */ ApplicationManagementPolicyResponse> getManagementPolicy() {
+    public Output</* @Nullable */ ApplicationManagementPolicyResponse> managementPolicy() {
         return this.managementPolicy;
     }
     /**
@@ -235,7 +235,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -249,7 +249,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application notification policy.
      * 
      */
-    public Output</* @Nullable */ ApplicationNotificationPolicyResponse> getNotificationPolicy() {
+    public Output</* @Nullable */ ApplicationNotificationPolicyResponse> notificationPolicy() {
         return this.notificationPolicy;
     }
     /**
@@ -263,7 +263,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application definition package file Uri. Use this element
      * 
      */
-    public Output</* @Nullable */ String> getPackageFileUri() {
+    public Output</* @Nullable */ String> packageFileUri() {
         return this.packageFileUri;
     }
     /**
@@ -277,7 +277,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The managed application provider policies.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationPolicyResponse>> getPolicies() {
+    public Output</* @Nullable */ List<ApplicationPolicyResponse>> policies() {
         return this.policies;
     }
     /**
@@ -291,7 +291,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -305,7 +305,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -319,7 +319,7 @@ public class ApplicationDefinition extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

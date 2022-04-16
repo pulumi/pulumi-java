@@ -30,7 +30,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="authorization")
       private final @Nullable Output<AuthorizationArgs> authorization;
 
-    public Output<AuthorizationArgs> getAuthorization() {
+    public Output<AuthorizationArgs> authorization() {
         return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
@@ -41,7 +41,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="defaultBranch", required=true)
       private final Output<String> defaultBranch;
 
-    public Output<String> getDefaultBranch() {
+    public Output<String> defaultBranch() {
         return this.defaultBranch;
     }
 
@@ -52,7 +52,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -63,7 +63,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -74,7 +74,7 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="repositoryType", required=true)
       private final Output<Either<String,CodeRepositoryType>> repositoryType;
 
-    public Output<Either<String,CodeRepositoryType>> getRepositoryType() {
+    public Output<Either<String,CodeRepositoryType>> repositoryType() {
         return this.repositoryType;
     }
 

@@ -56,35 +56,35 @@ public final class GetSolutionResult {
      * Gets or sets the ETAG for optimistic concurrency control.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Gets the relative URL to get to this REST resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets the name of this REST resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the properties of the solution.
      * 
     */
-    public SolutionPropertiesResponse getProperties() {
+    public SolutionPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Gets the type of this REST resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

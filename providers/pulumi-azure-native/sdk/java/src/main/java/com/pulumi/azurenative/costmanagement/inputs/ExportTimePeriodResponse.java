@@ -23,7 +23,7 @@ public final class ExportTimePeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="from", required=true)
       private final String from;
 
-    public String getFrom() {
+    public String from() {
         return this.from;
     }
 
@@ -34,7 +34,7 @@ public final class ExportTimePeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="to", required=true)
       private final String to;
 
-    public String getTo() {
+    public String to() {
         return this.to;
     }
 

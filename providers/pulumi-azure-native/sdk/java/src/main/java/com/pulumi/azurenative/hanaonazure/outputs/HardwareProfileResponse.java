@@ -32,14 +32,14 @@ public final class HardwareProfileResponse {
      * Specifies the HANA instance SKU.
      * 
     */
-    public String getHanaInstanceSize() {
+    public String hanaInstanceSize() {
         return this.hanaInstanceSize;
     }
     /**
      * Name of the hardware type (vendor and/or their product name)
      * 
     */
-    public String getHardwareType() {
+    public String hardwareType() {
         return this.hardwareType;
     }
 

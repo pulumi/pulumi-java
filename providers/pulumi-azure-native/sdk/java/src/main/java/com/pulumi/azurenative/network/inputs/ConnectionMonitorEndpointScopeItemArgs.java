@@ -26,7 +26,7 @@ public final class ConnectionMonitorEndpointScopeItemArgs extends com.pulumi.res
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 

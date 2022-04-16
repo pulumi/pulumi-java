@@ -22,7 +22,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
     @Import(name="authenticationMethod", required=true)
       private final Either<String,AuthenticationMethod> authenticationMethod;
 
-    public Either<String,AuthenticationMethod> getAuthenticationMethod() {
+    public Either<String,AuthenticationMethod> authenticationMethod() {
         return this.authenticationMethod;
     }
 
@@ -33,7 +33,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
     @Import(name="clientProxy", required=true)
       private final Boolean clientProxy;
 
-    public Boolean getClientProxy() {
+    public Boolean clientProxy() {
         return this.clientProxy;
     }
 
@@ -44,7 +44,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -55,7 +55,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

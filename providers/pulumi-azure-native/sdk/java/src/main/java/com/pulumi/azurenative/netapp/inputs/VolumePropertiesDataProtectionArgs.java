@@ -28,7 +28,7 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
     @Import(name="backup")
       private final @Nullable Output<VolumeBackupPropertiesArgs> backup;
 
-    public Output<VolumeBackupPropertiesArgs> getBackup() {
+    public Output<VolumeBackupPropertiesArgs> backup() {
         return this.backup == null ? Codegen.empty() : this.backup;
     }
 
@@ -39,7 +39,7 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
     @Import(name="replication")
       private final @Nullable Output<ReplicationObjectArgs> replication;
 
-    public Output<ReplicationObjectArgs> getReplication() {
+    public Output<ReplicationObjectArgs> replication() {
         return this.replication == null ? Codegen.empty() : this.replication;
     }
 
@@ -50,7 +50,7 @@ public final class VolumePropertiesDataProtectionArgs extends com.pulumi.resourc
     @Import(name="snapshot")
       private final @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
-    public Output<VolumeSnapshotPropertiesArgs> getSnapshot() {
+    public Output<VolumeSnapshotPropertiesArgs> snapshot() {
         return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 

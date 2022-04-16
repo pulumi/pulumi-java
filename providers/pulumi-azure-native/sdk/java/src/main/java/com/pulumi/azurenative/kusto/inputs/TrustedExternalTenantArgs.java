@@ -26,7 +26,7 @@ public final class TrustedExternalTenantArgs extends com.pulumi.resources.Resour
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

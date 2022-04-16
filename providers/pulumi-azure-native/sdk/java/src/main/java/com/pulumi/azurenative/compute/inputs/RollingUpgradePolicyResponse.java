@@ -27,7 +27,7 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="enableCrossZoneUpgrade")
       private final @Nullable Boolean enableCrossZoneUpgrade;
 
-    public Optional<Boolean> getEnableCrossZoneUpgrade() {
+    public Optional<Boolean> enableCrossZoneUpgrade() {
         return this.enableCrossZoneUpgrade == null ? Optional.empty() : Optional.ofNullable(this.enableCrossZoneUpgrade);
     }
 
@@ -38,7 +38,7 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="maxBatchInstancePercent")
       private final @Nullable Integer maxBatchInstancePercent;
 
-    public Optional<Integer> getMaxBatchInstancePercent() {
+    public Optional<Integer> maxBatchInstancePercent() {
         return this.maxBatchInstancePercent == null ? Optional.empty() : Optional.ofNullable(this.maxBatchInstancePercent);
     }
 
@@ -49,7 +49,7 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="maxUnhealthyInstancePercent")
       private final @Nullable Integer maxUnhealthyInstancePercent;
 
-    public Optional<Integer> getMaxUnhealthyInstancePercent() {
+    public Optional<Integer> maxUnhealthyInstancePercent() {
         return this.maxUnhealthyInstancePercent == null ? Optional.empty() : Optional.ofNullable(this.maxUnhealthyInstancePercent);
     }
 
@@ -60,7 +60,7 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="maxUnhealthyUpgradedInstancePercent")
       private final @Nullable Integer maxUnhealthyUpgradedInstancePercent;
 
-    public Optional<Integer> getMaxUnhealthyUpgradedInstancePercent() {
+    public Optional<Integer> maxUnhealthyUpgradedInstancePercent() {
         return this.maxUnhealthyUpgradedInstancePercent == null ? Optional.empty() : Optional.ofNullable(this.maxUnhealthyUpgradedInstancePercent);
     }
 
@@ -71,7 +71,7 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="pauseTimeBetweenBatches")
       private final @Nullable String pauseTimeBetweenBatches;
 
-    public Optional<String> getPauseTimeBetweenBatches() {
+    public Optional<String> pauseTimeBetweenBatches() {
         return this.pauseTimeBetweenBatches == null ? Optional.empty() : Optional.ofNullable(this.pauseTimeBetweenBatches);
     }
 
@@ -82,7 +82,7 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="prioritizeUnhealthyInstances")
       private final @Nullable Boolean prioritizeUnhealthyInstances;
 
-    public Optional<Boolean> getPrioritizeUnhealthyInstances() {
+    public Optional<Boolean> prioritizeUnhealthyInstances() {
         return this.prioritizeUnhealthyInstances == null ? Optional.empty() : Optional.ofNullable(this.prioritizeUnhealthyInstances);
     }
 

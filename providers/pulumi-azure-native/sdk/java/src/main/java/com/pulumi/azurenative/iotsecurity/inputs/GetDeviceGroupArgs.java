@@ -19,7 +19,7 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceGroupName", required=true)
       private final String deviceGroupName;
 
-    public String getDeviceGroupName() {
+    public String deviceGroupName() {
         return this.deviceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="iotDefenderLocation", required=true)
       private final String iotDefenderLocation;
 
-    public String getIotDefenderLocation() {
+    public String iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
 

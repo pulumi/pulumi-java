@@ -25,7 +25,7 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
     @Import(name="bitrateKbps")
       private final @Nullable String bitrateKbps;
 
-    public Optional<String> getBitrateKbps() {
+    public Optional<String> bitrateKbps() {
         return this.bitrateKbps == null ? Optional.empty() : Optional.ofNullable(this.bitrateKbps);
     }
 
@@ -37,7 +37,7 @@ public final class AudioEncoderAacResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class SoftwareUpdateConfigurationTasksResponse extends com.pulumi.r
     @Import(name="postTask")
       private final @Nullable TaskPropertiesResponse postTask;
 
-    public Optional<TaskPropertiesResponse> getPostTask() {
+    public Optional<TaskPropertiesResponse> postTask() {
         return this.postTask == null ? Optional.empty() : Optional.ofNullable(this.postTask);
     }
 
@@ -36,7 +36,7 @@ public final class SoftwareUpdateConfigurationTasksResponse extends com.pulumi.r
     @Import(name="preTask")
       private final @Nullable TaskPropertiesResponse preTask;
 
-    public Optional<TaskPropertiesResponse> getPreTask() {
+    public Optional<TaskPropertiesResponse> preTask() {
         return this.preTask == null ? Optional.empty() : Optional.ofNullable(this.preTask);
     }
 

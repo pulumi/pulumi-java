@@ -27,7 +27,7 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<ScopeClusterArgs> cluster;
 
-    public Output<ScopeClusterArgs> getCluster() {
+    public Output<ScopeClusterArgs> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -38,7 +38,7 @@ public final class ScopeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<ScopeNamespaceArgs> namespace;
 
-    public Output<ScopeNamespaceArgs> getNamespace() {
+    public Output<ScopeNamespaceArgs> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 

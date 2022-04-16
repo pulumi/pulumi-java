@@ -21,28 +21,28 @@ public final class SkuSettingCapacityArgs extends com.pulumi.resources.ResourceA
     @Import(name="default")
       private final @Nullable Output<Integer> default_;
 
-    public Output<Integer> getDefault_() {
+    public Output<Integer> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     @Import(name="maximum")
       private final @Nullable Output<Integer> maximum;
 
-    public Output<Integer> getMaximum() {
+    public Output<Integer> maximum() {
         return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     @Import(name="minimum", required=true)
       private final Output<Integer> minimum;
 
-    public Output<Integer> getMinimum() {
+    public Output<Integer> minimum() {
         return this.minimum;
     }
 
     @Import(name="scaleType")
       private final @Nullable Output<Either<String,SkuScaleType>> scaleType;
 
-    public Output<Either<String,SkuScaleType>> getScaleType() {
+    public Output<Either<String,SkuScaleType>> scaleType() {
         return this.scaleType == null ? Codegen.empty() : this.scaleType;
     }
 

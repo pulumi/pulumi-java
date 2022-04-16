@@ -28,7 +28,7 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
-    public Output<String> getDistributionType() {
+    public Output<String> distributionType() {
         return this.distributionType;
     }
 
@@ -39,7 +39,7 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="processCount")
       private final @Nullable Output<Integer> processCount;
 
-    public Output<Integer> getProcessCount() {
+    public Output<Integer> processCount() {
         return this.processCount == null ? Codegen.empty() : this.processCount;
     }
 

@@ -58,21 +58,21 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
      * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
      * 
     */
-    public List<String> getFilters() {
+    public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * Friendly Name to provide context on what this customization step does
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
      * 
     */
-    public Optional<String> getSearchCriteria() {
+    public Optional<String> searchCriteria() {
         return Optional.ofNullable(this.searchCriteria);
     }
     /**
@@ -80,14 +80,14 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
      * Expected value is 'WindowsUpdate'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
      * 
     */
-    public Optional<Integer> getUpdateLimit() {
+    public Optional<Integer> updateLimit() {
         return Optional.ofNullable(this.updateLimit);
     }
 

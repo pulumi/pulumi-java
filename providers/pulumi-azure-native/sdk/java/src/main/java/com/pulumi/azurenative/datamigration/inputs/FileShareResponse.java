@@ -25,7 +25,7 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -36,7 +36,7 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -47,7 +47,7 @@ public final class FileShareResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

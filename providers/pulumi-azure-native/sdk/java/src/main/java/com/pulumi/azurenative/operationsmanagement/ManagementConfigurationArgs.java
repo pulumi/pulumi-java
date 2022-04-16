@@ -23,7 +23,7 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -34,7 +34,7 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="managementConfigurationName")
       private final @Nullable Output<String> managementConfigurationName;
 
-    public Output<String> getManagementConfigurationName() {
+    public Output<String> managementConfigurationName() {
         return this.managementConfigurationName == null ? Codegen.empty() : this.managementConfigurationName;
     }
 
@@ -45,7 +45,7 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
 
-    public Output<ManagementConfigurationPropertiesArgs> getProperties() {
+    public Output<ManagementConfigurationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

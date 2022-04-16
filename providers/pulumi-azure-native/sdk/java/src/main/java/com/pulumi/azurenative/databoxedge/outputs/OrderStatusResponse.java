@@ -59,35 +59,35 @@ public final class OrderStatusResponse {
      * by the already existing properties
      * 
     */
-    public Map<String,String> getAdditionalOrderDetails() {
+    public Map<String,String> additionalOrderDetails() {
         return this.additionalOrderDetails;
     }
     /**
      * Comments related to this status change.
      * 
     */
-    public Optional<String> getComments() {
+    public Optional<String> comments() {
         return Optional.ofNullable(this.comments);
     }
     /**
      * Status of the order as per the allowed status types.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Tracking information related to the state in the ordering flow
      * 
     */
-    public TrackingInfoResponse getTrackingInformation() {
+    public TrackingInfoResponse trackingInformation() {
         return this.trackingInformation;
     }
     /**
      * Time of status update.
      * 
     */
-    public String getUpdateDateTime() {
+    public String updateDateTime() {
         return this.updateDateTime;
     }
 

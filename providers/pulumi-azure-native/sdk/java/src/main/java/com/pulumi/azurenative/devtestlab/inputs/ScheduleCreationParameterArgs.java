@@ -33,7 +33,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="dailyRecurrence")
       private final @Nullable Output<DayDetailsArgs> dailyRecurrence;
 
-    public Output<DayDetailsArgs> getDailyRecurrence() {
+    public Output<DayDetailsArgs> dailyRecurrence() {
         return this.dailyRecurrence == null ? Codegen.empty() : this.dailyRecurrence;
     }
 
@@ -44,7 +44,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="hourlyRecurrence")
       private final @Nullable Output<HourDetailsArgs> hourlyRecurrence;
 
-    public Output<HourDetailsArgs> getHourlyRecurrence() {
+    public Output<HourDetailsArgs> hourlyRecurrence() {
         return this.hourlyRecurrence == null ? Codegen.empty() : this.hourlyRecurrence;
     }
 
@@ -55,7 +55,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="notificationSettings")
       private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Output<NotificationSettingsArgs> getNotificationSettings() {
+    public Output<NotificationSettingsArgs> notificationSettings() {
         return this.notificationSettings == null ? Codegen.empty() : this.notificationSettings;
     }
 
@@ -77,7 +77,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> getStatus() {
+    public Output<Either<String,EnableStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -88,7 +88,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -99,7 +99,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
 
-    public Output<String> getTargetResourceId() {
+    public Output<String> targetResourceId() {
         return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 
@@ -110,7 +110,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="taskType")
       private final @Nullable Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType == null ? Codegen.empty() : this.taskType;
     }
 
@@ -121,7 +121,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="timeZoneId")
       private final @Nullable Output<String> timeZoneId;
 
-    public Output<String> getTimeZoneId() {
+    public Output<String> timeZoneId() {
         return this.timeZoneId == null ? Codegen.empty() : this.timeZoneId;
     }
 
@@ -132,7 +132,7 @@ public final class ScheduleCreationParameterArgs extends com.pulumi.resources.Re
     @Import(name="weeklyRecurrence")
       private final @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
 
-    public Output<WeekDetailsArgs> getWeeklyRecurrence() {
+    public Output<WeekDetailsArgs> weeklyRecurrence() {
         return this.weeklyRecurrence == null ? Codegen.empty() : this.weeklyRecurrence;
     }
 

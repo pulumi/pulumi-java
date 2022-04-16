@@ -166,70 +166,70 @@ public final class EffectiveDefaultSecurityAdminRuleResponse {
      * Indicates the access allowed for this particular rule
      * 
     */
-    public String getAccess() {
+    public String access() {
         return this.access;
     }
     /**
      * A description of the security admin configuration.
      * 
     */
-    public Optional<String> getConfigurationDescription() {
+    public Optional<String> configurationDescription() {
         return Optional.ofNullable(this.configurationDescription);
     }
     /**
      * A display name of the security admin configuration.
      * 
     */
-    public Optional<String> getConfigurationDisplayName() {
+    public Optional<String> configurationDisplayName() {
         return Optional.ofNullable(this.configurationDisplayName);
     }
     /**
      * A description for this rule. Restricted to 140 chars.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The destination port ranges.
      * 
     */
-    public List<String> getDestinationPortRanges() {
+    public List<String> destinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getDestinations() {
+    public List<AddressPrefixItemResponse> destinations() {
         return this.destinations;
     }
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * A friendly name for the rule.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Default rule flag.
      * 
     */
-    public Optional<String> getFlag() {
+    public Optional<String> flag() {
         return Optional.ofNullable(this.flag);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -237,70 +237,70 @@ public final class EffectiveDefaultSecurityAdminRuleResponse {
      * Expected value is 'Default'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * Network protocol this rule applies to.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Groups for rule collection
      * 
     */
-    public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
+    public List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
     /**
      * A description of the rule collection.
      * 
     */
-    public Optional<String> getRuleCollectionDescription() {
+    public Optional<String> ruleCollectionDescription() {
         return Optional.ofNullable(this.ruleCollectionDescription);
     }
     /**
      * A display name of the rule collection.
      * 
     */
-    public Optional<String> getRuleCollectionDisplayName() {
+    public Optional<String> ruleCollectionDisplayName() {
         return Optional.ofNullable(this.ruleCollectionDisplayName);
     }
     /**
      * Effective configuration groups.
      * 
     */
-    public List<ConfigurationGroupResponse> getRuleGroups() {
+    public List<ConfigurationGroupResponse> ruleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
     /**
      * The source port ranges.
      * 
     */
-    public List<String> getSourcePortRanges() {
+    public List<String> sourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
      * The CIDR or source IP ranges.
      * 
     */
-    public List<AddressPrefixItemResponse> getSources() {
+    public List<AddressPrefixItemResponse> sources() {
         return this.sources;
     }
 

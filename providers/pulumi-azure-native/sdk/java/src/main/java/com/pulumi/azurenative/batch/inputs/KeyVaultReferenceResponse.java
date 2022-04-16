@@ -23,7 +23,7 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class KeyVaultReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

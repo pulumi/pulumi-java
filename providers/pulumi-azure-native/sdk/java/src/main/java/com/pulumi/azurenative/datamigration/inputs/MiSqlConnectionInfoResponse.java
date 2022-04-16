@@ -25,7 +25,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="managedInstanceResourceId", required=true)
       private final String managedInstanceResourceId;
 
-    public String getManagedInstanceResourceId() {
+    public String managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
 
@@ -36,7 +36,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -48,7 +48,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -59,7 +59,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

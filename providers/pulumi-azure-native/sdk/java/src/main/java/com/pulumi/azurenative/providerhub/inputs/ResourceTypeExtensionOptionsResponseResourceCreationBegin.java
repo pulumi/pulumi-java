@@ -18,14 +18,14 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin ext
     @Import(name="request")
       private final @Nullable List<String> request;
 
-    public List<String> getRequest() {
+    public List<String> request() {
         return this.request == null ? List.of() : this.request;
     }
 
     @Import(name="response")
       private final @Nullable List<String> response;
 
-    public List<String> getResponse() {
+    public List<String> response() {
         return this.response == null ? List.of() : this.response;
     }
 

@@ -24,7 +24,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -35,7 +35,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
 
-    public Output<String> getSqlPoolName() {
+    public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -46,7 +46,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
+    public Output<Either<String,TransparentDataEncryptionStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -57,7 +57,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;
 
-    public Output<String> getTransparentDataEncryptionName() {
+    public Output<String> transparentDataEncryptionName() {
         return this.transparentDataEncryptionName == null ? Codegen.empty() : this.transparentDataEncryptionName;
     }
 
@@ -68,7 +68,7 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -97,77 +97,77 @@ public final class GetManagerExtendedInfoResult {
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * Represents the CEK of the resource.
      * 
     */
-    public Optional<String> getEncryptionKey() {
+    public Optional<String> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
     */
-    public Optional<String> getEncryptionKeyThumbprint() {
+    public Optional<String> encryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
     /**
      * The etag of the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Represents the CIK of the resource.
      * 
     */
-    public String getIntegrityKey() {
+    public String integrityKey() {
         return this.integrityKey;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
     */
-    public Optional<String> getPortalCertificateThumbprint() {
+    public Optional<String> portalCertificateThumbprint() {
         return Optional.ofNullable(this.portalCertificateThumbprint);
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The version of the extended info being persisted.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

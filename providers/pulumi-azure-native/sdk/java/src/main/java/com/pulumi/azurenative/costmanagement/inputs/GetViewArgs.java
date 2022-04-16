@@ -19,7 +19,7 @@ public final class GetViewArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="viewName", required=true)
       private final String viewName;
 
-    public String getViewName() {
+    public String viewName() {
         return this.viewName;
     }
 

@@ -29,7 +29,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="apiKey")
       private final @Nullable String apiKey;
 
-    public Optional<String> getApiKey() {
+    public Optional<String> apiKey() {
         return this.apiKey == null ? Optional.empty() : Optional.ofNullable(this.apiKey);
     }
 
@@ -40,7 +40,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="batchSize")
       private final @Nullable Integer batchSize;
 
-    public Optional<Integer> getBatchSize() {
+    public Optional<Integer> batchSize() {
         return this.batchSize == null ? Optional.empty() : Optional.ofNullable(this.batchSize);
     }
 
@@ -51,7 +51,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
@@ -62,7 +62,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="inputs")
       private final @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
 
-    public Optional<AzureMachineLearningWebServiceInputsResponse> getInputs() {
+    public Optional<AzureMachineLearningWebServiceInputsResponse> inputs() {
         return this.inputs == null ? Optional.empty() : Optional.ofNullable(this.inputs);
     }
 
@@ -73,7 +73,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="outputs")
       private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
 
-    public List<AzureMachineLearningWebServiceOutputColumnResponse> getOutputs() {
+    public List<AzureMachineLearningWebServiceOutputColumnResponse> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
 
@@ -85,7 +85,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

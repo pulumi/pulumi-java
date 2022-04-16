@@ -47,7 +47,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return A list of references to all dedicated hosts in the dedicated host group.
      * 
      */
-    public Output<List<SubResourceReadOnlyResponse>> getHosts() {
+    public Output<List<SubResourceReadOnlyResponse>> hosts() {
         return this.hosts;
     }
     /**
@@ -61,7 +61,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
      * 
      */
-    public Output<DedicatedHostGroupInstanceViewResponse> getInstanceView() {
+    public Output<DedicatedHostGroupInstanceViewResponse> instanceView() {
         return this.instanceView;
     }
     /**
@@ -75,7 +75,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -89,7 +89,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Number of fault domains that the host group can span.
      * 
      */
-    public Output<Integer> getPlatformFaultDomainCount() {
+    public Output<Integer> platformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
     /**
@@ -117,7 +117,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSupportAutomaticPlacement() {
+    public Output</* @Nullable */ Boolean> supportAutomaticPlacement() {
         return this.supportAutomaticPlacement;
     }
     /**
@@ -131,7 +131,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -145,7 +145,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -159,7 +159,7 @@ public class DedicatedHostGroup extends com.pulumi.resources.CustomResource {
      * @return Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

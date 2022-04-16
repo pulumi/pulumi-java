@@ -26,7 +26,7 @@ public final class ServicePrincipalProfileArgs extends com.pulumi.resources.Reso
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -37,7 +37,7 @@ public final class ServicePrincipalProfileArgs extends com.pulumi.resources.Reso
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 

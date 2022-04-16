@@ -24,7 +24,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="absoluteValue", required=true)
       private final Double absoluteValue;
 
-    public Double getAbsoluteValue() {
+    public Double absoluteValue() {
         return this.absoluteValue;
     }
 
@@ -35,7 +35,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="changeValueAbsolute", required=true)
       private final Double changeValueAbsolute;
 
-    public Double getChangeValueAbsolute() {
+    public Double changeValueAbsolute() {
         return this.changeValueAbsolute;
     }
 
@@ -46,7 +46,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="changeValueRelative", required=true)
       private final Double changeValueRelative;
 
-    public Double getChangeValueRelative() {
+    public Double changeValueRelative() {
         return this.changeValueRelative;
     }
 
@@ -57,7 +57,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="dimensionName", required=true)
       private final String dimensionName;
 
-    public String getDimensionName() {
+    public String dimensionName() {
         return this.dimensionName;
     }
 
@@ -68,7 +68,7 @@ public final class RecommendedActionImpactRecordResponse extends com.pulumi.reso
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 

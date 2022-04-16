@@ -29,7 +29,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="deltaHealthPolicy")
       private final @Nullable Output<ClusterUpgradeDeltaHealthPolicyArgs> deltaHealthPolicy;
 
-    public Output<ClusterUpgradeDeltaHealthPolicyArgs> getDeltaHealthPolicy() {
+    public Output<ClusterUpgradeDeltaHealthPolicyArgs> deltaHealthPolicy() {
         return this.deltaHealthPolicy == null ? Codegen.empty() : this.deltaHealthPolicy;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="forceRestart")
       private final @Nullable Output<Boolean> forceRestart;
 
-    public Output<Boolean> getForceRestart() {
+    public Output<Boolean> forceRestart() {
         return this.forceRestart == null ? Codegen.empty() : this.forceRestart;
     }
 
@@ -51,7 +51,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthCheckRetryTimeout", required=true)
       private final Output<String> healthCheckRetryTimeout;
 
-    public Output<String> getHealthCheckRetryTimeout() {
+    public Output<String> healthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout;
     }
 
@@ -62,7 +62,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthCheckStableDuration", required=true)
       private final Output<String> healthCheckStableDuration;
 
-    public Output<String> getHealthCheckStableDuration() {
+    public Output<String> healthCheckStableDuration() {
         return this.healthCheckStableDuration;
     }
 
@@ -73,7 +73,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthCheckWaitDuration", required=true)
       private final Output<String> healthCheckWaitDuration;
 
-    public Output<String> getHealthCheckWaitDuration() {
+    public Output<String> healthCheckWaitDuration() {
         return this.healthCheckWaitDuration;
     }
 
@@ -84,7 +84,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="healthPolicy", required=true)
       private final Output<ClusterHealthPolicyArgs> healthPolicy;
 
-    public Output<ClusterHealthPolicyArgs> getHealthPolicy() {
+    public Output<ClusterHealthPolicyArgs> healthPolicy() {
         return this.healthPolicy;
     }
 
@@ -95,7 +95,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="upgradeDomainTimeout", required=true)
       private final Output<String> upgradeDomainTimeout;
 
-    public Output<String> getUpgradeDomainTimeout() {
+    public Output<String> upgradeDomainTimeout() {
         return this.upgradeDomainTimeout;
     }
 
@@ -106,7 +106,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="upgradeReplicaSetCheckTimeout", required=true)
       private final Output<String> upgradeReplicaSetCheckTimeout;
 
-    public Output<String> getUpgradeReplicaSetCheckTimeout() {
+    public Output<String> upgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout;
     }
 
@@ -117,7 +117,7 @@ public final class ClusterUpgradePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="upgradeTimeout", required=true)
       private final Output<String> upgradeTimeout;
 
-    public Output<String> getUpgradeTimeout() {
+    public Output<String> upgradeTimeout() {
         return this.upgradeTimeout;
     }
 

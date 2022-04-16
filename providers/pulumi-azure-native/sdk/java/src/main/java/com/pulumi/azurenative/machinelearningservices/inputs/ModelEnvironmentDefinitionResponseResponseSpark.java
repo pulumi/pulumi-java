@@ -28,7 +28,7 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
     @Import(name="packages")
       private final @Nullable List<SparkMavenPackageResponse> packages;
 
-    public List<SparkMavenPackageResponse> getPackages() {
+    public List<SparkMavenPackageResponse> packages() {
         return this.packages == null ? List.of() : this.packages;
     }
 
@@ -39,7 +39,7 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
     @Import(name="precachePackages")
       private final @Nullable Boolean precachePackages;
 
-    public Optional<Boolean> getPrecachePackages() {
+    public Optional<Boolean> precachePackages() {
         return this.precachePackages == null ? Optional.empty() : Optional.ofNullable(this.precachePackages);
     }
 
@@ -50,7 +50,7 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends com.p
     @Import(name="repositories")
       private final @Nullable List<String> repositories;
 
-    public List<String> getRepositories() {
+    public List<String> repositories() {
         return this.repositories == null ? List.of() : this.repositories;
     }
 

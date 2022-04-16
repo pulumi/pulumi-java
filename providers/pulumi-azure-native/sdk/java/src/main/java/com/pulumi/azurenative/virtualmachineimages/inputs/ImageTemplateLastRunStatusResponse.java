@@ -25,7 +25,7 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -36,7 +36,7 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="message")
       private final @Nullable String message;
 
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
@@ -47,7 +47,7 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="runState")
       private final @Nullable String runState;
 
-    public Optional<String> getRunState() {
+    public Optional<String> runState() {
         return this.runState == null ? Optional.empty() : Optional.ofNullable(this.runState);
     }
 
@@ -58,7 +58,7 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="runSubState")
       private final @Nullable String runSubState;
 
-    public Optional<String> getRunSubState() {
+    public Optional<String> runSubState() {
         return this.runSubState == null ? Optional.empty() : Optional.ofNullable(this.runSubState);
     }
 
@@ -69,7 +69,7 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

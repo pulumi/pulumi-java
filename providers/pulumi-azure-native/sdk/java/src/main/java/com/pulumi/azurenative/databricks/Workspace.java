@@ -48,7 +48,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace provider authorizations.
      * 
      */
-    public Output</* @Nullable */ List<WorkspaceProviderAuthorizationResponse>> getAuthorizations() {
+    public Output</* @Nullable */ List<WorkspaceProviderAuthorizationResponse>> authorizations() {
         return this.authorizations;
     }
     /**
@@ -62,7 +62,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates the Object ID, PUID and Application ID of entity that created the workspace.
      * 
      */
-    public Output</* @Nullable */ CreatedByResponse> getCreatedBy() {
+    public Output</* @Nullable */ CreatedByResponse> createdBy() {
         return this.createdBy;
     }
     /**
@@ -76,7 +76,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Specifies the date and time when the workspace is created.
      * 
      */
-    public Output<String> getCreatedDateTime() {
+    public Output<String> createdDateTime() {
         return this.createdDateTime;
     }
     /**
@@ -90,7 +90,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -104,7 +104,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The managed resource group Id.
      * 
      */
-    public Output<String> getManagedResourceGroupId() {
+    public Output<String> managedResourceGroupId() {
         return this.managedResourceGroupId;
     }
     /**
@@ -118,7 +118,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +132,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace's custom parameters.
      * 
      */
-    public Output</* @Nullable */ WorkspaceCustomParametersResponse> getParameters() {
+    public Output</* @Nullable */ WorkspaceCustomParametersResponse> parameters() {
         return this.parameters;
     }
     /**
@@ -146,7 +146,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -160,7 +160,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -174,7 +174,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The details of Managed Identity of Storage Account
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityConfigurationResponse> getStorageAccountIdentity() {
+    public Output</* @Nullable */ ManagedIdentityConfigurationResponse> storageAccountIdentity() {
         return this.storageAccountIdentity;
     }
     /**
@@ -188,7 +188,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -202,7 +202,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -216,7 +216,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The blob URI where the UI definition file is located.
      * 
      */
-    public Output</* @Nullable */ String> getUiDefinitionUri() {
+    public Output</* @Nullable */ String> uiDefinitionUri() {
         return this.uiDefinitionUri;
     }
     /**
@@ -230,7 +230,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
      * 
      */
-    public Output</* @Nullable */ CreatedByResponse> getUpdatedBy() {
+    public Output</* @Nullable */ CreatedByResponse> updatedBy() {
         return this.updatedBy;
     }
     /**
@@ -244,7 +244,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The unique identifier of the databricks workspace in databricks control plane.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
     /**
@@ -258,7 +258,7 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
      * 
      */
-    public Output<String> getWorkspaceUrl() {
+    public Output<String> workspaceUrl() {
         return this.workspaceUrl;
     }
 

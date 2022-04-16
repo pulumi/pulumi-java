@@ -33,7 +33,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activeRevisionsMode")
       private final @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
 
-    public Output<Either<String,ActiveRevisionsMode>> getActiveRevisionsMode() {
+    public Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode() {
         return this.activeRevisionsMode == null ? Codegen.empty() : this.activeRevisionsMode;
     }
 
@@ -44,7 +44,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
       private final @Nullable Output<IngressArgs> ingress;
 
-    public Output<IngressArgs> getIngress() {
+    public Output<IngressArgs> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -55,7 +55,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registries")
       private final @Nullable Output<List<RegistryCredentialsArgs>> registries;
 
-    public Output<List<RegistryCredentialsArgs>> getRegistries() {
+    public Output<List<RegistryCredentialsArgs>> registries() {
         return this.registries == null ? Codegen.empty() : this.registries;
     }
 
@@ -66,7 +66,7 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<SecretArgs>> secrets;
 
-    public Output<List<SecretArgs>> getSecrets() {
+    public Output<List<SecretArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 

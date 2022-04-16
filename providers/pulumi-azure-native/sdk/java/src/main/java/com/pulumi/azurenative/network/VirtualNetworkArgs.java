@@ -32,7 +32,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="addressSpace")
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
 
-    public Output<AddressSpaceArgs> getAddressSpace() {
+    public Output<AddressSpaceArgs> addressSpace() {
         return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
     }
 
@@ -43,7 +43,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bgpCommunities")
       private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
-    public Output<VirtualNetworkBgpCommunitiesArgs> getBgpCommunities() {
+    public Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities() {
         return this.bgpCommunities == null ? Codegen.empty() : this.bgpCommunities;
     }
 
@@ -54,7 +54,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ddosProtectionPlan")
       private final @Nullable Output<SubResourceArgs> ddosProtectionPlan;
 
-    public Output<SubResourceArgs> getDdosProtectionPlan() {
+    public Output<SubResourceArgs> ddosProtectionPlan() {
         return this.ddosProtectionPlan == null ? Codegen.empty() : this.ddosProtectionPlan;
     }
 
@@ -65,7 +65,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dhcpOptions")
       private final @Nullable Output<DhcpOptionsArgs> dhcpOptions;
 
-    public Output<DhcpOptionsArgs> getDhcpOptions() {
+    public Output<DhcpOptionsArgs> dhcpOptions() {
         return this.dhcpOptions == null ? Codegen.empty() : this.dhcpOptions;
     }
 
@@ -76,7 +76,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableDdosProtection")
       private final @Nullable Output<Boolean> enableDdosProtection;
 
-    public Output<Boolean> getEnableDdosProtection() {
+    public Output<Boolean> enableDdosProtection() {
         return this.enableDdosProtection == null ? Codegen.empty() : this.enableDdosProtection;
     }
 
@@ -87,7 +87,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableVmProtection")
       private final @Nullable Output<Boolean> enableVmProtection;
 
-    public Output<Boolean> getEnableVmProtection() {
+    public Output<Boolean> enableVmProtection() {
         return this.enableVmProtection == null ? Codegen.empty() : this.enableVmProtection;
     }
 
@@ -98,7 +98,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -109,7 +109,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -120,7 +120,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipAllocations")
       private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
-    public Output<List<SubResourceArgs>> getIpAllocations() {
+    public Output<List<SubResourceArgs>> ipAllocations() {
         return this.ipAllocations == null ? Codegen.empty() : this.ipAllocations;
     }
 
@@ -131,7 +131,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -142,7 +142,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -153,7 +153,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnets")
       private final @Nullable Output<List<SubnetArgs>> subnets;
 
-    public Output<List<SubnetArgs>> getSubnets() {
+    public Output<List<SubnetArgs>> subnets() {
         return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
@@ -164,7 +164,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -175,7 +175,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkName")
       private final @Nullable Output<String> virtualNetworkName;
 
-    public Output<String> getVirtualNetworkName() {
+    public Output<String> virtualNetworkName() {
         return this.virtualNetworkName == null ? Codegen.empty() : this.virtualNetworkName;
     }
 
@@ -186,7 +186,7 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkPeerings")
       private final @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
-    public Output<List<VirtualNetworkPeeringArgs>> getVirtualNetworkPeerings() {
+    public Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings() {
         return this.virtualNetworkPeerings == null ? Codegen.empty() : this.virtualNetworkPeerings;
     }
 

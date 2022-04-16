@@ -25,7 +25,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -36,7 +36,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="assignableScopes")
       private final @Nullable Output<List<String>> assignableScopes;
 
-    public Output<List<String>> getAssignableScopes() {
+    public Output<List<String>> assignableScopes() {
         return this.assignableScopes == null ? Codegen.empty() : this.assignableScopes;
     }
 
@@ -47,7 +47,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="permissions")
       private final @Nullable Output<List<PermissionArgs>> permissions;
 
-    public Output<List<PermissionArgs>> getPermissions() {
+    public Output<List<PermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -58,7 +58,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
@@ -80,7 +80,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
@@ -91,7 +91,7 @@ public final class SqlResourceSqlRoleDefinitionArgs extends com.pulumi.resources
     @Import(name="type")
       private final @Nullable Output<RoleDefinitionType> type;
 
-    public Output<RoleDefinitionType> getType() {
+    public Output<RoleDefinitionType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -51,28 +51,28 @@ public final class EntityInsightItemResponse {
      * Query results for table insights query.
      * 
     */
-    public List<InsightsTableResultResponse> getChartQueryResults() {
+    public List<InsightsTableResultResponse> chartQueryResults() {
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
     }
     /**
      * The query id of the insight
      * 
     */
-    public Optional<String> getQueryId() {
+    public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }
     /**
      * The Time interval that the query actually executed on.
      * 
     */
-    public Optional<EntityInsightItemResponseQueryTimeInterval> getQueryTimeInterval() {
+    public Optional<EntityInsightItemResponseQueryTimeInterval> queryTimeInterval() {
         return Optional.ofNullable(this.queryTimeInterval);
     }
     /**
      * Query results for table insights query.
      * 
     */
-    public Optional<InsightsTableResultResponse> getTableQueryResults() {
+    public Optional<InsightsTableResultResponse> tableQueryResults() {
         return Optional.ofNullable(this.tableQueryResults);
     }
 

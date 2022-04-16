@@ -26,7 +26,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="allocation")
       private final @Nullable String allocation;
 
-    public Optional<String> getAllocation() {
+    public Optional<String> allocation() {
         return this.allocation == null ? Optional.empty() : Optional.ofNullable(this.allocation);
     }
 
@@ -37,7 +37,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
-    public List<String> getDnsServers() {
+    public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
@@ -48,7 +48,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="gateway")
       private final @Nullable List<String> gateway;
 
-    public List<String> getGateway() {
+    public List<String> gateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
 
@@ -59,7 +59,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -70,7 +70,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="mask")
       private final @Nullable String mask;
 
-    public Optional<String> getMask() {
+    public Optional<String> mask() {
         return this.mask == null ? Optional.empty() : Optional.ofNullable(this.mask);
     }
 
@@ -81,7 +81,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="primaryWinsServer")
       private final @Nullable String primaryWinsServer;
 
-    public Optional<String> getPrimaryWinsServer() {
+    public Optional<String> primaryWinsServer() {
         return this.primaryWinsServer == null ? Optional.empty() : Optional.ofNullable(this.primaryWinsServer);
     }
 
@@ -92,7 +92,7 @@ public final class GuestOSNICCustomizationResponse extends com.pulumi.resources.
     @Import(name="secondaryWinsServer")
       private final @Nullable String secondaryWinsServer;
 
-    public Optional<String> getSecondaryWinsServer() {
+    public Optional<String> secondaryWinsServer() {
         return this.secondaryWinsServer == null ? Optional.empty() : Optional.ofNullable(this.secondaryWinsServer);
     }
 

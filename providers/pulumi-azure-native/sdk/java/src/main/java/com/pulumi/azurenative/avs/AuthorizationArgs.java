@@ -22,7 +22,7 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizationName")
       private final @Nullable Output<String> authorizationName;
 
-    public Output<String> getAuthorizationName() {
+    public Output<String> authorizationName() {
         return this.authorizationName == null ? Codegen.empty() : this.authorizationName;
     }
 
@@ -33,7 +33,7 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -44,7 +44,7 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -29,7 +29,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataCollectionRuleName")
       private final @Nullable Output<String> dataCollectionRuleName;
 
-    public Output<String> getDataCollectionRuleName() {
+    public Output<String> dataCollectionRuleName() {
         return this.dataCollectionRuleName == null ? Codegen.empty() : this.dataCollectionRuleName;
     }
 
@@ -40,7 +40,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataFlows")
       private final @Nullable Output<List<DataFlowArgs>> dataFlows;
 
-    public Output<List<DataFlowArgs>> getDataFlows() {
+    public Output<List<DataFlowArgs>> dataFlows() {
         return this.dataFlows == null ? Codegen.empty() : this.dataFlows;
     }
 
@@ -52,7 +52,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataSources")
       private final @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
 
-    public Output<DataCollectionRuleDataSourcesArgs> getDataSources() {
+    public Output<DataCollectionRuleDataSourcesArgs> dataSources() {
         return this.dataSources == null ? Codegen.empty() : this.dataSources;
     }
 
@@ -63,7 +63,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -74,7 +74,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="destinations")
       private final @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
 
-    public Output<DataCollectionRuleDestinationsArgs> getDestinations() {
+    public Output<DataCollectionRuleDestinationsArgs> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
@@ -85,7 +85,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind")
       private final @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
 
-    public Output<Either<String,KnownDataCollectionRuleResourceKind>> getKind() {
+    public Output<Either<String,KnownDataCollectionRuleResourceKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -96,7 +96,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -107,7 +107,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -118,7 +118,7 @@ public final class DataCollectionRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

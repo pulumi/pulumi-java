@@ -79,56 +79,56 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
      * Script end time.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Script error stream.
      * 
     */
-    public Optional<String> getError() {
+    public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Communicate script configuration errors or execution messages.
      * 
     */
-    public Optional<String> getExecutionMessage() {
+    public Optional<String> executionMessage() {
         return Optional.ofNullable(this.executionMessage);
     }
     /**
      * Script execution status.
      * 
     */
-    public Optional<String> getExecutionState() {
+    public Optional<String> executionState() {
         return Optional.ofNullable(this.executionState);
     }
     /**
      * Exit code returned from script execution.
      * 
     */
-    public Optional<Integer> getExitCode() {
+    public Optional<Integer> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
     /**
      * Script output stream.
      * 
     */
-    public Optional<String> getOutput() {
+    public Optional<String> output() {
         return Optional.ofNullable(this.output);
     }
     /**
      * Script start time.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 

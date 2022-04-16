@@ -60,44 +60,44 @@ public final class MonitorPropertiesResponse {
         this.userInfo = userInfo;
     }
 
-    public String getLiftrResourceCategory() {
+    public String liftrResourceCategory() {
         return this.liftrResourceCategory;
     }
     /**
      * The priority of the resource.
      * 
     */
-    public Integer getLiftrResourcePreference() {
+    public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
-    public Optional<LogzOrganizationPropertiesResponse> getLogzOrganizationProperties() {
+    public Optional<LogzOrganizationPropertiesResponse> logzOrganizationProperties() {
         return Optional.ofNullable(this.logzOrganizationProperties);
     }
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
     */
-    public Optional<String> getMarketplaceSubscriptionStatus() {
+    public Optional<String> marketplaceSubscriptionStatus() {
         return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
     */
-    public Optional<String> getMonitoringStatus() {
+    public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
-    public Optional<PlanDataResponse> getPlanData() {
+    public Optional<PlanDataResponse> planData() {
         return Optional.ofNullable(this.planData);
     }
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
-    public Optional<UserInfoResponse> getUserInfo() {
+    public Optional<UserInfoResponse> userInfo() {
         return Optional.ofNullable(this.userInfo);
     }
 

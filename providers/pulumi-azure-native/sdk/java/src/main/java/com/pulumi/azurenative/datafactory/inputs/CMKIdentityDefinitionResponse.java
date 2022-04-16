@@ -25,7 +25,7 @@ public final class CMKIdentityDefinitionResponse extends com.pulumi.resources.In
     @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
     }
 

@@ -62,42 +62,42 @@ public final class PrivateEndpointConnectionResponse {
      * private endpoint connection Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * private endpoint connection name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The resource of private end point.
      * 
     */
-    public PrivateEndpointResponse getPrivateEndpoint() {
+    public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * A collection of information about the state of the connection between DiskAccess and Virtual Network.
      * 
     */
-    public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
+    public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The provisioning state of the private endpoint connection resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * private endpoint connection type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

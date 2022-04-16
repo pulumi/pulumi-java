@@ -70,7 +70,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="activities", required=true)
       private final Output<List<Object>> activities;
 
-    public Output<List<Object>> getActivities() {
+    public Output<List<Object>> activities() {
         return this.activities;
     }
 
@@ -81,7 +81,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
 
-    public Output<Integer> getBatchCount() {
+    public Output<Integer> batchCount() {
         return this.batchCount == null ? Codegen.empty() : this.batchCount;
     }
 
@@ -92,7 +92,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -103,7 +103,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -114,7 +114,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isSequential")
       private final @Nullable Output<Boolean> isSequential;
 
-    public Output<Boolean> getIsSequential() {
+    public Output<Boolean> isSequential() {
         return this.isSequential == null ? Codegen.empty() : this.isSequential;
     }
 
@@ -125,7 +125,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="items", required=true)
       private final Output<ExpressionArgs> items;
 
-    public Output<ExpressionArgs> getItems() {
+    public Output<ExpressionArgs> items() {
         return this.items;
     }
 
@@ -136,7 +136,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -148,7 +148,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -159,7 +159,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

@@ -42,7 +42,7 @@ public class ServerCommunicationLink extends com.pulumi.resources.CustomResource
      * @return Communication link kind.  This property is used for Azure Portal metadata.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -56,7 +56,7 @@ public class ServerCommunicationLink extends com.pulumi.resources.CustomResource
      * @return Communication link location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -70,7 +70,7 @@ public class ServerCommunicationLink extends com.pulumi.resources.CustomResource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ServerCommunicationLink extends com.pulumi.resources.CustomResource
      * @return The name of the partner server.
      * 
      */
-    public Output<String> getPartnerServer() {
+    public Output<String> partnerServer() {
         return this.partnerServer;
     }
     /**
@@ -98,7 +98,7 @@ public class ServerCommunicationLink extends com.pulumi.resources.CustomResource
      * @return The state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -112,7 +112,7 @@ public class ServerCommunicationLink extends com.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

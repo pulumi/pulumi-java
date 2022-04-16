@@ -29,7 +29,7 @@ public final class FacebookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -40,7 +40,7 @@ public final class FacebookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="graphApiVersion")
       private final @Nullable Output<String> graphApiVersion;
 
-    public Output<String> getGraphApiVersion() {
+    public Output<String> graphApiVersion() {
         return this.graphApiVersion == null ? Codegen.empty() : this.graphApiVersion;
     }
 
@@ -51,7 +51,7 @@ public final class FacebookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="login")
       private final @Nullable Output<LoginScopesArgs> login;
 
-    public Output<LoginScopesArgs> getLogin() {
+    public Output<LoginScopesArgs> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -62,7 +62,7 @@ public final class FacebookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registration")
       private final @Nullable Output<AppRegistrationArgs> registration;
 
-    public Output<AppRegistrationArgs> getRegistration() {
+    public Output<AppRegistrationArgs> registration() {
         return this.registration == null ? Codegen.empty() : this.registration;
     }
 

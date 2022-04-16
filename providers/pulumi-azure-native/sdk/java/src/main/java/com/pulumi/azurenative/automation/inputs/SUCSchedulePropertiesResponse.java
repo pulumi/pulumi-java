@@ -28,7 +28,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="advancedSchedule")
       private final @Nullable AdvancedScheduleResponse advancedSchedule;
 
-    public Optional<AdvancedScheduleResponse> getAdvancedSchedule() {
+    public Optional<AdvancedScheduleResponse> advancedSchedule() {
         return this.advancedSchedule == null ? Optional.empty() : Optional.ofNullable(this.advancedSchedule);
     }
 
@@ -39,7 +39,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="creationTime")
       private final @Nullable String creationTime;
 
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
@@ -50,7 +50,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -61,7 +61,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="expiryTime")
       private final @Nullable String expiryTime;
 
-    public Optional<String> getExpiryTime() {
+    public Optional<String> expiryTime() {
         return this.expiryTime == null ? Optional.empty() : Optional.ofNullable(this.expiryTime);
     }
 
@@ -72,7 +72,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="expiryTimeOffsetMinutes")
       private final @Nullable Double expiryTimeOffsetMinutes;
 
-    public Optional<Double> getExpiryTimeOffsetMinutes() {
+    public Optional<Double> expiryTimeOffsetMinutes() {
         return this.expiryTimeOffsetMinutes == null ? Optional.empty() : Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
 
@@ -83,7 +83,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="frequency")
       private final @Nullable String frequency;
 
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
     }
 
@@ -94,7 +94,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="interval")
       private final @Nullable Double interval;
 
-    public Optional<Double> getInterval() {
+    public Optional<Double> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
@@ -105,7 +105,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="isEnabled")
       private final @Nullable Boolean isEnabled;
 
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
     }
 
@@ -116,7 +116,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="lastModifiedTime")
       private final @Nullable String lastModifiedTime;
 
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
     }
 
@@ -127,7 +127,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="nextRun")
       private final @Nullable String nextRun;
 
-    public Optional<String> getNextRun() {
+    public Optional<String> nextRun() {
         return this.nextRun == null ? Optional.empty() : Optional.ofNullable(this.nextRun);
     }
 
@@ -138,7 +138,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="nextRunOffsetMinutes")
       private final @Nullable Double nextRunOffsetMinutes;
 
-    public Optional<Double> getNextRunOffsetMinutes() {
+    public Optional<Double> nextRunOffsetMinutes() {
         return this.nextRunOffsetMinutes == null ? Optional.empty() : Optional.ofNullable(this.nextRunOffsetMinutes);
     }
 
@@ -149,7 +149,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -160,7 +160,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="startTimeOffsetMinutes", required=true)
       private final Double startTimeOffsetMinutes;
 
-    public Double getStartTimeOffsetMinutes() {
+    public Double startTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
 
@@ -171,7 +171,7 @@ public final class SUCSchedulePropertiesResponse extends com.pulumi.resources.In
     @Import(name="timeZone")
       private final @Nullable String timeZone;
 
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 

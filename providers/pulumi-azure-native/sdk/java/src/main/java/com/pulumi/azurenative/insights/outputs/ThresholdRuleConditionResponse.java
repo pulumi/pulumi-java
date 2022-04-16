@@ -67,7 +67,7 @@ public final class ThresholdRuleConditionResponse {
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
     */
-    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> getDataSource() {
+    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
@@ -75,35 +75,35 @@ public final class ThresholdRuleConditionResponse {
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * the operator used to compare the data and the threshold.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * the threshold value that activates the alert.
      * 
     */
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
     /**
      * the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
      * 
     */
-    public Optional<String> getTimeAggregation() {
+    public Optional<String> timeAggregation() {
         return Optional.ofNullable(this.timeAggregation);
     }
     /**
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
     */
-    public Optional<String> getWindowSize() {
+    public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }
 

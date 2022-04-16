@@ -28,7 +28,7 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
     @Import(name="doubleEncryption")
       private final @Nullable Output<Either<String,DoubleEncryption>> doubleEncryption;
 
-    public Output<Either<String,DoubleEncryption>> getDoubleEncryption() {
+    public Output<Either<String,DoubleEncryption>> doubleEncryption() {
         return this.doubleEncryption == null ? Codegen.empty() : this.doubleEncryption;
     }
 

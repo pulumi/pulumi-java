@@ -23,7 +23,7 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="qualifier", required=true)
       private final String qualifier;
 
-    public String getQualifier() {
+    public String qualifier() {
         return this.qualifier;
     }
 
@@ -34,7 +34,7 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

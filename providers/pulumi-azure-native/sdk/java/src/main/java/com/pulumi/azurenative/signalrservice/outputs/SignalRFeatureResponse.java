@@ -45,21 +45,21 @@ public final class SignalRFeatureResponse {
      * - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
      * 
     */
-    public String getFlag() {
+    public String flag() {
         return this.flag;
     }
     /**
      * Optional properties related to this feature.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

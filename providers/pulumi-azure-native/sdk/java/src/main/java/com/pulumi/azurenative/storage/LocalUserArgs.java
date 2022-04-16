@@ -26,7 +26,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasSharedKey")
       private final @Nullable Output<Boolean> hasSharedKey;
 
-    public Output<Boolean> getHasSharedKey() {
+    public Output<Boolean> hasSharedKey() {
         return this.hasSharedKey == null ? Codegen.empty() : this.hasSharedKey;
     }
 
@@ -48,7 +48,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasSshKey")
       private final @Nullable Output<Boolean> hasSshKey;
 
-    public Output<Boolean> getHasSshKey() {
+    public Output<Boolean> hasSshKey() {
         return this.hasSshKey == null ? Codegen.empty() : this.hasSshKey;
     }
 
@@ -59,7 +59,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasSshPassword")
       private final @Nullable Output<Boolean> hasSshPassword;
 
-    public Output<Boolean> getHasSshPassword() {
+    public Output<Boolean> hasSshPassword() {
         return this.hasSshPassword == null ? Codegen.empty() : this.hasSshPassword;
     }
 
@@ -70,7 +70,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
-    public Output<String> getHomeDirectory() {
+    public Output<String> homeDirectory() {
         return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
     }
 
@@ -81,7 +81,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissionScopes")
       private final @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
 
-    public Output<List<PermissionScopeArgs>> getPermissionScopes() {
+    public Output<List<PermissionScopeArgs>> permissionScopes() {
         return this.permissionScopes == null ? Codegen.empty() : this.permissionScopes;
     }
 
@@ -92,7 +92,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshAuthorizedKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
-    public Output<List<SshPublicKeyArgs>> getSshAuthorizedKeys() {
+    public Output<List<SshPublicKeyArgs>> sshAuthorizedKeys() {
         return this.sshAuthorizedKeys == null ? Codegen.empty() : this.sshAuthorizedKeys;
     }
 
@@ -114,7 +114,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

@@ -34,14 +34,14 @@ public final class DataMaskingResponse {
      * Masking settings for headers
      * 
     */
-    public List<DataMaskingEntityResponse> getHeaders() {
+    public List<DataMaskingEntityResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Masking settings for Url query parameters
      * 
     */
-    public List<DataMaskingEntityResponse> getQueryParams() {
+    public List<DataMaskingEntityResponse> queryParams() {
         return this.queryParams == null ? List.of() : this.queryParams;
     }
 

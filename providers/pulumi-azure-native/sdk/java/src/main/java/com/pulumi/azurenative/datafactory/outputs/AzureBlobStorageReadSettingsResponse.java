@@ -114,70 +114,70 @@ public final class AzureBlobStorageReadSettingsResponse {
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDeleteFilesAfterCompletion() {
+    public Optional<Object> deleteFilesAfterCompletion() {
         return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Indicates whether to enable partition discovery.
      * 
     */
-    public Optional<Boolean> getEnablePartitionDiscovery() {
+    public Optional<Boolean> enablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
     /**
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileListPath() {
+    public Optional<Object> fileListPath() {
         return Optional.ofNullable(this.fileListPath);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getModifiedDatetimeEnd() {
+    public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getModifiedDatetimeStart() {
+    public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
     /**
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPartitionRootPath() {
+    public Optional<Object> partitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
     /**
      * The prefix filter for the Azure Blob name. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getPrefix() {
+    public Optional<Object> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getRecursive() {
+    public Optional<Object> recursive() {
         return Optional.ofNullable(this.recursive);
     }
     /**
@@ -185,21 +185,21 @@ public final class AzureBlobStorageReadSettingsResponse {
      * Expected value is 'AzureBlobStorageReadSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Azure blob wildcardFileName. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getWildcardFileName() {
+    public Optional<Object> wildcardFileName() {
         return Optional.ofNullable(this.wildcardFileName);
     }
     /**
      * Azure blob wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getWildcardFolderPath() {
+    public Optional<Object> wildcardFolderPath() {
         return Optional.ofNullable(this.wildcardFolderPath);
     }
 

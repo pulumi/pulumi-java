@@ -26,7 +26,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="databaseName")
       private final @Nullable String databaseName;
 
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
@@ -37,7 +37,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="fileType")
       private final @Nullable String fileType;
 
-    public Optional<String> getFileType() {
+    public Optional<String> fileType() {
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
     }
 
@@ -48,7 +48,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -59,7 +59,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="logicalName")
       private final @Nullable String logicalName;
 
-    public Optional<String> getLogicalName() {
+    public Optional<String> logicalName() {
         return this.logicalName == null ? Optional.empty() : Optional.ofNullable(this.logicalName);
     }
 
@@ -70,7 +70,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="physicalFullName")
       private final @Nullable String physicalFullName;
 
-    public Optional<String> getPhysicalFullName() {
+    public Optional<String> physicalFullName() {
         return this.physicalFullName == null ? Optional.empty() : Optional.ofNullable(this.physicalFullName);
     }
 
@@ -81,7 +81,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="restoreFullName")
       private final @Nullable String restoreFullName;
 
-    public Optional<String> getRestoreFullName() {
+    public Optional<String> restoreFullName() {
         return this.restoreFullName == null ? Optional.empty() : Optional.ofNullable(this.restoreFullName);
     }
 
@@ -92,7 +92,7 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
     @Import(name="sizeMB")
       private final @Nullable Double sizeMB;
 
-    public Optional<Double> getSizeMB() {
+    public Optional<Double> sizeMB() {
         return this.sizeMB == null ? Optional.empty() : Optional.ofNullable(this.sizeMB);
     }
 

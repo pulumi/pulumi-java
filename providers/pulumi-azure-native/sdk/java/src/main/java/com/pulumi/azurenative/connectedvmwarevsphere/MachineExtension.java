@@ -47,7 +47,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
+    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
@@ -61,7 +61,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> getForceUpdateTag() {
+    public Output</* @Nullable */ String> forceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
@@ -75,7 +75,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return The machine extension instance view.
      * 
      */
-    public Output</* @Nullable */ MachineExtensionPropertiesResponseInstanceView> getInstanceView() {
+    public Output</* @Nullable */ MachineExtensionPropertiesResponseInstanceView> instanceView() {
         return this.instanceView;
     }
     /**
@@ -89,7 +89,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -103,7 +103,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    public Output</* @Nullable */ Object> getProtectedSettings() {
+    public Output</* @Nullable */ Object> protectedSettings() {
         return this.protectedSettings;
     }
     /**
@@ -131,7 +131,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +145,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return The name of the extension handler publisher.
      * 
      */
-    public Output</* @Nullable */ String> getPublisher() {
+    public Output</* @Nullable */ String> publisher() {
         return this.publisher;
     }
     /**
@@ -159,7 +159,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Json formatted public settings for the extension.
      * 
      */
-    public Output</* @Nullable */ Object> getSettings() {
+    public Output</* @Nullable */ Object> settings() {
         return this.settings;
     }
     /**
@@ -173,7 +173,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -187,7 +187,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -201,7 +201,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -215,7 +215,7 @@ public class MachineExtension extends com.pulumi.resources.CustomResource {
      * @return Specifies the version of the script handler.
      * 
      */
-    public Output</* @Nullable */ String> getTypeHandlerVersion() {
+    public Output</* @Nullable */ String> typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
 

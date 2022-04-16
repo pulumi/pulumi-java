@@ -27,7 +27,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends com.pulu
     @Import(name="antiMalware")
       private final @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
-    public Output<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
+    public Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware() {
         return this.antiMalware == null ? Codegen.empty() : this.antiMalware;
     }
 
@@ -38,7 +38,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends com.pulu
     @Import(name="vmBackup")
       private final @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
-    public Output<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {
+    public Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup() {
         return this.vmBackup == null ? Codegen.empty() : this.vmBackup;
     }
 

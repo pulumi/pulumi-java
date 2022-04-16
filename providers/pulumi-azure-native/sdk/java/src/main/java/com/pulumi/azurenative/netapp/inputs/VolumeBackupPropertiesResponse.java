@@ -26,7 +26,7 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="backupEnabled")
       private final @Nullable Boolean backupEnabled;
 
-    public Optional<Boolean> getBackupEnabled() {
+    public Optional<Boolean> backupEnabled() {
         return this.backupEnabled == null ? Optional.empty() : Optional.ofNullable(this.backupEnabled);
     }
 
@@ -37,7 +37,7 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="backupPolicyId")
       private final @Nullable String backupPolicyId;
 
-    public Optional<String> getBackupPolicyId() {
+    public Optional<String> backupPolicyId() {
         return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
     }
 
@@ -48,7 +48,7 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="policyEnforced")
       private final @Nullable Boolean policyEnforced;
 
-    public Optional<Boolean> getPolicyEnforced() {
+    public Optional<Boolean> policyEnforced() {
         return this.policyEnforced == null ? Optional.empty() : Optional.ofNullable(this.policyEnforced);
     }
 
@@ -59,7 +59,7 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
     @Import(name="vaultId")
       private final @Nullable String vaultId;
 
-    public Optional<String> getVaultId() {
+    public Optional<String> vaultId() {
         return this.vaultId == null ? Optional.empty() : Optional.ofNullable(this.vaultId);
     }
 

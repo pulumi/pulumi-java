@@ -25,7 +25,7 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
-    public Optional<String> getAuthenticationType() {
+    public Optional<String> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -36,7 +36,7 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="connectionString", required=true)
       private final String connectionString;
 
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
 
@@ -47,7 +47,7 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="containerName", required=true)
       private final String containerName;
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
 
@@ -58,7 +58,7 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
     @Import(name="sasTtlAsIso8601")
       private final @Nullable String sasTtlAsIso8601;
 
-    public Optional<String> getSasTtlAsIso8601() {
+    public Optional<String> sasTtlAsIso8601() {
         return this.sasTtlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.sasTtlAsIso8601);
     }
 

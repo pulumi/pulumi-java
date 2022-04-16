@@ -32,7 +32,7 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="enum")
       private final @Nullable Output<List<Object>> enum_;
 
-    public Output<List<Object>> getEnum_() {
+    public Output<List<Object>> enum_() {
         return this.enum_ == null ? Codegen.empty() : this.enum_;
     }
 
@@ -43,7 +43,7 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="format")
       private final @Nullable Output<Either<String,ColumnFormat>> format;
 
-    public Output<Either<String,ColumnFormat>> getFormat() {
+    public Output<Either<String,ColumnFormat>> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -54,7 +54,7 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<Either<String,ColumnType>> type;
 
-    public Output<Either<String,ColumnType>> getType() {
+    public Output<Either<String,ColumnType>> type() {
         return this.type;
     }
 
@@ -65,7 +65,7 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="xMsIsnullable")
       private final @Nullable Output<Boolean> xMsIsnullable;
 
-    public Output<Boolean> getXMsIsnullable() {
+    public Output<Boolean> xMsIsnullable() {
         return this.xMsIsnullable == null ? Codegen.empty() : this.xMsIsnullable;
     }
 
@@ -76,7 +76,7 @@ public final class ColumnSpecificationArgs extends com.pulumi.resources.Resource
     @Import(name="xMsIsordered")
       private final @Nullable Output<Boolean> xMsIsordered;
 
-    public Output<Boolean> getXMsIsordered() {
+    public Output<Boolean> xMsIsordered() {
         return this.xMsIsordered == null ? Codegen.empty() : this.xMsIsordered;
     }
 

@@ -35,14 +35,14 @@ public final class ListUpgradableVersionDetailsResult {
      * Current version of the elastic monitor
      * 
     */
-    public Optional<String> getCurrentVersion() {
+    public Optional<String> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
     /**
      * Stack Versions that this version can upgrade to
      * 
     */
-    public List<String> getUpgradableVersions() {
+    public List<String> upgradableVersions() {
         return this.upgradableVersions == null ? List.of() : this.upgradableVersions;
     }
 

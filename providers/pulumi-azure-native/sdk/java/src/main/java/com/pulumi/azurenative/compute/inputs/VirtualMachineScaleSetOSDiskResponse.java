@@ -31,7 +31,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="caching")
       private final @Nullable String caching;
 
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
@@ -42,7 +42,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="createOption", required=true)
       private final String createOption;
 
-    public String getCreateOption() {
+    public String createOption() {
         return this.createOption;
     }
 
@@ -53,7 +53,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="diffDiskSettings")
       private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
-    public Optional<DiffDiskSettingsResponse> getDiffDiskSettings() {
+    public Optional<DiffDiskSettingsResponse> diffDiskSettings() {
         return this.diffDiskSettings == null ? Optional.empty() : Optional.ofNullable(this.diffDiskSettings);
     }
 
@@ -64,7 +64,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -75,7 +75,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="image")
       private final @Nullable VirtualHardDiskResponse image;
 
-    public Optional<VirtualHardDiskResponse> getImage() {
+    public Optional<VirtualHardDiskResponse> image() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
@@ -86,7 +86,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="managedDisk")
       private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
-    public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> getManagedDisk() {
+    public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
@@ -97,7 +97,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -108,7 +108,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="osType")
       private final @Nullable String osType;
 
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
@@ -119,7 +119,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="vhdContainers")
       private final @Nullable List<String> vhdContainers;
 
-    public List<String> getVhdContainers() {
+    public List<String> vhdContainers() {
         return this.vhdContainers == null ? List.of() : this.vhdContainers;
     }
 
@@ -130,7 +130,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
     @Import(name="writeAcceleratorEnabled")
       private final @Nullable Boolean writeAcceleratorEnabled;
 
-    public Optional<Boolean> getWriteAcceleratorEnabled() {
+    public Optional<Boolean> writeAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 

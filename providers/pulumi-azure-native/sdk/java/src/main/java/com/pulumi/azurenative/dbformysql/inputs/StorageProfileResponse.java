@@ -26,7 +26,7 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="backupRetentionDays")
       private final @Nullable Integer backupRetentionDays;
 
-    public Optional<Integer> getBackupRetentionDays() {
+    public Optional<Integer> backupRetentionDays() {
         return this.backupRetentionDays == null ? Optional.empty() : Optional.ofNullable(this.backupRetentionDays);
     }
 
@@ -37,7 +37,7 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="geoRedundantBackup")
       private final @Nullable String geoRedundantBackup;
 
-    public Optional<String> getGeoRedundantBackup() {
+    public Optional<String> geoRedundantBackup() {
         return this.geoRedundantBackup == null ? Optional.empty() : Optional.ofNullable(this.geoRedundantBackup);
     }
 
@@ -48,7 +48,7 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageAutogrow")
       private final @Nullable String storageAutogrow;
 
-    public Optional<String> getStorageAutogrow() {
+    public Optional<String> storageAutogrow() {
         return this.storageAutogrow == null ? Optional.empty() : Optional.ofNullable(this.storageAutogrow);
     }
 
@@ -59,7 +59,7 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageMB")
       private final @Nullable Integer storageMB;
 
-    public Optional<Integer> getStorageMB() {
+    public Optional<Integer> storageMB() {
         return this.storageMB == null ? Optional.empty() : Optional.ofNullable(this.storageMB);
     }
 

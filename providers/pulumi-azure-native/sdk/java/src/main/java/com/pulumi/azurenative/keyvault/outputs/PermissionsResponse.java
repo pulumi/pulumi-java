@@ -48,28 +48,28 @@ public final class PermissionsResponse {
      * Permissions to certificates
      * 
     */
-    public List<String> getCertificates() {
+    public List<String> certificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
     /**
      * Permissions to keys
      * 
     */
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
     /**
      * Permissions to secrets
      * 
     */
-    public List<String> getSecrets() {
+    public List<String> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
     /**
      * Permissions to storage accounts
      * 
     */
-    public List<String> getStorage() {
+    public List<String> storage() {
         return this.storage == null ? List.of() : this.storage;
     }
 

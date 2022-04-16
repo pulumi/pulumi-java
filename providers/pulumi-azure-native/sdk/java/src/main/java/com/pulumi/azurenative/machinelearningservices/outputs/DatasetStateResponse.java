@@ -42,21 +42,21 @@ public final class DatasetStateResponse {
      * Reference to better Dataset or a Definition
      * 
     */
-    public Optional<DatasetStateResponseDeprecatedBy> getDeprecatedBy() {
+    public Optional<DatasetStateResponseDeprecatedBy> deprecatedBy() {
         return Optional.ofNullable(this.deprecatedBy);
     }
     /**
      * eTag description
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Dataset state
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

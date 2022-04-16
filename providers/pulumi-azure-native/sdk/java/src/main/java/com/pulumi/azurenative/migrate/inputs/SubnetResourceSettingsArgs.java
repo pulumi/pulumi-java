@@ -27,7 +27,7 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
@@ -38,7 +38,7 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
 
-    public Output<NsgReferenceArgs> getNetworkSecurityGroup() {
+    public Output<NsgReferenceArgs> networkSecurityGroup() {
         return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
     }
 

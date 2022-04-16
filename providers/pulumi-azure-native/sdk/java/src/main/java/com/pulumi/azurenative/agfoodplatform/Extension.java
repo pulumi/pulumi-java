@@ -43,7 +43,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The ETag value to implement optimistic concurrency.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -57,7 +57,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Extension api docs link.
      * 
      */
-    public Output<String> getExtensionApiDocsLink() {
+    public Output<String> extensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
     /**
@@ -71,7 +71,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Extension auth link.
      * 
      */
-    public Output<String> getExtensionAuthLink() {
+    public Output<String> extensionAuthLink() {
         return this.extensionAuthLink;
     }
     /**
@@ -85,7 +85,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Extension category. e.g. weather/sensor/satellite.
      * 
      */
-    public Output<String> getExtensionCategory() {
+    public Output<String> extensionCategory() {
         return this.extensionCategory;
     }
     /**
@@ -99,7 +99,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Extension Id.
      * 
      */
-    public Output<String> getExtensionId() {
+    public Output<String> extensionId() {
         return this.extensionId;
     }
     /**
@@ -113,7 +113,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Installed extension version.
      * 
      */
-    public Output<String> getInstalledExtensionVersion() {
+    public Output<String> installedExtensionVersion() {
         return this.installedExtensionVersion;
     }
     /**
@@ -127,7 +127,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +141,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -155,7 +155,7 @@ public class Extension extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

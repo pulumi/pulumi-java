@@ -24,7 +24,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="expirationTime", required=true)
       private final Double expirationTime;
 
-    public Double getExpirationTime() {
+    public Double expirationTime() {
         return this.expirationTime;
     }
 
@@ -35,7 +35,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
 
-    public String getHybridConnectionName() {
+    public String hybridConnectionName() {
         return this.hybridConnectionName;
     }
 
@@ -46,7 +46,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="relay", required=true)
       private final String relay;
 
-    public String getRelay() {
+    public String relay() {
         return this.relay;
     }
 
@@ -57,7 +57,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
     @Import(name="token", required=true)
       private final String token;
 
-    public String getToken() {
+    public String token() {
         return this.token;
     }
 

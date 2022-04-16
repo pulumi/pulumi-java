@@ -207,21 +207,21 @@ public final class ACIServiceResponseResponse {
      * Whether or not Application Insights is enabled.
      * 
     */
-    public Optional<Boolean> getAppInsightsEnabled() {
+    public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
      * Whether or not authentication is enabled on the service.
      * 
     */
-    public Optional<Boolean> getAuthEnabled() {
+    public Optional<Boolean> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
     /**
      * The CName for the service.
      * 
     */
-    public Optional<String> getCname() {
+    public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
     /**
@@ -229,154 +229,154 @@ public final class ACIServiceResponseResponse {
      * Expected value is 'ACI'.
      * 
     */
-    public String getComputeType() {
+    public String computeType() {
         return this.computeType;
     }
     /**
      * The container resource requirements.
      * 
     */
-    public Optional<ContainerResourceRequirementsResponse> getContainerResourceRequirements() {
+    public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
      * Details of the data collection options specified.
      * 
     */
-    public Optional<ACIServiceResponseResponseDataCollection> getDataCollection() {
+    public Optional<ACIServiceResponseResponseDataCollection> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
     /**
      * The deployment type for the service.
      * 
     */
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * The service description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encryption properties.
      * 
     */
-    public Optional<ACIServiceResponseResponseEncryptionProperties> getEncryptionProperties() {
+    public Optional<ACIServiceResponseResponseEncryptionProperties> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
     /**
      * The Environment, models and assets used for inferencing.
      * 
     */
-    public Optional<ACIServiceResponseResponseEnvironmentImageRequest> getEnvironmentImageRequest() {
+    public Optional<ACIServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
     /**
      * The error details.
      * 
     */
-    public ServiceResponseBaseResponseError getError() {
+    public ServiceResponseBaseResponseError error() {
         return this.error;
     }
     /**
      * The service tag dictionary. Tags are mutable.
      * 
     */
-    public Map<String,String> getKvTags() {
+    public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
      * The name of the Azure location/region.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Details on the models and configurations.
      * 
     */
-    public Map<String,Object> getModelConfigMap() {
+    public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
     /**
      * The list of models.
      * 
     */
-    public List<ModelResponse> getModels() {
+    public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
     /**
      * The service property dictionary. Properties are immutable.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The public Fqdn for the service.
      * 
     */
-    public Optional<String> getPublicFqdn() {
+    public Optional<String> publicFqdn() {
         return Optional.ofNullable(this.publicFqdn);
     }
     /**
      * The public IP address for the service.
      * 
     */
-    public Optional<String> getPublicIp() {
+    public Optional<String> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
     /**
      * The Uri for sending scoring requests.
      * 
     */
-    public String getScoringUri() {
+    public String scoringUri() {
         return this.scoringUri;
     }
     /**
      * The public SSL certificate in PEM format to use if SSL is enabled.
      * 
     */
-    public Optional<String> getSslCertificate() {
+    public Optional<String> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
     /**
      * Whether or not SSL is enabled.
      * 
     */
-    public Optional<Boolean> getSslEnabled() {
+    public Optional<Boolean> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
     /**
      * The public SSL key in PEM format for the certificate.
      * 
     */
-    public Optional<String> getSslKey() {
+    public Optional<String> sslKey() {
         return Optional.ofNullable(this.sslKey);
     }
     /**
      * The current state of the service.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The Uri for sending swagger requests.
      * 
     */
-    public String getSwaggerUri() {
+    public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
      * The virtual network configuration.
      * 
     */
-    public Optional<ACIServiceResponseResponseVnetConfiguration> getVnetConfiguration() {
+    public Optional<ACIServiceResponseResponseVnetConfiguration> vnetConfiguration() {
         return Optional.ofNullable(this.vnetConfiguration);
     }
 

@@ -25,7 +25,7 @@ public final class WebPubSubTlsSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="clientCertEnabled")
       private final @Nullable Boolean clientCertEnabled;
 
-    public Optional<Boolean> getClientCertEnabled() {
+    public Optional<Boolean> clientCertEnabled() {
         return this.clientCertEnabled == null ? Optional.empty() : Optional.ofNullable(this.clientCertEnabled);
     }
 

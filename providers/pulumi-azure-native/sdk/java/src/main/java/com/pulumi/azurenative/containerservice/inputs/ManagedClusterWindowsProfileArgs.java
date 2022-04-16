@@ -29,7 +29,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
     @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
-    public Output<String> getAdminPassword() {
+    public Output<String> adminPassword() {
         return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
@@ -40,7 +40,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
     @Import(name="adminUsername", required=true)
       private final Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername;
     }
 
@@ -51,7 +51,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
     @Import(name="enableCSIProxy")
       private final @Nullable Output<Boolean> enableCSIProxy;
 
-    public Output<Boolean> getEnableCSIProxy() {
+    public Output<Boolean> enableCSIProxy() {
         return this.enableCSIProxy == null ? Codegen.empty() : this.enableCSIProxy;
     }
 
@@ -62,7 +62,7 @@ public final class ManagedClusterWindowsProfileArgs extends com.pulumi.resources
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Output<Either<String,LicenseType>> getLicenseType() {
+    public Output<Either<String,LicenseType>> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 

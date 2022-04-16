@@ -25,7 +25,7 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -37,7 +37,7 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -48,7 +48,7 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

@@ -23,7 +23,7 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
     @Import(name="endRange", required=true)
       private final String endRange;
 
-    public String getEndRange() {
+    public String endRange() {
         return this.endRange;
     }
 
@@ -34,7 +34,7 @@ public final class BlobRestoreRangeResponse extends com.pulumi.resources.InvokeA
     @Import(name="startRange", required=true)
       private final String startRange;
 
-    public String getStartRange() {
+    public String startRange() {
         return this.startRange;
     }
 

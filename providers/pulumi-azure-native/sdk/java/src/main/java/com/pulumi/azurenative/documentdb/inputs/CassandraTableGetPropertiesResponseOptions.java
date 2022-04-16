@@ -22,7 +22,7 @@ public final class CassandraTableGetPropertiesResponseOptions extends com.pulumi
     @Import(name="autoscaleSettings")
       private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
-    public Optional<AutoscaleSettingsResponse> getAutoscaleSettings() {
+    public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
         return this.autoscaleSettings == null ? Optional.empty() : Optional.ofNullable(this.autoscaleSettings);
     }
 
@@ -33,7 +33,7 @@ public final class CassandraTableGetPropertiesResponseOptions extends com.pulumi
     @Import(name="throughput")
       private final @Nullable Integer throughput;
 
-    public Optional<Integer> getThroughput() {
+    public Optional<Integer> throughput() {
         return this.throughput == null ? Optional.empty() : Optional.ofNullable(this.throughput);
     }
 

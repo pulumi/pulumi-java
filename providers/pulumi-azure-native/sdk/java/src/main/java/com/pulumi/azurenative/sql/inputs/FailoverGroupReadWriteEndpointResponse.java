@@ -26,7 +26,7 @@ public final class FailoverGroupReadWriteEndpointResponse extends com.pulumi.res
     @Import(name="failoverPolicy", required=true)
       private final String failoverPolicy;
 
-    public String getFailoverPolicy() {
+    public String failoverPolicy() {
         return this.failoverPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class FailoverGroupReadWriteEndpointResponse extends com.pulumi.res
     @Import(name="failoverWithDataLossGracePeriodMinutes")
       private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
-    public Optional<Integer> getFailoverWithDataLossGracePeriodMinutes() {
+    public Optional<Integer> failoverWithDataLossGracePeriodMinutes() {
         return this.failoverWithDataLossGracePeriodMinutes == null ? Optional.empty() : Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }
 

@@ -25,7 +25,7 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="creationTime")
       private final @Nullable String creationTime;
 
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
     }
 
@@ -36,7 +36,7 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="expiry")
       private final @Nullable String expiry;
 
-    public Optional<String> getExpiry() {
+    public Optional<String> expiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
     }
 
@@ -47,7 +47,7 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -58,7 +58,7 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

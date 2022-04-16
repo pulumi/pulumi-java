@@ -103,77 +103,77 @@ public final class GetSnapshotPolicyResult {
      * Schedule for daily snapshots
      * 
     */
-    public Optional<DailyScheduleResponse> getDailySchedule() {
+    public Optional<DailyScheduleResponse> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
      * The property to decide policy is enabled or not
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Schedule for hourly snapshots
      * 
     */
-    public Optional<HourlyScheduleResponse> getHourlySchedule() {
+    public Optional<HourlyScheduleResponse> hourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Schedule for monthly snapshots
      * 
     */
-    public Optional<MonthlyScheduleResponse> getMonthlySchedule() {
+    public Optional<MonthlyScheduleResponse> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Schedule for weekly snapshots
      * 
     */
-    public Optional<WeeklyScheduleResponse> getWeeklySchedule() {
+    public Optional<WeeklyScheduleResponse> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
 

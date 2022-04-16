@@ -35,14 +35,14 @@ public final class PropagatedRouteTableResponse {
      * The list of resource ids of all the RouteTables.
      * 
     */
-    public List<SubResourceResponse> getIds() {
+    public List<SubResourceResponse> ids() {
         return this.ids == null ? List.of() : this.ids;
     }
     /**
      * The list of labels.
      * 
     */
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
 

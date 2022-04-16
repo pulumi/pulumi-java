@@ -26,7 +26,7 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memorySizeMB")
       private final @Nullable Output<Integer> memorySizeMB;
 
-    public Output<Integer> getMemorySizeMB() {
+    public Output<Integer> memorySizeMB() {
         return this.memorySizeMB == null ? Codegen.empty() : this.memorySizeMB;
     }
 
@@ -37,7 +37,7 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="numCPUs")
       private final @Nullable Output<Integer> numCPUs;
 
-    public Output<Integer> getNumCPUs() {
+    public Output<Integer> numCPUs() {
         return this.numCPUs == null ? Codegen.empty() : this.numCPUs;
     }
 
@@ -48,7 +48,7 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="numCoresPerSocket")
       private final @Nullable Output<Integer> numCoresPerSocket;
 
-    public Output<Integer> getNumCoresPerSocket() {
+    public Output<Integer> numCoresPerSocket() {
         return this.numCoresPerSocket == null ? Codegen.empty() : this.numCoresPerSocket;
     }
 

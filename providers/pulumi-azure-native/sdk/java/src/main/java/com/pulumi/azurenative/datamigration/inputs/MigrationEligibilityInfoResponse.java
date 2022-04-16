@@ -25,7 +25,7 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
     @Import(name="isEligibleForMigration", required=true)
       private final Boolean isEligibleForMigration;
 
-    public Boolean getIsEligibleForMigration() {
+    public Boolean isEligibleForMigration() {
         return this.isEligibleForMigration;
     }
 
@@ -36,7 +36,7 @@ public final class MigrationEligibilityInfoResponse extends com.pulumi.resources
     @Import(name="validationMessages", required=true)
       private final List<String> validationMessages;
 
-    public List<String> getValidationMessages() {
+    public List<String> validationMessages() {
         return this.validationMessages;
     }
 

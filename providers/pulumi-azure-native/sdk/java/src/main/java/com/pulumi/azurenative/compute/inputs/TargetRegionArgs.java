@@ -30,7 +30,7 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionImagesArgs> encryption;
 
-    public Output<EncryptionImagesArgs> getEncryption() {
+    public Output<EncryptionImagesArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -41,7 +41,7 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="regionalReplicaCount")
       private final @Nullable Output<Integer> regionalReplicaCount;
 
-    public Output<Integer> getRegionalReplicaCount() {
+    public Output<Integer> regionalReplicaCount() {
         return this.regionalReplicaCount == null ? Codegen.empty() : this.regionalReplicaCount;
     }
 
@@ -63,7 +63,7 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountType>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 

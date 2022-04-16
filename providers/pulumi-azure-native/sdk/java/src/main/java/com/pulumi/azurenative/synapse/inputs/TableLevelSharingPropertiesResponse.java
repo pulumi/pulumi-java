@@ -26,7 +26,7 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="externalTablesToExclude")
       private final @Nullable List<String> externalTablesToExclude;
 
-    public List<String> getExternalTablesToExclude() {
+    public List<String> externalTablesToExclude() {
         return this.externalTablesToExclude == null ? List.of() : this.externalTablesToExclude;
     }
 
@@ -37,7 +37,7 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="externalTablesToInclude")
       private final @Nullable List<String> externalTablesToInclude;
 
-    public List<String> getExternalTablesToInclude() {
+    public List<String> externalTablesToInclude() {
         return this.externalTablesToInclude == null ? List.of() : this.externalTablesToInclude;
     }
 
@@ -48,7 +48,7 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="materializedViewsToExclude")
       private final @Nullable List<String> materializedViewsToExclude;
 
-    public List<String> getMaterializedViewsToExclude() {
+    public List<String> materializedViewsToExclude() {
         return this.materializedViewsToExclude == null ? List.of() : this.materializedViewsToExclude;
     }
 
@@ -59,7 +59,7 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="materializedViewsToInclude")
       private final @Nullable List<String> materializedViewsToInclude;
 
-    public List<String> getMaterializedViewsToInclude() {
+    public List<String> materializedViewsToInclude() {
         return this.materializedViewsToInclude == null ? List.of() : this.materializedViewsToInclude;
     }
 
@@ -70,7 +70,7 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="tablesToExclude")
       private final @Nullable List<String> tablesToExclude;
 
-    public List<String> getTablesToExclude() {
+    public List<String> tablesToExclude() {
         return this.tablesToExclude == null ? List.of() : this.tablesToExclude;
     }
 
@@ -81,7 +81,7 @@ public final class TableLevelSharingPropertiesResponse extends com.pulumi.resour
     @Import(name="tablesToInclude")
       private final @Nullable List<String> tablesToInclude;
 
-    public List<String> getTablesToInclude() {
+    public List<String> tablesToInclude() {
         return this.tablesToInclude == null ? List.of() : this.tablesToInclude;
     }
 

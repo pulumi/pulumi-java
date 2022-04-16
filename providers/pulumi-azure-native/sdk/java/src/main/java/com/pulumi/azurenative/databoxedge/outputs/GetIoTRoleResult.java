@@ -118,49 +118,49 @@ public final class GetIoTRoleResult {
      * Resource allocation
      * 
     */
-    public Optional<ComputeResourceResponse> getComputeResource() {
+    public Optional<ComputeResourceResponse> computeResource() {
         return Optional.ofNullable(this.computeResource);
     }
     /**
      * Host OS supported by the IoT role.
      * 
     */
-    public String getHostPlatform() {
+    public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the Iot runtime is hosted.
      * 
     */
-    public String getHostPlatformType() {
+    public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * IoT device metadata to which data box edge device needs to be connected.
      * 
     */
-    public IoTDeviceInfoResponse getIoTDeviceDetails() {
+    public IoTDeviceInfoResponse ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
     /**
      * Iot edge agent details to download the agent and bootstrap iot runtime.
      * 
     */
-    public Optional<IoTEdgeAgentInfoResponse> getIoTEdgeAgentInfo() {
+    public Optional<IoTEdgeAgentInfoResponse> ioTEdgeAgentInfo() {
         return Optional.ofNullable(this.ioTEdgeAgentInfo);
     }
     /**
      * IoT edge device to which the IoT role needs to be configured.
      * 
     */
-    public IoTDeviceInfoResponse getIoTEdgeDeviceDetails() {
+    public IoTDeviceInfoResponse ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
     /**
@@ -168,42 +168,42 @@ public final class GetIoTRoleResult {
      * Expected value is 'IOT'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Role status.
      * 
     */
-    public String getRoleStatus() {
+    public String roleStatus() {
         return this.roleStatus;
     }
     /**
      * Mount points of shares in role(s).
      * 
     */
-    public List<MountPointMapResponse> getShareMappings() {
+    public List<MountPointMapResponse> shareMappings() {
         return this.shareMappings == null ? List.of() : this.shareMappings;
     }
     /**
      * Role configured on ASE resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

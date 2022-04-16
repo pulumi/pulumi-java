@@ -26,7 +26,7 @@ public final class NetworkFunctionTemplateResponse extends com.pulumi.resources.
     @Import(name="networkFunctionRoleConfigurations")
       private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
-    public List<NetworkFunctionRoleConfigurationResponse> getNetworkFunctionRoleConfigurations() {
+    public List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations() {
         return this.networkFunctionRoleConfigurations == null ? List.of() : this.networkFunctionRoleConfigurations;
     }
 

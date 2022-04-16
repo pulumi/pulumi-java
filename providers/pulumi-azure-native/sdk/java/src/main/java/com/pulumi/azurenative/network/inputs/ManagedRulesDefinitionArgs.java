@@ -28,7 +28,7 @@ public final class ManagedRulesDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="exclusions")
       private final @Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions;
 
-    public Output<List<OwaspCrsExclusionEntryArgs>> getExclusions() {
+    public Output<List<OwaspCrsExclusionEntryArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedRulesDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="managedRuleSets", required=true)
       private final Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
-    public Output<List<ManagedRuleSetArgs>> getManagedRuleSets() {
+    public Output<List<ManagedRuleSetArgs>> managedRuleSets() {
         return this.managedRuleSets;
     }
 

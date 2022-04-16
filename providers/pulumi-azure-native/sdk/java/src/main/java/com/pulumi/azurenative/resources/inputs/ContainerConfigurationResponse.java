@@ -25,7 +25,7 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
     @Import(name="containerGroupName")
       private final @Nullable String containerGroupName;
 
-    public Optional<String> getContainerGroupName() {
+    public Optional<String> containerGroupName() {
         return this.containerGroupName == null ? Optional.empty() : Optional.ofNullable(this.containerGroupName);
     }
 

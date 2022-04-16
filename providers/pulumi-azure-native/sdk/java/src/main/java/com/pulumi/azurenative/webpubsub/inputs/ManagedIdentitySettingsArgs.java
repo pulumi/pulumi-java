@@ -27,7 +27,7 @@ public final class ManagedIdentitySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 

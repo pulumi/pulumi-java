@@ -39,21 +39,21 @@ public final class PredictionResponseMappings {
      * The grade of the link mapping.
      * 
     */
-    public String getGrade() {
+    public String grade() {
         return this.grade;
     }
     /**
      * The reason of the link mapping.
      * 
     */
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
     /**
      * The score of the link mapping.
      * 
     */
-    public String getScore() {
+    public String score() {
         return this.score;
     }
 

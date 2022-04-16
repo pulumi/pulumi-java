@@ -24,7 +24,7 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hasRows", required=true)
       private final Boolean hasRows;
 
-    public Boolean getHasRows() {
+    public Boolean hasRows() {
         return this.hasRows;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

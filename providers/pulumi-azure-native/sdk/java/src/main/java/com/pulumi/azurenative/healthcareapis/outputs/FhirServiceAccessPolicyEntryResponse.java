@@ -24,7 +24,7 @@ public final class FhirServiceAccessPolicyEntryResponse {
      * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
      * 
     */
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
 

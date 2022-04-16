@@ -24,10 +24,10 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
         this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
     }
 
-    public Optional<String> getSoftDeleteTTL() {
+    public Optional<String> softDeleteTTL() {
         return Optional.ofNullable(this.softDeleteTTL);
     }
-    public List<SubscriptionStateOverrideActionResponse> getSubscriptionStateOverrideActions() {
+    public List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? List.of() : this.subscriptionStateOverrideActions;
     }
 

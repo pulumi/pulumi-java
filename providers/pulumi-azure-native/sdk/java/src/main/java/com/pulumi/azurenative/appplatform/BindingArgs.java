@@ -23,7 +23,7 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appName", required=true)
       private final Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -34,7 +34,7 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bindingName")
       private final @Nullable Output<String> bindingName;
 
-    public Output<String> getBindingName() {
+    public Output<String> bindingName() {
         return this.bindingName == null ? Codegen.empty() : this.bindingName;
     }
 
@@ -45,7 +45,7 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<BindingResourcePropertiesArgs> properties;
 
-    public Output<BindingResourcePropertiesArgs> getProperties() {
+    public Output<BindingResourcePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class BindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

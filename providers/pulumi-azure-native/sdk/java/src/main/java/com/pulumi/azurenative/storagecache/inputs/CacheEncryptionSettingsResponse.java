@@ -25,7 +25,7 @@ public final class CacheEncryptionSettingsResponse extends com.pulumi.resources.
     @Import(name="keyEncryptionKey")
       private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
-    public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
+    public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
     }
 

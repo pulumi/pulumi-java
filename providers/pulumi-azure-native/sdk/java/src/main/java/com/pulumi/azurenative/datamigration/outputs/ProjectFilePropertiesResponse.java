@@ -56,35 +56,35 @@ public final class ProjectFilePropertiesResponse {
      * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
      * 
     */
-    public Optional<String> getExtension() {
+    public Optional<String> extension() {
         return Optional.ofNullable(this.extension);
     }
     /**
      * Relative path of this file resource. This property can be set when creating or updating the file resource.
      * 
     */
-    public Optional<String> getFilePath() {
+    public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
      * Modification DateTime.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * File content type. This property can be modified to reflect the file content type.
      * 
     */
-    public Optional<String> getMediaType() {
+    public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
      * File size.
      * 
     */
-    public Double getSize() {
+    public Double size() {
         return this.size;
     }
 

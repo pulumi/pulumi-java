@@ -23,7 +23,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -34,7 +34,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="monthlyRetention")
       private final @Nullable Output<String> monthlyRetention;
 
-    public Output<String> getMonthlyRetention() {
+    public Output<String> monthlyRetention() {
         return this.monthlyRetention == null ? Codegen.empty() : this.monthlyRetention;
     }
 
@@ -45,7 +45,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
@@ -56,7 +56,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -78,7 +78,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="weekOfYear")
       private final @Nullable Output<Integer> weekOfYear;
 
-    public Output<Integer> getWeekOfYear() {
+    public Output<Integer> weekOfYear() {
         return this.weekOfYear == null ? Codegen.empty() : this.weekOfYear;
     }
 
@@ -89,7 +89,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="weeklyRetention")
       private final @Nullable Output<String> weeklyRetention;
 
-    public Output<String> getWeeklyRetention() {
+    public Output<String> weeklyRetention() {
         return this.weeklyRetention == null ? Codegen.empty() : this.weeklyRetention;
     }
 
@@ -100,7 +100,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="yearlyRetention")
       private final @Nullable Output<String> yearlyRetention;
 
-    public Output<String> getYearlyRetention() {
+    public Output<String> yearlyRetention() {
         return this.yearlyRetention == null ? Codegen.empty() : this.yearlyRetention;
     }
 

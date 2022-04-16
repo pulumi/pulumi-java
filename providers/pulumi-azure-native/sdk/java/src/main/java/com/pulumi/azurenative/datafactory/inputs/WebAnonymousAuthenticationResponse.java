@@ -25,7 +25,7 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
 
@@ -36,7 +36,7 @@ public final class WebAnonymousAuthenticationResponse extends com.pulumi.resourc
     @Import(name="url", required=true)
       private final Object url;
 
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 

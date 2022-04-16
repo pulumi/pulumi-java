@@ -107,84 +107,84 @@ public final class GetVolumeContainerResult {
      * The bandwidth-rate set on the volume container.
      * 
     */
-    public Optional<Integer> getBandWidthRateInMbps() {
+    public Optional<Integer> bandWidthRateInMbps() {
         return Optional.ofNullable(this.bandWidthRateInMbps);
     }
     /**
      * The ID of the bandwidth setting associated with the volume container.
      * 
     */
-    public Optional<String> getBandwidthSettingId() {
+    public Optional<String> bandwidthSettingId() {
         return Optional.ofNullable(this.bandwidthSettingId);
     }
     /**
      * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
      * 
     */
-    public Optional<AsymmetricEncryptedSecretResponse> getEncryptionKey() {
+    public Optional<AsymmetricEncryptedSecretResponse> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * The flag to denote whether encryption is enabled or not.
      * 
     */
-    public String getEncryptionStatus() {
+    public String encryptionStatus() {
         return this.encryptionStatus;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
      * 
     */
-    public String getOwnerShipStatus() {
+    public String ownerShipStatus() {
         return this.ownerShipStatus;
     }
     /**
      * The path ID of storage account associated with the volume container.
      * 
     */
-    public String getStorageAccountCredentialId() {
+    public String storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
     /**
      * The total cloud storage for the volume container.
      * 
     */
-    public Double getTotalCloudStorageUsageInBytes() {
+    public Double totalCloudStorageUsageInBytes() {
         return this.totalCloudStorageUsageInBytes;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The number of volumes in the volume Container.
      * 
     */
-    public Integer getVolumeCount() {
+    public Integer volumeCount() {
         return this.volumeCount;
     }
 

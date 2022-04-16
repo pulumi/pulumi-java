@@ -33,14 +33,14 @@ public final class LinkedTemplateArtifactResponse {
      * A filesystem safe relative path of the artifact.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The Azure Resource Manager template.
      * 
     */
-    public Object getTemplate() {
+    public Object template() {
         return this.template;
     }
 

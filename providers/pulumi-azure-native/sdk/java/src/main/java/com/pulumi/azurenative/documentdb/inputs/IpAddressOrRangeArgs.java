@@ -26,7 +26,7 @@ public final class IpAddressOrRangeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddressOrRange")
       private final @Nullable Output<String> ipAddressOrRange;
 
-    public Output<String> getIpAddressOrRange() {
+    public Output<String> ipAddressOrRange() {
         return this.ipAddressOrRange == null ? Codegen.empty() : this.ipAddressOrRange;
     }
 

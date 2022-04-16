@@ -30,7 +30,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="author")
       private final @Nullable Output<MetadataAuthorArgs> author;
 
-    public Output<MetadataAuthorArgs> getAuthor() {
+    public Output<MetadataAuthorArgs> author() {
         return this.author == null ? Codegen.empty() : this.author;
     }
 
@@ -41,7 +41,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="categories")
       private final @Nullable Output<MetadataCategoriesArgs> categories;
 
-    public Output<MetadataCategoriesArgs> getCategories() {
+    public Output<MetadataCategoriesArgs> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -52,7 +52,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentId")
       private final @Nullable Output<String> contentId;
 
-    public Output<String> getContentId() {
+    public Output<String> contentId() {
         return this.contentId == null ? Codegen.empty() : this.contentId;
     }
 
@@ -63,7 +63,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dependencies")
       private final @Nullable Output<MetadataDependenciesArgs> dependencies;
 
-    public Output<MetadataDependenciesArgs> getDependencies() {
+    public Output<MetadataDependenciesArgs> dependencies() {
         return this.dependencies == null ? Codegen.empty() : this.dependencies;
     }
 
@@ -74,7 +74,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstPublishDate")
       private final @Nullable Output<String> firstPublishDate;
 
-    public Output<String> getFirstPublishDate() {
+    public Output<String> firstPublishDate() {
         return this.firstPublishDate == null ? Codegen.empty() : this.firstPublishDate;
     }
 
@@ -85,7 +85,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
 
@@ -96,7 +96,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastPublishDate")
       private final @Nullable Output<String> lastPublishDate;
 
-    public Output<String> getLastPublishDate() {
+    public Output<String> lastPublishDate() {
         return this.lastPublishDate == null ? Codegen.empty() : this.lastPublishDate;
     }
 
@@ -107,7 +107,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
 
-    public Output<String> getMetadataName() {
+    public Output<String> metadataName() {
         return this.metadataName == null ? Codegen.empty() : this.metadataName;
     }
 
@@ -118,7 +118,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -129,7 +129,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
 
@@ -140,7 +140,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providers")
       private final @Nullable Output<List<String>> providers;
 
-    public Output<List<String>> getProviders() {
+    public Output<List<String>> providers() {
         return this.providers == null ? Codegen.empty() : this.providers;
     }
 
@@ -151,7 +151,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -162,7 +162,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<MetadataSourceArgs> source;
 
-    public Output<MetadataSourceArgs> getSource() {
+    public Output<MetadataSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -173,7 +173,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="support")
       private final @Nullable Output<MetadataSupportArgs> support;
 
-    public Output<MetadataSupportArgs> getSupport() {
+    public Output<MetadataSupportArgs> support() {
         return this.support == null ? Codegen.empty() : this.support;
     }
 
@@ -184,7 +184,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -195,7 +195,7 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

@@ -34,14 +34,14 @@ public final class ACIServiceResponseResponseVnetConfiguration {
      * The name of the virtual network subnet.
      * 
     */
-    public Optional<String> getSubnetName() {
+    public Optional<String> subnetName() {
         return Optional.ofNullable(this.subnetName);
     }
     /**
      * The name of the virtual network.
      * 
     */
-    public Optional<String> getVnetName() {
+    public Optional<String> vnetName() {
         return Optional.ofNullable(this.vnetName);
     }
 

@@ -28,7 +28,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -39,7 +39,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
-    public Output<String> getClusterResourceName() {
+    public Output<String> clusterResourceName() {
         return this.clusterResourceName;
     }
 
@@ -50,7 +50,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
-    public Output<String> getClusterRp() {
+    public Output<String> clusterRp() {
         return this.clusterRp;
     }
 
@@ -61,7 +61,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
-    public Output<Map<String,String>> getConfigurationProtectedSettings() {
+    public Output<Map<String,String>> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
     }
 
@@ -72,7 +72,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="enableHelmOperator")
       private final @Nullable Output<Boolean> enableHelmOperator;
 
-    public Output<Boolean> getEnableHelmOperator() {
+    public Output<Boolean> enableHelmOperator() {
         return this.enableHelmOperator == null ? Codegen.empty() : this.enableHelmOperator;
     }
 
@@ -83,7 +83,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="helmOperatorProperties")
       private final @Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties;
 
-    public Output<HelmOperatorPropertiesArgs> getHelmOperatorProperties() {
+    public Output<HelmOperatorPropertiesArgs> helmOperatorProperties() {
         return this.helmOperatorProperties == null ? Codegen.empty() : this.helmOperatorProperties;
     }
 
@@ -94,7 +94,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorInstanceName")
       private final @Nullable Output<String> operatorInstanceName;
 
-    public Output<String> getOperatorInstanceName() {
+    public Output<String> operatorInstanceName() {
         return this.operatorInstanceName == null ? Codegen.empty() : this.operatorInstanceName;
     }
 
@@ -105,7 +105,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorNamespace")
       private final @Nullable Output<String> operatorNamespace;
 
-    public Output<String> getOperatorNamespace() {
+    public Output<String> operatorNamespace() {
         return this.operatorNamespace == null ? Codegen.empty() : this.operatorNamespace;
     }
 
@@ -116,7 +116,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorParams")
       private final @Nullable Output<String> operatorParams;
 
-    public Output<String> getOperatorParams() {
+    public Output<String> operatorParams() {
         return this.operatorParams == null ? Codegen.empty() : this.operatorParams;
     }
 
@@ -127,7 +127,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorScope")
       private final @Nullable Output<Either<String,OperatorScopeType>> operatorScope;
 
-    public Output<Either<String,OperatorScopeType>> getOperatorScope() {
+    public Output<Either<String,OperatorScopeType>> operatorScope() {
         return this.operatorScope == null ? Codegen.empty() : this.operatorScope;
     }
 
@@ -138,7 +138,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="operatorType")
       private final @Nullable Output<Either<String,OperatorType>> operatorType;
 
-    public Output<Either<String,OperatorType>> getOperatorType() {
+    public Output<Either<String,OperatorType>> operatorType() {
         return this.operatorType == null ? Codegen.empty() : this.operatorType;
     }
 
@@ -149,7 +149,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="repositoryUrl")
       private final @Nullable Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl == null ? Codegen.empty() : this.repositoryUrl;
     }
 
@@ -160,7 +160,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -171,7 +171,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="sourceControlConfigurationName")
       private final @Nullable Output<String> sourceControlConfigurationName;
 
-    public Output<String> getSourceControlConfigurationName() {
+    public Output<String> sourceControlConfigurationName() {
         return this.sourceControlConfigurationName == null ? Codegen.empty() : this.sourceControlConfigurationName;
     }
 
@@ -182,7 +182,7 @@ public final class SourceControlConfigurationArgs extends com.pulumi.resources.R
     @Import(name="sshKnownHostsContents")
       private final @Nullable Output<String> sshKnownHostsContents;
 
-    public Output<String> getSshKnownHostsContents() {
+    public Output<String> sshKnownHostsContents() {
         return this.sshKnownHostsContents == null ? Codegen.empty() : this.sshKnownHostsContents;
     }
 

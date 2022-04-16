@@ -72,49 +72,49 @@ public final class GetManagementGroupResult {
      * The list of children.
      * 
     */
-    public List<ManagementGroupChildInfoResponse> getChildren() {
+    public List<ManagementGroupChildInfoResponse> children() {
         return this.children == null ? List.of() : this.children;
     }
     /**
      * The details of a management group.
      * 
     */
-    public Optional<ManagementGroupDetailsResponse> getDetails() {
+    public Optional<ManagementGroupDetailsResponse> details() {
         return Optional.ofNullable(this.details);
     }
     /**
      * The friendly name of the management group.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The fully qualified ID for the management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

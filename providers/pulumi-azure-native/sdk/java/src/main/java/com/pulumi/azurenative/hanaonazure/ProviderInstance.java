@@ -42,7 +42,7 @@ public class ProviderInstance extends com.pulumi.resources.CustomResource {
      * @return A JSON string containing metadata of the provider instance.
      * 
      */
-    public Output</* @Nullable */ String> getMetadata() {
+    public Output</* @Nullable */ String> metadata() {
         return this.metadata;
     }
     /**
@@ -56,7 +56,7 @@ public class ProviderInstance extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class ProviderInstance extends com.pulumi.resources.CustomResource {
      * @return A JSON string containing the properties of the provider instance.
      * 
      */
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
     /**
@@ -84,7 +84,7 @@ public class ProviderInstance extends com.pulumi.resources.CustomResource {
      * @return State of provisioning of the provider instance
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -98,7 +98,7 @@ public class ProviderInstance extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

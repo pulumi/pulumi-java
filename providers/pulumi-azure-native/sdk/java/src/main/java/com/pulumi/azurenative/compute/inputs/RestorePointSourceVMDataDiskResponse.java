@@ -28,7 +28,7 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="caching")
       private final @Nullable String caching;
 
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
     }
 
@@ -39,7 +39,7 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="diskRestorePoint")
       private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
-    public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
+    public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
         return this.diskRestorePoint == null ? Optional.empty() : Optional.ofNullable(this.diskRestorePoint);
     }
 
@@ -50,7 +50,7 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -61,7 +61,7 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="lun")
       private final @Nullable Integer lun;
 
-    public Optional<Integer> getLun() {
+    public Optional<Integer> lun() {
         return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
     }
 
@@ -72,7 +72,7 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="managedDisk")
       private final @Nullable ManagedDiskParametersResponse managedDisk;
 
-    public Optional<ManagedDiskParametersResponse> getManagedDisk() {
+    public Optional<ManagedDiskParametersResponse> managedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
     }
 
@@ -83,7 +83,7 @@ public final class RestorePointSourceVMDataDiskResponse extends com.pulumi.resou
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

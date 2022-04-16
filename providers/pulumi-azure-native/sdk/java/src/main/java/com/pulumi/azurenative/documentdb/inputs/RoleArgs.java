@@ -26,7 +26,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="db")
       private final @Nullable Output<String> db;
 
-    public Output<String> getDb() {
+    public Output<String> db() {
         return this.db == null ? Codegen.empty() : this.db;
     }
 
@@ -37,7 +37,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

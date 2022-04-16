@@ -26,7 +26,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -48,7 +48,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="keyspaceName", required=true)
       private final Output<String> keyspaceName;
 
-    public Output<String> getKeyspaceName() {
+    public Output<String> keyspaceName() {
         return this.keyspaceName;
     }
 
@@ -59,7 +59,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="options")
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
-    public Output<CreateUpdateOptionsArgs> getOptions() {
+    public Output<CreateUpdateOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -81,7 +81,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="resource", required=true)
       private final Output<CassandraViewResourceArgs> resource;
 
-    public Output<CassandraViewResourceArgs> getResource() {
+    public Output<CassandraViewResourceArgs> resource() {
         return this.resource;
     }
 
@@ -92,7 +92,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class CassandraResourceCassandraViewArgs extends com.pulumi.resourc
     @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
-    public Output<String> getViewName() {
+    public Output<String> viewName() {
         return this.viewName == null ? Codegen.empty() : this.viewName;
     }
 

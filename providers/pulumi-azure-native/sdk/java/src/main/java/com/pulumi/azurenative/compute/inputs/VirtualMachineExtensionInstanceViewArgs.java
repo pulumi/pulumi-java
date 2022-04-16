@@ -28,7 +28,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -39,7 +39,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="statuses")
       private final @Nullable Output<List<InstanceViewStatusArgs>> statuses;
 
-    public Output<List<InstanceViewStatusArgs>> getStatuses() {
+    public Output<List<InstanceViewStatusArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="substatuses")
       private final @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
 
-    public Output<List<InstanceViewStatusArgs>> getSubstatuses() {
+    public Output<List<InstanceViewStatusArgs>> substatuses() {
         return this.substatuses == null ? Codegen.empty() : this.substatuses;
     }
 
@@ -61,7 +61,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -72,7 +72,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends com.pulumi.re
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
+    public Output<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 

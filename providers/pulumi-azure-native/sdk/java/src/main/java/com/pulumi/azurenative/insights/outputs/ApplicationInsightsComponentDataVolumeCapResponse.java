@@ -64,42 +64,42 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
      * Daily data volume cap in GB.
      * 
     */
-    public Optional<Double> getCap() {
+    public Optional<Double> cap() {
         return Optional.ofNullable(this.cap);
     }
     /**
      * Maximum daily data volume cap that the user can set for this component.
      * 
     */
-    public Double getMaxHistoryCap() {
+    public Double maxHistoryCap() {
         return this.maxHistoryCap;
     }
     /**
      * Daily data volume cap UTC reset hour.
      * 
     */
-    public Integer getResetTime() {
+    public Integer resetTime() {
         return this.resetTime;
     }
     /**
      * Do not send a notification email when the daily data volume cap is met.
      * 
     */
-    public Optional<Boolean> getStopSendNotificationWhenHitCap() {
+    public Optional<Boolean> stopSendNotificationWhenHitCap() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
     /**
      * Reserved, not used for now.
      * 
     */
-    public Optional<Boolean> getStopSendNotificationWhenHitThreshold() {
+    public Optional<Boolean> stopSendNotificationWhenHitThreshold() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
     /**
      * Reserved, not used for now.
      * 
     */
-    public Optional<Integer> getWarningThreshold() {
+    public Optional<Integer> warningThreshold() {
         return Optional.ofNullable(this.warningThreshold);
     }
 

@@ -26,7 +26,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="and")
       private final @Nullable List<ReportFilterResponse> and;
 
-    public List<ReportFilterResponse> getAnd() {
+    public List<ReportFilterResponse> and() {
         return this.and == null ? List.of() : this.and;
     }
 
@@ -37,7 +37,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dimension")
       private final @Nullable ReportComparisonExpressionResponse dimension;
 
-    public Optional<ReportComparisonExpressionResponse> getDimension() {
+    public Optional<ReportComparisonExpressionResponse> dimension() {
         return this.dimension == null ? Optional.empty() : Optional.ofNullable(this.dimension);
     }
 
@@ -48,7 +48,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="not")
       private final @Nullable ReportFilterResponse not;
 
-    public Optional<ReportFilterResponse> getNot() {
+    public Optional<ReportFilterResponse> not() {
         return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
     }
 
@@ -59,7 +59,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="or")
       private final @Nullable List<ReportFilterResponse> or;
 
-    public List<ReportFilterResponse> getOr() {
+    public List<ReportFilterResponse> or() {
         return this.or == null ? List.of() : this.or;
     }
 
@@ -70,7 +70,7 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tag")
       private final @Nullable ReportComparisonExpressionResponse tag;
 
-    public Optional<ReportComparisonExpressionResponse> getTag() {
+    public Optional<ReportComparisonExpressionResponse> tag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 

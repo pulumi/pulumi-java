@@ -102,77 +102,77 @@ public final class GetFailoverGroupResult {
      * List of databases in the failover group.
      * 
     */
-    public List<String> getDatabases() {
+    public List<String> databases() {
         return this.databases == null ? List.of() : this.databases;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of partner server information for the failover group.
      * 
     */
-    public List<PartnerInfoResponse> getPartnerServers() {
+    public List<PartnerInfoResponse> partnerServers() {
         return this.partnerServers;
     }
     /**
      * Read-only endpoint of the failover group instance.
      * 
     */
-    public Optional<FailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
+    public Optional<FailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
     /**
      * Read-write endpoint of the failover group instance.
      * 
     */
-    public FailoverGroupReadWriteEndpointResponse getReadWriteEndpoint() {
+    public FailoverGroupReadWriteEndpointResponse readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
      * Local replication role of the failover group instance.
      * 
     */
-    public String getReplicationRole() {
+    public String replicationRole() {
         return this.replicationRole;
     }
     /**
      * Replication state of the failover group instance.
      * 
     */
-    public String getReplicationState() {
+    public String replicationState() {
         return this.replicationState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

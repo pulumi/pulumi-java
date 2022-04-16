@@ -35,14 +35,14 @@ public final class WebhookNotificationResponse {
      * a property bag of settings. This value can be empty.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * the service address to receive the notification.
      * 
     */
-    public Optional<String> getServiceUri() {
+    public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
 

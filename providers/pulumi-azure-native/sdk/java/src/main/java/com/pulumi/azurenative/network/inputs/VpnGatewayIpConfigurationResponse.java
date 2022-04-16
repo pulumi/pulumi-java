@@ -25,7 +25,7 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
     @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
@@ -47,7 +47,7 @@ public final class VpnGatewayIpConfigurationResponse extends com.pulumi.resource
     @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;
 
-    public Optional<String> getPublicIpAddress() {
+    public Optional<String> publicIpAddress() {
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
     }
 
